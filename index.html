@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div id="icons" class="p-4">
+    <div class="d-flex mb-4">
+      <input class="form-control search mr-2" placeholder="Search">
+      <button class="btn btn-primary sort text-nowrap" data-sort="icon-name">
+        Sort by name
+      </button>
+    </div>
+
+    <ul class="row list-unstyled list">
+      {% for image in site.static_files %}
+        {% if image.path contains 'assets/icons' %}
+        <li class="col-4 col-sm-3 col-lg-2 mb-4">
+          <div class="p-3 mb-2 border text-center rounded">
+            <img src="{{ site.baseurl }}{{ image.path }}" class="" width="32" height="32" alt="{{ image.basename | capitalize }}">
+          </div>
+          <div class="name text-muted text-center pt-1">{{ image.basename | capitalize }}</div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script>
+  var options = {
+    valueNames: [ 'name' ]
+  };
+  var iconsList = new List('icons', options);
+</script>

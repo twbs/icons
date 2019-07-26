@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-credit-card" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd" transform="translate(2 4)">
+    <rect width="15" height="11" x=".5" y=".5" stroke="currentColor" rx="2"/>
+    <rect width="3" height="3" x="2" y="7" fill="currentColor" rx="1"/>
+    <path fill="currentColor" d="M1 3h14v2H1z"/>
+  </g>
+</svg>
