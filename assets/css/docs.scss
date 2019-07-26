@@ -6,6 +6,10 @@
 @import "navbar";
 @import "subnav";
 
+.f0 { font-size: 3rem; }
+.f3 { font-size: 1.75rem; }
+.f5 { font-size: 1.25rem; }
+
 .hero {
   .f3 {
     max-width: 760px;
@@ -20,7 +24,3 @@
 .hero-search {
   max-width: 400px;
 }
-
-.f0 { font-size: 3rem; }
-.f3 { font-size: 1.75rem; }
-.f5 { font-size: 1.25rem; }
