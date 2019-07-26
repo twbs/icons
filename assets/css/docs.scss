@@ -1,0 +1,26 @@
+---
+---
+
+@import "variables";
+@import "buttons";
+@import "navbar";
+@import "subnav";
+
+.hero {
+  .f3 {
+    max-width: 760px;
+  }
+
+  hr {
+    max-width: 100px;
+
+  }
+}
+
+.hero-search {
+  max-width: 400px;
+}
+
+.f0 { font-size: 3rem; }
+.f3 { font-size: 1.75rem; }
+.f5 { font-size: 1.25rem; }

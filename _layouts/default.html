@@ -6,6 +6,7 @@
     <title>{{ site.title }}</title>
     <link rel="icon" type="image/x-icon" href="{{ "/assets/favicon.ico" | relative_url }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
     <style>
       .name {
         font-size: .8125rem;
@@ -13,6 +14,8 @@
     </style>
   </head>
   <body>
+    {% include navbar.html %}
+
     {{ content }}
   </body>
 </html>
