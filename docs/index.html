@@ -1,0 +1,148 @@
+---
+layout: default
+---
+
+<div id="icons">
+  <div class="hero py-5 bg-light border-bottom">
+    <div class="container">
+      <h1 class="f0">Bootstrap Icons</h1>
+      <p class="mb-4 f3 font-weight-normal">For the first time ever, Bootstrap has its own icon library, custom designed and built for our components and documentation.</p>
+
+      <div class="row f5 text-muted">
+        <div class="col-md-6 col-lg-5 pr-lg-4">
+          <p>Meet the Bootstrap icons, a limited set of icons designed first and foremost to work with Bootstrap's components. From form controls to navigation, these icons are the perfect complement to our toolkit.</p>
+        </div>
+        <div class="col-md-6 col-lg-5 pr-lg-4">
+          <p>Bootstrap Icons are SVGs, so they'll scale quickly and easily to any size, they can be easily recolored with CSS, and more. They're also released under the MIT license, so you're free to download, include, fork, extend, and more.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bd-subnavbar pt-2 pb-3 pb-md-2">
+    <div class="container d-flex align-items-md-center py-2">
+      <label for="search" class="sr-only">Search for icons</label>
+      <input class="form-control search mr-2" id="search" placeholder="Start typing to filter..." autofocus>
+      <button class="btn btn-bd-primary sort text-nowrap" data-sort="icon-name">
+        Search
+      </button>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <ul class="row list-unstyled list">
+      {% for image in site.static_files %}
+        {% if image.path contains 'assets/icons' %}
+        <li class="col-4 col-sm-3 col-lg-2 mb-4">
+          <div class="p-3 mb-2 border text-center rounded">
+            <img src="{{ site.baseurl }}{{ image.path }}" class="" width="32" height="32" alt="{{ image.basename | capitalize }}">
+          </div>
+          <div class="name text-muted text-center pt-1">{{ image.basename | capitalize }}</div>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script>
+  var options = {
+    valueNames: [ 'name' ]
+  };
+  var iconsList = new List('icons', options);
+</script>
+
+
+<div class="container">
+  <h2 id="usage">Usage</h2>
+
+  <button class="btn btn-primary mb-4" type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-house-fill" viewBox="0 0 20 20">
+      <g fill-rule="evenodd" fill="currentColor">
+        <path fill-rule="nonzero" d="M8.5 12.995V16.5a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V13c0-.25-.25-.5-.5-.5H9c-.25 0-.5.25-.5.495z"/>
+        <path d="M15 4.5V8l-2-2V4.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+      </g>
+    </svg>
+    Back home
+  </button>
+
+  <div class="btn-group mb-4">
+    <button class="btn btn-primary active" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-house-fill" viewBox="0 0 20 20">
+        <g fill-rule="evenodd" fill="currentColor">
+          <path fill-rule="nonzero" d="M8.5 12.995V16.5a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V13c0-.25-.25-.5-.5-.5H9c-.25 0-.5.25-.5.495z"/>
+          <path d="M15 4.5V8l-2-2V4.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+        </g>
+      </svg>
+      <span class="sr-only">Back home</span>
+    </button>
+    <button class="btn btn-primary" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-gear" viewBox="0 0 20 20">
+        <g fill="none" fill-rule="evenodd" stroke="currentColor" transform="translate(3 3)">
+          <path stroke-linejoin="round" d="M11.34 9.486l1.317 1.757-1.414 1.414-1.757-1.318a4.97 4.97 0 0 1-1.175.487L8 14H6l-.31-2.174a4.97 4.97 0 0 1-1.176-.487l-1.757 1.318-1.414-1.414 1.318-1.757a4.97 4.97 0 0 1-.487-1.175L0 8V6l2.174-.31a4.97 4.97 0 0 1 .487-1.176L1.343 2.757l1.414-1.414 1.757 1.318a4.97 4.97 0 0 1 1.175-.487L6 0h2l.31 2.174c.416.112.81.277 1.176.487l1.757-1.318 1.414 1.414-1.318 1.757c.21.365.375.76.487 1.175L14 6v2l-2.174.31a4.97 4.97 0 0 1-.487 1.176h0z"/>
+          <circle cx="7" cy="7" r="2"/>
+        </g>
+      </svg>
+      <span class="sr-only">Settings</span>
+    </button>
+    <button class="btn btn-primary" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-star-outline" viewBox="0 0 20 20">
+        <path d="M5.612 17.443c-.386.198-.824-.149-.746-.592l.83-4.73-3.522-3.356c-.33-.314-.16-.888.282-.95l4.898-.696 2.184-4.327c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L10 15.187l-4.389 2.256zm.473-1.466l3.686-1.894a.503.503 0 0 1 .461 0l3.686 1.894-.694-3.957a.565.565 0 0 1 .163-.505l2.906-2.77-4.052-.576a.525.525 0 0 1-.393-.288l-1.846-3.658-1.847 3.658a.525.525 0 0 1-.393.288l-4.052.575 2.906 2.77a.565.565 0 0 1 .163.506l-.694 3.957z"/>
+      </svg>
+      <span class="sr-only">Starred</span>
+    </button>
+  </div>
+
+  <div class="list-group mb-4 mx-auto">
+    <div class="list-group-item d-flex align-items-center">
+      <div class="mb-0">Item with switch</div>
+      <div class="form-check form-switch ml-auto" style="font-size: 1.25rem;">
+        <input class="form-check-input ml-0" type="checkbox" id="playgroundSwitch1" checked>
+        <label class="sr-only" for="playgroundSwitch1">Switch label</label>
+      </div>
+    </div>
+    <div class="list-group-item d-flex align-items-center">
+      <div class="mb-0">Another with switch</div>
+      <div class="form-check form-switch ml-auto" style="font-size: 1.25rem;">
+        <input class="form-check-input ml-0" type="checkbox" id="playgroundSwitch2">
+        <label class="sr-only" for="playgroundSwitch2">Another switch label</label>
+      </div>
+    </div>
+    <div class="list-group-item d-flex align-items-center">
+      <div class="mb-0">Choose an option</div>
+      <div class="d-flex align-items-center ml-auto">
+        <span class="text-muted">Selected</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-chevron-right" viewBox="0 0 20 20">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l6-6-6-6"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-group mb-4 mx-auto">
+    <div class="list-group-item d-flex align-items-center">
+      <div class="mb-0">Item with switch</div>
+      <div class="form-check form-switch ml-auto" style="font-size: 1.25rem;">
+        <input class="form-check-input ml-0" type="checkbox" id="playgroundSwitch1" checked>
+        <label class="sr-only" for="playgroundSwitch1">Switch label</label>
+      </div>
+    </div>
+    <div class="list-group-item d-flex align-items-center">
+      <div class="mb-0">Another with switch</div>
+      <div class="form-check form-switch ml-auto" style="font-size: 1.25rem;">
+        <input class="form-check-input ml-0" type="checkbox" id="playgroundSwitch2">
+        <label class="sr-only" for="playgroundSwitch2">Another switch label</label>
+      </div>
+    </div>
+    <div class="list-group-item d-flex align-items-center">
+      <div class="mb-0">Choose an option</div>
+      <div class="d-flex align-items-center ml-auto">
+        <span class="text-muted">Selected</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-chevron-right" viewBox="0 0 20 20">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l6-6-6-6"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

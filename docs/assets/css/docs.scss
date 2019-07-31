@@ -1,0 +1,54 @@
+---
+---
+
+@import "variables";
+@import "buttons";
+@import "navbar";
+@import "subnav";
+
+.f0 { font-size: 3rem; }
+.f3 { font-size: 1.75rem; }
+.f5 { font-size: 1.25rem; }
+
+.hero {
+  .f3 {
+    max-width: 760px;
+  }
+
+  hr {
+    max-width: 100px;
+
+  }
+}
+
+.hero-search {
+  max-width: 400px;
+}
+
+.list:empty::before {
+  display: block;
+  width: 100%;
+  padding: 100px 2rem;
+  margin-right: 15px;
+  margin-left: 15px;
+  content: "Nothing found, try searching again.";
+  color: $gray-500;
+  text-align: center;
+  background-color: $gray-100;
+  border-radius: .5rem;
+}
+
+.bi {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: text-bottom;
+}
+
+.btn-group > .btn {
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: .8125rem;
+}

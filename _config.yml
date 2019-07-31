@@ -1,5 +1,6 @@
 title: Bootstrap Icons
 baseurl: ""
+source: docs
 
 markdown: kramdown
 
