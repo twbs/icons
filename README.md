@@ -33,3 +33,5 @@ Help wanted if you have ideas how to tackle these!
 - [ ] Add npm script for reprocessing icons (HTML, attribute order, generate class names)
 - [ ] Add copy to clipboard for SVG code in the docs
 - [ ] Alternate distribution and usage methods (e.g., JS library, React components, etc)
+- [ ] Publish to GitHub Package Registry
+- [ ] Add GitHub Actions support for processing new icons from PRs?
