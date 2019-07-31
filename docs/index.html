@@ -10,12 +10,20 @@ layout: default
 
       <div class="row f5 text-muted">
         <div class="col-md-6 col-lg-5 pr-lg-4">
-          <p>Meet the Bootstrap icons, a limited set of icons designed first and foremost to work with Bootstrap's components. From form controls to navigation, these icons are the perfect complement to our toolkit.</p>
+          <p>Bootstrap Icons are designed first and foremost to work with Bootstrap's components, from form controls to navigation and more. Bootstrap Icons are SVGs, so they scale quickly and easily to any size and can be styled with CSS.</p>
         </div>
         <div class="col-md-6 col-lg-5 pr-lg-4">
-          <p>Bootstrap Icons are SVGs, so they'll scale quickly and easily to any size, they can be easily recolored with CSS, and more. They're also released under the MIT license, so you're free to download, include, fork, extend, and more.
+          <p>Plus, while they're built for Bootstrap first, they're great for any project. They're open sourced (MIT), so you're free to download, include, fork, extend, and more.</p>
         </div>
       </div>
+
+      <hr class="mb-4">
+
+      <p class="text-muted">
+        Current version: <strong>v{{ site.package_version }}</strong>
+        &middot;
+        <a href="{{ site.package_repo }}">GitHub repo</a>
+      </p>
     </div>
   </div>
 
@@ -37,7 +45,7 @@ layout: default
           <div class="p-3 mb-2 border text-center rounded">
             <img src="{{ image.path | relative_url }}" class="" width="32" height="32" alt="{{ image.basename | capitalize }}">
           </div>
-          <div class="name text-muted text-center pt-1">{{ image.basename | capitalize }}</div>
+          <div class="name text-muted text-center pt-1">{{ image.basename | capitalize | replace: "-", " " }}</div>
         </li>
         {% endif %}
       {% endfor %}
