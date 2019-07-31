@@ -1,6 +1,6 @@
 title: Bootstrap Icons
 baseurl: ""
-source: docs
+source: "./docs"
 
 markdown: kramdown
 
