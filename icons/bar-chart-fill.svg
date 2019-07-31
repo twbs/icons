@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-bar-chart-fill" viewBox="0 0 20 20">
+  <g fill-rule="evenodd" transform="translate(3 3)">
+    <rect width="4" height="5" y="9" rx="1"/>
+    <rect width="4" height="9" x="5" y="5" rx="1"/>
+    <rect width="4" height="14" x="10" rx="1"/>
+  </g>
+</svg>
