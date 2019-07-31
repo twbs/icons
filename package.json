@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Official open source icon library for Bootstrap",
   "scripts": {
-    "prep-icons": "svgo --config=svgo.yml --input=icons/"
+    "prep-icons": "svgo --config=svgo.yml --input=icons/",
+    "push-pages": "cd _site && git init && git remote add staging https://github.com/twbs/icons/ && git add . && git commit -m 'Publishing latest changes' && git push staging master:gh-pages --force && git remote rm staging",
+    "publish": "jekyll build && npm run push-pages"
   },
   "repository": {
     "type": "git",
