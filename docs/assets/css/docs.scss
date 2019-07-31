@@ -6,9 +6,27 @@
 @import "navbar";
 @import "subnav";
 
-.f0 { font-size: 3rem; }
-.f3 { font-size: 1.75rem; }
-.f5 { font-size: 1.25rem; }
+.f0 {
+  font-size: 2rem;
+
+  @media (min-width: 520px) {
+    font-size: 3rem;
+  }
+}
+.f3 {
+  font-size: 1.5rem;
+
+  @media (min-width: 520px) {
+    font-size: 1.75rem;
+  }
+}
+.f5 {
+  font-size: 1rem;
+
+  @media (min-width: 520px) {
+    font-size: 1.25rem;
+  }
+}
 
 .hero {
   .f3 {
