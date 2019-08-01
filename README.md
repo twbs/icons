@@ -27,20 +27,20 @@ npm i bootstrap-icons --save
 
 ## Development
 
-Clone the repo, install dependencies, and start the Jekyll server locally.
+Clone the repo, install dependencies, and start the Hugo server locally.
 
 ```
 git clone https://github.com/twbs/icons/
 cd icons
-bundle install
-bundle exec jekyll s
+npm i
+npm run docs-serve
 ```
 
 Then open `http://localhost:4000` in your browser.
 
 ## Publishing
 
-Docs are published via an npm script that builds the Jekyll site, creates a temporary Git repo, and force pushes that to our `gh-pages` branch. This circumvents issues with GitHub Pages not accepting third party plugins and symlinked directories.
+Docs are published via an npm script that builds the Hugo site, creates a temporary Git repo, and force pushes that to our `gh-pages` branch. This circumvents issues with GitHub Pages not working with Hugo.
 
 ```
 npm run publish

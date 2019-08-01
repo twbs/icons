@@ -1,7 +1,3 @@
----
-layout: default
----
-
 <div id="icons">
   <div class="hero py-5">
     <div class="container">
@@ -10,7 +6,7 @@ layout: default
 
       <div class="row text-muted">
         <div class="col">
-          <p>Bootstrap Icons are designed first and foremost to work with <a href="{{ site.main }}">Bootstrap</a> components, from form controls to navigation and more. Bootstrap Icons are SVGs, so they scale quickly and easily to any size and can be styled with CSS.</p>
+          <p>Bootstrap Icons are designed first and foremost to work with <a href="{{ .Site.Params.main }}">Bootstrap</a> components, from form controls to navigation and more. Bootstrap Icons are SVGs, so they scale quickly and easily to any size and can be styled with CSS.</p>
         </div>
         <div class="col">
           <p>Plus, while they're built for Bootstrap first, they're great for any project. They're open sourced (MIT), so you're free to download, use, and extend.</p>
@@ -23,9 +19,9 @@ layout: default
       <hr class="my-4">
 
       <p class="text-muted">
-        Current version: <strong>v{{ site.package_version }}</strong> <small class="py-1 px-2 font-weight-bold text-white bg-primary rounded">Alpha</small>
+        Current version: <strong>v{{ .Site.Params.package_version }}</strong> <small class="py-1 px-2 font-weight-bold text-white bg-primary rounded">Alpha</small>
         <span class="px-2">&#8226;</span>
-        <a href="{{ site.package_repo }}">GitHub repo</a>
+        <a href="{{ .Site.Params.package_repo }}">GitHub repo</a>
       </p>
     </div>
   </div>
@@ -41,18 +37,7 @@ layout: default
   </nav>
 
   <div class="container my-5">
-    <ul class="row list-unstyled list">
-      {% for icon in site.static_files %}
-         {% if icon.path contains 'assets/icons' %}
-          <li class="col-4 col-sm-3 col-lg-2 mb-4">
-            <div class="p-3 mb-2 border text-center rounded">
-              {% include_relative {{ icon.path}} %}
-            </div>
-            <div class="name text-muted text-center pt-1">{{ icon.basename | capitalize | replace: "-", " " }}</div>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    {{ partial "icons-list" . }}
   </div>
 </div>
 
