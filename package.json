@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-icons",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Official open source icon library for Bootstrap",
   "scripts": {
     "icons-prep": "svgo --config=svgo.yml --input=icons/",

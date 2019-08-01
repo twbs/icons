@@ -46,6 +46,13 @@
   max-width: 400px;
 }
 
+.bi {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: text-bottom;
+}
+
 .list:empty::before {
   display: block;
   width: 100%;
@@ -59,11 +66,9 @@
   border-radius: .5rem;
 }
 
-.bi {
-  display: inline-block;
-  width: 1.25em;
-  height: 1.25em;
-  vertical-align: text-bottom;
+.list .bi {
+  width: 2em;
+  height: 2em;
 }
 
 .btn-group > .btn {

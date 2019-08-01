@@ -23,8 +23,8 @@ layout: default
       <hr class="my-4">
 
       <p class="text-muted">
-        Current version: <strong>v{{ site.package_version }}</strong>
-        &middot;
+        Current version: <strong>v{{ site.package_version }}</strong> <small class="py-1 px-2 font-weight-bold text-white bg-primary rounded">Alpha</small>
+        <span class="px-2">&#8226;</span>
         <a href="{{ site.package_repo }}">GitHub repo</a>
       </p>
     </div>
@@ -42,14 +42,14 @@ layout: default
 
   <div class="container my-5">
     <ul class="row list-unstyled list">
-      {% for image in site.static_files %}
-        {% if image.path contains 'assets/icons' %}
-        <li class="col-4 col-sm-3 col-lg-2 mb-4">
-          <div class="p-3 mb-2 border text-center rounded">
-            <img src="{{ image.path | relative_url }}" class="" width="32" height="32" alt="{{ image.basename | capitalize }}">
-          </div>
-          <div class="name text-muted text-center pt-1">{{ image.basename | capitalize | replace: "-", " " }}</div>
-        </li>
+      {% for icon in site.static_files %}
+         {% if icon.path contains 'assets/icons' %}
+          <li class="col-4 col-sm-3 col-lg-2 mb-4">
+            <div class="p-3 mb-2 border text-center rounded">
+              {% include_relative {{ icon.path}} %}
+            </div>
+            <div class="name text-muted text-center pt-1">{{ icon.basename | capitalize | replace: "-", " " }}</div>
+          </li>
         {% endif %}
       {% endfor %}
     </ul>

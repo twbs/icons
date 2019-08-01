@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-octagon" viewBox="0 0 20 20">
   <g fill="none" fill-rule="evenodd" transform="translate(2.5 2.5)">
-    <path stroke="#000" stroke-linejoin="round" d="M10.607 0L15 4.393v6.214L10.607 15H4.393L0 10.607V4.393L4.393 0z"/>
-    <rect width="2" height="2" x="6.502" y="9.5" fill="#000" fill-rule="nonzero" rx="1"/>
-    <path fill="#000" fill-rule="nonzero" d="M7.5 3.5a.905.905 0 01.9.995l-.35 3.507a.552.552 0 01-1.1 0L6.6 4.495a.905.905 0 01.9-.995z"/>
+    <path stroke="currentColor" stroke-linejoin="round" d="M10.607 0L15 4.393v6.214L10.607 15H4.393L0 10.607V4.393L4.393 0z"/>
+    <rect width="2" height="2" x="6.502" y="9.5" fill="currentColor" fill-rule="nonzero" rx="1"/>
+    <path fill="currentColor" fill-rule="nonzero" d="M7.5 3.5a.905.905 0 01.9.995l-.35 3.507a.552.552 0 01-1.1 0L6.6 4.495a.905.905 0 01.9-.995z"/>
   </g>
 </svg>
