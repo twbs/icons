@@ -5,6 +5,7 @@
 @import "buttons";
 @import "navbar";
 @import "subnav";
+@import "ads";
 
 .f0 {
   font-size: 2rem;
@@ -14,21 +15,23 @@
   }
 }
 .f3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 
   @media (min-width: 520px) {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 .f5 {
   font-size: 1rem;
 
   @media (min-width: 520px) {
-    font-size: 1.25rem;
+    // font-size: 1.15rem;
   }
 }
 
 .hero {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
   .f3 {
     max-width: 760px;
   }
