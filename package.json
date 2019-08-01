@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/icons.git"
+    "url": "git+https://github.com/twbs/icons.git"
   },
   "keywords": [
     "bootstrap",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/twbs/icons/issues"
   },
-  "homepage": "https://icons.getbootstrap.com",
+  "homepage": "https://icons.getbootstrap.com/",
   "devDependencies": {
     "cross-env": "^5.2.0",
     "shx": "^0.3.2",
