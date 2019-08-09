@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-unlock-fill" viewBox="0 0 20 20">
-  <g fill="none" fill-rule="evenodd" transform="translate(2 3)">
-    <rect width="12" height="9" y="6" fill="currentColor" rx="2"/>
-    <path stroke="currentColor" d="M15 6V3a3 3 0 00-6 0v3h0"/>
-  </g>
+<svg class="bi" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <path fill="currentColor" d="M2.5 10a2 2 0 012-2h7a2 2 0 012 2v5a2 2 0 01-2 2h-7a2 2 0 01-2-2v-5z"/>
+  <path fill="currentColor" fill-rule="evenodd" d="M10.5 5a3.5 3.5 0 117 0v3h-1V5a2.5 2.5 0 00-5 0v3h-1V5z" clip-rule="evenodd"/>
 </svg>

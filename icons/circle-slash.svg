@@ -1,6 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-circle-slash" viewBox="0 0 20 20">
-  <g fill="none" fill-rule="evenodd" stroke="currentColor" transform="translate(2 2)">
-    <circle cx="8" cy="8" r="7.5"/>
-    <path d="M2.961 2.961l10.112 10.112"/>
-  </g>
+<svg class="bi" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <path fill="currentColor" fill-rule="evenodd" d="M1.5 10a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0zM10 2.5a7.5 7.5 0 100 15 7.5 7.5 0 000-15zm4.72 12.927L4.608 5.315l.707-.707L15.427 14.72l-.707.707z" clip-rule="evenodd"/>
 </svg>

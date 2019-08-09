@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-arrow-up-down" viewBox="0 0 20 20">
-  <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round">
-    <path d="M14 5v9"/>
-    <path stroke-linejoin="round" d="M11 12l3 3 3-3"/>
-    <path d="M6 15V6"/>
-    <path stroke-linejoin="round" d="M3 8l3-3 3 3"/>
-  </g>
+<svg class="bi" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <path fill="currentColor" fill-rule="evenodd" d="M13 5.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V6a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+  <path fill="currentColor" fill-rule="evenodd" d="M12.646 4.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L13 5.707l-2.646 2.647a.5.5 0 01-.708-.708l3-3zm-9 7a.5.5 0 01.708 0L7 14.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z" clip-rule="evenodd"/>
+  <path fill="currentColor" fill-rule="evenodd" d="M7 4.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V5a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
 </svg>
