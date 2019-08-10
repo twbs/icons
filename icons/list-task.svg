@@ -1,21 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
-    <title>list-task</title>
-    <desc>Created with Sketch.</desc>
-    <g id="v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icons" transform="translate(-260.000000, -80.000000)">
-            <g id="slices"></g>
-            <g transform="translate(1.000000, 2.000000)" id="list-task" stroke="currentColor">
-                <g transform="translate(262.000000, 82.000000)">
-                    <path d="M4.5,9.5 L13.5,9.5" id="line" stroke-linecap="round"></path>
-                    <path d="M4.5,5.5 L13.5,5.5" id="line" stroke-linecap="round"></path>
-                    <path d="M4.5,1.5 L13.5,1.5" id="line" stroke-linecap="round"></path>
-                    <rect id="Rectangle" x="0.5" y="0.5" width="2" height="2" rx="0.5"></rect>
-                    <rect id="Rectangle-Copy-12" x="0.5" y="4.5" width="2" height="2" rx="0.5"></rect>
-                    <rect id="Rectangle-Copy-13" x="0.5" y="8.5" width="2" height="2" rx="0.5"></rect>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd" stroke="currentColor" transform="translate(3 4)">
+    <path stroke-linecap="round" d="M4.5 9.5h9m-9-4h9m-9-4h9"/>
+    <rect width="2" height="2" x=".5" y=".5" rx=".5"/>
+    <rect width="2" height="2" x=".5" y="4.5" rx=".5"/>
+    <rect width="2" height="2" x=".5" y="8.5" rx=".5"/>
+  </g>
 </svg>
