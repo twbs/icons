@@ -1,0 +1,5 @@
+<svg class="bi" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+  <path stroke="#000" d="M17 10.516a7 7 0 11-14 0 7 7 0 0114 0z"/>
+  <rect width="4" height="2" x="8" y="2" rx="1"/>
+  <path d="M8.94 9.44l4.95-2.83-2.83 4.95-4.95 2.83 2.83-4.95z"/>
+</svg>
