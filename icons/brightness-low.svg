@@ -1,5 +1,5 @@
 <svg class="bi" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-  <circle cx="10" cy="10" r="3.5" stroke="#000"/>
+  <path fill-rule="evenodd" d="M10 13a3 3 0 100-6 3 3 0 000 6zm0 1a4 4 0 100-8 4 4 0 000 8z" clip-rule="evenodd"/>
   <circle cx="10" cy="4.5" r=".5"/>
   <circle cx="10" cy="15.5" r=".5"/>
   <circle cx="15.5" cy="10" r=".5" transform="rotate(90 15.5 10)"/>
