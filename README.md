@@ -32,12 +32,11 @@ Clone the repo, install dependencies, and start the Jekyll server locally.
 ```
 git clone https://github.com/twbs/icons/
 cd icons
-gem install jekyll
-npm i
-jekyll serve
+bundle install
+bundle exec jekyll s
 ```
 
-Then open http://localhost:4000 in your browser.
+Then open `http://localhost:4000` in your browser.
 
 ## Publishing
 
