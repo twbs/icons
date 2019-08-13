@@ -7,6 +7,7 @@
     "docs-serve": "hugo server --port 4000 --disableFastRender",
     "docs-build": "hugo --cleanDestinationDir",
     "icons-prep": "svgo --config=svgo.yml --input=icons/",
+    "icons-classes": "node index.js",
     "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
     "push-pages": "cd _site && git init && git remote add staging https://github.com/twbs/icons/ && git add . && git commit -m \"Publishing latest changes\" && git push staging master:gh-pages --force && git remote rm staging",
     "publish": "cross-env HUGO_ENV=production npm run docs-build && npm run push-pages"
