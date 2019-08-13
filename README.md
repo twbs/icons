@@ -33,7 +33,7 @@ Clone the repo, install dependencies, and start the Hugo server locally.
 git clone https://github.com/twbs/icons/
 cd icons
 npm i
-npm run docs-serve
+npm start
 ```
 
 Then open `http://localhost:4000` in your browser.
