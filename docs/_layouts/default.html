@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}?{{ site.time | date: '%s' }}">
     <link rel="stylesheet" href="{{ '/assets/css/docs.css' | relative_url }}?{{ site.time | date: '%s' }}">
   </head>
-  <body>
+  <body id="icons">
     {% include navbar.html %}
+    {% include subnav.html %}
+    {% include hero.html %}
+    {% include icons.html %}
 
-    {{ content }}
+    <div class="container">
+      {{ content }}
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script>
