@@ -26,8 +26,6 @@ plugins:
   - convertShapeToPath: true
   - convertStyleToAttrs: true
   - convertTransform: true
-  # - currentColors:
-      # currentColor: true
   - inlineStyles: false
   - mergePaths: true
   - minifyStyles: true
