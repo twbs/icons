@@ -7,8 +7,7 @@
     <meta name="robots" content="noindex">
     <title>{{ site.title }}</title>
     <link rel="icon" type="image/x-icon" href="{{ "/assets/favicon.ico" | relative_url }}">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://twbs-bootstrap.netlify.com/docs/4.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}?{{ site.time | date: '%s' }}">
     <link rel="stylesheet" href="{{ '/assets/css/docs.css' | relative_url }}?{{ site.time | date: '%s' }}">
   </head>
   <body>
