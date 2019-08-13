@@ -11,11 +11,14 @@
 
     <meta name="generator" content="Hugo {{ hugo.Version }}">
   </head>
-  <body>
+  <body id="icons">
     {{ partial "navbar" . }}
-    {{ partial "home" . }}
+    {{ partial "hero" . }}
+    {{ partial "icons" . }}
 
-    {{ .Content }}
+    <div class="container">
+      {{ .Content }}
+    </div>
 
     {{- partial "scripts" . }}
   </body>
