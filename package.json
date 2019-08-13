@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Official open source icon library for Bootstrap",
   "scripts": {
+    "start": "npm run docs-serve",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
     "docs-build": "hugo --cleanDestinationDir",
     "icons-prep": "svgo --config=svgo.yml --input=icons/",
