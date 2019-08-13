@@ -1,0 +1,51 @@
+languageCode:           "en"
+title:                  "Bootstrap Icons"
+baseURL:                "https://icons.getbootstrap.com"
+enableInlineShortcodes: true
+
+pygmentsUseClasses:     true
+pygmentsCodeFences:     true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+
+blackfriday:
+  fractions:            false
+
+publishDir:             "_site"
+
+module:
+  mounts:
+    - source:           docs/assets
+      target:           assets
+    - source:           docs/content
+      target:           content
+    - source:           docs/data
+      target:           data
+    - source:           docs/layouts
+      target:           layouts
+    - source:           docs/static
+      target:           static
+    - source:           docs/static/assets/img/favicons/apple-touch-icon.png
+      target:           static/apple-touch-icon.png
+    - source:           docs/static/assets/img/favicons/favicon.ico
+      target:           static/favicon.ico
+
+params:
+  description:          "Official open source icon library for Bootstrap"
+
+  package_version:      "0.1.0"
+  package_repo:         "https://github.com/twbs/icons"
+
+  current_version:      "4.3.1"
+  docs_version:         "4.3"
+
+  main:                 "https://getbootstrap.com/"
+  repo:                 "https://github.com/twbs/bootstrap"
+  twitter:              "getbootstrap"
+  slack:                "https://bootstrap-slack.herokuapp.com"
+  blog:                 "https://blog.getbootstrap.com"
+  expo:                 "https://expo.getbootstrap.com"
+  icons:                "https://icons.getbootstrap.com"
+  themes:               "https://themes.getbootstrap.com"

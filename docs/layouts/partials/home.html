@@ -1,7 +1,3 @@
----
-layout: default
----
-
 <div id="icons">
   <div class="hero py-5">
     <div class="container">
@@ -10,7 +6,7 @@ layout: default
 
       <div class="row text-muted">
         <div class="col">
-          <p>Bootstrap Icons are designed first and foremost to work with <a href="{{ site.main }}">Bootstrap</a> components, from form controls to navigation and more. Bootstrap Icons are SVGs, so they scale quickly and easily to any size and can be styled with CSS.</p>
+          <p>Bootstrap Icons are designed first and foremost to work with <a href="{{ .Site.Params.main }}">Bootstrap</a> components, from form controls to navigation and more. Bootstrap Icons are SVGs, so they scale quickly and easily to any size and can be styled with CSS.</p>
         </div>
         <div class="col">
           <p>Plus, while they're built for Bootstrap first, they're great for any project. They're open sourced (MIT), so you're free to download, use, and extend.</p>
@@ -23,9 +19,9 @@ layout: default
       <hr class="my-4">
 
       <p class="text-muted">
-        Current version: <strong>v{{ site.package_version }}</strong> <small class="py-1 px-2 font-weight-bold text-white bg-primary rounded">Alpha</small>
+        Current version: <strong>v{{ .Site.Params.package_version }}</strong> <small class="py-1 px-2 font-weight-bold text-white bg-primary rounded">Alpha</small>
         <span class="px-2">&#8226;</span>
-        <a href="{{ site.package_repo }}">GitHub repo</a>
+        <a href="{{ .Site.Params.package_repo }}">GitHub repo</a>
       </p>
     </div>
   </div>
@@ -41,18 +37,7 @@ layout: default
   </nav>
 
   <div class="container my-5">
-    <ul class="row list-unstyled list">
-      {% for icon in site.static_files %}
-         {% if icon.path contains 'assets/icons' %}
-          <li class="col-4 col-sm-3 col-lg-2 mb-4">
-            <div class="p-3 mb-2 border text-center rounded">
-              {% include_relative {{ icon.path}} %}
-            </div>
-            <div class="name text-muted text-center pt-1">{{ icon.basename | capitalize | replace: "-", " " }}</div>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    {{ partial "icons-list" . }}
   </div>
 </div>
 
@@ -60,38 +45,21 @@ layout: default
   <h2 id="usage">Usage</h2>
 
   <button class="btn btn-primary mb-4" type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-house-fill" viewBox="0 0 20 20">
-      <g fill-rule="evenodd" fill="currentColor">
-        <path fill-rule="nonzero" d="M8.5 12.995V16.5a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V13c0-.25-.25-.5-.5-.5H9c-.25 0-.5.25-.5.495z"/>
-        <path d="M15 4.5V8l-2-2V4.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-      </g>
-    </svg>
+    {{ readFile "icons/house-fill.svg" | safeHTML }}
     Back home
   </button>
 
   <div class="btn-group mb-4">
     <button class="btn btn-primary active" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-house-fill" viewBox="0 0 20 20">
-        <g fill-rule="evenodd" fill="currentColor">
-          <path fill-rule="nonzero" d="M8.5 12.995V16.5a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V13c0-.25-.25-.5-.5-.5H9c-.25 0-.5.25-.5.495z"/>
-          <path d="M15 4.5V8l-2-2V4.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-        </g>
-      </svg>
+      {{ readFile "icons/house-fill.svg" | safeHTML }}
       <span class="sr-only">Back home</span>
     </button>
     <button class="btn btn-primary" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-gear" viewBox="0 0 20 20">
-        <g fill="none" fill-rule="evenodd" stroke="currentColor" transform="translate(3 3)">
-          <path stroke-linejoin="round" d="M11.34 9.486l1.317 1.757-1.414 1.414-1.757-1.318a4.97 4.97 0 0 1-1.175.487L8 14H6l-.31-2.174a4.97 4.97 0 0 1-1.176-.487l-1.757 1.318-1.414-1.414 1.318-1.757a4.97 4.97 0 0 1-.487-1.175L0 8V6l2.174-.31a4.97 4.97 0 0 1 .487-1.176L1.343 2.757l1.414-1.414 1.757 1.318a4.97 4.97 0 0 1 1.175-.487L6 0h2l.31 2.174c.416.112.81.277 1.176.487l1.757-1.318 1.414 1.414-1.318 1.757c.21.365.375.76.487 1.175L14 6v2l-2.174.31a4.97 4.97 0 0 1-.487 1.176h0z"/>
-          <circle cx="7" cy="7" r="2"/>
-        </g>
-      </svg>
+      {{ readFile "icons/gear.svg" | safeHTML }}
       <span class="sr-only">Settings</span>
     </button>
     <button class="btn btn-primary" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-star-outline" viewBox="0 0 20 20">
-        <path d="M5.612 17.443c-.386.198-.824-.149-.746-.592l.83-4.73-3.522-3.356c-.33-.314-.16-.888.282-.95l4.898-.696 2.184-4.327c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L10 15.187l-4.389 2.256zm.473-1.466l3.686-1.894a.503.503 0 0 1 .461 0l3.686 1.894-.694-3.957a.565.565 0 0 1 .163-.505l2.906-2.77-4.052-.576a.525.525 0 0 1-.393-.288l-1.846-3.658-1.847 3.658a.525.525 0 0 1-.393.288l-4.052.575 2.906 2.77a.565.565 0 0 1 .163.506l-.694 3.957z"/>
-      </svg>
+      {{ readFile "icons/star-outline.svg" | safeHTML }}
       <span class="sr-only">Starred</span>
     </button>
   </div>
@@ -115,9 +83,7 @@ layout: default
       <div class="mb-0">Choose an option</div>
       <div class="d-flex align-items-center ml-auto">
         <span class="text-muted">Selected</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-chevron-right" viewBox="0 0 20 20">
-          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l6-6-6-6"/>
-        </svg>
+        {{ readFile "icons/chevron-right.svg" | safeHTML }}
       </div>
     </div>
   </div>
@@ -141,9 +107,7 @@ layout: default
       <div class="mb-0">Choose an option</div>
       <div class="d-flex align-items-center ml-auto">
         <span class="text-muted">Selected</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-chevron-right" viewBox="0 0 20 20">
-          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l6-6-6-6"/>
-        </svg>
+        {{ readFile "icons/chevron-right.svg" | safeHTML }}
       </div>
     </div>
   </div>

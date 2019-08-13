@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "Official open source icon library for Bootstrap",
   "scripts": {
+    "docs-serve": "hugo server --port 4000 --disableFastRender",
+    "docs-build": "hugo --cleanDestinationDir",
     "icons-prep": "svgo --config=svgo.yml --input=icons/",
     "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
     "push-pages": "cd _site && git init && git remote add staging https://github.com/twbs/icons/ && git add . && git commit -m \"Publishing latest changes\" && git push staging master:gh-pages --force && git remote rm staging",
-    "publish": "bundle exec jekyll build && npm run push-pages"
+    "publish": "cross-env HUGO_ENV=production npm run docs-build && npm run push-pages"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,15 @@
     "url": "https://github.com/twbs/icons/issues"
   },
   "homepage": "https://icons.getbootstrap.com/",
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "cross-env": "^5.2.0",
+    "hugo-bin": "^0.44.3",
+    "postcss-cli": "^6.1.3",
     "shx": "^0.3.2",
     "svgo": "^1.3.0"
   },
