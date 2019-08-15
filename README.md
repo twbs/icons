@@ -21,6 +21,8 @@
 
 ## Install
 
+Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com) at for usage instructions.
+
 ```
 npm i bootstrap-icons --save
 ```
