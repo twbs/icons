@@ -27,6 +27,10 @@ module:
       target:           layouts
     - source:           docs/static
       target:           static
+    - source:           docs/static/assets/img/favicons/apple-touch-icon.png
+      target:           static/apple-touch-icon.png
+    - source:           docs/static/assets/img/favicons/favicon.ico
+      target:           static/favicon.ico
 
 params:
   description:          "Official open source icon library for Bootstrap"
