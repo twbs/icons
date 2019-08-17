@@ -1,11 +1,12 @@
 <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
 {{- $sassOptions := dict "targetPath" "assets/css/docs.css" "precision" 6 -}}
+{{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
 
 {{- if (eq (getenv "HUGO_ENV") "production") -}}
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
 {{- end -}}
 
-{{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions | postCSS -}}
+{{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions | postCSS $postcssOptions -}}
 
 <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
