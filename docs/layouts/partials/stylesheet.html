@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
-{{- $sassOptions := dict "targetPath" "assets/css/docs.css" -}}
+{{- $sassOptions := dict "targetPath" "assets/css/docs.css" "precision" 6 -}}
 
 {{- if (eq (getenv "HUGO_ENV") "production") -}}
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
