@@ -4,13 +4,15 @@
     {{ partial "header" . }}
   </head>
   <body id="icons-body">
+    {{ partial "skippy" . }}
     {{ partial "navbar" . }}
     {{ partial "hero" . }}
-    {{ partial "icons" . }}
+    
+    <main class="container" id="content" role="main">
+      {{ partial "icons" . }}
 
-    <div class="container">
       {{ .Content }}
-    </div>
+    </main>
 
     {{- partial "scripts" . }}
   </body>
