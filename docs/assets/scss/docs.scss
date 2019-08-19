@@ -27,7 +27,7 @@
 }
 
 .hero {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
 
   .f3 {
     max-width: 760px;
@@ -56,9 +56,9 @@
   padding: 100px 2rem;
   margin-right: 15px;
   margin-left: 15px;
-  content: "Nothing found, try searching again.";
   color: $gray-500;
   text-align: center;
+  content: "Nothing found, try searching again.";
   background-color: $gray-100;
   border-radius: .5rem;
 }
