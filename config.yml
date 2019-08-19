@@ -41,7 +41,7 @@ params:
   current_version:      "4.3.1"
   docs_version:         "4.3"
 
-  main:                 "https://getbootstrap.com/"
+  main:                 "https://getbootstrap.com"
   repo:                 "https://github.com/twbs/bootstrap"
   twitter:              "getbootstrap"
   slack:                "https://bootstrap-slack.herokuapp.com"
