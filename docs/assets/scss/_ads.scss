@@ -1,7 +1,8 @@
+// stylelint-disable-next-line selector-max-id
 #carbonads {
-  overflow: auto;
   padding: .75rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  overflow: auto;
+  background-color: rgba(0, 0, 0, .05);
   border-radius: .25rem;
 }
 
