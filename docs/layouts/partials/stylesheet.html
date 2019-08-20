@@ -11,6 +11,6 @@
 {{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions -}}
 
 {{- if (eq (getenv "HUGO_ENV") "production") -}}
-  {{- $style = $style | postCSS | fingerprint "sha384" -}}
+  {{- $style = $style | postCSS -}}
 {{- end }}
-<link rel="stylesheet" href="{{ $style.Permalink | relURL }}"{{ if (eq (getenv "HUGO_ENV") "production") }} integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous"{{ end }}>
+<link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
