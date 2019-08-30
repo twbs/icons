@@ -4,13 +4,8 @@
 
 {{- if (eq (getenv "HUGO_ENV") "production") -}}
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
-{{- else -}}
-  {{- $sassOptions = merge $sassOptions (dict "enableSourceMap" true) -}}
 {{- end -}}
 
-{{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions -}}
+{{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions | postCSS -}}
 
-{{- if (eq (getenv "HUGO_ENV") "production") -}}
-  {{- $style = $style | postCSS -}}
-{{- end }}
 <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
