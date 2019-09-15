@@ -16,9 +16,9 @@ jobs:
         uses: actions/checkout@master
 
       - name: Set up Node.js
-        uses: actions/setup-node@v1.1.0
+        uses: actions/setup-node@v1
         with:
-          version: ${{ matrix.node }}
+          node-version: ${{ matrix.node }}
 
       - run: node --version
       - run: npm --version
