@@ -42,6 +42,15 @@ npm start
 
 Then open `http://localhost:4000` in your browser.
 
+## Adding SVGs
+
+Once a new SVG icon has been added to the `icons` directory, you'll need to prep and build them. Two npm scripts are used to optimize and modify the HTML source code of our SVGs.
+
+1. `npm run icons-prep` runs SVGO on our SVGs.
+2. `npm run icons-build` processes the HTML, removes all attributes, and then sets new attributes and values in a particular order.
+
+Use `npm run icons` to run them in order, then commit the results in a new branch for updating.
+
 ## Publishing
 
 Docs are published via an npm script that builds the Hugo site, creates a temporary Git repo, and force pushes that to our `gh-pages` branch. This circumvents issues with GitHub Pages not working with Hugo.
