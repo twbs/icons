@@ -1,9 +1,16 @@
+#!/usr/bin/env node
+
 'use strict'
 
+const { promisify } = require('util')
 const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
 const cheerio = require('cheerio')
+
+const pReaddir = promisify(fs.readdir)
+const pReadFile = promisify(fs.readFile)
+const pWriteFile = promisify(fs.writeFile)
 
 const iconsDir = path.join(__dirname, '../icons/')
 
@@ -16,19 +23,11 @@ const svgAttributes = {
   xmlns: 'http://www.w3.org/2000/svg'
 }
 
-fs.readdir(iconsDir, (error, files) => {
-  if (error) {
-    throw error
-  }
+const processFile = file => new Promise((resolve, reject) => {
+  file = path.join(iconsDir, file)
 
-  files.forEach(file => {
-    file = path.join(iconsDir, file)
-
-    fs.readFile(file, 'utf8', (err, data) => {
-      if (err) {
-        throw err
-      }
-
+  pReadFile(file, 'utf8')
+    .then(data => {
       const $ = cheerio.load(data)
       const svg = $('svg')
 
@@ -41,18 +40,22 @@ fs.readdir(iconsDir, (error, files) => {
 
       $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
 
-      fs.writeFile(file, $(svg), 'utf8', err => {
-        if (err) {
-          throw err
-        }
-
-        console.log(`- ${path.basename(file, '.svg')}`)
-      })
+      pWriteFile(file, $(svg), 'utf8')
+        .then(() => {
+          console.log(`- ${path.basename(file, '.svg')}`)
+          resolve()
+        })
+        .catch(err => reject(err))
     })
-  })
-
-  // the setTimeout should be removed
-  setTimeout(() => {
-    console.log(chalk.green(`\nSuccess, ${files.length} icons prepped!`))
-  }, 1000)
+    .catch(err => reject(err))
 })
+
+const main = async () => {
+  const files = await pReaddir(iconsDir)
+
+  await Promise.all(files.map(file => processFile(file)))
+
+  console.log(chalk.green(`\nSuccess, ${files.length} icons prepped!`))
+}
+
+main()
