@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-icons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Official open source icon library for Bootstrap",
   "scripts": {
     "start": "npm run docs-serve",

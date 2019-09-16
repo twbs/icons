@@ -35,7 +35,7 @@ module:
 params:
   description:          "Official open source icon library for Bootstrap"
 
-  package_version:      "0.1.0"
+  package_version:      "0.2.0"
   package_repo:         "https://github.com/twbs/icons"
 
   current_version:      "4.3.1"
