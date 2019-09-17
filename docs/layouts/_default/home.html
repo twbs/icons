@@ -7,13 +7,14 @@
     {{ partial "skippy" . }}
     {{ partial "navbar" . }}
     {{ partial "hero" . }}
-    
+
     <main class="container" id="content" role="main">
       {{ partial "icons" . }}
 
       {{ .Content }}
     </main>
 
+    {{- partial "footer" . }}
     {{- partial "scripts" . }}
   </body>
 </html>
