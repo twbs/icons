@@ -19,7 +19,7 @@
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-![Build Status](https://action-badges.now.sh/twbs/icons)
+![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)
 
 ## Install
 
