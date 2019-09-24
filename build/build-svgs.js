@@ -15,7 +15,6 @@ const pWriteFile = promisify(fs.writeFile)
 const iconsDir = path.join(__dirname, '../icons/')
 
 const svgAttributes = {
-  class: '',
   width: '20',
   height: '20',
   viewBox: '0 0 20 20',
@@ -34,7 +33,6 @@ const processFile = file => new Promise((resolve, reject) => {
       svg.replaceWith(() => $('<svg>').append($(this).html()))
 
       for (const [attr, val] of Object.entries(svgAttributes)) {
-        $(svg).removeAttr(attr)
         $(svg).attr(attr, val)
       }
 
