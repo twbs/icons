@@ -12,6 +12,7 @@
     "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
     "push-pages": "cd _site && git init && git remote add staging https://github.com/twbs/icons/ && git add . && git commit -m \"Publishing latest changes\" && git push staging master:gh-pages --force && git remote rm staging",
     "publish": "cross-env HUGO_ENV=production npm-run-all docs-build push-pages",
+    "netlify": "cross-env HUGO_ENV=production npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location node_modules/.cache/.stylelintcache",
     "test:linkinator": "linkinator _site --recurse --silent --skip \"^(?!http://localhost)\"",
