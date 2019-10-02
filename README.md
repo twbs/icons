@@ -19,7 +19,7 @@
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)
+[![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)](https://github.com/twbs/icons/actions?workflow=Tests)
 
 ## Install
 
