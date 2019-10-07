@@ -2,9 +2,33 @@
 layout: default
 ---
 
+## Install
+
+Bootstrap Icons are published to npm, but they can also be manually downloaded if needed.
+
+<div class="row my-4">
+  <div class="col-md-6">
+{{< md >}}
+### npm
+Install Bootstrap Icons via command line with npm.
+{{< highlight shell >}}
+npm install @twbs/icons
+{{< /highlight >}}
+{{< /md >}}
+  </div>
+  <div class="col-md-6">
+{{< md >}}
+### Download
+Our [releases](https://github.com/twbs/icons/releases/) are published to GitHub. All icon SVGs are included in the bundle, as well as license and readme files. Our `package.json` is also included, though our npm scripts are primarily available for our development workflows.
+
+<a class="btn btn-outline-primary" href="https://github.com/twbs/icons/releases/latest/">Download latest ZIP</a>
+{{< /md >}}
+  </div>
+</div>
+
 ## Usage
 
-Bootstrap icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup.
+Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup.
 
 <div class="row my-4">
   <div class="col-md-4 col-xl-3">
