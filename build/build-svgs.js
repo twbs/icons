@@ -16,8 +16,8 @@ const iconsDir = path.join(__dirname, '../icons/')
 
 const svgAttributes = {
   class: '',
-  width: '20',
-  height: '20',
+  width: '1em',
+  height: '1em',
   viewBox: '0 0 20 20',
   fill: 'currentColor',
   xmlns: 'http://www.w3.org/2000/svg'
