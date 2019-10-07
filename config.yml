@@ -34,6 +34,8 @@ module:
 
 params:
   description:          "Official open source icon library for Bootstrap"
+  social_image_path:    /assets/img/bootstrap-icons-social.png
+  social_logo_path:     /assets/img/bootstrap-social-logo.png
 
   package_version:      "0.2.0"
   package_repo:         "https://github.com/twbs/icons"

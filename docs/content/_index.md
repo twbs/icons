@@ -28,13 +28,13 @@ Our [releases](https://github.com/twbs/icons/releases/) are published to GitHub.
 
 ## Usage
 
-Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup.
+Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup. Bootstrap Icons include a `width` and `height` of `1em` by default to allow for easy resizing via `font-size`.
 
 <div class="row my-4">
   <div class="col-md-4 col-xl-3">
 {{< md >}}
 ### Embedded
-For example, you can use the SVG as HTML (remember to specify a `width` and `height`).
+Embed your icons within the HTML of your page (as opposed to an external image file). Here we've used a custom `width` and `height`.
 {{< /md >}}
   </div>
   <div class="col-md-8 col-xl-9">
