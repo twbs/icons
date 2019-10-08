@@ -11,6 +11,7 @@ Bootstrap Icons are published to npm, but they can also be manually downloaded i
 {{< md >}}
 ### npm
 Install Bootstrap Icons via command line with npm.
+
 {{< highlight shell >}}
 npm install @twbs/icons
 {{< /highlight >}}
