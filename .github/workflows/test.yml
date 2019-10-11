@@ -23,5 +23,8 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
+      - name: Build the icons
+        run: npm run icons
+
       - name: Run tests
         run: npm test
