@@ -44,12 +44,12 @@ Then open `http://localhost:4000` in your browser.
 
 ## Adding SVGs
 
-Once a new SVG icon has been added to the `icons` directory, you'll need to prep and build them. Two npm scripts are used to optimize and modify the HTML source code of our SVGs.
+Once a new SVG icon has been added to the `icons` directory, you'll need to optimize them. An npm script is used to optimize and modify the HTML source code of our SVGs.
 
-1. `npm run icons-prep` runs SVGO on our SVGs.
-2. `npm run icons-build` processes the HTML, removes all attributes, and then sets new attributes and values in a particular order.
+1. It runs SVGO on our SVGs.
+2. Then processes the HTML, removes all attributes, and then sets new attributes and values in a particular order.
 
-Use `npm run icons` to run them in order, then commit the results in a new branch for updating.
+Use `npm run icons` to run the script, then commit the results in a new branch for updating.
 
 ## Publishing
 
