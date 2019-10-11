@@ -2,15 +2,10 @@
 
 'use strict'
 
-const { promisify } = require('util')
-const fs = require('fs')
+const fs = require('fs').promises
 const path = require('path')
 const chalk = require('chalk')
 const cheerio = require('cheerio')
-
-const pReaddir = promisify(fs.readdir)
-const pReadFile = promisify(fs.readFile)
-const pWriteFile = promisify(fs.writeFile)
 
 const iconsDir = path.join(__dirname, '../icons/')
 
@@ -26,7 +21,7 @@ const svgAttributes = {
 const processFile = file => new Promise((resolve, reject) => {
   file = path.join(iconsDir, file)
 
-  pReadFile(file, 'utf8')
+  fs.readFile(file, 'utf8')
     .then(data => {
       const $ = cheerio.load(data)
       const svg = $('svg')
@@ -40,7 +35,7 @@ const processFile = file => new Promise((resolve, reject) => {
 
       $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
 
-      pWriteFile(file, $(svg), 'utf8')
+      fs.writeFile(file, $(svg), 'utf8')
         .then(() => {
           console.log(`- ${path.basename(file, '.svg')}`)
           resolve()
@@ -51,7 +46,7 @@ const processFile = file => new Promise((resolve, reject) => {
 })
 
 const main = async () => {
-  const files = await pReaddir(iconsDir)
+  const files = await fs.readdir(iconsDir)
 
   await Promise.all(files.map(file => processFile(file)))
 
