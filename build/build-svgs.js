@@ -6,6 +6,8 @@ const fs = require('fs').promises
 const path = require('path')
 const chalk = require('chalk')
 const cheerio = require('cheerio')
+const SVGO = require('svgo')
+const yaml = require('js-yaml')
 
 const iconsDir = path.join(__dirname, '../icons/')
 
@@ -18,39 +20,62 @@ const svgAttributes = {
   xmlns: 'http://www.w3.org/2000/svg'
 }
 
-const processFile = file => new Promise((resolve, reject) => {
+const getSvgoConfig = async () => {
+  let svgoConfig = await fs.readFile(path.join(__dirname, '../svgo.yml'), 'utf8')
+
+  // needs try/catch
+  svgoConfig = await yaml.safeLoad(svgoConfig)
+
+  return svgoConfig
+}
+
+const processFile = (file, config) => new Promise((resolve, reject) => {
   file = path.join(iconsDir, file)
 
   fs.readFile(file, 'utf8')
     .then(data => {
-      const $ = cheerio.load(data)
-      const svg = $('svg')
+      const svgo = new SVGO(config)
 
-      svg.replaceWith(() => $('<svg>').append($(this).html()))
+      svgo.optimize(data)
+        .then(result => {
+          const $ = cheerio.load(result.data)
+          const svg = $('svg')
 
-      for (const [attr, val] of Object.entries(svgAttributes)) {
-        $(svg).removeAttr(attr)
-        $(svg).attr(attr, val)
-      }
+          svg.replaceWith(() => $('<svg>').append($(this).html()))
 
-      $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
+          for (const [attr, val] of Object.entries(svgAttributes)) {
+            $(svg).removeAttr(attr)
+            $(svg).attr(attr, val)
+          }
 
-      fs.writeFile(file, $(svg), 'utf8')
-        .then(() => {
-          console.log(`- ${path.basename(file, '.svg')}`)
-          resolve()
+          $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
+
+          fs.writeFile(file, $(svg), 'utf8')
+            .then(() => {
+              console.log(`- ${path.basename(file, '.svg')}`)
+              resolve()
+            })
+            .catch(error => reject(error))
         })
-        .catch(err => reject(err))
+        .catch(error => reject(error))
     })
-    .catch(err => reject(err))
+    .catch(error => reject(error))
 })
 
 const main = async () => {
-  const files = await fs.readdir(iconsDir)
+  const basename = path.basename(__filename)
+  const timeLabel = chalk.cyan(`[${basename}] finished`)
 
-  await Promise.all(files.map(file => processFile(file)))
+  console.log(chalk.cyan(`[${basename}] started`))
+  console.time(timeLabel)
+
+  const files = await fs.readdir(iconsDir)
+  const config = await getSvgoConfig()
+
+  await Promise.all(files.map(file => processFile(file, config)))
 
   console.log(chalk.green(`\nSuccess, ${files.length} icons prepped!`))
+  console.timeEnd(timeLabel)
 }
 
 main()
