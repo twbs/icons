@@ -44,10 +44,10 @@ Then open `http://localhost:4000` in your browser.
 
 ## Adding SVGs
 
-Once a new SVG icon has been added to the `icons` directory, you'll need to optimize them. An npm script is used to optimize and modify the HTML source code of our SVGs.
+Once a new SVG icon has been added to the `icons` directory, you'll need to optimize them. An npm script is used to:
 
-1. It runs SVGO on our SVGs.
-2. Then processes the HTML, removes all attributes, and then sets new attributes and values in a particular order.
+1. Optimize our SVGs with SVGO.
+2. Modify the SVGs source HTML, removing all attributes before setting new attributes and values in our preferred order.
 
 Use `npm run icons` to run the script, then commit the results in a new branch for updating.
 
