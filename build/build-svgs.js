@@ -21,12 +21,17 @@ const svgAttributes = {
 }
 
 const getSvgoConfig = async () => {
-  let svgoConfig = await fs.readFile(path.join(__dirname, '../svgo.yml'), 'utf8')
+  try {
+    let svgoConfig = await fs.readFile(path.join(__dirname, '../svgo.yml'), 'utf8')
 
-  // needs try/catch
-  svgoConfig = await yaml.safeLoad(svgoConfig)
+    svgoConfig = await yaml.safeLoad(svgoConfig)
 
-  return svgoConfig
+    return svgoConfig
+  } catch (error) {
+    console.error('Couldn\'t read SVGO\'s config!')
+    console.error(error)
+    process.exit(1)
+  }
 }
 
 const processFile = (file, config) => new Promise((resolve, reject) => {
