@@ -7,7 +7,7 @@
 <h3 align="center">Bootstrap Icons</h3>
 
 <p align="center">
-  Official open source icon library for Bootstrap.
+  Official open source SVG icon library for Bootstrap.
   <br>
   <a href="https://icons.getbootstrap.com/"><strong>Explore Bootstrap Icons »</strong></a>
   <br>
