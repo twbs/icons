@@ -59,7 +59,9 @@ Copy the Bootstrap icons SVGs to your directory of choice and reference them lik
   <div class="col-md-4 col-xl-3">
 {{< md >}}
 ### CSS
-You can also use the SVG within your CSS (**be sure to escape any characters**, such as `#` to `%23` when specifying hex color values):
+You can also use the SVG within your CSS (**be sure to escape any characters**, such as `#` to `%23` when specifying hex color values). When no dimensions are specified via `width` and `height` on the `<svg>`, the icon will fill the available space.
+
+The `viewBox` attribute is required if you wish to resize icons with `background-size`. Note that the `xmlns` attribute is required.
 {{< /md >}}
   </div>
   <div class="col-md-8 col-xl-9">
