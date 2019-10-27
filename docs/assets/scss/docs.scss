@@ -37,8 +37,10 @@
   }
 }
 
-.hero-search {
-  max-width: 400px;
+.icon-search {
+  @media (min-width: 768px) {
+    width: 35%;
+  }
 }
 
 .bi {
