@@ -34,7 +34,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.7.1",
+    "autoprefixer": "^9.7.2",
     "chalk": "^3.0.0",
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^6.0.3",
