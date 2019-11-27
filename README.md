@@ -19,7 +19,7 @@
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-[![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)](https://github.com/twbs/icons/actions?workflow=Tests)
+![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/69751498-12224a80-1104-11ea-9dd6-6f162a8a2566.png)
 
 ## Install
 
@@ -30,6 +30,8 @@ npm i bootstrap-icons --save
 ```
 
 ## Development
+
+[![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)](https://github.com/twbs/icons/actions?workflow=Tests)
 
 Clone the repo, install dependencies, and start the Hugo server locally.
 
