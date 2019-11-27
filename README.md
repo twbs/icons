@@ -19,9 +19,13 @@
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
+# 200+ icons
+
 ![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/69751498-12224a80-1104-11ea-9dd6-6f162a8a2566.png)
 
-## Install
+[Also available in Figma.](https://www.figma.com/file/TPcq3YwYqNHNDV8WVfSjDY/Bootstrap-Icons-v1.0.0-alpha)
+
+# Install
 
 Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) at for usage instructions.
 
@@ -29,7 +33,7 @@ Bootstrap Icons are packaged up and published to npm. We only include the proces
 npm i bootstrap-icons --save
 ```
 
-## Development
+# Development
 
 [![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)](https://github.com/twbs/icons/actions?workflow=Tests)
 
@@ -44,7 +48,7 @@ npm start
 
 Then open `http://localhost:4000` in your browser.
 
-## Adding SVGs
+# Adding SVGs
 
 Once a new SVG icon has been added to the `icons` directory, you'll need to optimize them. An npm script is used to:
 
@@ -53,7 +57,7 @@ Once a new SVG icon has been added to the `icons` directory, you'll need to opti
 
 Use `npm run icons` to run the script, then commit the results in a new branch for updating.
 
-## Publishing
+# Publishing
 
 Docs are published via an npm script that builds the Hugo site, creates a temporary Git repo, and force pushes that to our `gh-pages` branch. This circumvents issues with GitHub Pages not working with Hugo.
 
@@ -61,10 +65,10 @@ Docs are published via an npm script that builds the Hugo site, creates a tempor
 npm run publish
 ```
 
-## License
+# License
 
 MIT
 
-## Author
+# Author
 
 @mdo
