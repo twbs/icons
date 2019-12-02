@@ -2,18 +2,18 @@ languageCode:           "en"
 title:                  "Bootstrap Icons"
 baseURL:                "https://icons.getbootstrap.com"
 enableInlineShortcodes: true
-
-pygmentsUseClasses:     true
-pygmentsCodeFences:     true
-
 enableRobotsTXT:        true
 metaDataFormat:         "yaml"
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
-blackfriday:
-  fractions:            false
-
 publishDir:             "_site"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
 
 module:
   mounts:
