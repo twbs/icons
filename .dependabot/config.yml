@@ -12,3 +12,4 @@ update_configs:
       - "XhmikosR"
     default_labels:
       - "dependencies"
+    version_requirement_updates: "increase_versions"
