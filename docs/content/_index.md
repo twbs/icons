@@ -51,7 +51,7 @@ Copy the Bootstrap icons SVGs to your directory of choice and reference them lik
 {{< /md >}}
   </div>
   <div class="col-md-8 col-xl-9">
-    {{< example >}}<img src="/assets/img/bootstrap.svg" width="32" height="32" title="Bootstrap">{{< /example >}}
+    {{< example >}}<img src="/assets/img/bootstrap.svg" alt="" width="32" height="32" title="Bootstrap">{{< /example >}}
   </div>
 </div>
 
