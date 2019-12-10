@@ -36,10 +36,10 @@ params:
   description:          "Official open source icon library for Bootstrap"
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
-  package_version:      "1.0.0-alpha"
+  package_version:      "1.0.0-alpha2"
   package_repo:         "https://github.com/twbs/icons"
 
-  current_version:      "4.4.0"
+  current_version:      "4.4.1"
   docs_version:         "4.4"
 
   main:                 "https://getbootstrap.com"
