@@ -33,7 +33,7 @@ module:
       target:           static/favicon.ico
 
 params:
-  description:          "Official open source icon library for Bootstrap"
+  description:          "Official open source SVG icon library for Bootstrap"
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
   package_version:      "1.0.0-alpha2"
