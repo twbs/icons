@@ -2,6 +2,7 @@ name: Tests
 on: [push, pull_request]
 env:
   CI: true
+  NODE: 10.x
 
 jobs:
   test:
@@ -14,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "10"
+          node-version: "${{ env.NODE }}"
 
       - run: node --version
       - run: npm --version
@@ -24,10 +25,10 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/test.yml') }}
+          key: ${{ runner.os }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/test.yml') }}
           restore-keys: |
-            ${{ runner.OS }}-node-v${{ matrix.node }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/test.yml') }}
-            ${{ runner.OS }}-node-v${{ matrix.node }}-
+            ${{ runner.OS }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/test.yml') }}
+            ${{ runner.OS }}-node-v${{ env.NODE }}-
 
       - name: Install npm dependencies
         run: npm ci
