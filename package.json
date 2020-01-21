@@ -39,7 +39,7 @@
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
-    "find-unused-sass-variables": "^1.0.4",
+    "find-unused-sass-variables": "^1.0.5",
     "hugo-bin": "^0.50.2",
     "js-yaml": "^3.13.1",
     "linkinator": "^1.8.2",
