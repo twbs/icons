@@ -8,7 +8,6 @@ update_configs:
     update_schedule: "weekly"
     # Apply default reviewer and label to created pull requests
     default_reviewers:
-      - "Johann-S"
       - "XhmikosR"
     default_labels:
       - "dependencies"
