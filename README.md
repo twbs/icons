@@ -29,7 +29,7 @@
 
 Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) at for usage instructions.
 
-```
+```shell
 npm i bootstrap-icons --save
 ```
 
@@ -39,7 +39,7 @@ npm i bootstrap-icons --save
 
 Clone the repo, install dependencies, and start the Hugo server locally.
 
-```
+```shell
 git clone https://github.com/twbs/icons/
 cd icons
 npm i
@@ -61,7 +61,7 @@ Use `npm run icons` to run the script, then commit the results in a new branch f
 
 Docs are published via an npm script that builds the Hugo site, creates a temporary Git repo, and force pushes that to our `gh-pages` branch. This circumvents issues with GitHub Pages not working with Hugo.
 
-```
+```shell
 npm run publish
 ```
 
