@@ -42,7 +42,7 @@
     "find-unused-sass-variables": "^1.0.5",
     "hugo-bin": "^0.52.2",
     "js-yaml": "^3.13.1",
-    "linkinator": "^2.0.1",
+    "linkinator": "^2.0.2",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0",
     "shx": "^0.3.2",
