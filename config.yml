@@ -36,7 +36,7 @@ params:
   description:          "Official open source SVG icon library for Bootstrap"
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
-  package_version:      "1.0.0-alpha2"
+  package_version:      "1.0.0-alpha3"
   package_repo:         "https://github.com/twbs/icons"
 
   current_version:      "4.4.1"
