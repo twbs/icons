@@ -1,3 +1,3 @@
 <svg class="bi bi-caret-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path stroke="#000" d="M4.19 8.376l5.48 4.796a.5.5 0 00.83-.376V3.204a.5.5 0 00-.83-.377L4.19 7.624a.5.5 0 000 .752z"/>
+  <path fill-rule="evenodd" d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 010-1.506l5.48-4.796A1 1 0 0111 3.204v9.592a1 1 0 01-1.659.753z" clip-rule="evenodd"/>
 </svg>
