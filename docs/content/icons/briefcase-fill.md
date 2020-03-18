@@ -1,9 +1,8 @@
 ---
-title: Award
+title: Briefcase fill
 layout: icon
 categories:
   - Real world
 tags:
-  - prize
-  - rosette
+  - business
 ---
