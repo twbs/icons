@@ -29,7 +29,8 @@
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location node_modules/.cache/.stylelintcache",
     "test:linkinator": "linkinator _site --recurse --silent --skip \"^(?!http://localhost)\"",
     "test:vnu": "node build/vnu-jar.js",
-    "test": "npm-run-all docs-build --parallel test:*"
+    "test": "npm-run-all docs-build --parallel test:*",
+    "pages": "node build/build-pages.js"
   },
   "dependencies": {},
   "devDependencies": {
