@@ -1,11 +1,8 @@
 ---
-title: Circle slash
+title: Question diamond
 layout: icon
 categories:
   - Alerts, warnings, and signs
 tags:
-  - shape
-  - stop
-  - ban
-  - no
+  - help
 ---

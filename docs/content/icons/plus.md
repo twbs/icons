@@ -2,7 +2,8 @@
 title: Plus
 layout: icon
 categories:
-  - UI and keyboard
+  - Alerts, warnings, and signs
 tags:
   - add
+  - new
 ---

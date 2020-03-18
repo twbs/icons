@@ -1,11 +1,9 @@
 ---
-title: Circle slash
+title: Plus circle
 layout: icon
 categories:
   - Alerts, warnings, and signs
 tags:
-  - shape
-  - stop
-  - ban
-  - no
+  - add
+  - new
 ---

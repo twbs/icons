@@ -1,5 +1,5 @@
 ---
-title: Circle slash
+title: Slash circle fill
 layout: icon
 categories:
   - Alerts, warnings, and signs
