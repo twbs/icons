@@ -7,4 +7,6 @@ tags:
   - checkmark
   - todo
   - checkbox
+  - select
+  - done
 ---

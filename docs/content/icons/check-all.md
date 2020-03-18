@@ -1,11 +1,11 @@
 ---
-title: Check
+title: Check all
 layout: icon
 categories:
   - UI and keyboard
 tags:
   - checkmark
   - todo
-  - select
   - done
+  - select
 ---

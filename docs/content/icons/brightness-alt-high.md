@@ -1,11 +1,8 @@
 ---
-title: Check
+title: Brightness alt high
 layout: icon
 categories:
   - UI and keyboard
 tags:
-  - checkmark
-  - todo
-  - select
-  - done
+  - brightness
 ---
