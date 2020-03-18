@@ -1,11 +1,10 @@
 ---
-title: File diff
+title: File break
 layout: icon
 categories:
   - Files and folders
 tags:
   - doc
   - document
-  - version
-  - development
+  - page-break
 ---

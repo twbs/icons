@@ -1,11 +1,11 @@
 ---
-title: File diff
+title: File check
 layout: icon
 categories:
   - Files and folders
 tags:
   - doc
   - document
-  - version
-  - development
+  - check
+  - verified
 ---

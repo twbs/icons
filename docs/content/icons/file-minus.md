@@ -1,11 +1,11 @@
 ---
-title: File diff
+title: File minus
 layout: icon
 categories:
   - Files and folders
 tags:
   - doc
   - document
-  - version
-  - development
+  - delete
+  - remove
 ---

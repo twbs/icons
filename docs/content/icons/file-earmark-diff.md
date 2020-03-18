@@ -1,5 +1,5 @@
 ---
-title: File diff
+title: File earmark diff
 layout: icon
 categories:
   - Files and folders

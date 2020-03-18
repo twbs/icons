@@ -1,11 +1,11 @@
 ---
-title: File diff
+title: File earmark code
 layout: icon
 categories:
   - Files and folders
 tags:
   - doc
   - document
-  - version
+  - code
   - development
 ---
