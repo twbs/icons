@@ -1,4 +1,5 @@
 <svg class="bi bi-sliders" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path d="M6 5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm6 7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
-  <path fill-rule="evenodd" d="M6.95 5.5a2.512 2.512 0 000-1h8.55a.5.5 0 010 1H6.95zm-4.9 0H.5a.5.5 0 010-1h1.55a2.512 2.512 0 000 1zm1.035 0a1.498 1.498 0 010-1h2.83a1.498 1.498 0 010 1h-2.83zM0 12a.5.5 0 01.5-.5h7.55a2.512 2.512 0 000 1H.5A.5.5 0 010 12zm9.085-.5h2.83a1.497 1.497 0 010 1h-2.83a1.498 1.498 0 010-1zM13 12c0 .171-.017.338-.05.5h2.55a.5.5 0 000-1h-2.55c.033.162.05.329.05.5z" clip-rule="evenodd"/>
+  <path d="M0 0h16v16H0z"/>
+  <path fill-rule="evenodd" d="M14 3.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM11.5 5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM7 8.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM4.5 10a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm9.5 3.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM11.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M9.5 4H0V3h9.5v1zM16 4h-2.5V3H16v1zM9.5 14H0v-1h9.5v1zm6.5 0h-2.5v-1H16v1zM6.5 9H16V8H6.5v1zM0 9h2.5V8H0v1z" clip-rule="evenodd"/>
 </svg>
