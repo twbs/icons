@@ -1,0 +1,52 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - '*'
+
+env:
+  CI: true
+  NODE: 12.x
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "${{ env.NODE }}"
+
+      - run: node --version
+      - run: npm --version
+
+      - name: Set up npm cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/test.yml') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-v${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('.github/workflows/test.yml') }}
+            ${{ runner.OS }}-node-v${{ env.NODE }}-
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build the icons
+        run: npm run icons
+
+      - name: Build the docs
+        run: npm run docs-build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          emptyCommits: false
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_site/
