@@ -5,4 +5,5 @@ categories:
   - Real world
 tags:
   - prize
+  - rosette
 ---
