@@ -6,4 +6,6 @@ categories:
 tags:
   - checkmark
   - todo
+  - select
+  - done
 ---
