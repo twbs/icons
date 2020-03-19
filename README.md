@@ -19,11 +19,11 @@
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-# 200+ icons
+# 500+ icons
 
-![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/69751498-12224a80-1104-11ea-9dd6-6f162a8a2566.png)
+![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/77025215-bea36900-694d-11ea-9f2d-68485c4a2543.png)
 
-[Also available in Figma.](https://www.figma.com/file/0xfDVFogWu6g15bVOvBzxS/Bootstrap-Icons-v1.0.0-alpha2)
+[Also available in Figma.](https://www.figma.com/file/NKZWcfR2T3FU0I7fNLqFvI/Bootstrap-Icons-v1.0.0-alpha3)
 
 # Install
 
