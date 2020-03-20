@@ -12,40 +12,38 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
-(async ()=>{
-
+(async () => {
   try {
     const files = await fs.promises.readdir(iconsDir)
 
-    for(const file of files) {
-
+    for (const file of files) {
       const iconBasename = path.basename(file, path.extname(file))
       const iconTitleCap = capitalizeFirstLetter(iconBasename)
-      const iconTitle = iconTitleCap.split("-").join(" ")
-      const pageName = path.join(pagesDir, iconBasename + '.md')
+      const iconTitle = iconTitleCap.split('-').join(' ')
+      const pageName = path.join(pagesDir, `${iconBasename}.md`)
 
-      let pageTemplate = `---
+      const pageTemplate = `---
 title: ${iconTitle}
-layout: icon
 categories:
 tags:
----\n`
+---
+`
 
-      fs.access(pageName, fs.F_OK, (err) => {
+      fs.access(pageName, fs.F_OK, err => {
         if (err) {
-          fs.writeFile(pageName, pageTemplate, function (err) {
-            if (err) throw err
-            console.log(iconBasename + " successfully created")
+          fs.writeFile(pageName, pageTemplate, err => {
+            if (err) {
+              throw err
+            }
+
+            console.log(`${iconBasename} successfully created`)
           })
         } else {
-          console.log(iconBasename + " Permalink already exists")
+          console.log(`${iconBasename}: Permalink already exists`)
         }
       })
-
     }
+  } catch (error) {
+    console.error('Error', error)
   }
-  catch( e ) {
-    console.error("Error", e)
-  }
-
 })()
