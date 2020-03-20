@@ -5,7 +5,7 @@
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2018
   },
   "extends": "eslint:recommended",
   "rules": {
@@ -13,6 +13,7 @@
       "error",
       "always"
     ],
+    "prefer-template": "error",
     "semi": [
       "error",
       "never"

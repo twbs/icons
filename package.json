@@ -20,6 +20,7 @@
     "start": "npm run docs-serve",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
     "docs-build": "hugo --cleanDestinationDir",
+    "pages": "node build/build-pages.js",
     "icons": "node build/build-svgs.js",
     "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
     "publish": "npm-run-all icons docs-build icons-zip",
@@ -29,8 +30,7 @@
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location node_modules/.cache/.stylelintcache",
     "test:linkinator": "linkinator _site --recurse --silent --skip \"^(?!http://localhost)\"",
     "test:vnu": "node build/vnu-jar.js",
-    "test": "npm-run-all docs-build --parallel test:*",
-    "pages": "node build/build-pages.js"
+    "test": "npm-run-all docs-build --parallel test:*"
   },
   "dependencies": {},
   "devDependencies": {
