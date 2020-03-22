@@ -1,6 +1,5 @@
 ---
 title: Check box
-layout: icon
 categories:
   - UI and keyboard
 tags:

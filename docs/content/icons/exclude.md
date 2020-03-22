@@ -1,6 +1,5 @@
 ---
 title: Exclude
-layout: icon
 categories:
   - Graphics
 tags:

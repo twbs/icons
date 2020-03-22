@@ -1,6 +1,5 @@
 ---
 title: Chat
-layout: icon
 categories:
   - Communications
 tags:

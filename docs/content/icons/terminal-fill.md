@@ -1,6 +1,5 @@
 ---
 title: Terminal fill
-layout: icon
 categories:
   - Apps
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Bookmarks
-layout: icon
 categories:
   - Misc
 tags:

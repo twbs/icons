@@ -1,6 +1,5 @@
 ---
 title: Music note list
-layout: icon
 categories:
   - Media
 tags:

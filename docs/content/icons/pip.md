@@ -1,6 +1,5 @@
 ---
 title: Pip
-layout: icon
 categories:
   - Media
 tags:

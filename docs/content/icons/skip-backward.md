@@ -1,6 +1,5 @@
 ---
 title: Skip backward
-layout: icon
 categories:
   - Media
 tags:

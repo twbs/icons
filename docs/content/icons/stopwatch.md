@@ -1,6 +1,5 @@
 ---
 title: Stopwatch
-layout: icon
 categories:
   - Devices
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Calendar
-layout: icon
 categories:
   - Apps
 tags:

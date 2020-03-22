@@ -1,6 +1,5 @@
 ---
 title: Folder symlink
-layout: icon
 categories:
   - Files and folders
 tags:

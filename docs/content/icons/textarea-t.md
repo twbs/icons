@@ -1,6 +1,5 @@
 ---
 title: Textarea t
-layout: icon
 categories:
   - Graphics
 tags:

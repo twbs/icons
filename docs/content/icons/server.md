@@ -1,6 +1,5 @@
 ---
 title: Server
-layout: icon
 categories:
   - Devices
 tags:

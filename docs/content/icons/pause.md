@@ -1,6 +1,5 @@
 ---
 title: Pause
-layout: icon
 categories:
   - Media
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Person
-layout: icon
 categories:
   - People
 tags:

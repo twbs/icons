@@ -1,6 +1,5 @@
 ---
 title: Upload
-layout: icon
 categories:
   - Misc
 tags:

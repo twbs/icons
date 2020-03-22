@@ -1,6 +1,5 @@
 ---
 title: Layout split
-layout: icon
 categories:
   - Layout
 tags:

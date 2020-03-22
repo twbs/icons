@@ -1,6 +1,5 @@
 ---
 title: Music player
-layout: icon
 categories:
   - Devices
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Person check
-layout: icon
 categories:
   - People
 tags:

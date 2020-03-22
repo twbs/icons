@@ -1,6 +1,5 @@
 ---
 title: Collection play
-layout: icon
 categories:
   - Media
 tags:

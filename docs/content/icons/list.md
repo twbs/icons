@@ -1,6 +1,5 @@
 ---
 title: List
-layout: icon
 categories:
   - Typography
 tags:

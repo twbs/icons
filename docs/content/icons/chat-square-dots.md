@@ -1,6 +1,5 @@
 ---
 title: Chat square dots
-layout: icon
 categories:
   - Communications
 tags:

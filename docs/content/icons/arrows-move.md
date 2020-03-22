@@ -1,6 +1,5 @@
 ---
 title: Arrows move
-layout: icon
 categories:
   - Arrows
 tags:

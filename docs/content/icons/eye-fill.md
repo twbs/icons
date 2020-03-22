@@ -1,6 +1,5 @@
 ---
 title: Eye fill
-layout: icon
 categories:
   - Real world
 tags:
