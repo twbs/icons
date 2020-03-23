@@ -10,10 +10,10 @@
           <a class="nav-link " href="{{ .Site.Params.main }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ .Site.Params.main }}/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
+          <a class="nav-link" href="{{ .Site.Params.main }}/docs/{{ .Site.Params.bs_docs_version }}/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ .Site.Params.main }}/docs/{{ .Site.Params.docs_version }}/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+          <a class="nav-link" href="{{ .Site.Params.main }}/docs/{{ .Site.Params.bs_docs_version }}/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');">Icons</a>
@@ -32,7 +32,7 @@
 
     <ul class="navbar-nav ml-sm-auto">
       <li class="nav-item">
-        <a class="nav-link px-1 mx-1 py-3 my-n2" href="{{ .Site.Params.repo }}" target="_blank" rel="noopener" aria-label="GitHub">
+        <a class="nav-link px-1 mx-1 py-3 my-n2" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener" aria-label="GitHub">
           {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
         </a>
       </li>
@@ -53,6 +53,6 @@
       </li>
     </ul>
 
-    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ .Site.Params.package_repo }}/archive/v{{ .Site.Params.package_version }}.zip">Download</a>
+    <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ .Site.Params.repo }}/archive/v{{ .Site.Params.version }}.zip">Download</a>
   </div>
 </header>
