@@ -81,3 +81,17 @@
     }
   }
 }
+
+.btn-copy {
+  border-radius: 0;
+}
+
+#copy-confirm {
+  display: none;
+  font-size: 1.3em;
+  vertical-align: bottom;
+
+  span {
+    font-size: .875rem;
+  }
+}
