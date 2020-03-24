@@ -1,6 +1,5 @@
 ---
 title: Kanban
-layout: icon
 categories:
   - Misc
 tags:

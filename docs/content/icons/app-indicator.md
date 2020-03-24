@@ -1,6 +1,5 @@
 ---
 title: App indicator
-layout: icon
 categories:
   - Apps
 tags:

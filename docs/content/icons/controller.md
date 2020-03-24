@@ -1,6 +1,5 @@
 ---
 title: Controller
-layout: icon
 categories:
   - Devices
 tags:

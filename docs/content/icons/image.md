@@ -1,6 +1,5 @@
 ---
 title: Image
-layout: icon
 categories:
   - Files and folders
 tags:

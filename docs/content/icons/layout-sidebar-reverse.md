@@ -1,6 +1,5 @@
 ---
 title: Layout sidebar reverse
-layout: icon
 categories:
   - Layout
 tags:

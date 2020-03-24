@@ -1,6 +1,5 @@
 ---
 title: Clipboard data
-layout: icon
 categories:
   - Real world
 tags:

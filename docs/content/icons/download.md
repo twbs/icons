@@ -1,6 +1,5 @@
 ---
 title: Download
-layout: icon
 categories:
   - Misc
 tags:

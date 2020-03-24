@@ -1,6 +1,5 @@
 ---
 title: Camera video
-layout: icon
 categories:
   - Devices
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Caret down
-layout: icon
 categories:
   - Carets
 tags:

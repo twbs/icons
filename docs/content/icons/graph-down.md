@@ -1,6 +1,5 @@
 ---
 title: Graph down
-layout: icon
 categories:
   - Data
 tags:

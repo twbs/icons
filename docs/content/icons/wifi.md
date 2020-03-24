@@ -1,6 +1,5 @@
 ---
 title: Wifi
-layout: icon
 categories:
   - Communications
 tags:

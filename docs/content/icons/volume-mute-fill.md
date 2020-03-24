@@ -1,6 +1,5 @@
 ---
 title: Volume mute fill
-layout: icon
 categories:
   - Media
 tags:

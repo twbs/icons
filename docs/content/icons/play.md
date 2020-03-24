@@ -1,6 +1,5 @@
 ---
 title: Play
-layout: icon
 categories:
   - Media
 tags:

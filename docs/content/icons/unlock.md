@@ -1,6 +1,5 @@
 ---
 title: Unlock
-layout: icon
 categories:
   - Security
 tags:

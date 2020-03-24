@@ -1,6 +1,5 @@
 ---
 title: Pip fill
-layout: icon
 categories:
   - Media
 tags:

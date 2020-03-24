@@ -1,6 +1,5 @@
 ---
 title: Phone
-layout: icon
 categories:
   - Devices
 tags:

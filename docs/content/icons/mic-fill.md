@@ -1,6 +1,5 @@
 ---
 title: Mic fill
-layout: icon
 categories:
   - Media
 tags:

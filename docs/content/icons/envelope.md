@@ -1,6 +1,5 @@
 ---
 title: Envelope
-layout: icon
 categories:
   - Communications
 tags:

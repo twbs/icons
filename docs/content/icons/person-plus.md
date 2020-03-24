@@ -1,6 +1,5 @@
 ---
 title: Person plus
-layout: icon
 categories:
   - People
 tags:

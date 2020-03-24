@@ -1,6 +1,5 @@
 ---
 title: Card heading
-layout: icon
 categories:
   - Files and folders
 tags:

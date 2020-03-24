@@ -1,6 +1,5 @@
 ---
 title: Shield fill
-layout: icon
 categories:
   - Security
 tags:

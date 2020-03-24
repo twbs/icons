@@ -1,6 +1,5 @@
 ---
 title: Person lines fill
-layout: icon
 categories:
   - People
 tags:

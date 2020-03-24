@@ -1,6 +1,5 @@
 ---
 title: Caret right
-layout: icon
 categories:
   - Carets
 tags:

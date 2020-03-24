@@ -1,6 +1,5 @@
 ---
 title: Bag fill
-layout: icon
 categories:
   - Commerce
 tags:

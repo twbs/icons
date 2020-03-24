@@ -1,6 +1,5 @@
 ---
 title: Music note beamed
-layout: icon
 categories:
   - Media
 tags:

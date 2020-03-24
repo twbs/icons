@@ -1,6 +1,5 @@
 ---
 title: List UL
-layout: icon
 categories:
   - Typography
 tags:

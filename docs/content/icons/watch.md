@@ -1,6 +1,5 @@
 ---
 title: Watch
-layout: icon
 categories:
   - Devices
 tags:

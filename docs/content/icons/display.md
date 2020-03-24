@@ -1,6 +1,5 @@
 ---
 title: Display
-layout: icon
 categories:
   - Devices
 tags:

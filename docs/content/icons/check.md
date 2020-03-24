@@ -1,6 +1,5 @@
 ---
 title: Check
-layout: icon
 categories:
   - UI and keyboard
 tags:

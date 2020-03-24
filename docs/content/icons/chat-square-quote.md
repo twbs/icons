@@ -1,6 +1,5 @@
 ---
 title: Chat square quote
-layout: icon
 categories:
   - Communications
 tags:

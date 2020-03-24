@@ -1,6 +1,5 @@
 ---
 title: Mic mute
-layout: icon
 categories:
   - Media
 tags:
