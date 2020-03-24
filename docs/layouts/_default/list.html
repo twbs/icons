@@ -1,23 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {{ partial "header" . }}
-  </head>
-  <body id="icons-body">
-    {{ partial "skippy" . }}
-    {{ partial "navbar" . }}
-    {{ partial "hero" . }}
-
-    <main class="container" id="content" role="main">
-      <ul>
-        {{ range .Pages }}
-          <li>
-              <a href="{{ .Permalink }}">{{.Title}}</a>
-          </li>
-        {{ end }}
-        </ul>
-    </main>
-
-    {{- partial "footer" . }}
-  </body>
-</html>
+{{ define "main" }}
+  {{ partial "hero" . }}
+  <main class="container" id="content" role="main">
+    <ul>
+      {{ range .Pages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+      </ul>
+  </main>
+{{ end }}

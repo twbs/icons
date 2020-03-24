@@ -1,17 +1,6 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {{ partial "header" . }}
-  </head>
-  <body id="icons-body">
-    {{ partial "skippy" . }}
-    {{ partial "navbar" . }}
-    {{ partial "hero" . }}
-
-    <main class="container" id="content" role="main">
-      {{ .Content }}
-    </main>
-
-    {{- partial "footer" . }}
-  </body>
-</html>
+{{ define "main" }}
+  {{ partial "hero" . }}
+  <main class="container" id="content" role="main">
+    {{ .Content }}
+  </main>
+{{ end }}
