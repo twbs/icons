@@ -1,6 +1,5 @@
 ---
 title: File earmark break
-layout: icon
 categories:
   - Files and folders
 tags:

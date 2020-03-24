@@ -1,6 +1,5 @@
 ---
 title: Mic
-layout: icon
 categories:
   - Media
 tags:

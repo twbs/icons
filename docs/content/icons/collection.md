@@ -1,6 +1,5 @@
 ---
 title: Collection
-layout: icon
 categories:
   - Media
 tags:

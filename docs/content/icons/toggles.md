@@ -1,6 +1,5 @@
 ---
 title: Toggles
-layout: icon
 categories:
   - Controls
 tags:

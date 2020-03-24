@@ -36,17 +36,14 @@ params:
   description:          "Official open source SVG icon library for Bootstrap"
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
-  package_version:      "1.0.0-alpha3"
-  package_repo:         "https://github.com/twbs/icons"
-
-  current_version:      "4.4.1"
-  docs_version:         "4.4"
+  version:              "1.0.0-alpha3"
+  bs_docs_version:      "4.4"
 
   main:                 "https://getbootstrap.com"
-  repo:                 "https://github.com/twbs"
+  github_org:           "https://github.com/twbs"
+  repo:                 "https://github.com/twbs/icons"
   twitter:              "getbootstrap"
   slack:                "https://bootstrap-slack.herokuapp.com"
   blog:                 "https://blog.getbootstrap.com"
   expo:                 "https://expo.getbootstrap.com"
-  icons:                "https://icons.getbootstrap.com"
   themes:               "https://themes.getbootstrap.com"

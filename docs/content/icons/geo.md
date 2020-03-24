@@ -1,6 +1,5 @@
 ---
 title: Geo
-layout: icon
 categories:
   - Geo
 tags:

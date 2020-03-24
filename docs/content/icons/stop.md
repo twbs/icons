@@ -1,6 +1,5 @@
 ---
 title: Stop
-layout: icon
 categories:
   - Media
 tags:

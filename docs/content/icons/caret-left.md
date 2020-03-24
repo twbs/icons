@@ -1,6 +1,5 @@
 ---
 title: Caret left
-layout: icon
 categories:
   - Carets
 tags:

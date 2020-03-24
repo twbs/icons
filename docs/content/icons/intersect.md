@@ -1,6 +1,5 @@
 ---
 title: Intersect
-layout: icon
 categories:
   - Graphics
 tags:

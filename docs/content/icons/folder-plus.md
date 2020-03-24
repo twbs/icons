@@ -1,6 +1,5 @@
 ---
 title: Folder plus
-layout: icon
 categories:
   - Files and folders
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Shuffle
-layout: icon
 categories:
   - Arrows
 tags:

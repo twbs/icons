@@ -1,6 +1,5 @@
 ---
 title: Pen
-layout: icon
 categories:
   - Tools
 tags:

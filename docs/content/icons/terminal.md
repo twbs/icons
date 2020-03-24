@@ -1,6 +1,5 @@
 ---
 title: Terminal
-layout: icon
 categories:
   - Apps
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Droplet fill
-layout: icon
 categories:
   - Graphics
 tags:

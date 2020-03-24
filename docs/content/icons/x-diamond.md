@@ -1,6 +1,5 @@
 ---
 title: X diamond
-layout: icon
 categories:
   - Alerts, warnings, and signs
 tags:

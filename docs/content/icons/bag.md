@@ -1,6 +1,5 @@
 ---
 title: Bag
-layout: icon
 categories:
   - Commerce
 tags:

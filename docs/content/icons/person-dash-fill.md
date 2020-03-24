@@ -1,6 +1,5 @@
 ---
 title: Person dash fill
-layout: icon
 categories:
   - People
 tags:
