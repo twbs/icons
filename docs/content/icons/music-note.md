@@ -1,6 +1,5 @@
 ---
 title: Music note
-layout: icon
 categories:
   - Media
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Battery
-layout: icon
 categories:
   - Devices
 tags:

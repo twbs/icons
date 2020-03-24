@@ -1,6 +1,5 @@
 ---
 title: File earmark zip
-layout: icon
 categories:
   - Files and folders
 tags:

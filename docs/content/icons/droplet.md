@@ -1,6 +1,5 @@
 ---
 title: Droplet
-layout: icon
 categories:
   - Graphics
 tags:

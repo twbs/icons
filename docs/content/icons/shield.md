@@ -1,6 +1,5 @@
 ---
 title: Shield
-layout: icon
 categories:
   - Security
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Skip start
-layout: icon
 categories:
   - Media
 tags:

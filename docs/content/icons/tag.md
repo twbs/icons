@@ -1,6 +1,5 @@
 ---
 title: Tag
-layout: icon
 categories:
   - Real world
 tags:

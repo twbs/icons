@@ -1,6 +1,5 @@
 ---
 title: Arrow counterclockwise
-layout: icon
 categories:
   - Arrows
 tags:

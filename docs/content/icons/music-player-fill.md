@@ -1,6 +1,5 @@
 ---
 title: Music player fill
-layout: icon
 categories:
   - Devices
 tags:

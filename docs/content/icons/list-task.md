@@ -1,6 +1,5 @@
 ---
 title: List task
-layout: icon
 categories:
   - Typography
 tags:

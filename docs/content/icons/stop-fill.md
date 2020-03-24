@@ -1,6 +1,5 @@
 ---
 title: Stop fill
-layout: icon
 categories:
   - Media
 tags:

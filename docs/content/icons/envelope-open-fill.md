@@ -1,6 +1,5 @@
 ---
 title: Envelope open fill
-layout: icon
 categories:
   - Communications
 tags:

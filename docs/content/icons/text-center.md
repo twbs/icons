@@ -1,6 +1,5 @@
 ---
 title: Text center
-layout: icon
 categories:
   - Typography
 tags:

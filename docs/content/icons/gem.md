@@ -1,6 +1,5 @@
 ---
 title: Gem
-layout: icon
 categories:
   - Shapes
 tags:

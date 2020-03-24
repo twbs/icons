@@ -1,6 +1,5 @@
 ---
 title: Volume up
-layout: icon
 categories:
   - Media
 tags:

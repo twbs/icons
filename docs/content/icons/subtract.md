@@ -1,6 +1,5 @@
 ---
 title: Subtract
-layout: icon
 categories:
   - Graphics
 tags:

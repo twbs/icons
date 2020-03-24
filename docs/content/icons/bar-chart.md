@@ -1,6 +1,5 @@
 ---
 title: Bar chart
-layout: icon
 categories:
   - Data
 tags:

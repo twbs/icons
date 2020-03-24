@@ -1,6 +1,5 @@
 ---
 title: Sliders
-layout: icon
 categories:
   - Graphics
 tags:

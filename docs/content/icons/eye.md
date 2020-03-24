@@ -1,6 +1,5 @@
 ---
 title: Eye
-layout: icon
 categories:
   - Real world
 tags:

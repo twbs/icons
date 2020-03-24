@@ -1,6 +1,5 @@
 ---
 title: Person square
-layout: icon
 categories:
   - People
 tags:

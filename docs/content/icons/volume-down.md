@@ -1,6 +1,5 @@
 ---
 title: Volume down
-layout: icon
 categories:
   - Media
 tags:

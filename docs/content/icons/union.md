@@ -1,6 +1,5 @@
 ---
 title: Union
-layout: icon
 categories:
   - Graphics
 tags:

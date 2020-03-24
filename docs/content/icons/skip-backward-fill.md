@@ -1,6 +1,5 @@
 ---
 title: Skip backward fill
-layout: icon
 categories:
   - Media
 tags:

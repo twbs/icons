@@ -1,6 +1,5 @@
 ---
 title: Cursor text
-layout: icon
 categories:
   - Typography
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Book
-layout: icon
 categories:
   - Real world
 tags:

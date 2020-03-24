@@ -1,6 +1,5 @@
 ---
 title: List OL
-layout: icon
 categories:
   - Typography
 tags:

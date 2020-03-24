@@ -1,6 +1,5 @@
 ---
 title: Aspect ratio
-layout: icon
 categories:
   - Media
 tags:

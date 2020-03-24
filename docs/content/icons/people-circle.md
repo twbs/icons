@@ -1,6 +1,5 @@
 ---
 title: People circle
-layout: icon
 categories:
   - People
 tags:
