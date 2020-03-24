@@ -58,7 +58,7 @@
 
       {{- $source := readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) }}
       <button type="button" class="btn btn-sm btn-success btn-copy" onclick="copyToClipboard({{ $source }})">Copy</button>
-      <div id="copy-confirm" class="text-success">
+      <div class="text-success copy-confirm">
         {{ readFile (printf "/%s/%s.svg" "icons" "check") | chomp | safeHTML }}
         <span> Copied</span>
       </div>
@@ -69,11 +69,16 @@
 
     <script>
       function copyToClipboard(source) {
+        var confirm = document.getElementsByClassName('copy-confirm');
         navigator.clipboard.writeText(source).then(function () {
-          document.getElementById('copy-confirm').style.display='inline';
-          setTimeout(function () {
-            document.getElementById('copy-confirm').style.display='none';
-          }, 2000);
+          for(var i = 0, length = confirm.length; i < length; i++) {
+            confirm[i].style.display = 'inline';
+            setTimeout(function () {
+              for(var i = 0, length = confirm.length; i < length; i++) {
+                confirm[i].style.display = 'none';
+              }
+            }, 2000);
+         };
         }, function () {
           console.log("Failed to copy to clipboard");
         });
