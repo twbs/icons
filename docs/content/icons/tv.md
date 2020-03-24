@@ -1,6 +1,5 @@
 ---
 title: TV
-layout: icon
 categories:
   - Devices
 tags:

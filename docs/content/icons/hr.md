@@ -1,6 +1,5 @@
 ---
 title: HR
-layout: icon
 categories:
   - Typography
 tags:

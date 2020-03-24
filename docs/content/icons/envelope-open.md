@@ -1,6 +1,5 @@
 ---
 title: Envelope open
-layout: icon
 categories:
   - Communications
 tags:

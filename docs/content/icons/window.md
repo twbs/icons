@@ -1,6 +1,5 @@
 ---
 title: Window
-layout: icon
 categories:
   - Layout
 tags:

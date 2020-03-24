@@ -1,6 +1,5 @@
 ---
 title: Star
-layout: icon
 categories:
   - Shapes
 tags:

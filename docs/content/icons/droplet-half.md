@@ -1,6 +1,5 @@
 ---
 title: Droplet half
-layout: icon
 categories:
   - Graphics
 tags:

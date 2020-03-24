@@ -1,6 +1,5 @@
 ---
 title: Kanban fill
-layout: icon
 categories:
   - Misc
 tags:

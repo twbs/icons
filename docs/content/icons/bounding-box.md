@@ -1,6 +1,5 @@
 ---
 title: Bounding box
-layout: icon
 categories:
   - Graphics
 tags:

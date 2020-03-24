@@ -1,6 +1,5 @@
 ---
 title: Shield lock
-layout: icon
 categories:
   - Security
 tags:

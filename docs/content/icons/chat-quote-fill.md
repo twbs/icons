@@ -1,6 +1,5 @@
 ---
 title: Chat quote fill
-layout: icon
 categories:
   - Communications
 tags:

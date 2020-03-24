@@ -1,6 +1,5 @@
 ---
 title: Battery charging
-layout: icon
 categories:
   - Devices
 tags:

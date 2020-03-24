@@ -1,6 +1,5 @@
 ---
 title: Building
-layout: icon
 categories:
   - People
 tags:

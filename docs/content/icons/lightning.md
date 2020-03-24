@@ -1,6 +1,5 @@
 ---
 title: Lightning
-layout: icon
 categories:
   - Misc
 tags:

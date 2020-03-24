@@ -1,6 +1,5 @@
 ---
 title: List nested
-layout: icon
 categories:
   - Typography
 tags:

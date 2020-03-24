@@ -1,6 +1,5 @@
 ---
 title: Aspect ratio fill
-layout: icon
 categories:
   - Media
 tags:
