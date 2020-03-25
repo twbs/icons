@@ -69,16 +69,11 @@
 
     <script>
       function copyToClipboard(source) {
-        var confirm = document.getElementsByClassName('copy-confirm');
         navigator.clipboard.writeText(source).then(function () {
-          for(var i = 0, length = confirm.length; i < length; i++) {
-            confirm[i].style.display = 'inline';
+          document.querySelector('.copy-confirm').style.display = 'inline';
             setTimeout(function () {
-              for(var i = 0, length = confirm.length; i < length; i++) {
-                confirm[i].style.display = 'none';
-              }
+              document.querySelector('.copy-confirm').style.display = 'none';
             }, 2000);
-         };
         }, function () {
           console.log("Failed to copy to clipboard");
         });
