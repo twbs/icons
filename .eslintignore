@@ -1,0 +1,4 @@
+**/*.min.js
+**/dist/
+**/vendor/
+/_site/
