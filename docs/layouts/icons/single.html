@@ -70,9 +70,9 @@
     <script>
       function copyToClipboard(source) {
         navigator.clipboard.writeText(source).then(function () {
-          document.querySelector('.copy-confirm').style.display = 'inline';
+          document.querySelector('.copy-confirm').classList.add("d-inline-block");
             setTimeout(function () {
-              document.querySelector('.copy-confirm').style.display = 'none';
+              document.querySelector('.copy-confirm').classList.remove("d-inline-block");
             }, 2000);
         }, function () {
           console.log("Failed to copy to clipboard");
