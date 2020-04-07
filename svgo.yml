@@ -18,12 +18,14 @@ plugins:
   - cleanupNumericValues: true
   - collapseGroups: true
   - convertColors: true
-  - convertPathData: true
+  - convertPathData:
+      noSpaceAfterFlags: false
   - convertShapeToPath: true
   - convertStyleToAttrs: true
   - convertTransform: true
   - inlineStyles: true
-  - mergePaths: true
+  - mergePaths:
+      noSpaceAfterFlags: false
   - minifyStyles: true
   - moveElemsAttrsToGroup: true
   - moveGroupAttrsToElems: true
