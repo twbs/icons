@@ -7,6 +7,36 @@
 @import "syntax";
 @import "ads";
 
+.highlight {
+  pre {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(0, 0, 0, .025);
+    border-radius: .25rem;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    code {
+      word-wrap: normal;
+    }
+  }
+}
+
+.bd-example {
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+
+  + .highlight pre {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
 .f0 {
   font-size: 2rem;
 
