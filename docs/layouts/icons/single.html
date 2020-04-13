@@ -54,13 +54,48 @@
         </div>
       </div>
 
-      <h2 class="h4 mb-3">Copy SVG code</h2>
-      <div class="alert alert-info">Copy to clipboard button hopefully coming in next release, sorry!</div>
+      <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
 
-      {{- $source := readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) }}
+      {{ $source := readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) -}}
       {{ highlight $source "html" "" }}
+
     </main>
 
     {{- partial "footer" . }}
+
+    <script src="/assets/js/clipboard.min.js"></script>
+    <script>
+      var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard">Copy</button></div>';
+
+      [].slice.call(document.querySelectorAll('figure.highlight, div.highlight'))
+        .forEach(function (element) {
+          element.insertAdjacentHTML('beforebegin', btnHtml)
+        });
+
+      var clipboard = new ClipboardJS('.btn-clipboard', {
+        target: function (trigger) {
+          return trigger.parentNode.nextElementSibling
+        }
+      })
+
+      clipboard.on('success', function (e) {
+        e.clearSelection()
+        e.trigger.textContent = 'Copied!'
+        setTimeout(function () {
+          e.trigger.textContent = 'Copy'
+        }, 2000);
+      })
+
+      clipboard.on('error', function () {
+        var modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
+        var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
+        var errorElement = document.getElementById('copy-error-callout')
+
+        if (!errorElement) return
+
+        errorElement.classList.remove('d-none')
+        errorElement.insertAdjacentHTML('afterbegin', fallbackMsg)
+      })
+    </script>
   </body>
 </html>
