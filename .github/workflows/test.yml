@@ -17,8 +17,6 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
-      - run: node --version
-      - run: npm --version
       - run: java -version
 
       - name: Set up npm cache

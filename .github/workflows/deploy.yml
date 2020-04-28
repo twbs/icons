@@ -22,9 +22,6 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
-      - run: node --version
-      - run: npm --version
-
       - name: Set up npm cache
         uses: actions/cache@v1
         with:
