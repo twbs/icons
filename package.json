@@ -43,7 +43,7 @@
     "js-yaml": "^3.13.1",
     "linkinator": "^2.0.6",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.0",
+    "postcss-cli": "^7.1.1",
     "shx": "^0.3.2",
     "stylelint": "^13.3.3",
     "stylelint-config-twbs-bootstrap": "^2.0.1",
