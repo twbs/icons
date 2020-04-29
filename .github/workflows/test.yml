@@ -2,7 +2,7 @@ name: Tests
 on: [push, pull_request]
 env:
   CI: true
-  NODE: 10.x
+  NODE: 12.x
 
 jobs:
   test:
@@ -17,8 +17,6 @@ jobs:
         with:
           node-version: "${{ env.NODE }}"
 
-      - run: node --version
-      - run: npm --version
       - run: java -version
 
       - name: Set up npm cache
