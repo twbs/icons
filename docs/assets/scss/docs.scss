@@ -94,6 +94,16 @@
 
 .list {
   font-size: 2rem;
+
+  // stylelint-disable  declaration-no-important
+  a:hover,
+  a:focus {
+    &,
+    .name {
+      color: var(--bs-blue) !important;
+    }
+  }
+  // stylelint-enable  declaration-no-important
 }
 
 .btn-group > .btn {
