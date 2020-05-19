@@ -1,7 +1,8 @@
 ---
 title: Calendar
+layout: icon
 categories:
-  - Apps
+  - Date and time
 tags:
   - date
   - time
