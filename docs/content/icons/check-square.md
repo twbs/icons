@@ -1,5 +1,6 @@
 ---
-title: Check circle
+title: Check square
+layout: icon
 categories:
   - Alerts, warnings, and signs
 tags:

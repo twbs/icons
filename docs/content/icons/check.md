@@ -1,10 +1,9 @@
 ---
 title: Check
 categories:
-  - UI and keyboard
+  - Alerts, warnings, and signs
 tags:
   - checkmark
-  - todo
-  - select
+  - confirm
   - done
 ---

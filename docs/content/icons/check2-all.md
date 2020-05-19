@@ -1,11 +1,12 @@
 ---
-title: Check box
+title: Check2 all
+layout: icon
 categories:
   - UI and keyboard
 tags:
   - checkmark
   - todo
-  - checkbox
   - select
   - done
+  - checkbox
 ---

@@ -1,5 +1,6 @@
 ---
-title: Wallet
+title: Wallet2
+layout: icon
 categories:
   - Commerce
 tags:
