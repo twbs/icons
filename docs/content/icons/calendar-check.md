@@ -1,5 +1,5 @@
 ---
-title: Calendar fill
+title: Calendar check
 layout: icon
 categories:
   - Date and time
