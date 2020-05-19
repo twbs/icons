@@ -68,10 +68,11 @@ The `viewBox` attribute is required if you wish to resize icons with `background
 .bi::before {
   display: inline-block;
   content: "";
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>");
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
 }
+
 {{< /highlight >}}
   </div>
 </div>
