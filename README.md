@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getbootstrap.com/">
-    <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
+    <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="Bootstrap logo" width="72" height="72">
   </a>
 </p>
 
@@ -12,14 +12,14 @@
   <a href="https://icons.getbootstrap.com/"><strong>Explore Bootstrap Icons »</strong></a>
   <br>
   <br>
-  <a href="https://getbootstrap.com/docs/4.3/">Bootstrap</a>
+  <a href="https://getbootstrap.com/docs/4.5/">Bootstrap</a>
   ·
   <a href="https://themes.getbootstrap.com/">Themes</a>
   ·
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-# 500+ icons
+# 670+ icons
 
 ![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/77025215-bea36900-694d-11ea-9f2d-68485c4a2543.png)
 
