@@ -19,13 +19,13 @@
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-# 670+ icons
+## 670+ icons
 
-![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/77025215-bea36900-694d-11ea-9f2d-68485c4a2543.png)
+![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/82475151-e95e8a80-9a80-11ea-8e35-923ac6fa557b.png)
 
 [Also available in Figma.](https://www.figma.com/file/XDj1VewxEtXzkDDMAvWx2W/Bootstrap-Icons-v1.0.0-alpha4)
 
-# Install
+## Install
 
 Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) at for usage instructions.
 
@@ -33,7 +33,7 @@ Bootstrap Icons are packaged up and published to npm. We only include the proces
 npm i bootstrap-icons --save
 ```
 
-# Development
+## Development
 
 [![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)](https://github.com/twbs/icons/actions?workflow=Tests)
 
@@ -48,27 +48,34 @@ npm start
 
 Then open `http://localhost:4000` in your browser.
 
-# Adding SVGs
+### npm scripts
+
+Here are some key scripts you'll use during development. Be sure to look to our `package.json` for a complete list of scripts.
+
+| Script | Description |
+| --- | --- |
+| `start` | Alias for running `docs-serve` |
+| `docs-serve` | Starts a local Hugo server |
+| `pages` | Generates permalink pages for each icon with template Markdown |
+| `icons` | Processes and optimizes SVGs in `icons` directory |
+
+## Adding SVGs
 
 Once a new SVG icon has been added to the `icons` directory, you'll need to optimize them. An npm script is used to:
 
 1. Optimize our SVGs with SVGO.
 2. Modify the SVGs source HTML, removing all attributes before setting new attributes and values in our preferred order.
 
-Use `npm run icons` to run the script, then commit the results in a new branch for updating.
+Use `npm run icons` to run the script, run `npm run pages` to build permalink pages, complete those pages, and, finally, commit the results in a new branch for updating.
 
-# Publishing
+## Publishing
 
-Docs are published via an npm script that builds the Hugo site, creates a temporary Git repo, and force pushes that to our `gh-pages` branch. This circumvents issues with GitHub Pages not working with Hugo.
+Documentation is published automatically when a new Git tag is published. See our GitHub Actions and `package.json` for more information.
 
-```shell
-npm run publish
-```
-
-# License
+## License
 
 MIT
 
-# Author
+## Author
 
-@mdo
+[@mdo](https://github.com/mdo)
