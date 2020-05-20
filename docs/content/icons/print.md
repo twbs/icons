@@ -1,5 +1,5 @@
 ---
-title: Printer
+title: Print
 categories:
   - Devices
 tags:
