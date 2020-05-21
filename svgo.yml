@@ -33,6 +33,7 @@ plugins:
       attrs:
         - "data-name"
         - "fill"
+        - "clip-rule"
   - removeComments: true
   - removeDesc: true
   - removeDoctype: true
