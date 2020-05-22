@@ -1,6 +1,5 @@
 @import "variables";
 @import "buttons";
-@import "clipboard-js";
 @import "navbar";
 @import "skippy";
 @import "footer";
@@ -8,6 +7,8 @@
 @import "ads";
 
 .highlight {
+  position: relative;
+
   pre {
     padding: 1.25rem;
     margin-bottom: 1.5rem;
@@ -22,6 +23,12 @@
     code {
       word-wrap: normal;
     }
+  }
+
+  .btn-clipboard {
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
   }
 }
 

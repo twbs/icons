@@ -54,10 +54,10 @@
         </div>
       </div>
 
-      <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
-
       {{ $source := readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) -}}
       {{ highlight $source "html" "" }}
+
+      <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
 
     </main>
 
@@ -65,16 +65,16 @@
 
     <script src="/assets/js/clipboard.min.js"></script>
     <script>
-      var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard">Copy</button></div>';
+      var btnHtml = '<button type="button" class="d-none d-sm-block btn btn-sm btn-outline-primary btn-clipboard" title="Copy to clipboard">Copy</button>';
 
       [].slice.call(document.querySelectorAll('figure.highlight, div.highlight'))
         .forEach(function (element) {
-          element.insertAdjacentHTML('beforebegin', btnHtml)
+          element.insertAdjacentHTML('beforeend', btnHtml)
         });
 
       var clipboard = new ClipboardJS('.btn-clipboard', {
         target: function (trigger) {
-          return trigger.parentNode.nextElementSibling
+          return trigger.previousElementSibling
         }
       })
 
