@@ -21,6 +21,9 @@
           <div class="name text-muted text-decoration-none text-center pt-1">
             {{ $name }}
           </div>
+          <div class="tags d-none">
+            {{ with $.Site.GetPage "icons" $filename }}{{ with .Params.tags }}{{ delimit . " " }}{{ end }}{{ end }}
+          </div>
         </a>
       </li>
     {{ end -}}
