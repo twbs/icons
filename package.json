@@ -23,7 +23,8 @@
     "pages": "node build/build-pages.js",
     "icons": "node build/build-svgs.js",
     "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
-    "publish": "npm-run-all icons docs-build icons-zip",
+    "icons-sprite": "svg-sprite --symbol --symbol-dest . --symbol-sprite bootstrap-icons.svg icons/*.svg",
+    "publish": "npm-run-all icons docs-build icons-zip icons-sprite",
     "netlify": "npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
     "test:eslint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives .",
@@ -48,6 +49,7 @@
     "shx": "^0.3.2",
     "stylelint": "^13.5.0",
     "stylelint-config-twbs-bootstrap": "^2.0.2",
+    "svg-sprite": "^1.5.0",
     "svgo": "^1.3.2",
     "vnu-jar": "20.3.16"
   },

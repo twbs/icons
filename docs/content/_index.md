@@ -45,6 +45,20 @@ Embed your icons within the HTML of your page (as opposed to an external image f
 <div class="row my-4">
   <div class="col-md-4 col-xl-3">
 {{< md >}}
+### Sprite
+Reference the sprite file containing all the icons with the `<use>` element. And select the symbol with the fragment identifer. Here it's `#heart-fill`.
+{{< /md >}}
+  </div>
+  <div class="col-md-8 col-xl-9">
+    {{< example >}}<svg class="bi" width="32" height="32" fill="currentColor">
+  <use xlink:href="bootstrap-icons.svg#heart-fill"/>
+</svg>{{< /example >}}
+  </div>
+</div>
+
+<div class="row my-4">
+  <div class="col-md-4 col-xl-3">
+{{< md >}}
 ### External image
 Copy the Bootstrap icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
 {{< /md >}}
