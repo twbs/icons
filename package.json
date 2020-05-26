@@ -38,7 +38,7 @@
     "chalk": "^4.0.0",
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^7.0.2",
-    "eslint": "^7.0.0",
+    "eslint": "^7.1.0",
     "find-unused-sass-variables": "^2.0.0",
     "hugo-bin": "^0.59.0",
     "js-yaml": "^3.13.1",
