@@ -24,7 +24,7 @@
     "icons": "node build/build-svgs.js",
     "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
     "icons-sprite": "svg-sprite --symbol --symbol-dest . --symbol-sprite bootstrap-icons.svg icons/*.svg",
-    "publish": "npm-run-all icons docs-build icons-zip icons-sprite",
+    "publish": "npm-run-all icons icons-sprite docs-build icons-zip",
     "netlify": "npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
     "test:eslint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives .",
