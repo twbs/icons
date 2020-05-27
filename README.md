@@ -33,6 +33,17 @@ Bootstrap Icons are packaged up and published to npm. We only include the proces
 npm i bootstrap-icons --save
 ```
 
+## Usage
+
+Depending on your setup, you can include Bootstrap Icons in a handful of ways.
+
+- Copy-paste SVGs as embedded HTML
+- Reference via `<img>` element
+- Use the SVG sprite
+- Include via CSS
+
+[See the docs for more information.](https://icons.getbootstrap.com/#usage)
+
 ## Development
 
 [![Build Status](https://github.com/twbs/icons/workflows/Tests/badge.svg)](https://github.com/twbs/icons/actions?workflow=Tests)
