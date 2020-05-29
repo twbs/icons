@@ -57,7 +57,8 @@
     "node": ">=10"
   },
   "files": [
-    "icons/*.svg"
+    "icons/*.svg",
+    "bootstrap-icons.svg"
   ],
   "hugo-bin": {
     "buildTags": "extended"
