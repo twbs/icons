@@ -52,13 +52,13 @@ Use the SVG sprite to insert any icon through the `<use>` element. Use the icon'
   <div class="col-md-8">
 {{< example >}}
 <svg class="bi" width="32" height="32" fill="currentColor">
-  <use xlink:href="bootstrap-icons.svg#heart-fill">
+  <use xlink:href="bootstrap-icons.svg#heart-fill"/>
 </svg>
 <svg class="bi" width="32" height="32" fill="currentColor">
-  <use xlink:href="bootstrap-icons.svg#toggles">
+  <use xlink:href="bootstrap-icons.svg#toggles"/>
 </svg>
 <svg class="bi" width="32" height="32" fill="currentColor">
-  <use xlink:href="bootstrap-icons.svg#shop">
+  <use xlink:href="bootstrap-icons.svg#shop"/>
 </svg>
 {{< /example >}}
   </div>
