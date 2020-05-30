@@ -1,0 +1,6 @@
+<svg class="bi bi-globe" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path fill-rule="evenodd" d="M10.31 13.167C11.026 11.895 11.5 10.07 11.5 8s-.474-3.895-1.19-5.167C9.577 1.53 8.72 1 8 1s-1.577.53-2.31 1.833C4.974 4.105 4.5 5.93 4.5 8s.474 3.895 1.19 5.167C6.423 14.47 7.28 15 8 15s1.577-.53 2.31-1.833zM8 16c2.485 0 4.5-3.582 4.5-8S10.485 0 8 0 3.5 3.582 3.5 8s2.015 8 4.5 8z"/>
+  <path fill-rule="evenodd" d="M7.5 15.5V.5h1v15h-1z"/>
+  <path fill-rule="evenodd" d="M15.5 8.5H.5v-1h15v1zm-1-3.5h-13V4h13v1zm0 7h-13v-1h13v1z"/>
+</svg>
