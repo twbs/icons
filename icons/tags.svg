@@ -1,0 +1,5 @@
+<svg class="bi bi-tags" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path stroke="#000" stroke-linejoin="round" d="M2.5 2a.5.5 0 0 1 .5-.5h4.586a.5.5 0 0 1 .353.146l7 7a.5.5 0 0 1 0 .708l-4.585 4.585a.5.5 0 0 1-.708 0l-7-7a.5.5 0 0 1-.146-.353V2z"/>
+  <path stroke="#000" stroke-linejoin="round" d="M6.5 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+  <path d="M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1v5.086z"/>
+</svg>

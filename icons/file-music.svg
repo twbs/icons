@@ -1,0 +1,6 @@
+<svg class="bi bi-file-music" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
+  <path d="M9 11.5c0 .828-.895 1.5-2 1.5s-2-.672-2-1.5.895-1.5 2-1.5 2 .672 2 1.5z"/>
+  <path fill-rule="evenodd" d="M9 5v6.5H8V5h1z"/>
+  <path d="M8 4.754a1 1 0 0 1 .725-.961l1.5-.429a1 1 0 0 1 1.275.962V6L8 7V4.754z"/>
+</svg>

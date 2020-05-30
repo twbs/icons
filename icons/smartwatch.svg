@@ -1,0 +1,6 @@
+<svg class="bi bi-smartwatch" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 14.333v-.86h8v.86c0 .92-.746 1.667-1.667 1.667H5.667C4.747 16 4 15.254 4 14.333zM4 2.528v-.861C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v.86H4z"/>
+  <rect width="2" height="3" x="13" y="5" rx=".5"/>
+  <path fill-rule="evenodd" d="M8.5 4.5A.5.5 0 0 1 9 5v3.5a.5.5 0 0 1-.5.5H6a.5.5 0 0 1 0-1h2V5a.5.5 0 0 1 .5-.5z"/>
+  <path fill-rule="evenodd" d="M4.5 2h7A2.5 2.5 0 0 1 14 4.5v7a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 11.5v-7A2.5 2.5 0 0 1 4.5 2zm0 1A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7z"/>
+</svg>
