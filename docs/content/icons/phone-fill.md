@@ -5,4 +5,5 @@ categories:
 tags:
   - mobile
   - telephone
+  - smartphone
 ---
