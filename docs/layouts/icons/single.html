@@ -16,11 +16,11 @@
       </nav>
 
       <div class="row align-items-md-center">
-        <div class="col-md-8">
+        <div class="col-md-6 col-lg-7">
           <h1>{{ .Title }}</h1>
           <p class="mb-3 mb-md-0">Tags: {{ with .Params.tags }}{{ delimit . ", " }}{{ end }}</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-5">
           <script async src="https://cdn.carbonads.com/carbon.js?serve=CE7D4277&placement=iconsgetbootstrapcom" id="_carbonads_js"></script>
         </div>
       </div>
@@ -32,27 +32,29 @@
       {{- $name := humanize $filename -}}
 
       <div class="row mb-4">
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="d-flex align-items-center justify-content-center p-3 py-5 mb-2 bg-light rounded" style="font-size: 20em;">
             {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3">
           <div class="d-flex align-items-center justify-content-center p-3 py-5 mb-2 bg-light rounded" style="font-size: 10em">
             {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
           </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-lg-2">
           <div class="d-flex align-items-center justify-content-center p-3 py-5 mb-2 bg-light rounded" style="font-size: 2em">
             {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
           </div>
         </div>
-        <div class="col-md-1">
-          <div class="d-flex align-items-center justify-content-center p-3 py-4 mb-2 bg-light rounded" style="font-size: 1em">
+        <div class="col-lg-1">
+          <div class="d-flex align-items-center justify-content-center p-2 p-md-3 py-lg-4 mb-2 bg-light rounded" style="font-size: 1em">
             {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
           </div>
         </div>
       </div>
+
+      <h2>Copy HTML</h2>
 
       <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
 
