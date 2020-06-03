@@ -1,5 +1,5 @@
 ---
-title: Filter left
+title: Sort down
 categories:
   - Sort and filter
 tags:

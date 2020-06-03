@@ -1,5 +1,5 @@
 ---
-title: Filter left
+title: Filter square
 categories:
   - Sort and filter
 tags:

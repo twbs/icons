@@ -1,5 +1,5 @@
 ---
-title: Filter left
+title: Sort alpha up alt
 categories:
   - Sort and filter
 tags:
