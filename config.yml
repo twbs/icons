@@ -31,8 +31,10 @@ module:
       target:           static/apple-touch-icon.png
     - source:           docs/static/assets/img/favicons/favicon.ico
       target:           static/favicon.ico
-    - source:           bootstrap-icons.svg
+    - source:           dist/svg/bootstrap-icons.svg
       target:           static/bootstrap-icons.svg
+    - source:           dist/font
+      target:           static/font
 
 params:
   description:          "Official open source SVG icon library for Bootstrap"

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ fontName }}</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 1.5rem;
+        color: #333;
+        text-align: center;
+      }
+
+      .icon {
+        width: 8rem;
+        display: inline-block;
+        margin: .5rem;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .icon-preview {
+        margin-bottom: .5rem;
+        background-color: #f5f5f5;
+        border-radius: .25rem;
+      }
+
+      {{ baseTag }} {
+        display: inline-block;
+        margin: 1rem;
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .label {
+        font-size: .5rem;
+        font-family: Monaco, monospace;
+        color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+
+    <link rel="stylesheet" href="{{ htmlCssRelativePath }}">
+  </head>
+  <body>
+    <h1>{{ fontName }}</h1>
+    {{# each names }}
+      <div class="icon">
+        <div class="icon-preview">
+          <{{ ../baseTag }} class="{{ ../classPrefix }}{{ this }}"></{{ ../baseTag }}>
+        </div>
+        <div class="label" title="{{ this }}">{{ this }}</div>
+      </div>
+    {{/ each }}
+  </body>
+</html>

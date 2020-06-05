@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "{{ fontName }}";
+  src: {{{ src }}};
+}
+
+{{# if baseSelector }}
+{{ baseSelector }}::before {
+{{ else }}
+[class^="{{classPrefix}}"]::before,
+[class*=" {{classPrefix}}"]::before {
+{{/ if }}
+  font-family: {{ fontName }} !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: text-bottom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+{{# each codepoints }}
+.{{ ../classPrefix }}{{ @key }}::before { content: "\\{{ this }}"; }
+{{/ each }}
