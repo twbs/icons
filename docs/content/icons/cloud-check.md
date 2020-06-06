@@ -1,7 +1,7 @@
 ---
-title: Cloud download
+title: Cloud check
 categories:
   - Clouds
 tags:
-  - arrow
+  - checkmark
 ---

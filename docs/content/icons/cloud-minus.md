@@ -1,7 +1,7 @@
 ---
-title: Cloud download
+title: Cloud minus
 categories:
   - Clouds
 tags:
-  - arrow
+  - subtract
 ---
