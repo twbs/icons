@@ -49,3 +49,4 @@ params:
   blog:                 "https://blog.getbootstrap.com"
   expo:                 "https://expo.getbootstrap.com"
   themes:               "https://themes.getbootstrap.com"
+  opencollective:       "https://opencollective.com/bootstrap"
