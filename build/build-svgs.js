@@ -13,9 +13,6 @@ const iconsDir = path.join(__dirname, '../icons/')
 
 const svgAttributes = {
   class: '',
-  width: '1em',
-  height: '1em',
-  viewBox: '0 0 16 16',
   fill: 'currentColor',
   xmlns: 'http://www.w3.org/2000/svg'
 }
@@ -52,6 +49,13 @@ const processFile = (file, config) => new Promise((resolve, reject) => {
             $(svg).removeAttr(attr)
             $(svg).attr(attr, val)
           }
+
+          const dimensions = $(svg).attr('viewBox').split(' ')
+          const svgWidth = dimensions[2] / 16
+          const svgHeight = dimensions[3] / 16
+
+          $(svg).attr('width', `${svgWidth}em`)
+          $(svg).attr('height', `${svgHeight}em`)
 
           $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
 
