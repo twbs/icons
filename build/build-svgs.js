@@ -57,6 +57,17 @@ const processFile = (file, config) => new Promise((resolve, reject) => {
           $(svg).attr('width', `${svgWidth}em`)
           $(svg).attr('height', `${svgHeight}em`)
 
+          // Todo: Pass argument to script to flip between ems and pixels.
+          // Until then, leaving code here—font-family generation requires
+          // use of pixels.
+
+          // const svgWidth = dimensions[2]
+          // const svgHeight = dimensions[3]
+
+          // $(svg).attr('width', `${svgWidth}`)
+          // $(svg).attr('height', `${svgHeight}`)
+
+
           $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
 
           fs.writeFile(file, $(svg), 'utf8')
