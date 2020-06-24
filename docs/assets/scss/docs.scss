@@ -123,7 +123,7 @@
   }
 }
 
-
+// stylelint-disable
 @font-face {
   font-family: "bootstrap-icons";
   src: url("/font/bootstrap-icons.eot?0ac15492cf9de91e52945b64ed3c8f9d?#iefix") format("embedded-opentype"),
@@ -145,5 +145,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+// stylelint-enable
 
 .bi-alarm::before { content: "\f102"; }
