@@ -61,6 +61,22 @@
       {{ $source := readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) -}}
       {{ highlight $source "html" "" }}
 
+      <h2>Examples</h2>
+      <p>
+        <a href="#" title="Placeholder link title" class="text-decoration-none">
+          Example link text
+          {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+        </a>
+      </p>
+      <p>
+        <button type="button" class="btn btn-outline-primary">
+          Example button
+          {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+        </button>
+        <button type="button" class="btn btn-outline-primary">
+          {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+        </button>
+      </p>
     </main>
 
     {{- partial "footer" . }}
