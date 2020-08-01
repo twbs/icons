@@ -1,9 +1,8 @@
 ---
-title: Patch check fll
+title: Patch exclamation fill
 categories:
   - Badges
 tags:
-  - verified
-  - checkmark
+  - excited
   - certified
 ---
