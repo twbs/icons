@@ -44,7 +44,7 @@
     "find-unused-sass-variables": "^2.0.0",
     "hugo-bin": "^0.62.3",
     "js-yaml": "^3.14.0",
-    "linkinator": "^2.1.1",
+    "linkinator": "^2.1.2",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "purgecss": "^2.3.0",
