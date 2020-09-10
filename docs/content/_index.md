@@ -132,4 +132,10 @@ SVGs are awesome to work with, but they do have some known quirks to work around
 
 - **Safari skips `aria-label` when used non-focusable SVGs.** As such, use `aria-hidden="true"` when embedding the `<svg>` file and use CSS to visually hide an equivalent label. [More details here.](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-6)
 
+- **SVG external sprites are not working for IE 9-11 and Edge 12.** You can use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill:
+{{< highlight html >}}
+<script nomodule src="https://cdn.jsdelivr.net/npm/svg4everybody@2.1.9/dist/svg4everybody.min.js"></script>
+<script nomodule>svg4everybody();</script>
+{{< /highlight >}}
+
 Found another issue with SVGs we should note? Please open an issue to share details.
