@@ -50,7 +50,7 @@
     "purgecss": "^2.3.0",
     "shx": "^0.3.2",
     "stylelint": "^13.7.1",
-    "stylelint-config-twbs-bootstrap": "^2.0.3",
+    "stylelint-config-twbs-bootstrap": "^2.1.0",
     "svg-sprite": "^1.5.0",
     "svgo": "^1.3.2",
     "vnu-jar": "20.6.30"
