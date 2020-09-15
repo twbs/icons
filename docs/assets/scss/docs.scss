@@ -116,7 +116,7 @@
 
 @media (min-width: 1200px) {
   .row-cols-xl-8 {
-    & > * {
+    > * {
       flex: 0 0 12.5%;
       max-width: 12.5%;
     }
