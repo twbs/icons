@@ -19,15 +19,15 @@
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-## 1,000+ icons
+## 1,100+ icons
 
-![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/85891337-be640680-b7a3-11ea-84a0-0a103fce118c.png)
+[![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/91365119-402cdc00-e7b5-11ea-9a2c-e1a03aed21c3.png)](https://icons.getbootstrap.com)
 
-[Also available in Figma.](https://www.figma.com/file/hTJtQ2MrMTeNVmYrVBqNZZ/Bootstrap-Icons-v1.0.0-alpha5?node-id=0%3A1)
+[Also available in Figma.](https://www.figma.com/file/9YmlUAwhMv99G4yP4yN7Jy/Bootstrap-Icons-v1.0.0?node-id=0%3A1)
 
 ## Install
 
-Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) at for usage instructions.
+Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) for usage instructions.
 
 ```shell
 npm i bootstrap-icons --save
