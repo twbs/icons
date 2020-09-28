@@ -29,7 +29,7 @@
     "netlify": "npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
     "test:eslint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives .",
-    "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location node_modules/.cache/.stylelintcache",
+    "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location node_modules/.cache/.stylelintcache --rd",
     "test:linkinator": "linkinator _site --recurse --silent --skip \"^(?!http://localhost)\"",
     "test:vnu": "node build/vnu-jar.js",
     "test": "npm-run-all docs-build --parallel test:*"
