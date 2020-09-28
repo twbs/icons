@@ -26,7 +26,7 @@
     "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && shx cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
     "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest . --symbol-sprite bootstrap-icons.svg icons/*.svg",
     "publish": "npm-run-all icons icons-sprite docs-build icons-zip",
-    "netlify": "npm-run-all icons docs-build",
+    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
     "test:eslint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives .",
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location node_modules/.cache/.stylelintcache --rd",
