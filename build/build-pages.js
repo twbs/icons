@@ -4,6 +4,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const chalk = require('chalk')
 
 const iconsDir = path.join(__dirname, '../icons/')
 const pagesDir = path.join(__dirname, '../docs/content/icons/')
@@ -18,8 +19,7 @@ function capitalizeFirstLetter(string) {
 
     for (const file of files) {
       const iconBasename = path.basename(file, path.extname(file))
-      const iconTitleCap = capitalizeFirstLetter(iconBasename)
-      const iconTitle = iconTitleCap.split('-').join(' ')
+      const iconTitle = capitalizeFirstLetter(iconBasename).split('-').join(' ')
       const pageName = path.join(pagesDir, `${iconBasename}.md`)
 
       const pageTemplate = `---
@@ -36,14 +36,14 @@ tags:
               throw err
             }
 
-            console.log(`${iconBasename} successfully created`)
+            console.log(chalk.green(`${iconBasename} successfully created`))
           })
         } else {
-          console.log(`${iconBasename}: Permalink already exists`)
+          console.log(chalk.cyan(`${iconBasename}: Permalink already exists`))
         }
       })
     }
   } catch (error) {
-    console.error('Error', error)
+    console.error(chalk.cyan(`Error: ${error}`))
   }
 })()
