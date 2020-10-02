@@ -21,7 +21,7 @@
 
 ## 1,100+ icons
 
-[![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/91365119-402cdc00-e7b5-11ea-9a2c-e1a03aed21c3.png)](https://icons.getbootstrap.com)
+[![Bootstrap Icons full set](https://github.com/twbs/icons/blob/main-dev/.github/preview.png)](https://icons.getbootstrap.com)
 
 [Also available in Figma.](https://www.figma.com/file/9YmlUAwhMv99G4yP4yN7Jy/Bootstrap-Icons-v1.0.0?node-id=0%3A1)
 
