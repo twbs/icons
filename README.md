@@ -81,7 +81,7 @@ Use `npm run icons` to run the script, run `npm run pages` to build permalink pa
 
 ## Publishing
 
-Documentation is published automatically when a new Git tag is published. See our GitHub Actions and `package.json` for more information.
+Documentation is published automatically when a new Git tag is published. See our [GitHub Actions](https://github.com/twbs/icons/tree/main/.github/workflows) and [`package.json`](https://github.com/twbs/icons/blob/main/package.json) for more information.
 
 ## License
 
