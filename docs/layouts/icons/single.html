@@ -96,11 +96,11 @@
         }
       })
 
-      clipboard.on('success', function (e) {
-        e.clearSelection()
-        e.trigger.textContent = 'Copied!'
+      clipboard.on('success', function (event) {
+        event.clearSelection()
+        event.trigger.textContent = 'Copied!'
         setTimeout(function () {
-          e.trigger.textContent = 'Copy'
+          event.trigger.textContent = 'Copy'
         }, 2000);
       })
 
@@ -109,7 +109,9 @@
         var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
         var errorElement = document.getElementById('copy-error-callout')
 
-        if (!errorElement) return
+        if (!errorElement) {
+          return
+        }
 
         errorElement.classList.remove('d-none')
         errorElement.insertAdjacentHTML('afterbegin', fallbackMsg)

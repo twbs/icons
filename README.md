@@ -21,7 +21,7 @@
 
 ## 1,100+ icons
 
-[![Bootstrap Icons full set](https://user-images.githubusercontent.com/98681/91365119-402cdc00-e7b5-11ea-9a2c-e1a03aed21c3.png)](https://icons.getbootstrap.com)
+[![Bootstrap Icons full set](https://github.com/twbs/icons/blob/main-dev/.github/preview.png)](https://icons.getbootstrap.com)
 
 [Also available in Figma.](https://www.figma.com/file/9YmlUAwhMv99G4yP4yN7Jy/Bootstrap-Icons-v1.0.0?node-id=0%3A1)
 
@@ -81,7 +81,7 @@ Use `npm run icons` to run the script, run `npm run pages` to build permalink pa
 
 ## Publishing
 
-Documentation is published automatically when a new Git tag is published. See our GitHub Actions and `package.json` for more information.
+Documentation is published automatically when a new Git tag is published. See our [GitHub Actions](https://github.com/twbs/icons/tree/main/.github/workflows) and [`package.json`](https://github.com/twbs/icons/blob/main/package.json) for more information.
 
 ## License
 

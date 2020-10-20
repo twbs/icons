@@ -7,7 +7,7 @@
     </form>
   </div>
   <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
-    {{- $dirName := "icons" -}}
+    {{ $dirName := "icons" -}}
 
     {{- range (readDir $dirName) -}}
       {{- $filenameWithExt := split .Name "." -}}
@@ -19,9 +19,7 @@
               <use xlink:href="bootstrap-icons.svg#{{ $filename }}"/>
             </svg>
           </div>
-          <div class="name text-muted text-decoration-none text-center pt-1">
-            {{ $filename }}
-          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">{{ $filename }}</div>
         </a>
       </li>
     {{ end -}}
