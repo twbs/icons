@@ -1468,28 +1468,67 @@
     <loc>https://icons.getbootstrap.com/icons/emoji-angry/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-angry-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-dizzy/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-dizzy-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-expressionless/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-expressionless-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-frown/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-frown-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-heart-eyes/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-heart-eyes-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-laughing/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-laughing-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-neutral/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-neutral-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-smile/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-smile-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-smile-upside-down/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-smile-upside-down-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-sunglasses/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-sunglasses-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-wink/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-wink-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/envelope/</loc>
@@ -1546,6 +1585,12 @@
     <loc>https://icons.getbootstrap.com/icons/file-arrow-up-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/file-bar-graph/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-bar-graph-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/file-binary/</loc>
   </url>
   <url>
@@ -1591,6 +1636,12 @@
     <loc>https://icons.getbootstrap.com/icons/file-earmark-arrow-up-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-bar-graph/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-bar-graph-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/file-earmark-binary/</loc>
   </url>
   <url>
@@ -1625,6 +1676,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/file-earmark-easel-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-excel/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-excel-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/file-earmark-fill/</loc>
@@ -1696,6 +1753,12 @@
     <loc>https://icons.getbootstrap.com/icons/file-earmark-post-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-ppt/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-ppt-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/file-earmark-richtext/</loc>
   </url>
   <url>
@@ -1726,6 +1789,12 @@
     <loc>https://icons.getbootstrap.com/icons/file-earmark-text-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-word/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-earmark-word-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/file-earmark-x/</loc>
   </url>
   <url>
@@ -1742,6 +1811,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/file-easel-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-excel/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-excel-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/file-fill/</loc>
@@ -1813,6 +1888,12 @@
     <loc>https://icons.getbootstrap.com/icons/file-post-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/file-ppt/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-ppt-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/file-richtext/</loc>
   </url>
   <url>
@@ -1841,6 +1922,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/file-text-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-word/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/file-word-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/file-x/</loc>
@@ -2204,6 +2291,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/journal-arrow-up/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/journal-bookmark/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/journal-bookmark-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/journal-check/</loc>
