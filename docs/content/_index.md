@@ -122,9 +122,16 @@ Color can be changed by setting a `.text-*` class or custom CSS:
   </div>
 </div>
 
+<div class="row my-4">
+  <div class="col-md-4">
+{{< md >}}
 ## Working with SVGs
-
 SVGs are awesome to work with, but they do have some known quirks to work around. Given the numerous ways in which SVGs can be used, we haven't included these attributes and workarounds in our code.
+{{< /md >}}
+  </div>
+  <div class="col-md-8">
+{{< md >}}
+Known issues include:
 
 - **Focus handling is broken in Internet Explorer and Edge.** When embedding your SVGs, add `focusable="false"` to the `<svg>` element. [Learn more on Stack Overflow.](https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element)
 
@@ -132,10 +139,9 @@ SVGs are awesome to work with, but they do have some known quirks to work around
 
 - **Safari skips `aria-label` when used non-focusable SVGs.** As such, use `aria-hidden="true"` when embedding the `<svg>` file and use CSS to visually hide an equivalent label. [More details here.](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-6)
 
-- **SVG external sprites are not working for IE 9-11 and Edge 12.** You can use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill:
-{{< highlight html >}}
-<script nomodule src="https://cdn.jsdelivr.net/npm/svg4everybody@2.1.9/dist/svg4everybody.min.js"></script>
-<script nomodule>svg4everybody();</script>
-{{< /highlight >}}
+- **External SVG sprites may not function correctly in Internet Explorer 9-11 and Edge 12.** Use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill as needed.
 
 Found another issue with SVGs we should note? Please open an issue to share details.
+{{< /md >}}
+  </div>
+</div>
