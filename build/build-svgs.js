@@ -70,7 +70,7 @@ const processFile = (file, config) => new Promise((resolve, reject) => {
 
           $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
 
-          fs.writeFile(file, $(svg), 'utf8')
+          fs.writeFile(file, $(svg).toString(), 'utf8')
             .then(() => {
               console.log(`- ${path.basename(file, '.svg')}`)
               resolve()
