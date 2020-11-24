@@ -133,13 +133,13 @@ SVGs are awesome to work with, but they do have some known quirks to work around
 {{< md >}}
 Known issues include:
 
-- **Focus handling is broken in Internet Explorer and Edge.** When embedding your SVGs, add `focusable="false"` to the `<svg>` element. [Learn more on Stack Overflow.](https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element)
+- **Focus handling is broken in Internet Explorer and Edge Legacy.** When embedding your SVGs, add `focusable="false"` to the `<svg>` element. [Learn more on Stack Overflow.](https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element)
 
 - **Browsers inconsistently announce SVGs as `<img>` tags with voice assistance.** Include `role="img"` when possible to avoid any issues. [See this article for details.](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-2)
 
 - **Safari skips `aria-label` when used non-focusable SVGs.** As such, use `aria-hidden="true"` when embedding the `<svg>` file and use CSS to visually hide an equivalent label. [More details here.](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-6)
 
-- **External SVG sprites may not function correctly in Internet Explorer 9-11 and Edge 12.** Use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill as needed.
+- **External SVG sprites may not function correctly in Internet Explorer.** Use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill as needed.
 
 Found another issue with SVGs we should note? Please open an issue to share details.
 {{< /md >}}
