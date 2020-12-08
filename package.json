@@ -22,9 +22,10 @@
     "docs-build": "hugo --cleanDestinationDir",
     "docs-purge": "npm run docs-build && purgecss --css docs/static/assets/css/bootstrap.min.css --content \"_site/**/*.html\" --output docs/static/assets/css/",
     "pages": "node build/build-pages.js",
-    "icons": "node build/build-svgs.js && npm run icons-sprite",
-    "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && shx cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
+    "icons": "node build/build-svgs.js && npm run icons-sprite && npm run icons-font",
+    "icons-zip": "cross-env-shell \"shx rm -rf bootstrap-icons-$npm_package_version && shx cp -r icons/ bootstrap-icons-$npm_package_version && shx cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && shx cp -r font/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && shx rm -rf bootstrap-icons-$npm_package_version\"",
     "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest . --symbol-sprite bootstrap-icons.svg icons/*.svg",
+    "icons-font": "fantasticon",
     "publish": "npm-run-all icons docs-build icons-zip",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-purge docs-build",
     "test:fusv": "fusv docs/assets/scss/",
@@ -41,6 +42,7 @@
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^7.0.3",
     "eslint": "^7.15.0",
+    "fantasticon": "^1.0.16",
     "find-unused-sass-variables": "^3.0.0",
     "hugo-bin": "^0.67.0",
     "js-yaml": "^3.14.1",
@@ -61,7 +63,8 @@
   },
   "files": [
     "icons/*.svg",
-    "bootstrap-icons.svg"
+    "bootstrap-icons.svg",
+    "fonts"
   ],
   "hugo-bin": {
     "buildTags": "extended"
