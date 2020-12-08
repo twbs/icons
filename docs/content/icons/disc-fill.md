@@ -5,4 +5,6 @@ categories:
 tags:
   - cd
   - compact disc
+  - bluray
+  - dvd
 ---
