@@ -41,7 +41,7 @@
           <div class="p-3 border rounded-3">
             <div class="fs-3 mb-3">
               {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
-              Example heading
+              Heading
             </div>
             <p>
               Inline text {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
@@ -76,7 +76,15 @@
         <div class="col-lg-4 mb-4">
           <h2 class="fs-3">Download</h2>
           <p>Right click and save as to download the SVG.</p>
-          <a href='{{ printf "/%s/%s.svg" "icons" .File.TranslationBaseName }}' class="btn btn-bd-primary mb-5">Download SVG</a>
+          <a href='{{ printf "/%s/%s.svg" "icons" .File.TranslationBaseName }}' class="btn btn-bd-primary mb-4">Download SVG</a>
+
+          <h2 class="fs-3">Icon font</h2>
+          <p>Using the web font? Copy, paste, and go.</p>
+
+          {{ $iconFontSnippet := partial "font-snippet.html" (dict "context" . "name" .File.TranslationBaseName) }}
+          <div class="mb-4">
+            {{ highlight $iconFontSnippet "html" "" }}
+          </div>
 
           <h2 class="fs-3">Copy HTML</h2>
           <p>Paste the SVG right into your project's code.</p>
