@@ -1,5 +1,5 @@
 ---
-title: Github
+title: GitHub
 categories:
   - Social
 tags:
