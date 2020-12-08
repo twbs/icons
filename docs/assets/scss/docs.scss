@@ -122,3 +122,21 @@
     }
   }
 }
+
+.icon-examples .bi {
+  width: 1em;
+  height: 1em;
+}
+
+.icon-demo {
+  background-color: #fdfdfd;
+  background-image: radial-gradient(circle, #ddd 1px, rgba(0, 0, 0, 0) 1px);
+  background-size: 1rem 1rem;
+}
+
+// stylelint-disable declaration-no-important
+.py-6 {
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+// stylelint-enable declaration-no-important

@@ -33,6 +33,8 @@ module:
       target:           static/favicon.ico
     - source:           bootstrap-icons.svg
       target:           static/bootstrap-icons.svg
+    - source:           icons
+      target:           static/icons
 
 params:
   description:          "Official open source SVG icon library for Bootstrap"
