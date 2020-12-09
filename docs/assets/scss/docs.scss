@@ -141,7 +141,7 @@
 }
 // stylelint-enable declaration-no-important
 
-// stylelint-disable value-list-comma-newline-after, value-list-comma-space-after, indentation, declaration-no-important, font-family-no-missing-generic-family-keyword, declaration-colon-newline-after
+// stylelint-disable
 @font-face {
   font-family: bootstrap-icons;
   src: url("../../font/fonts/bootstrap-icons.woff?1ef5213d557344d80e31924ac255216d") format("woff"),
@@ -163,4 +163,4 @@
 }
 
 .bi-alarm::before { content: "\f102"; }
-// stylelint-enable value-list-comma-newline-after, value-list-comma-space-after, indentation, declaration-no-important, font-family-no-missing-generic-family-keyword, declaration-colon-newline-after
+// stylelint-enable
