@@ -1,8 +1,6 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("fonts/bootstrap-icons.eot?e5d348175b70340f3bfbaa70d579819f#iefix") format("embedded-opentype"),
-url("fonts/bootstrap-icons.ttf?e5d348175b70340f3bfbaa70d579819f") format("truetype"),
-url("fonts/bootstrap-icons.woff?e5d348175b70340f3bfbaa70d579819f") format("woff"),
+  src: url("fonts/bootstrap-icons.woff?e5d348175b70340f3bfbaa70d579819f") format("woff"),
 url("fonts/bootstrap-icons.woff2?e5d348175b70340f3bfbaa70d579819f") format("woff2");
 }
 
