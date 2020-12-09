@@ -12,14 +12,14 @@
   <a href="https://icons.getbootstrap.com/"><strong>Explore Bootstrap Icons »</strong></a>
   <br>
   <br>
-  <a href="https://getbootstrap.com/docs/4.5/">Bootstrap</a>
+  <a href="https://getbootstrap.com/">Bootstrap</a>
   ·
   <a href="https://themes.getbootstrap.com/">Themes</a>
   ·
   <a href="https://blog.getbootstrap.com/">Blog</a>
 </p>
 
-## 1,100+ icons
+## 1,200+ icons
 
 [![Bootstrap Icons full set](https://github.com/twbs/icons/blob/main/.github/preview.png)](https://icons.getbootstrap.com)
 
@@ -30,7 +30,7 @@
 Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) for usage instructions.
 
 ```shell
-npm i bootstrap-icons --save
+npm i bootstrap-icons
 ```
 
 ## Usage
