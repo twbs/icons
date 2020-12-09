@@ -5,21 +5,21 @@
 
 Bootstrap Icons are published to npm, but they can also be manually downloaded if needed.
 
-<div class="row my-4">
+<div class="row my-4 bd-clipboard-simplified">
   <div class="col-md-6">
 {{< md >}}
 ### npm
 Install Bootstrap Icons via command line with npm.
 
-{{< highlight shell >}}
-npm install bootstrap-icons
+{{< highlight sh >}}
+npm i bootstrap-icons
 {{< /highlight >}}
 {{< /md >}}
   </div>
   <div class="col-md-6">
 {{< md >}}
 ### Download
-Our [releases](https://github.com/twbs/icons/releases/) are published to GitHub. All icon SVGs are included in the bundle, as well as license and readme files. Our `package.json` is also included, though our npm scripts are primarily available for our development workflows.
+[All releases are published on GitHub](https://github.com/twbs/icons/releases/) and include icon SVGs, license, and readme. Our `package.json` is also included, though our npm scripts are primarily available for our development workflows.
 
 <a class="btn btn-outline-primary" href="https://github.com/twbs/icons/releases/latest/">Download latest ZIP</a>
 {{< /md >}}
