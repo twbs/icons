@@ -35,6 +35,8 @@ module:
       target:           static/bootstrap-icons.svg
     - source:           icons
       target:           static/icons
+    - source:           font
+      target:           static/font
 
 params:
   description:          "Official open source SVG icon library for Bootstrap"

@@ -140,3 +140,27 @@
   padding-bottom: 4.5rem !important;
 }
 // stylelint-enable declaration-no-important
+
+// stylelint-disable
+@font-face {
+  font-family: bootstrap-icons;
+  src: url("../../font/fonts/bootstrap-icons.woff?1ef5213d557344d80e31924ac255216d") format("woff"),
+       url("../../font/fonts/bootstrap-icons.woff2?1ef5213d557344d80e31924ac255216d") format("woff2");
+}
+
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: text-bottom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-alarm::before { content: "\f102"; }
+// stylelint-enable

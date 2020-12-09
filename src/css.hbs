@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "{{ name }}";
+  src: {{{ fontSrc }}};
+}
+
+[class^="{{prefix}}-"]::before,
+[class*=" {{prefix}}-"]::before {
+  display: inline-block;
+  font-family: {{ name }} !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: text-bottom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+{{# each codepoints }}
+.{{ ../prefix }}-{{ @key }}::before { content: "\\{{ codepoint this }}"; }
+{{/ each }}
