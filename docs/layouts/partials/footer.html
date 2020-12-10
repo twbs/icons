@@ -25,10 +25,12 @@
   })
 
   clipboard.on('success', function (event) {
+    var oldHTML = event.trigger.innerHTML
     event.clearSelection()
-    event.trigger.textContent = 'Copied!'
+    // event.trigger.textContent = 'Copied!'
+    event.trigger.innerHTML = '<svg class="bi" width="1em" height="1em" fill="currentColor"><use xlink:href="/bootstrap-icons.svg#check2"/></svg>'
     setTimeout(function () {
-      event.trigger.textContent = 'Copy'
+      event.trigger.innerHTML = oldHTML
     }, 2000);
   })
 
