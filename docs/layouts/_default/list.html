@@ -4,9 +4,9 @@
     {{ partial "header" . }}
   </head>
   <body id="icons-body">
-    {{ partial "skippy" . }}
-    {{ partial "navbar" . }}
-    {{ partial "hero" . }}
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
+    {{ partialCached "hero" . }}
 
     <main class="container" id="content" role="main">
       <ul>
@@ -18,6 +18,6 @@
         </ul>
     </main>
 
-    {{- partial "footer" . }}
+    {{- partialCached "footer" . }}
   </body>
 </html>

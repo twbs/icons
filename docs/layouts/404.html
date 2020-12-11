@@ -4,8 +4,8 @@
     {{ partial "header" . }}
   </head>
   <body class="d-flex flex-column min-vh-100">
-    {{ partial "skippy" . }}
-    {{ partial "navbar" . }}
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
 
     <main class="my-auto p-5" id="content" role="main">
       {{ .Content }}
