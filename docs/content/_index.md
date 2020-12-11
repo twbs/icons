@@ -5,7 +5,7 @@
 
 Bootstrap Icons are published to npm, but they can also be manually downloaded if needed.
 
-<div class="row my-4 bd-clipboard-simplified">
+<div class="row my-4">
   <div class="col-md-6">
 {{< md >}}
 ### npm
