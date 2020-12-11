@@ -1,0 +1,17 @@
+{
+  "env": {
+    "es6": false,
+    "browser": true,
+    "node": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 5,
+    "sourceType": "script"
+  },
+  "extends": [
+    "../.eslintrc.json"
+  ],
+  "rules": {
+    "prefer-template": "off"
+  }
+}
