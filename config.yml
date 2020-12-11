@@ -43,7 +43,7 @@ params:
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
   version:              "1.2.0"
-  bs_docs_version:      "4.5"
+  bs_docs_version:      "5.0"
 
   main:                 "https://getbootstrap.com"
   github_org:           "https://github.com/twbs"
