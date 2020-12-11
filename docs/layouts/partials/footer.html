@@ -8,12 +8,3 @@
     <p>Currently v{{ .Site.Params.version }}. Icons and documentation licensed <a href="{{ .Site.Params.repo }}/blob/main/LICENSE.md" target="_blank" rel="license noopener">MIT</a>.</p>
   </div>
 </footer>
-
-{{- $vendor := resources.Match "js/vendor/*.js" -}}
-{{- $js := resources.Match "js/*.js" -}}
-{{- $docsJs := append $js $vendor | resources.Concat "assets/js/application.js" -}}
-
-{{- if eq hugo.Environment "production" -}}
-  {{- $docsJs = $docsJs | resources.Minify -}}
-{{- end }}
-<script src="{{ $docsJs.Permalink | relURL }}" async></script>
