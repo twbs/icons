@@ -7,11 +7,15 @@
 @import "syntax";
 @import "ads";
 
+.hero-notice {
+  background-color: $teal-100;
+}
+
 .highlight {
   pre {
     padding: 1.25rem;
     margin-bottom: 1.5rem;
-    background-color: rgba(0, 0, 0, .025);
+    background-color: $gray-100;
     border-radius: .25rem;
     scrollbar-width: none;
 
@@ -31,7 +35,7 @@
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
 
-  + .highlight pre {
+  + .bd-clipboard + .highlight pre {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
@@ -58,13 +62,17 @@
 .hero {
   border-bottom: 1px solid rgba(0, 0, 0, .05);
 
-  .f3 {
-    max-width: 680px;
+  .highlight pre {
+    padding-right: 4em;
+    margin-bottom: 0;
+    border-radius: .5rem;
+  }
+  .btn-clipboard {
+    top: .625em;
   }
 
   hr {
     max-width: 100px;
-
   }
 }
 
@@ -126,6 +134,7 @@
 .icon-examples .bi {
   width: 1em;
   height: 1em;
+  vertical-align: -.1em;
 }
 
 .icon-demo {

@@ -1,34 +1,41 @@
-<div class="hero py-5">
+<div class="hero py-5 text-center text-lg-start">
   <div class="container">
-    <h1 class="f0">Bootstrap Icons</h1>
-    <p class="mb-4 f3 font-weight-normal">For the first time ever, Bootstrap has its own icon library, custom designed and built for our components and documentation—and now available for any project.</p>
+    <div class="row flex-lg-row-reverse">
+      <div class="col-6 mx-auto col-lg-5 mx-lg-0">
+        <img srcset="/assets/img/icons-hero.png, /assets/img/icons-hero@2x.png 2x"
+             src="/assets/img/icons-hero.png"
+             class="img-fluid my-3 mx-auto"
+             alt="Bootstrap Icons" width="450" height="340" loading="lazy">
+      </div>
+      <div class="col-lg-7">
+        <a class="d-inline-block py-1 px-3 mb-4 text-dark text-decoration-none rounded-pill hero-notice" href="#">
+          <strong>New in v1.2.0:</strong> Icon fonts, social icons, and media icons!
+        </a>
+        <h1 class="f0">Bootstrap Icons</h1>
+        <p class="mb-4 f3 font-weight-normal">Free, high quality, open source icon library with nearly 1,200 icons. Include them anyway you like—SVGs, SVG sprite, or web fonts. Use them with or without <a href="{{ .Site.Params.main }}/">Bootstrap</a> in any project.</p>
 
-    <div class="row text-muted">
-      <div class="col-sm">
-        <p>Bootstrap Icons are designed to work with <a href="{{ .Site.Params.main }}/">Bootstrap</a> components, from form controls to navigation. But, they'll work in just about any project, too. That's because Bootstrap Icons are SVGs, so they scale quickly and easily and can be styled with CSS.</p>
-      </div>
-      <div class="col-sm">
-        <p>They're open sourced (MIT), so you're free to download, use, and extend any icon. Every SVG can be copied from right here, or you can use the <a href="#sprite">SVG sprite</a>.</p>
-      </div>
-      <div class="col-md-3 col-lg-4">
+        <div class="fs-5 d-inline-block mb-3">
+          {{ highlight "npm i bootstrap-icons" "sh" "" }}
+        </div>
+
         <script async src="https://cdn.carbonads.com/carbon.js?serve=CE7D4277&placement=iconsgetbootstrapcom" id="_carbonads_js"></script>
+
+        <hr class="mx-auto mx-lg-0 my-5">
+
+        <p class="text-muted">
+          Currently v{{ .Site.Params.version }}
+          <span class="px-1">&#8226;</span>
+          <a href="#icons">Icons</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#install">Install</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#usage">Usage</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#styling">Styling</a>
+          <span class="px-1">&#8226;</span>
+          <a href="{{ .Site.Params.repo }}">GitHub repo</a>
+        </p>
       </div>
     </div>
-
-    <hr class="my-4">
-
-    <p class="text-muted">
-      Currently v{{ .Site.Params.version }}
-      <span class="px-1">&#8226;</span>
-      <a href="#icons">Icons</a>
-      <span class="px-1">&#8226;</span>
-      <a href="#install">Install</a>
-      <span class="px-1">&#8226;</span>
-      <a href="#usage">Usage</a>
-      <span class="px-1">&#8226;</span>
-      <a href="#styling">Styling</a>
-      <span class="px-1">&#8226;</span>
-      <a href="{{ .Site.Params.repo }}">GitHub repo</a>
-    </p>
   </div>
 </div>

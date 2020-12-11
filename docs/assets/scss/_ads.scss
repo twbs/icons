@@ -1,9 +1,17 @@
 // stylelint-disable-next-line selector-max-id
 #carbonads {
+  max-width: 28rem;
   padding: .75rem;
+  margin-right: auto;
+  margin-left: auto;
   overflow: auto;
-  background-color: rgba(0, 0, 0, .05);
+  background-color: $gray-100;
   border-radius: .25rem;
+
+  @media (min-width: 992px) {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .carbon-img {

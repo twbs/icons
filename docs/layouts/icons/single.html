@@ -16,16 +16,16 @@
       </nav>
 
       <div class="row align-items-md-center">
-        <div class="col-md-6 col-lg-7">
+        <div class="col-md-6 col-lg-8">
           <h1>{{ .Title }}</h1>
-          <p class="mb-3"><strong>Tags:</strong> {{ with .Params.tags }}{{ delimit . ", " }}{{ end }}</p>
+          <p class="mb-3 mb-md-0"><strong>Tags:</strong> {{ with .Params.tags }}{{ delimit . ", " }}{{ end }}</p>
         </div>
-        <div class="col-md-6 col-lg-5">
+        <div class="col-md-6 col-lg-4">
           <script async src="https://cdn.carbonads.com/carbon.js?serve=CE7D4277&placement=iconsgetbootstrapcom" id="_carbonads_js"></script>
         </div>
       </div>
 
-      <!-- <hr class="my-4"> -->
+      <hr class="my-4">
 
       {{- $filenameWithExt := split .Name "." -}}
       {{- $filename := index $filenameWithExt 0 -}}
@@ -69,6 +69,7 @@
             <p class="mb-0">
               <button type="button" class="btn btn-secondary">
                 {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+                <span class="visually-hidden">Button</span>
               </button>
             </p>
           </div>
@@ -99,41 +100,5 @@
 
     {{- partial "footer" . }}
 
-    <script src="/assets/js/clipboard.min.js"></script>
-    <script>
-      var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard">Copy</button></div>';
-
-      [].slice.call(document.querySelectorAll('figure.highlight, div.highlight'))
-        .forEach(function (element) {
-          element.insertAdjacentHTML('beforebegin', btnHtml)
-        });
-
-      var clipboard = new ClipboardJS('.btn-clipboard', {
-        target: function (trigger) {
-          return trigger.parentNode.nextElementSibling
-        }
-      })
-
-      clipboard.on('success', function (event) {
-        event.clearSelection()
-        event.trigger.textContent = 'Copied!'
-        setTimeout(function () {
-          event.trigger.textContent = 'Copy'
-        }, 2000);
-      })
-
-      clipboard.on('error', function () {
-        var modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
-        var fallbackMsg = 'Press ' + modifierKey + 'C to copy'
-        var errorElement = document.getElementById('copy-error-callout')
-
-        if (!errorElement) {
-          return
-        }
-
-        errorElement.classList.remove('d-none')
-        errorElement.insertAdjacentHTML('afterbegin', fallbackMsg)
-      })
-    </script>
   </body>
 </html>
