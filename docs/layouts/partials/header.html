@@ -6,7 +6,7 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
-{{ partial "stylesheet" . }}
+{{ partialCached "stylesheet" . }}
 {{ partial "favicons" . }}
 {{ partial "social" . }}
-{{ partial "analytics" . }}
+{{ partialCached "analytics" . }}
