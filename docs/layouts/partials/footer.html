@@ -25,12 +25,18 @@
   })
 
   clipboard.on('success', function (event) {
-    var oldHTML = event.trigger.innerHTML
+    var iconFirstChild = event.trigger.querySelector('.bi').firstChild
+    var namespace = 'http://www.w3.org/1999/xlink'
+    var originalXhref = iconFirstChild.getAttributeNS(namespace, 'href')
+    var originalTitle = event.trigger.title
+
     event.clearSelection()
-    // event.trigger.textContent = 'Copied!'
-    event.trigger.innerHTML = '<svg class="bi" width="1em" height="1em" fill="currentColor"><use xlink:href="/bootstrap-icons.svg#check2"/></svg>'
+    iconFirstChild.setAttributeNS(namespace, 'href', originalXhref.replace('clipboard', 'check2'))
+    event.trigger.title = "Copied!"
+
     setTimeout(function () {
-      event.trigger.innerHTML = oldHTML
+      iconFirstChild.setAttributeNS(namespace, 'href', originalXhref)
+      event.trigger.title = originalTitle
     }, 2000);
   })
 
