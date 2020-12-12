@@ -1,9 +1,9 @@
 name: Deploy
 
 on:
-  push:
-    tags:
-      - '*'
+  release:
+    types: 
+      - published
 
 env:
   CI: true
