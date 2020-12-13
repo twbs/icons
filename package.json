@@ -20,7 +20,6 @@
     "start": "npm run docs-serve",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
     "docs-build": "hugo --cleanDestinationDir",
-    "docs-purge": "npm run docs-build && purgecss --css docs/static/assets/css/bootstrap.min.css --content \"_site/**/*.html\" --output docs/static/assets/css/",
     "pages": "node build/build-pages.js",
     "icons": "npm-run-all icons-main --parallel icons-sprite icons-font",
     "icons-main": "node build/build-svgs.js",
@@ -28,7 +27,7 @@
     "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest . --symbol-sprite bootstrap-icons.svg icons/*.svg",
     "icons-font": "fantasticon",
     "publish": "npm-run-all icons docs-build icons-zip",
-    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-purge docs-build",
+    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
     "test:eslint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives .",
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location node_modules/.cache/.stylelintcache --rd",
@@ -36,9 +35,9 @@
     "test:vnu": "node build/vnu-jar.js",
     "test": "npm-run-all docs-build --parallel test:*"
   },
-  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^10.1.0",
+    "bootstrap": "^5.0.0-beta1",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
     "cross-env": "^7.0.3",
