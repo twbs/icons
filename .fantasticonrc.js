@@ -6,6 +6,8 @@ module.exports = {
   name: 'bootstrap-icons',
   prefix: 'bi',
   selector: '.bi',
+  fontHeight: 600,
+  normalize: true,
   fontsUrl: './fonts',
   formatOptions: {
     json: {
@@ -22,9 +24,7 @@ module.exports = {
     json: './font/bootstrap-icons.json',
     css: './font/bootstrap-icons.css',
     html: './font/index.html',
-    ttf: './font/fonts/bootstrap-icons.ttf',
     woff: './font/fonts/bootstrap-icons.woff',
-    woff2: './font/fonts/bootstrap-icons.woff2',
-    eot: './font/fonts/bootstrap-icons.eot'
+    woff2: './font/fonts/bootstrap-icons.woff2'
   }
 };
