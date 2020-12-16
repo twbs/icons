@@ -35,6 +35,7 @@
     "test:vnu": "node build/vnu-jar.js",
     "test": "npm-run-all docs-build --parallel test:*"
   },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^10.1.0",
     "bootstrap": "^5.0.0-beta1",
