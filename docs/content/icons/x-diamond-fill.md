@@ -7,4 +7,7 @@ tags:
   - delete
   - reset
   - clear
+  - cancel
+  - close
+  - exit
 ---

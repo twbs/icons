@@ -4,4 +4,6 @@ categories:
   - Tools
 tags:
   - tool
+  - settings
+  - preferences
 ---

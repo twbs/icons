@@ -5,4 +5,5 @@ categories:
 tags:
   - direction
   - map
+  - location
 ---

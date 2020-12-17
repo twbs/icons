@@ -4,4 +4,6 @@ categories:
   - UI and keyboard
 tags:
   - brightness
+  - sun
+  - weather
 ---

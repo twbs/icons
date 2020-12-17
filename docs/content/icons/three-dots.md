@@ -6,4 +6,6 @@ tags:
   - kebab
   - more
   - ellipsis
+  - overflow
+  - menu
 ---
