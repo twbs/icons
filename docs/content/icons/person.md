@@ -6,4 +6,5 @@ tags:
   - human
   - individual
   - avatar
+  - user
 ---

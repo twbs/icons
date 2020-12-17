@@ -6,4 +6,5 @@ tags:
   - geography
   - map
   - pin
+  - location
 ---

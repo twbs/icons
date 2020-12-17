@@ -7,4 +7,5 @@ tags:
   - application
   - ios
   - android
+  - square
 ---

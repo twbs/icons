@@ -6,4 +6,5 @@ tags:
   - price
   - category
   - taxonomy
+  - label
 ---

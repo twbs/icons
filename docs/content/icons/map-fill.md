@@ -5,4 +5,5 @@ categories:
 tags:
   - geography
   - directions
+  - location
 ---

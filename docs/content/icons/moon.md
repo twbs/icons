@@ -5,4 +5,5 @@ categories:
 tags:
   - lunar
   - weather
+  - night
 ---

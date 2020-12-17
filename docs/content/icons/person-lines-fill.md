@@ -6,6 +6,7 @@ tags:
   - human
   - individual
   - avatar
+  - user
   - contact
   - list
 ---

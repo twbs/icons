@@ -5,4 +5,7 @@ categories:
 tags:
   - reading
   - book
+  - label
+  - tag
+  - category
 ---

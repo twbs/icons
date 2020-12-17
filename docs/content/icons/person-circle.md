@@ -6,4 +6,5 @@ tags:
   - humans
   - organization
   - avatar
+  - user
 ---
