@@ -3,7 +3,7 @@ title: Three dots vertical
 categories:
   - Controls
 tags:
-  - meatballs
+  - kebab
   - more
   - ellipsis
   - overflow
