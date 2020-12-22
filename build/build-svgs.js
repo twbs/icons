@@ -47,7 +47,11 @@ const processFile = (file, config) => {
 
         svgo.optimize(data)
           .then(result => {
-            const $ = cheerio.load(result.data)
+            const $ = cheerio.load(result.data, {
+              xml: {
+                xmlMode: true
+              }
+            })
             const $svgElement = $('svg')
 
             // We keep all SVG contents apart from the `<svg>` element.
@@ -61,7 +65,7 @@ const processFile = (file, config) => {
               $svgElement.attr(attribute, attribute === 'class' ? `bi bi-${basename}` : value)
             }
 
-            fs.writeFile(filepath, $svgElement.toString(), 'utf8')
+            fs.writeFile(filepath, $svgElement.toString().replace(/\r\n?/g, '\n'), 'utf8')
               .then(() => {
                 if (VERBOSE) {
                   console.log(`- ${basename}`)
