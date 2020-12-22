@@ -11,6 +11,8 @@ const yaml = require('js-yaml')
 
 const iconsDir = path.join(__dirname, '../icons/')
 
+const VERBOSE = process.argv[2] === '--verbose'
+
 const svgAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: '16',
@@ -57,7 +59,9 @@ const processFile = (file, config) => new Promise((resolve, reject) => {
 
           fs.writeFile(file, $svg.toString(), 'utf8')
             .then(() => {
-              console.log(`- ${path.basename(file, '.svg')}`)
+              if (VERBOSE) {
+                console.log(`- ${path.basename(file, '.svg')}`)
+              }
               resolve()
             })
             .catch(error => reject(error))
