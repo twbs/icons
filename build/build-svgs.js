@@ -48,7 +48,7 @@ const processFile = (file, config) => new Promise((resolve, reject) => {
           const $ = cheerio.load(result.data)
           const $svg = $('svg')
 
-          $svg.replaceWith(() => $('<svg>').append($(this).html()))
+          $svg.replaceWith($('<svg>').append($(this).html()))
 
           for (const [attribute, value] of Object.entries(svgAttributes)) {
             $svg.removeAttr(attribute)
