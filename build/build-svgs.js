@@ -44,18 +44,18 @@ const processFile = (file, config) => new Promise((resolve, reject) => {
       svgo.optimize(data)
         .then(result => {
           const $ = cheerio.load(result.data)
-          const svg = $('svg')
+          const $svg = $('svg')
 
-          svg.replaceWith(() => $('<svg>').append($(this).html()))
+          $svg.replaceWith(() => $('<svg>').append($(this).html()))
 
-          for (const [attr, val] of Object.entries(svgAttributes)) {
-            $(svg).removeAttr(attr)
-            $(svg).attr(attr, val)
+          for (const [attribute, value] of Object.entries(svgAttributes)) {
+            $svg.removeAttr(attribute)
+            $svg.attr(attribute, value)
           }
 
-          $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
+          $svg.attr('class', `bi bi-${path.basename(file, '.svg')}`)
 
-          fs.writeFile(file, $(svg).toString(), 'utf8')
+          fs.writeFile(file, $svg.toString(), 'utf8')
             .then(() => {
               console.log(`- ${path.basename(file, '.svg')}`)
               resolve()
