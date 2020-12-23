@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("fonts/bootstrap-icons.woff?052ad648d829c462d284477c1ceb645d") format("woff"),
-url("fonts/bootstrap-icons.woff2?052ad648d829c462d284477c1ceb645d") format("woff2");
+  src: url("./fonts/bootstrap-icons.woff?384e23a3718bb6ac643a9118eb53727d") format("woff"),
+url("./fonts/bootstrap-icons.woff2?384e23a3718bb6ac643a9118eb53727d") format("woff2");
 }
 
 [class^="bi-"]::before,
@@ -884,15 +884,15 @@ url("fonts/bootstrap-icons.woff2?052ad648d829c462d284477c1ceb645d") format("woff
 .bi-outlet::before { content: "\f460"; }
 .bi-paperclip::before { content: "\f461"; }
 .bi-paragraph::before { content: "\f462"; }
-.bi-patch-check-fll::before { content: "\f463"; }
+.bi-patch-check-fill::before { content: "\f463"; }
 .bi-patch-check::before { content: "\f464"; }
-.bi-patch-exclamation-fll::before { content: "\f465"; }
+.bi-patch-exclamation-fill::before { content: "\f465"; }
 .bi-patch-exclamation::before { content: "\f466"; }
-.bi-patch-minus-fll::before { content: "\f467"; }
+.bi-patch-minus-fill::before { content: "\f467"; }
 .bi-patch-minus::before { content: "\f468"; }
-.bi-patch-plus-fll::before { content: "\f469"; }
+.bi-patch-plus-fill::before { content: "\f469"; }
 .bi-patch-plus::before { content: "\f46a"; }
-.bi-patch-question-fll::before { content: "\f46b"; }
+.bi-patch-question-fill::before { content: "\f46b"; }
 .bi-patch-question::before { content: "\f46c"; }
 .bi-pause-btn-fill::before { content: "\f46d"; }
 .bi-pause-btn::before { content: "\f46e"; }
