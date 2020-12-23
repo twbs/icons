@@ -5,4 +5,6 @@ categories:
 tags:
   - excited
   - certified
+aliases:
+  - /icons/patch-exclamation-fll/
 ---
