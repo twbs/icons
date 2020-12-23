@@ -11,7 +11,7 @@
   background-color: $teal-100;
 
   @media (min-width: 540px) {
-    border-radius: 5em !important;
+    border-radius: 5em !important; // stylelint-disable-line declaration-no-important
   }
 }
 
