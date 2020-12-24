@@ -85,7 +85,7 @@ const main = async () => {
 
   const filesLength = files.length
 
-  console.log(chalk.green(`\nSuccess, ${filesLength} icon${filesLength > 1 ? 's' : ''} prepped!`))
+  console.log(chalk.green(`\nSuccess, ${filesLength} icon${filesLength !== 1 ? 's' : ''} prepped!`))
   console.timeEnd(timeLabel)
 }
 
