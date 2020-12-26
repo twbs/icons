@@ -56,7 +56,9 @@ const processFile = async (file, config) => {
 
   const resultSvg = $svgElement.toString().replace(/\r\n?/g, '\n')
 
-  await fs.writeFile(filepath, resultSvg, 'utf8')
+  if (resultSvg !== originalSvg) {
+    await fs.writeFile(filepath, resultSvg, 'utf8')
+  }
 
   if (VERBOSE) {
     console.log(`- ${basename}`)
