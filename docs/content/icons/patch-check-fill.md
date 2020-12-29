@@ -6,4 +6,6 @@ tags:
   - verified
   - checkmark
   - certified
+aliases:
+  - /icons/patch-check-fll/
 ---
