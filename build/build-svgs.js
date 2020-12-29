@@ -36,40 +36,45 @@ const getSvgoConfig = async () => {
   }
 }
 
-const processFile = (file, config) => new Promise((resolve, reject) => {
-  file = path.join(iconsDir, file)
+const processFile = (file, config) => {
+  return new Promise((resolve, reject) => {
+    const filepath = path.join(iconsDir, file)
+    const basename = path.basename(file, '.svg')
 
-  fs.readFile(file, 'utf8')
-    .then(data => {
-      const svgo = new SVGO(config)
+    fs.readFile(filepath, 'utf8')
+      .then(data => {
+        const svgo = new SVGO(config)
 
-      svgo.optimize(data)
-        .then(result => {
-          const $ = cheerio.load(result.data)
-          const $svg = $('svg')
+        svgo.optimize(data)
+          .then(result => {
+            const $ = cheerio.load(result.data)
+            const $svgElement = $('svg')
 
-          $svg.replaceWith($('<svg>').append($(this).html()))
+            // We keep all SVG contents apart from the `<svg>` element.
+            // `$(this)` refers to the original object not the replaced one!
+            $svgElement.replaceWith($('<svg>').append($(this).html()))
 
-          for (const [attribute, value] of Object.entries(svgAttributes)) {
-            $svg.removeAttr(attribute)
-            $svg.attr(attribute, value)
-          }
+            // Then we set the `svgAttributes` in the order we want to,
+            // hence why we remove the attributes and add them back
+            for (const [attribute, value] of Object.entries(svgAttributes)) {
+              $svgElement.removeAttr(attribute)
+              $svgElement.attr(attribute, attribute === 'class' ? `bi bi-${basename}` : value)
+            }
 
-          $svg.attr('class', `bi bi-${path.basename(file, '.svg')}`)
-
-          fs.writeFile(file, $svg.toString(), 'utf8')
-            .then(() => {
-              if (VERBOSE) {
-                console.log(`- ${path.basename(file, '.svg')}`)
-              }
-              resolve()
-            })
-            .catch(error => reject(error))
-        })
-        .catch(error => reject(error))
-    })
-    .catch(error => reject(error))
-})
+            fs.writeFile(filepath, $svgElement.toString(), 'utf8')
+              .then(() => {
+                if (VERBOSE) {
+                  console.log(`- ${basename}`)
+                }
+                resolve()
+              })
+              .catch(error => reject(error))
+          })
+          .catch(error => reject(error))
+      })
+      .catch(error => reject(error))
+  })
+}
 
 const main = async () => {
   const basename = path.basename(__filename)
