@@ -83,7 +83,9 @@ const main = async () => {
 
   await Promise.all(files.map(file => processFile(file, config)))
 
-  console.log(chalk.green(`\nSuccess, ${files.length} icons prepped!`))
+  const filesLength = files.length
+
+  console.log(chalk.green(`\nSuccess, ${filesLength} icon${filesLength !== 1 ? 's' : ''} prepped!`))
   console.timeEnd(timeLabel)
 }
 
