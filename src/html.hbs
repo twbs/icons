@@ -64,11 +64,11 @@
         var value = event.target.value;
 
         var filteredIcons = icons.filter(function(icon) {
-          return icon.innerHTML.indexOf(value) > -1
+          return icon.textContent.indexOf(value) > -1
         })
 
         var unfilteredIcons = icons.filter(function(icon) {
-          return icon.innerHTML.indexOf(value) === -1
+          return icon.textContent.indexOf(value) === -1
         })
 
         unfilteredIcons.forEach(function(el) {
