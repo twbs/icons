@@ -39,6 +39,12 @@
 <body class="text-center">
 
   <h1>{{ name }}</h1>
+  
+  <div class="row">
+    <div class="col p-3 m-3">
+      <input type="text" name="search" id="search" class="form-control" placeholder="search (eg: check)">
+    </div>
+  </div>
 
   <div class="icons">
   {{# each assets }}
@@ -49,5 +55,27 @@
   {{/ each }}
   </div>
 
+  <script>
+    (function () {
+      var icons = Array.from(document.querySelectorAll(".icon>div.label"));
+      var btn = document.getElementById("search");
+
+      btn.addEventListener("keyup", function search(event) {
+      
+        var value = event.target.value;
+        var filtred_icons = icons.filter(function(i){return i.innerHTML.indexOf(value) > -1});
+        var unfiltred_icons = icons.filter(function(i){return i.innerHTML.indexOf(value) == -1});
+
+        unfiltred_icons.forEach(function(el){
+            el.parentElement.style.display = "none";
+        });
+
+        filtred_icons.forEach(function(el){
+            el.parentElement.style.display = "";
+        });
+      });      
+
+    })()
+  </script>
 </body>
 </html>
