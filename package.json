@@ -40,7 +40,7 @@
   "devDependencies": {
     "autoprefixer": "^10.1.0",
     "chalk": "^4.1.0",
-    "cheerio": "^1.0.0-rc.3",
+    "cheerio": "^1.0.0-rc.5",
     "cross-env": "^7.0.3",
     "eslint": "^7.16.0",
     "fantasticon": "^1.0.27",
