@@ -39,7 +39,7 @@
 <body class="text-center">
 
   <h1>{{ name }}</h1>
-  
+
   <div class="row">
     <div class="col p-3 m-3">
       <input type="text" name="search" id="search" class="form-control" placeholder="search (eg: check)">
@@ -57,24 +57,28 @@
 
   <script>
     (function () {
-      var icons = Array.from(document.querySelectorAll(".icon>div.label"));
-      var btn = document.getElementById("search");
+      var icons = Array.from(document.querySelectorAll('.icon > div.label'))
+      var btn = document.getElementById('search')
 
-      btn.addEventListener("keyup", function search(event) {
-      
+      btn.addEventListener('keyup', function search(event) {
         var value = event.target.value;
-        var filtred_icons = icons.filter(function(i){return i.innerHTML.indexOf(value) > -1});
-        var unfiltred_icons = icons.filter(function(i){return i.innerHTML.indexOf(value) == -1});
 
-        unfiltred_icons.forEach(function(el){
-            el.parentElement.style.display = "none";
+        var filteredIcons = icons.filter(function(icon) {
+          return icon.innerHTML.indexOf(value) > -1
+        })
+
+        var unfilteredIcons = icons.filter(function(icon) {
+          return icon.innerHTML.indexOf(value) === -1
+        })
+
+        unfilteredIcons.forEach(function(el) {
+          el.parentElement.style.display = 'none'
         });
 
-        filtred_icons.forEach(function(el){
-            el.parentElement.style.display = "";
-        });
-      });      
-
+        filteredIcons.forEach(function(el) {
+          el.parentElement.style.display = ''
+        })
+      })
     })()
   </script>
 </body>
