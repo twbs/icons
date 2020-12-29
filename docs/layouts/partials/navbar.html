@@ -34,25 +34,29 @@
 
       <hr class="d-md-none text-white-50">
 
-      <ul class="navbar-nav ms-sm-auto">
-        <li class="nav-item">
-          <a class="nav-link px-1 mx-1 py-2" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener" aria-label="GitHub">
-            {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="{{ .Site.Params.github_org }}" target="_blank" rel="noopener">
+            {{ partial "icons/github.svg" (dict "class" "navbar-nav-svg d-inline-block align-text-top" "width" "36" "height" "36") }}
+            <small class="d-md-none ms-2">GitHub</small>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-1 mx-1 py-2" href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
-            {{ partial "icons/twitter.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank" rel="noopener">
+            {{ partial "icons/twitter.svg" (dict "class" "navbar-nav-svg d-inline-block align-text-top" "width" "36" "height" "36") }}
+            <small class="d-md-none ms-2">Twitter</small>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-1 mx-1 py-2" href="{{ .Site.Params.slack }}/" target="_blank" rel="noopener" aria-label="Slack">
-            {{ partial "icons/slack.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="{{ .Site.Params.slack }}/" target="_blank" rel="noopener">
+            {{ partial "icons/slack.svg" (dict "class" "navbar-nav-svg d-inline-block align-text-top" "width" "36" "height" "36") }}
+            <small class="d-md-none ms-2">Slack</small>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-1 mx-1 py-2" href="{{ .Site.Params.opencollective }}/" target="_blank" rel="noopener" aria-label="Open Collective">
-            {{ partial "icons/opencollective.svg" (dict "class" "navbar-nav-svg" "width" "36" "height" "36") }}
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="{{ .Site.Params.opencollective }}/" target="_blank" rel="noopener">
+            {{ partial "icons/opencollective.svg" (dict "class" "navbar-nav-svg d-inline-block align-text-top" "width" "36" "height" "36") }}
+            <small class="d-md-none ms-2">Open Collective</small>
           </a>
         </li>
       </ul>
