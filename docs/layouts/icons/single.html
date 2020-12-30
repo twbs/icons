@@ -21,7 +21,7 @@
           <p class="mb-3 mb-md-0"><strong>Tags:</strong> {{ with .Params.tags }}{{ delimit . ", " }}{{ end }}</p>
         </div>
         <div class="col-md-6 col-lg-4">
-          <script async src="https://cdn.carbonads.com/carbon.js?serve=CE7D4277&placement=iconsgetbootstrapcom" id="_carbonads_js"></script>
+          {{ partialCached "ads" . }}
         </div>
       </div>
 
@@ -30,45 +30,47 @@
       {{- $filenameWithExt := split .Name "." -}}
       {{- $filename := index $filenameWithExt 0 -}}
       {{- $name := humanize $filename -}}
+      {{- $svgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
+      {{- $svgHtml := readFile $svgPath | chomp | safeHTML -}}
 
       <div class="row gx-lg-5">
         <div class="col-lg-8 mb-4">
           <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" style="font-size: 10em">
-            {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+            {{ $svgHtml }}
           </div>
 
           <h2>Examples</h2>
           <div class="p-3 border rounded-3">
             <div class="fs-3 mb-3">
-              {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+              {{ $svgHtml }}
               Heading
             </div>
             <p>
-              Inline text {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+              Inline text {{ $svgHtml }}
             </p>
             <p>
               <a href="#" title="Placeholder link title" class="text-decoration-none">
                 Example link text
-                {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+                {{ $svgHtml }}
               </a>
             </p>
             <p>
               <button type="button" class="btn btn-primary">
-                {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+                {{ $svgHtml }}
                 Button
               </button>
               <button type="button" class="btn btn-outline-success">
-                {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+                {{ $svgHtml }}
                 Button
               </button>
               <button type="button" class="btn btn-outline-danger">
-                {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+                {{ $svgHtml }}
                 Button
               </button>
             </p>
             <p class="mb-0">
               <button type="button" class="btn btn-secondary">
-                {{ readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) | chomp | safeHTML }}
+                {{ $svgHtml }}
                 <span class="visually-hidden">Button</span>
               </button>
             </p>
@@ -77,14 +79,14 @@
         <div class="col-lg-4 mb-4">
           <h2 class="fs-3">Download</h2>
           <p>Right click and save as to download the SVG.</p>
-          <a href='{{ printf "/%s/%s.svg" "icons" .File.TranslationBaseName }}' class="btn btn-bd-primary mb-4">Download SVG</a>
+          <a href="{{ $svgPath }}" class="btn btn-bd-primary mb-4" download>Download SVG</a>
 
           <h2 class="fs-3">Icon font</h2>
           <p>Using the web font? Copy, paste, and go.</p>
 
-          {{ $iconFontSnippet := partial "font-snippet.html" (dict "context" . "name" .File.TranslationBaseName) }}
           <div class="mb-4">
-            {{ highlight $iconFontSnippet "html" "" }}
+            {{ $iconFontSnippet := printf `<i class="bi bi-%s"></i>` .File.TranslationBaseName -}}
+            {{- highlight $iconFontSnippet "html" "" }}
           </div>
 
           <h2 class="fs-3">Copy HTML</h2>
@@ -92,8 +94,7 @@
 
           <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
 
-          {{ $source := readFile (printf "/%s/%s.svg" "icons" .File.TranslationBaseName) -}}
-          {{ highlight $source "html" "" }}
+          {{ highlight $svgHtml "html" "" }}
         </div>
       </div>
     </main>
