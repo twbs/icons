@@ -64,7 +64,8 @@
   "files": [
     "icons/*.svg",
     "bootstrap-icons.svg",
-    "font"
+    "font",
+    "!.DS_Store"
   ],
   "hugo-bin": {
     "buildTags": "extended"
