@@ -9,6 +9,7 @@
   },
   "extends": "eslint:recommended",
   "rules": {
+    "no-return-await": "error",
     "object-curly-spacing": [
       "error",
       "always"
@@ -17,6 +18,7 @@
     "semi": [
       "error",
       "never"
-    ]
+    ],
+    "strict": "error"
   }
 }
