@@ -11,6 +11,6 @@
       {{ .Content }}
     </main>
 
-    {{- partial "scripts" . }}
+    {{- partialCached "scripts" . .IsHome }}
   </body>
 </html>

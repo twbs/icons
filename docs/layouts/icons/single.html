@@ -4,7 +4,7 @@
     {{ partial "header" . }}
   </head>
   <body id="icons-body">
-    {{ partial "skippy" . }}
+    {{ partialCached "skippy" . }}
     {{ partial "navbar" . }}
 
     <main class="container icon-examples" id="content" role="main">
@@ -98,7 +98,7 @@
       </div>
     </main>
 
-    {{- partial "footer" . }}
-    {{- partial "scripts" . }}
+    {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . .IsHome }}
   </body>
 </html>
