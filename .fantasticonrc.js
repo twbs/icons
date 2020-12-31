@@ -9,14 +9,14 @@ module.exports = {
   fontsUrl: './fonts',
   formatOptions: {
     json: {
-      // render the JSON human readable with two spaces indent (default is none, so minified)
+      // render the JSON human readable with two spaces indentation (default is none, so minified)
       indent: 2
     }
   },
   // Use a custom Handlebars template
   templates: {
-    css: './src/css.hbs',
-    html: './src/html.hbs'
+    css: './build/font/css.hbs',
+    html: './build/font/html.hbs'
   },
   pathOptions: {
     json: './font/bootstrap-icons.json',
