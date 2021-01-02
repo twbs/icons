@@ -1,5 +1,5 @@
 ---
-title: Dash circle fill
+title: Dash square dotted
 categories:
   - Alerts, warnings, and signs
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Dash square fill
 categories:
-  - UI and keyboard
+  - Alerts, warnings, and signs
 tags:
   - minus
 ---
