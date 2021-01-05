@@ -44,7 +44,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "fantasticon": "^1.0.27",
-    "find-unused-sass-variables": "^3.0.0",
+    "find-unused-sass-variables": "^3.1.0",
     "hugo-bin": "^0.68.0",
     "js-yaml": "^4.0.0",
     "linkinator": "^2.13.0",
