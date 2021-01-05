@@ -1,7 +1,7 @@
 ---
 title: Dash circle fill
 categories:
-  - UI and keyboard
+  - Alerts, warnings, and signs
 tags:
   - minus
 ---

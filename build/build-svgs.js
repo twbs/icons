@@ -11,7 +11,7 @@ const yaml = require('js-yaml')
 
 const iconsDir = path.join(__dirname, '../icons/')
 
-const VERBOSE = process.argv[2] === '--verbose'
+const VERBOSE = process.argv.includes('--verbose')
 
 const svgAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -22,13 +22,13 @@ const svgAttributes = {
   viewBox: '0 0 16 16'
 }
 
-const getSvgoConfig = async () => {
+async function getSvgoConfig() {
   const svgoConfigFile = await fs.readFile(path.join(__dirname, '../svgo.yml'), 'utf8')
 
-  return await yaml.safeLoad(svgoConfigFile)
+  return yaml.safeLoad(svgoConfigFile)
 }
 
-const processFile = async (file, config) => {
+async function processFile(file, config) {
   const filepath = path.join(iconsDir, file)
   const basename = path.basename(file, '.svg')
 
@@ -36,7 +36,7 @@ const processFile = async (file, config) => {
   const svgo = await new SVGO(config)
   const optimizedSvg = await svgo.optimize(originalSvg)
 
-  const $ = cheerio.load(optimizedSvg.data, {
+  const $ = await cheerio.load(optimizedSvg.data, {
     xml: {
       xmlMode: true
     }
@@ -76,11 +76,14 @@ const processFile = async (file, config) => {
     const files = await fs.readdir(iconsDir)
     const config = await getSvgoConfig()
 
-    await Promise.all(files.map(file => processFile(file, config)))
+    await Promise.all(files.map(file => {
+      return processFile(file, config)
+        .catch(error => Promise.reject(error))
+    }))
 
     const filesLength = files.length
 
-    console.log(chalk.green(`\nSuccess, ${filesLength} icon${filesLength !== 1 ? 's' : ''} prepped!`))
+    console.log(chalk.green('\nSuccess, %s icon%s prepared!'), filesLength, filesLength !== 1 ? 's' : '')
     console.timeEnd(timeLabel)
   } catch (error) {
     console.error(error)
