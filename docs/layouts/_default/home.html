@@ -15,6 +15,6 @@
     </main>
 
     {{- partialCached "footer" . }}
-    {{- partial "scripts" . }}
+    {{- partialCached "scripts" . .IsHome }}
   </body>
 </html>
