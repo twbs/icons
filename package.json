@@ -42,7 +42,7 @@
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.5",
     "cross-env": "^7.0.3",
-    "eslint": "^7.16.0",
+    "eslint": "^7.17.0",
     "fantasticon": "^1.0.27",
     "find-unused-sass-variables": "^3.0.0",
     "hugo-bin": "^0.68.0",
