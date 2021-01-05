@@ -45,5 +45,13 @@
 
     errorElement.classList.remove('d-none')
     errorElement.insertAdjacentHTML('afterbegin', fallbackMsg)
-  })
+  });
+
+  // Disable empty links in docs
+  [].slice.call(document.querySelectorAll('[href="#"]'))
+    .forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault()
+      })
+    })
 })()
