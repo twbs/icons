@@ -25,7 +25,7 @@ const svgAttributes = {
 async function getSvgoConfig() {
   const svgoConfigFile = await fs.readFile(path.join(__dirname, '../svgo.yml'), 'utf8')
 
-  return yaml.safeLoad(svgoConfigFile)
+  return yaml.load(svgoConfigFile)
 }
 
 async function processFile(file, config) {
