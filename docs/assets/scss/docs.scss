@@ -16,16 +16,30 @@
 }
 
 .highlight {
+  padding: 1.25rem;
+  background-color: $gray-100;
+  border-radius: .25rem;
+  margin-bottom: 1.5rem;
+
   pre {
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
-    background-color: $gray-100;
-    border-radius: .25rem;
+    margin-bottom: 0;
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
       display: none;
     }
+
+    // // clip
+    // &::after {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   display: block;
+    //   width: 1rem;
+    //   content: "";
+    //   background-color: $gray-100;
+    // }
 
     code {
       word-wrap: normal;
