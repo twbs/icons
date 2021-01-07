@@ -170,7 +170,7 @@ Known issues include:
 
 - **External SVG sprites may not function correctly in Internet Explorer.** Use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill as needed.
 
-Found another issue with SVGs we should note? Please open an issue to share details.
+Found another issue with SVGs we should note? Please open [an issue]({{< param repo >}}/issues) to share details.
 {{< /md >}}
   </div>
 </div>
