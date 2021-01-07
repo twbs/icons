@@ -11,7 +11,7 @@ const pagesDir = path.join(__dirname, '../docs/content/icons/')
 
 const VERBOSE = process.argv.includes('--verbose')
 
-function capitalizeFirstLetter(string) {
+const capitalizeFirstLetter = (string) => {
   return (string.charAt(0).toUpperCase() + string.slice(1)).split('-').join(' ')
 }
 
