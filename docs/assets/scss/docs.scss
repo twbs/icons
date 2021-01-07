@@ -16,11 +16,13 @@
 }
 
 .highlight {
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: $gray-100;
+  border-radius: .25rem;
+
   pre {
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
-    background-color: $gray-100;
-    border-radius: .25rem;
+    margin-bottom: 0;
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
