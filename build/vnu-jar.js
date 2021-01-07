@@ -14,8 +14,8 @@ const vnu = require('vnu-jar')
 
 childProcess.exec('java -version', (error, stdout, stderr) => {
   if (error) {
-    console.error('Skipping vnu-jar test; Java is missing.')
-    return
+    console.error('Skipping vnu-jar test; Java is missing.');
+    return;
   }
 
   const is32bitJava = !/64-Bit/.test(stderr)
