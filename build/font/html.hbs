@@ -2,52 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ name }}</title>
+  <title>{{ name }} Font Page</title>
+  <meta name="description" content="TBD">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ name }}.css">
 
   <style>
-    .icons {
-      display: grid;
-      max-width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
-      gap: 1.25rem;
-    }
-    .icon {
-      background-color: var(--bs-light);
-      border-radius: .25rem;
-    }
     .bi {
       margin: .25rem;
       font-size: 2.5rem;
     }
-    .label {
-      font-family: var(--bs-font-monospace);
-    }
-    .label {
-      display: inline-block;
-      width: 100%;
-      overflow: hidden;
-      padding: .25rem;
-      font-size: .625rem;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
   </style>
-
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ name }}.css">
 </head>
-<body class="text-center">
+<body id="icons-body" class="text-center">
+  <main class="container" id="content" role="main">
+    <div class="my-5">
+      <div class="d-flex mb-4">
+        <h1 id="icons" class="mb-0 h2">{{ name }}</h1>
+        <form class="subnav-search d-flex flex-nowrap ms-auto">
+          <label for="search" class="visually-hidden">Search for icons</label>
+          <input class="form-control search mb-0" id="search" placeholder="Start typing to filter..." autocomplete="off">
+        </form>
+      </div>
 
-  <h1>{{ name }}</h1>
-
-  <div class="icons">
-  {{# each assets }}
-    <div class="icon">
-      <{{ ../tag }} class="{{ ../prefix }} {{ ../prefix }}-{{ @key }}"></{{ ../tag }}>
-      <div class="label">{{ @key }}</div>
+      <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
+        {{# each assets }}
+        <li class="col mb-4">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <{{ ../tag }} class="{{ ../prefix }} {{ ../prefix }}-{{ @key }}"></{{ ../tag }}>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">{{ @key }}</div>
+        </li>
+        {{/ each }}
+      </ul>
     </div>
-  {{/ each }}
-  </div>
+  </main>
 
+  <script src="/assets/js/list.min.js"></script>
+  <script>
+    new List('icons-body', {
+      valueNames: ['name']
+    });
+  </script>
 </body>
 </html>
