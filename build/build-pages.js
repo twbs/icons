@@ -49,9 +49,7 @@ tags:
 
     const files = await fs.readdir(iconsDir)
 
-    await Promise.all(files.map(file => {
-      return main(file).catch(error => Promise.reject(error))
-    }))
+    await Promise.all(files.map(file => main(file)))
 
     const filesLength = files.length
 
