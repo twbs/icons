@@ -45,7 +45,7 @@
     "cheerio": "^1.0.0-rc.5",
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
-    "fantasticon": "^1.0.27",
+    "fantasticon": "^1.0.30",
     "find-unused-sass-variables": "^3.1.0",
     "hugo-bin": "^0.68.0",
     "js-yaml": "^4.0.0",
