@@ -82,7 +82,7 @@ Use the SVG sprite to insert any icon through the `<use>` element. Use the icon'
   <div class="col-md-4">
 {{< md >}}
 ### External image
-Copy the Bootstrap icon SVGs to your directory of choice and reference them like normal images with the `<img>` element.
+Copy the Bootstrap Icons SVGs to your directory of choice and reference them like normal images with the `<img>` element.
 {{< /md >}}
   </div>
   <div class="col-md-8">
