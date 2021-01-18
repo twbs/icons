@@ -37,6 +37,10 @@ module:
       target:           static/icons
     - source:           font
       target:           static/font
+    - source:           node_modules/list.js/dist/list.min.js
+      target:           static/assets/js/list.min.js
+    - source:           node_modules/list.js/dist/list.min.js.map
+      target:           static/assets/js/list.min.js.map
 
 params:
   description:          "Official open source SVG icon library for Bootstrap"
