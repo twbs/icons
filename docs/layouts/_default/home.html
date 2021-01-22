@@ -9,12 +9,12 @@
     {{ partialCached "hero" . }}
 
     <main class="container" id="content" role="main">
-      {{ partial "icons" . }}
+      {{ partialCached "icons" . }}
 
       {{ .Content }}
     </main>
 
     {{- partialCached "footer" . }}
-    {{- partialCached "scripts" . .IsHome }}
+    {{- partialCached "scripts" . "home" }}
   </body>
 </html>
