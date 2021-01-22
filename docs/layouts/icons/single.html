@@ -27,9 +27,6 @@
 
       <hr class="my-4">
 
-      {{- $filenameWithExt := split .Name "." -}}
-      {{- $filename := index $filenameWithExt 0 -}}
-      {{- $name := humanize $filename -}}
       {{- $svgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
       {{- $svgHtml := readFile $svgPath | chomp | safeHTML -}}
 
