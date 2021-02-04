@@ -18,7 +18,7 @@
       <div class="row align-items-md-center">
         <div class="col-md-6 col-lg-8">
           <h1>{{ .Title }}</h1>
-          <p class="mb-3 mb-md-0"><strong>Tags:</strong> {{ with .Params.tags }}{{ delimit . ", " }}{{ end }}</p>
+          <p class="mb-3 mb-md-0">{{ with .Params.tags }}<strong>Tags:</strong> {{ delimit . ", " }}{{ end }}</p>
         </div>
         <div class="col-md-6 col-lg-4">
           {{ partialCached "ads" . }}
