@@ -33,7 +33,7 @@
 
       <div class="row gx-lg-5">
         <div class="col-lg-8 mb-4">
-          <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" style="font-size: 10em">
+          <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" style="font-size: 10em" role="img" aria-label="{{ .Title }} - large preview">
             {{ $svgHtml }}
           </div>
 
@@ -47,7 +47,7 @@
               Inline text {{ $svgHtml }}
             </p>
             <p>
-              <a href="#" title="Placeholder link title" class="text-decoration-none">
+              <a href="#" class="text-decoration-none">
                 Example link text
                 {{ $svgHtml }}
               </a>
