@@ -1,5 +1,5 @@
 ---
-title: Alert circle
+title: Exclamation circle
 categories:
   - Alerts, warnings, and signs
 tags:
