@@ -1,5 +1,5 @@
 ---
-title: Alert triangle
+title: Exclamation triangle
 categories:
   - Alerts, warnings, and signs
 tags:
