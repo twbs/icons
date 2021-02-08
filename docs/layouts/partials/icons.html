@@ -7,12 +7,10 @@
     </form>
   </div>
   <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
-    {{ $dirName := "icons" -}}
-
-    {{- range (readDir $dirName) -}}
+    {{ range (readDir "icons") -}}
       {{- $filenameWithExt := split .Name "." -}}
       {{- $filename := index $filenameWithExt 0 -}}
-      <li class="col mb-4" data-tags="{{ with $.Site.GetPage "icons" $filename }}{{ with .Params.tags }}{{ delimit . " " }}{{ end }}{{ end }}">
+      <li class="col mb-4"{{ with $.Site.GetPage "icons" $filename }}{{ with .Params.tags }} data-tags="{{ delimit . " " }}"{{ end }}{{ end }}>
         <a class="d-block text-dark text-decoration-none" href="/icons/{{ $filename }}/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">

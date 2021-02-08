@@ -76,10 +76,7 @@ async function processFile(file, config) {
     const files = await fs.readdir(iconsDir)
     const config = await getSvgoConfig()
 
-    await Promise.all(files.map(file => {
-      return processFile(file, config)
-        .catch(error => Promise.reject(error))
-    }))
+    await Promise.all(files.map(file => processFile(file, config)))
 
     const filesLength = files.length
 

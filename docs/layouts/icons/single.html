@@ -1,24 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {{ partial "header" . }}
+    {{ partial "head" . }}
   </head>
   <body id="icons-body">
     {{ partialCached "skippy" . }}
     {{ partial "navbar" . }}
 
-    <main class="container icon-examples" id="content" role="main">
-      <nav>
-        <ul class="breadcrumb my-4 text-muted bg-transparent p-0">
+    <main class="container icon-examples" id="content">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-4 p-0">
           <li class="breadcrumb-item"><a href="/">Icons</a></li>
-          <li class="breadcrumb-item">{{ .Title }}</li>
-        </ul>
+          <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+        </ol>
       </nav>
 
       <div class="row align-items-md-center">
         <div class="col-md-6 col-lg-8">
           <h1>{{ .Title }}</h1>
-          <p class="mb-3 mb-md-0"><strong>Tags:</strong> {{ with .Params.tags }}{{ delimit . ", " }}{{ end }}</p>
+          <p class="mb-3 mb-md-0">{{ with .Params.tags }}<strong>Tags:</strong> {{ delimit . ", " }}{{ end }}</p>
         </div>
         <div class="col-md-6 col-lg-4">
           {{ partialCached "ads" . }}
@@ -27,11 +27,9 @@
 
       <hr class="my-4">
 
-      {{- $filenameWithExt := split .Name "." -}}
-      {{- $filename := index $filenameWithExt 0 -}}
-      {{- $name := humanize $filename -}}
-      {{- $svgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
-      {{- $svgHtml := readFile $svgPath | chomp | safeHTML -}}
+      {{- $localSvgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
+      {{- $svgPath := path.Join "/assets/" $localSvgPath -}}
+      {{- $svgHtml := readFile $localSvgPath | chomp | safeHTML -}}
 
       <div class="row gx-lg-5">
         <div class="col-lg-8 mb-4">
@@ -100,6 +98,6 @@
     </main>
 
     {{- partialCached "footer" . }}
-    {{- partialCached "scripts" . .IsHome }}
+    {{- partialCached "scripts" . "default" }}
   </body>
 </html>

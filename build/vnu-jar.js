@@ -21,11 +21,8 @@ childProcess.exec('java -version', (error, stdout, stderr) => {
   const is32bitJava = !/64-Bit/.test(stderr)
 
   // vnu-jar accepts multiple ignores joined with a `|`.
-  // Also note that the ignores are regular expressions.
+  // Also note that the ignores are string regular expressions.
   const ignores = [
-    // IE11 doesn't recognize <main> / give the element an implicit "main" landmark.
-    // Explicit role="main" is redundant for other modern browsers, but still valid.
-    'The “main” role is unnecessary for element “main”.'
   ].join('|')
 
   const args = [
