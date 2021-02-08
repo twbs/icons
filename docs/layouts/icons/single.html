@@ -27,8 +27,9 @@
 
       <hr class="my-4">
 
-      {{- $svgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
-      {{- $svgHtml := readFile $svgPath | chomp | safeHTML -}}
+      {{- $localSvgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
+      {{- $svgPath := path.Join "/assets/" $localSvgPath -}}
+      {{- $svgHtml := readFile $localSvgPath | chomp | safeHTML -}}
 
       <div class="row gx-lg-5">
         <div class="col-lg-8 mb-4">
