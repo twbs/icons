@@ -1,7 +1,7 @@
 ---
 title: Upload
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - arrow
   - network

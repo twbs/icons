@@ -1,7 +1,7 @@
 ---
 title: Clock history
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - time
   - history

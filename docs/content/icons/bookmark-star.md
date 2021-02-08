@@ -1,7 +1,7 @@
 ---
 title: Bookmark star
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - reading
   - book

@@ -1,7 +1,7 @@
 ---
 title: Lightning fill
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - weather
   - storm
