@@ -2,7 +2,7 @@ module.exports = {
   inputDir: './icons', // (required)
   outputDir: './font', // (required)
   fontTypes: ['woff2', 'woff'],
-  assetTypes: ['css', 'json', 'html'],
+  assetTypes: ['css', 'html'],
   name: 'bootstrap-icons',
   prefix: 'bi',
   selector: '.bi',
