@@ -1,7 +1,7 @@
 ---
 title: Lightning
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - weather
   - storm
