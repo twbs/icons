@@ -1,5 +1,5 @@
 ---
-title: Alert triangle fill
+title: Exclamation triangle fill
 categories:
   - Alerts, warnings, and signs
 tags:
