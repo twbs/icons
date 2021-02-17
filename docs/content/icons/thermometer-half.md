@@ -1,7 +1,7 @@
 ---
 title: Thermometer half
 categories:
-  - Real world
+  - Weather
 tags:
   - temperature
   - weather

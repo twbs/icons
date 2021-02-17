@@ -1,9 +1,8 @@
 ---
 title: Lightning fill
 categories:
-  - Miscellaneous
+  - Weather
 tags:
-  - weather
   - storm
   - thunder
   - bolt
