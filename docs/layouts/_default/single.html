@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {{ partial "header" . }}
+    {{ partial "head" . }}
   </head>
   <body id="icons-body">
     {{ partialCached "skippy" . }}
     {{ partialCached "navbar" . }}
     {{ partialCached "hero" . }}
 
-    <main class="container" id="content" role="main">
+    <main class="container" id="content">
       {{ .Content }}
     </main>
 

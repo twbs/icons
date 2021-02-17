@@ -3,5 +3,6 @@ title: At
 categories:
   - Communications
 tags:
-  - at-sign
+  - mention
+  - sign
 ---

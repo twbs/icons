@@ -88,24 +88,6 @@
   }
 }
 
-.bi {
-  display: inline-block;
-  vertical-align: text-bottom;
-}
-
-.list:empty::before {
-  display: block;
-  width: 100%;
-  padding: 100px 2rem;
-  margin-right: 15px;
-  margin-left: 15px;
-  color: $gray-500;
-  text-align: center;
-  content: "Nothing found, try searching again.";
-  background-color: $gray-100;
-  border-radius: .5rem;
-}
-
 .list {
   font-size: 2rem;
 
@@ -118,6 +100,24 @@
     }
   }
   // stylelint-enable  declaration-no-important
+
+  .bi {
+    display: inline-block;
+    vertical-align: -.125em;
+  }
+
+  &:empty::before {
+    display: block;
+    width: 100%;
+    padding: 100px 2rem;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: $gray-500;
+    text-align: center;
+    content: "Nothing found, try searching again.";
+    background-color: $gray-100;
+    border-radius: .5rem;
+  }
 }
 
 .btn-group > .btn {
@@ -140,7 +140,7 @@
 .icon-examples .bi {
   width: 1em;
   height: 1em;
-  vertical-align: -.1em;
+  vertical-align: -.125em;
 }
 
 .icon-demo {
@@ -172,10 +172,11 @@
   font-variant: normal;
   line-height: 1;
   text-transform: none;
-  vertical-align: text-bottom;
+  vertical-align: -.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .bi-alarm::before { content: "\f102"; }
+.bi-github::before { content: "\f3cd"; }
 // stylelint-enable

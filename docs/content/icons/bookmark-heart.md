@@ -1,7 +1,7 @@
 ---
 title: Bookmark heart
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - reading
   - book

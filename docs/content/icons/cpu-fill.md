@@ -1,7 +1,7 @@
 ---
 title: Cpu fill
 categories:
-  - Deviecs
+  - Devices
 tags:
   - processor
   - chip

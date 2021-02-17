@@ -1,7 +1,7 @@
 ---
 title: Clock
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - time
 ---

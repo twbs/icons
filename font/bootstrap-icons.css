@@ -13,7 +13,7 @@ url("./fonts/bootstrap-icons.woff?4601c71fb26c9277391ec80789bfde9c") format("wof
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  vertical-align: text-bottom;
+  vertical-align: 0.125em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -34,7 +34,7 @@ module:
     - source:           bootstrap-icons.svg
       target:           static/bootstrap-icons.svg
     - source:           icons
-      target:           static/icons
+      target:           static/assets/icons
     - source:           font
       target:           static/font
 

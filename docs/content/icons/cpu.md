@@ -1,7 +1,7 @@
 ---
 title: CPU
 categories:
-  - Deviecs
+  - Devices
 tags:
   - processor
   - chip

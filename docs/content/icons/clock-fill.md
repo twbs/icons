@@ -1,7 +1,7 @@
 ---
 title: Clock fill
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - time
 ---
