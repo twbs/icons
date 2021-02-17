@@ -157,28 +157,3 @@
   padding-bottom: 4.5rem !important;
 }
 // stylelint-enable declaration-no-important
-
-// stylelint-disable
-@font-face {
-  font-family: bootstrap-icons;
-  src: url("../../font/fonts/bootstrap-icons.woff2?c0f46bd4a179066373b636ea27738b40") format("woff2"),
-       url("../../font/fonts/bootstrap-icons.woff?c0f46bd4a179066373b636ea27738b40") format("woff");
-}
-
-[class^="bi-"]::before,
-[class*=" bi-"]::before {
-  display: inline-block;
-  font-family: bootstrap-icons !important;
-  font-style: normal;
-  font-weight: 400 !important;
-  font-variant: normal;
-  line-height: 1;
-  text-transform: none;
-  vertical-align: -.125em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.bi-alarm::before { content: "\f102"; }
-.bi-github::before { content: "\f3ed"; }
-// stylelint-enable
