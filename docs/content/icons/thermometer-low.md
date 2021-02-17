@@ -1,5 +1,5 @@
 ---
-title: Thermometer half
+title: Thermometer low
 categories:
   - Weather
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Thermometer half
+title: Thermometer snow
 categories:
   - Weather
 tags:

@@ -1,9 +1,8 @@
 ---
-title: Lightning fill
+title: Cloud drizzle
 categories:
   - Weather
 tags:
   - storm
-  - thunder
-  - bolt
+  - rain
 ---

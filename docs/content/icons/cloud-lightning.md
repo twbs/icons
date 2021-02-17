@@ -1,9 +1,8 @@
 ---
-title: Lightning fill
+title: Cloud lightning
 categories:
   - Weather
 tags:
-  - storm
   - thunder
-  - bolt
+  - storm
 ---

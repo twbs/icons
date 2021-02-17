@@ -1,9 +1,7 @@
 ---
-title: Lightning fill
+title: Hurricane
 categories:
   - Weather
 tags:
   - storm
-  - thunder
-  - bolt
 ---

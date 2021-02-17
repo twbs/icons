@@ -1,8 +1,9 @@
 ---
-title: Lightning fill
+title: Lightning charge
 categories:
-  - Weather
+  - Miscellaneous
 tags:
+  - weather
   - storm
   - thunder
   - bolt
