@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-thermometer-sun" viewBox="0 0 16 16">
+  <path stroke="#000" d="M3.5.5a2 2 0 0 0-2 2v7.764a3 3 0 1 0 4 0V2.5a2 2 0 0 0-2-2z"/>
+  <circle cx="3.5" cy="12.5" r="1.5"/>
+  <path stroke="#000" stroke-linecap="round" d="M3.5 11.5v-9m5 0v1m0 9v1m3.89-9.39l-.708.708m.707 7.071l-.707-.707M14 8h-1m-4.5 2.5a2.5 2.5 0 0 0 0-5"/>
+</svg>
