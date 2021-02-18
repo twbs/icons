@@ -8,4 +8,5 @@ tags:
   - justify
   - alignment
   - menu
+  - hamburger
 ---
