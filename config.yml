@@ -4,7 +4,7 @@ baseURL:                "https://icons.getbootstrap.com"
 enableInlineShortcodes: true
 enableRobotsTXT:        true
 metaDataFormat:         "yaml"
-disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+disableKinds:           ["404", "taxonomy", "term", "RSS"]
 
 publishDir:             "_site"
 
