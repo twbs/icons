@@ -18,7 +18,13 @@
       <div class="row align-items-md-center">
         <div class="col-md-6 col-lg-8">
           <h1>{{ .Title }}</h1>
-          <p class="mb-3 mb-md-0">{{ with .Params.tags }}<strong>Tags:</strong> {{ delimit . ", " }}{{ end }}</p>
+
+          {{ if or .Params.tags .Params.categories -}}
+          <ul class="list-unstyled mb-3 mb-md-0">
+            {{ with .Params.tags }}<li><strong>Tags:</strong> {{ delimit . ", " }}</li>{{ end }}
+            {{ with .Params.categories }}<li><strong>Category:</strong> {{ delimit . ", " }}</li>{{ end }}
+          </ul>
+          {{- end }}
         </div>
         <div class="col-md-6 col-lg-4">
           {{ partialCached "ads" . }}
