@@ -6,8 +6,7 @@ const fs = require('fs').promises
 const path = require('path')
 const chalk = require('chalk')
 const cheerio = require('cheerio')
-const SVGO = require('svgo')
-const yaml = require('js-yaml')
+const { loadConfig, optimize } = require('svgo')
 
 const iconsDir = path.join(__dirname, '../icons/')
 
@@ -22,19 +21,15 @@ const svgAttributes = {
   viewBox: '0 0 16 16'
 }
 
-async function getSvgoConfig() {
-  const svgoConfigFile = await fs.readFile(path.join(__dirname, '../svgo.yml'), 'utf8')
-
-  return yaml.load(svgoConfigFile)
-}
-
 async function processFile(file, config) {
   const filepath = path.join(iconsDir, file)
   const basename = path.basename(file, '.svg')
 
   const originalSvg = await fs.readFile(filepath, 'utf8')
-  const svgo = await new SVGO(config)
-  const optimizedSvg = await svgo.optimize(originalSvg)
+  const optimizedSvg = await optimize(originalSvg, {
+    path: filepath,
+    ...config
+  })
 
   const $ = await cheerio.load(optimizedSvg.data, {
     xml: {
@@ -74,7 +69,7 @@ async function processFile(file, config) {
     console.time(timeLabel)
 
     const files = await fs.readdir(iconsDir)
-    const config = await getSvgoConfig()
+    const config = await loadConfig(path.join(__dirname, '../svgo.config.js'))
 
     await Promise.all(files.map(file => processFile(file, config)))
 
