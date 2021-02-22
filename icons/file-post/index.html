@@ -116,24 +116,28 @@
         </li>
       </ul>
 
-      <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="https://github.com/twbs/icons/archive/v1.3.0.zip">Download</a>
+      <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="https://github.com/twbs/icons/archive/v1.4.0.zip">Download</a>
     </div>
   </nav>
 </header>
 
 
-    <main class="container icon-examples" id="content" role="main">
-      <nav>
-        <ul class="breadcrumb my-4 text-muted bg-transparent p-0">
+    <main class="container icon-examples" id="content">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-4 p-0">
           <li class="breadcrumb-item"><a href="/">Icons</a></li>
-          <li class="breadcrumb-item">File post</li>
-        </ul>
+          <li class="breadcrumb-item active" aria-current="page">File post</li>
+        </ol>
       </nav>
 
       <div class="row align-items-md-center">
         <div class="col-md-6 col-lg-8">
           <h1>File post</h1>
-          <p class="mb-3 mb-md-0"><strong>Tags:</strong> doc, document, post</p>
+
+          <ul class="list-unstyled mb-3 mb-md-0">
+            <li><strong>Tags:</strong> doc, document, post</li>
+            <li><strong>Category:</strong> Files and folders</li>
+          </ul>
         </div>
         <div class="col-md-6 col-lg-4">
           <script async src="https://cdn.carbonads.com/carbon.js?serve=CE7D4277&placement=iconsgetbootstrapcom" id="_carbonads_js"></script>
@@ -143,7 +147,7 @@
 
       <hr class="my-4"><div class="row gx-lg-5">
         <div class="col-lg-8 mb-4">
-          <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" style="font-size: 10em">
+          <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" style="font-size: 10em" role="img" aria-label="File post - large preview">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
   <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
@@ -151,13 +155,20 @@
           </div>
 
           <h2>Examples</h2>
-          <div class="p-3 border rounded-3">
-            <div class="fs-3 mb-3">
+          <div class="p-3 p-md-4 border rounded-3">
+            <div class="fs-2 mb-3">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
   <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
 </svg>
               Heading
+            </div>
+            <div class="fs-4 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
+  <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+</svg>
+              Smaller heading
             </div>
             <p>
               Inline text <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
@@ -166,7 +177,7 @@
 </svg>
             </p>
             <p>
-              <a href="#" title="Placeholder link title" class="text-decoration-none">
+              <a href="#" class="text-decoration-none">
                 Example link text
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
   <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
@@ -182,7 +193,7 @@
 </svg>
                 Button
               </button>
-              <button type="button" class="btn btn-outline-success">
+              <button type="button" class="btn btn-success">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
   <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
@@ -197,21 +208,52 @@
                 Button
               </button>
             </p>
-            <p class="mb-0">
+            <p>
               <button type="button" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
+  <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+</svg>
+              </button>
+            </p>
+            <div class="btn-group mb-3">
+              <button type="button" class="btn btn-outline-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
   <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
 </svg>
                 <span class="visually-hidden">Button</span>
               </button>
-            </p>
+              <button type="button" class="btn btn-outline-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
+  <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+</svg>
+                <span class="visually-hidden">Button</span>
+              </button>
+              <button type="button" class="btn btn-outline-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
+  <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+</svg>
+                <span class="visually-hidden">Button</span>
+              </button>
+            </div>
+            <div class="input-group w-50">
+              <span class="input-group-text" id="basic-addon1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
+  <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+</svg>
+              </span>
+              <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
+            </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
           <h2 class="fs-3">Download</h2>
           <p>Download the SVG to use or edit.</p>
-          <a href="/icons/file-post.svg" class="btn btn-bd-primary mb-4" download>Download SVG</a>
+          <a href="/assets/icons/file-post.svg" class="btn btn-bd-primary mb-4" download>Download SVG</a>
 
           <h2 class="fs-3">Icon font</h2>
           <p>Using the web font? Copy, paste, and go.</p>
@@ -238,7 +280,7 @@
       <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
       <li><a href="https://getbootstrap.com/docs/5.0/about/overview/">About</a></li>
     </ul>
-    <p>Currently v1.3.0. Icons and documentation licensed <a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank" rel="license noopener">MIT</a>.</p>
+    <p>Currently v1.4.0. Icons and documentation licensed <a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank" rel="license noopener">MIT</a>.</p>
   </div>
 </footer>
 <script src="/assets/js/bootstrap.min.js" async></script>

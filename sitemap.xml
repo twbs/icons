@@ -10,30 +10,6 @@
     <loc>https://icons.getbootstrap.com/icons/alarm-fill/</loc>
   </url>
   <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-circle/</loc>
-  </url>
-  <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-circle-fill/</loc>
-  </url>
-  <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-octagon/</loc>
-  </url>
-  <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-octagon-fill/</loc>
-  </url>
-  <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-square/</loc>
-  </url>
-  <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-square-fill/</loc>
-  </url>
-  <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-triangle/</loc>
-  </url>
-  <url>
-    <loc>https://icons.getbootstrap.com/icons/exclamation-triangle-fill/</loc>
-  </url>
-  <url>
     <loc>https://icons.getbootstrap.com/icons/align-bottom/</loc>
   </url>
   <url>
@@ -1267,7 +1243,55 @@
     <loc>https://icons.getbootstrap.com/icons/cloud-download-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-drizzle/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-drizzle-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/cloud-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-fog/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-fog-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-fog2/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-fog2-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-hail/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-hail-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-haze/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-haze-1/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-haze-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-haze2-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-lightning/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-lightning-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-lightning-rain/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-lightning-rain-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/cloud-minus/</loc>
@@ -1276,10 +1300,28 @@
     <loc>https://icons.getbootstrap.com/icons/cloud-minus-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-moon/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-moon-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/cloud-plus/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/cloud-plus-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-rain/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-rain-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-rain-heavy/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-rain-heavy-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/cloud-slash/</loc>
@@ -1288,10 +1330,40 @@
     <loc>https://icons.getbootstrap.com/icons/cloud-slash-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-sleet/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-sleet-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-snow/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-snow-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-sun/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloud-sun-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/cloud-upload/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/cloud-upload-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clouds/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clouds-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloudy/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/cloudy-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/code/</loc>
@@ -1621,10 +1693,34 @@
     <loc>https://icons.getbootstrap.com/icons/exclamation/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-circle/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-circle-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/exclamation-diamond/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/exclamation-diamond-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-octagon/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-octagon-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-square/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-square-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-triangle/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/exclamation-triangle-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/exclude/</loc>
@@ -2329,6 +2425,9 @@
     <loc>https://icons.getbootstrap.com/icons/hr/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/hurricane/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/</loc>
   </url>
   <url>
@@ -2539,6 +2638,12 @@
     <loc>https://icons.getbootstrap.com/icons/lightning/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/lightning-charge/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/lightning-charge-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/lightning-fill/</loc>
   </url>
   <url>
@@ -2647,7 +2752,19 @@
     <loc>https://icons.getbootstrap.com/icons/minecart-loaded/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/moisture/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/moon/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/moon-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/moon-stars/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/moon-stars-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/mouse/</loc>
@@ -3001,6 +3118,9 @@
     <loc>https://icons.getbootstrap.com/icons/question-square-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/rainbow/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/receipt/</loc>
   </url>
   <url>
@@ -3283,6 +3403,15 @@
     <loc>https://icons.getbootstrap.com/icons/smartwatch/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/snow/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/snow2/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/snow3/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/sort-alpha-down/</loc>
   </url>
   <url>
@@ -3358,6 +3487,9 @@
     <loc>https://icons.getbootstrap.com/icons/star-half/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/stars/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/stickies/</loc>
   </url>
   <url>
@@ -3430,7 +3562,22 @@
     <loc>https://icons.getbootstrap.com/icons/sun/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/sun-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/sunglasses/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/sunrise/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/sunrise-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/sunset/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/sunset-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/symmetry-horizontal/</loc>
@@ -3550,6 +3697,18 @@
     <loc>https://icons.getbootstrap.com/icons/thermometer-half/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/thermometer-high/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/thermometer-low/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/thermometer-snow/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/thermometer-sun/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/three-dots/</loc>
   </url>
   <url>
@@ -3575,6 +3734,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/tools/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/tornado/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/trash/</loc>
@@ -3610,10 +3772,16 @@
     <loc>https://icons.getbootstrap.com/icons/trophy-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/tropical-storm/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/truck/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/truck-flatbed/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/tsunami/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/tv/</loc>
@@ -3662,6 +3830,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/ui-radios-grid/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/umbrella/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/umbrella-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/union/</loc>
@@ -3739,6 +3913,9 @@
     <loc>https://icons.getbootstrap.com/icons/watch/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/water/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/whatsapp/</loc>
   </url>
   <url>
@@ -3752,6 +3929,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/wifi-off/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/wind/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/window/</loc>
