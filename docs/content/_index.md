@@ -9,7 +9,7 @@ Bootstrap Icons are published to npm, but they can also be manually downloaded i
   <div class="col-md-4">
 {{< md >}}
 ### npm
-Install [Bootstrap Icons](https://www.npmjs.com/package/bootstrap-icons)—including SVGs, icon sprite, and icon fonts—with npm. Then, choose who you'd like to include the icons with the [usage instructions](#usage).
+Install [Bootstrap Icons](https://www.npmjs.com/package/bootstrap-icons)—including SVGs, icon sprite, and icon fonts—with npm. Then, choose how you'd like to include the icons with the [usage instructions](#usage).
 
 {{< highlight sh >}}
 npm i bootstrap-icons
