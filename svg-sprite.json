@@ -123,7 +123,7 @@
               "removeViewBox": false
             },
             {
-              "removeXMLNS": false
+              "removeXMLNS": true
             },
             {
               "removeXMLProcInst": true
