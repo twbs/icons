@@ -57,7 +57,7 @@
     "purgecss": "^4.0.2",
     "stylelint": "^13.11.0",
     "stylelint-config-twbs-bootstrap": "^2.1.0",
-    "svgo": "^1.3.2",
+    "svgo": "^2.2.0",
     "vnu-jar": "21.2.5"
   },
   "engines": {
