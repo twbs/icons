@@ -1,15 +1,17 @@
+const codepoints = require('./font/bootstrap-icons.json');
+
 module.exports = {
   inputDir: './icons', // (required)
   outputDir: './font', // (required)
   fontTypes: ['woff2', 'woff'],
   assetTypes: ['css', 'json', 'html'],
   name: 'bootstrap-icons',
+  codepoints: codepoints,
   prefix: 'bi',
   selector: '.bi',
   fontsUrl: './fonts',
   formatOptions: {
     json: {
-      // render the JSON human readable with two spaces indentation (default is none, so minified)
       indent: 2
     }
   },
