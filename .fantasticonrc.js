@@ -1,3 +1,5 @@
+const codepoints = require("./font/bootstrap-icons.json");
+
 module.exports = {
   inputDir: './icons', // (required)
   outputDir: './font', // (required)
@@ -26,5 +28,6 @@ module.exports = {
     woff: './font/fonts/bootstrap-icons.woff',
     woff2: './font/fonts/bootstrap-icons.woff2',
     eot: './font/fonts/bootstrap-icons.eot'
-  }
+  },
+  codepoints: codepoints
 };
