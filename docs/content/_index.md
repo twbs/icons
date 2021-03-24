@@ -61,6 +61,8 @@ Embed your icons within the HTML of your page (as opposed to an external image f
 {{< md >}}
 ### Sprite
 Use the SVG sprite to insert any icon through the `<use>` element. Use the icon's filename as the fragment identifier (e.g., `toggles` is `#toggles`). SVG sprites allow you to reference an external file similar to an `<img>` element, but with the power of `currentColor` for easy theming.
+
+**Heads up!** There's an issue with Chrome where [`<use>` doesn't work across domains](https://bugs.chromium.org/p/chromium/issues/detail?id=470601).
 {{< /md >}}
   </div>
   <div class="col-md-8">
