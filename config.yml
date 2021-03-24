@@ -38,8 +38,6 @@ module:
       target:           static/apple-touch-icon.png
     - source:           docs/static/assets/img/favicons/favicon.ico
       target:           static/favicon.ico
-    - source:           bootstrap-icons.svg
-      target:           static/bootstrap-icons.svg
     - source:           icons
       target:           static/assets/icons
     - source:           font

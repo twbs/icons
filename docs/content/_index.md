@@ -69,7 +69,13 @@ Use the SVG sprite to insert any icon through the `<use>` element. Use the icon'
 {{< /md >}}
   </div>
   <div class="col-md-8">
-{{< example >}}
+
+<div class="bd-example" style="font-size: 32px;">
+  <i class="bi bi-heart-fill"></i>
+  <i class="bi bi-toggles"></i>
+  <i class="bi bi-shop"></i>
+</div>
+{{< highlight html >}}
 <svg class="bi" width="32" height="32" fill="currentColor">
   <use xlink:href="bootstrap-icons.svg#heart-fill"/>
 </svg>
@@ -79,7 +85,7 @@ Use the SVG sprite to insert any icon through the `<use>` element. Use the icon'
 <svg class="bi" width="32" height="32" fill="currentColor">
   <use xlink:href="bootstrap-icons.svg#shop"/>
 </svg>
-{{< /example >}}
+{{< /highlight >}}
   </div>
 </div>
 
@@ -173,14 +179,7 @@ For purely decorative icons, add `aria-hidden="true"`. Otherwise, provide an app
 {{< /highlight >}}
     <div class="bd-example">
       <i class="bi-github" role="img" style="font-size: 2em" aria-label="GitHub"></i>
-    </div>
-{{< highlight html >}}
-<i class="bi-github" role="img" aria-label="GitHub"></i>
-{{< /highlight >}}
-    <div class="bd-example">
-      <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="Tools">
-        <use xlink:href="bootstrap-icons.svg#tools"/>
-      </svg>
+      <i class="bi-tools" role="img" style="font-size: 2em" aria-label="Tools"></i>
     </div>
 {{< highlight html >}}
 <svg class="bi" ... role="img" aria-label="Tools">
