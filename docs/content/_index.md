@@ -171,13 +171,16 @@ If the icons are not purely decorative, make sure you provide an appropriate tex
 {{< /highlight >}}
     <div class="bd-example">
       <i class="bi-github" role="img" style="font-size: 2em" aria-label="GitHub"></i>
+    </div>
+{{< highlight html >}}
+<i class="bi-github" role="img" aria-label="GitHub"></i>
+{{< /highlight >}}
+    <div class="bd-example">
       <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="Tools">
         <use xlink:href="bootstrap-icons.svg#tools"/>
       </svg>
     </div>
 {{< highlight html >}}
-<!-- role="img" and aria-label="..." -->
-<i class="bi-github" role="img" aria-label="GitHub"></i>
 <svg class="bi" ... role="img" aria-label="Tools">
   <use xlink:href="bootstrap-icons.svg#tools"/>
 </svg>
