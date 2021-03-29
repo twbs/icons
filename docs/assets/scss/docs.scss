@@ -143,6 +143,14 @@
   background-size: 1rem 1rem;
 }
 
+.icon-demo,
+.icon-demo-examples {
+  .bi {
+    width: 1em;
+    height: 1em;
+  }
+}
+
 // stylelint-disable declaration-no-important
 .py-6 {
   padding-top: 4.5rem !important;
