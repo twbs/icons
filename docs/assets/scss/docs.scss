@@ -7,6 +7,11 @@
 @import "syntax";
 @import "ads";
 
+.bi {
+  display: inline-block;
+  vertical-align: -.125em;
+}
+
 .hero-notice {
   background-color: $teal-100;
 
@@ -101,11 +106,6 @@
   }
   // stylelint-enable  declaration-no-important
 
-  .bi {
-    display: inline-block;
-    vertical-align: -.125em;
-  }
-
   &:empty::before {
     display: block;
     width: 100%;
@@ -135,12 +135,6 @@
       max-width: 12.5%;
     }
   }
-}
-
-.icon-examples .bi {
-  width: 1em;
-  height: 1em;
-  vertical-align: -.125em;
 }
 
 .icon-demo {
