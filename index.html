@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bootstrap Icons · Official open source SVG icon library for Bootstrap</title>
 <meta name="description" content="Official open source SVG icon library for Bootstrap">
-<meta name="generator" content="Hugo 0.80.0">
+<meta name="generator" content="Hugo 0.82.0">
 
 <link rel="canonical" href="https://icons.getbootstrap.com/">
 
@@ -147,7 +147,7 @@
         <hr class="mx-auto mx-lg-0 my-5">
 
         <p class="text-muted">
-          Currently v1.4.0
+          Currently <a href="https://github.com/twbs/icons/releases/tag/v1.4.0">v1.4.0</a>
           <span class="px-1">&#8226;</span>
           <a href="#icons">Icons</a>
           <span class="px-1">&#8226;</span>
@@ -13437,7 +13437,7 @@
 <div class="row my-4">
   <div class="col-md-4">
 <h3 id="npm">npm</h3>
-<p>Install <a href="https://www.npmjs.com/package/bootstrap-icons">Bootstrap Icons</a>—including SVGs, icon sprite, and icon fonts—with npm. Then, choose who you&rsquo;d like to include the icons with the <a href="#usage">usage instructions</a>.</p>
+<p>Install <a href="https://www.npmjs.com/package/bootstrap-icons">Bootstrap Icons</a>—including SVGs, icon sprite, and icon fonts—with npm. Then, choose how you&rsquo;d like to include the icons with the <a href="#usage">usage instructions</a>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm i bootstrap-icons</code></pre></div>
 
   </div>
@@ -13463,13 +13463,15 @@
 <p>Embed your icons within the HTML of your page (as opposed to an external image file). Here we&rsquo;ve used a custom <code>width</code> and <code>height</code>.
   </div>
   <div class="col-md-8">
-    <div class="bd-example"><svg class="bi bi-chevron-right" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z"/></svg></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-chevron-right&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 20 20&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span><span class="p">&gt;&lt;</span><span class="nt">path</span> <span class="na">fill-rule</span><span class="o">=</span><span class="s">&#34;evenodd&#34;</span> <span class="na">d</span><span class="o">=</span><span class="s">&#34;M6.646 3.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L12.293 10 6.646 4.354a.5.5 0 010-.708z&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
+    <div class="bd-example"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-chevron-right&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 16 16&#34;</span><span class="p">&gt;&lt;</span><span class="nt">path</span> <span class="na">fill-rule</span><span class="o">=</span><span class="s">&#34;evenodd&#34;</span> <span class="na">d</span><span class="o">=</span><span class="s">&#34;M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
   </div>
 </div>
 <div class="row my-4">
   <div class="col-md-4">
 <h3 id="sprite">Sprite</h3>
-<p>Use the SVG sprite to insert any icon through the <code>&lt;use&gt;</code> element. Use the icon&rsquo;s filename as the fragment identifier (e.g., <code>toggles</code> is <code>#toggles</code>). SVG sprites allow you to reference an external file similar to an <code>&lt;img&gt;</code> element, but with the power of <code>currentColor</code> for easy theming.
+<p>Use the SVG sprite to insert any icon through the <code>&lt;use&gt;</code> element. Use the icon&rsquo;s filename as the fragment identifier (e.g., <code>toggles</code> is <code>#toggles</code>). SVG sprites allow you to reference an external file similar to an <code>&lt;img&gt;</code> element, but with the power of <code>currentColor</code> for easy theming.</p>
+<p><strong>Heads up!</strong> There&rsquo;s an issue with Chrome where <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=470601"><code>&lt;use&gt;</code> doesn&rsquo;t work across domains</a>.</p>
+
   </div>
   <div class="col-md-8">
 <div class="bd-example">
@@ -13563,13 +13565,14 @@
 <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/img/bootstrap.svg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Bootstrap&#34;</span> <span class="err">...</span><span class="p">&gt;</span></code></pre></div>
     <div class="bd-example">
       <i class="bi-github" role="img" style="font-size: 2em" aria-label="GitHub"></i>
+    </div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-github&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;GitHub&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span></code></pre></div>
+    <div class="bd-example">
       <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="Tools">
         <use xlink:href="bootstrap-icons.svg#tools"/>
       </svg>
     </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- role=&#34;img&#34; and aria-label=&#34;...&#34; --&gt;</span>
-<span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-github&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;GitHub&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi&#34;</span> <span class="err">...</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Tools&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi&#34;</span> <span class="err">...</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Tools&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;bootstrap-icons.svg#tools&#34;</span><span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
     <div class="bd-example">
@@ -13614,7 +13617,7 @@
       <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
       <li><a href="https://getbootstrap.com/docs/5.0/about/overview/">About</a></li>
     </ul>
-    <p>Currently v1.4.0. Icons and documentation licensed <a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank" rel="license noopener">MIT</a>.</p>
+    <p>Currently <a href="https://github.com/twbs/icons/releases/tag/v1.4.0">v1.4.0</a>. Icons and documentation licensed <a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank" rel="license noopener">MIT</a>.</p>
   </div>
 </footer>
 <script src="/assets/js/bootstrap.min.js" async></script>
