@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?231ce25e89ab5804f9a6c427b8d325c9") format("woff2"),
-url("./fonts/bootstrap-icons.woff?231ce25e89ab5804f9a6c427b8d325c9") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d") format("woff2"),
+url("./fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d") format("woff");
 }
 
 [class^="bi-"]::before,
@@ -1343,3 +1343,48 @@ url("./fonts/bootstrap-icons.woff?231ce25e89ab5804f9a6c427b8d325c9") format("wof
 .bi-youtube::before { content: "\f62b"; }
 .bi-zoom-in::before { content: "\f62c"; }
 .bi-zoom-out::before { content: "\f62d"; }
+.bi-bank::before { content: "\f62e"; }
+.bi-bank2::before { content: "\f62f"; }
+.bi-bell-slash-fill::before { content: "\f630"; }
+.bi-bell-slash::before { content: "\f631"; }
+.bi-cash-coin::before { content: "\f632"; }
+.bi-check-lg::before { content: "\f633"; }
+.bi-coin::before { content: "\f634"; }
+.bi-currency-bitcoin::before { content: "\f635"; }
+.bi-currency-dollar::before { content: "\f636"; }
+.bi-currency-euro::before { content: "\f637"; }
+.bi-currency-exchange::before { content: "\f638"; }
+.bi-currency-pound::before { content: "\f639"; }
+.bi-currency-yen::before { content: "\f63a"; }
+.bi-dash-lg::before { content: "\f63b"; }
+.bi-exclamation-lg::before { content: "\f63c"; }
+.bi-file-earmark-pdf-fill::before { content: "\f63d"; }
+.bi-file-earmark-pdf::before { content: "\f63e"; }
+.bi-file-pdf-fill::before { content: "\f63f"; }
+.bi-file-pdf::before { content: "\f640"; }
+.bi-gender-ambiguous::before { content: "\f641"; }
+.bi-gender-female::before { content: "\f642"; }
+.bi-gender-male::before { content: "\f643"; }
+.bi-gender-trans::before { content: "\f644"; }
+.bi-headset-vr::before { content: "\f645"; }
+.bi-info-lg::before { content: "\f646"; }
+.bi-mastodon::before { content: "\f647"; }
+.bi-messenger::before { content: "\f648"; }
+.bi-piggy-bank-fill::before { content: "\f649"; }
+.bi-piggy-bank::before { content: "\f64a"; }
+.bi-pin-map-fill::before { content: "\f64b"; }
+.bi-pin-map::before { content: "\f64c"; }
+.bi-plus-lg::before { content: "\f64d"; }
+.bi-question-lg::before { content: "\f64e"; }
+.bi-recycle::before { content: "\f64f"; }
+.bi-reddit::before { content: "\f650"; }
+.bi-safe-fill::before { content: "\f651"; }
+.bi-safe2-fill::before { content: "\f652"; }
+.bi-safe2::before { content: "\f653"; }
+.bi-sd-card-fill::before { content: "\f654"; }
+.bi-sd-card::before { content: "\f655"; }
+.bi-skype::before { content: "\f656"; }
+.bi-slash-lg::before { content: "\f657"; }
+.bi-translate::before { content: "\f658"; }
+.bi-x-lg::before { content: "\f659"; }
+.bi-safe::before { content: "\f65a"; }
