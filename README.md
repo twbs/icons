@@ -30,7 +30,7 @@ Bootstrap Icons are packaged up and published to npm. We only include the proces
 npm i bootstrap-icons
 ```
 
-[Also available in Figma.](https://www.figma.com/file/YjjMzXhECL1MIb6Qlm7VJO/Bootstrap-Icons-v1.4.1)
+[Also available in Figma.](https://www.figma.com/community/file/972989644486753519/Bootstrap-Icons-v1.5.0)
 
 ## Usage
 
