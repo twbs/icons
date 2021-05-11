@@ -195,7 +195,8 @@ If the icons are not purely decorative, make sure you provide an appropriate tex
 <button ... aria-label="Mute">
   <svg class="bi bi-volume-mute-fill" ...>
   ...
-</svg>
+  </svg>
+</button>
 {{< /highlight >}}
   </div>
 </div>
