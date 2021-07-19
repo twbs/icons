@@ -1,0 +1,26 @@
+// stylelint-disable
+@font-face {
+  font-family: bootstrap-icons;
+  // The hash needs to be manually updated...
+  src: url("../../font/fonts/bootstrap-icons.woff2?231ce25e89ab5804f9a6c427b8d325c9") format("woff2"),
+       url("../../font/fonts/bootstrap-icons.woff?231ce25e89ab5804f9a6c427b8d325c9") format("woff");
+  font-display: block;
+}
+
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: text-bottom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-alarm::before { content: "\f102"; }
+.bi-github::before { content: "\f3ed"; }
+// stylelint-enable
