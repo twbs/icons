@@ -17,8 +17,8 @@ const svgAttributes = {
   width: '16',
   height: '16',
   fill: 'currentColor',
-  class: '',
-  viewBox: '0 0 16 16'
+  viewBox: '0 0 16 16',
+  class: ''
 }
 
 async function processFile(file, config) {
