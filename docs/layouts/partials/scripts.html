@@ -2,8 +2,28 @@
 {{- if .IsHome }}
 <script src="/assets/js/list.min.js"></script>
 <script>
-  new List('icons-body', {
+  var searchInput = document.querySelector('#icons-body input#search')
+  var filter = new URLSearchParams(window.location.search).get('filter')
+  var iconList = new List('icons-body', {
     valueNames: ['name', { data: ['tags', 'categories'] }]
+  })
+
+  if (filter !== null) {
+    searchInput.value = filter
+    iconList.search(filter)
+  }
+
+  iconList.on('searchComplete', function() {
+    var searchTerm = searchInput.value
+    var newUrl = new URL(location)
+
+    if (searchTerm.length > 0) {
+      newUrl.searchParams.set('filter', searchTerm)
+    } else {
+      newUrl.searchParams.delete('filter')
+    }
+
+    history.replaceState(null, null, newUrl)
   });
 </script>
 {{- end }}
