@@ -25,7 +25,7 @@
     "icons": "npm-run-all icons-main --aggregate-output --parallel icons-sprite icons-font",
     "icons-main": "node build/build-svgs.js",
     "icons-zip": "cross-env-shell \"rm -rf bootstrap-icons-$npm_package_version && cp -r icons/ bootstrap-icons-$npm_package_version && cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && cp -r font/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && rm -rf bootstrap-icons-$npm_package_version\"",
-    "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest . --symbol-sprite bootstrap-icons.svg icons/*.svg",
+    "icons-sprite": "svg-sprite --config svg-sprite.json icons/*.svg",
     "icons-font": "fantasticon",
     "publish": "npm-run-all icons docs-build icons-zip",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-purge docs-build",
