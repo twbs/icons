@@ -1,6 +1,8 @@
 ---
 title: Skype
 categories:
-  - Social
+  - Brand
 tags:
+  - social
+  - microsoft
 ---

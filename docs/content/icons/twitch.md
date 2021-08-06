@@ -1,6 +1,7 @@
 ---
 title: Twitch
 categories:
-  - Social
+  - Brand
 tags:
+  - social
 ---
