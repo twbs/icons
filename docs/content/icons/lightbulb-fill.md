@@ -4,4 +4,5 @@ categories:
   - Real world
 tags:
   - lights
+  - lamp
 ---

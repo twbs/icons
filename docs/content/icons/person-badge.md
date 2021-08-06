@@ -10,4 +10,5 @@ tags:
   - badge
   - id
   - card
+  - account
 ---

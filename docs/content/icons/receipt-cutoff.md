@@ -8,4 +8,5 @@ tags:
   - invoice
   - sale
   - purchase
+  - bill
 ---
