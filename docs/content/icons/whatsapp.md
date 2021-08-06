@@ -1,7 +1,9 @@
 ---
 title: Whatsapp
 categories:
-  - Social
+  - Brand
 tags:
-  - whatsapp
+  - social
+  - facebook
+  - chat
 ---

@@ -1,6 +1,7 @@
 ---
 title: Reddit
 categories:
-  - Social
+  - Brand
 tags:
+  - social
 ---

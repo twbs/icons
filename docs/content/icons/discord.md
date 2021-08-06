@@ -1,6 +1,8 @@
 ---
 title: Discord
 categories:
-  - Social
+  - Brand
 tags:
+  - social
+  - chat
 ---
