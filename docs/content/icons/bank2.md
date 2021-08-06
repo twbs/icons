@@ -7,4 +7,5 @@ tags:
   - finance
   - banking
   - market
+  - temple
 ---

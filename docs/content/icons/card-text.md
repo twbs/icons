@@ -6,4 +6,5 @@ tags:
   - note
   - card
   - notecard
+  - letter
 ---
