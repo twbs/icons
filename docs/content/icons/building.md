@@ -6,4 +6,6 @@ tags:
   - company
   - enterprise
   - organization
+  - office
+  - business
 ---

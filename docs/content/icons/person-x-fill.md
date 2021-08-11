@@ -9,4 +9,5 @@ tags:
   - user
   - remove
   - delete
+  - account
 ---

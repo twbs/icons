@@ -6,4 +6,5 @@ categories:
 tags:
   - cardboard
   - package
+  - cube
 ---

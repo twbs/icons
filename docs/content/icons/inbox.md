@@ -5,4 +5,5 @@ categories:
 tags:
   - mail
   - email
+  - letter tray
 ---
