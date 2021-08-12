@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?a9bbec7c4276dcaeb4d0d81c0c868951") format("woff2"),
-url("./fonts/bootstrap-icons.woff?a9bbec7c4276dcaeb4d0d81c0c868951") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?b6822f18695bcd664e09c867995a543c") format("woff2"),
+url("./fonts/bootstrap-icons.woff?b6822f18695bcd664e09c867995a543c") format("woff");
 }
 
 [class^="bi-"]::before,
@@ -1391,3 +1391,15 @@ url("./fonts/bootstrap-icons.woff?a9bbec7c4276dcaeb4d0d81c0c868951") format("wof
 .bi-apple::before { content: "\f65b"; }
 .bi-microsoft::before { content: "\f65d"; }
 .bi-windows::before { content: "\f65e"; }
+.bi-behance::before { content: "\f65c"; }
+.bi-dribbble::before { content: "\f65f"; }
+.bi-line::before { content: "\f660"; }
+.bi-medium::before { content: "\f661"; }
+.bi-paypal::before { content: "\f662"; }
+.bi-pinterest::before { content: "\f663"; }
+.bi-signal::before { content: "\f664"; }
+.bi-snapchat::before { content: "\f665"; }
+.bi-spotify::before { content: "\f666"; }
+.bi-stack-overflow::before { content: "\f667"; }
+.bi-strava::before { content: "\f668"; }
+.bi-wordpress::before { content: "\f669"; }

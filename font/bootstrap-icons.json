@@ -1371,5 +1371,17 @@
   "safe": 63066,
   "apple": 63067,
   "microsoft": 63069,
-  "windows": 63070
+  "windows": 63070,
+  "behance": 63068,
+  "dribbble": 63071,
+  "line": 63072,
+  "medium": 63073,
+  "paypal": 63074,
+  "pinterest": 63075,
+  "signal": 63076,
+  "snapchat": 63077,
+  "spotify": 63078,
+  "stack-overflow": 63079,
+  "strava": 63080,
+  "wordpress": 63081
 }

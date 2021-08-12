@@ -1,0 +1,5 @@
+---
+title: Signal
+categories:
+tags:
+---
