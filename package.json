@@ -16,6 +16,7 @@
     "bootstrap",
     "icons"
   ],
+  "style": "./font/bootstrap-icons.css",
   "scripts": {
     "start": "npm run docs-serve",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
