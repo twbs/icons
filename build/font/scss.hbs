@@ -1,5 +1,5 @@
-${{ name }}-font: "{{ name }}";
-${{ name }}-font-src: {{{ fontSrc }}};
+${{ name }}-font: "{{ name }}" !default;
+${{ name }}-font-src: {{{ fontSrc }}} !default;
 
 @font-face {
     font-family: ${{ name }}-font;
