@@ -1,4 +1,3 @@
-<script src="/assets/js/bootstrap.min.js" async></script>
 {{- if .IsHome }}
 <script src="/assets/js/list.min.js"></script>
 <script>
@@ -15,4 +14,4 @@
 {{- if eq hugo.Environment "production" -}}
   {{- $docsJs = $docsJs | resources.Minify -}}
 {{- end }}
-<script src="{{ $docsJs.Permalink | relURL }}" async></script>
+<script async src="{{ $docsJs.Permalink | relURL }}"></script>
