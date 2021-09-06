@@ -10,7 +10,7 @@ env:
   NODE: 14.x
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     if: github.repository == 'twbs/icons'
 
