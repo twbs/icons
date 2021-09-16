@@ -1,39 +1,29 @@
 'use strict'
 
-const { extendDefaultPlugins } = require('svgo')
-
 module.exports = {
   multipass: true,
   js2svg: {
     pretty: true,
     indent: 2
   },
-  plugins: extendDefaultPlugins([
-    {
-      name: 'cleanupListOfValues'
-    },
-    {
-      name: 'removeAttrs',
-      params: {
-        attrs: [
-          'data-name',
-          'fill',
-          'clip-rule'
-        ]
+  plugins: [{
+    name: 'preset-default',
+    params: {
+      overrides: {
+        cleanupListOfValues: true,
+        removeAttrs: {
+          attrs: [
+            'data-name',
+            'fill',
+            'clip-rule'
+          ]
+        },
+        removeUnknownsAndDefaults: {
+          keepRoleAttr: true
+        },
+        removeViewBox: false,
+        sortAttrs: true
       }
-    },
-    {
-      name: 'removeUnknownsAndDefaults',
-      params: {
-        keepRoleAttr: true
-      }
-    },
-    {
-      name: 'removeViewBox',
-      active: false
-    },
-    {
-      name: 'sortAttrs'
     }
-  ])
+  }]
 }
