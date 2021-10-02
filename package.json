@@ -54,7 +54,7 @@
     "postcss-cli": "^9.0.1",
     "purgecss": "^4.0.3",
     "stylelint": "^13.13.1",
-    "stylelint-config-twbs-bootstrap": "^2.2.3",
+    "stylelint-config-twbs-bootstrap": "^2.2.4",
     "svg-sprite": "^1.5.3",
     "svgo": "^2.7.0",
     "vnu-jar": "21.9.2"
