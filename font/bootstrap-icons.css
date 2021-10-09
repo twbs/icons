@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?08010997d90ae93356d746b56abb8ea3") format("woff2"),
-url("./fonts/bootstrap-icons.woff?08010997d90ae93356d746b56abb8ea3") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?d1eeb185a92f9d716f37b46b97e2d5df") format("woff2"),
+url("./fonts/bootstrap-icons.woff?d1eeb185a92f9d716f37b46b97e2d5df") format("woff");
 }
 
 [class^="bi-"]::before,
@@ -1404,3 +1404,23 @@ url("./fonts/bootstrap-icons.woff?08010997d90ae93356d746b56abb8ea3") format("wof
 .bi-strava::before { content: "\f668"; }
 .bi-wordpress::before { content: "\f669"; }
 .bi-vimeo::before { content: "\f66a"; }
+.bi-activity::before { content: "\f66b"; }
+.bi-easel2-fill::before { content: "\f66c"; }
+.bi-easel2::before { content: "\f66d"; }
+.bi-easel3-fill::before { content: "\f66e"; }
+.bi-easel3::before { content: "\f66f"; }
+.bi-fan::before { content: "\f670"; }
+.bi-fingerprint::before { content: "\f671"; }
+.bi-graph-down-arrow::before { content: "\f672"; }
+.bi-graph-up-arrow::before { content: "\f673"; }
+.bi-hypnotize::before { content: "\f674"; }
+.bi-magic::before { content: "\f675"; }
+.bi-person-rolodex::before { content: "\f676"; }
+.bi-person-video::before { content: "\f677"; }
+.bi-person-video2::before { content: "\f678"; }
+.bi-person-video3::before { content: "\f679"; }
+.bi-person-workspace::before { content: "\f67a"; }
+.bi-radioactive::before { content: "\f67b"; }
+.bi-webcam-fill::before { content: "\f67c"; }
+.bi-webcam::before { content: "\f67d"; }
+.bi-yin-yang::before { content: "\f67e"; }
