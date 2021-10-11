@@ -106,9 +106,9 @@
           </div>
         </div>
         <div class="col-lg-4 mb-4">
-          <h2 class="fs-3">Download</h2>
-          <p>Download the SVG to use or edit.</p>
-          <a href="{{ $svgPath }}" class="btn btn-bd-primary mb-4" download>Download SVG</a>
+          <!-- <h2 class="fs-3">Download</h2> -->
+          <!-- <p>Download the SVG to use or edit.</p> -->
+          <a href="{{ $svgPath }}" class="btn btn-bd-primary d-block fs-5 mb-4" download>Download SVG</a>
 
           <h2 class="fs-3">Icon font</h2>
           <p>Using the web font? Copy, paste, and go.</p>
@@ -144,6 +144,13 @@
           <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
 
           {{ highlight $svgHtml "html" "" }}
+
+          <h2 class="fs-3">Copy as CSS</h2>
+          <p>Embed a base64-encoded SVG in your CSS.</p>
+
+          {{ $iconBase64 := $svgHtml | base64Encode }}
+          {{ $iconBase64Snippet := printf `background-image: url("data:image/svg+xml;base64, %s");` $iconBase64 -}}
+          {{- highlight $iconBase64Snippet "html" "" }}
         </div>
       </div>
     </main>

@@ -61,6 +61,12 @@
   fill: currentcolor;
 }
 
+.btn-bd-primary {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: .5rem;
+}
+
 .hero-notice {
   color: var(--bs-info-text);
   background-color: var(--bs-info-bg-subtle);
