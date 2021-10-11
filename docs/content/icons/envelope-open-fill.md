@@ -6,4 +6,5 @@ tags:
   - email
   - message
   - mail
+  - letter
 ---

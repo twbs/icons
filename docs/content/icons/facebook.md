@@ -1,6 +1,7 @@
 ---
 title: Facebook
 categories:
-  - Social
+  - Brand
 tags:
+  - social
 ---

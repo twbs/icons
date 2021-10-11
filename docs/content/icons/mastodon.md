@@ -1,6 +1,7 @@
 ---
 title: Mastodon
 categories:
-  - Social
+  - Brand
 tags:
+  - social
 ---
