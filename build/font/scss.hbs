@@ -6,8 +6,9 @@ ${{ name }}-font-src: {{{ fontSrc }}} !default;
   src: ${{ name }}-font-src;
 }
 
-[class^="bi-"]::before,
-[class*=" bi-"]::before {
+.{{prefix}}::before,
+[class^="{{prefix}}-"]::before,
+[class*=" .{{prefix}}-"]::before {
   display: inline-block;
   font-family: ${{ name }}-font !important;
   font-style: normal;
