@@ -1,0 +1,21 @@
+{
+  "name": "twbs/bootstrap-icons",
+  "description": "Official open source SVG icon library for Bootstrap",
+  "keywords": [
+    "bootstrap",
+    "icons",
+    "svg",
+    "icon font"
+  ],
+  "homepage": "https://icons.getbootstrap.com/",
+  "authors": [
+    {
+      "name": "Mark Otto",
+      "email": "markdotto@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/twbs/icons/issues"
+  },
+  "license": "MIT"
+}

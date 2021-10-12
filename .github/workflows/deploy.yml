@@ -7,10 +7,10 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 14.x
+  NODE: 16
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     if: github.repository == 'twbs/icons'
 
