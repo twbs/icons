@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bootstrap Icons · Official open source SVG icon library for Bootstrap</title>
 <meta name="description" content="Official open source SVG icon library for Bootstrap">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.88.1">
 
 <link rel="canonical" href="https://icons.getbootstrap.com/">
 
@@ -45,7 +45,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -72,10 +71,10 @@
           <a class="nav-link p-2" href="https://getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
+          <a class="nav-link p-2" href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://getbootstrap.com/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
+          <a class="nav-link p-2" href="https://getbootstrap.com/docs/5.1/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2 active" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');">Icons</a>
@@ -117,7 +116,7 @@
         </li>
       </ul>
 
-      <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="https://github.com/twbs/icons/archive/v1.5.0.zip">Download</a>
+      <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ms-md-3" href="https://github.com/twbs/icons/archive/v1.6.0.zip">Download</a>
     </div>
   </nav>
 </header>
@@ -133,13 +132,13 @@
       </div>
       <div class="col-lg-7">
         <a class="d-block d-sm-inline-block py-1 px-3 mb-4 text-dark text-decoration-none rounded-3 hero-notice" href="https://blog.getbootstrap.com/2021/02/22/bootstrap-icons-1-4-0/">
-          <strong>New in v1.4.0:</strong> 60+ weather icons!
+          <strong>New in v1.6.0:</strong> 30+ new icons!
         </a>
         <h1 class="f0">Bootstrap Icons</h1>
         <p class="mb-4 f3 font-weight-normal">Free, high quality, open source icon library with over 1,300 icons. Include them anyway you like—SVGs, SVG sprite, or web fonts. Use them with or without <a href="https://getbootstrap.com/">Bootstrap</a> in any project.</p>
 
         <div class="fs-5 d-inline-block mb-3">
-          <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm i bootstrap-icons</code></pre></div>
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npm i bootstrap-icons</code></pre></div>
         </div>
 
         <script async src="https://cdn.carbonads.com/carbon.js?serve=CE7D4277&placement=iconsgetbootstrapcom" id="_carbonads_js"></script>
@@ -148,7 +147,7 @@
         <hr class="mx-auto mx-lg-0 my-5">
 
         <p class="text-muted">
-          Currently <a href="https://github.com/twbs/icons/releases/tag/v1.5.0">v1.5.0</a>
+          Currently <a href="https://github.com/twbs/icons/releases/tag/v1.6.0">v1.6.0</a>
           <span class="px-1">&#8226;</span>
           <a href="#icons">Icons</a>
           <span class="px-1">&#8226;</span>
@@ -179,7 +178,17 @@
   </div>
   <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
     
-      <li class="col mb-4" data-tags="alarm clock" data-categories="devices">
+      <li class="col mb-4" data-tags="pulse heartbeat rhythm" data-categories="data">
+        <a class="d-block text-dark text-decoration-none" href="/icons/activity/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#activity"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">activity</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="alarm clock time" data-categories="devices">
         <a class="d-block text-dark text-decoration-none" href="/icons/alarm/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -189,7 +198,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">alarm</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="alarm clock" data-categories="devices">
+      <li class="col mb-4" data-tags="alarm clock time" data-categories="devices">
         <a class="d-block text-dark text-decoration-none" href="/icons/alarm-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -287,6 +296,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">app-indicator</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="aapl mac macintosh" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/apple/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#apple"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">apple</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="box delete" data-categories="files and folders">
@@ -1389,7 +1408,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bag-x-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="money finance banking market" data-categories="commerce">
+      <li class="col mb-4" data-tags="money finance banking market temple" data-categories="commerce">
         <a class="d-block text-dark text-decoration-none" href="/icons/bank/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -1399,7 +1418,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bank</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="money finance banking market" data-categories="commerce">
+      <li class="col mb-4" data-tags="money finance banking market temple" data-categories="commerce">
         <a class="d-block text-dark text-decoration-none" href="/icons/bank2/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -1559,7 +1578,17 @@
           <div class="name text-muted text-decoration-none text-center pt-1">battery-half</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="notification" data-categories="communications">
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/behance/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#behance"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">behance</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="notification clock" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/bell/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -1569,7 +1598,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bell</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="notification" data-categories="communications">
+      <li class="col mb-4" data-tags="notification clock" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/bell-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -1579,7 +1608,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bell-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="notification silenced" data-categories="communications">
+      <li class="col mb-4" data-tags="notification silenced clock" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/bell-slash/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -1589,7 +1618,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bell-slash</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="notification silenced" data-categories="communications">
+      <li class="col mb-4" data-tags="notification silenced clock" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/bell-slash-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -1629,7 +1658,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bicycle</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="distance view" data-categories="real world">
+      <li class="col mb-4" data-tags="distance view search" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/binoculars/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -1639,7 +1668,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">binoculars</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="distance view" data-categories="real world">
+      <li class="col mb-4" data-tags="distance view search" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/binoculars-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2039,7 +2068,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bounding-box-circles</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="cardboard package" data-categories="real world">
+      <li class="col mb-4" data-tags="cardboard package cube" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/box/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2069,7 +2098,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">box-arrow-down-right</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="arrow" data-categories="box arrows">
+      <li class="col mb-4" data-tags="arrow download save" data-categories="box arrows">
         <a class="d-block text-dark text-decoration-none" href="/icons/box-arrow-down/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2079,7 +2108,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">box-arrow-down</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="arrow" data-categories="box arrows">
+      <li class="col mb-4" data-tags="arrow upload" data-categories="box arrows">
         <a class="d-block text-dark text-decoration-none" href="/icons/box-arrow-in-down/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2189,7 +2218,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">box-arrow-up</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="arrow" data-categories="box arrows">
+      <li class="col mb-4" data-tags="arrow external link" data-categories="box arrows">
         <a class="d-block text-dark text-decoration-none" href="/icons/box-arrow-up-left/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2199,7 +2228,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">box-arrow-up-left</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="arrow" data-categories="box arrows">
+      <li class="col mb-4" data-tags="arrow external link" data-categories="box arrows">
         <a class="d-block text-dark text-decoration-none" href="/icons/box-arrow-up-right/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2229,7 +2258,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">braces</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="wall" data-categories="real world">
+      <li class="col mb-4" data-tags="wall firewall" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/bricks/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2239,7 +2268,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bricks</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="business" data-categories="real world">
+      <li class="col mb-4" data-tags="business bag baggage" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/briefcase/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2249,7 +2278,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">briefcase</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="business" data-categories="real world">
+      <li class="col mb-4" data-tags="business bag baggage" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/briefcase-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2279,7 +2308,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">brightness-alt-high-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="brightness" data-categories="ui and keyboard">
+      <li class="col mb-4" data-tags="brightness sun weather" data-categories="ui and keyboard">
         <a class="d-block text-dark text-decoration-none" href="/icons/brightness-alt-low/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2289,7 +2318,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">brightness-alt-low</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="brightness" data-categories="ui and keyboard">
+      <li class="col mb-4" data-tags="brightness sun weather" data-categories="ui and keyboard">
         <a class="d-block text-dark text-decoration-none" href="/icons/brightness-alt-low-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2319,7 +2348,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">brightness-high-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="brightness" data-categories="ui and keyboard">
+      <li class="col mb-4" data-tags="brightness sun weather" data-categories="ui and keyboard">
         <a class="d-block text-dark text-decoration-none" href="/icons/brightness-low/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2329,7 +2358,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">brightness-low</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="brightness" data-categories="ui and keyboard">
+      <li class="col mb-4" data-tags="brightness sun weather" data-categories="ui and keyboard">
         <a class="d-block text-dark text-decoration-none" href="/icons/brightness-low-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -2419,7 +2448,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">bug-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="company enterprise organization" data-categories="people">
+      <li class="col mb-4" data-tags="company enterprise organization office business" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/building/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -3169,7 +3198,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">card-list</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="note card notecard" data-categories="files and folders">
+      <li class="col mb-4" data-tags="note card notecard letter" data-categories="files and folders">
         <a class="d-block text-dark text-decoration-none" href="/icons/card-text/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -4349,7 +4378,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">cloud-check-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="arrow" data-categories="clouds">
+      <li class="col mb-4" data-tags="arrow save" data-categories="clouds">
         <a class="d-block text-dark text-decoration-none" href="/icons/cloud-download/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -4359,7 +4388,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">cloud-download</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="arrow" data-categories="clouds">
+      <li class="col mb-4" data-tags="arrow save" data-categories="clouds">
         <a class="d-block text-dark text-decoration-none" href="/icons/cloud-download-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -4579,7 +4608,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">cloud-moon-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="add new" data-categories="clouds">
+      <li class="col mb-4" data-tags="add new upload" data-categories="clouds">
         <a class="d-block text-dark text-decoration-none" href="/icons/cloud-plus/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -4589,7 +4618,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">cloud-plus</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="add new" data-categories="clouds">
+      <li class="col mb-4" data-tags="add new upload" data-categories="clouds">
         <a class="d-block text-dark text-decoration-none" href="/icons/cloud-plus-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -5439,7 +5468,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">disc-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social chat" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/discord/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -5539,7 +5568,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">dot</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="arrow network" data-categories="miscellaneous">
+      <li class="col mb-4" data-tags="arrow network save" data-categories="miscellaneous">
         <a class="d-block text-dark text-decoration-none" href="/icons/download/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -5547,6 +5576,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">download</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/dribbble/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#dribbble"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">dribbble</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="water-drop paint ink liquid" data-categories="graphics">
@@ -5607,6 +5646,46 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">easel-fill</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="paint draw art present" data-categories="graphics">
+        <a class="d-block text-dark text-decoration-none" href="/icons/easel2/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#easel2"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">easel2</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="paint draw art present" data-categories="graphics">
+        <a class="d-block text-dark text-decoration-none" href="/icons/easel2-fill/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#easel2-fill"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">easel2-fill</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="paint draw art present" data-categories="graphics">
+        <a class="d-block text-dark text-decoration-none" href="/icons/easel3/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#easel3"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">easel3</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="paint draw art present" data-categories="graphics">
+        <a class="d-block text-dark text-decoration-none" href="/icons/easel3-fill/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#easel3-fill"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">easel3-fill</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="food" data-categories="real world">
@@ -5879,7 +5958,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">emoji-wink-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="email message mail" data-categories="communications">
+      <li class="col mb-4" data-tags="email message mail letter" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/envelope/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -5889,7 +5968,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">envelope</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="email message mail" data-categories="communications">
+      <li class="col mb-4" data-tags="email message mail letter" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/envelope-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -5899,7 +5978,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">envelope-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="email message mail" data-categories="communications">
+      <li class="col mb-4" data-tags="email message mail letter" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/envelope-open/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -5909,7 +5988,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">envelope-open</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="email message mail" data-categories="communications">
+      <li class="col mb-4" data-tags="email message mail letter" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/envelope-open-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -6129,7 +6208,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">eyeglasses</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/facebook/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -6137,6 +6216,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">facebook</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="fan vent airflow" data-categories="real world">
+        <a class="d-block text-dark text-decoration-none" href="/icons/fan/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#fan"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">fan</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="doc document" data-categories="files and folders">
@@ -7339,7 +7428,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">file-spreadsheet-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="doc document" data-categories="files and folders">
+      <li class="col mb-4" data-tags="doc document letter" data-categories="files and folders">
         <a class="d-block text-dark text-decoration-none" href="/icons/file-text/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -7349,7 +7438,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">file-text</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="doc document" data-categories="files and folders">
+      <li class="col mb-4" data-tags="doc document letter" data-categories="files and folders">
         <a class="d-block text-dark text-decoration-none" href="/icons/file-text-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -7517,6 +7606,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">filter-square-fill</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="touch ID secure biometric" data-categories="security">
+        <a class="d-block text-dark text-decoration-none" href="/icons/fingerprint/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#fingerprint"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">fingerprint</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="report" data-categories="communications">
@@ -7899,7 +7998,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">gift-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social microsoft" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/github/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -7929,7 +8028,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">globe2</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social search" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/google/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -7950,6 +8049,16 @@
         </a>
       </li>
       <li class="col mb-4" data-tags="chart graph analytics" data-categories="data">
+        <a class="d-block text-dark text-decoration-none" href="/icons/graph-down-arrow/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#graph-down-arrow"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">graph-down-arrow</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="chart graph analytics" data-categories="data">
         <a class="d-block text-dark text-decoration-none" href="/icons/graph-up/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -7957,6 +8066,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">graph-up</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="chart graph analytics" data-categories="data">
+        <a class="d-block text-dark text-decoration-none" href="/icons/graph-up-arrow/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#graph-up-arrow"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">graph-up-arrow</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="grid layout" data-categories="layout">
@@ -8399,7 +8518,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">hexagon-half</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="time history wait sand" data-categories="real world">
+      <li class="col mb-4" data-tags="time history wait sand clock" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/hourglass/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8409,7 +8528,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">hourglass</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="time history wait sand" data-categories="real world">
+      <li class="col mb-4" data-tags="time history wait sand clock" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/hourglass-bottom/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8419,7 +8538,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">hourglass-bottom</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="time history wait sand" data-categories="real world">
+      <li class="col mb-4" data-tags="time history wait sand clock" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/hourglass-split/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8429,7 +8548,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">hourglass-split</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="time history wait sand" data-categories="real world">
+      <li class="col mb-4" data-tags="time history wait sand clock" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/hourglass-top/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8499,6 +8618,16 @@
           <div class="name text-muted text-decoration-none text-center pt-1">hurricane</div>
         </a>
       </li>
+      <li class="col mb-4" data-tags="hypnosis sleepy" data-categories="real world">
+        <a class="d-block text-dark text-decoration-none" href="/icons/hypnotize/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#hypnotize"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">hypnotize</div>
+        </a>
+      </li>
       <li class="col mb-4" data-tags="picture photo" data-categories="files and folders">
         <a class="d-block text-dark text-decoration-none" href="/icons/image/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
@@ -8539,7 +8668,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">images</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="mail email" data-categories="communications">
+      <li class="col mb-4" data-tags="mail email letter tray" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/inbox/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8549,7 +8678,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">inbox</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="mail email" data-categories="communications">
+      <li class="col mb-4" data-tags="mail email letter tray" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/inbox-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8559,7 +8688,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">inbox-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="mail email" data-categories="communications">
+      <li class="col mb-4" data-tags="mail email letter tray" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/inboxes-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8569,7 +8698,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">inboxes-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="mail email" data-categories="communications">
+      <li class="col mb-4" data-tags="mail email letter tray" data-categories="communications">
         <a class="d-block text-dark text-decoration-none" href="/icons/inboxes/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -8659,7 +8788,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">input-cursor-text</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social chat" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/instagram/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9149,7 +9278,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">life-preserver</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="lights" data-categories="real world">
+      <li class="col mb-4" data-tags="lights lamp" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/lightbulb/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9159,7 +9288,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">lightbulb</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="lights" data-categories="real world">
+      <li class="col mb-4" data-tags="lights lamp" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/lightbulb-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9169,7 +9298,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">lightbulb-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="lights" data-categories="real world">
+      <li class="col mb-4" data-tags="lights lamp" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/lightbulb-off/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9179,7 +9308,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">lightbulb-off</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="lights" data-categories="real world">
+      <li class="col mb-4" data-tags="lights lamp" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/lightbulb-off-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9229,6 +9358,16 @@
           <div class="name text-muted text-decoration-none text-center pt-1">lightning-fill</div>
         </a>
       </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/line/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#line"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">line</div>
+        </a>
+      </li>
       <li class="col mb-4" data-tags="anchor hyperlink href" data-categories="ui and keyboard">
         <a class="d-block text-dark text-decoration-none" href="/icons/link/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
@@ -9249,7 +9388,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">link-45deg</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social microsoft" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/linkedin/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9349,7 +9488,17 @@
           <div class="name text-muted text-decoration-none text-center pt-1">lock-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="post postal" data-categories="real world">
+      <li class="col mb-4" data-tags="magic stick" data-categories="real world">
+        <a class="d-block text-dark text-decoration-none" href="/icons/magic/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#magic"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">magic</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="post postal postbox letterbox" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/mailbox/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9359,7 +9508,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">mailbox</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="post postal" data-categories="real world">
+      <li class="col mb-4" data-tags="post postal postbox letterbox" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/mailbox2/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9419,7 +9568,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">mask</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/mastodon/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9427,6 +9576,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">mastodon</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/medium/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#medium"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">medium</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="loudspeaker announcement" data-categories="real world">
@@ -9529,7 +9688,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">menu-up</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social facebook chat" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/messenger/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9577,6 +9736,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">mic-mute-fill</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="msft windows" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/microsoft/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#microsoft"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">microsoft</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="mining cart" data-categories="real world">
@@ -9809,7 +9978,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">node-plus-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="nut bolt hex tools" data-categories="tools">
+      <li class="col mb-4" data-tags="nut bolt hexagon tools" data-categories="tools">
         <a class="d-block text-dark text-decoration-none" href="/icons/nut/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -9819,7 +9988,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">nut</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="nut bolt hex tools" data-categories="tools">
+      <li class="col mb-4" data-tags="nut bolt hexagon tools" data-categories="tools">
         <a class="d-block text-dark text-decoration-none" href="/icons/nut-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10099,6 +10268,16 @@
           <div class="name text-muted text-decoration-none text-center pt-1">pause-fill</div>
         </a>
       </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/paypal/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#paypal"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">paypal</div>
+        </a>
+      </li>
       <li class="col mb-4" data-tags="peace love" data-categories="miscellaneous">
         <a class="d-block text-dark text-decoration-none" href="/icons/peace/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
@@ -10209,7 +10388,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">people</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="humans organization avatar user" data-categories="people">
+      <li class="col mb-4" data-tags="humans organization avatar user account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-circle/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10239,7 +10418,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">percent</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10249,7 +10428,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user badge id card" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user badge id card account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-badge/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10259,7 +10438,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-badge</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user badge id card" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user badge id card account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-badge-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10269,7 +10448,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-badge-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user crop" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user crop account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-bounding-box/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10279,7 +10458,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-bounding-box</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user verified" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user verified account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-check/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10289,7 +10468,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-check</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user verified" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user verified account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-check-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10299,7 +10478,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-check-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user remove delete" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user remove delete account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-dash/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10309,7 +10488,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-dash</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user remove delete" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user remove delete account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-dash-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10319,7 +10498,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-dash-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10329,7 +10508,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user contact list" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user contact list account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-lines-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10339,7 +10518,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-lines-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user new add" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user new add account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-plus/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10349,7 +10528,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-plus</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user new add" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user new add account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-plus-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10359,7 +10538,17 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-plus-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user account contact" data-categories="people">
+        <a class="d-block text-dark text-decoration-none" href="/icons/person-rolodex/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#person-rolodex"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">person-rolodex</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="human individual avatar user account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-square/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10369,7 +10558,47 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-square</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user remove delete" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user wfh" data-categories="people">
+        <a class="d-block text-dark text-decoration-none" href="/icons/person-video/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#person-video"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">person-video</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="human individual avatar user wfh" data-categories="people">
+        <a class="d-block text-dark text-decoration-none" href="/icons/person-video2/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#person-video2"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">person-video2</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="human individual avatar user wfh" data-categories="people">
+        <a class="d-block text-dark text-decoration-none" href="/icons/person-video3/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#person-video3"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">person-video3</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="human individual avatar user wfh" data-categories="people">
+        <a class="d-block text-dark text-decoration-none" href="/icons/person-workspace/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#person-workspace"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">person-workspace</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="human individual avatar user remove delete account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-x/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10379,7 +10608,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">person-x</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="human individual avatar user remove delete" data-categories="people">
+      <li class="col mb-4" data-tags="human individual avatar user remove delete account" data-categories="people">
         <a class="d-block text-dark text-decoration-none" href="/icons/person-x-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10547,6 +10776,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">pin-map-fill</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/pinterest/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#pinterest"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">pinterest</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="picture tv television display nested" data-categories="media">
@@ -10879,6 +11118,16 @@
           <div class="name text-muted text-decoration-none text-center pt-1">question-square-fill</div>
         </a>
       </li>
+      <li class="col mb-4" data-tags="radiation nuclear danger" data-categories="real world">
+        <a class="d-block text-dark text-decoration-none" href="/icons/radioactive/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#radioactive"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">radioactive</div>
+        </a>
+      </li>
       <li class="col mb-4" data-tags="colors arches" data-categories="weather">
         <a class="d-block text-dark text-decoration-none" href="/icons/rainbow/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
@@ -10889,7 +11138,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">rainbow</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="receipt invoice sale purchase" data-categories="commerce">
+      <li class="col mb-4" data-tags="receipt invoice sale purchase bill" data-categories="commerce">
         <a class="d-block text-dark text-decoration-none" href="/icons/receipt/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -10899,7 +11148,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">receipt</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="receipt invoice sale purchase" data-categories="commerce">
+      <li class="col mb-4" data-tags="receipt invoice sale purchase bill" data-categories="commerce">
         <a class="d-block text-dark text-decoration-none" href="/icons/receipt-cutoff/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -11049,7 +11298,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">recycle</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/reddit/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -11519,6 +11768,16 @@
           <div class="name text-muted text-decoration-none text-center pt-1">shuffle</div>
         </a>
       </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/signal/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#signal"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">signal</div>
+        </a>
+      </li>
       <li class="col mb-4" data-tags="milestone sign road sign street sign directions" data-categories="real world">
         <a class="d-block text-dark text-decoration-none" href="/icons/signpost/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
@@ -11839,7 +12098,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">skip-start-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social microsoft" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/skype/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -11849,7 +12108,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">skype</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/slack/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -11927,6 +12186,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">smartwatch</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/snapchat/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#snapchat"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">snapchat</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="blizzard flurries" data-categories="weather">
@@ -12139,6 +12408,16 @@
           <div class="name text-muted text-decoration-none text-center pt-1">spellcheck</div>
         </a>
       </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/spotify/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#spotify"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">spotify</div>
+        </a>
+      </li>
       <li class="col mb-4" data-tags="shape rectangle" data-categories="shapes">
         <a class="d-block text-dark text-decoration-none" href="/icons/square/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
@@ -12177,6 +12456,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">stack</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/stack-overflow/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#stack-overflow"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">stack-overflow</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="shape like favorite" data-categories="shapes">
@@ -12339,7 +12628,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">stoplights-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="time timer" data-categories="devices">
+      <li class="col mb-4" data-tags="time timer clock" data-categories="devices">
         <a class="d-block text-dark text-decoration-none" href="/icons/stopwatch/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -12349,7 +12638,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">stopwatch</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="time timer" data-categories="devices">
+      <li class="col mb-4" data-tags="time timer clock" data-categories="devices">
         <a class="d-block text-dark text-decoration-none" href="/icons/stopwatch-fill/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -12357,6 +12646,16 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">stopwatch-fill</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/strava/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#strava"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">strava</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="graphics vector merge layers" data-categories="graphics">
@@ -12629,7 +12928,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">tags-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="telegram" data-categories="social">
+      <li class="col mb-4" data-tags="social chat" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/telegram/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -12969,7 +13268,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">three-dots-vertical</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="toggle switch" data-categories="controls">
+      <li class="col mb-4" data-tags="toggle switch checkbox" data-categories="controls">
         <a class="d-block text-dark text-decoration-none" href="/icons/toggle-off/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -12979,7 +13278,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">toggle-off</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="toggle switch" data-categories="controls">
+      <li class="col mb-4" data-tags="toggle switch checkbox" data-categories="controls">
         <a class="d-block text-dark text-decoration-none" href="/icons/toggle-on/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -12989,7 +13288,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">toggle-on</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="toggle switch" data-categories="controls">
+      <li class="col mb-4" data-tags="toggle switch checkbox" data-categories="controls">
         <a class="d-block text-dark text-decoration-none" href="/icons/toggle2-off/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -12999,7 +13298,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">toggle2-off</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="toggle switch" data-categories="controls">
+      <li class="col mb-4" data-tags="toggle switch checkbox" data-categories="controls">
         <a class="d-block text-dark text-decoration-none" href="/icons/toggle2-on/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -13009,7 +13308,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">toggle2-on</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="toggle switch" data-categories="controls">
+      <li class="col mb-4" data-tags="toggle switch checkbox" data-categories="controls">
         <a class="d-block text-dark text-decoration-none" href="/icons/toggles/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -13019,7 +13318,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">toggles</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="toggle switch" data-categories="controls">
+      <li class="col mb-4" data-tags="toggle switch checkbox" data-categories="controls">
         <a class="d-block text-dark text-decoration-none" href="/icons/toggles2/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -13229,7 +13528,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">tv-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/twitch/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -13239,7 +13538,7 @@
           <div class="name text-muted text-decoration-none text-center pt-1">twitch</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="social chat" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/twitter/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -13479,6 +13778,16 @@
           <div class="name text-muted text-decoration-none text-center pt-1">view-stacked</div>
         </a>
       </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/vimeo/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#vimeo"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">vimeo</div>
+        </a>
+      </li>
       <li class="col mb-4" data-tags="audio music record">
         <a class="d-block text-dark text-decoration-none" href="/icons/vinyl/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
@@ -13649,7 +13958,27 @@
           <div class="name text-muted text-decoration-none text-center pt-1">water</div>
         </a>
       </li>
-      <li class="col mb-4" data-tags="whatsapp" data-categories="social">
+      <li class="col mb-4" data-tags="camera video" data-categories="devices">
+        <a class="d-block text-dark text-decoration-none" href="/icons/webcam/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#webcam"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">webcam</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="camera video" data-categories="devices">
+        <a class="d-block text-dark text-decoration-none" href="/icons/webcam-fill/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#webcam-fill"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">webcam-fill</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social facebook chat" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/whatsapp/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -13737,6 +14066,26 @@
             </svg>
           </div>
           <div class="name text-muted text-decoration-none text-center pt-1">window-sidebar</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="microsoft msft windows" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/windows/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#windows"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">windows</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social" data-categories="brand">
+        <a class="d-block text-dark text-decoration-none" href="/icons/wordpress/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#wordpress"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">wordpress</div>
         </a>
       </li>
       <li class="col mb-4" data-tags="tool" data-categories="tools">
@@ -13849,7 +14198,17 @@
           <div class="name text-muted text-decoration-none text-center pt-1">x-square-fill</div>
         </a>
       </li>
-      <li class="col mb-4" data-categories="social">
+      <li class="col mb-4" data-tags="peace" data-categories="real world">
+        <a class="d-block text-dark text-decoration-none" href="/icons/yin-yang/">
+          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+            <svg class="bi" width="1em" height="1em" fill="currentColor">
+              <use xlink:href="bootstrap-icons.svg#yin-yang"/>
+            </svg>
+          </div>
+          <div class="name text-muted text-decoration-none text-center pt-1">yin-yang</div>
+        </a>
+      </li>
+      <li class="col mb-4" data-tags="social video google" data-categories="brand">
         <a class="d-block text-dark text-decoration-none" href="/icons/youtube/">
           <div class="p-3 py-4 mb-2 bg-light text-center rounded">
             <svg class="bi" width="1em" height="1em" fill="currentColor">
@@ -13889,7 +14248,7 @@
   <div class="col-md-4">
 <h3 id="npm">npm</h3>
 <p>Install <a href="https://www.npmjs.com/package/bootstrap-icons">Bootstrap Icons</a>—including SVGs, icon sprite, and icon fonts—with npm. Then, choose how you&rsquo;d like to include the icons with the <a href="#usage">usage instructions</a>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm i bootstrap-icons</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npm i bootstrap-icons</code></pre></div>
 
   </div>
   <div class="col-md-4">
@@ -13901,8 +14260,8 @@
   <div class="col-md-4">
 <h3 id="cdn">CDN</h3>
 <p>Include the icon fonts stylesheet—in your website <code>&lt;head&gt;</code> or via <code>@import</code> in CSS—from our CDN and get started in seconds. <a href="#icon-font">See icon font docs</a> for examples.</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css&#34;</span><span class="p">&gt;</span></code></pre></div>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css&#34;</span><span class="o">)</span><span class="p">;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css&#34;</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&#34;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css&#34;</span><span class="o">)</span><span class="p">;</span></code></pre></div>
 
   </div>
 </div>
@@ -13914,7 +14273,7 @@
 <p>Embed your icons within the HTML of your page (as opposed to an external image file). Here we&rsquo;ve used a custom <code>width</code> and <code>height</code>.
   </div>
   <div class="col-md-8">
-    <div class="bd-example"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-chevron-right&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 16 16&#34;</span><span class="p">&gt;&lt;</span><span class="nt">path</span> <span class="na">fill-rule</span><span class="o">=</span><span class="s">&#34;evenodd&#34;</span> <span class="na">d</span><span class="o">=</span><span class="s">&#34;M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
+    <div class="bd-example"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-chevron-right&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 16 16&#34;</span><span class="p">&gt;&lt;</span><span class="nt">path</span> <span class="na">fill-rule</span><span class="o">=</span><span class="s">&#34;evenodd&#34;</span> <span class="na">d</span><span class="o">=</span><span class="s">&#34;M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
   </div>
 </div>
 <div class="row my-4">
@@ -13935,7 +14294,7 @@
 <svg class="bi" width="32" height="32" fill="currentColor">
   <use xlink:href="bootstrap-icons.svg#shop"/>
 </svg>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;bootstrap-icons.svg#heart-fill&#34;</span><span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span><span class="p">&gt;</span>
@@ -13952,7 +14311,7 @@
 <p>Copy the Bootstrap Icons SVGs to your directory of choice and reference them like normal images with the <code>&lt;img&gt;</code> element.
   </div>
   <div class="col-md-8">
-    <div class="bd-example"><img src="/assets/img/bootstrap.svg" alt="Bootstrap" width="32" height="32"></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/img/bootstrap.svg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Bootstrap&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span><span class="p">&gt;</span></code></pre></div>
+    <div class="bd-example"><img src="/assets/img/bootstrap.svg" alt="Bootstrap" width="32" height="32"></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/img/bootstrap.svg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Bootstrap&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span><span class="p">&gt;</span></code></pre></div>
   </div>
 </div>
 <div class="row my-4">
@@ -13963,8 +14322,8 @@
 
   </div>
   <div class="col-md-8">
-    <div class="bd-example"><i class="bi-alarm"></i></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-alarm&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span></code></pre></div>
-    <div class="bd-example"><i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-alarm&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: 2rem; color: cornflowerblue;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span></code></pre></div>
+    <div class="bd-example"><i class="bi-alarm"></i></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-alarm&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span></code></pre></div>
+    <div class="bd-example"><i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-alarm&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: 2rem; color: cornflowerblue;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span></code></pre></div>
   </div>
 </div>
 <div class="row">
@@ -13975,8 +14334,8 @@
 
   </div>
   <div class="col-md-8">
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">bi</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="o">-</span><span class="kc">block</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">bi</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
   <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
   <span class="k">vertical-align</span><span class="p">:</span> <span class="mf">-.125</span><span class="kt">em</span><span class="p">;</span>
   <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&#34;data:image/svg+xml,&lt;svg viewBox=&#39;0 0 16 16&#39; fill=&#39;%23333&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;&gt;&lt;path fill-rule=&#39;evenodd&#39; d=&#39;M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z&#39; clip-rule=&#39;evenodd&#39;/&gt;&lt;/svg&gt;&#34;</span><span class="p">);</span>
@@ -13992,13 +14351,12 @@
   </div>
   <div class="col-md-8">
     <div class="bd-example">
-      <svg class="bi bi-alert-triangle text-success" width="32" height="32" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M9.938 4.016a.146.146 0 00-.054.057L3.027 15.74a.176.176 0 00-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 00.066-.017.163.163 0 00.055-.06.176.176 0 00-.003-.183L10.12 4.073a.146.146 0 00-.054-.057.13.13 0 00-.063-.016.13.13 0 00-.064.016zm1.043-.45a1.13 1.13 0 00-1.96 0L2.166 15.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L10.982 3.566z"/>
-        <rect width="2" height="2" x="9.002" y="13" rx="1"/>
-        <path d="M9.1 7.995a.905.905 0 111.8 0l-.35 3.507a.553.553 0 01-1.1 0L9.1 7.995z"/>
+      <svg class="bi bi-exclamation-triangle text-success" width="32" height="32" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+        <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
       </svg>
     </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-alert-triangle text-success&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 20 20&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-exclamation-triangle text-success&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;32&#34;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&#34;currentColor&#34;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&#34;0 0 16 16&#34;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
   </div>
@@ -14012,18 +14370,18 @@
     <div class="bd-example">
       <img src="/assets/img/bootstrap.svg" alt="Bootstrap" width="32" height="32">
     </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- alt=&#34;...&#34; on &lt;img&gt; element --&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- alt=&#34;...&#34; on &lt;img&gt; element --&gt;</span>
 <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/assets/img/bootstrap.svg&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Bootstrap&#34;</span> <span class="err">...</span><span class="p">&gt;</span></code></pre></div>
     <div class="bd-example">
       <i class="bi-github" role="img" style="font-size: 2em" aria-label="GitHub"></i>
     </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-github&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;GitHub&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi-github&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;GitHub&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span></code></pre></div>
     <div class="bd-example">
       <svg class="bi" width="32" height="32" fill="currentColor" role="img" aria-label="Tools">
         <use xlink:href="bootstrap-icons.svg#tools"/>
       </svg>
     </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi&#34;</span> <span class="err">...</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Tools&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi&#34;</span> <span class="err">...</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Tools&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;bootstrap-icons.svg#tools&#34;</span><span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
     <div class="bd-example">
@@ -14031,11 +14389,12 @@
         <svg class="bi bi-volume-mute-fill" width="32" height="32" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.717 3.55A.5.5 0 017 4v8a.5.5 0 01-.812.39L3.825 10.5H1.5A.5.5 0 011 10V6a.5.5 0 01.5-.5h2.325l2.363-1.89a.5.5 0 01.529-.06zm7.137 2.096a.5.5 0 010 .708L12.207 8l1.647 1.646a.5.5 0 01-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 01-.708-.708L10.793 8 9.146 6.354a.5.5 0 11.708-.708L11.5 7.293l1.646-1.647a.5.5 0 01.708 0z"></path></svg>
       </button>
     </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- aria-label=&#34;...&#34; on the control --&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- aria-label=&#34;...&#34; on the control --&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="err">...</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Mute&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi bi-volume-mute-fill&#34;</span> <span class="err">...</span><span class="p">&gt;</span>
   ...
-<span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span></code></pre></div>
+  <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
   </div>
 </div>
 <div class="row my-4">
@@ -14066,9 +14425,9 @@
     <ul class="bd-footer-links">
       <li><a href="https://github.com/twbs">GitHub</a></li>
       <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-      <li><a href="https://getbootstrap.com/docs/5.0/about/overview/">About</a></li>
+      <li><a href="https://getbootstrap.com/docs/5.1/about/overview/">About</a></li>
     </ul>
-    <p>Currently <a href="https://github.com/twbs/icons/releases/tag/v1.5.0">v1.5.0</a>. Icons and documentation licensed <a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank" rel="license noopener">MIT</a>.</p>
+    <p>Currently <a href="https://github.com/twbs/icons/releases/tag/v1.6.0">v1.6.0</a>. Icons and documentation licensed <a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank" rel="license noopener">MIT</a>.</p>
   </div>
 </footer>
 <script src="/assets/js/bootstrap.min.js" async></script>

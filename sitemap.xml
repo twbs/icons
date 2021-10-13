@@ -4,6 +4,9 @@
     <loc>https://icons.getbootstrap.com/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/activity/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/alarm/</loc>
   </url>
   <url>
@@ -35,6 +38,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/app-indicator/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/apple/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/archive/</loc>
@@ -416,6 +422,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/battery-half/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/behance/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/bell/</loc>
@@ -1615,6 +1624,9 @@
     <loc>https://icons.getbootstrap.com/icons/download/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/dribbble/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/droplet/</loc>
   </url>
   <url>
@@ -1631,6 +1643,18 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/easel-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/easel2/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/easel2-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/easel3/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/easel3-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/egg/</loc>
@@ -1790,6 +1814,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/facebook/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/fan/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/file/</loc>
@@ -2206,6 +2233,9 @@
     <loc>https://icons.getbootstrap.com/icons/filter-square-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/fingerprint/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/flag/</loc>
   </url>
   <url>
@@ -2335,7 +2365,13 @@
     <loc>https://icons.getbootstrap.com/icons/graph-down/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/graph-down-arrow/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/graph-up/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/graph-up-arrow/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/grid/</loc>
@@ -2498,6 +2534,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/hurricane/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/hypnotize/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/</loc>
@@ -2722,6 +2761,9 @@
     <loc>https://icons.getbootstrap.com/icons/lightning-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/line/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/link/</loc>
   </url>
   <url>
@@ -2758,6 +2800,9 @@
     <loc>https://icons.getbootstrap.com/icons/lock-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/magic/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/mailbox/</loc>
   </url>
   <url>
@@ -2780,6 +2825,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/mastodon/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/medium/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/megaphone/</loc>
@@ -2825,6 +2873,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/mic-mute-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/microsoft/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/minecart/</loc>
@@ -2983,6 +3034,9 @@
     <loc>https://icons.getbootstrap.com/icons/pause-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/paypal/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/peace/</loc>
   </url>
   <url>
@@ -3061,7 +3115,22 @@
     <loc>https://icons.getbootstrap.com/icons/person-plus-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/person-rolodex/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/person-square/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/person-video/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/person-video2/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/person-video3/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/person-workspace/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/person-x/</loc>
@@ -3116,6 +3185,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/pin-map-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/pinterest/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/pip/</loc>
@@ -3215,6 +3287,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/question-square-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/radioactive/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/rainbow/</loc>
@@ -3409,6 +3484,9 @@
     <loc>https://icons.getbootstrap.com/icons/shuffle/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/signal/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/signpost/</loc>
   </url>
   <url>
@@ -3532,6 +3610,9 @@
     <loc>https://icons.getbootstrap.com/icons/smartwatch/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/snapchat/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/snow/</loc>
   </url>
   <url>
@@ -3595,6 +3676,9 @@
     <loc>https://icons.getbootstrap.com/icons/spellcheck/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/spotify/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/square/</loc>
   </url>
   <url>
@@ -3605,6 +3689,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/stack/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/stack-overflow/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/star/</loc>
@@ -3659,6 +3746,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/stopwatch-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/strava/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/subtract/</loc>
@@ -3997,6 +4087,9 @@
     <loc>https://icons.getbootstrap.com/icons/view-stacked/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/vimeo/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/vinyl/</loc>
   </url>
   <url>
@@ -4048,6 +4141,12 @@
     <loc>https://icons.getbootstrap.com/icons/water/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/webcam/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/webcam-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/whatsapp/</loc>
   </url>
   <url>
@@ -4073,6 +4172,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/window-sidebar/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/windows/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/wordpress/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/wrench/</loc>
@@ -4106,6 +4211,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/x-square-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/yin-yang/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/youtube/</loc>
