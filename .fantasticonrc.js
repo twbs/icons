@@ -4,7 +4,7 @@ module.exports = {
   inputDir: './icons', // (required)
   outputDir: './font', // (required)
   fontTypes: ['woff2', 'woff'],
-  assetTypes: ['css', 'json', 'html'],
+  assetTypes: ['css', 'scss', 'json', 'html'],
   name: 'bootstrap-icons',
   codepoints: codepoints,
   prefix: 'bi',
@@ -18,11 +18,13 @@ module.exports = {
   // Use a custom Handlebars template
   templates: {
     css: './build/font/css.hbs',
+    scss: './build/font/scss.hbs',
     html: './build/font/html.hbs'
   },
   pathOptions: {
     json: './font/bootstrap-icons.json',
     css: './font/bootstrap-icons.css',
+    scss: './font/bootstrap-icons.scss',
     html: './font/index.html',
     ttf: './font/fonts/bootstrap-icons.ttf',
     woff: './font/fonts/bootstrap-icons.woff',
