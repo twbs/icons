@@ -1,9 +1,10 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?b7286616e2af3feb04e4346da1233832") format("woff2"),
-url("./fonts/bootstrap-icons.woff?b7286616e2af3feb04e4346da1233832") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?45695e8b569b2b0178db2713ca47065c") format("woff2"),
+url("./fonts/bootstrap-icons.woff?45695e8b569b2b0178db2713ca47065c") format("woff");
 }
 
+.bi::before,
 [class^="bi-"]::before,
 [class*=" bi-"]::before {
   display: inline-block;
