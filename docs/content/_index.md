@@ -42,7 +42,7 @@ Include the icon fonts stylesheet—in your website `<head>` or via `@import` in
 
 ## Usage
 
-Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup.
+Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup. We recommend using a `width: 1em` (and optionally `height: 1em`) for easy resizing via `font-size`.
 
 <div class="row my-4">
   <div class="col-md-4">
