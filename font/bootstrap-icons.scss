@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?acbe46da46b72203f04864f34d06b2b7") format("woff2"),
-url("./fonts/bootstrap-icons.woff?acbe46da46b72203f04864f34d06b2b7") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?175400834cff90d240b70be5919bb5e0") format("woff2"),
+url("./fonts/bootstrap-icons.woff?175400834cff90d240b70be5919bb5e0") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1554,6 +1554,7 @@ $bootstrap-icons-map: (
   "device-hdd": "\f6f9",
   "device-ssd-fill": "\f6fa",
   "device-ssd": "\f6fb",
+  "displayport-fill": "\f6fc",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3087,3 +3088,4 @@ $bootstrap-icons-map: (
 .bi-device-hdd::before { content: map-get($bootstrap-icons-map, "device-hdd"); }
 .bi-device-ssd-fill::before { content: map-get($bootstrap-icons-map, "device-ssd-fill"); }
 .bi-device-ssd::before { content: map-get($bootstrap-icons-map, "device-ssd"); }
+.bi-displayport-fill::before { content: map-get($bootstrap-icons-map, "displayport-fill"); }

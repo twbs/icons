@@ -1529,5 +1529,6 @@
   "device-hdd-fill": 63224,
   "device-hdd": 63225,
   "device-ssd-fill": 63226,
-  "device-ssd": 63227
+  "device-ssd": 63227,
+  "displayport-fill": 63228
 }
