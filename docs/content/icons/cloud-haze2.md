@@ -1,5 +1,5 @@
 ---
-title: Cloud haze 1
+title: Cloud haze2
 categories:
   - Weather
 tags:
