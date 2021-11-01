@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?175400834cff90d240b70be5919bb5e0") format("woff2"),
-url("./fonts/bootstrap-icons.woff?175400834cff90d240b70be5919bb5e0") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?a97b3594ad416896e15824f6787370e0") format("woff2"),
+url("./fonts/bootstrap-icons.woff?a97b3594ad416896e15824f6787370e0") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1555,6 +1555,8 @@ $bootstrap-icons-map: (
   "device-ssd-fill": "\f6fa",
   "device-ssd": "\f6fb",
   "displayport-fill": "\f6fc",
+  "mortarboard-fill": "\f6fd",
+  "mortarboard": "\f6fe",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3089,3 +3091,5 @@ $bootstrap-icons-map: (
 .bi-device-ssd-fill::before { content: map-get($bootstrap-icons-map, "device-ssd-fill"); }
 .bi-device-ssd::before { content: map-get($bootstrap-icons-map, "device-ssd"); }
 .bi-displayport-fill::before { content: map-get($bootstrap-icons-map, "displayport-fill"); }
+.bi-mortarboard-fill::before { content: map-get($bootstrap-icons-map, "mortarboard-fill"); }
+.bi-mortarboard::before { content: map-get($bootstrap-icons-map, "mortarboard"); }
