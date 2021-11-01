@@ -1,6 +1,9 @@
 ---
 title: Messenger
 categories:
-  - Social
+  - Brand
 tags:
+  - social
+  - facebook
+  - chat
 ---

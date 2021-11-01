@@ -7,10 +7,10 @@ on:
 
 env:
   FORCE_COLOR: 2
-  NODE: 14.x
+  NODE: 16
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     if: github.repository == 'twbs/icons'
 
@@ -22,14 +22,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "${{ env.NODE }}"
-
-      - name: Set up npm cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-${{ env.NODE }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
+          cache: npm
 
       - name: Install npm dependencies
         run: npm ci
@@ -40,10 +33,26 @@ jobs:
       - name: Build the docs
         run: npm run docs-build
 
-      - name: Deploy
+      - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           allow_empty_commit: false
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./_site/
+
+  publish:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "${{ env.NODE }}"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Publish on npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

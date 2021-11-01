@@ -5,4 +5,5 @@ categories:
 tags:
   - notification
   - silenced
+  - clock
 ---

@@ -5,4 +5,5 @@ categories:
 tags:
   - doc
   - document
+  - letter
 ---
