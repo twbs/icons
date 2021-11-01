@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?757e8d3807317fad54e5811fd78f18c8") format("woff2"),
-url("./fonts/bootstrap-icons.woff?757e8d3807317fad54e5811fd78f18c8") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?a97b3594ad416896e15824f6787370e0") format("woff2"),
+url("./fonts/bootstrap-icons.woff?a97b3594ad416896e15824f6787370e0") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -23,6 +23,7 @@ url("./fonts/bootstrap-icons.woff?757e8d3807317fad54e5811fd78f18c8") format("wof
 }
 
 $bootstrap-icons-map: (
+  "123": "\f67f",
   "alarm-fill": "\f101",
   "alarm": "\f102",
   "align-bottom": "\f103",
@@ -1429,8 +1430,136 @@ $bootstrap-icons-map: (
   "webcam-fill": "\f67c",
   "webcam": "\f67d",
   "yin-yang": "\f67e",
+  "bandaid-fill": "\f680",
+  "bandaid": "\f681",
+  "bluetooth": "\f682",
+  "body-text": "\f683",
+  "boombox": "\f684",
+  "boxes": "\f685",
+  "dpad-fill": "\f686",
+  "dpad": "\f687",
+  "ear-fill": "\f688",
+  "ear": "\f689",
+  "envelope-check-1": "\f68a",
+  "envelope-check-fill": "\f68b",
+  "envelope-check": "\f68c",
+  "envelope-dash-1": "\f68d",
+  "envelope-dash-fill": "\f68e",
+  "envelope-dash": "\f68f",
+  "envelope-exclamation-1": "\f690",
+  "envelope-exclamation-fill": "\f691",
+  "envelope-exclamation": "\f692",
+  "envelope-plus-fill": "\f693",
+  "envelope-plus": "\f694",
+  "envelope-slash-1": "\f695",
+  "envelope-slash-fill": "\f696",
+  "envelope-slash": "\f697",
+  "envelope-x-1": "\f698",
+  "envelope-x-fill": "\f699",
+  "envelope-x": "\f69a",
+  "explicit-fill": "\f69b",
+  "explicit": "\f69c",
+  "git": "\f69d",
+  "infinity": "\f69e",
+  "list-columns-reverse": "\f69f",
+  "list-columns": "\f6a0",
+  "meta": "\f6a1",
+  "mortorboard-fill": "\f6a2",
+  "mortorboard": "\f6a3",
+  "nintendo-switch": "\f6a4",
+  "pc-display-horizontal": "\f6a5",
+  "pc-display": "\f6a6",
+  "pc-horizontal": "\f6a7",
+  "pc": "\f6a8",
+  "playstation": "\f6a9",
+  "plus-slash-minus": "\f6aa",
+  "projector-fill": "\f6ab",
+  "projector": "\f6ac",
+  "qr-code-scan": "\f6ad",
+  "qr-code": "\f6ae",
+  "quora": "\f6af",
+  "quote": "\f6b0",
+  "robot": "\f6b1",
+  "send-check-fill": "\f6b2",
+  "send-check": "\f6b3",
+  "send-dash-fill": "\f6b4",
+  "send-dash": "\f6b5",
+  "send-exclamation-1": "\f6b6",
+  "send-exclamation-fill": "\f6b7",
+  "send-exclamation": "\f6b8",
+  "send-fill": "\f6b9",
+  "send-plus-fill": "\f6ba",
+  "send-plus": "\f6bb",
+  "send-slash-fill": "\f6bc",
+  "send-slash": "\f6bd",
+  "send-x-fill": "\f6be",
+  "send-x": "\f6bf",
+  "send": "\f6c0",
+  "steam": "\f6c1",
+  "terminal-dash-1": "\f6c2",
+  "terminal-dash": "\f6c3",
+  "terminal-plus": "\f6c4",
+  "terminal-split": "\f6c5",
+  "ticket-detailed-fill": "\f6c6",
+  "ticket-detailed": "\f6c7",
+  "ticket-fill": "\f6c8",
+  "ticket-perferated-fill": "\f6c9",
+  "ticket-perferated": "\f6ca",
+  "ticket": "\f6cb",
+  "tiktok": "\f6cc",
+  "window-dash": "\f6cd",
+  "window-desktop": "\f6ce",
+  "window-fullscreen": "\f6cf",
+  "window-plus": "\f6d0",
+  "window-split": "\f6d1",
+  "window-stack": "\f6d2",
+  "window-x": "\f6d3",
+  "xbox": "\f6d4",
+  "ethernet": "\f6d5",
+  "hdmi-fill": "\f6d6",
+  "hdmi": "\f6d7",
+  "usb-c-fill": "\f6d8",
+  "usb-c": "\f6d9",
+  "usb-fill": "\f6da",
+  "usb-plug-fill": "\f6db",
+  "usb-plug": "\f6dc",
+  "usb-symbol": "\f6dd",
+  "usb": "\f6de",
+  "boombox-fill": "\f6df",
+  "displayport-1": "\f6e0",
+  "displayport": "\f6e1",
+  "gpu-card": "\f6e2",
+  "memory": "\f6e3",
+  "modem-fill": "\f6e4",
+  "modem": "\f6e5",
+  "motherboard-fill": "\f6e6",
+  "motherboard": "\f6e7",
+  "optical-audio-fill": "\f6e8",
+  "optical-audio": "\f6e9",
+  "pci-card": "\f6ea",
+  "router-fill": "\f6eb",
+  "router": "\f6ec",
+  "ssd-fill": "\f6ed",
+  "ssd": "\f6ee",
+  "thunderbolt-fill": "\f6ef",
+  "thunderbolt": "\f6f0",
+  "usb-drive-fill": "\f6f1",
+  "usb-drive": "\f6f2",
+  "usb-micro-fill": "\f6f3",
+  "usb-micro": "\f6f4",
+  "usb-mini-fill": "\f6f5",
+  "usb-mini": "\f6f6",
+  "cloud-haze2": "\f6f7",
+  "device-hdd-fill": "\f6f8",
+  "device-hdd": "\f6f9",
+  "device-ssd-fill": "\f6fa",
+  "device-ssd": "\f6fb",
+  "displayport-fill": "\f6fc",
+  "mortarboard-fill": "\f6fd",
+  "mortarboard": "\f6fe",
 );
 
+.bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
 .bi-alarm-fill::before { content: map-get($bootstrap-icons-map, "alarm-fill"); }
 .bi-alarm::before { content: map-get($bootstrap-icons-map, "alarm"); }
 .bi-align-bottom::before { content: map-get($bootstrap-icons-map, "align-bottom"); }
@@ -2837,3 +2966,130 @@ $bootstrap-icons-map: (
 .bi-webcam-fill::before { content: map-get($bootstrap-icons-map, "webcam-fill"); }
 .bi-webcam::before { content: map-get($bootstrap-icons-map, "webcam"); }
 .bi-yin-yang::before { content: map-get($bootstrap-icons-map, "yin-yang"); }
+.bi-bandaid-fill::before { content: map-get($bootstrap-icons-map, "bandaid-fill"); }
+.bi-bandaid::before { content: map-get($bootstrap-icons-map, "bandaid"); }
+.bi-bluetooth::before { content: map-get($bootstrap-icons-map, "bluetooth"); }
+.bi-body-text::before { content: map-get($bootstrap-icons-map, "body-text"); }
+.bi-boombox::before { content: map-get($bootstrap-icons-map, "boombox"); }
+.bi-boxes::before { content: map-get($bootstrap-icons-map, "boxes"); }
+.bi-dpad-fill::before { content: map-get($bootstrap-icons-map, "dpad-fill"); }
+.bi-dpad::before { content: map-get($bootstrap-icons-map, "dpad"); }
+.bi-ear-fill::before { content: map-get($bootstrap-icons-map, "ear-fill"); }
+.bi-ear::before { content: map-get($bootstrap-icons-map, "ear"); }
+.bi-envelope-check-1::before { content: map-get($bootstrap-icons-map, "envelope-check-1"); }
+.bi-envelope-check-fill::before { content: map-get($bootstrap-icons-map, "envelope-check-fill"); }
+.bi-envelope-check::before { content: map-get($bootstrap-icons-map, "envelope-check"); }
+.bi-envelope-dash-1::before { content: map-get($bootstrap-icons-map, "envelope-dash-1"); }
+.bi-envelope-dash-fill::before { content: map-get($bootstrap-icons-map, "envelope-dash-fill"); }
+.bi-envelope-dash::before { content: map-get($bootstrap-icons-map, "envelope-dash"); }
+.bi-envelope-exclamation-1::before { content: map-get($bootstrap-icons-map, "envelope-exclamation-1"); }
+.bi-envelope-exclamation-fill::before { content: map-get($bootstrap-icons-map, "envelope-exclamation-fill"); }
+.bi-envelope-exclamation::before { content: map-get($bootstrap-icons-map, "envelope-exclamation"); }
+.bi-envelope-plus-fill::before { content: map-get($bootstrap-icons-map, "envelope-plus-fill"); }
+.bi-envelope-plus::before { content: map-get($bootstrap-icons-map, "envelope-plus"); }
+.bi-envelope-slash-1::before { content: map-get($bootstrap-icons-map, "envelope-slash-1"); }
+.bi-envelope-slash-fill::before { content: map-get($bootstrap-icons-map, "envelope-slash-fill"); }
+.bi-envelope-slash::before { content: map-get($bootstrap-icons-map, "envelope-slash"); }
+.bi-envelope-x-1::before { content: map-get($bootstrap-icons-map, "envelope-x-1"); }
+.bi-envelope-x-fill::before { content: map-get($bootstrap-icons-map, "envelope-x-fill"); }
+.bi-envelope-x::before { content: map-get($bootstrap-icons-map, "envelope-x"); }
+.bi-explicit-fill::before { content: map-get($bootstrap-icons-map, "explicit-fill"); }
+.bi-explicit::before { content: map-get($bootstrap-icons-map, "explicit"); }
+.bi-git::before { content: map-get($bootstrap-icons-map, "git"); }
+.bi-infinity::before { content: map-get($bootstrap-icons-map, "infinity"); }
+.bi-list-columns-reverse::before { content: map-get($bootstrap-icons-map, "list-columns-reverse"); }
+.bi-list-columns::before { content: map-get($bootstrap-icons-map, "list-columns"); }
+.bi-meta::before { content: map-get($bootstrap-icons-map, "meta"); }
+.bi-mortorboard-fill::before { content: map-get($bootstrap-icons-map, "mortorboard-fill"); }
+.bi-mortorboard::before { content: map-get($bootstrap-icons-map, "mortorboard"); }
+.bi-nintendo-switch::before { content: map-get($bootstrap-icons-map, "nintendo-switch"); }
+.bi-pc-display-horizontal::before { content: map-get($bootstrap-icons-map, "pc-display-horizontal"); }
+.bi-pc-display::before { content: map-get($bootstrap-icons-map, "pc-display"); }
+.bi-pc-horizontal::before { content: map-get($bootstrap-icons-map, "pc-horizontal"); }
+.bi-pc::before { content: map-get($bootstrap-icons-map, "pc"); }
+.bi-playstation::before { content: map-get($bootstrap-icons-map, "playstation"); }
+.bi-plus-slash-minus::before { content: map-get($bootstrap-icons-map, "plus-slash-minus"); }
+.bi-projector-fill::before { content: map-get($bootstrap-icons-map, "projector-fill"); }
+.bi-projector::before { content: map-get($bootstrap-icons-map, "projector"); }
+.bi-qr-code-scan::before { content: map-get($bootstrap-icons-map, "qr-code-scan"); }
+.bi-qr-code::before { content: map-get($bootstrap-icons-map, "qr-code"); }
+.bi-quora::before { content: map-get($bootstrap-icons-map, "quora"); }
+.bi-quote::before { content: map-get($bootstrap-icons-map, "quote"); }
+.bi-robot::before { content: map-get($bootstrap-icons-map, "robot"); }
+.bi-send-check-fill::before { content: map-get($bootstrap-icons-map, "send-check-fill"); }
+.bi-send-check::before { content: map-get($bootstrap-icons-map, "send-check"); }
+.bi-send-dash-fill::before { content: map-get($bootstrap-icons-map, "send-dash-fill"); }
+.bi-send-dash::before { content: map-get($bootstrap-icons-map, "send-dash"); }
+.bi-send-exclamation-1::before { content: map-get($bootstrap-icons-map, "send-exclamation-1"); }
+.bi-send-exclamation-fill::before { content: map-get($bootstrap-icons-map, "send-exclamation-fill"); }
+.bi-send-exclamation::before { content: map-get($bootstrap-icons-map, "send-exclamation"); }
+.bi-send-fill::before { content: map-get($bootstrap-icons-map, "send-fill"); }
+.bi-send-plus-fill::before { content: map-get($bootstrap-icons-map, "send-plus-fill"); }
+.bi-send-plus::before { content: map-get($bootstrap-icons-map, "send-plus"); }
+.bi-send-slash-fill::before { content: map-get($bootstrap-icons-map, "send-slash-fill"); }
+.bi-send-slash::before { content: map-get($bootstrap-icons-map, "send-slash"); }
+.bi-send-x-fill::before { content: map-get($bootstrap-icons-map, "send-x-fill"); }
+.bi-send-x::before { content: map-get($bootstrap-icons-map, "send-x"); }
+.bi-send::before { content: map-get($bootstrap-icons-map, "send"); }
+.bi-steam::before { content: map-get($bootstrap-icons-map, "steam"); }
+.bi-terminal-dash-1::before { content: map-get($bootstrap-icons-map, "terminal-dash-1"); }
+.bi-terminal-dash::before { content: map-get($bootstrap-icons-map, "terminal-dash"); }
+.bi-terminal-plus::before { content: map-get($bootstrap-icons-map, "terminal-plus"); }
+.bi-terminal-split::before { content: map-get($bootstrap-icons-map, "terminal-split"); }
+.bi-ticket-detailed-fill::before { content: map-get($bootstrap-icons-map, "ticket-detailed-fill"); }
+.bi-ticket-detailed::before { content: map-get($bootstrap-icons-map, "ticket-detailed"); }
+.bi-ticket-fill::before { content: map-get($bootstrap-icons-map, "ticket-fill"); }
+.bi-ticket-perferated-fill::before { content: map-get($bootstrap-icons-map, "ticket-perferated-fill"); }
+.bi-ticket-perferated::before { content: map-get($bootstrap-icons-map, "ticket-perferated"); }
+.bi-ticket::before { content: map-get($bootstrap-icons-map, "ticket"); }
+.bi-tiktok::before { content: map-get($bootstrap-icons-map, "tiktok"); }
+.bi-window-dash::before { content: map-get($bootstrap-icons-map, "window-dash"); }
+.bi-window-desktop::before { content: map-get($bootstrap-icons-map, "window-desktop"); }
+.bi-window-fullscreen::before { content: map-get($bootstrap-icons-map, "window-fullscreen"); }
+.bi-window-plus::before { content: map-get($bootstrap-icons-map, "window-plus"); }
+.bi-window-split::before { content: map-get($bootstrap-icons-map, "window-split"); }
+.bi-window-stack::before { content: map-get($bootstrap-icons-map, "window-stack"); }
+.bi-window-x::before { content: map-get($bootstrap-icons-map, "window-x"); }
+.bi-xbox::before { content: map-get($bootstrap-icons-map, "xbox"); }
+.bi-ethernet::before { content: map-get($bootstrap-icons-map, "ethernet"); }
+.bi-hdmi-fill::before { content: map-get($bootstrap-icons-map, "hdmi-fill"); }
+.bi-hdmi::before { content: map-get($bootstrap-icons-map, "hdmi"); }
+.bi-usb-c-fill::before { content: map-get($bootstrap-icons-map, "usb-c-fill"); }
+.bi-usb-c::before { content: map-get($bootstrap-icons-map, "usb-c"); }
+.bi-usb-fill::before { content: map-get($bootstrap-icons-map, "usb-fill"); }
+.bi-usb-plug-fill::before { content: map-get($bootstrap-icons-map, "usb-plug-fill"); }
+.bi-usb-plug::before { content: map-get($bootstrap-icons-map, "usb-plug"); }
+.bi-usb-symbol::before { content: map-get($bootstrap-icons-map, "usb-symbol"); }
+.bi-usb::before { content: map-get($bootstrap-icons-map, "usb"); }
+.bi-boombox-fill::before { content: map-get($bootstrap-icons-map, "boombox-fill"); }
+.bi-displayport-1::before { content: map-get($bootstrap-icons-map, "displayport-1"); }
+.bi-displayport::before { content: map-get($bootstrap-icons-map, "displayport"); }
+.bi-gpu-card::before { content: map-get($bootstrap-icons-map, "gpu-card"); }
+.bi-memory::before { content: map-get($bootstrap-icons-map, "memory"); }
+.bi-modem-fill::before { content: map-get($bootstrap-icons-map, "modem-fill"); }
+.bi-modem::before { content: map-get($bootstrap-icons-map, "modem"); }
+.bi-motherboard-fill::before { content: map-get($bootstrap-icons-map, "motherboard-fill"); }
+.bi-motherboard::before { content: map-get($bootstrap-icons-map, "motherboard"); }
+.bi-optical-audio-fill::before { content: map-get($bootstrap-icons-map, "optical-audio-fill"); }
+.bi-optical-audio::before { content: map-get($bootstrap-icons-map, "optical-audio"); }
+.bi-pci-card::before { content: map-get($bootstrap-icons-map, "pci-card"); }
+.bi-router-fill::before { content: map-get($bootstrap-icons-map, "router-fill"); }
+.bi-router::before { content: map-get($bootstrap-icons-map, "router"); }
+.bi-ssd-fill::before { content: map-get($bootstrap-icons-map, "ssd-fill"); }
+.bi-ssd::before { content: map-get($bootstrap-icons-map, "ssd"); }
+.bi-thunderbolt-fill::before { content: map-get($bootstrap-icons-map, "thunderbolt-fill"); }
+.bi-thunderbolt::before { content: map-get($bootstrap-icons-map, "thunderbolt"); }
+.bi-usb-drive-fill::before { content: map-get($bootstrap-icons-map, "usb-drive-fill"); }
+.bi-usb-drive::before { content: map-get($bootstrap-icons-map, "usb-drive"); }
+.bi-usb-micro-fill::before { content: map-get($bootstrap-icons-map, "usb-micro-fill"); }
+.bi-usb-micro::before { content: map-get($bootstrap-icons-map, "usb-micro"); }
+.bi-usb-mini-fill::before { content: map-get($bootstrap-icons-map, "usb-mini-fill"); }
+.bi-usb-mini::before { content: map-get($bootstrap-icons-map, "usb-mini"); }
+.bi-cloud-haze2::before { content: map-get($bootstrap-icons-map, "cloud-haze2"); }
+.bi-device-hdd-fill::before { content: map-get($bootstrap-icons-map, "device-hdd-fill"); }
+.bi-device-hdd::before { content: map-get($bootstrap-icons-map, "device-hdd"); }
+.bi-device-ssd-fill::before { content: map-get($bootstrap-icons-map, "device-ssd-fill"); }
+.bi-device-ssd::before { content: map-get($bootstrap-icons-map, "device-ssd"); }
+.bi-displayport-fill::before { content: map-get($bootstrap-icons-map, "displayport-fill"); }
+.bi-mortarboard-fill::before { content: map-get($bootstrap-icons-map, "mortarboard-fill"); }
+.bi-mortarboard::before { content: map-get($bootstrap-icons-map, "mortarboard"); }
