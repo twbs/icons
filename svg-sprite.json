@@ -5,6 +5,10 @@
       "sprite": "bootstrap-icons.svg"
     }
   },
+  "svg": {
+    "namespaceClassnames": false,
+    "xmlDeclaration": false
+  },
   "shape": {
     "transform": [
       {
@@ -135,8 +139,5 @@
         }
       }
     ]
-  },
-  "svg": {
-    "namespaceClassnames": false
   }
 }
