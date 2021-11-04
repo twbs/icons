@@ -46,8 +46,8 @@
     "eslint": "^8.1.0",
     "fantasticon": "^1.2.3",
     "find-unused-sass-variables": "^3.1.0",
-    "hugo-bin": "^0.76.1",
-    "linkinator": "^2.14.4",
+    "hugo-bin": "^0.77.0",
+    "linkinator": "^2.14.5",
     "lockfile-lint": "^4.6.2",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.11",
@@ -56,7 +56,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-twbs-bootstrap": "^2.2.4",
     "svg-sprite": "^1.5.3",
-    "svgo": "^2.7.0",
+    "svgo": "^2.8.0",
     "vnu-jar": "21.10.12"
   },
   "engines": {
