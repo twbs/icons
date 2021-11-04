@@ -18,6 +18,7 @@
   ],
   "scripts": {
     "start": "npm run docs-serve",
+    "css-minify": "cleancss font/bootstrap-icons.css -O1 --format breakWith=lf --with-rebase --output font/bootstrap-icons.min.css",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
     "docs-build": "hugo --cleanDestinationDir",
     "docs-purge": "npm run docs-build && purgecss --css docs/static/assets/css/bootstrap.min.css --content \"_site/**/*.html\" \"_site/assets/js/**/*.js\" --keyframes --output docs/static/assets/css/",
@@ -27,7 +28,6 @@
     "icons-zip": "cross-env-shell \"rm -rf bootstrap-icons-$npm_package_version && cp -r icons/ bootstrap-icons-$npm_package_version && cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && cp -r font/ bootstrap-icons-$npm_package_version && zip -r9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && rm -rf bootstrap-icons-$npm_package_version\"",
     "icons-sprite": "svg-sprite --config svg-sprite.json --log=info icons/*.svg",
     "icons-font": "fantasticon",
-    "css-minify": "cleancss font/bootstrap-icons.css -O1 --format breakWith=lf --with-rebase --output font/bootstrap-icons.min.css",
     "release": "npm-run-all icons docs-build icons-zip",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-purge docs-build",
     "test:fusv": "fusv docs/assets/scss/",
