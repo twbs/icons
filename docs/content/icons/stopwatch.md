@@ -5,4 +5,5 @@ categories:
 tags:
   - time
   - timer
+  - clock
 ---

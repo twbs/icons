@@ -4,4 +4,6 @@ categories:
   - Box arrows
 tags:
   - arrow
+  - download
+  - save
 ---

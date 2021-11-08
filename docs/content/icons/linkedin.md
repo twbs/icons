@@ -1,6 +1,8 @@
 ---
 title: Linkedin
 categories:
-  - Social
+  - Brand
 tags:
+  - social
+  - microsoft
 ---

@@ -5,6 +5,6 @@ categories:
 tags:
   - nut
   - bolt
-  - hex
+  - hexagon
   - tools
 ---
