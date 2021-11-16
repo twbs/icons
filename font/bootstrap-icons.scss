@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?a97b3594ad416896e15824f6787370e0") format("woff2"),
-url("./fonts/bootstrap-icons.woff?a97b3594ad416896e15824f6787370e0") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345") format("woff2"),
+url("./fonts/bootstrap-icons.woff?a74547b2f0863226942ff8ded57db345") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1557,6 +1557,7 @@ $bootstrap-icons-map: (
   "displayport-fill": "\f6fc",
   "mortarboard-fill": "\f6fd",
   "mortarboard": "\f6fe",
+  "terminal-x": "\f6ff",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3093,3 +3094,4 @@ $bootstrap-icons-map: (
 .bi-displayport-fill::before { content: map-get($bootstrap-icons-map, "displayport-fill"); }
 .bi-mortarboard-fill::before { content: map-get($bootstrap-icons-map, "mortarboard-fill"); }
 .bi-mortarboard::before { content: map-get($bootstrap-icons-map, "mortarboard"); }
+.bi-terminal-x::before { content: map-get($bootstrap-icons-map, "terminal-x"); }

@@ -1532,5 +1532,6 @@
   "device-ssd": 63227,
   "displayport-fill": 63228,
   "mortarboard-fill": 63229,
-  "mortarboard": 63230
+  "mortarboard": 63230,
+  "terminal-x": 63231
 }
