@@ -4,7 +4,7 @@
 
 const fs = require('fs').promises
 const path = require('path')
-const chalk = require('chalk')
+const picocolors = require('picocolors')
 const cheerio = require('cheerio')
 const { loadConfig, optimize } = require('svgo')
 
@@ -63,9 +63,9 @@ async function processFile(file, config) {
 (async () => {
   try {
     const basename = path.basename(__filename)
-    const timeLabel = chalk.cyan(`[${basename}] finished`)
+    const timeLabel = picocolors.cyan(`[${basename}] finished`)
 
-    console.log(chalk.cyan(`[${basename}] started`))
+    console.log(picocolors.cyan(`[${basename}] started`))
     console.time(timeLabel)
 
     const files = await fs.readdir(iconsDir)
@@ -75,7 +75,7 @@ async function processFile(file, config) {
 
     const filesLength = files.length
 
-    console.log(chalk.green('\nSuccess, %s icon%s prepared!'), filesLength, filesLength !== 1 ? 's' : '')
+    console.log(picocolors.green('\nSuccess, %s icon%s prepared!'), filesLength, filesLength !== 1 ? 's' : '')
     console.timeEnd(timeLabel)
   } catch (error) {
     console.error(error)
