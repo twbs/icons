@@ -1,5 +1,5 @@
 ---
-title: Ticket perferated
+title: Ticket perforated
 categories:
   - Real World
 tags:
