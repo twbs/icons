@@ -45,7 +45,7 @@
 
     errorElement.classList.remove('d-none')
     errorElement.insertAdjacentHTML('afterbegin', fallbackMsg)
-  });
+  })
 
   var searchInput = document.getElementById('search')
   if (searchInput) {
