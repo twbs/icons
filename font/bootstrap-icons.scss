@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?a74547b2f0863226942ff8ded57db345") format("woff2"),
-url("./fonts/bootstrap-icons.woff?a74547b2f0863226942ff8ded57db345") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?30af91bf14e37666a085fb8a161ff36d") format("woff2"),
+url("./fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1503,8 +1503,8 @@ $bootstrap-icons-map: (
   "ticket-detailed-fill": "\f6c6",
   "ticket-detailed": "\f6c7",
   "ticket-fill": "\f6c8",
-  "ticket-perferated-fill": "\f6c9",
-  "ticket-perferated": "\f6ca",
+  "ticket-perforated-fill": "\f6c9",
+  "ticket-perforated": "\f6ca",
   "ticket": "\f6cb",
   "tiktok": "\f6cc",
   "window-dash": "\f6cd",
@@ -3040,8 +3040,8 @@ $bootstrap-icons-map: (
 .bi-ticket-detailed-fill::before { content: map-get($bootstrap-icons-map, "ticket-detailed-fill"); }
 .bi-ticket-detailed::before { content: map-get($bootstrap-icons-map, "ticket-detailed"); }
 .bi-ticket-fill::before { content: map-get($bootstrap-icons-map, "ticket-fill"); }
-.bi-ticket-perferated-fill::before { content: map-get($bootstrap-icons-map, "ticket-perferated-fill"); }
-.bi-ticket-perferated::before { content: map-get($bootstrap-icons-map, "ticket-perferated"); }
+.bi-ticket-perforated-fill::before { content: map-get($bootstrap-icons-map, "ticket-perforated-fill"); }
+.bi-ticket-perforated::before { content: map-get($bootstrap-icons-map, "ticket-perforated"); }
 .bi-ticket::before { content: map-get($bootstrap-icons-map, "ticket"); }
 .bi-tiktok::before { content: map-get($bootstrap-icons-map, "tiktok"); }
 .bi-window-dash::before { content: map-get($bootstrap-icons-map, "window-dash"); }
