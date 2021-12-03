@@ -50,7 +50,7 @@
   var searchInput = document.getElementById('search')
   if (searchInput) {
     searchInput.addEventListener('keydown', function (event) {
-      if(event.key === 'Enter') {
+      if (event.key === 'Enter') {
         event.preventDefault()
       }
     })
