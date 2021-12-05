@@ -21,8 +21,23 @@
 
           {{ if or .Params.tags .Params.categories -}}
           <ul class="list-unstyled mb-3 mb-md-0">
-            {{ with .Params.tags }}<li><strong>Tags:</strong> {{ delimit . ", " }}</li>{{ end }}
-            {{ with .Params.categories }}<li><strong>Category:</strong> {{ delimit . ", " }}</li>{{ end }}
+            {{ with (.GetTerms "tags") -}}
+              <li>
+                <strong>Tags:</strong>
+                {{ range $index, $taxonomy := . -}}
+                  {{- if gt $index 0 }}, {{ end -}}
+                  <a href="{{ $taxonomy.Permalink }}">{{ $taxonomy.LinkTitle }}</a>
+                {{- end }}
+              </li>
+            {{ end -}}
+            {{ with (.GetTerms "categories") -}}
+              <li>
+                <strong>Category:</strong>
+                {{ range $index, $taxonomy := . -}}
+                  <a href="{{ $taxonomy.Permalink }}">{{ $taxonomy.LinkTitle }}</a>
+                {{- end }}
+              </li>
+            {{- end }}
           </ul>
           {{- end }}
         </div>

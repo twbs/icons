@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
+
+    <main class="my-auto p-5" id="content">
+      <ul>
+        {{ range .Pages -}}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+        {{- end }}
+      </ul>
+    </main>
+
+    {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . "default" }}
+  </body>
+</html>
