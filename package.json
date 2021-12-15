@@ -37,6 +37,8 @@
     "test:vnu": "node build/vnu-jar.js",
     "test": "npm-run-all docs-build --parallel --aggregate-output --continue-on-error test:*"
   },
+  "style": "font/bootstrap-icons.css",
+  "sass": "font/bootstrap-icons.scss",
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "cheerio": "^1.0.0-rc.10",
