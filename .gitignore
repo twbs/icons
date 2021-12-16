@@ -1,4 +1,5 @@
 .DS_Store
+/.hugo_build.lock
 /_site/
 /node_modules/
 /resources/

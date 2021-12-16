@@ -10,4 +10,6 @@ tags:
   - around
   - round
   - rotate
+  - refresh
+  - reload
 ---

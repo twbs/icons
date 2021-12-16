@@ -1,0 +1,32 @@
+${{ name }}-font: "{{ name }}" !default;
+${{ name }}-font-src: {{{ fontSrc }}} !default;
+
+@font-face {
+  font-family: ${{ name }}-font;
+  src: ${{ name }}-font-src;
+}
+
+.{{prefix}}::before,
+[class^="{{prefix}}-"]::before,
+[class*=" {{prefix}}-"]::before {
+  display: inline-block;
+  font-family: ${{ name }}-font !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+${{ name }}-map: (
+{{# each codepoints }}
+  "{{ @key }}": "\\{{ codepoint this }}",
+{{/ each }}
+);
+
+{{# each codepoints }}
+.{{ ../prefix }}-{{ @key }}::before { content: map-get(${{ ../name }}-map, "{{ @key }}"); }
+{{/ each }}
