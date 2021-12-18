@@ -31,7 +31,14 @@
         </div>
       </div>
 
+      {{ if in .Params.tags "deprecated" }}
+        <div class="alert alert-danger my-3" role="alert">
+          <b>Deprecation notice:</b> This icon is deprecated and will be removed in an upcoming version!
+        </div>
+      {{- end }}
+
       <hr class="my-4">
+      
 
       {{- $localSvgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
       {{- $svgPath := path.Join "/assets/" $localSvgPath -}}
