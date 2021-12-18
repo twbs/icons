@@ -116,6 +116,19 @@
             {{- highlight $iconFontSnippet "html" "" }}
           </div>
 
+          <h2 class="fs-3">Code point</h2>
+          <div class="mb-4">
+            {{ $codepoints := getJSON "font/bootstrap-icons.json" -}}
+            {{ $hexCodepoint :=  printf "%X" (int (index $codepoints .File.TranslationBaseName)) }}
+            <p>
+              Unicode: <code>U+{{- $hexCodepoint}}</code><br/>
+              CSS: <code>\{{- $hexCodepoint}}</code><br/>
+              JS: <code>\u{{- $hexCodepoint}}</code><br/>
+              HTML: <code>&amp;#x{{- $hexCodepoint}};</code>
+            </p>
+          </div>
+
+
           <h2 class="fs-3">Copy HTML</h2>
           <p>Paste the SVG right into your project's code.</p>
 
