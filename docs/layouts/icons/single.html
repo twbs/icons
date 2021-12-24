@@ -120,12 +120,20 @@
           <div class="mb-4">
             {{ $codepoints := getJSON "font/bootstrap-icons.json" -}}
             {{ $hexCodepoint :=  printf "%X" (int (index $codepoints .File.TranslationBaseName)) }}
-            <p>
-              Unicode: <code>U+{{- $hexCodepoint}}</code><br/>
-              CSS: <code>\{{- $hexCodepoint}}</code><br/>
-              JS: <code>\u{{- $hexCodepoint}}</code><br/>
-              HTML: <code>&amp;#x{{- $hexCodepoint}};</code>
-            </p>
+            <ul class="list-unstyled">
+              <li>
+                Unicode: <code>U+{{- $hexCodepoint}}</code><br/>
+              </li>
+              <li>
+                CSS: <code>\{{- $hexCodepoint}}</code><br/>
+              </li>
+              <li>
+                JS: <code>\u{{- $hexCodepoint}}</code><br/>
+              </li>
+              <li>
+                HTML: <code>&amp;#x{{- $hexCodepoint}};</code>
+              </li>
+            </ul>
           </div>
 
           <h2 class="fs-3">Copy HTML</h2>
