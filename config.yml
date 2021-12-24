@@ -8,6 +8,13 @@ disableKinds:           ["404", "taxonomy", "term", "RSS"]
 
 publishDir:             "_site"
 
+security:
+  enableInlineShortcodes: true
+  funcs:
+    getenv:
+      - ^HUGO_
+      - NETLIFY
+
 markup:
   goldmark:
     renderer:
