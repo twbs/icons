@@ -1,6 +1,9 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3") format("woff2"),
-url("./fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff") !default;
+$bootstrap-icons-fonts-dir: "./fonts" !default;
+$bootstrap-icons-font-file: #{$bootstrap-icons-fonts-dir}/#{$bootstrap-icons-font} !default;
+$bootstrap-icons-font-sha:"524846017b983fc8ded9325d94ed40f3" !default;
+$bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap-icons-font-sha}") format("woff2"),
+url("#{$bootstrap-icons-font-file}.woff?#{$bootstrap-icons-font-sha}") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
