@@ -38,7 +38,7 @@
     "test": "npm-run-all docs-build --parallel --aggregate-output --continue-on-error test:*"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.1",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
     "eslint": "^8.5.0",
