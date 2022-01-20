@@ -157,11 +157,7 @@ Color can be changed by setting a `.text-*` class or custom CSS:
   <div class="col-md-4">
 {{< md >}}
 ## Accessibility
-If the icons are not purely decorative, make sure you provide an appropriate text alternative.
-
-If your icons are purely decorative remember to add the `aria-hidden="true"` parameter.
-
-Depending on which method you're using to add the icons, and where you're using them (e.g. as standalone images, or as the only content of a button or similar control), there are various possible approaches. Here are a few examples:
+For purely decorative icons, add `aria-hidden="true"`. Otherwise, provide an appropriate text alternative. Depending on which method you're using to add the icons, and where you're using them (e.g. as standalone images, or as the only content of a button or similar control), there are various possible approaches. Here are a few examples:
 {{< /md >}}
   </div>
   <div class="col-md-8">
