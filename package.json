@@ -40,7 +40,7 @@
   "style": "font/bootstrap-icons.css",
   "sass": "font/bootstrap-icons.scss",
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.2",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
     "eslint": "^8.5.0",
