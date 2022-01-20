@@ -12,4 +12,5 @@ tags:
   - rotate
   - refresh
   - reload
+  - redo
 ---
