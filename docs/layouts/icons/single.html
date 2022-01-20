@@ -122,13 +122,13 @@
             {{ $hexCodepoint :=  printf "%X" (int (index $codepoints .File.TranslationBaseName)) }}
             <ul class="list-unstyled">
               <li>
-                Unicode: <code>U+{{- $hexCodepoint}}</code><br/>
+                Unicode: <code>U+{{- $hexCodepoint}}</code>
               </li>
               <li>
-                CSS: <code>\{{- $hexCodepoint}}</code><br/>
+                CSS: <code>\{{- $hexCodepoint}}</code>
               </li>
               <li>
-                JS: <code>\u{{- $hexCodepoint}}</code><br/>
+                JS: <code>\u{{- $hexCodepoint}}</code>
               </li>
               <li>
                 HTML: <code>&amp;#x{{- $hexCodepoint}};</code>
