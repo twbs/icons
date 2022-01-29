@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?a97b3594ad416896e15824f6787370e0") format("woff2"),
-url("./fonts/bootstrap-icons.woff?a97b3594ad416896e15824f6787370e0") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?30af91bf14e37666a085fb8a161ff36d") format("woff2"),
+url("./fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d") format("woff");
 }
 
 .bi::before,
@@ -1499,8 +1499,8 @@ url("./fonts/bootstrap-icons.woff?a97b3594ad416896e15824f6787370e0") format("wof
 .bi-ticket-detailed-fill::before { content: "\f6c6"; }
 .bi-ticket-detailed::before { content: "\f6c7"; }
 .bi-ticket-fill::before { content: "\f6c8"; }
-.bi-ticket-perferated-fill::before { content: "\f6c9"; }
-.bi-ticket-perferated::before { content: "\f6ca"; }
+.bi-ticket-perforated-fill::before { content: "\f6c9"; }
+.bi-ticket-perforated::before { content: "\f6ca"; }
 .bi-ticket::before { content: "\f6cb"; }
 .bi-tiktok::before { content: "\f6cc"; }
 .bi-window-dash::before { content: "\f6cd"; }
@@ -1553,3 +1553,4 @@ url("./fonts/bootstrap-icons.woff?a97b3594ad416896e15824f6787370e0") format("wof
 .bi-displayport-fill::before { content: "\f6fc"; }
 .bi-mortarboard-fill::before { content: "\f6fd"; }
 .bi-mortarboard::before { content: "\f6fe"; }
+.bi-terminal-x::before { content: "\f6ff"; }

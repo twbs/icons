@@ -1479,8 +1479,8 @@
   "ticket-detailed-fill": 63174,
   "ticket-detailed": 63175,
   "ticket-fill": 63176,
-  "ticket-perferated-fill": 63177,
-  "ticket-perferated": 63178,
+  "ticket-perforated-fill": 63177,
+  "ticket-perforated": 63178,
   "ticket": 63179,
   "tiktok": 63180,
   "window-dash": 63181,
@@ -1532,5 +1532,6 @@
   "device-ssd": 63227,
   "displayport-fill": 63228,
   "mortarboard-fill": 63229,
-  "mortarboard": 63230
+  "mortarboard": 63230,
+  "terminal-x": 63231
 }

@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?a97b3594ad416896e15824f6787370e0") format("woff2"),
-url("./fonts/bootstrap-icons.woff?a97b3594ad416896e15824f6787370e0") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?30af91bf14e37666a085fb8a161ff36d") format("woff2"),
+url("./fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1503,8 +1503,8 @@ $bootstrap-icons-map: (
   "ticket-detailed-fill": "\f6c6",
   "ticket-detailed": "\f6c7",
   "ticket-fill": "\f6c8",
-  "ticket-perferated-fill": "\f6c9",
-  "ticket-perferated": "\f6ca",
+  "ticket-perforated-fill": "\f6c9",
+  "ticket-perforated": "\f6ca",
   "ticket": "\f6cb",
   "tiktok": "\f6cc",
   "window-dash": "\f6cd",
@@ -1557,6 +1557,7 @@ $bootstrap-icons-map: (
   "displayport-fill": "\f6fc",
   "mortarboard-fill": "\f6fd",
   "mortarboard": "\f6fe",
+  "terminal-x": "\f6ff",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3039,8 +3040,8 @@ $bootstrap-icons-map: (
 .bi-ticket-detailed-fill::before { content: map-get($bootstrap-icons-map, "ticket-detailed-fill"); }
 .bi-ticket-detailed::before { content: map-get($bootstrap-icons-map, "ticket-detailed"); }
 .bi-ticket-fill::before { content: map-get($bootstrap-icons-map, "ticket-fill"); }
-.bi-ticket-perferated-fill::before { content: map-get($bootstrap-icons-map, "ticket-perferated-fill"); }
-.bi-ticket-perferated::before { content: map-get($bootstrap-icons-map, "ticket-perferated"); }
+.bi-ticket-perforated-fill::before { content: map-get($bootstrap-icons-map, "ticket-perforated-fill"); }
+.bi-ticket-perforated::before { content: map-get($bootstrap-icons-map, "ticket-perforated"); }
 .bi-ticket::before { content: map-get($bootstrap-icons-map, "ticket"); }
 .bi-tiktok::before { content: map-get($bootstrap-icons-map, "tiktok"); }
 .bi-window-dash::before { content: map-get($bootstrap-icons-map, "window-dash"); }
@@ -3093,3 +3094,4 @@ $bootstrap-icons-map: (
 .bi-displayport-fill::before { content: map-get($bootstrap-icons-map, "displayport-fill"); }
 .bi-mortarboard-fill::before { content: map-get($bootstrap-icons-map, "mortarboard-fill"); }
 .bi-mortarboard::before { content: map-get($bootstrap-icons-map, "mortarboard"); }
+.bi-terminal-x::before { content: map-get($bootstrap-icons-map, "terminal-x"); }

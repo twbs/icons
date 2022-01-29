@@ -36,7 +36,7 @@ For those [using Packagist](https://packagist.org/packages/twbs/bootstrap-icons)
 composer require twbs/bootstrap-icons
 ```
 
-[Also available in Figma.](https://www.figma.com/file/cKgRyErzl4pR1WN4NcB5lv/Bootstrap-Icons)
+[Also available in Figma.](https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons)
 
 ## Usage
 

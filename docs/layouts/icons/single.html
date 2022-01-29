@@ -76,24 +76,24 @@
                 Button
               </button>
             </p>
-            <p>
+            <div class="mb-3">
               <button type="button" class="btn btn-secondary">
                 {{ $svgHtml }}
               </button>
-            </p>
-            <div class="btn-group mb-3">
-              <button type="button" class="btn btn-outline-secondary">
-                {{ $svgHtml }}
-                <span class="visually-hidden">Button</span>
-              </button>
-              <button type="button" class="btn btn-outline-secondary">
-                {{ $svgHtml }}
-                <span class="visually-hidden">Button</span>
-              </button>
-              <button type="button" class="btn btn-outline-secondary">
-                {{ $svgHtml }}
-                <span class="visually-hidden">Button</span>
-              </button>
+              <div class="btn-group">
+                <button type="button" class="btn btn-outline-secondary">
+                  {{ $svgHtml }}
+                  <span class="visually-hidden">Button</span>
+                </button>
+                <button type="button" class="btn btn-outline-secondary">
+                  {{ $svgHtml }}
+                  <span class="visually-hidden">Button</span>
+                </button>
+                <button type="button" class="btn btn-outline-secondary">
+                  {{ $svgHtml }}
+                  <span class="visually-hidden">Button</span>
+                </button>
+              </div>
             </div>
             <div class="input-group w-50">
               <span class="input-group-text" id="basic-addon1">
@@ -114,6 +114,26 @@
           <div class="mb-4">
             {{ $iconFontSnippet := printf `<i class="bi bi-%s"></i>` .File.TranslationBaseName -}}
             {{- highlight $iconFontSnippet "html" "" }}
+          </div>
+
+          <h2 class="fs-3">Code point</h2>
+          <div class="mb-4">
+            {{ $codepoints := getJSON "font/bootstrap-icons.json" -}}
+            {{ $hexCodepoint :=  printf "%X" (int (index $codepoints .File.TranslationBaseName)) }}
+            <ul class="list-unstyled">
+              <li>
+                Unicode: <code>U+{{- $hexCodepoint}}</code>
+              </li>
+              <li>
+                CSS: <code>\{{- $hexCodepoint}}</code>
+              </li>
+              <li>
+                JS: <code>\u{{- $hexCodepoint}}</code>
+              </li>
+              <li>
+                HTML: <code>&amp;#x{{- $hexCodepoint}};</code>
+              </li>
+            </ul>
           </div>
 
           <h2 class="fs-3">Copy HTML</h2>
