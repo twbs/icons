@@ -1,16 +1,12 @@
-$white:    #fff;
-$blue:     #007bff;
-$gray-100: #f8f9fa;
-$gray-500: #adb5bd;
-$gray-700: #495057;
-$gray-900: #212529;
-$primary:  #0d6efd;
 $teal-100: #d2f4ea;
 
 // Local docs variables
-$bd-purple:        #563d7c;
-$bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%); // #7952b3
+$bd-purple:        #4c0bce;
+$bd-purple-bright: lighten(saturate($bd-purple, 5%), 15%);
 $bd-dark:          #2a2730;
 $bd-download:      #ffe484;
 
+$bd-gutter-x: 1.25rem;
+
 $spacer: 1rem;
+$box-shadow-lg: 0 1rem 3rem rgba(#000, .175) !default;

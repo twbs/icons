@@ -1,3 +1,5 @@
+<script src="{{ .Site.Params.assets.js.uri }}" {{ printf "integrity=%q" .Site.Params.assets.js.sri | safeHTMLAttr }} crossorigin="anonymous"></script>
+
 {{- if .IsHome }}
 <script src="/assets/js/list.min.js"></script>
 <script>

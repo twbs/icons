@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link href="{{ .Site.Params.assets.css.uri }}" rel="stylesheet" {{ printf "integrity=%q" .Site.Params.assets.css.sri | safeHTMLAttr }} crossorigin="anonymous">
 <link rel="stylesheet" href="/assets/font/bootstrap-icons.css">
 
 {{- $sassOptions := dict "targetPath" "assets/css/docs.css" "precision" 6 -}}

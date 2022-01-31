@@ -23,7 +23,7 @@
 .highlight {
   padding: 1.25rem;
   margin-bottom: 1.5rem;
-  background-color: $gray-100;
+  background-color: var(--bs-gray-100);
   border-radius: .25rem;
 
   pre {
@@ -112,10 +112,10 @@
     padding: 100px 2rem;
     margin-right: 15px;
     margin-left: 15px;
-    color: $gray-500;
+    color: var(--bs-gray-500);
     text-align: center;
     content: "Nothing found, try searching again.";
-    background-color: $gray-100;
+    background-color: var(--bs-gray-100);
     border-radius: .5rem;
   }
 }
