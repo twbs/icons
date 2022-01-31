@@ -181,6 +181,12 @@
     <loc>https://icons.getbootstrap.com/icons/arrow-right-short/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/arrow-through-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/arrow-through-heart-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/arrow-up/</loc>
   </url>
   <url>
@@ -322,6 +328,12 @@
     <loc>https://icons.getbootstrap.com/icons/badge-hd-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/badge-sd/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/badge-sd-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/badge-tm/</loc>
   </url>
   <url>
@@ -364,6 +376,12 @@
     <loc>https://icons.getbootstrap.com/icons/bag-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/bag-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/bag-heart-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/bag-plus/</loc>
   </url>
   <url>
@@ -374,6 +392,18 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/bag-x-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/balloon/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/balloon-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/balloon-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/balloon-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/bandaid/</loc>
@@ -646,10 +676,25 @@
     <loc>https://icons.getbootstrap.com/icons/box-seam/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/box2/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/box2-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/box2-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/box2-heart-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/boxes/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/braces/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/braces-asterisk/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/bricks/</loc>
@@ -751,6 +796,12 @@
     <loc>https://icons.getbootstrap.com/icons/calendar-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/calendar-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/calendar-heart-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/calendar-minus/</loc>
   </url>
   <url>
@@ -815,6 +866,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/calendar2-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/calendar2-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/calendar2-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/calendar2-minus/</loc>
@@ -1048,6 +1105,12 @@
     <loc>https://icons.getbootstrap.com/icons/chat-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-heart-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/chat-left/</loc>
   </url>
   <url>
@@ -1058,6 +1121,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/chat-left-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-left-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-left-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/chat-left-quote/</loc>
@@ -1090,6 +1159,12 @@
     <loc>https://icons.getbootstrap.com/icons/chat-right-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-right-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-right-heart-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/chat-right-quote/</loc>
   </url>
   <url>
@@ -1112,6 +1187,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/chat-square-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-square-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/chat-square-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/chat-square-quote/</loc>
@@ -1246,16 +1327,91 @@
     <loc>https://icons.getbootstrap.com/icons/clipboard-check/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-check-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/clipboard-data/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-data-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/clipboard-minus/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-minus-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/clipboard-plus/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-plus-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-pulse/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/clipboard-x/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard-x-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-check/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-check-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-data/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-data-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-heart-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-minus/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-minus-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-plus/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-plus-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-pulse/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-pulse-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-x/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/clipboard2-x-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/clock/</loc>
@@ -1756,6 +1912,12 @@
     <loc>https://icons.getbootstrap.com/icons/emoji-heart-eyes-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-kiss/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/emoji-kiss-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/emoji-laughing/</loc>
   </url>
   <url>
@@ -1816,10 +1978,34 @@
     <loc>https://icons.getbootstrap.com/icons/envelope-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-heart-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/envelope-open/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/envelope-open-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-open-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-open-heart-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-paper/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-paper-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-paper-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/envelope-paper-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/envelope-plus/</loc>
@@ -2308,6 +2494,150 @@
     <loc>https://icons.getbootstrap.com/icons/files-alt/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-aac/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-ai/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-bmp/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-cs/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-css/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-csv/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-doc/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-docx/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-exe/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-gif/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-heic/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-html/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-java/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-jpg/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-js/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-json/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-jsx/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-key/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-m4p/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-md/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-mdx/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-mov/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-mp3/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-mp4/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-otf/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-pdf/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-php/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-png/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-ppt/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-pptx/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-psd/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-py/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-raw/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-rb/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-sass/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-scss/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-sh/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-svg/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-tiff/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-tsx/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-ttf/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-txt/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-wav/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-woff/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-xls/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-xlsx/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-xml/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/filetype-yml/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/film/</loc>
   </url>
   <url>
@@ -2593,10 +2923,28 @@
     <loc>https://icons.getbootstrap.com/icons/heart/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/heart-arrow/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/heart-half/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/heart-pulse/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/heart-pulse-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/heartbreak/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/heartbreak-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/hearts/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/heptagon/</loc>
@@ -2615,6 +2963,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/hexagon-half/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/hospital/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/hospital-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/hourglass/</loc>
@@ -2639,6 +2993,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/house-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/house-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/house-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/hr/</loc>
@@ -2675,6 +3035,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/inboxes/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/incognito/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/infinity/</loc>
@@ -2921,6 +3284,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/magic/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/magnet/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/magnet-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/mailbox/</loc>
@@ -3274,6 +3643,12 @@
     <loc>https://icons.getbootstrap.com/icons/person-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/person-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/person-hearts/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/person-lines-fill/</loc>
   </url>
   <url>
@@ -3311,6 +3686,9 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/phone-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/phone-flip/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/phone-landscape/</loc>
@@ -3391,6 +3769,9 @@
     <loc>https://icons.getbootstrap.com/icons/plug-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/plugin/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/plus/</loc>
   </url>
   <url>
@@ -3416,6 +3797,30 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/plus-square-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postage/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postage-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postage-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postage-heart-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postcard/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postcard-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postcard-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/postcard-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/power/</loc>
@@ -3605,6 +4010,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/search/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/search-heart/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/search-heart-fill/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/segmented-nav/</loc>
@@ -3848,6 +4259,12 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/sliders/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/sliders2/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/sliders2-vertical/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/smartwatch/</loc>
@@ -4258,6 +4675,12 @@
     <loc>https://icons.getbootstrap.com/icons/trash2-fill/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/trash3/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/trash3-fill/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/tree/</loc>
   </url>
   <url>
@@ -4402,6 +4825,12 @@
     <loc>https://icons.getbootstrap.com/icons/usb-symbol/</loc>
   </url>
   <url>
+    <loc>https://icons.getbootstrap.com/icons/valentine/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/valentine2/</loc>
+  </url>
+  <url>
     <loc>https://icons.getbootstrap.com/icons/vector-pen/</loc>
   </url>
   <url>
@@ -4526,6 +4955,15 @@
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/wrench/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/wrench-adjustable/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/wrench-adjustable-circle-fill/</loc>
+  </url>
+  <url>
+    <loc>https://icons.getbootstrap.com/icons/wrench-adjustable-cricle/</loc>
   </url>
   <url>
     <loc>https://icons.getbootstrap.com/icons/x/</loc>
