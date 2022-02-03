@@ -1,5 +1,5 @@
 ---
-title: Wrench adjustable cricle
+title: Wrench adjustable circle
 categories:
   - Tools
 tags:
