@@ -1681,5 +1681,6 @@
   "wrench-adjustable": 63376,
   "filetype-json": 63377,
   "filetype-pptx": 63378,
-  "filetype-xlsx": 63379
+  "filetype-xlsx": 63379,
+  "clipboard-x-fill-1": 63380
 }

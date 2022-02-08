@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?e2f6e48459d8b0f394eea57aba940179") format("woff2"),
-url("./fonts/bootstrap-icons.woff?e2f6e48459d8b0f394eea57aba940179") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?009fd943122989304213fa8254f7c4ad") format("woff2"),
+url("./fonts/bootstrap-icons.woff?009fd943122989304213fa8254f7c4ad") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1706,6 +1706,7 @@ $bootstrap-icons-map: (
   "filetype-json": "\f791",
   "filetype-pptx": "\f792",
   "filetype-xlsx": "\f793",
+  "clipboard-x-fill-1": "\f794",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3391,3 +3392,4 @@ $bootstrap-icons-map: (
 .bi-filetype-json::before { content: map-get($bootstrap-icons-map, "filetype-json"); }
 .bi-filetype-pptx::before { content: map-get($bootstrap-icons-map, "filetype-pptx"); }
 .bi-filetype-xlsx::before { content: map-get($bootstrap-icons-map, "filetype-xlsx"); }
+.bi-clipboard-x-fill-1::before { content: map-get($bootstrap-icons-map, "clipboard-x-fill-1"); }
