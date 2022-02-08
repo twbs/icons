@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?e2f6e48459d8b0f394eea57aba940179") format("woff2"),
-url("./fonts/bootstrap-icons.woff?e2f6e48459d8b0f394eea57aba940179") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3") format("woff2"),
+url("./fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1701,7 +1701,7 @@ $bootstrap-icons-map: (
   "valentine": "\f78c",
   "valentine2": "\f78d",
   "wrench-adjustable-circle-fill": "\f78e",
-  "wrench-adjustable-cricle": "\f78f",
+  "wrench-adjustable-circle": "\f78f",
   "wrench-adjustable": "\f790",
   "filetype-json": "\f791",
   "filetype-pptx": "\f792",
@@ -3386,7 +3386,7 @@ $bootstrap-icons-map: (
 .bi-valentine::before { content: map-get($bootstrap-icons-map, "valentine"); }
 .bi-valentine2::before { content: map-get($bootstrap-icons-map, "valentine2"); }
 .bi-wrench-adjustable-circle-fill::before { content: map-get($bootstrap-icons-map, "wrench-adjustable-circle-fill"); }
-.bi-wrench-adjustable-cricle::before { content: map-get($bootstrap-icons-map, "wrench-adjustable-cricle"); }
+.bi-wrench-adjustable-circle::before { content: map-get($bootstrap-icons-map, "wrench-adjustable-circle"); }
 .bi-wrench-adjustable::before { content: map-get($bootstrap-icons-map, "wrench-adjustable"); }
 .bi-filetype-json::before { content: map-get($bootstrap-icons-map, "filetype-json"); }
 .bi-filetype-pptx::before { content: map-get($bootstrap-icons-map, "filetype-pptx"); }
