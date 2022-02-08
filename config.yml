@@ -49,7 +49,7 @@ params:
   description:          "Official open source SVG icon library for Bootstrap"
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
-  version:              "1.8.1"
+  version:              "1.8.2"
   bs_docs_version:      "5.1"
 
   assets:
