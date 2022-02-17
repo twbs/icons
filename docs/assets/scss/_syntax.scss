@@ -88,7 +88,7 @@
   .language-bash,
   .language-sh {
     &::before {
-      color: var(--bs-gray-100);
+      color: var(--bs-gray-600);
       content: "$ ";
       user-select: none;
     }

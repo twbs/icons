@@ -24,11 +24,13 @@
   padding: 1.25rem;
   margin-bottom: 1.5rem;
   background-color: var(--bs-gray-100);
-  border-radius: .25rem;
+  border-radius: .5rem;
 
   pre {
     margin-bottom: 0;
     scrollbar-width: none;
+
+    &:focus { outline: 0; }
 
     &::-webkit-scrollbar {
       display: none;
@@ -71,15 +73,31 @@
 }
 
 .hero {
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
+  border-bottom: 1px solid rgba(0, 0, 0, .075);
 
-  .highlight pre {
-    padding-right: 4em;
+  .highlight {
     margin-bottom: 0;
-    border-radius: .5rem;
+    color: var(--bs-gray-200);
+    background-color: var(--bs-gray-800);
+
+    pre {
+      margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        padding-right: 4em;
+      }
+    }
   }
+
   .btn-clipboard {
     top: .625em;
+    color: var(--bs-gray-200);
+    background-color: var(--bs-gray-800);
+  }
+
+  .btn {
+    padding: 1rem 1.25rem;
+    border-radius: .5rem;
   }
 
   hr {

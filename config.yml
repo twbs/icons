@@ -70,3 +70,4 @@ params:
   expo:                 "https://expo.getbootstrap.com"
   themes:               "https://themes.getbootstrap.com"
   opencollective:       "https://opencollective.com/bootstrap"
+  icons_figma:          "https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
