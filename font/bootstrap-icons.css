@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3") format("woff2"),
-url("./fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?6771278566ce0d435478727c265f8939") format("woff2"),
+url("./fonts/bootstrap-icons.woff?6771278566ce0d435478727c265f8939") format("woff");
 }
 
 .bi::before,
@@ -1702,3 +1702,7 @@ url("./fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("wof
 .bi-filetype-json::before { content: "\f791"; }
 .bi-filetype-pptx::before { content: "\f792"; }
 .bi-filetype-xlsx::before { content: "\f793"; }
+.bi-fast-forward-fill::before { content: "\f794"; }
+.bi-fast-forward::before { content: "\f795"; }
+.bi-rewind-fill::before { content: "\f796"; }
+.bi-rewind::before { content: "\f797"; }

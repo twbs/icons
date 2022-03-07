@@ -1681,5 +1681,9 @@
   "wrench-adjustable": 63376,
   "filetype-json": 63377,
   "filetype-pptx": 63378,
-  "filetype-xlsx": 63379
+  "filetype-xlsx": 63379,
+  "fast-forward-fill": 63380,
+  "fast-forward": 63381,
+  "rewind-fill": 63382,
+  "rewind": 63383
 }
