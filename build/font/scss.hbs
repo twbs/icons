@@ -1,5 +1,9 @@
 ${{ name }}-font: "{{ name }}" !default;
-${{ name }}-font-src: {{{ fontSrc }}} !default;
+${{ name }}-font-dir: "{{ fontsUrl }}" !default;
+${{ name }}-font-file: #{${{ name }}-font-dir}/#{${{ name }}-font} !default;
+${{ name }}-font-sha: "{{ hash }}" !default;
+${{ name }}-font-src: url("#{${{ name }}-font-file}.woff2?#{${{ name }}-font-sha}") format("woff2"),
+url("#{${{ name }}-font-file}.woff?#{${{ name }}-font-sha}") format("woff") !default;
 
 @font-face {
   font-family: ${{ name }}-font;
