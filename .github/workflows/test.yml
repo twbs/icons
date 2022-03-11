@@ -34,3 +34,11 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Run linkinator
+        uses: JustinBeckwith/linkinator-action@v1
+        with:
+          paths: _site
+          recurse: true
+          verbosity: error
+          skip: "^(?!http://localhost)"
