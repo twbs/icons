@@ -33,7 +33,7 @@ tags:
     if (VERBOSE) {
       console.log(`${picocolors.cyan(iconBasename)}: Page already exists; skipping`)
     }
-  } catch (_) {
+  } catch {
     await fs.writeFile(pageName, pageTemplate)
     console.log(picocolors.green(`${iconBasename}: Page created`))
   }
