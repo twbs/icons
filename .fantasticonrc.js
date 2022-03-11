@@ -1,4 +1,6 @@
-const codepoints = require('./font/bootstrap-icons.json');
+'use strict'
+
+const codepoints = require('./font/bootstrap-icons.json')
 
 module.exports = {
   inputDir: './icons', // (required)
@@ -6,7 +8,7 @@ module.exports = {
   fontTypes: ['woff2', 'woff'],
   assetTypes: ['css', 'scss', 'json', 'html'],
   name: 'bootstrap-icons',
-  codepoints: codepoints,
+  codepoints,
   prefix: 'bi',
   selector: '.bi',
   fontsUrl: './fonts',
@@ -31,4 +33,4 @@ module.exports = {
     woff2: './font/fonts/bootstrap-icons.woff2',
     eot: './font/fonts/bootstrap-icons.eot'
   }
-};
+}
