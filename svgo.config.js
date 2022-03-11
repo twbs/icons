@@ -7,8 +7,7 @@ module.exports = {
   js2svg: {
     pretty: true,
     indent: 2,
-    eol: 'lf',
-    finalNewline: false
+    eol: 'lf'
   },
   plugins: [
     {
