@@ -35,7 +35,7 @@ module.exports = {
         ]
       }
     },
-    // Custom plugin which resets the svg attributes to explicit values.
+    // Custom plugin which resets the SVG attributes to explicit values
     {
       name: 'explicitAttrs',
       type: 'visitor',
@@ -45,7 +45,7 @@ module.exports = {
           width: '16',
           height: '16',
           fill: 'currentColor',
-          class: '', // Replace with correct icon class.
+          class: '', // We replace the class with the correct one based on filename later
           viewBox: '0 0 16 16'
         }
       },

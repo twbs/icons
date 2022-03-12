@@ -17,10 +17,7 @@ async function processFile(file, config) {
   const basename = path.basename(file, '.svg')
 
   const originalSvg = await fs.readFile(filepath, 'utf8')
-  const { data: optimizedSvg } = await optimize(originalSvg, {
-    path: filepath,
-    ...config
-  })
+  const { data: optimizedSvg } = await optimize(originalSvg, { path: filepath, ...config })
 
   // svgo will always add a final newline when in pretty mode
   const resultSvg = optimizedSvg.trim()
@@ -49,7 +46,7 @@ async function processFile(file, config) {
 
     const filesLength = files.length
 
-    console.log(picocolors.green('\nSuccess, %s icon%s prepared!'), filesLength, filesLength !== 1 ? 's' : '')
+    console.log(picocolors.green('\nSuccess, prepared %s icon%s!'), filesLength, filesLength !== 1 ? 's' : '')
     console.timeEnd(timeLabel)
   } catch (error) {
     console.error(error)
