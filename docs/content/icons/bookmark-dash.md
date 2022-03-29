@@ -1,7 +1,7 @@
 ---
 title: Bookmark dash
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - reading
   - book

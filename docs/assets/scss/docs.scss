@@ -7,6 +7,11 @@
 @import "syntax";
 @import "ads";
 
+.bi {
+  display: inline-block;
+  vertical-align: -.125em;
+}
+
 .hero-notice {
   background-color: $teal-100;
 
@@ -88,24 +93,6 @@
   }
 }
 
-.bi {
-  display: inline-block;
-  vertical-align: text-bottom;
-}
-
-.list:empty::before {
-  display: block;
-  width: 100%;
-  padding: 100px 2rem;
-  margin-right: 15px;
-  margin-left: 15px;
-  color: $gray-500;
-  text-align: center;
-  content: "Nothing found, try searching again.";
-  background-color: $gray-100;
-  border-radius: .5rem;
-}
-
 .list {
   font-size: 2rem;
 
@@ -118,6 +105,19 @@
     }
   }
   // stylelint-enable  declaration-no-important
+
+  &:empty::before {
+    display: block;
+    width: 100%;
+    padding: 100px 2rem;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: $gray-500;
+    text-align: center;
+    content: "Nothing found, try searching again.";
+    background-color: $gray-100;
+    border-radius: .5rem;
+  }
 }
 
 .btn-group > .btn {
@@ -137,16 +137,18 @@
   }
 }
 
-.icon-examples .bi {
-  width: 1em;
-  height: 1em;
-  vertical-align: -.1em;
-}
-
 .icon-demo {
   background-color: #fdfdfd;
   background-image: radial-gradient(circle, #ddd 1px, rgba(0, 0, 0, 0) 1px);
   background-size: 1rem 1rem;
+}
+
+.icon-demo,
+.icon-demo-examples {
+  .bi {
+    width: 1em;
+    height: 1em;
+  }
 }
 
 // stylelint-disable declaration-no-important
@@ -155,27 +157,3 @@
   padding-bottom: 4.5rem !important;
 }
 // stylelint-enable declaration-no-important
-
-// stylelint-disable
-@font-face {
-  font-family: bootstrap-icons;
-  src: url("../../font/fonts/bootstrap-icons.woff?1ef5213d557344d80e31924ac255216d") format("woff"),
-       url("../../font/fonts/bootstrap-icons.woff2?1ef5213d557344d80e31924ac255216d") format("woff2");
-}
-
-[class^="bi-"]::before,
-[class*=" bi-"]::before {
-  display: inline-block;
-  font-family: bootstrap-icons !important;
-  font-style: normal;
-  font-weight: 400 !important;
-  font-variant: normal;
-  line-height: 1;
-  text-transform: none;
-  vertical-align: text-bottom;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.bi-alarm::before { content: "\f102"; }
-// stylelint-enable

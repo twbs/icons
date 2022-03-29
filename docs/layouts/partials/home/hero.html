@@ -1,0 +1,43 @@
+<div class="hero py-5 text-center text-lg-start">
+  <div class="container">
+    <div class="row flex-lg-row-reverse">
+      <div class="col-6 mx-auto col-lg-5 mx-lg-0">
+        <img srcset="/assets/img/icons-hero.png, /assets/img/icons-hero@2x.png 2x"
+             src="/assets/img/icons-hero.png"
+             class="img-fluid my-3 mx-auto"
+             alt="Bootstrap Icons" width="450" height="340">
+      </div>
+      <div class="col-lg-7">
+        <a class="d-block d-sm-inline-block py-1 px-3 mb-4 text-dark text-decoration-none rounded-3 hero-notice" href="{{ .Site.Params.blog }}/2022/01/31/bootstrap-icons-1-8-0/">
+          <strong>New in v1.8.0:</strong> 140+ new icons!
+        </a>
+        <h1 class="f0">Bootstrap Icons</h1>
+        <p class="mb-4 f3 font-weight-normal">Free, high quality, open source icon library with over 1,600 icons. Include them anyway you like—SVGs, SVG sprite, or web fonts. Use them with or without <a href="{{ .Site.Params.main }}/">Bootstrap</a> in any project.</p>
+
+        <div class="fs-5 d-inline-block mb-3">
+          {{ highlight "npm i bootstrap-icons" "sh" "" }}
+        </div>
+
+        {{ partialCached "ads" . }}
+
+        <hr class="mx-auto mx-lg-0 my-5">
+
+        <p class="text-muted">
+          Currently <a href="{{ .Site.Params.repo }}/releases/tag/v{{ .Site.Params.version }}">v{{ .Site.Params.version }}</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#icons">Icons</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#install">Install</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#usage">Usage</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#styling">Styling</a>
+          <span class="px-1">&#8226;</span>
+          <a href="#accessibility">Accessibility</a>
+          <span class="px-1">&#8226;</span>
+          <a href="{{ .Site.Params.repo }}">GitHub repo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

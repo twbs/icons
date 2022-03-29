@@ -1,6 +1,8 @@
 ---
 title: Instagram
 categories:
-  - Social
+  - Brand
 tags:
+  - social
+  - chat
 ---

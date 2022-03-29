@@ -4,9 +4,16 @@ baseURL:                "https://icons.getbootstrap.com"
 enableInlineShortcodes: true
 enableRobotsTXT:        true
 metaDataFormat:         "yaml"
-disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+disableKinds:           ["404", "taxonomy", "term", "RSS"]
 
 publishDir:             "_site"
+
+security:
+  enableInlineShortcodes: true
+  funcs:
+    getenv:
+      - ^HUGO_
+      - NETLIFY
 
 markup:
   goldmark:
@@ -34,7 +41,7 @@ module:
     - source:           bootstrap-icons.svg
       target:           static/bootstrap-icons.svg
     - source:           icons
-      target:           static/icons
+      target:           static/assets/icons
     - source:           font
       target:           static/font
     - source:           node_modules/list.js/dist/list.min.js
@@ -46,8 +53,8 @@ params:
   description:          "Official open source SVG icon library for Bootstrap"
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
-  version:              "1.3.0"
-  bs_docs_version:      "5.0"
+  version:              "1.8.1"
+  bs_docs_version:      "5.1"
 
   main:                 "https://getbootstrap.com"
   github_org:           "https://github.com/twbs"

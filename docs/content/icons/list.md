@@ -7,4 +7,6 @@ tags:
   - type
   - justify
   - alignment
+  - menu
+  - hamburger
 ---

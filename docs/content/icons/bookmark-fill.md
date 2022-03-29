@@ -1,7 +1,7 @@
 ---
 title: Bookmark fill
 categories:
-  - Misc
+  - Miscellaneous
 tags:
   - reading
   - book

@@ -1,5 +1,5 @@
 ---
-title: Alert octagon
+title: Exclamation octagon
 categories:
   - Alerts, warnings, and signs
 tags:

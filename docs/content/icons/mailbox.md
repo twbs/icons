@@ -5,4 +5,6 @@ categories:
 tags:
   - post
   - postal
+  - postbox
+  - letterbox
 ---

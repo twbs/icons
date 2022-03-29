@@ -1,7 +1,7 @@
 ---
 title: Sun
 categories:
-  - Real world
+  - Weather
 tags:
   - solar
   - weather

@@ -1,6 +1,8 @@
 ---
 title: GitHub
 categories:
-  - Social
+  - Brand
 tags:
+  - social
+  - microsoft
 ---
