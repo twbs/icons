@@ -42,7 +42,7 @@
     "autoprefixer": "^10.4.4",
     "cheerio": "^1.0.0-rc.10",
     "cross-env": "^7.0.3",
-    "eslint": "^8.11.0",
+    "eslint": "^8.12.0",
     "fantasticon": "^1.2.3",
     "find-unused-sass-variables": "^4.0.3",
     "hugo-bin": "^0.83.1",
