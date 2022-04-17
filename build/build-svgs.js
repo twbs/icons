@@ -4,52 +4,23 @@
 
 const fs = require('fs').promises
 const path = require('path')
+const process = require('process')
 const picocolors = require('picocolors')
-const cheerio = require('cheerio')
 const { loadConfig, optimize } = require('svgo')
 
 const iconsDir = path.join(__dirname, '../icons/')
 
 const VERBOSE = process.argv.includes('--verbose')
 
-const svgAttributes = {
-  xmlns: 'http://www.w3.org/2000/svg',
-  width: '16',
-  height: '16',
-  fill: 'currentColor',
-  class: '',
-  viewBox: '0 0 16 16'
-}
-
 async function processFile(file, config) {
   const filepath = path.join(iconsDir, file)
   const basename = path.basename(file, '.svg')
 
   const originalSvg = await fs.readFile(filepath, 'utf8')
-  const optimizedSvg = await optimize(originalSvg, {
-    path: filepath,
-    ...config
-  })
+  const { data: optimizedSvg } = await optimize(originalSvg, { path: filepath, ...config })
 
-  const $ = await cheerio.load(optimizedSvg.data, {
-    xml: {
-      xmlMode: true
-    }
-  })
-  const $svgElement = $('svg')
-
-  // We keep all SVG contents apart from the `<svg>` element.
-  // `$(this)` refers to the original object not the replaced one!
-  $svgElement.replaceWith($('<svg>').append($(this).html()))
-
-  // Then we set the `svgAttributes` in the order we want to,
-  // hence why we remove the attributes and add them back
-  for (const [attribute, value] of Object.entries(svgAttributes)) {
-    $svgElement.removeAttr(attribute)
-    $svgElement.attr(attribute, attribute === 'class' ? `bi bi-${basename}` : value)
-  }
-
-  const resultSvg = $svgElement.toString().replace(/\r\n?/g, '\n')
+  // svgo will always add a final newline when in pretty mode
+  const resultSvg = optimizedSvg.trim()
 
   if (resultSvg !== originalSvg) {
     await fs.writeFile(filepath, resultSvg, 'utf8')
@@ -75,7 +46,7 @@ async function processFile(file, config) {
 
     const filesLength = files.length
 
-    console.log(picocolors.green('\nSuccess, %s icon%s prepared!'), filesLength, filesLength !== 1 ? 's' : '')
+    console.log(picocolors.green('\nSuccess, prepared %s icon%s!'), filesLength, filesLength !== 1 ? 's' : '')
     console.timeEnd(timeLabel)
   } catch (error) {
     console.error(error)
