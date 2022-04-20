@@ -1,6 +1,5 @@
 ---
 title: Basket2 fill
-layout: icon
 categories:
   - Commerce
 tags:

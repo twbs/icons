@@ -1,6 +1,5 @@
 ---
 title: Basket3
-layout: icon
 categories:
   - Commerce
 tags:

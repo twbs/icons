@@ -1,6 +1,5 @@
 ---
 title: Bag check
-layout: icon
 categories:
   - Commerce
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Asterisk
-layout: icon
 categories:
   - Typography
 tags:

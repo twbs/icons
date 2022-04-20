@@ -1,6 +1,5 @@
 ---
 title: Headphones
-layout: icon
 categories:
   - Devices
 tags:

@@ -1,6 +1,5 @@
 ---
 title: Cart plus
-layout: icon
 categories:
   - Commerce
 tags:

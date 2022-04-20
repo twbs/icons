@@ -1,6 +1,5 @@
 ---
 title: Shop window
-layout: icon
 categories:
   - Commerce
 tags:

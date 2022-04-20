@@ -1,6 +1,5 @@
 ---
 title: Cart dash
-layout: icon
 categories:
   - Commerce
 tags:

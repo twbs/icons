@@ -1,6 +1,5 @@
 ---
 title: Receipt cutoff
-layout: icon
 categories:
   - Commerce
 tags:
