@@ -39,7 +39,7 @@
   "style": "font/bootstrap-icons.css",
   "sass": "font/bootstrap-icons.scss",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.5",
     "cross-env": "^7.0.3",
     "eslint": "^8.13.0",
     "fantasticon": "^1.2.3",
