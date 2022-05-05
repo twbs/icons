@@ -3,3 +3,6 @@
 /_site/
 /node_modules/
 /resources/
+
+# Editor folders
+/.vscode/
