@@ -1,6 +1,5 @@
 ---
 title: Truck
-layout: icon
 categories:
   - Commerce
 tags:

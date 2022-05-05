@@ -1,6 +1,5 @@
 ---
 title: Volume off
-layout: icon
 categories:
   - Media
 tags:

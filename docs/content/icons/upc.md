@@ -1,6 +1,5 @@
 ---
 title: Upc
-layout: icon
 categories:
   - Commerce
 tags:

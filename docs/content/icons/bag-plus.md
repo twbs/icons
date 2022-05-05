@@ -1,6 +1,5 @@
 ---
 title: Bag plus
-layout: icon
 categories:
   - Commerce
 tags:
