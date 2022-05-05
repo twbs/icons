@@ -44,7 +44,7 @@
     "eslint": "^8.13.0",
     "fantasticon": "^1.2.3",
     "find-unused-sass-variables": "^4.0.4",
-    "hugo-bin": "^0.85.1",
+    "hugo-bin": "^0.86.0",
     "lockfile-lint": "^4.7.4",
     "npm-run-all": "^4.1.5",
     "picocolors": "^1.0.0",
