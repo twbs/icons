@@ -41,7 +41,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "cross-env": "^7.0.3",
-    "eslint": "^8.13.0",
+    "eslint": "^8.14.0",
     "fantasticon": "^1.2.3",
     "find-unused-sass-variables": "^4.0.4",
     "hugo-bin": "^0.85.1",
