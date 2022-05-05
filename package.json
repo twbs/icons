@@ -57,9 +57,6 @@
     "svgo": "^2.8.0",
     "vnu-jar": "21.10.12"
   },
-  "engines": {
-    "node": ">=10"
-  },
   "files": [
     "icons/*.svg",
     "bootstrap-icons.svg",
