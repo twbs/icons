@@ -24,7 +24,7 @@
   }
 
   .navbar-brand {
-    transition: .2s ease-in-out transform; // stylelint-disable-line property-disallowed-list
+    transition: .2s ease-in-out transform;
 
     &:hover {
       transform: rotate(-5deg) scale(1.1);
@@ -60,26 +60,5 @@
     @media (max-width: 992px) {
       box-shadow: $box-shadow-lg;
     }
-  }
-
-  .dropdown-toggle {
-    &:focus {
-      outline: 0;
-    }
-  }
-
-  .dropdown-menu {
-    --bs-dropdown-min-width: 12rem;
-    --bs-dropdown-link-hover-bg: rgba(var(--bd-violet-rgb), .1);
-    --bs-dropdown-font-size: .875rem;
-    box-shadow: $dropdown-box-shadow;
-  }
-
-  .dropdown-item.current {
-    font-weight: 600;
-    background-image: escape-svg($dropdown-active-icon);
-    background-repeat: no-repeat;
-    background-position: right $dropdown-item-padding-x top .6rem;
-    background-size: .75rem .75rem;
   }
 }
