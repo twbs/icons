@@ -1,6 +1,5 @@
 ---
 title: Emoji expressionless fill
-layout: icon
 categories:
   - Emoji
 tags:

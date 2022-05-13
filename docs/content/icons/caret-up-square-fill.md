@@ -1,6 +1,5 @@
 ---
 title: Caret up square fill
-layout: icon
 categories:
   - Carets
 tags:

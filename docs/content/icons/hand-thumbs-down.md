@@ -1,6 +1,5 @@
 ---
 title: Hand thumbs down
-layout: icon
 categories:
   - Hands
 tags:

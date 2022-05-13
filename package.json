@@ -39,8 +39,7 @@
   "style": "font/bootstrap-icons.css",
   "sass": "font/bootstrap-icons.scss",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "cheerio": "^1.0.0-rc.10",
+    "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
     "eslint": "^7.18.0",
     "fantasticon": "^1.0.31",
@@ -52,17 +51,14 @@
     "lockfile-lint": "^4.3.7",
     "npm-run-all": "^4.1.5",
     "picocolors": "^1.0.0",
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0",
     "purgecss": "^4.1.3",
-    "stylelint": "^14.6.0",
+    "stylelint": "^14.8.2",
     "stylelint-config-twbs-bootstrap": "^3.0.1",
-    "svg-sprite": "^1.5.4",
+    "svg-sprite": "^2.0.0-beta4",
     "svgo": "^2.8.0",
     "vnu-jar": "21.10.12"
-  },
-  "engines": {
-    "node": ">=10"
   },
   "files": [
     "icons/*.svg",

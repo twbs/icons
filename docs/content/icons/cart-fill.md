@@ -1,6 +1,5 @@
 ---
 title: Cart fill
-layout: icon
 categories:
   - Commerce
 tags:

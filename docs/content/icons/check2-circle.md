@@ -1,6 +1,5 @@
 ---
 title: Check2 circle
-layout: icon
 categories:
   - UI and keyboard
 tags:
