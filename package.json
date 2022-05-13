@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-icons",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "Official open source SVG icon library for Bootstrap",
   "author": "mdo",
   "license": "MIT",
@@ -40,6 +40,7 @@
   "sass": "font/bootstrap-icons.scss",
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "bootstrap": "5.2.0-beta1",
     "cross-env": "^7.0.3",
     "eslint": "^8.14.0",
     "fantasticon": "^1.2.3",
