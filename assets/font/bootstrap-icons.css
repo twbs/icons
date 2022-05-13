@@ -1,13 +1,14 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?524846017b983fc8ded9325d94ed40f3") format("woff2"),
-url("./fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?08efbba7c53d8c5413793eecb19b20bb") format("woff2"),
+url("./fonts/bootstrap-icons.woff?08efbba7c53d8c5413793eecb19b20bb") format("woff");
 }
 
 .bi::before,
 [class^="bi-"]::before,
 [class*=" bi-"]::before {
   display: inline-block;
+  font-display: block;
   font-family: bootstrap-icons !important;
   font-style: normal;
   font-weight: normal !important;
