@@ -1080,6 +1080,7 @@ url("./fonts/bootstrap-icons.woff?08efbba7c53d8c5413793eecb19b20bb") format("wof
 .bi-rss-fill::before { content: "\f521"; }
 .bi-rss::before { content: "\f522"; }
 .bi-rulers::before { content: "\f523"; }
+.bi-rupee::before { content: "\f65b"; }
 .bi-save-fill::before { content: "\f524"; }
 .bi-save::before { content: "\f525"; }
 .bi-save2-fill::before { content: "\f526"; }
