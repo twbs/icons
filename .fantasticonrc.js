@@ -28,9 +28,9 @@ module.exports = {
     css: './font/bootstrap-icons.css',
     scss: './font/bootstrap-icons.scss',
     html: './font/index.html',
-    ttf: './font/fonts/bootstrap-icons.ttf',
+    // ttf: './font/fonts/bootstrap-icons.ttf',
     woff: './font/fonts/bootstrap-icons.woff',
     woff2: './font/fonts/bootstrap-icons.woff2',
-    eot: './font/fonts/bootstrap-icons.eot'
+    // eot: './font/fonts/bootstrap-icons.eot'
   }
 }
