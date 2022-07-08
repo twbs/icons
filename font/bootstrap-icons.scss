@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?08efbba7c53d8c5413793eecb19b20bb") format("woff2"),
-url("./fonts/bootstrap-icons.woff?08efbba7c53d8c5413793eecb19b20bb") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?9b4bfe81a16892cbc092c6cd3246d9ba") format("woff2"),
+url("./fonts/bootstrap-icons.woff?9b4bfe81a16892cbc092c6cd3246d9ba") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1706,6 +1706,157 @@ $bootstrap-icons-map: (
   "filetype-json": "\f791",
   "filetype-pptx": "\f792",
   "filetype-xlsx": "\f793",
+  "1-circle-1": "\f794",
+  "1-circle-fill-1": "\f795",
+  "1-circle-fill": "\f796",
+  "1-circle": "\f797",
+  "1-square-fill": "\f798",
+  "1-square": "\f799",
+  "2-circle-1": "\f79a",
+  "2-circle-fill-1": "\f79b",
+  "2-circle-fill": "\f79c",
+  "2-circle": "\f79d",
+  "2-square-fill": "\f79e",
+  "2-square": "\f79f",
+  "3-circle-1": "\f7a0",
+  "3-circle-fill-1": "\f7a1",
+  "3-circle-fill": "\f7a2",
+  "3-circle": "\f7a3",
+  "3-square-fill": "\f7a4",
+  "3-square": "\f7a5",
+  "4-circle-1": "\f7a6",
+  "4-circle-fill-1": "\f7a7",
+  "4-circle-fill": "\f7a8",
+  "4-circle": "\f7a9",
+  "4-square-fill": "\f7aa",
+  "4-square": "\f7ab",
+  "5-circle-1": "\f7ac",
+  "5-circle-fill-1": "\f7ad",
+  "5-circle-fill": "\f7ae",
+  "5-circle": "\f7af",
+  "5-square-fill": "\f7b0",
+  "5-square": "\f7b1",
+  "6-circle-1": "\f7b2",
+  "6-circle-fill-1": "\f7b3",
+  "6-circle-fill": "\f7b4",
+  "6-circle": "\f7b5",
+  "6-square-fill": "\f7b6",
+  "6-square": "\f7b7",
+  "7-circle-1": "\f7b8",
+  "7-circle-fill-1": "\f7b9",
+  "7-circle-fill": "\f7ba",
+  "7-circle": "\f7bb",
+  "7-square-fill": "\f7bc",
+  "7-square": "\f7bd",
+  "8-circle-1": "\f7be",
+  "8-circle-fill-1": "\f7bf",
+  "8-circle-fill": "\f7c0",
+  "8-circle": "\f7c1",
+  "8-square-fill": "\f7c2",
+  "8-square": "\f7c3",
+  "9-circle-1": "\f7c4",
+  "9-circle-fill-1": "\f7c5",
+  "9-circle-fill": "\f7c6",
+  "9-circle": "\f7c7",
+  "9-square-fill": "\f7c8",
+  "9-square": "\f7c9",
+  "airplane-engines-fill": "\f7ca",
+  "airplane-engines": "\f7cb",
+  "airplane-fill": "\f7cc",
+  "airplane": "\f7cd",
+  "alexa": "\f7ce",
+  "alipay": "\f7cf",
+  "android": "\f7d0",
+  "android2": "\f7d1",
+  "box-fill": "\f7d2",
+  "box-seam-fill": "\f7d3",
+  "browser-chrome": "\f7d4",
+  "browser-edge": "\f7d5",
+  "browser-firefox": "\f7d6",
+  "browser-safari": "\f7d7",
+  "c-circle-1": "\f7d8",
+  "c-circle-fill-1": "\f7d9",
+  "c-circle-fill": "\f7da",
+  "c-circle": "\f7db",
+  "c-square-fill": "\f7dc",
+  "c-square": "\f7dd",
+  "capsule-pill": "\f7de",
+  "capsule": "\f7df",
+  "car-front-fill": "\f7e0",
+  "car-front": "\f7e1",
+  "cassette-fill": "\f7e2",
+  "cassette": "\f7e3",
+  "cc-circle-1": "\f7e4",
+  "cc-circle-fill-1": "\f7e5",
+  "cc-circle-fill": "\f7e6",
+  "cc-circle": "\f7e7",
+  "cc-square-fill": "\f7e8",
+  "cc-square": "\f7e9",
+  "cup-hot-fill": "\f7ea",
+  "cup-hot": "\f7eb",
+  "currency-rupee": "\f7ec",
+  "dropbox": "\f7ed",
+  "escape": "\f7ee",
+  "fast-forward-btn-fill": "\f7ef",
+  "fast-forward-btn": "\f7f0",
+  "fast-forward-circle-fill": "\f7f1",
+  "fast-forward-circle": "\f7f2",
+  "fast-forward-fill": "\f7f3",
+  "fast-forward": "\f7f4",
+  "filetype-sql": "\f7f5",
+  "fire": "\f7f6",
+  "google-play": "\f7f7",
+  "h-circle-1": "\f7f8",
+  "h-circle-fill-1": "\f7f9",
+  "h-circle-fill": "\f7fa",
+  "h-circle": "\f7fb",
+  "h-square-fill": "\f7fc",
+  "h-square": "\f7fd",
+  "indent": "\f7fe",
+  "lungs-fill": "\f7ff",
+  "lungs": "\f800",
+  "microsoft-teams": "\f801",
+  "p-circle-1": "\f802",
+  "p-circle-fill-1": "\f803",
+  "p-circle-fill": "\f804",
+  "p-circle": "\f805",
+  "p-square-fill": "\f806",
+  "p-square": "\f807",
+  "pass-fill": "\f808",
+  "pass": "\f809",
+  "prescription": "\f80a",
+  "prescription2": "\f80b",
+  "r-circle-1": "\f80c",
+  "r-circle-fill-1": "\f80d",
+  "r-circle-fill": "\f80e",
+  "r-circle": "\f80f",
+  "r-square-fill": "\f810",
+  "r-square": "\f811",
+  "repeat-1": "\f812",
+  "repeat": "\f813",
+  "rewind-btn-fill": "\f814",
+  "rewind-btn": "\f815",
+  "rewind-circle-fill": "\f816",
+  "rewind-circle": "\f817",
+  "rewind-fill": "\f818",
+  "rewind": "\f819",
+  "train-freight-front-fill": "\f81a",
+  "train-freight-front": "\f81b",
+  "train-front-fill": "\f81c",
+  "train-front": "\f81d",
+  "train-lightrail-front-fill": "\f81e",
+  "train-lightrail-front": "\f81f",
+  "truck-front-fill": "\f820",
+  "truck-front": "\f821",
+  "ubuntu": "\f822",
+  "unindent": "\f823",
+  "unity": "\f824",
+  "universal-access-circle": "\f825",
+  "universal-access": "\f826",
+  "virus": "\f827",
+  "virus2": "\f828",
+  "wechat": "\f829",
+  "yelp": "\f82a",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3391,3 +3542,154 @@ $bootstrap-icons-map: (
 .bi-filetype-json::before { content: map-get($bootstrap-icons-map, "filetype-json"); }
 .bi-filetype-pptx::before { content: map-get($bootstrap-icons-map, "filetype-pptx"); }
 .bi-filetype-xlsx::before { content: map-get($bootstrap-icons-map, "filetype-xlsx"); }
+.bi-1-circle-1::before { content: map-get($bootstrap-icons-map, "1-circle-1"); }
+.bi-1-circle-fill-1::before { content: map-get($bootstrap-icons-map, "1-circle-fill-1"); }
+.bi-1-circle-fill::before { content: map-get($bootstrap-icons-map, "1-circle-fill"); }
+.bi-1-circle::before { content: map-get($bootstrap-icons-map, "1-circle"); }
+.bi-1-square-fill::before { content: map-get($bootstrap-icons-map, "1-square-fill"); }
+.bi-1-square::before { content: map-get($bootstrap-icons-map, "1-square"); }
+.bi-2-circle-1::before { content: map-get($bootstrap-icons-map, "2-circle-1"); }
+.bi-2-circle-fill-1::before { content: map-get($bootstrap-icons-map, "2-circle-fill-1"); }
+.bi-2-circle-fill::before { content: map-get($bootstrap-icons-map, "2-circle-fill"); }
+.bi-2-circle::before { content: map-get($bootstrap-icons-map, "2-circle"); }
+.bi-2-square-fill::before { content: map-get($bootstrap-icons-map, "2-square-fill"); }
+.bi-2-square::before { content: map-get($bootstrap-icons-map, "2-square"); }
+.bi-3-circle-1::before { content: map-get($bootstrap-icons-map, "3-circle-1"); }
+.bi-3-circle-fill-1::before { content: map-get($bootstrap-icons-map, "3-circle-fill-1"); }
+.bi-3-circle-fill::before { content: map-get($bootstrap-icons-map, "3-circle-fill"); }
+.bi-3-circle::before { content: map-get($bootstrap-icons-map, "3-circle"); }
+.bi-3-square-fill::before { content: map-get($bootstrap-icons-map, "3-square-fill"); }
+.bi-3-square::before { content: map-get($bootstrap-icons-map, "3-square"); }
+.bi-4-circle-1::before { content: map-get($bootstrap-icons-map, "4-circle-1"); }
+.bi-4-circle-fill-1::before { content: map-get($bootstrap-icons-map, "4-circle-fill-1"); }
+.bi-4-circle-fill::before { content: map-get($bootstrap-icons-map, "4-circle-fill"); }
+.bi-4-circle::before { content: map-get($bootstrap-icons-map, "4-circle"); }
+.bi-4-square-fill::before { content: map-get($bootstrap-icons-map, "4-square-fill"); }
+.bi-4-square::before { content: map-get($bootstrap-icons-map, "4-square"); }
+.bi-5-circle-1::before { content: map-get($bootstrap-icons-map, "5-circle-1"); }
+.bi-5-circle-fill-1::before { content: map-get($bootstrap-icons-map, "5-circle-fill-1"); }
+.bi-5-circle-fill::before { content: map-get($bootstrap-icons-map, "5-circle-fill"); }
+.bi-5-circle::before { content: map-get($bootstrap-icons-map, "5-circle"); }
+.bi-5-square-fill::before { content: map-get($bootstrap-icons-map, "5-square-fill"); }
+.bi-5-square::before { content: map-get($bootstrap-icons-map, "5-square"); }
+.bi-6-circle-1::before { content: map-get($bootstrap-icons-map, "6-circle-1"); }
+.bi-6-circle-fill-1::before { content: map-get($bootstrap-icons-map, "6-circle-fill-1"); }
+.bi-6-circle-fill::before { content: map-get($bootstrap-icons-map, "6-circle-fill"); }
+.bi-6-circle::before { content: map-get($bootstrap-icons-map, "6-circle"); }
+.bi-6-square-fill::before { content: map-get($bootstrap-icons-map, "6-square-fill"); }
+.bi-6-square::before { content: map-get($bootstrap-icons-map, "6-square"); }
+.bi-7-circle-1::before { content: map-get($bootstrap-icons-map, "7-circle-1"); }
+.bi-7-circle-fill-1::before { content: map-get($bootstrap-icons-map, "7-circle-fill-1"); }
+.bi-7-circle-fill::before { content: map-get($bootstrap-icons-map, "7-circle-fill"); }
+.bi-7-circle::before { content: map-get($bootstrap-icons-map, "7-circle"); }
+.bi-7-square-fill::before { content: map-get($bootstrap-icons-map, "7-square-fill"); }
+.bi-7-square::before { content: map-get($bootstrap-icons-map, "7-square"); }
+.bi-8-circle-1::before { content: map-get($bootstrap-icons-map, "8-circle-1"); }
+.bi-8-circle-fill-1::before { content: map-get($bootstrap-icons-map, "8-circle-fill-1"); }
+.bi-8-circle-fill::before { content: map-get($bootstrap-icons-map, "8-circle-fill"); }
+.bi-8-circle::before { content: map-get($bootstrap-icons-map, "8-circle"); }
+.bi-8-square-fill::before { content: map-get($bootstrap-icons-map, "8-square-fill"); }
+.bi-8-square::before { content: map-get($bootstrap-icons-map, "8-square"); }
+.bi-9-circle-1::before { content: map-get($bootstrap-icons-map, "9-circle-1"); }
+.bi-9-circle-fill-1::before { content: map-get($bootstrap-icons-map, "9-circle-fill-1"); }
+.bi-9-circle-fill::before { content: map-get($bootstrap-icons-map, "9-circle-fill"); }
+.bi-9-circle::before { content: map-get($bootstrap-icons-map, "9-circle"); }
+.bi-9-square-fill::before { content: map-get($bootstrap-icons-map, "9-square-fill"); }
+.bi-9-square::before { content: map-get($bootstrap-icons-map, "9-square"); }
+.bi-airplane-engines-fill::before { content: map-get($bootstrap-icons-map, "airplane-engines-fill"); }
+.bi-airplane-engines::before { content: map-get($bootstrap-icons-map, "airplane-engines"); }
+.bi-airplane-fill::before { content: map-get($bootstrap-icons-map, "airplane-fill"); }
+.bi-airplane::before { content: map-get($bootstrap-icons-map, "airplane"); }
+.bi-alexa::before { content: map-get($bootstrap-icons-map, "alexa"); }
+.bi-alipay::before { content: map-get($bootstrap-icons-map, "alipay"); }
+.bi-android::before { content: map-get($bootstrap-icons-map, "android"); }
+.bi-android2::before { content: map-get($bootstrap-icons-map, "android2"); }
+.bi-box-fill::before { content: map-get($bootstrap-icons-map, "box-fill"); }
+.bi-box-seam-fill::before { content: map-get($bootstrap-icons-map, "box-seam-fill"); }
+.bi-browser-chrome::before { content: map-get($bootstrap-icons-map, "browser-chrome"); }
+.bi-browser-edge::before { content: map-get($bootstrap-icons-map, "browser-edge"); }
+.bi-browser-firefox::before { content: map-get($bootstrap-icons-map, "browser-firefox"); }
+.bi-browser-safari::before { content: map-get($bootstrap-icons-map, "browser-safari"); }
+.bi-c-circle-1::before { content: map-get($bootstrap-icons-map, "c-circle-1"); }
+.bi-c-circle-fill-1::before { content: map-get($bootstrap-icons-map, "c-circle-fill-1"); }
+.bi-c-circle-fill::before { content: map-get($bootstrap-icons-map, "c-circle-fill"); }
+.bi-c-circle::before { content: map-get($bootstrap-icons-map, "c-circle"); }
+.bi-c-square-fill::before { content: map-get($bootstrap-icons-map, "c-square-fill"); }
+.bi-c-square::before { content: map-get($bootstrap-icons-map, "c-square"); }
+.bi-capsule-pill::before { content: map-get($bootstrap-icons-map, "capsule-pill"); }
+.bi-capsule::before { content: map-get($bootstrap-icons-map, "capsule"); }
+.bi-car-front-fill::before { content: map-get($bootstrap-icons-map, "car-front-fill"); }
+.bi-car-front::before { content: map-get($bootstrap-icons-map, "car-front"); }
+.bi-cassette-fill::before { content: map-get($bootstrap-icons-map, "cassette-fill"); }
+.bi-cassette::before { content: map-get($bootstrap-icons-map, "cassette"); }
+.bi-cc-circle-1::before { content: map-get($bootstrap-icons-map, "cc-circle-1"); }
+.bi-cc-circle-fill-1::before { content: map-get($bootstrap-icons-map, "cc-circle-fill-1"); }
+.bi-cc-circle-fill::before { content: map-get($bootstrap-icons-map, "cc-circle-fill"); }
+.bi-cc-circle::before { content: map-get($bootstrap-icons-map, "cc-circle"); }
+.bi-cc-square-fill::before { content: map-get($bootstrap-icons-map, "cc-square-fill"); }
+.bi-cc-square::before { content: map-get($bootstrap-icons-map, "cc-square"); }
+.bi-cup-hot-fill::before { content: map-get($bootstrap-icons-map, "cup-hot-fill"); }
+.bi-cup-hot::before { content: map-get($bootstrap-icons-map, "cup-hot"); }
+.bi-currency-rupee::before { content: map-get($bootstrap-icons-map, "currency-rupee"); }
+.bi-dropbox::before { content: map-get($bootstrap-icons-map, "dropbox"); }
+.bi-escape::before { content: map-get($bootstrap-icons-map, "escape"); }
+.bi-fast-forward-btn-fill::before { content: map-get($bootstrap-icons-map, "fast-forward-btn-fill"); }
+.bi-fast-forward-btn::before { content: map-get($bootstrap-icons-map, "fast-forward-btn"); }
+.bi-fast-forward-circle-fill::before { content: map-get($bootstrap-icons-map, "fast-forward-circle-fill"); }
+.bi-fast-forward-circle::before { content: map-get($bootstrap-icons-map, "fast-forward-circle"); }
+.bi-fast-forward-fill::before { content: map-get($bootstrap-icons-map, "fast-forward-fill"); }
+.bi-fast-forward::before { content: map-get($bootstrap-icons-map, "fast-forward"); }
+.bi-filetype-sql::before { content: map-get($bootstrap-icons-map, "filetype-sql"); }
+.bi-fire::before { content: map-get($bootstrap-icons-map, "fire"); }
+.bi-google-play::before { content: map-get($bootstrap-icons-map, "google-play"); }
+.bi-h-circle-1::before { content: map-get($bootstrap-icons-map, "h-circle-1"); }
+.bi-h-circle-fill-1::before { content: map-get($bootstrap-icons-map, "h-circle-fill-1"); }
+.bi-h-circle-fill::before { content: map-get($bootstrap-icons-map, "h-circle-fill"); }
+.bi-h-circle::before { content: map-get($bootstrap-icons-map, "h-circle"); }
+.bi-h-square-fill::before { content: map-get($bootstrap-icons-map, "h-square-fill"); }
+.bi-h-square::before { content: map-get($bootstrap-icons-map, "h-square"); }
+.bi-indent::before { content: map-get($bootstrap-icons-map, "indent"); }
+.bi-lungs-fill::before { content: map-get($bootstrap-icons-map, "lungs-fill"); }
+.bi-lungs::before { content: map-get($bootstrap-icons-map, "lungs"); }
+.bi-microsoft-teams::before { content: map-get($bootstrap-icons-map, "microsoft-teams"); }
+.bi-p-circle-1::before { content: map-get($bootstrap-icons-map, "p-circle-1"); }
+.bi-p-circle-fill-1::before { content: map-get($bootstrap-icons-map, "p-circle-fill-1"); }
+.bi-p-circle-fill::before { content: map-get($bootstrap-icons-map, "p-circle-fill"); }
+.bi-p-circle::before { content: map-get($bootstrap-icons-map, "p-circle"); }
+.bi-p-square-fill::before { content: map-get($bootstrap-icons-map, "p-square-fill"); }
+.bi-p-square::before { content: map-get($bootstrap-icons-map, "p-square"); }
+.bi-pass-fill::before { content: map-get($bootstrap-icons-map, "pass-fill"); }
+.bi-pass::before { content: map-get($bootstrap-icons-map, "pass"); }
+.bi-prescription::before { content: map-get($bootstrap-icons-map, "prescription"); }
+.bi-prescription2::before { content: map-get($bootstrap-icons-map, "prescription2"); }
+.bi-r-circle-1::before { content: map-get($bootstrap-icons-map, "r-circle-1"); }
+.bi-r-circle-fill-1::before { content: map-get($bootstrap-icons-map, "r-circle-fill-1"); }
+.bi-r-circle-fill::before { content: map-get($bootstrap-icons-map, "r-circle-fill"); }
+.bi-r-circle::before { content: map-get($bootstrap-icons-map, "r-circle"); }
+.bi-r-square-fill::before { content: map-get($bootstrap-icons-map, "r-square-fill"); }
+.bi-r-square::before { content: map-get($bootstrap-icons-map, "r-square"); }
+.bi-repeat-1::before { content: map-get($bootstrap-icons-map, "repeat-1"); }
+.bi-repeat::before { content: map-get($bootstrap-icons-map, "repeat"); }
+.bi-rewind-btn-fill::before { content: map-get($bootstrap-icons-map, "rewind-btn-fill"); }
+.bi-rewind-btn::before { content: map-get($bootstrap-icons-map, "rewind-btn"); }
+.bi-rewind-circle-fill::before { content: map-get($bootstrap-icons-map, "rewind-circle-fill"); }
+.bi-rewind-circle::before { content: map-get($bootstrap-icons-map, "rewind-circle"); }
+.bi-rewind-fill::before { content: map-get($bootstrap-icons-map, "rewind-fill"); }
+.bi-rewind::before { content: map-get($bootstrap-icons-map, "rewind"); }
+.bi-train-freight-front-fill::before { content: map-get($bootstrap-icons-map, "train-freight-front-fill"); }
+.bi-train-freight-front::before { content: map-get($bootstrap-icons-map, "train-freight-front"); }
+.bi-train-front-fill::before { content: map-get($bootstrap-icons-map, "train-front-fill"); }
+.bi-train-front::before { content: map-get($bootstrap-icons-map, "train-front"); }
+.bi-train-lightrail-front-fill::before { content: map-get($bootstrap-icons-map, "train-lightrail-front-fill"); }
+.bi-train-lightrail-front::before { content: map-get($bootstrap-icons-map, "train-lightrail-front"); }
+.bi-truck-front-fill::before { content: map-get($bootstrap-icons-map, "truck-front-fill"); }
+.bi-truck-front::before { content: map-get($bootstrap-icons-map, "truck-front"); }
+.bi-ubuntu::before { content: map-get($bootstrap-icons-map, "ubuntu"); }
+.bi-unindent::before { content: map-get($bootstrap-icons-map, "unindent"); }
+.bi-unity::before { content: map-get($bootstrap-icons-map, "unity"); }
+.bi-universal-access-circle::before { content: map-get($bootstrap-icons-map, "universal-access-circle"); }
+.bi-universal-access::before { content: map-get($bootstrap-icons-map, "universal-access"); }
+.bi-virus::before { content: map-get($bootstrap-icons-map, "virus"); }
+.bi-virus2::before { content: map-get($bootstrap-icons-map, "virus2"); }
+.bi-wechat::before { content: map-get($bootstrap-icons-map, "wechat"); }
+.bi-yelp::before { content: map-get($bootstrap-icons-map, "yelp"); }
