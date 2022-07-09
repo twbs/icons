@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?9b4bfe81a16892cbc092c6cd3246d9ba") format("woff2"),
-url("./fonts/bootstrap-icons.woff?9b4bfe81a16892cbc092c6cd3246d9ba") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?e65e944089c3a2deabb3b4250a4e55fc") format("woff2"),
+url("./fonts/bootstrap-icons.woff?e65e944089c3a2deabb3b4250a4e55fc") format("woff");
 }
 
 .bi::before,
