@@ -1,7 +1,7 @@
 @font-face {
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?e65e944089c3a2deabb3b4250a4e55fc") format("woff2"),
-url("./fonts/bootstrap-icons.woff?e65e944089c3a2deabb3b4250a4e55fc") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?3cc46883d1a72b7c355623a5d3897237") format("woff2"),
+url("./fonts/bootstrap-icons.woff?3cc46883d1a72b7c355623a5d3897237") format("woff");
 }
 
 .bi::before,
@@ -1854,3 +1854,17 @@ url("./fonts/bootstrap-icons.woff?e65e944089c3a2deabb3b4250a4e55fc") format("wof
 .bi-virus2::before { content: "\f828"; }
 .bi-wechat::before { content: "\f829"; }
 .bi-yelp::before { content: "\f82a"; }
+.bi-sign-stop-fill::before { content: "\f82b"; }
+.bi-sign-stop-lights-fill::before { content: "\f82c"; }
+.bi-sign-stop-lights::before { content: "\f82d"; }
+.bi-sign-stop::before { content: "\f82e"; }
+.bi-sign-turn-left-fill::before { content: "\f82f"; }
+.bi-sign-turn-left::before { content: "\f830"; }
+.bi-sign-turn-right-fill::before { content: "\f831"; }
+.bi-sign-turn-right::before { content: "\f832"; }
+.bi-sign-turn-slight-left-fill::before { content: "\f833"; }
+.bi-sign-turn-slight-left::before { content: "\f834"; }
+.bi-sign-turn-slight-right-fill::before { content: "\f835"; }
+.bi-sign-turn-slight-right::before { content: "\f836"; }
+.bi-sign-yield-fill::before { content: "\f837"; }
+.bi-sign-yield::before { content: "\f838"; }

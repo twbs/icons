@@ -1,6 +1,6 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?e65e944089c3a2deabb3b4250a4e55fc") format("woff2"),
-url("./fonts/bootstrap-icons.woff?e65e944089c3a2deabb3b4250a4e55fc") format("woff") !default;
+$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?3cc46883d1a72b7c355623a5d3897237") format("woff2"),
+url("./fonts/bootstrap-icons.woff?3cc46883d1a72b7c355623a5d3897237") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;
@@ -1857,6 +1857,20 @@ $bootstrap-icons-map: (
   "virus2": "\f828",
   "wechat": "\f829",
   "yelp": "\f82a",
+  "sign-stop-fill": "\f82b",
+  "sign-stop-lights-fill": "\f82c",
+  "sign-stop-lights": "\f82d",
+  "sign-stop": "\f82e",
+  "sign-turn-left-fill": "\f82f",
+  "sign-turn-left": "\f830",
+  "sign-turn-right-fill": "\f831",
+  "sign-turn-right": "\f832",
+  "sign-turn-slight-left-fill": "\f833",
+  "sign-turn-slight-left": "\f834",
+  "sign-turn-slight-right-fill": "\f835",
+  "sign-turn-slight-right": "\f836",
+  "sign-yield-fill": "\f837",
+  "sign-yield": "\f838",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3693,3 +3707,17 @@ $bootstrap-icons-map: (
 .bi-virus2::before { content: map-get($bootstrap-icons-map, "virus2"); }
 .bi-wechat::before { content: map-get($bootstrap-icons-map, "wechat"); }
 .bi-yelp::before { content: map-get($bootstrap-icons-map, "yelp"); }
+.bi-sign-stop-fill::before { content: map-get($bootstrap-icons-map, "sign-stop-fill"); }
+.bi-sign-stop-lights-fill::before { content: map-get($bootstrap-icons-map, "sign-stop-lights-fill"); }
+.bi-sign-stop-lights::before { content: map-get($bootstrap-icons-map, "sign-stop-lights"); }
+.bi-sign-stop::before { content: map-get($bootstrap-icons-map, "sign-stop"); }
+.bi-sign-turn-left-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-left-fill"); }
+.bi-sign-turn-left::before { content: map-get($bootstrap-icons-map, "sign-turn-left"); }
+.bi-sign-turn-right-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-right-fill"); }
+.bi-sign-turn-right::before { content: map-get($bootstrap-icons-map, "sign-turn-right"); }
+.bi-sign-turn-slight-left-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-left-fill"); }
+.bi-sign-turn-slight-left::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-left"); }
+.bi-sign-turn-slight-right-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-right-fill"); }
+.bi-sign-turn-slight-right::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-right"); }
+.bi-sign-yield-fill::before { content: map-get($bootstrap-icons-map, "sign-yield-fill"); }
+.bi-sign-yield::before { content: map-get($bootstrap-icons-map, "sign-yield"); }

@@ -1832,5 +1832,19 @@
   "virus": 63527,
   "virus2": 63528,
   "wechat": 63529,
-  "yelp": 63530
+  "yelp": 63530,
+  "sign-stop-fill": 63531,
+  "sign-stop-lights-fill": 63532,
+  "sign-stop-lights": 63533,
+  "sign-stop": 63534,
+  "sign-turn-left-fill": 63535,
+  "sign-turn-left": 63536,
+  "sign-turn-right-fill": 63537,
+  "sign-turn-right": 63538,
+  "sign-turn-slight-left-fill": 63539,
+  "sign-turn-slight-left": 63540,
+  "sign-turn-slight-right-fill": 63541,
+  "sign-turn-slight-right": 63542,
+  "sign-yield-fill": 63543,
+  "sign-yield": 63544
 }
