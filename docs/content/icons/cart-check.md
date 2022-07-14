@@ -1,6 +1,5 @@
 ---
 title: Cart check
-layout: icon
 categories:
   - Commerce
 tags:

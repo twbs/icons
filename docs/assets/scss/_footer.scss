@@ -4,15 +4,15 @@
 
 .bd-footer {
   font-size: .875rem;
-  color: #63707c;
+  color: var(--bs-gray-600);
 
   a {
     font-weight: 600;
-    color: $gray-700;
+    color: var(--bs-gray-700);
 
     &:hover,
     &:focus {
-      color: $blue;
+      color: var(--bs-primary);
     }
   }
 

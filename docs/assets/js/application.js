@@ -45,7 +45,16 @@
 
     errorElement.classList.remove('d-none')
     errorElement.insertAdjacentHTML('afterbegin', fallbackMsg)
-  });
+  })
+
+  var searchInput = document.getElementById('search')
+  if (searchInput) {
+    searchInput.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault()
+      }
+    })
+  }
 
   // Disable empty links in docs
   [].slice.call(document.querySelectorAll('[href="#"]'))

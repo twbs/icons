@@ -1,6 +1,5 @@
 ---
 title: Emoji frown
-layout: icon
 categories:
   - Emoji
 tags:

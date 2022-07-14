@@ -1,6 +1,5 @@
 ---
 title: Cart4
-layout: icon
 categories:
   - Commerce
 tags:

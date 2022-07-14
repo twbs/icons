@@ -8,6 +8,13 @@ disableKinds:           ["404", "taxonomy", "term", "RSS"]
 
 publishDir:             "_site"
 
+security:
+  enableInlineShortcodes: true
+  funcs:
+    getenv:
+      - ^HUGO_
+      - NETLIFY
+
 markup:
   goldmark:
     renderer:
@@ -36,14 +43,18 @@ module:
     - source:           icons
       target:           static/assets/icons
     - source:           font
-      target:           static/font
+      target:           static/assets/font
+    - source:           node_modules/bootstrap/scss
+      target:           assets/scss/bootstrap
+    - source:           node_modules/bootstrap/dist/js/bootstrap.min.js
+      target:           assets/js/bootstrap.min.js
 
 params:
   description:          "Official open source SVG icon library for Bootstrap"
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
-  version:              "1.7.0"
-  bs_docs_version:      "5.1"
+  version:              "1.9.0"
+  docs_version:         "5.2"
 
   main:                 "https://getbootstrap.com"
   github_org:           "https://github.com/twbs"
@@ -54,3 +65,4 @@ params:
   expo:                 "https://expo.getbootstrap.com"
   themes:               "https://themes.getbootstrap.com"
   opencollective:       "https://opencollective.com/bootstrap"
+  icons_figma:          "https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"

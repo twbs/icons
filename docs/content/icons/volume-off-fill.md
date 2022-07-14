@@ -1,6 +1,5 @@
 ---
 title: Volume off fill
-layout: icon
 categories:
   - Media
 tags:

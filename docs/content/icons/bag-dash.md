@@ -1,6 +1,5 @@
 ---
 title: Bag dash
-layout: icon
 categories:
   - Commerce
 tags:

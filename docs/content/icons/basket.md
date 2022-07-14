@@ -1,6 +1,5 @@
 ---
 title: Basket
-layout: icon
 categories:
   - Commerce
 tags:

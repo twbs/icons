@@ -1,4 +1,4 @@
-// stylelint-disable comment-empty-line-before, declaration-block-single-line-max-declarations, selector-class-pattern
+// stylelint-disable comment-empty-line-before, declaration-block-single-line-max-declarations
 
 /* Background .chroma { background-color: #f0f0f0; } */
 /* Other .chroma .x { } */
@@ -88,7 +88,7 @@
   .language-bash,
   .language-sh {
     &::before {
-      color: $gray-500;
+      color: var(--bs-gray-600);
       content: "$ ";
       user-select: none;
     }

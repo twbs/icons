@@ -1,6 +1,5 @@
 ---
 title: Truck flatbed
-layout: icon
 categories:
   - Commerce
 tags:

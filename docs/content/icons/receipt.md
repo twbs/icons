@@ -1,6 +1,5 @@
 ---
 title: Receipt
-layout: icon
 categories:
   - Commerce
 tags:

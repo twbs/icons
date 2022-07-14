@@ -1,6 +1,5 @@
 ---
 title: Cart2
-layout: icon
 categories:
   - Commerce
 tags:

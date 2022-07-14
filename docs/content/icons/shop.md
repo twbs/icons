@@ -1,6 +1,5 @@
 ---
 title: Shop
-layout: icon
 categories:
   - Commerce
 tags:

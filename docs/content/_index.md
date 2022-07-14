@@ -8,11 +8,14 @@ Bootstrap Icons are published to npm, but they can also be manually downloaded i
 <div class="row my-4">
   <div class="col-md-4">
 {{< md >}}
-### npm
-Install [Bootstrap Icons](https://www.npmjs.com/package/bootstrap-icons)—including SVGs, icon sprite, and icon fonts—with npm. Then, choose how you'd like to include the icons with the [usage instructions](#usage).
+### Package manager
+Install [Bootstrap Icons](https://www.npmjs.com/package/bootstrap-icons)—including SVGs, icon sprite, and icon fonts—with npm or Composer. Then, choose how you'd like to include the icons with the [usage instructions](#usage).
 
 {{< highlight sh >}}
 npm i bootstrap-icons
+{{< /highlight >}}
+{{< highlight sh >}}
+composer require twbs/bootstrap-icons
 {{< /highlight >}}
 {{< /md >}}
   </div>
@@ -42,7 +45,7 @@ Include the icon fonts stylesheet—in your website `<head>` or via `@import` in
 
 ## Usage
 
-Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup. Bootstrap Icons include a `width` and `height` of `1em` by default to allow for easy resizing via `font-size`.
+Bootstrap Icons are SVGs, so you can include them into your HTML in a few ways depending on how your project is setup. We recommend using a `width: 1em` (and optionally `height: 1em`) for easy resizing via `font-size`.
 
 <div class="row my-4">
   <div class="col-md-4">
@@ -52,7 +55,7 @@ Embed your icons within the HTML of your page (as opposed to an external image f
 {{< /md >}}
   </div>
   <div class="col-md-8">
-    {{< example >}}<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>{{< /example >}}
+    {{< example >}}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-heart-eyes" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M11.315 10.014a.5.5 0 0 1 .548.736A4.498 4.498 0 0 1 7.965 13a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .548-.736h.005l.017.005.067.015.252.055c.215.046.515.108.857.169.693.124 1.522.242 2.152.242.63 0 1.46-.118 2.152-.242a26.58 26.58 0 0 0 1.109-.224l.067-.015.017-.004.005-.002zM4.756 4.566c.763-1.424 4.02-.12.952 3.434-4.496-1.596-2.35-4.298-.952-3.434zm6.488 0c1.398-.864 3.544 1.838-.952 3.434-3.067-3.554.19-4.858.952-3.434z"/></svg>{{< /example >}}
   </div>
 </div>
 
@@ -157,7 +160,7 @@ Color can be changed by setting a `.text-*` class or custom CSS:
   <div class="col-md-4">
 {{< md >}}
 ## Accessibility
-If the icons are not purely decorative, make sure you provide an appropriate text alternative. Depending on which method you're using to add the icons, and where you're using them (e.g. as standalone images, or as the only content of a button or similar control), there are various possible approaches. Here are a few examples:
+For purely decorative icons, add `aria-hidden="true"`. Otherwise, provide an appropriate text alternative. Depending on which method you're using to add the icons, and where you're using them (e.g. as standalone images, or as the only content of a button or similar control), there are various possible approaches. Here are a few examples:
 {{< /md >}}
   </div>
   <div class="col-md-8">
@@ -186,13 +189,13 @@ If the icons are not purely decorative, make sure you provide an appropriate tex
 {{< /highlight >}}
     <div class="bd-example">
       <button type="button" class="btn btn-primary" aria-label="Mute">
-        <svg class="bi bi-volume-mute-fill" width="32" height="32" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.717 3.55A.5.5 0 017 4v8a.5.5 0 01-.812.39L3.825 10.5H1.5A.5.5 0 011 10V6a.5.5 0 01.5-.5h2.325l2.363-1.89a.5.5 0 01.529-.06zm7.137 2.096a.5.5 0 010 .708L12.207 8l1.647 1.646a.5.5 0 01-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 01-.708-.708L10.793 8 9.146 6.354a.5.5 0 11.708-.708L11.5 7.293l1.646-1.647a.5.5 0 01.708 0z"></path></svg>
+        <svg class="bi bi-volume-mute-fill" width="32" height="32" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.717 3.55A.5.5 0 017 4v8a.5.5 0 01-.812.39L3.825 10.5H1.5A.5.5 0 011 10V6a.5.5 0 01.5-.5h2.325l2.363-1.89a.5.5 0 01.529-.06zm7.137 2.096a.5.5 0 010 .708L12.207 8l1.647 1.646a.5.5 0 01-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 01-.708-.708L10.793 8 9.146 6.354a.5.5 0 11.708-.708L11.5 7.293l1.646-1.647a.5.5 0 01.708 0z"></path></svg>
       </button>
     </div>
 {{< highlight html >}}
 <!-- aria-label="..." on the control -->
 <button ... aria-label="Mute">
-  <svg class="bi bi-volume-mute-fill" ...>
+  <svg class="bi bi-volume-mute-fill" aria-hidden="true" ...>
   ...
   </svg>
 </button>
