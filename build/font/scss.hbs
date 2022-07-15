@@ -2,6 +2,7 @@ ${{ name }}-font: "{{ name }}" !default;
 ${{ name }}-font-src: {{{ fontSrc }}} !default;
 
 @font-face {
+  font-display: block;
   font-family: ${{ name }}-font;
   src: ${{ name }}-font-src;
 }
