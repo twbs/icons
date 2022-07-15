@@ -1846,5 +1846,11 @@
   "sign-turn-slight-right-fill": 63541,
   "sign-turn-slight-right": 63542,
   "sign-yield-fill": 63543,
-  "sign-yield": 63544
+  "sign-yield": 63544,
+  "ev-station-fill": 63545,
+  "ev-station": 63546,
+  "fuel-pump-diesel-fill": 63547,
+  "fuel-pump-diesel": 63548,
+  "fuel-pump-fill": 63549,
+  "fuel-pump": 63550
 }
