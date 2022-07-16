@@ -1,7 +1,7 @@
 ${{ name }}-font: "{{ name }}" !default;
 ${{ name }}-font-dir: "{{ fontsUrl }}" !default;
 ${{ name }}-font-file: #{${{ name }}-font-dir}/#{${{ name }}-font} !default;
-${{ name }}-font-hash: "{{ hash }}" !default;
+${{ name }}-font-hash: "8d200481aa7f02a2d63a331fc782cfaf" !default;
 ${{ name }}-font-src: url("#{${{ name }}-font-file}.woff2?#{${{ name }}-font-hash}") format("woff2"), url("#{${{ name }}-font-file}.woff?#{${{ name }}-font-hash}") format("woff") !default;
 
 @font-face {
