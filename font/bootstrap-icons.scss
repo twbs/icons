@@ -1,10 +1,11 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
 $bootstrap-icons-fonts-dir: "./fonts" !default;
 $bootstrap-icons-font-file: #{$bootstrap-icons-fonts-dir}/#{$bootstrap-icons-font} !default;
-$bootstrap-icons-font-hash: "48804dbfe98a9c8a08858a0de0b0e3db" !default;
+$bootstrap-icons-font-hash: "8d200481aa7f02a2d63a331fc782cfaf" !default;
 $bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap-icons-font-hash}") format("woff2"), url("#{$bootstrap-icons-font-file}.woff?#{$bootstrap-icons-font-hash}") format("woff") !default;
 
 @font-face {
+  font-display: block;
   font-family: $bootstrap-icons-font;
   src: $bootstrap-icons-font-src;
 }
@@ -1873,6 +1874,12 @@ $bootstrap-icons-map: (
   "sign-turn-slight-right": "\f836",
   "sign-yield-fill": "\f837",
   "sign-yield": "\f838",
+  "ev-station-fill": "\f839",
+  "ev-station": "\f83a",
+  "fuel-pump-diesel-fill": "\f83b",
+  "fuel-pump-diesel": "\f83c",
+  "fuel-pump-fill": "\f83d",
+  "fuel-pump": "\f83e",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3723,3 +3730,9 @@ $bootstrap-icons-map: (
 .bi-sign-turn-slight-right::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-right"); }
 .bi-sign-yield-fill::before { content: map-get($bootstrap-icons-map, "sign-yield-fill"); }
 .bi-sign-yield::before { content: map-get($bootstrap-icons-map, "sign-yield"); }
+.bi-ev-station-fill::before { content: map-get($bootstrap-icons-map, "ev-station-fill"); }
+.bi-ev-station::before { content: map-get($bootstrap-icons-map, "ev-station"); }
+.bi-fuel-pump-diesel-fill::before { content: map-get($bootstrap-icons-map, "fuel-pump-diesel-fill"); }
+.bi-fuel-pump-diesel::before { content: map-get($bootstrap-icons-map, "fuel-pump-diesel"); }
+.bi-fuel-pump-fill::before { content: map-get($bootstrap-icons-map, "fuel-pump-fill"); }
+.bi-fuel-pump::before { content: map-get($bootstrap-icons-map, "fuel-pump"); }
