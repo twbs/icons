@@ -1,14 +1,14 @@
 @font-face {
+  font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?48804dbfe98a9c8a08858a0de0b0e3db") format("woff2"),
-url("./fonts/bootstrap-icons.woff?48804dbfe98a9c8a08858a0de0b0e3db") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf") format("woff2"),
+url("./fonts/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("woff");
 }
 
 .bi::before,
 [class^="bi-"]::before,
 [class*=" bi-"]::before {
   display: inline-block;
-  font-display: block;
   font-family: bootstrap-icons !important;
   font-style: normal;
   font-weight: normal !important;
@@ -1868,3 +1868,9 @@ url("./fonts/bootstrap-icons.woff?48804dbfe98a9c8a08858a0de0b0e3db") format("wof
 .bi-sign-turn-slight-right::before { content: "\f836"; }
 .bi-sign-yield-fill::before { content: "\f837"; }
 .bi-sign-yield::before { content: "\f838"; }
+.bi-ev-station-fill::before { content: "\f839"; }
+.bi-ev-station::before { content: "\f83a"; }
+.bi-fuel-pump-diesel-fill::before { content: "\f83b"; }
+.bi-fuel-pump-diesel::before { content: "\f83c"; }
+.bi-fuel-pump-fill::before { content: "\f83d"; }
+.bi-fuel-pump::before { content: "\f83e"; }
