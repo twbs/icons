@@ -6,4 +6,5 @@ tags:
   - trash-can
   - garbage
   - delete
+  - remove
 ---
