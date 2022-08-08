@@ -1880,6 +1880,9 @@ $bootstrap-icons-map: (
   "fuel-pump-diesel": "\f83c",
   "fuel-pump-fill": "\f83d",
   "fuel-pump": "\f83e",
+  "ce": "\f83f",
+  "fcc": "\f840",
+  "ukca": "\f841",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3736,3 +3739,6 @@ $bootstrap-icons-map: (
 .bi-fuel-pump-diesel::before { content: map-get($bootstrap-icons-map, "fuel-pump-diesel"); }
 .bi-fuel-pump-fill::before { content: map-get($bootstrap-icons-map, "fuel-pump-fill"); }
 .bi-fuel-pump::before { content: map-get($bootstrap-icons-map, "fuel-pump"); }
+.bi-ce::before { content: map-get($bootstrap-icons-map, "ce"); }
+.bi-fcc::before { content: map-get($bootstrap-icons-map, "fcc"); }
+.bi-ukca::before { content: map-get($bootstrap-icons-map, "ukca"); }

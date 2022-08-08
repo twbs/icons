@@ -1852,5 +1852,8 @@
   "fuel-pump-diesel-fill": 63547,
   "fuel-pump-diesel": 63548,
   "fuel-pump-fill": 63549,
-  "fuel-pump": 63550
+  "fuel-pump": 63550,
+  "ce": 63551,
+  "fcc": 63552,
+  "ukca": 63553
 }
