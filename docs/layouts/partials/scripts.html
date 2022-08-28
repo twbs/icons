@@ -1,7 +1,7 @@
 {{ $bootstrapJs := resources.Get "/js/bootstrap.min.js" }}
 <script src="{{ $bootstrapJs.Permalink | relURL }}"></script>
 
-{{- if .IsHome }}
+{{- if or .IsHome (eq .Page.Layout "font") }}
 <script src="/assets/js/list.min.js"></script>
 <script>
   new List('icons-body', {
