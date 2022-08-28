@@ -2,14 +2,12 @@
 <html lang="en">
   <head>
     {{ partial "head" . }}
-
-    <link rel="stylesheet" href="/assets/font/bootstrap-icons.css">
   </head>
   <body id="icons-body" class="text-center">
     {{ partialCached "skippy" . }}
     {{ partialCached "navbar" . }}
 
-    <main class="container" id="content">
+    <main class="container-xxl bd-gutter" id="content">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb my-4 p-0">
           <li class="breadcrumb-item"><a href="/">Icons</a></li>
