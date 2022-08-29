@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body id="icons-body">
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
+    {{ block "hero" . }}{{ end }}
+
+    <main class="container-xxl bd-gutter" id="content">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . }}
+  </body>
+</html>

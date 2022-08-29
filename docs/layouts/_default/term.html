@@ -1,0 +1,25 @@
+{{ define "main" }}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb my-4 p-0">
+      <li class="breadcrumb-item"><a href="/">Icons</a></li>
+      <li class="breadcrumb-item"><a href="/{{ .Type }}/">{{ .Type | humanize }}</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+    </ol>
+  </nav>
+  <div class="my-5">
+    <div class="d-flex mb-4">
+      <h1 id="icons" class="mb-0 h2">
+        {{ .Title | humanize }} icons
+      </h1>
+      <form class="subnav-search d-flex flex-nowrap ms-auto">
+        <label for="search" class="visually-hidden">Search for icons</label>
+        <input class="form-control search mb-0" id="search" type="search" placeholder="Start typing to filter..." autocomplete="off">
+      </form>
+    </div>
+    <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
+      {{ range .Data.Pages -}}
+        {{ partial "icon" . }}
+      {{- end }}
+    </ul>
+  </div>
+{{ end }}

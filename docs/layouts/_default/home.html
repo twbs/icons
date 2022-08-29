@@ -1,19 +1,44 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {{ partial "head" . }}
-  </head>
-  <body id="icons-body">
-    {{ partialCached "skippy" . }}
-    {{ partialCached "navbar" . }}
-    {{ partialCached "home/hero" . }}
+{{ define "hero" }}
+  {{ partialCached "home/hero" . }}
+{{ end }}
 
-    <main class="container-xxl bd-gutter" id="content">
+{{ define "main" }}
+  <div class="row g-5">
+    <div class="py-5 small" style="width: 20%;">
+      <div class="bd-sidebar">
+        <form class="subnav-search d-flex flex-nowrap ms-auto mb-3">
+          <label for="search" class="visually-hidden">Search for icons</label>
+          <input class="form-control search mb-0" id="search" type="search" placeholder="Search icons..." autocomplete="off">
+        </form>
+
+        <h6><a href="{{ .Site.Params.main }}/docs/">Documentation</a></h6>
+        <ul class="nav nav-pills flex-column bd-sidebar-list">
+          <li class="nav-item">
+            <a class="nav-link" href="">Install</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Usage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Styling</a>
+          </li>
+        </ul>
+        <h6><a href="/categories/">Categories</a></h6>
+        <ul id="categories" class="nav nav-pills flex-column bd-sidebar-list">
+        {{ range $taxonomyName, $taxonomy := .Site.Taxonomies -}}
+          {{ if eq "categories" $taxonomyName -}}
+            {{ range $key, $value := $taxonomy -}}
+              <li class="nav-item">
+                <a class="nav-link" href="#{{ $key }}">{{ $key | humanize }}</a>
+              </li>
+            {{ end -}}
+          {{ end -}}
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="col" data-bs-spy="scroll" data-bs-target="#categories">
       {{ partialCached "icons" . "home" }}
-      {{ .Content }}
-    </main>
-
-    {{- partialCached "footer" . }}
-    {{- partialCached "scripts" . "home" }}
-  </body>
-</html>
+    </div>
+  </div>
+{{ end }}

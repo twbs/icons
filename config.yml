@@ -4,7 +4,7 @@ baseURL:                "https://icons.getbootstrap.com"
 enableInlineShortcodes: true
 enableRobotsTXT:        true
 metaDataFormat:         "yaml"
-disableKinds:           ["404", "taxonomy", "term", "RSS"]
+disableKinds:           ["404", "RSS"]
 
 publishDir:             "_site"
 
@@ -52,6 +52,14 @@ module:
       target:           assets/js/vendor/clipboard.min.js
     - source:           node_modules/list.js/dist/list.min.js
       target:           assets/js/vendor/list.min.js
+
+taxonomies:
+  category: categories
+  tag: tags
+
+permalinks:
+  categories:           "/:section/:slug"
+  tags:                 "/:section/:slug"
 
 params:
   description:          "Official open source SVG icon library for Bootstrap"

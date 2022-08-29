@@ -1,154 +1,150 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {{ partial "head" . }}
-  </head>
-  <body id="icons-body">
-    {{ partialCached "skippy" . }}
-    {{ partialCached "navbar" . }}
+{{ define "main" }}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb my-4 p-0">
+      <li class="breadcrumb-item"><a href="/">Icons</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+    </ol>
+  </nav>
 
-    <main class="container icon-examples" id="content">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb my-4 p-0">
-          <li class="breadcrumb-item"><a href="/">Icons</a></li>
-          <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
-        </ol>
-      </nav>
+  <div class="row align-items-md-center">
+    <div class="col-md-6 col-lg-8">
+      <h1>{{ .Title }}</h1>
 
-      <div class="row align-items-md-center">
-        <div class="col-md-6 col-lg-8">
-          <h1>{{ .Title }}</h1>
+      {{ if or .Params.tags .Params.categories -}}
+      <ul class="list-unstyled mb-3 mb-md-0">
+        <li>
+          <strong>Category:</strong>
+          {{ range .Params.categories -}}
+            <a href="/categories/{{ . | urlize }}/">{{ . }}</a>
+          {{ end -}}
+        </li>
+        <li>
+          <strong>Tags:</strong>
+          {{ range .Params.tags -}}
+            <a href="/tags/{{ . | urlize }}/">{{ . }}</a>
+          {{ end -}}
+        </li>
+      </ul>
+      {{- end }}
+    </div>
+    <div class="col-md-6 col-lg-4">
+      {{ partialCached "ads" . }}
+    </div>
+  </div>
 
-          {{ if or .Params.tags .Params.categories -}}
-          <ul class="list-unstyled mb-3 mb-md-0">
-            {{ with .Params.tags }}<li><strong>Tags:</strong> {{ delimit . ", " }}</li>{{ end }}
-            {{ with .Params.categories }}<li><strong>Category:</strong> {{ delimit . ", " }}</li>{{ end }}
-          </ul>
-          {{- end }}
-        </div>
-        <div class="col-md-6 col-lg-4">
-          {{ partialCached "ads" . }}
-        </div>
+  <hr class="my-4">
+
+  {{- $localSvgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
+  {{- $svgPath := path.Join "/assets/" $localSvgPath -}}
+  {{- $svgHtml := readFile $localSvgPath | chomp | safeHTML -}}
+
+  <div class="row gx-lg-5">
+    <div class="col-lg-8 mb-4">
+      <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" style="font-size: 10em" role="img" aria-label="{{ .Title }} - large preview">
+        {{ $svgHtml }}
       </div>
 
-      <hr class="my-4">
-
-      {{- $localSvgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
-      {{- $svgPath := path.Join "/assets/" $localSvgPath -}}
-      {{- $svgHtml := readFile $localSvgPath | chomp | safeHTML -}}
-
-      <div class="row gx-lg-5">
-        <div class="col-lg-8 mb-4">
-          <div class="icon-demo mb-4 border rounded-3 d-flex align-items-center justify-content-center p-3 py-6" style="font-size: 10em" role="img" aria-label="{{ .Title }} - large preview">
+      <h2>Examples</h2>
+      <div class="p-3 p-md-4 border rounded-3 icon-demo-examples">
+        <div class="fs-2 mb-3">
+          {{ $svgHtml }}
+          Heading
+        </div>
+        <div class="fs-4 mb-3">
+          {{ $svgHtml }}
+          Smaller heading
+        </div>
+        <p>
+          Inline text {{ $svgHtml }}
+        </p>
+        <p>
+          <a href="#" class="text-decoration-none">
+            Example link text
             {{ $svgHtml }}
-          </div>
-
-          <h2>Examples</h2>
-          <div class="p-3 p-md-4 border rounded-3 icon-demo-examples">
-            <div class="fs-2 mb-3">
-              {{ $svgHtml }}
-              Heading
-            </div>
-            <div class="fs-4 mb-3">
-              {{ $svgHtml }}
-              Smaller heading
-            </div>
-            <p>
-              Inline text {{ $svgHtml }}
-            </p>
-            <p>
-              <a href="#" class="text-decoration-none">
-                Example link text
-                {{ $svgHtml }}
-              </a>
-            </p>
+          </a>
+        </p>
             <div class="d-flex gap-2 mb-3">
-              <button type="button" class="btn btn-primary">
-                {{ $svgHtml }}
-                Button
-              </button>
-              <button type="button" class="btn btn-success">
-                {{ $svgHtml }}
-                Button
-              </button>
-              <button type="button" class="btn btn-outline-danger">
-                {{ $svgHtml }}
-                Button
-              </button>
+          <button type="button" class="btn btn-primary">
+            {{ $svgHtml }}
+            Button
+          </button>
+          <button type="button" class="btn btn-success">
+            {{ $svgHtml }}
+            Button
+          </button>
+          <button type="button" class="btn btn-outline-danger">
+            {{ $svgHtml }}
+            Button
+          </button>
             </div>
             <div class="d-flex gap-2 mb-3">
-              <button type="button" class="btn btn-secondary">
-                {{ $svgHtml }}
-              </button>
-              <div class="btn-group">
-                <button type="button" class="btn btn-outline-secondary">
-                  {{ $svgHtml }}
-                  <span class="visually-hidden">Button</span>
-                </button>
-                <button type="button" class="btn btn-outline-secondary">
-                  {{ $svgHtml }}
-                  <span class="visually-hidden">Button</span>
-                </button>
-                <button type="button" class="btn btn-outline-secondary">
-                  {{ $svgHtml }}
-                  <span class="visually-hidden">Button</span>
-                </button>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="input-group">
-                <span class="input-group-text" id="basic-addon1">
-                  {{ $svgHtml }}
-                </span>
-                <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
-              </div>
-            </div>
+          <button type="button" class="btn btn-secondary">
+            {{ $svgHtml }}
+          </button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary">
+              {{ $svgHtml }}
+              <span class="visually-hidden">Button</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+              {{ $svgHtml }}
+              <span class="visually-hidden">Button</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+              {{ $svgHtml }}
+              <span class="visually-hidden">Button</span>
+            </button>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
-          <h2 class="fs-3">Download</h2>
-          <p>Download the SVG to use or edit.</p>
-          <a href="{{ $svgPath }}" class="btn btn-bd-primary mb-4" download>Download SVG</a>
-
-          <h2 class="fs-3">Icon font</h2>
-          <p>Using the web font? Copy, paste, and go.</p>
-
-          <div class="mb-4">
-            {{ $iconFontSnippet := printf `<i class="bi bi-%s"></i>` .File.TranslationBaseName -}}
-            {{- highlight $iconFontSnippet "html" "" }}
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">
+              {{ $svgHtml }}
+            </span>
+            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
           </div>
-
-          <h2 class="fs-3">Code point</h2>
-          <div class="mb-4">
-            {{ $codepoints := getJSON "font/bootstrap-icons.json" -}}
-            {{ $hexCodepoint :=  printf "%X" (int (index $codepoints .File.TranslationBaseName)) }}
-            <ul class="list-unstyled">
-              <li>
-                Unicode: <code>U+{{- $hexCodepoint}}</code>
-              </li>
-              <li>
-                CSS: <code>\{{- $hexCodepoint}}</code>
-              </li>
-              <li>
-                JS: <code>\u{{- $hexCodepoint}}</code>
-              </li>
-              <li>
-                HTML: <code>&amp;#x{{- $hexCodepoint}};</code>
-              </li>
-            </ul>
-          </div>
-
-          <h2 class="fs-3">Copy HTML</h2>
-          <p>Paste the SVG right into your project's code.</p>
-
-          <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
-
-          {{ highlight $svgHtml "html" "" }}
         </div>
       </div>
-    </main>
+    </div>
+    <div class="col-lg-4 mb-4">
+      <h2 class="fs-3">Download</h2>
+      <p>Download the SVG to use or edit.</p>
+      <a href="{{ $svgPath }}" class="btn btn-bd-primary mb-4" download>Download SVG</a>
 
-    {{- partialCached "footer" . }}
-    {{- partialCached "scripts" . "default" }}
-  </body>
-</html>
+      <h2 class="fs-3">Icon font</h2>
+      <p>Using the web font? Copy, paste, and go.</p>
+
+      <div class="mb-4">
+        {{ $iconFontSnippet := printf `<i class="bi bi-%s"></i>` .File.TranslationBaseName -}}
+        {{- highlight $iconFontSnippet "html" "" }}
+      </div>
+
+      <h2 class="fs-3">Code point</h2>
+      <div class="mb-4">
+        {{ $codepoints := getJSON "font/bootstrap-icons.json" -}}
+        {{ $hexCodepoint :=  printf "%X" (int (index $codepoints .File.TranslationBaseName)) }}
+        <ul class="list-unstyled">
+          <li>
+            Unicode: <code>U+{{- $hexCodepoint}}</code>
+          </li>
+          <li>
+            CSS: <code>\{{- $hexCodepoint}}</code>
+          </li>
+          <li>
+            JS: <code>\u{{- $hexCodepoint}}</code>
+          </li>
+          <li>
+            HTML: <code>&amp;#x{{- $hexCodepoint}};</code>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="fs-3">Copy HTML</h2>
+      <p>Paste the SVG right into your project's code.</p>
+
+      <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
+
+      {{ highlight $svgHtml "html" "" }}
+    </div>
+  </div>
+{{ end }}

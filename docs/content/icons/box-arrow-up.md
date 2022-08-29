@@ -1,7 +1,7 @@
 ---
 title: Box arrow up
 categories:
-  - Box arrows
+  - Arrows
 tags:
   - arrow
 ---
