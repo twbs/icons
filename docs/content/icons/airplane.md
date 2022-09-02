@@ -8,4 +8,5 @@ tags:
   - plane
   - air
   - airport
+  - aircraft
 ---
