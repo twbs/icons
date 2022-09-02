@@ -10,4 +10,5 @@ tags:
   - contact
   - list
   - account
+  - profile
 ---
