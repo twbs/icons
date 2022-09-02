@@ -5,7 +5,6 @@ categories:
 tags:
   - x
   - delete
-  - remove
   - reset
   - clear
   - cancel
