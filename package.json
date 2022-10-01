@@ -54,7 +54,7 @@
     "purgecss": "^5.0.0",
     "stylelint": "^14.12.1",
     "stylelint-config-twbs-bootstrap": "^6.0.0",
-    "svg-sprite": "^2.0.0-beta7",
+    "svg-sprite": "^2.0.0",
     "svgo": "^2.8.0",
     "vnu-jar": "21.10.12"
   },
