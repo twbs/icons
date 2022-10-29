@@ -1,5 +1,5 @@
 ---
-title: Braces asterisk
+title: Regex
 categories:
   - Typography
 tags:
@@ -9,4 +9,5 @@ tags:
   - developer
   - development
   - software
+  - "regular expression"
 ---

@@ -5,5 +5,9 @@ categories:
 tags:
   - text
   - type
+  - code
+  - developer
+  - development
+  - software
   - preformatted
 ---
