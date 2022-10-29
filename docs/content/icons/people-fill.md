@@ -7,4 +7,5 @@ tags:
   - organization
   - avatar
   - users
+  - profile
 ---
