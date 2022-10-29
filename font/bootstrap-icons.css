@@ -1,8 +1,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?56c0f95873eb8a64dba9b6190f3e25c4") format("woff2"),
-url("./fonts/bootstrap-icons.woff?56c0f95873eb8a64dba9b6190f3e25c4") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?e15be3d3600e4a11fe4586f0c485d891") format("woff2"),
+url("./fonts/bootstrap-icons.woff?e15be3d3600e4a11fe4586f0c485d891") format("woff");
 }
 
 .bi::before,
@@ -1874,3 +1874,15 @@ url("./fonts/bootstrap-icons.woff?56c0f95873eb8a64dba9b6190f3e25c4") format("wof
 .bi-fuel-pump-diesel::before { content: "\f83c"; }
 .bi-fuel-pump-fill::before { content: "\f83d"; }
 .bi-fuel-pump::before { content: "\f83e"; }
+.bi-0-circle-fill::before { content: "\f83f"; }
+.bi-0-circle::before { content: "\f840"; }
+.bi-0-square-fill::before { content: "\f841"; }
+.bi-0-square::before { content: "\f842"; }
+.bi-rocket-fill::before { content: "\f843"; }
+.bi-rocket-takeoff-fill::before { content: "\f844"; }
+.bi-rocket-takeoff::before { content: "\f845"; }
+.bi-rocket::before { content: "\f846"; }
+.bi-stripe::before { content: "\f847"; }
+.bi-subscript::before { content: "\f848"; }
+.bi-superscript::before { content: "\f849"; }
+.bi-trello::before { content: "\f84a"; }

@@ -1880,6 +1880,18 @@ $bootstrap-icons-map: (
   "fuel-pump-diesel": "\f83c",
   "fuel-pump-fill": "\f83d",
   "fuel-pump": "\f83e",
+  "0-circle-fill": "\f83f",
+  "0-circle": "\f840",
+  "0-square-fill": "\f841",
+  "0-square": "\f842",
+  "rocket-fill": "\f843",
+  "rocket-takeoff-fill": "\f844",
+  "rocket-takeoff": "\f845",
+  "rocket": "\f846",
+  "stripe": "\f847",
+  "subscript": "\f848",
+  "superscript": "\f849",
+  "trello": "\f84a",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3736,3 +3748,15 @@ $bootstrap-icons-map: (
 .bi-fuel-pump-diesel::before { content: map-get($bootstrap-icons-map, "fuel-pump-diesel"); }
 .bi-fuel-pump-fill::before { content: map-get($bootstrap-icons-map, "fuel-pump-fill"); }
 .bi-fuel-pump::before { content: map-get($bootstrap-icons-map, "fuel-pump"); }
+.bi-0-circle-fill::before { content: map-get($bootstrap-icons-map, "0-circle-fill"); }
+.bi-0-circle::before { content: map-get($bootstrap-icons-map, "0-circle"); }
+.bi-0-square-fill::before { content: map-get($bootstrap-icons-map, "0-square-fill"); }
+.bi-0-square::before { content: map-get($bootstrap-icons-map, "0-square"); }
+.bi-rocket-fill::before { content: map-get($bootstrap-icons-map, "rocket-fill"); }
+.bi-rocket-takeoff-fill::before { content: map-get($bootstrap-icons-map, "rocket-takeoff-fill"); }
+.bi-rocket-takeoff::before { content: map-get($bootstrap-icons-map, "rocket-takeoff"); }
+.bi-rocket::before { content: map-get($bootstrap-icons-map, "rocket"); }
+.bi-stripe::before { content: map-get($bootstrap-icons-map, "stripe"); }
+.bi-subscript::before { content: map-get($bootstrap-icons-map, "subscript"); }
+.bi-superscript::before { content: map-get($bootstrap-icons-map, "superscript"); }
+.bi-trello::before { content: map-get($bootstrap-icons-map, "trello"); }
