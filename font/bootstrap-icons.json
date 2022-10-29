@@ -1852,5 +1852,17 @@
   "fuel-pump-diesel-fill": 63547,
   "fuel-pump-diesel": 63548,
   "fuel-pump-fill": 63549,
-  "fuel-pump": 63550
+  "fuel-pump": 63550,
+  "0-circle-fill": 63551,
+  "0-circle": 63552,
+  "0-square-fill": 63553,
+  "0-square": 63554,
+  "rocket-fill": 63555,
+  "rocket-takeoff-fill": 63556,
+  "rocket-takeoff": 63557,
+  "rocket": 63558,
+  "stripe": 63559,
+  "subscript": 63560,
+  "superscript": 63561,
+  "trello": 63562
 }
