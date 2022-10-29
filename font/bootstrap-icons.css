@@ -1,8 +1,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?e15be3d3600e4a11fe4586f0c485d891") format("woff2"),
-url("./fonts/bootstrap-icons.woff?e15be3d3600e4a11fe4586f0c485d891") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?b4b470c7065ebefa537038fab9165c2a") format("woff2"),
+url("./fonts/bootstrap-icons.woff?b4b470c7065ebefa537038fab9165c2a") format("woff");
 }
 
 .bi::before,
@@ -1886,3 +1886,7 @@ url("./fonts/bootstrap-icons.woff?e15be3d3600e4a11fe4586f0c485d891") format("wof
 .bi-subscript::before { content: "\f848"; }
 .bi-superscript::before { content: "\f849"; }
 .bi-trello::before { content: "\f84a"; }
+.bi-envelope-at-fill::before { content: "\f84b"; }
+.bi-envelope-at::before { content: "\f84c"; }
+.bi-regex::before { content: "\f84d"; }
+.bi-text-wrap::before { content: "\f84e"; }

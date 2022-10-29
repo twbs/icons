@@ -1892,6 +1892,10 @@ $bootstrap-icons-map: (
   "subscript": "\f848",
   "superscript": "\f849",
   "trello": "\f84a",
+  "envelope-at-fill": "\f84b",
+  "envelope-at": "\f84c",
+  "regex": "\f84d",
+  "text-wrap": "\f84e",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3760,3 +3764,7 @@ $bootstrap-icons-map: (
 .bi-subscript::before { content: map-get($bootstrap-icons-map, "subscript"); }
 .bi-superscript::before { content: map-get($bootstrap-icons-map, "superscript"); }
 .bi-trello::before { content: map-get($bootstrap-icons-map, "trello"); }
+.bi-envelope-at-fill::before { content: map-get($bootstrap-icons-map, "envelope-at-fill"); }
+.bi-envelope-at::before { content: map-get($bootstrap-icons-map, "envelope-at"); }
+.bi-regex::before { content: map-get($bootstrap-icons-map, "regex"); }
+.bi-text-wrap::before { content: map-get($bootstrap-icons-map, "text-wrap"); }
