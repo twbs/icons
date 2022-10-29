@@ -8,9 +8,8 @@
     {{ partialCached "navbar" . }}
     {{ partialCached "home/hero" . }}
 
-    <main class="container" id="content">
-      {{ partialCached "icons" . }}
-
+    <main class="container-xxl bd-gutter" id="content">
+      {{ partialCached "icons" . "home" }}
       {{ .Content }}
     </main>
 

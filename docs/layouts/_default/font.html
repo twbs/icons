@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body id="icons-body" class="text-center">
+    {{ partialCached "skippy" . }}
+    {{ partialCached "navbar" . }}
+
+    <main class="container-xxl bd-gutter" id="content">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-4 p-0">
+          <li class="breadcrumb-item"><a href="/">Icons</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Font</li>
+        </ol>
+      </nav>
+      {{ partialCached "icons" . "fonts" }}
+
+      {{ .Content }}
+    </main>
+
+    {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . "fonts" }}
+  </body>
+</html>
