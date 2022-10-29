@@ -1,8 +1,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?b4b470c7065ebefa537038fab9165c2a") format("woff2"),
-url("./fonts/bootstrap-icons.woff?b4b470c7065ebefa537038fab9165c2a") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?28df46889dced875dea48cfe64755198") format("woff2"),
+url("./fonts/bootstrap-icons.woff?28df46889dced875dea48cfe64755198") format("woff");
 }
 
 .bi::before,
@@ -1890,3 +1890,27 @@ url("./fonts/bootstrap-icons.woff?b4b470c7065ebefa537038fab9165c2a") format("wof
 .bi-envelope-at::before { content: "\f84c"; }
 .bi-regex::before { content: "\f84d"; }
 .bi-text-wrap::before { content: "\f84e"; }
+.bi-sign-dead-end-fill::before { content: "\f84f"; }
+.bi-sign-dead-end::before { content: "\f850"; }
+.bi-sign-do-not-enter-fill::before { content: "\f851"; }
+.bi-sign-do-not-enter::before { content: "\f852"; }
+.bi-sign-intersection-fill::before { content: "\f853"; }
+.bi-sign-intersection-side-fill::before { content: "\f854"; }
+.bi-sign-intersection-side::before { content: "\f855"; }
+.bi-sign-intersection-t-fill::before { content: "\f856"; }
+.bi-sign-intersection-t::before { content: "\f857"; }
+.bi-sign-intersection-y-fill::before { content: "\f858"; }
+.bi-sign-intersection-y::before { content: "\f859"; }
+.bi-sign-intersection::before { content: "\f85a"; }
+.bi-sign-merge-left-fill::before { content: "\f85b"; }
+.bi-sign-merge-left::before { content: "\f85c"; }
+.bi-sign-merge-right-fill::before { content: "\f85d"; }
+.bi-sign-merge-right::before { content: "\f85e"; }
+.bi-sign-no-left-turn-fill::before { content: "\f85f"; }
+.bi-sign-no-left-turn::before { content: "\f860"; }
+.bi-sign-no-parking-fill::before { content: "\f861"; }
+.bi-sign-no-parking::before { content: "\f862"; }
+.bi-sign-no-right-turn-fill::before { content: "\f863"; }
+.bi-sign-no-right-turn::before { content: "\f864"; }
+.bi-sign-railroad-fill::before { content: "\f865"; }
+.bi-sign-railroad::before { content: "\f866"; }

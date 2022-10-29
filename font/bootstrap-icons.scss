@@ -1896,6 +1896,30 @@ $bootstrap-icons-map: (
   "envelope-at": "\f84c",
   "regex": "\f84d",
   "text-wrap": "\f84e",
+  "sign-dead-end-fill": "\f84f",
+  "sign-dead-end": "\f850",
+  "sign-do-not-enter-fill": "\f851",
+  "sign-do-not-enter": "\f852",
+  "sign-intersection-fill": "\f853",
+  "sign-intersection-side-fill": "\f854",
+  "sign-intersection-side": "\f855",
+  "sign-intersection-t-fill": "\f856",
+  "sign-intersection-t": "\f857",
+  "sign-intersection-y-fill": "\f858",
+  "sign-intersection-y": "\f859",
+  "sign-intersection": "\f85a",
+  "sign-merge-left-fill": "\f85b",
+  "sign-merge-left": "\f85c",
+  "sign-merge-right-fill": "\f85d",
+  "sign-merge-right": "\f85e",
+  "sign-no-left-turn-fill": "\f85f",
+  "sign-no-left-turn": "\f860",
+  "sign-no-parking-fill": "\f861",
+  "sign-no-parking": "\f862",
+  "sign-no-right-turn-fill": "\f863",
+  "sign-no-right-turn": "\f864",
+  "sign-railroad-fill": "\f865",
+  "sign-railroad": "\f866",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3768,3 +3792,27 @@ $bootstrap-icons-map: (
 .bi-envelope-at::before { content: map-get($bootstrap-icons-map, "envelope-at"); }
 .bi-regex::before { content: map-get($bootstrap-icons-map, "regex"); }
 .bi-text-wrap::before { content: map-get($bootstrap-icons-map, "text-wrap"); }
+.bi-sign-dead-end-fill::before { content: map-get($bootstrap-icons-map, "sign-dead-end-fill"); }
+.bi-sign-dead-end::before { content: map-get($bootstrap-icons-map, "sign-dead-end"); }
+.bi-sign-do-not-enter-fill::before { content: map-get($bootstrap-icons-map, "sign-do-not-enter-fill"); }
+.bi-sign-do-not-enter::before { content: map-get($bootstrap-icons-map, "sign-do-not-enter"); }
+.bi-sign-intersection-fill::before { content: map-get($bootstrap-icons-map, "sign-intersection-fill"); }
+.bi-sign-intersection-side-fill::before { content: map-get($bootstrap-icons-map, "sign-intersection-side-fill"); }
+.bi-sign-intersection-side::before { content: map-get($bootstrap-icons-map, "sign-intersection-side"); }
+.bi-sign-intersection-t-fill::before { content: map-get($bootstrap-icons-map, "sign-intersection-t-fill"); }
+.bi-sign-intersection-t::before { content: map-get($bootstrap-icons-map, "sign-intersection-t"); }
+.bi-sign-intersection-y-fill::before { content: map-get($bootstrap-icons-map, "sign-intersection-y-fill"); }
+.bi-sign-intersection-y::before { content: map-get($bootstrap-icons-map, "sign-intersection-y"); }
+.bi-sign-intersection::before { content: map-get($bootstrap-icons-map, "sign-intersection"); }
+.bi-sign-merge-left-fill::before { content: map-get($bootstrap-icons-map, "sign-merge-left-fill"); }
+.bi-sign-merge-left::before { content: map-get($bootstrap-icons-map, "sign-merge-left"); }
+.bi-sign-merge-right-fill::before { content: map-get($bootstrap-icons-map, "sign-merge-right-fill"); }
+.bi-sign-merge-right::before { content: map-get($bootstrap-icons-map, "sign-merge-right"); }
+.bi-sign-no-left-turn-fill::before { content: map-get($bootstrap-icons-map, "sign-no-left-turn-fill"); }
+.bi-sign-no-left-turn::before { content: map-get($bootstrap-icons-map, "sign-no-left-turn"); }
+.bi-sign-no-parking-fill::before { content: map-get($bootstrap-icons-map, "sign-no-parking-fill"); }
+.bi-sign-no-parking::before { content: map-get($bootstrap-icons-map, "sign-no-parking"); }
+.bi-sign-no-right-turn-fill::before { content: map-get($bootstrap-icons-map, "sign-no-right-turn-fill"); }
+.bi-sign-no-right-turn::before { content: map-get($bootstrap-icons-map, "sign-no-right-turn"); }
+.bi-sign-railroad-fill::before { content: map-get($bootstrap-icons-map, "sign-railroad-fill"); }
+.bi-sign-railroad::before { content: map-get($bootstrap-icons-map, "sign-railroad"); }
