@@ -55,7 +55,7 @@
     "stylelint": "^14.14.0",
     "stylelint-config-twbs-bootstrap": "^6.0.0",
     "svg-sprite": "^2.0.1",
-    "svgo": "^2.8.0",
+    "svgo": "^3.0.0",
     "vnu-jar": "22.9.29"
   },
   "files": [
