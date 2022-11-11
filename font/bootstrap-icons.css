@@ -1,8 +1,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?d962f6f9a60009eabca564a56b94283d") format("woff2"),
-url("./fonts/bootstrap-icons.woff?d962f6f9a60009eabca564a56b94283d") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?9d69317e3b6b00f20d44d64ecb62d772") format("woff2"),
+url("./fonts/bootstrap-icons.woff?9d69317e3b6b00f20d44d64ecb62d772") format("woff");
 }
 
 .bi::before,
@@ -1985,3 +1985,34 @@ url("./fonts/bootstrap-icons.woff?d962f6f9a60009eabca564a56b94283d") format("wof
 .bi-scooter::before { content: "\f8ab"; }
 .bi-taxi-front-fill::before { content: "\f8ac"; }
 .bi-taxi-front::before { content: "\f8ad"; }
+.bi-amd::before { content: "\f8ae"; }
+.bi-database-add::before { content: "\f8af"; }
+.bi-database-check::before { content: "\f8b0"; }
+.bi-database-dash::before { content: "\f8b1"; }
+.bi-database-down::before { content: "\f8b2"; }
+.bi-database-exclamation::before { content: "\f8b3"; }
+.bi-database-fill-add::before { content: "\f8b4"; }
+.bi-database-fill-check::before { content: "\f8b5"; }
+.bi-database-fill-dash::before { content: "\f8b6"; }
+.bi-database-fill-down::before { content: "\f8b7"; }
+.bi-database-fill-exclamation::before { content: "\f8b8"; }
+.bi-database-fill-gear::before { content: "\f8b9"; }
+.bi-database-fill-lock::before { content: "\f8ba"; }
+.bi-database-fill-slash::before { content: "\f8bb"; }
+.bi-database-fill-up::before { content: "\f8bc"; }
+.bi-database-fill-x::before { content: "\f8bd"; }
+.bi-database-fill::before { content: "\f8be"; }
+.bi-database-gear::before { content: "\f8bf"; }
+.bi-database-lock::before { content: "\f8c0"; }
+.bi-database-slash::before { content: "\f8c1"; }
+.bi-database-up::before { content: "\f8c2"; }
+.bi-database-x::before { content: "\f8c3"; }
+.bi-database::before { content: "\f8c4"; }
+.bi-houses-fill::before { content: "\f8c5"; }
+.bi-houses::before { content: "\f8c6"; }
+.bi-nvidia::before { content: "\f8c7"; }
+.bi-person-vcard-fill::before { content: "\f8c8"; }
+.bi-person-vcard::before { content: "\f8c9"; }
+.bi-sina-weibo::before { content: "\f8ca"; }
+.bi-tencent-qq::before { content: "\f8cb"; }
+.bi-wikipedia::before { content: "\f8cc"; }

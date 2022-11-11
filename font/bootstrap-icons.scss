@@ -1991,6 +1991,37 @@ $bootstrap-icons-map: (
   "scooter": "\f8ab",
   "taxi-front-fill": "\f8ac",
   "taxi-front": "\f8ad",
+  "amd": "\f8ae",
+  "database-add": "\f8af",
+  "database-check": "\f8b0",
+  "database-dash": "\f8b1",
+  "database-down": "\f8b2",
+  "database-exclamation": "\f8b3",
+  "database-fill-add": "\f8b4",
+  "database-fill-check": "\f8b5",
+  "database-fill-dash": "\f8b6",
+  "database-fill-down": "\f8b7",
+  "database-fill-exclamation": "\f8b8",
+  "database-fill-gear": "\f8b9",
+  "database-fill-lock": "\f8ba",
+  "database-fill-slash": "\f8bb",
+  "database-fill-up": "\f8bc",
+  "database-fill-x": "\f8bd",
+  "database-fill": "\f8be",
+  "database-gear": "\f8bf",
+  "database-lock": "\f8c0",
+  "database-slash": "\f8c1",
+  "database-up": "\f8c2",
+  "database-x": "\f8c3",
+  "database": "\f8c4",
+  "houses-fill": "\f8c5",
+  "houses": "\f8c6",
+  "nvidia": "\f8c7",
+  "person-vcard-fill": "\f8c8",
+  "person-vcard": "\f8c9",
+  "sina-weibo": "\f8ca",
+  "tencent-qq": "\f8cb",
+  "wikipedia": "\f8cc",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3958,3 +3989,34 @@ $bootstrap-icons-map: (
 .bi-scooter::before { content: map-get($bootstrap-icons-map, "scooter"); }
 .bi-taxi-front-fill::before { content: map-get($bootstrap-icons-map, "taxi-front-fill"); }
 .bi-taxi-front::before { content: map-get($bootstrap-icons-map, "taxi-front"); }
+.bi-amd::before { content: map-get($bootstrap-icons-map, "amd"); }
+.bi-database-add::before { content: map-get($bootstrap-icons-map, "database-add"); }
+.bi-database-check::before { content: map-get($bootstrap-icons-map, "database-check"); }
+.bi-database-dash::before { content: map-get($bootstrap-icons-map, "database-dash"); }
+.bi-database-down::before { content: map-get($bootstrap-icons-map, "database-down"); }
+.bi-database-exclamation::before { content: map-get($bootstrap-icons-map, "database-exclamation"); }
+.bi-database-fill-add::before { content: map-get($bootstrap-icons-map, "database-fill-add"); }
+.bi-database-fill-check::before { content: map-get($bootstrap-icons-map, "database-fill-check"); }
+.bi-database-fill-dash::before { content: map-get($bootstrap-icons-map, "database-fill-dash"); }
+.bi-database-fill-down::before { content: map-get($bootstrap-icons-map, "database-fill-down"); }
+.bi-database-fill-exclamation::before { content: map-get($bootstrap-icons-map, "database-fill-exclamation"); }
+.bi-database-fill-gear::before { content: map-get($bootstrap-icons-map, "database-fill-gear"); }
+.bi-database-fill-lock::before { content: map-get($bootstrap-icons-map, "database-fill-lock"); }
+.bi-database-fill-slash::before { content: map-get($bootstrap-icons-map, "database-fill-slash"); }
+.bi-database-fill-up::before { content: map-get($bootstrap-icons-map, "database-fill-up"); }
+.bi-database-fill-x::before { content: map-get($bootstrap-icons-map, "database-fill-x"); }
+.bi-database-fill::before { content: map-get($bootstrap-icons-map, "database-fill"); }
+.bi-database-gear::before { content: map-get($bootstrap-icons-map, "database-gear"); }
+.bi-database-lock::before { content: map-get($bootstrap-icons-map, "database-lock"); }
+.bi-database-slash::before { content: map-get($bootstrap-icons-map, "database-slash"); }
+.bi-database-up::before { content: map-get($bootstrap-icons-map, "database-up"); }
+.bi-database-x::before { content: map-get($bootstrap-icons-map, "database-x"); }
+.bi-database::before { content: map-get($bootstrap-icons-map, "database"); }
+.bi-houses-fill::before { content: map-get($bootstrap-icons-map, "houses-fill"); }
+.bi-houses::before { content: map-get($bootstrap-icons-map, "houses"); }
+.bi-nvidia::before { content: map-get($bootstrap-icons-map, "nvidia"); }
+.bi-person-vcard-fill::before { content: map-get($bootstrap-icons-map, "person-vcard-fill"); }
+.bi-person-vcard::before { content: map-get($bootstrap-icons-map, "person-vcard"); }
+.bi-sina-weibo::before { content: map-get($bootstrap-icons-map, "sina-weibo"); }
+.bi-tencent-qq::before { content: map-get($bootstrap-icons-map, "tencent-qq"); }
+.bi-wikipedia::before { content: map-get($bootstrap-icons-map, "wikipedia"); }

@@ -1,7 +1,7 @@
 ---
 title: Browser Chrome
 categories:
-  - Brands
+  - Brand
 tags:
   - google
   - webkit

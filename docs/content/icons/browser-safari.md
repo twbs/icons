@@ -1,7 +1,7 @@
 ---
 title: Browser Safari
 categories:
-  - Brands
+  - Brand
 tags:
   - webkit
   - apple

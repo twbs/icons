@@ -1,7 +1,7 @@
 ---
 title: Browser Firefox
 categories:
-  - Brands
+  - Brand
 tags:
   - gecko
 ---

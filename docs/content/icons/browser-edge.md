@@ -1,7 +1,7 @@
 ---
 title: Browser Edge
 categories:
-  - Brands
+  - Brand
 tags:
   - microsoft
   - webkit
