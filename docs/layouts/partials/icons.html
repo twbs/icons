@@ -12,7 +12,7 @@
       {{- with .Site.GetPage .File.Path }}
       <li class="col mb-4"{{ with .Params.tags }} data-tags="{{ delimit . " " }}"{{ end }}{{ with .Params.categories }} data-categories="{{ delimit . " " | lower }}"{{ end }}>
         <a class="d-block text-dark text-decoration-none" href="{{ .RelPermalink }}">
-          <div class="p-3 py-4 mb-2 bg-light text-center rounded">
+          <div class="px-3 py-4 mb-2 bg-light text-center rounded">
             {{ if $.IsHome -}}
             <i class="bi bi-{{ $filename }}"></i>
             {{- else -}}
