@@ -1,7 +1,7 @@
 {{ $bootstrapJs := resources.Get "/js/vendor/bootstrap.min.js" | resources.Copy "/assets/js/vendor/bootstrap.min.js" -}}
 <script async src="{{ $bootstrapJs.Permalink | relURL }}"></script>
 
-{{- if or .IsHome (eq .Page.Layout "font") -}}
+{{- if or .IsHome (eq .Page.Layout "sprite") -}}
   {{- $listVendor := resources.Get "js/vendor/list.min.js" -}}
   {{- $listJs := resources.Get "js/list.js" -}}
   {{- $listBundle := slice $listVendor $listJs | resources.Concat "assets/js/list.js" -}}
