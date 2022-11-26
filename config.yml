@@ -47,7 +47,11 @@ module:
     - source:           node_modules/bootstrap/scss
       target:           assets/scss/bootstrap
     - source:           node_modules/bootstrap/dist/js/bootstrap.min.js
-      target:           assets/js/bootstrap.min.js
+      target:           assets/js/vendor/bootstrap.min.js
+    - source:           node_modules/clipboard/dist/clipboard.min.js
+      target:           assets/js/vendor/clipboard.min.js
+    - source:           node_modules/list.js/dist/list.min.js
+      target:           assets/js/vendor/list.min.js
 
 params:
   description:          "Official open source SVG icon library for Bootstrap"

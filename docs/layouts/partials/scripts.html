@@ -1,17 +1,22 @@
-{{- if or .IsHome (eq .Page.Layout "font") }}
-<script src="/assets/js/list.min.js"></script>
-<script>
-  new List('icons-body', {
-    valueNames: ['name', { data: ['tags', 'categories'] }]
-  });
-</script>
+{{ $bootstrapJs := resources.Get "/js/vendor/bootstrap.min.js" | resources.Copy "/assets/js/vendor/bootstrap.min.js" -}}
+<script async src="{{ $bootstrapJs.Permalink | relURL }}"></script>
+
+{{- if or .IsHome (eq .Page.Layout "font") -}}
+  {{- $listVendor := resources.Get "js/vendor/list.min.js" -}}
+  {{- $listJs := resources.Get "js/list.js" -}}
+  {{- $listBundle := slice $listVendor $listJs | resources.Concat "assets/js/list.js" -}}
+
+  {{- if eq hugo.Environment "production" -}}
+    {{- $listBundle = $listBundle | resources.Minify -}}
+  {{- end }}
+  <script async src="{{ $listBundle.Permalink | relURL }}"></script>
 {{- end }}
 
-{{- $vendor := resources.Match "js/vendor/*.js" -}}
-{{- $js := resources.Match "js/*.js" -}}
-{{- $docsJs := append $js $vendor | resources.Concat "assets/js/application.js" -}}
+{{- $clipboardVendor := resources.Get "js/vendor/clipboard.min.js" -}}
+{{- $applicationJs := resources.Get "js/application.js" -}}
+{{- $applicationBundle := slice $clipboardVendor $applicationJs | resources.Concat "assets/js/application.js" -}}
 
 {{- if eq hugo.Environment "production" -}}
-  {{- $docsJs = $docsJs | resources.Minify -}}
+  {{- $applicationBundle = $applicationBundle | resources.Minify -}}
 {{- end }}
-<script async src="{{ $docsJs.Permalink | relURL }}"></script>
+<script async src="{{ $applicationBundle.Permalink | relURL }}"></script>
