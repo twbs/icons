@@ -1,6 +1,6 @@
 /* eslint-env browser */
 
-/* global ClipboardJS: false */
+/* global ClipboardJS:false */
 
 (function () {
   'use strict'
