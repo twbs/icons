@@ -60,7 +60,6 @@ params:
   github_org:           "https://github.com/twbs"
   repo:                 "https://github.com/twbs/icons"
   twitter:              "getbootstrap"
-  slack:                "https://bootstrap-slack.herokuapp.com"
   blog:                 "https://blog.getbootstrap.com"
   themes:               "https://themes.getbootstrap.com"
   opencollective:       "https://opencollective.com/bootstrap"
