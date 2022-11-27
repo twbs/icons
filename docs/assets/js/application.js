@@ -19,17 +19,15 @@
   })
 
   clipboard.on('success', function (event) {
-    var iconFirstChild = event.trigger.querySelector('.bi').firstChild
-    var namespace = 'http://www.w3.org/1999/xlink'
-    var originalXhref = iconFirstChild.getAttributeNS(namespace, 'href')
+    var icon = event.trigger.querySelector('.bi')
     var originalTitle = event.trigger.title
 
     event.clearSelection()
-    iconFirstChild.setAttributeNS(namespace, 'href', originalXhref.replace('clipboard', 'check2'))
-    event.trigger.title = "Copied!"
+    icon.classList.replace('bi-clipboard', 'bi-check2')
+    event.trigger.title = 'Copied!'
 
     setTimeout(function () {
-      iconFirstChild.setAttributeNS(namespace, 'href', originalXhref)
+      icon.classList.replace('bi-check2', 'bi-clipboard')
       event.trigger.title = originalTitle
     }, 2000)
   })
