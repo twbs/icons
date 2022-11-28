@@ -1,7 +1,7 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
 $bootstrap-icons-font-dir: "./fonts" !default;
 $bootstrap-icons-font-file: #{$bootstrap-icons-font-dir}/#{$bootstrap-icons-font} !default;
-$bootstrap-icons-font-hash: "24e3eb84d0bcaf83d77f904c78ac1f47" !default;
+$bootstrap-icons-font-hash: "28df46889dced875dea48cfe64755198" !default;
 $bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap-icons-font-hash}") format("woff2"), url("#{$bootstrap-icons-font-file}.woff?#{$bootstrap-icons-font-hash}") format("woff") !default;
 
 @font-face {
@@ -1709,56 +1709,38 @@ $bootstrap-icons-map: (
   "filetype-json": "\f791",
   "filetype-pptx": "\f792",
   "filetype-xlsx": "\f793",
-  "1-circle-1": "\f794",
-  "1-circle-fill-1": "\f795",
   "1-circle-fill": "\f796",
   "1-circle": "\f797",
   "1-square-fill": "\f798",
   "1-square": "\f799",
-  "2-circle-1": "\f79a",
-  "2-circle-fill-1": "\f79b",
   "2-circle-fill": "\f79c",
   "2-circle": "\f79d",
   "2-square-fill": "\f79e",
   "2-square": "\f79f",
-  "3-circle-1": "\f7a0",
-  "3-circle-fill-1": "\f7a1",
   "3-circle-fill": "\f7a2",
   "3-circle": "\f7a3",
   "3-square-fill": "\f7a4",
   "3-square": "\f7a5",
-  "4-circle-1": "\f7a6",
-  "4-circle-fill-1": "\f7a7",
   "4-circle-fill": "\f7a8",
   "4-circle": "\f7a9",
   "4-square-fill": "\f7aa",
   "4-square": "\f7ab",
-  "5-circle-1": "\f7ac",
-  "5-circle-fill-1": "\f7ad",
   "5-circle-fill": "\f7ae",
   "5-circle": "\f7af",
   "5-square-fill": "\f7b0",
   "5-square": "\f7b1",
-  "6-circle-1": "\f7b2",
-  "6-circle-fill-1": "\f7b3",
   "6-circle-fill": "\f7b4",
   "6-circle": "\f7b5",
   "6-square-fill": "\f7b6",
   "6-square": "\f7b7",
-  "7-circle-1": "\f7b8",
-  "7-circle-fill-1": "\f7b9",
   "7-circle-fill": "\f7ba",
   "7-circle": "\f7bb",
   "7-square-fill": "\f7bc",
   "7-square": "\f7bd",
-  "8-circle-1": "\f7be",
-  "8-circle-fill-1": "\f7bf",
   "8-circle-fill": "\f7c0",
   "8-circle": "\f7c1",
   "8-square-fill": "\f7c2",
   "8-square": "\f7c3",
-  "9-circle-1": "\f7c4",
-  "9-circle-fill-1": "\f7c5",
   "9-circle-fill": "\f7c6",
   "9-circle": "\f7c7",
   "9-square-fill": "\f7c8",
@@ -1777,8 +1759,6 @@ $bootstrap-icons-map: (
   "browser-edge": "\f7d5",
   "browser-firefox": "\f7d6",
   "browser-safari": "\f7d7",
-  "c-circle-1": "\f7d8",
-  "c-circle-fill-1": "\f7d9",
   "c-circle-fill": "\f7da",
   "c-circle": "\f7db",
   "c-square-fill": "\f7dc",
@@ -1789,8 +1769,6 @@ $bootstrap-icons-map: (
   "car-front": "\f7e1",
   "cassette-fill": "\f7e2",
   "cassette": "\f7e3",
-  "cc-circle-1": "\f7e4",
-  "cc-circle-fill-1": "\f7e5",
   "cc-circle-fill": "\f7e6",
   "cc-circle": "\f7e7",
   "cc-square-fill": "\f7e8",
@@ -1809,8 +1787,6 @@ $bootstrap-icons-map: (
   "filetype-sql": "\f7f5",
   "fire": "\f7f6",
   "google-play": "\f7f7",
-  "h-circle-1": "\f7f8",
-  "h-circle-fill-1": "\f7f9",
   "h-circle-fill": "\f7fa",
   "h-circle": "\f7fb",
   "h-square-fill": "\f7fc",
@@ -1819,8 +1795,6 @@ $bootstrap-icons-map: (
   "lungs-fill": "\f7ff",
   "lungs": "\f800",
   "microsoft-teams": "\f801",
-  "p-circle-1": "\f802",
-  "p-circle-fill-1": "\f803",
   "p-circle-fill": "\f804",
   "p-circle": "\f805",
   "p-square-fill": "\f806",
@@ -1829,8 +1803,6 @@ $bootstrap-icons-map: (
   "pass": "\f809",
   "prescription": "\f80a",
   "prescription2": "\f80b",
-  "r-circle-1": "\f80c",
-  "r-circle-fill-1": "\f80d",
   "r-circle-fill": "\f80e",
   "r-circle": "\f80f",
   "r-square-fill": "\f810",
@@ -3707,56 +3679,38 @@ $bootstrap-icons-map: (
 .bi-filetype-json::before { content: map-get($bootstrap-icons-map, "filetype-json"); }
 .bi-filetype-pptx::before { content: map-get($bootstrap-icons-map, "filetype-pptx"); }
 .bi-filetype-xlsx::before { content: map-get($bootstrap-icons-map, "filetype-xlsx"); }
-.bi-1-circle-1::before { content: map-get($bootstrap-icons-map, "1-circle-1"); }
-.bi-1-circle-fill-1::before { content: map-get($bootstrap-icons-map, "1-circle-fill-1"); }
 .bi-1-circle-fill::before { content: map-get($bootstrap-icons-map, "1-circle-fill"); }
 .bi-1-circle::before { content: map-get($bootstrap-icons-map, "1-circle"); }
 .bi-1-square-fill::before { content: map-get($bootstrap-icons-map, "1-square-fill"); }
 .bi-1-square::before { content: map-get($bootstrap-icons-map, "1-square"); }
-.bi-2-circle-1::before { content: map-get($bootstrap-icons-map, "2-circle-1"); }
-.bi-2-circle-fill-1::before { content: map-get($bootstrap-icons-map, "2-circle-fill-1"); }
 .bi-2-circle-fill::before { content: map-get($bootstrap-icons-map, "2-circle-fill"); }
 .bi-2-circle::before { content: map-get($bootstrap-icons-map, "2-circle"); }
 .bi-2-square-fill::before { content: map-get($bootstrap-icons-map, "2-square-fill"); }
 .bi-2-square::before { content: map-get($bootstrap-icons-map, "2-square"); }
-.bi-3-circle-1::before { content: map-get($bootstrap-icons-map, "3-circle-1"); }
-.bi-3-circle-fill-1::before { content: map-get($bootstrap-icons-map, "3-circle-fill-1"); }
 .bi-3-circle-fill::before { content: map-get($bootstrap-icons-map, "3-circle-fill"); }
 .bi-3-circle::before { content: map-get($bootstrap-icons-map, "3-circle"); }
 .bi-3-square-fill::before { content: map-get($bootstrap-icons-map, "3-square-fill"); }
 .bi-3-square::before { content: map-get($bootstrap-icons-map, "3-square"); }
-.bi-4-circle-1::before { content: map-get($bootstrap-icons-map, "4-circle-1"); }
-.bi-4-circle-fill-1::before { content: map-get($bootstrap-icons-map, "4-circle-fill-1"); }
 .bi-4-circle-fill::before { content: map-get($bootstrap-icons-map, "4-circle-fill"); }
 .bi-4-circle::before { content: map-get($bootstrap-icons-map, "4-circle"); }
 .bi-4-square-fill::before { content: map-get($bootstrap-icons-map, "4-square-fill"); }
 .bi-4-square::before { content: map-get($bootstrap-icons-map, "4-square"); }
-.bi-5-circle-1::before { content: map-get($bootstrap-icons-map, "5-circle-1"); }
-.bi-5-circle-fill-1::before { content: map-get($bootstrap-icons-map, "5-circle-fill-1"); }
 .bi-5-circle-fill::before { content: map-get($bootstrap-icons-map, "5-circle-fill"); }
 .bi-5-circle::before { content: map-get($bootstrap-icons-map, "5-circle"); }
 .bi-5-square-fill::before { content: map-get($bootstrap-icons-map, "5-square-fill"); }
 .bi-5-square::before { content: map-get($bootstrap-icons-map, "5-square"); }
-.bi-6-circle-1::before { content: map-get($bootstrap-icons-map, "6-circle-1"); }
-.bi-6-circle-fill-1::before { content: map-get($bootstrap-icons-map, "6-circle-fill-1"); }
 .bi-6-circle-fill::before { content: map-get($bootstrap-icons-map, "6-circle-fill"); }
 .bi-6-circle::before { content: map-get($bootstrap-icons-map, "6-circle"); }
 .bi-6-square-fill::before { content: map-get($bootstrap-icons-map, "6-square-fill"); }
 .bi-6-square::before { content: map-get($bootstrap-icons-map, "6-square"); }
-.bi-7-circle-1::before { content: map-get($bootstrap-icons-map, "7-circle-1"); }
-.bi-7-circle-fill-1::before { content: map-get($bootstrap-icons-map, "7-circle-fill-1"); }
 .bi-7-circle-fill::before { content: map-get($bootstrap-icons-map, "7-circle-fill"); }
 .bi-7-circle::before { content: map-get($bootstrap-icons-map, "7-circle"); }
 .bi-7-square-fill::before { content: map-get($bootstrap-icons-map, "7-square-fill"); }
 .bi-7-square::before { content: map-get($bootstrap-icons-map, "7-square"); }
-.bi-8-circle-1::before { content: map-get($bootstrap-icons-map, "8-circle-1"); }
-.bi-8-circle-fill-1::before { content: map-get($bootstrap-icons-map, "8-circle-fill-1"); }
 .bi-8-circle-fill::before { content: map-get($bootstrap-icons-map, "8-circle-fill"); }
 .bi-8-circle::before { content: map-get($bootstrap-icons-map, "8-circle"); }
 .bi-8-square-fill::before { content: map-get($bootstrap-icons-map, "8-square-fill"); }
 .bi-8-square::before { content: map-get($bootstrap-icons-map, "8-square"); }
-.bi-9-circle-1::before { content: map-get($bootstrap-icons-map, "9-circle-1"); }
-.bi-9-circle-fill-1::before { content: map-get($bootstrap-icons-map, "9-circle-fill-1"); }
 .bi-9-circle-fill::before { content: map-get($bootstrap-icons-map, "9-circle-fill"); }
 .bi-9-circle::before { content: map-get($bootstrap-icons-map, "9-circle"); }
 .bi-9-square-fill::before { content: map-get($bootstrap-icons-map, "9-square-fill"); }
@@ -3775,8 +3729,6 @@ $bootstrap-icons-map: (
 .bi-browser-edge::before { content: map-get($bootstrap-icons-map, "browser-edge"); }
 .bi-browser-firefox::before { content: map-get($bootstrap-icons-map, "browser-firefox"); }
 .bi-browser-safari::before { content: map-get($bootstrap-icons-map, "browser-safari"); }
-.bi-c-circle-1::before { content: map-get($bootstrap-icons-map, "c-circle-1"); }
-.bi-c-circle-fill-1::before { content: map-get($bootstrap-icons-map, "c-circle-fill-1"); }
 .bi-c-circle-fill::before { content: map-get($bootstrap-icons-map, "c-circle-fill"); }
 .bi-c-circle::before { content: map-get($bootstrap-icons-map, "c-circle"); }
 .bi-c-square-fill::before { content: map-get($bootstrap-icons-map, "c-square-fill"); }
@@ -3787,8 +3739,6 @@ $bootstrap-icons-map: (
 .bi-car-front::before { content: map-get($bootstrap-icons-map, "car-front"); }
 .bi-cassette-fill::before { content: map-get($bootstrap-icons-map, "cassette-fill"); }
 .bi-cassette::before { content: map-get($bootstrap-icons-map, "cassette"); }
-.bi-cc-circle-1::before { content: map-get($bootstrap-icons-map, "cc-circle-1"); }
-.bi-cc-circle-fill-1::before { content: map-get($bootstrap-icons-map, "cc-circle-fill-1"); }
 .bi-cc-circle-fill::before { content: map-get($bootstrap-icons-map, "cc-circle-fill"); }
 .bi-cc-circle::before { content: map-get($bootstrap-icons-map, "cc-circle"); }
 .bi-cc-square-fill::before { content: map-get($bootstrap-icons-map, "cc-square-fill"); }
@@ -3807,8 +3757,6 @@ $bootstrap-icons-map: (
 .bi-filetype-sql::before { content: map-get($bootstrap-icons-map, "filetype-sql"); }
 .bi-fire::before { content: map-get($bootstrap-icons-map, "fire"); }
 .bi-google-play::before { content: map-get($bootstrap-icons-map, "google-play"); }
-.bi-h-circle-1::before { content: map-get($bootstrap-icons-map, "h-circle-1"); }
-.bi-h-circle-fill-1::before { content: map-get($bootstrap-icons-map, "h-circle-fill-1"); }
 .bi-h-circle-fill::before { content: map-get($bootstrap-icons-map, "h-circle-fill"); }
 .bi-h-circle::before { content: map-get($bootstrap-icons-map, "h-circle"); }
 .bi-h-square-fill::before { content: map-get($bootstrap-icons-map, "h-square-fill"); }
@@ -3817,8 +3765,6 @@ $bootstrap-icons-map: (
 .bi-lungs-fill::before { content: map-get($bootstrap-icons-map, "lungs-fill"); }
 .bi-lungs::before { content: map-get($bootstrap-icons-map, "lungs"); }
 .bi-microsoft-teams::before { content: map-get($bootstrap-icons-map, "microsoft-teams"); }
-.bi-p-circle-1::before { content: map-get($bootstrap-icons-map, "p-circle-1"); }
-.bi-p-circle-fill-1::before { content: map-get($bootstrap-icons-map, "p-circle-fill-1"); }
 .bi-p-circle-fill::before { content: map-get($bootstrap-icons-map, "p-circle-fill"); }
 .bi-p-circle::before { content: map-get($bootstrap-icons-map, "p-circle"); }
 .bi-p-square-fill::before { content: map-get($bootstrap-icons-map, "p-square-fill"); }
@@ -3827,8 +3773,6 @@ $bootstrap-icons-map: (
 .bi-pass::before { content: map-get($bootstrap-icons-map, "pass"); }
 .bi-prescription::before { content: map-get($bootstrap-icons-map, "prescription"); }
 .bi-prescription2::before { content: map-get($bootstrap-icons-map, "prescription2"); }
-.bi-r-circle-1::before { content: map-get($bootstrap-icons-map, "r-circle-1"); }
-.bi-r-circle-fill-1::before { content: map-get($bootstrap-icons-map, "r-circle-fill-1"); }
 .bi-r-circle-fill::before { content: map-get($bootstrap-icons-map, "r-circle-fill"); }
 .bi-r-circle::before { content: map-get($bootstrap-icons-map, "r-circle"); }
 .bi-r-square-fill::before { content: map-get($bootstrap-icons-map, "r-square-fill"); }
