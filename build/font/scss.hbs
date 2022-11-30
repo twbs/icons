@@ -2,7 +2,8 @@ ${{ name }}-font: "{{ name }}" !default;
 ${{ name }}-font-dir: "{{ fontsUrl }}" !default;
 ${{ name }}-font-file: #{${{ name }}-font-dir}/#{${{ name }}-font} !default;
 ${{ name }}-font-hash: "28df46889dced875dea48cfe64755198" !default;
-${{ name }}-font-src: url("#{${{ name }}-font-file}.woff2?#{${{ name }}-font-hash}") format("woff2"), url("#{${{ name }}-font-file}.woff?#{${{ name }}-font-hash}") format("woff") !default;
+${{ name }}-font-src: url("#{${{ name }}-font-file}.woff2?#{${{ name }}-font-hash}") format("woff2"),
+                      url("#{${{ name }}-font-file}.woff?#{${{ name }}-font-hash}") format("woff") !default;
 
 @font-face {
   font-display: block;
@@ -10,9 +11,9 @@ ${{ name }}-font-src: url("#{${{ name }}-font-file}.woff2?#{${{ name }}-font-has
   src: ${{ name }}-font-src;
 }
 
-.{{prefix}}::before,
-[class^="{{prefix}}-"]::before,
-[class*=" {{prefix}}-"]::before {
+.{{ prefix }}::before,
+[class^="{{ prefix }}-"]::before,
+[class*=" {{ prefix }}-"]::before {
   display: inline-block;
   font-family: ${{ name }}-font !important;
   font-style: normal;
