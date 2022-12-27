@@ -61,6 +61,7 @@ params:
   docs_version:         "5.3"
 
   main:                 "https://getbootstrap.com"
+  github_org:           "https://github.com/twbs"
   repo:                 "https://github.com/twbs/bootstrap"
   twitter:              "getbootstrap"
   opencollective:       "https://opencollective.com/bootstrap"
