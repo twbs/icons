@@ -6,6 +6,9 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{- $colorModeJS := resources.Get "js/color-modes.js" -}}
+<script src="{{ $colorModeJS.Permalink | relURL }}"></script>
+
 {{ partialCached "stylesheet" . }}
 {{ partialCached "favicons" . }}
 {{ partial "social" . }}

@@ -46,8 +46,8 @@ module:
       target:           static/assets/font
     - source:           node_modules/bootstrap/scss
       target:           assets/scss/bootstrap
-    - source:           node_modules/bootstrap/dist/js/bootstrap.min.js
-      target:           assets/js/vendor/bootstrap.min.js
+    - source:           node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+      target:           assets/js/vendor/bootstrap.bundle.min.js
     - source:           node_modules/clipboard/dist/clipboard.min.js
       target:           assets/js/vendor/clipboard.min.js
     - source:           node_modules/list.js/dist/list.min.js
@@ -58,13 +58,15 @@ params:
   social_image_path:    /assets/img/bootstrap-icons-social.png
 
   version:              "1.10.2"
-  docs_version:         "5.2"
+  docs_version:         "5.3"
 
   main:                 "https://getbootstrap.com"
   github_org:           "https://github.com/twbs"
-  repo:                 "https://github.com/twbs/icons"
+  repo:                 "https://github.com/twbs/bootstrap"
   twitter:              "getbootstrap"
-  blog:                 "https://blog.getbootstrap.com"
-  themes:               "https://themes.getbootstrap.com"
   opencollective:       "https://opencollective.com/bootstrap"
+  blog:                 "https://blog.getbootstrap.com/"
+  themes:               "https://themes.getbootstrap.com/"
+  icons:                "https://icons.getbootstrap.com/"
+  swag:                 "https://cottonbureau.com/people/bootstrap"
   icons_figma:          "https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
