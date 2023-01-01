@@ -52,7 +52,7 @@
     "picocolors": "^1.0.0",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
-    "stylelint": "^14.16.0",
+    "stylelint": "^14.16.1",
     "stylelint-config-twbs-bootstrap": "^7.0.0",
     "svg-sprite": "^3.0.0-alpha1",
     "svgo": "^2.8.0",
