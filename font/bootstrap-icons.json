@@ -1994,5 +1994,7 @@
   "person-vcard": 63689,
   "sina-weibo": 63690,
   "tencent-qq": 63691,
-  "wikipedia": 63692
+  "wikipedia": 63692,
+  "security-key": 63693,
+  "security-key-fill": 63694
 }
