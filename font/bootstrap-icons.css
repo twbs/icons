@@ -1,8 +1,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?10d9b94537e26c0984e351ede540ce1a") format("woff2"),
-url("./fonts/bootstrap-icons.woff?10d9b94537e26c0984e351ede540ce1a") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?c4589a1ddd964d003a028aa2f40c4f3f") format("woff2"),
+url("./fonts/bootstrap-icons.woff?c4589a1ddd964d003a028aa2f40c4f3f") format("woff");
 }
 
 .bi::before,
