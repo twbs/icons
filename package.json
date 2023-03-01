@@ -47,7 +47,7 @@
     "find-unused-sass-variables": "^4.0.5",
     "hugo-bin": "^0.98.0",
     "list.js": "^2.3.1",
-    "lockfile-lint": "^4.10.0",
+    "lockfile-lint": "^4.10.1",
     "npm-run-all": "^4.1.5",
     "picocolors": "^1.0.0",
     "postcss": "^8.4.21",
