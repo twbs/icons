@@ -2,8 +2,8 @@
 
 'use strict'
 
-const fs = require('fs').promises
-const path = require('path')
+const fs = require('node:fs').promises
+const path = require('node:path')
 const picocolors = require('picocolors')
 
 const iconsDir = path.join(__dirname, '../icons/')
@@ -53,7 +53,7 @@ tags:
 
     const filesLength = files.length
 
-    console.log(picocolors.green('\nSuccess, %s page%s prepared!'), filesLength, filesLength !== 1 ? 's' : '')
+    console.log(picocolors.green('\nSuccess, %s page%s prepared!'), filesLength, filesLength === 1 ? '' : 's')
     console.timeEnd(timeLabel)
   } catch (error) {
     console.error(error)
