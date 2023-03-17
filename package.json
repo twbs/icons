@@ -38,12 +38,12 @@
   "style": "font/bootstrap-icons.css",
   "sass": "font/bootstrap-icons.scss",
   "devDependencies": {
+    "@twbs/fantasticon": "^2.1.1",
     "autoprefixer": "^10.4.14",
     "bootstrap": "5.3.0-alpha1",
     "clipboard": "^2.0.11",
     "cross-env": "^7.0.3",
     "eslint": "^8.36.0",
-    "fantasticon": "^1.2.3",
     "find-unused-sass-variables": "^4.0.6",
     "hugo-bin": "^0.101.0",
     "list.js": "^2.3.1",
