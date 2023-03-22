@@ -6,7 +6,7 @@
 
 <link rel="canonical" href="{{ .Permalink }}">
 
-{{- $colorModeJS := resources.Get "js/color-modes.js" -}}
+{{- $colorModeJS := resources.Get "js/color-modes.js" | resources.Copy "/assets/js/color-modes.js" -}}
 <script src="{{ $colorModeJS.Permalink | relURL }}"></script>
 
 {{ partialCached "stylesheet" . }}
