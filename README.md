@@ -22,32 +22,32 @@
 
 [![Bootstrap Icons preview](https://github.com/twbs/icons/blob/main/.github/preview.png)](https://icons.getbootstrap.com)
 
-## Install
+## Installation
 
-Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) for usage instructions.
+- Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package — it's up to you and your team to implement. Read our [documentation](https://icons.getbootstrap.com/) for usage instructions.
 
 ```shell
 npm i bootstrap-icons
 ```
 
-For those [using Packagist](https://packagist.org/packages/twbs/bootstrap-icons), you can also install Bootstrap Icons via Composer:
+- For those using [Packagist](https://packagist.org/packages/twbs/bootstrap-icons), you can also install Bootstrap Icons via Composer:
 
 ```shell
 composer require twbs/bootstrap-icons
 ```
 
-[Also available in Figma.](https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons)
+- Bootstrap Icons are also available in [Figma](https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons).
 
 ## Usage
 
-Depending on your setup, you can include Bootstrap Icons in a handful of ways.
+Depending on your setup, you can include Bootstrap Icons in a handful of ways:
 
 - Copy-paste SVGs as embedded HTML
-- Reference via `<img>` element
+- Reference via the `<img>` element
 - Use the SVG sprite
 - Include via CSS
 
-[See the docs for more information.](https://icons.getbootstrap.com/#usage)
+Reference the [documentation](https://icons.getbootstrap.com/#usage) for more information.
 
 ## Development
 
@@ -77,12 +77,16 @@ Here are some key scripts you'll use during development. Be sure to look to our 
 
 ## Adding SVGs
 
-Icons are typically only added by @mdo, but exceptions can be made. New glyphs are designed in Figma first on a 16x16px grid, then exported as flattened SVGs with `fill` (no stroke). Once a new SVG icon has been added to the `icons` directory, we use an npm script to:
+Icons are typically only added by [@mdo](https://github.com/mdo), but **exceptions can be made**. 
+
+### Procedure of adding an SVG:
+
+New glyphs are designed in Figma first on a 16x16px grid, then exported as flattened SVGs with `fill` (no stroke). Once a new SVG icon has been added to the `icons` directory, we use an npm script to:
 
 1. Optimize our SVGs with SVGO.
 2. Modify the SVGs source code, removing all attributes before setting new attributes and values in our preferred order.
 
-Use `npm run icons` to run the script, run `npm run pages` to build permalink pages, complete those pages, and, finally, commit the results in a new branch for updating.
+Use `npm run icons` to run the script; use `npm run pages` to build permalink pages, complete them, and finally commit the results in a new branch for updating.
 
 ## Publishing
 
@@ -90,8 +94,8 @@ Documentation is published automatically when a new Git tag is published. See ou
 
 ## License
 
-MIT
+Code released under the [MIT License](https://github.com/twbs/icons/blob/main/LICENSE.md). Docs released under Creative Commons.
 
 ## Author
 
-[@mdo](https://github.com/mdo)
+This repository is authored by [@mdo](https://github.com/mdo).
