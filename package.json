@@ -19,7 +19,7 @@
   "scripts": {
     "start": "npm run docs-serve",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
-    "docs-build": "hugo --cleanDestinationDir",
+    "docs-build": "hugo --cleanDestinationDir --printUnusedTemplates",
     "pages": "node build/build-pages.js",
     "icons": "npm-run-all icons-main --aggregate-output --parallel icons-sprite icons-font",
     "icons-main": "node build/build-svgs.js",
