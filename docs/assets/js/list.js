@@ -1,5 +1,3 @@
-/* eslint-env browser */
-
 /* global List:false */
 
 (function () {

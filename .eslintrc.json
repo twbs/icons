@@ -20,5 +20,17 @@
       "never"
     ],
     "strict": "error"
-  }
+  },
+  "overrides": [
+    {
+      "files": "docs/**",
+      "env": {
+        "browser": true,
+        "node": false
+      },
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    }
+  ]
 }
