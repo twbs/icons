@@ -24,12 +24,12 @@
   display: block;
   padding: .5em .75em .625em;
   line-height: 1;
-  color: var(--bs-gray-900);
-  background-color: var(--bs-gray-100);
+  color: var(--bs-body-color);
+  background-color: var(--bs-tertiary-bg);
   border: 0;
   border-radius: .25rem;
 
   &:hover {
-    color: var(--bs-primary);
+    color: var(--bs-link-hover-color);
   }
 }

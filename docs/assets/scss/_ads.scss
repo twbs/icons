@@ -5,7 +5,7 @@
   margin-right: auto;
   margin-left: auto;
   overflow: auto;
-  background-color: var(--bs-gray-100);
+  background-color: var(--bs-tertiary-bg);
   border-radius: .25rem;
 
   @media (min-width: 992px) {
@@ -30,11 +30,11 @@
 .carbon-text,
 .carbon-poweredby {
   display: block;
-  color: #6c757d;
+  color: var(--bs-body-color);
 
   &:hover,
   &:focus {
-    color: #343a40;
+    color: var(--bs-body-color);
     text-decoration: none;
   }
 }

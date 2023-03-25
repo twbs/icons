@@ -8,7 +8,7 @@
              alt="Bootstrap Icons" width="450" height="340">
       </div>
       <div class="col-lg-7">
-        <a class="d-block d-sm-inline-block py-1 px-3 mb-4 text-dark text-decoration-none rounded-3 hero-notice" href="{{ .Site.Params.blog }}/2022/11/11/bootstrap-icons-1-10-0/">
+        <a class="d-block d-sm-inline-block py-1 px-3 mb-4 text-decoration-none rounded-3 hero-notice" href="{{ .Site.Params.blog }}/2022/11/11/bootstrap-icons-1-10-0/">
           <strong>New in v1.10.0:</strong> 140+ new icons!
         </a>
         <h1 class="f0">Bootstrap Icons</h1>
@@ -18,7 +18,7 @@
           <div class="fs-5 d-inline-block mb-3 me-md-3 mb-md-0">
             {{ highlight "npm i bootstrap-icons" "sh" "" }}
           </div>
-          <a class="btn btn-lg btn-outline-dark d-flex align-items-center justify-content-center" href="{{ .Site.Params.icons_figma }}" target="_blank" rel="noopener">
+          <a class="btn btn-lg btn-figma d-flex align-items-center justify-content-center" href="{{ .Site.Params.icons_figma }}" target="_blank" rel="noopener">
             {{ partial "icons/figma.svg" (dict "class" "me-2" "width" "18" "height" "24") }}
             Open in Figma
           </a>
@@ -29,11 +29,11 @@
         <hr class="mx-auto mx-lg-0 my-5">
 
         <p class="text-muted">
-          Currently <a href="{{ .Site.Params.repo }}/releases/tag/v{{ .Site.Params.version }}">v{{ .Site.Params.version }}</a>
+          Currently <a href="{{ .Site.Params.icons_repo }}/releases/tag/v{{ .Site.Params.version }}">v{{ .Site.Params.version }}</a>
           <span class="px-1">&#8226;</span>
           <a href="#icons">Icons</a>
           <span class="px-1">&#8226;</span>
-          <a href="/font/">Icon Font</a>
+          <a href="/sprite/">Icon Sprite</a>
           <span class="px-1">&#8226;</span>
           <a href="#install">Install</a>
           <span class="px-1">&#8226;</span>
@@ -43,7 +43,7 @@
           <span class="px-1">&#8226;</span>
           <a href="#accessibility">Accessibility</a>
           <span class="px-1">&#8226;</span>
-          <a href="{{ .Site.Params.repo }}">GitHub repo</a>
+          <a href="{{ .Site.Params.icons_repo }}">GitHub repo</a>
         </p>
       </div>
     </div>
