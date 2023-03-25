@@ -6,4 +6,5 @@ tags:
   - file
   - "file type"
   - extension
+  - spreadsheet
 ---
