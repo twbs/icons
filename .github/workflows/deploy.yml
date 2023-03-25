@@ -46,6 +46,8 @@ jobs:
   publish:
     needs: deploy
     runs-on: ubuntu-latest
+    if: github.repository == 'twbs/icons'
+
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
