@@ -62,7 +62,7 @@
                 {{ $svgHtml }}
               </a>
             </p>
-            <p>
+            <div class="d-flex gap-2 mb-3">
               <button type="button" class="btn btn-primary">
                 {{ $svgHtml }}
                 Button
@@ -75,8 +75,8 @@
                 {{ $svgHtml }}
                 Button
               </button>
-            </p>
-            <div class="mb-3">
+            </div>
+            <div class="d-flex gap-2 mb-3">
               <button type="button" class="btn btn-secondary">
                 {{ $svgHtml }}
               </button>
@@ -95,11 +95,13 @@
                 </button>
               </div>
             </div>
-            <div class="input-group w-50">
-              <span class="input-group-text" id="basic-addon1">
-                {{ $svgHtml }}
-              </span>
-              <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                  {{ $svgHtml }}
+                </span>
+                <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
+              </div>
             </div>
           </div>
         </div>
