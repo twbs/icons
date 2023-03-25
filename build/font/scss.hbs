@@ -3,7 +3,7 @@ ${{ name }}-font-dir: "{{ fontsUrl }}" !default;
 ${{ name }}-font-file: #{${{ name }}-font-dir}/#{${{ name }}-font} !default;
 ${{ name }}-font-hash: "24e3eb84d0bcaf83d77f904c78ac1f47" !default;
 ${{ name }}-font-src: url("#{${{ name }}-font-file}.woff2?#{${{ name }}-font-hash}") format("woff2"),
-                      url("#{${{ name }}-font-file}.woff?#{${{ name }}-font-hash}") format("woff") !default;
+                           url("#{${{ name }}-font-file}.woff?#{${{ name }}-font-hash}") format("woff") !default;
 
 @font-face {
   font-display: block;

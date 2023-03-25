@@ -2,9 +2,9 @@
 
 'use strict'
 
-const fs = require('fs').promises
-const path = require('path')
-const process = require('process')
+const fs = require('node:fs').promises
+const path = require('node:path')
+const process = require('node:process')
 const picocolors = require('picocolors')
 const { loadConfig, optimize } = require('svgo')
 
@@ -46,7 +46,7 @@ async function processFile(file, config) {
 
     const filesLength = files.length
 
-    console.log(picocolors.green('\nSuccess, prepared %s icon%s!'), filesLength, filesLength !== 1 ? 's' : '')
+    console.log(picocolors.green('\nSuccess, prepared %s icon%s!'), filesLength, filesLength === 1 ? '' : 's')
     console.timeEnd(timeLabel)
   } catch (error) {
     console.error(error)

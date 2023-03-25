@@ -62,6 +62,7 @@ params:
 
   main:                 "https://getbootstrap.com"
   github_org:           "https://github.com/twbs"
+  icons_repo:           "https://github.com/twbs/icons"
   repo:                 "https://github.com/twbs/bootstrap"
   twitter:              "getbootstrap"
   opencollective:       "https://opencollective.com/bootstrap"
