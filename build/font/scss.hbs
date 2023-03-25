@@ -38,6 +38,6 @@ ${{ name }}-map: (
 {{/ each }}
 );
 
-{{# each codepoints }}
-.{{ ../prefix }}-{{ @key }}::before { content: map-get(${{ ../name }}-map, "{{ @key }}"); }
-{{/ each }}
+@each $icon, $codepoint in ${{ name }}-map {
+  .{{ prefix }}-#{$icon}::before { content: $codepoint; }
+}
