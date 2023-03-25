@@ -6,3 +6,6 @@
 
 # Editor folders
 /.vscode/
+
+# Release zip files
+bootstrap-icons-*.zip
