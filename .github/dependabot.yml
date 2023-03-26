@@ -4,10 +4,14 @@ updates:
     directory: "/"
     schedule:
       interval: monthly
+    reviewers:
+      - XhmikosR
   - package-ecosystem: npm
     directory: "/"
     schedule:
       interval: monthly
     labels:
       - dependencies
+    reviewers:
+      - XhmikosR
     versioning-strategy: increase
