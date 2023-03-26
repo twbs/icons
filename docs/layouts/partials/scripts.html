@@ -2,7 +2,7 @@
 <script async src="{{ $bootstrapJs.Permalink | relURL }}"></script>
 
 {{- if or .IsHome (eq .Page.Layout "sprite") -}}
-  {{- $listVendor := resources.Get "js/vendor/list.min.js" -}}
+  {{- $listVendor := resources.Get "js/vendor/list.js" -}}
   {{- $listJs := resources.Get "js/list.js" -}}
   {{- $listBundle := slice $listVendor $listJs | resources.Concat "assets/js/list.js" -}}
 
