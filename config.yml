@@ -47,7 +47,7 @@ module:
     - source:           node_modules/bootstrap/scss
       target:           assets/scss/bootstrap
     - source:           node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
-      target:           assets/js/vendor/bootstrap.bundle.min.js
+      target:           static/assets/js/vendor/bootstrap.bundle.min.js
     - source:           node_modules/clipboard/dist/clipboard.min.js
       target:           assets/js/vendor/clipboard.min.js
     - source:           node_modules/fuse.js/dist/fuse.min.js

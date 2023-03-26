@@ -1,5 +1,4 @@
-{{ $bootstrapJs := resources.Get "/js/vendor/bootstrap.bundle.min.js" | resources.Copy "/assets/js/vendor/bootstrap.bundle.min.js" -}}
-<script async src="{{ $bootstrapJs.Permalink | relURL }}"></script>
+<script async src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
 
 {{- if or .IsHome (eq .Page.Layout "sprite") -}}
   {{- $fuseVendor := resources.Get "js/vendor/fuse.min.js" -}}
