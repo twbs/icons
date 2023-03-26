@@ -1,30 +1,28 @@
 <div class="my-5">
-  <div class="d-flex mb-4">
-    <h2 id="icons" class="mb-0">Icons</h2>
-    <form class="subnav-search d-flex flex-nowrap ms-auto">
-      <label for="search" class="visually-hidden">Search for icons</label>
-      <input class="form-control search mb-0" id="search" type="search" placeholder="Start typing to filter..." autocomplete="off">
-    </form>
-  </div>
-  <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
-    {{ range (where .Site.RegularPages "Type" "icons") -}}
-      {{- $filename := .File.TranslationBaseName -}}
-      {{- with .Site.GetPage .File.Path }}
-      <li class="col mb-4"{{ with .Params.tags }} data-tags="{{ delimit . " " }}"{{ end }}{{ with .Params.categories }} data-categories="{{ delimit . " " | lower }}"{{ end }}>
-        <a class="d-block text-body-emphasis text-decoration-none" href="{{ .RelPermalink }}">
-          <div class="px-3 py-4 mb-2 bg-body-secondary text-center rounded">
-            {{ if $.IsHome -}}
-            <i class="bi bi-{{ $filename }}"></i>
-            {{- else -}}
-            <svg class="bi" width="1em" height="1em" fill="currentColor">
-              <use xlink:href="../bootstrap-icons.svg#{{ $filename }}"/>
-            </svg>
-            {{- end }}
-          </div>
-          <div class="name text-muted text-decoration-none text-center pt-1">{{ $filename }}</div>
-        </a>
-      </li>
-      {{- end }}
-    {{- end }}
+  <ul class="list-unstyled list">
+    {{ range $taxonomyName, $taxonomy := .Site.Taxonomies -}}
+      {{ if eq "categories" $taxonomyName -}}
+        {{ range $key, $value := $taxonomy -}}
+          <li class="my-5" id="{{ $key }}">
+            <h3 class="d-flex align-items-center gap-3 pb-3 mb-4 border-bottom">
+              <a href="/categories/{{ $key }}/" class="link-dark text-decoration-none">
+                {{ $key | humanize }}
+              </a>
+              <small class="badge fs-6 text-muted bg-light rounded-pill">{{ .Count }}</small>
+            </h3>
+            <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-4 row-cols-xl-6 list-unstyled">
+              {{ range first 24 ($value.Pages) -}}
+                {{- partial "icon" . -}}
+              {{ end -}}
+            </ul>
+            {{ if gt .Count 24 }}
+            <a class="d-block py-3 btn btn-subtle" href="/categories/{{ $key }}/">
+              View all {{ .Count }}
+            </a>
+            {{ end }}
+          </li>
+        {{ end -}}
+      {{ end -}}
+    {{ end -}}
   </ul>
 </div>

@@ -1,7 +1,7 @@
 ---
 title: Box arrow in down right
 categories:
-  - Box arrows
+  - Arrows
 tags:
   - arrow
 ---

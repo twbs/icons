@@ -1,7 +1,7 @@
 ---
 title: Box arrow down
 categories:
-  - Box arrows
+  - Arrows
 tags:
   - arrow
   - download

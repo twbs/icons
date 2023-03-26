@@ -26,9 +26,9 @@
 
         {{ partialCached "ads" . }}
 
-        <hr class="mx-auto mx-lg-0 my-5">
+        <hr class="mx-auto mx-lg-0 my-5 d-none">
 
-        <p class="text-muted">
+        <p class="text-muted d-none">
           Currently <a href="{{ .Site.Params.icons_repo }}/releases/tag/v{{ .Site.Params.version }}">v{{ .Site.Params.version }}</a>
           <span class="px-1">&#8226;</span>
           <a href="#icons">Icons</a>

@@ -22,7 +22,7 @@
 // @import "bootstrap/accordion";
 @import "bootstrap/breadcrumb";
 // @import "bootstrap/pagination";
-// @import "bootstrap/badge";
+@import "bootstrap/badge";
 // @import "bootstrap/alert";
 // @import "bootstrap/progress";
 // @import "bootstrap/list-group";
@@ -92,13 +92,13 @@
     white-space: pre;
     background-color: transparent;
     border: 0;
-  }
+    }
 
   pre code {
     @include font-size(inherit);
-    word-wrap: normal;
+      word-wrap: normal;
+    }
   }
-}
 
 
 .bd-example {
@@ -137,6 +137,7 @@
   border-bottom: 1px solid var(--bs-border-color-translucent);
 
   .highlight {
+    padding: 1rem 1.25rem;
     margin-bottom: 0;
     background-color: var(--bs-tertiary-bg);
     border-radius: .5rem;
@@ -156,7 +157,7 @@
   }
 
   .btn {
-    padding: 1rem 1.25rem;
+    padding: .75rem 1.25rem;
     border-radius: .5rem;
   }
 
@@ -174,9 +175,14 @@
 .list {
   font-size: 2rem;
 
+  :target {
+    padding-top: 6rem;
+    margin-top: -6rem;
+  }
+
   // stylelint-disable  declaration-no-important
-  a:hover,
-  a:focus {
+  .list-icon:hover,
+  .list-icon:focus {
     &,
     .name {
       color: var(--bs-link-hover-color) !important;
@@ -207,6 +213,12 @@
 }
 
 @media (min-width: 1200px) {
+  .row-cols-xl-6 {
+    > * {
+      flex: 0 0 16.666667%;
+      max-width: 16.666667%;
+    }
+  }
   .row-cols-xl-8 {
     > * {
       flex: 0 0 12.5%;
@@ -235,3 +247,77 @@
   padding-bottom: 4.5rem !important;
 }
 // stylelint-enable declaration-no-important
+
+.bd-sidebar {
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: 5rem;
+    // Override collapse behaviors
+    // display: block !important;
+    height: subtract(100vh, 6rem);
+    // Prevent focus styles to be cut off:
+    // padding-left: .25rem;
+    // margin-left: -.25rem;
+    overflow-y: auto;
+  }
+}
+
+.bd-sidebar-list {
+  --bs-nav-link-padding-y: .375rem;
+  --bs-nav-link-padding-x: .75rem;
+  --bs-nav-link-color: var(--bs-gray-600);
+  --bs-nav-pills-link-active-color: var(--bd-purple);
+  --bs-nav-pills-link-active-bg: rgba(var(--bd-violet-rgb), .05);
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(var(--bs-rows, 1), 1fr);
+  grid-template-columns: repeat(var(--bs-columns, 12), 1fr);
+  gap: var(--bs-gap, 1.5rem);
+}
+
+.category-grid {
+  --bs-columns: 1;
+
+  @include media-breakpoint-up(sm) {
+    --bs-columns: 2;
+  }
+
+  @include media-breakpoint-up(md) {
+    --bs-columns: 3;
+  }
+
+  @include media-breakpoint-up(lg) {
+    --bs-columns: 4;
+  }
+
+  .bi {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+  }
+}
+
+.hover-link-primary:hover {
+  color: var(--bs-primary) !important; // stylelint-disable-line declaration-no-important
+}
+.new-shadow {
+  box-shadow: 0 .25rem .75rem var(--bs-shadow-color, rgba(0, 0, 0, .1));
+}
+.hover-shadow-primary:hover {
+  --bs-shadow-color: rgba(var(--bs-primary-rgb), .25);
+}
+.hover-border-primary:hover {
+  --bs-border-color: rgba(var(--bs-primary-rgb), .75);
+}
+
+.btn-subtle {
+  --bs-btn-color: #{mix($gray-500, $gray-600)};
+  --bs-btn-bg: #{$gray-100};
+  --bs-btn-hover-color: #{$gray-600};
+  --bs-btn-hover-bg: #{mix($gray-100, $gray-200)};
+  --bs-btn-active-color: #{$gray-600};
+  --bs-btn-active-bg: #{$gray-200};
+  --bs-btn-active-border-color: #{$gray-200};
+}
