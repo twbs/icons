@@ -31,14 +31,14 @@
         </div>
       </div>
 
-      {{ if in .Params.tags "deprecated" -}}
+      {{ if .Params.deprecated -}}
         <div class="alert alert-danger my-3" role="alert">
           <strong>Deprecation notice:</strong> This icon is deprecated and will be removed in an upcoming version!
         </div>
       {{- end }}
 
       <hr class="my-4">
-      
+
       {{- $localSvgPath := printf "/icons/%s.svg" .File.TranslationBaseName -}}
       {{- $svgPath := path.Join "/assets/" $localSvgPath -}}
       {{- $svgHtml := readFile $localSvgPath | chomp | safeHTML -}}
