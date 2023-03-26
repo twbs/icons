@@ -1,4 +1,5 @@
 ---
+includeSearch: true
 aliases:
   - /font/
 ---

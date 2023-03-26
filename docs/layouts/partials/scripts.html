@@ -1,7 +1,7 @@
 {{ $bootstrapJs := resources.Get "/js/vendor/bootstrap.bundle.min.js" | resources.Copy "/assets/js/vendor/bootstrap.bundle.min.js" -}}
 <script async src="{{ $bootstrapJs.Permalink | relURL }}"></script>
 
-{{- if or .IsHome (eq .Page.Layout "sprite") -}}
+{{- if eq .Page.Params.includeSearch true -}}
   {{- $fuseVendor := resources.Get "js/vendor/fuse.min.js" -}}
   {{- $searchJs := resources.Get "js/search.js" -}}
   {{- $searchBundle := slice $fuseVendor $searchJs | resources.Concat "assets/js/search.js" -}}
