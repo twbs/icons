@@ -3,6 +3,7 @@ title: Person dash
 categories:
   - People
 tags:
+  - member
   - human
   - individual
   - avatar
