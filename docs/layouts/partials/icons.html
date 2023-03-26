@@ -6,11 +6,11 @@
       <input class="form-control search mb-0" id="search" type="search" placeholder="Start typing to filter..." autocomplete="off">
     </form>
   </div>
-  <ul class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
+  <ul id="icons-list" class="row row-cols-3 row-cols-sm-4 row-cols-lg-6 row-cols-xl-8 list-unstyled list">
     {{ range (where .Site.RegularPages "Type" "icons") -}}
       {{- $filename := .File.TranslationBaseName -}}
       {{- with .Site.GetPage .File.Path }}
-      <li class="col mb-4"{{ with .Params.tags }} data-tags="{{ delimit . " " }}"{{ end }}{{ with .Params.categories }} data-categories="{{ delimit . " " | lower }}"{{ end }}>
+      <li class="col mb-4" data-name="{{ $filename }}" {{ with .Params.tags }}  data-tags="{{ delimit . " " }}"{{ end }}{{ with .Params.categories }} data-categories="{{ delimit . " " | lower }}"{{ end }}>
         <a class="d-block text-body-emphasis text-decoration-none" href="{{ .RelPermalink }}">
           <div class="px-3 py-4 mb-2 bg-body-secondary text-center rounded">
             {{ if $.IsHome -}}
