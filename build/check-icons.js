@@ -21,7 +21,7 @@ const jsonIconList = Object.keys(fontJson)
     console.time(timeLabel)
 
     const files = await fs.readdir(iconsDir)
-    const svgIconList = files.map(file => file.slice(0,-4))
+    const svgIconList = files.map(file => file.slice(0, -4))
 
     const onlyInJson = jsonIconList.filter(icon => !svgIconList.includes(icon))
     const onlyInSvg = svgIconList.filter(icon => !jsonIconList.includes(icon))
@@ -33,6 +33,7 @@ const jsonIconList = Object.keys(fontJson)
         for (const icon of onlyInJson) {
           console.log(`  - ${picocolors.red(icon)}`)
         }
+
         process.exit(1)
       }
 
@@ -42,6 +43,7 @@ const jsonIconList = Object.keys(fontJson)
         for (const icon of onlyInSvg) {
           console.log(`  - ${picocolors.red(icon)}`)
         }
+
         process.exit(1)
       }
     }
