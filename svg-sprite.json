@@ -28,7 +28,6 @@
             },
             "cleanupListOfValues",
             "removeXMLNS",
-            "sortAttrs",
             {
               "name": "removeAttrs",
               "params": {
