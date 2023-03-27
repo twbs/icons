@@ -8,9 +8,6 @@ const process = require('node:process')
 const picocolors = require('picocolors')
 
 const fontJson = require(path.join(__dirname, '../font/bootstrap-icons.json'))
-const iconsDir = path.join(__dirname, '../icons/')
-
-const jsonIconList = Object.keys(fontJson)
 
 ;(async () => {
   try {
@@ -20,7 +17,9 @@ const jsonIconList = Object.keys(fontJson)
     console.log(picocolors.cyan(`[${basename}] started`))
     console.time(timeLabel)
 
+    const iconsDir = path.join(__dirname, '../icons/')
     const files = await fs.readdir(iconsDir)
+    const jsonIconList = Object.keys(fontJson)
     const svgIconList = files.map(file => path.basename(file, path.extname(file)))
 
     const onlyInJson = jsonIconList.filter(icon => !svgIconList.includes(icon))
