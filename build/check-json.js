@@ -7,13 +7,12 @@ const path = require('node:path')
 const process = require('node:process')
 const picocolors = require('picocolors')
 
-
 const fontJson = require(path.join(__dirname, '../font/bootstrap-icons.json'))
+const iconsDir = path.join(__dirname, '../icons/')
+
 const jsonIconList = Object.keys(fontJson)
 
-const iconsDir = path.join(__dirname, '../icons/');
-
-(async () => {
+;(async () => {
   try {
     const basename = path.basename(__filename)
     const timeLabel = picocolors.cyan(`[${basename}] finished`)
@@ -24,16 +23,18 @@ const iconsDir = path.join(__dirname, '../icons/');
     const files = await fs.readdir(iconsDir)
     const svgIconList = files.map(file => file.slice(0,-4))
 
-    const onlyInJson = jsonIconList.filter(i => !svgIconList.includes(i))
-    const onlyInSvg = svgIconList.filter(i => !jsonIconList.includes(i))
+    const onlyInJson = jsonIconList.filter(icon => !svgIconList.includes(icon))
+    const onlyInSvg = svgIconList.filter(icon => !jsonIconList.includes(icon))
 
-    if(onlyInJson.length != 0 || onlyInSvg != 0) {
-      if(onlyInJson.length){
-        console.error(picocolors.red("Found additional icons in JSON:\n  %s"), onlyInJson.join(", "))
+    if (onlyInJson.length !== 0 || onlyInSvg !== 0) {
+      if (onlyInJson.length > 0) {
+        console.error(picocolors.red('Found additional icons in JSON:\n  %s'), onlyInJson.join(', '))
       }
-      if(onlyInSvg.length){
-        console.error(picocolors.red("Found additional icons in SVG files:\n  %s"), onlyInSvg.join(", "))
+
+      if (onlyInSvg.length > 0) {
+        console.error(picocolors.red('Found additional icons in SVG files:\n  %s'), onlyInSvg.join(', '))
       }
+
       throw new Error('Mismatch between JSON and SVG files')
     }
 
