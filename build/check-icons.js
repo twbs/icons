@@ -39,8 +39,6 @@ const jsonIconList = Object.keys(fontJson)
       for (const icon of onlyInJson) {
         console.log(`  - ${picocolors.red(icon)}`)
       }
-
-      process.exit(1)
     }
 
     if (onlyInSvg.length > 0) {
@@ -49,9 +47,9 @@ const jsonIconList = Object.keys(fontJson)
       for (const icon of onlyInSvg) {
         console.log(`  - ${picocolors.red(icon)}`)
       }
-
-      process.exit(1)
     }
+
+    process.exit(1)
   } catch (error) {
     console.error(error)
     process.exit(1)
