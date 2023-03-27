@@ -21,35 +21,37 @@ const jsonIconList = Object.keys(fontJson)
     console.time(timeLabel)
 
     const files = await fs.readdir(iconsDir)
-    const svgIconList = files.map(file => file.slice(0, -4))
+    const svgIconList = files.map(file => path.basename(file, path.extname(file)))
 
     const onlyInJson = jsonIconList.filter(icon => !svgIconList.includes(icon))
     const onlyInSvg = svgIconList.filter(icon => !jsonIconList.includes(icon))
 
-    if (onlyInJson.length !== 0 || onlyInSvg !== 0) {
-      if (onlyInJson.length > 0) {
-        console.error(picocolors.red('Found additional icons in JSON:'))
+    if (onlyInJson.length === 0 || onlyInSvg === 0) {
+      console.log(picocolors.green('Success, found no differences!'))
+      console.timeEnd(timeLabel)
 
-        for (const icon of onlyInJson) {
-          console.log(`  - ${picocolors.red(icon)}`)
-        }
-
-        process.exit(1)
-      }
-
-      if (onlyInSvg.length > 0) {
-        console.error(picocolors.red('Found additional icons in SVG files:'))
-
-        for (const icon of onlyInSvg) {
-          console.log(`  - ${picocolors.red(icon)}`)
-        }
-
-        process.exit(1)
-      }
+      return
     }
 
-    console.log(picocolors.green('Success, found no differences!'))
-    console.timeEnd(timeLabel)
+    if (onlyInJson.length > 0) {
+      console.error(picocolors.red('Found additional icons in JSON:'))
+
+      for (const icon of onlyInJson) {
+        console.log(`  - ${picocolors.red(icon)}`)
+      }
+
+      process.exit(1)
+    }
+
+    if (onlyInSvg.length > 0) {
+      console.error(picocolors.red('Found additional icons in SVG files:'))
+
+      for (const icon of onlyInSvg) {
+        console.log(`  - ${picocolors.red(icon)}`)
+      }
+
+      process.exit(1)
+    }
   } catch (error) {
     console.error(error)
     process.exit(1)
