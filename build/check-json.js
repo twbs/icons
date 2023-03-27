@@ -28,17 +28,25 @@ const jsonIconList = Object.keys(fontJson)
 
     if (onlyInJson.length !== 0 || onlyInSvg !== 0) {
       if (onlyInJson.length > 0) {
-        console.error(picocolors.red('Found additional icons in JSON:\n  %s'), onlyInJson.join(', '))
+        console.error(picocolors.red('Found additional icons in JSON:'))
+
+        for (const icon of onlyInJson) {
+          console.log(`  - ${picocolors.red(icon)}`)
+        }
+        process.exit(1)
       }
 
       if (onlyInSvg.length > 0) {
-        console.error(picocolors.red('Found additional icons in SVG files:\n  %s'), onlyInSvg.join(', '))
-      }
+        console.error(picocolors.red('Found additional icons in SVG files:'))
 
-      throw new Error('Mismatch between JSON and SVG files')
+        for (const icon of onlyInSvg) {
+          console.log(`  - ${picocolors.red(icon)}`)
+        }
+        process.exit(1)
+      }
     }
 
-    console.log(picocolors.green('\nSuccess, found no differences!'))
+    console.log(picocolors.green('Success, found no differences!'))
     console.timeEnd(timeLabel)
   } catch (error) {
     console.error(error)
