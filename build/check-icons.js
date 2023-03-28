@@ -7,10 +7,8 @@ const path = require('node:path')
 const process = require('node:process')
 const picocolors = require('picocolors')
 
-const fontJson = require(path.join(__dirname, '../font/bootstrap-icons.json'))
+const fontJsonPath = path.join(__dirname, '../font/bootstrap-icons.json')
 const iconsDir = path.join(__dirname, '../icons/')
-
-const jsonIconList = Object.keys(fontJson)
 
 ;(async () => {
   try {
@@ -20,36 +18,40 @@ const jsonIconList = Object.keys(fontJson)
     console.log(picocolors.cyan(`[${basename}] started`))
     console.time(timeLabel)
 
-    const files = await fs.readdir(iconsDir)
-    const svgIconList = files.map(file => file.slice(0, -4))
+    const fontJsonString = await fs.readFile(fontJsonPath, 'utf8')
+    const fontJson = JSON.parse(fontJsonString)
+    const svgFiles = await fs.readdir(iconsDir)
+
+    const jsonIconList = Object.keys(fontJson)
+    const svgIconList = svgFiles.map(svg => path.basename(svg, path.extname(svg)))
 
     const onlyInJson = jsonIconList.filter(icon => !svgIconList.includes(icon))
     const onlyInSvg = svgIconList.filter(icon => !jsonIconList.includes(icon))
 
-    if (onlyInJson.length !== 0 || onlyInSvg !== 0) {
-      if (onlyInJson.length > 0) {
-        console.error(picocolors.red('Found additional icons in JSON:'))
+    if (onlyInJson.length === 0 || onlyInSvg === 0) {
+      console.log(picocolors.green('Success, found no differences!'))
+      console.timeEnd(timeLabel)
 
-        for (const icon of onlyInJson) {
-          console.log(`  - ${picocolors.red(icon)}`)
-        }
+      return
+    }
 
-        process.exit(1)
-      }
+    if (onlyInJson.length > 0) {
+      console.error(picocolors.red(`Found additional icons in ${fontJsonPath}:`))
 
-      if (onlyInSvg.length > 0) {
-        console.error(picocolors.red('Found additional icons in SVG files:'))
-
-        for (const icon of onlyInSvg) {
-          console.log(`  - ${picocolors.red(icon)}`)
-        }
-
-        process.exit(1)
+      for (const icon of onlyInJson) {
+        console.log(`  - ${picocolors.red(icon)}`)
       }
     }
 
-    console.log(picocolors.green('Success, found no differences!'))
-    console.timeEnd(timeLabel)
+    if (onlyInSvg.length > 0) {
+      console.error(picocolors.red('Found additional icons in SVG files:'))
+
+      for (const icon of onlyInSvg) {
+        console.log(`  - ${picocolors.red(icon)}`)
+      }
+    }
+
+    process.exit(1)
   } catch (error) {
     console.error(error)
     process.exit(1)
