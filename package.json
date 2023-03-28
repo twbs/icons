@@ -23,7 +23,7 @@
     "pages": "node build/build-pages.js",
     "icons": "npm-run-all icons-main --aggregate-output --parallel icons-sprite icons-font",
     "icons-main": "node build/build-svgs.js",
-    "icons-zip": "cross-env-shell \"rm -rf bootstrap-icons-$npm_package_version && cp -r icons/ bootstrap-icons-$npm_package_version && cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && cp -r font/ bootstrap-icons-$npm_package_version && zip -qr9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && rm -rf bootstrap-icons-$npm_package_version\"",
+    "icons-zip": "cross-env-shell \"rm -rf bootstrap-icons-$npm_package_version && rm -f bootstrap-icons-$npm_package_version.zip && cp -r icons/ bootstrap-icons-$npm_package_version && cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && cp -r font/ bootstrap-icons-$npm_package_version && zip -qr9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && rm -rf bootstrap-icons-$npm_package_version\"",
     "icons-sprite": "svg-sprite --config svg-sprite.json --log=info icons/*.svg",
     "icons-font": "fantasticon",
     "release": "npm-run-all icons docs-build icons-zip",
