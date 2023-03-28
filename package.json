@@ -47,10 +47,10 @@
     "docs-serve": "hugo server --port 4000 --disableFastRender",
     "docs-build": "hugo --cleanDestinationDir --printUnusedTemplates",
     "docs-test": "npm-run-all docs-build docs-test:vnu",
-    "docs-test:vnu": "node build/vnu-jar.js",
-    "pages": "node build/build-pages.js",
+    "docs-test:vnu": "node build/vnu-jar.mjs",
+    "pages": "node build/build-pages.mjs",
     "icons": "npm-run-all icons-main --aggregate-output --parallel icons-sprite icons-font",
-    "icons-main": "node build/build-svgs.js",
+    "icons-main": "node build/build-svgs.mjs",
     "icons-zip": "cross-env-shell \"rm -rf bootstrap-icons-$npm_package_version bootstrap-icons-$npm_package_version.zip && cp -r icons/ bootstrap-icons-$npm_package_version && cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && cp -r font/ bootstrap-icons-$npm_package_version && zip -qr9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && rm -rf bootstrap-icons-$npm_package_version\"",
     "icons-sprite": "svg-sprite --config svg-sprite.json --log=info \"icons/*.svg\"",
     "icons-font": "npm-run-all icons-font-*",
@@ -62,7 +62,7 @@
     "test:eslint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location .cache/.stylelintcache",
     "test:lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
-    "test:check-icons": "node build/check-icons.js",
+    "test:check-icons": "node build/check-icons.mjs",
     "test": "npm-run-all --parallel --aggregate-output --continue-on-error test:*"
   },
   "devDependencies": {
