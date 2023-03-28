@@ -99,7 +99,7 @@ Copy the Bootstrap Icons SVGs to your directory of choice and reference them lik
 {{< /md >}}
   </div>
   <div class="col-md-8">
-    {{< example >}}<img src="/assets/img/bootstrap.svg" alt="Bootstrap" width="32" height="32">{{< /example >}}
+    {{< example >}}<img src="/assets/icons/bootstrap.svg" alt="Bootstrap" width="32" height="32">{{< /example >}}
   </div>
 </div>
 
@@ -173,11 +173,11 @@ For purely decorative icons, add `aria-hidden="true"`. Otherwise, provide an app
   </div>
   <div class="col-md-8">
     <div class="bd-example">
-      <img src="/assets/img/bootstrap.svg" alt="Bootstrap" width="32" height="32">
+      <img src="/assets/icons/bootstrap.svg" alt="Bootstrap" width="32" height="32">
     </div>
 {{< highlight html >}}
 <!-- alt="..." on <img> element -->
-<img src="/assets/img/bootstrap.svg" alt="Bootstrap" ...>
+<img src="/assets/icons/bootstrap.svg" alt="Bootstrap" ...>
 {{< /highlight >}}
     <div class="bd-example">
       <i class="bi-github" role="img" style="font-size: 2em" aria-label="GitHub"></i>
