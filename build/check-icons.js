@@ -7,7 +7,8 @@ const path = require('node:path')
 const process = require('node:process')
 const picocolors = require('picocolors')
 
-const fontJson = require(path.join(__dirname, '../font/bootstrap-icons.json'))
+const fontJsonPath = path.join(__dirname, '../font/bootstrap-icons.json')
+const iconsDir = path.join(__dirname, '../icons/')
 
 ;(async () => {
   try {
@@ -17,10 +18,12 @@ const fontJson = require(path.join(__dirname, '../font/bootstrap-icons.json'))
     console.log(picocolors.cyan(`[${basename}] started`))
     console.time(timeLabel)
 
-    const iconsDir = path.join(__dirname, '../icons/')
-    const files = await fs.readdir(iconsDir)
+    const fontJsonString = await fs.readFile(fontJsonPath, 'utf8')
+    const fontJson = JSON.parse(fontJsonString)
+    const svgFiles = await fs.readdir(iconsDir)
+
     const jsonIconList = Object.keys(fontJson)
-    const svgIconList = files.map(file => path.basename(file, path.extname(file)))
+    const svgIconList = svgFiles.map(svg => path.basename(svg, path.extname(svg)))
 
     const onlyInJson = jsonIconList.filter(icon => !svgIconList.includes(icon))
     const onlyInSvg = svgIconList.filter(icon => !jsonIconList.includes(icon))
@@ -33,7 +36,7 @@ const fontJson = require(path.join(__dirname, '../font/bootstrap-icons.json'))
     }
 
     if (onlyInJson.length > 0) {
-      console.error(picocolors.red('Found additional icons in JSON:'))
+      console.error(picocolors.red(`Found additional icons in ${fontJsonPath}:`))
 
       for (const icon of onlyInJson) {
         console.log(`  - ${picocolors.red(icon)}`)
