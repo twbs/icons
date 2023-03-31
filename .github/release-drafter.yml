@@ -17,11 +17,15 @@ categories:
   - title: '📖 Docs'
     labels:
       - 'docs'
+  - title: '🧰 Maintenance'
+    labels:
+      - 'build'
+      - 'meta'
+      - 'chore'
+      - 'CI'
   - title: '📦 Dependencies'
     labels:
       - 'dependencies'
-  - title: '🧰 Maintenance'
-    label: 'chore'
 change-template: '- #$NUMBER: $TITLE'
 template: |
   ## Changes
