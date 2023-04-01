@@ -144,6 +144,11 @@
           <div id="copy-error-callout" class="alert alert-info d-none" role="alert"></div>
 
           {{ highlight $svgHtml "html" "" }}
+
+          <h2 class="fs-3">Copy slug</h2>
+          <div class="mb-4">
+            {{- highlight .File.TranslationBaseName "plaintext" "" }}
+          </div>
         </div>
       </div>
     </main>
