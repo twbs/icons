@@ -11,7 +11,7 @@
       {{- $filename := .File.TranslationBaseName -}}
       {{- with .Site.GetPage .File.Path }}
       <li class="col mb-4" data-name="{{ $filename }}"{{ with .Params.tags }} data-tags="{{ delimit . " " }}"{{ end }}{{ with .Params.categories }} data-categories="{{ delimit . " " | lower }}"{{ end }}>
-        <a class="d-block text-body-emphasis text-decoration-none p-relative" href="{{ .RelPermalink }}">
+        <a class="d-block text-body-emphasis text-decoration-none" href="{{ .RelPermalink }}">
           <div class="px-3 py-4 mb-2 bg-body-secondary text-center rounded">
             {{ if $.IsHome -}}
             <i class="bi bi-{{ $filename }}"></i>
