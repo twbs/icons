@@ -10,7 +10,7 @@
     {{ range (where .Site.RegularPages "Type" "icons") -}}
       {{- $filename := .File.TranslationBaseName -}}
       {{- with .Site.GetPage .File.Path }}
-      <li class="col mb-4" data-name="{{ $filename }}"{{ with .Params.tags }} data-tags="{{ delimit . " " }}"{{ end }}{{ with .Params.categories }} data-categories="{{ delimit . " " | lower }}"{{ end }}>
+      <li class="col mb-4 position-relative" data-name="{{ $filename }}"{{ with .Params.tags }} data-tags="{{ delimit . " " }}"{{ end }}{{ with .Params.categories }} data-categories="{{ delimit . " " | lower }}"{{ end }}>
         <a class="d-block text-body-emphasis text-decoration-none" href="{{ .RelPermalink }}">
           <div class="px-3 py-4 mb-2 bg-body-secondary text-center rounded">
             {{ if $.IsHome -}}
@@ -21,8 +21,9 @@
             </svg>
             {{- end }}
           </div>
-          <div class="name text-muted text-decoration-none text-center pt-1">{{ $filename }}</div>
+          <div class="name text-muted text-decoration-none text-center pt-1 pe-4">{{ $filename }}</div>
         </a>
+        <span class="bd-clipboard-wrapper">{{- highlight .File.TranslationBaseName "plaintext" "" }}</span>
       </li>
       {{- end }}
     {{- end }}
