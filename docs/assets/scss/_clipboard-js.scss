@@ -5,7 +5,6 @@
 .bd-clipboard {
   position: relative;
   display: none;
-  float: right;
 
   + .highlight {
     margin-top: 0;
@@ -33,3 +32,24 @@
     color: var(--bs-link-hover-color);
   }
 }
+
+#icons-list .bd-clipboard {
+  font-size: .8125rem;
+}
+
+#icons-list .btn-clipboard {
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+}
+
+#icons-list .highlight {
+  position: absolute;
+  z-index: -999;
+  opacity: 0;
+  width: 1px;
+  height: 0;
+  padding: 0;
+}
+
