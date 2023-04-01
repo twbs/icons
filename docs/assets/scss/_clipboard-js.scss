@@ -36,10 +36,10 @@
 
 
 .bd-clipboard-wrapper {
-  display: none;
   position: absolute;
   top: 7.15rem;
   right: 1rem;
+  display: none;
   font-size: .8125rem;
 
   .btn-clipboard {
@@ -59,10 +59,12 @@
   }
 }
 
-li:hover .bd-clipboard-wrapper {
-  display: block;
-}
+li:hover {
+  .bd-clipboard-wrapper {
+    display: block;
+  }
 
-li:hover .name {
-  padding-right: ($spacer * 1.5);
+  .name {
+    padding-right: ($spacer * 1.5);
+  }
 }
