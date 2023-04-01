@@ -34,7 +34,9 @@
   }
 }
 
+
 .bd-clipboard-wrapper {
+  display: none;
   position: absolute;
   top: 7.15rem;
   right: 1rem;
@@ -55,4 +57,12 @@
     padding: 0;
     opacity: 0;
   }
+}
+
+li:hover .bd-clipboard-wrapper {
+  display: block;
+}
+
+li:hover .name {
+  padding-right: ($spacer * 1.5);
 }
