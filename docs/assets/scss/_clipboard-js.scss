@@ -34,15 +34,15 @@
 }
 
 .bd-clipboard-wrapper {
-  font-size: .8125rem;
   position: absolute;
   top: 7.15rem;
   right: 1rem;
+  font-size: .8125rem;
 
   .btn-clipboard {
-    padding: 0;
     top: 0;
     right: 0;
+    padding: 0;
     background-color: transparent;
   }
 
@@ -50,8 +50,8 @@
     position: absolute;
     z-index: -999;
     width: 1px;
-    opacity: 0;
     height: 0;
     padding: 0;
+    opacity: 0;
   }
 }
