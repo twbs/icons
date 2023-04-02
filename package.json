@@ -16,6 +16,17 @@
     "bootstrap",
     "icons"
   ],
+  "style": "font/bootstrap-icons.css",
+  "sass": "font/bootstrap-icons.scss",
+  "files": [
+    "icons/*.svg",
+    "bootstrap-icons.svg",
+    "font",
+    "!.DS_Store"
+  ],
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
   "scripts": {
     "start": "npm run docs-serve",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
@@ -36,8 +47,6 @@
     "test:check-icons": "node build/check-icons.js",
     "test": "npm-run-all docs-build --parallel --aggregate-output --continue-on-error test:*"
   },
-  "style": "font/bootstrap-icons.css",
-  "sass": "font/bootstrap-icons.scss",
   "devDependencies": {
     "@twbs/fantasticon": "^2.5.2",
     "autoprefixer": "^10.4.14",
@@ -58,14 +67,5 @@
     "svg-sprite": "^3.0.0-beta1",
     "svgo": "^3.0.2",
     "vnu-jar": "22.9.29"
-  },
-  "files": [
-    "icons/*.svg",
-    "bootstrap-icons.svg",
-    "font",
-    "!.DS_Store"
-  ],
-  "hugo-bin": {
-    "buildTags": "extended"
   }
 }
