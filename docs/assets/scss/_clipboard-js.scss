@@ -38,7 +38,7 @@
 .bd-clipboard-wrapper {
   position: absolute;
   top: 7.15rem;
-  right: 1rem;
+  right: .75rem;
   display: none;
   font-size: .8125rem;
 
@@ -46,7 +46,7 @@
     top: 0;
     right: 0;
     padding: 0;
-    background-color: transparent;
+    background-color: var(--bs-body-bg);
   }
 
   .highlight {
@@ -64,7 +64,7 @@ li:hover {
     display: block;
   }
 
-  .name {
-    padding-right: ($spacer * 1.5);
+  .btn-clipboard {
+    box-shadow: -5px 0px 10px var(--bs-body-bg);
   }
 }
