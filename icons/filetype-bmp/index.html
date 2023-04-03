@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Filetype bmp · Bootstrap Icons</title>
 <meta name="description" content="Official open source SVG icon library for Bootstrap">
-<meta name="generator" content="Hugo 0.109.0">
+<meta name="generator" content="Hugo 0.111.3">
 
-<link rel="canonical" href="https://icons.getbootstrap.com/icons/filetype-bmp/"><script src="/js/color-modes.js"></script>
+<link rel="canonical" href="https://icons.getbootstrap.com/icons/filetype-bmp/"><script src="/assets/js/color-modes.js"></script>
 
 <link rel="stylesheet" href="/assets/font/bootstrap-icons.css"><link rel="stylesheet" href="/assets/css/docs.css">
 
@@ -138,27 +138,28 @@
                     type="button"
                     aria-expanded="false"
                     data-bs-toggle="dropdown"
-                    data-bs-display="static">
+                    data-bs-display="static"
+                    aria-label="Toggle theme (auto)">
               <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-              <span class="d-lg-none ms-2">Toggle theme</span>
+              <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 8rem;">
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
               <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
                   Light
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
-                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
                   Dark
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
-                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
                   Auto
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
@@ -232,7 +233,7 @@
 </svg>
               </a>
             </p>
-            <p>
+            <div class="d-flex gap-2 mb-3">
               <button type="button" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-bmp" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 15.849h1.664c.272 0 .512-.044.72-.132.21-.09.374-.219.493-.386.12-.168.179-.372.179-.61a.986.986 0 0 0-.123-.51.846.846 0 0 0-.323-.325 1.084 1.084 0 0 0-.445-.14v-.036a1 1 0 0 0 .352-.16.79.79 0 0 0 .243-.294.932.932 0 0 0 .09-.422c0-.308-.107-.55-.322-.723-.215-.174-.5-.261-.858-.261H0v3.999Zm.785-3.404h.7c.186 0 .33.047.431.14.104.092.155.22.155.384a.52.52 0 0 1-.082.296.497.497 0 0 1-.249.185 1.222 1.222 0 0 1-.433.064H.785v-1.07Zm0 1.62h.75c.154 0 .285.024.393.073a.51.51 0 0 1 .24.211.61.61 0 0 1 .082.325c0 .19-.068.334-.205.434-.137.098-.36.146-.671.146H.785v-1.19Zm3.474 1.784v-2.66h.038l.952 2.16h.515l.947-2.16h.038v2.66h.715V11.85h-.8l-1.14 2.596h-.026l-1.14-2.596h-.805v3.999h.706Zm3.918-3.999h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.106.201.159.427.159.677 0 .25-.054.476-.162.677-.105.199-.26.357-.462.474a1.452 1.452 0 0 1-.733.173h-.803v1.342h-.79V11.85Zm2.06 1.714a.794.794 0 0 0 .085-.381c0-.226-.062-.4-.185-.521-.123-.122-.294-.182-.512-.182h-.66v1.406h.66a.794.794 0 0 0 .375-.082.574.574 0 0 0 .237-.24Z"/>
@@ -251,8 +252,8 @@
 </svg>
                 Button
               </button>
-            </p>
-            <div class="mb-3">
+            </div>
+            <div class="d-flex gap-2 mb-3">
               <button type="button" class="btn btn-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-bmp" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 15.849h1.664c.272 0 .512-.044.72-.132.21-.09.374-.219.493-.386.12-.168.179-.372.179-.61a.986.986 0 0 0-.123-.51.846.846 0 0 0-.323-.325 1.084 1.084 0 0 0-.445-.14v-.036a1 1 0 0 0 .352-.16.79.79 0 0 0 .243-.294.932.932 0 0 0 .09-.422c0-.308-.107-.55-.322-.723-.215-.174-.5-.261-.858-.261H0v3.999Zm.785-3.404h.7c.186 0 .33.047.431.14.104.092.155.22.155.384a.52.52 0 0 1-.082.296.497.497 0 0 1-.249.185 1.222 1.222 0 0 1-.433.064H.785v-1.07Zm0 1.62h.75c.154 0 .285.024.393.073a.51.51 0 0 1 .24.211.61.61 0 0 1 .082.325c0 .19-.068.334-.205.434-.137.098-.36.146-.671.146H.785v-1.19Zm3.474 1.784v-2.66h.038l.952 2.16h.515l.947-2.16h.038v2.66h.715V11.85h-.8l-1.14 2.596h-.026l-1.14-2.596h-.805v3.999h.706Zm3.918-3.999h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.106.201.159.427.159.677 0 .25-.054.476-.162.677-.105.199-.26.357-.462.474a1.452 1.452 0 0 1-.733.173h-.803v1.342h-.79V11.85Zm2.06 1.714a.794.794 0 0 0 .085-.381c0-.226-.062-.4-.185-.521-.123-.122-.294-.182-.512-.182h-.66v1.406h.66a.794.794 0 0 0 .375-.082.574.574 0 0 0 .237-.24Z"/>
@@ -279,13 +280,15 @@
                 </button>
               </div>
             </div>
-            <div class="input-group w-50">
-              <span class="input-group-text" id="basic-addon1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-bmp" viewBox="0 0 16 16">
+            <div class="col-md-6">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-bmp" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 15.849h1.664c.272 0 .512-.044.72-.132.21-.09.374-.219.493-.386.12-.168.179-.372.179-.61a.986.986 0 0 0-.123-.51.846.846 0 0 0-.323-.325 1.084 1.084 0 0 0-.445-.14v-.036a1 1 0 0 0 .352-.16.79.79 0 0 0 .243-.294.932.932 0 0 0 .09-.422c0-.308-.107-.55-.322-.723-.215-.174-.5-.261-.858-.261H0v3.999Zm.785-3.404h.7c.186 0 .33.047.431.14.104.092.155.22.155.384a.52.52 0 0 1-.082.296.497.497 0 0 1-.249.185 1.222 1.222 0 0 1-.433.064H.785v-1.07Zm0 1.62h.75c.154 0 .285.024.393.073a.51.51 0 0 1 .24.211.61.61 0 0 1 .082.325c0 .19-.068.334-.205.434-.137.098-.36.146-.671.146H.785v-1.19Zm3.474 1.784v-2.66h.038l.952 2.16h.515l.947-2.16h.038v2.66h.715V11.85h-.8l-1.14 2.596h-.026l-1.14-2.596h-.805v3.999h.706Zm3.918-3.999h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.106.201.159.427.159.677 0 .25-.054.476-.162.677-.105.199-.26.357-.462.474a1.452 1.452 0 0 1-.733.173h-.803v1.342h-.79V11.85Zm2.06 1.714a.794.794 0 0 0 .085-.381c0-.226-.062-.4-.185-.521-.123-.122-.294-.182-.512-.182h-.66v1.406h.66a.794.794 0 0 0 .375-.082.574.574 0 0 0 .237-.24Z"/>
 </svg>
-              </span>
-              <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
+                </span>
+                <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="basic-addon1">
+              </div>
             </div>
           </div>
         </div>
