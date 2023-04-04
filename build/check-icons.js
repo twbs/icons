@@ -23,7 +23,7 @@ const iconsDir = path.join(__dirname, '../icons/')
     const svgFiles = await fs.readdir(iconsDir)
 
     const jsonIconList = Object.keys(fontJson)
-    const svgIconList = svgFiles.map(svg => path.basename(svg, path.extname(svg)))
+    const svgIconList = svgFiles.map(svg => path.basename(svg, '.svg'))
 
     const onlyInJson = jsonIconList.filter(icon => !svgIconList.includes(icon))
     const onlyInSvg = svgIconList.filter(icon => !jsonIconList.includes(icon))
