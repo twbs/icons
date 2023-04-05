@@ -30,7 +30,6 @@
     "sprite",
     "woff",
     "woff2"
-
   ],
   "style": "font/bootstrap-icons.css",
   "sass": "font/bootstrap-icons.scss",
