@@ -12,6 +12,16 @@
   "bugs": {
     "url": "https://github.com/twbs/icons/issues"
   },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/twbs"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/bootstrap"
+    }
+  ],
   "keywords": [
     "bootstrap",
     "icons",
