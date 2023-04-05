@@ -1,9 +1,12 @@
+/* global bootstrap:false */
+
 import ClipboardJS from 'clipboard'
 
 (function () {
+  const btnTitle = 'Copy to clipboard'
   const btnHtml = [
   '<div class="bd-clipboard">',
-    '<button type="button" class="btn-clipboard" title="Copy to clipboard">',
+    `<button type="button" class="btn-clipboard" title="${btnTitle}">`,
       '<i class="bi bi-clipboard" aria-hidden="true"></i>',
     '</button>',
   '</div>'].join('')
@@ -13,37 +16,43 @@ import ClipboardJS from 'clipboard'
       element.insertAdjacentHTML('beforebegin', btnHtml)
     })
 
-  const clipboard = new ClipboardJS('.btn-clipboard', {
-    target(trigger) {
-      return trigger.parentNode.nextElementSibling
-    }
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.btn-clipboard').forEach(btn => {
+      bootstrap.Tooltip.getOrCreateInstance(btn, { btnTitle })
+    })
   })
 
-  clipboard.on('success', event => {
-    const icon = event.trigger.querySelector('.bi')
-    const originalTitle = event.trigger.title
+  const clipboard = new ClipboardJS('.btn-clipboard', {
+    target: trigger => trigger.parentNode.nextElementSibling,
+    text: trigger => trigger.parentNode.nextElementSibling.textContent.trimEnd()
+  })
 
+  clipboard.on('success', (event) => {
+    const icon = event.trigger.querySelector('.bi')
+    const tooltipBtn = bootstrap.Tooltip.getInstance(event.trigger)
+
+    tooltipBtn.setContent({ '.tooltip-inner': 'Copied!' })
+    event.trigger.addEventListener('hidden.bs.tooltip', () => {
+      tooltipBtn.setContent({ '.tooltip-inner': btnTitle })
+    }, { once: true })
     event.clearSelection()
     icon.classList.replace('bi-clipboard', 'bi-check2')
-    event.trigger.title = 'Copied!'
 
     setTimeout(() => {
       icon.classList.replace('bi-check2', 'bi-clipboard')
-      event.trigger.title = originalTitle
+      tooltipBtn.hide()
     }, 2000)
   })
 
-  clipboard.on('error', () => {
+  clipboard.on('error', event => {
     const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
     const fallbackMsg = `Press ${modifierKey}C to copy`
-    const errorElement = document.getElementById('copy-error-callout')
+    const tooltipBtn = bootstrap.Tooltip.getInstance(event.trigger)
 
-    if (!errorElement) {
-      return
-    }
-
-    errorElement.classList.remove('d-none')
-    errorElement.insertAdjacentHTML('afterbegin', fallbackMsg)
+    tooltipBtn.setContent({ '.tooltip-inner': fallbackMsg })
+    event.trigger.addEventListener('hidden.bs.tooltip', () => {
+      tooltipBtn.setContent({ '.tooltip-inner': btnTitle })
+    }, { once: true })
   })
 
   const searchInput = document.getElementById('search')
