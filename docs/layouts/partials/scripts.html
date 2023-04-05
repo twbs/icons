@@ -1,21 +1,15 @@
 <script async src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
 
-{{- if or .IsHome (eq .Page.Layout "sprite") -}}
-  {{- $fuseVendor := resources.Get "js/vendor/fuse.min.js" -}}
-  {{- $searchJs := resources.Get "js/search.js" -}}
-  {{- $searchBundle := slice $fuseVendor $searchJs | resources.Concat "assets/js/search.js" -}}
-
-  {{- if eq hugo.Environment "production" -}}
-    {{- $searchBundle = $searchBundle | resources.Minify -}}
-  {{- end }}
-  <script async src="{{ $searchBundle.Permalink | relURL }}"></script>
-{{- end }}
-
-{{- $clipboardVendor := resources.Get "js/vendor/clipboard.min.js" -}}
-{{- $applicationJs := resources.Get "js/application.js" -}}
-{{- $applicationBundle := slice $clipboardVendor $applicationJs | resources.Concat "assets/js/application.js" -}}
+{{- $esbuildOptions := dict "target" "es2019" -}}
 
 {{- if eq hugo.Environment "production" -}}
-  {{- $applicationBundle = $applicationBundle | resources.Minify -}}
+  {{- $esbuildOptions = merge $esbuildOptions (dict "minify" "true") -}}
+{{- end -}}
+
+{{- if or .IsHome (eq .Page.Layout "sprite") -}}
+  {{- $searchJs := resources.Get "js/search.js" | js.Build $esbuildOptions | resources.Copy "/assets/js/search.js" -}}
+  <script async src="{{ $searchJs.Permalink | relURL }}"></script>
 {{- end }}
-<script async src="{{ $applicationBundle.Permalink | relURL }}"></script>
+
+{{- $application := resources.Get "js/application.js" | js.Build $esbuildOptions | resources.Copy "/assets/js/application.js" -}}
+<script async src="{{ $application.Permalink | relURL }}"></script>

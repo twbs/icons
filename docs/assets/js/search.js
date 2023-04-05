@@ -1,8 +1,6 @@
-/* global Fuse:false */
+import Fuse from 'fuse.js'
 
 (function () {
-  'use strict'
-
   const iconsBody = document.querySelector('#icons-body')
 
   if (!iconsBody) return
