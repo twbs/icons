@@ -67,3 +67,8 @@ params:
   icons:                "https://icons.getbootstrap.com/"
   swag:                 "https://cottonbureau.com/people/bootstrap"
   icons_figma:          "https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
+
+related:
+  indices:
+    - name: tags
+      weight: 100
