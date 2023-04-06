@@ -1,11 +1,14 @@
-/* global ClipboardJS:false */
+import ClipboardJS from 'clipboard'
 
 (function () {
-  'use strict'
+  const btnHtml = [
+  '<div class="bd-clipboard">',
+    '<button type="button" class="btn-clipboard" title="Copy to clipboard">',
+      '<i class="bi bi-clipboard" aria-hidden="true"></i>',
+    '</button>',
+  '</div>'].join('')
 
-  const btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard"><i class="bi bi-clipboard" aria-hidden="true"></i></button></div>'
-
-  Array.prototype.slice.call(document.querySelectorAll('div.highlight'))
+  document.querySelectorAll('div.highlight')
     .forEach(element => {
       element.insertAdjacentHTML('beforebegin', btnHtml)
     })
@@ -53,7 +56,7 @@
   }
 
   // Disable empty links in docs
-  Array.prototype.slice.call(document.querySelectorAll('[href="#"]'))
+  document.querySelectorAll('[href="#"]')
     .forEach(link => {
       link.addEventListener('click', event => {
         event.preventDefault()

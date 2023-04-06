@@ -5,8 +5,6 @@
  */
 
 (() => {
-  'use strict'
-
   const storedTheme = localStorage.getItem('theme')
 
   const getPreferredTheme = () => {
