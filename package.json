@@ -46,6 +46,8 @@
     "start": "npm run docs-serve",
     "docs-serve": "hugo server --port 4000 --disableFastRender",
     "docs-build": "hugo --cleanDestinationDir --printUnusedTemplates",
+    "docs-test": "npm-run-all docs-build docs-test:vnu",
+    "docs-test:vnu": "node build/vnu-jar.js",
     "pages": "node build/build-pages.js",
     "icons": "npm-run-all icons-main --aggregate-output --parallel icons-sprite icons-font",
     "icons-main": "node build/build-svgs.js",
@@ -58,9 +60,8 @@
     "test:eslint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location .cache/.stylelintcache",
     "test:lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
-    "test:vnu": "node build/vnu-jar.js",
     "test:check-icons": "node build/check-icons.js",
-    "test": "npm-run-all docs-build --parallel --aggregate-output --continue-on-error test:*"
+    "test": "npm-run-all --parallel --aggregate-output --continue-on-error test:*"
   },
   "devDependencies": {
     "@twbs/fantasticon": "^2.7.1",
