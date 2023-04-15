@@ -29,11 +29,8 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Build the icons
-        run: npm run icons
-
-      - name: Build the docs
-        run: npm run docs-build
+      - name: Prepare release
+        run: npm run release
 
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
