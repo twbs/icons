@@ -13,7 +13,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'twbs/icons'
+    if: github.repository == 'twbs/icons' && startsWith(github.ref, 'refs/tags/v')
 
     steps:
       - name: Clone repository
@@ -35,7 +35,6 @@ jobs:
 
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
-        if: github.repository == 'twbs/icons' && startsWith(github.ref, 'refs/tags/v')
         with:
           allow_empty_commit: false
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
