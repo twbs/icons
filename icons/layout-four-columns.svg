@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-four-columns" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13ZM8.5 15h2.75V1H8.5v14Zm3.75 0h2.25a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-2.25v14ZM7.5 15V1H4.75v14H7.5Zm-6-14a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h2.25V1H1.5Z"/>
+</svg>
