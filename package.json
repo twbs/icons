@@ -60,7 +60,7 @@
     "release-version": "node build/bump-version.js",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
-    "test:eslint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
+    "test:eslint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --ext .js,.mjs .",
     "test:stylelint": "stylelint docs/assets/scss/ --cache --cache-location .cache/.stylelintcache",
     "test:lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "test:check-icons": "node build/check-icons.mjs",
