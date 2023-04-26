@@ -57,6 +57,7 @@
     "icons-font-main": "fantasticon",
     "icons-font-min": "cleancss -O1 --format breakWith=lf --with-rebase --output font/bootstrap-icons.min.css font/bootstrap-icons.css",
     "release": "npm-run-all icons docs-build icons-zip",
+    "release-version": "node build/bump-version.js",
     "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all icons docs-build",
     "test:fusv": "fusv docs/assets/scss/",
     "test:eslint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
