@@ -33,6 +33,13 @@ jobs:
       - name: Prepare release
         run: npm run release
 
+      - name: Upload icons zip
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: ./bootstrap-icons-*.zip
+          if-no-files-found: error
+
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -41,7 +48,7 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./_site/
 
-  publish:
+  publish-docs:
     needs: build
     runs-on: ubuntu-latest
     if: github.repository == 'twbs/icons' && startsWith(github.ref, 'refs/tags/v')
