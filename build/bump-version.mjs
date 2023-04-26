@@ -6,8 +6,6 @@
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
 
-'use strict'
-
 const { execFile } = require('node:child_process')
 const fs = require('node:fs').promises
 
