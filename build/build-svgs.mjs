@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
-'use strict'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import process from 'node:process'
+import { fileURLToPath } from 'node:url'
+import picocolors from 'picocolors'
+import { loadConfig, optimize } from 'svgo'
 
-const fs = require('node:fs').promises
-const path = require('node:path')
-const process = require('node:process')
-const picocolors = require('picocolors')
-const { loadConfig, optimize } = require('svgo')
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const iconsDir = path.join(__dirname, '../icons/')
 
@@ -40,7 +42,7 @@ async function processFile(file, config) {
     console.time(timeLabel)
 
     const files = await fs.readdir(iconsDir)
-    const config = await loadConfig(path.join(__dirname, '../svgo.config.js'))
+    const config = await loadConfig(path.join(__dirname, '../svgo.config.mjs'))
 
     await Promise.all(files.map(file => processFile(file, config)))
 

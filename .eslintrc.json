@@ -6,7 +6,7 @@
   },
   "parserOptions": {
     "ecmaVersion": 2019,
-    "sourceType": "script"
+    "sourceType": "module"
   },
   "extends": "eslint:recommended",
   "rules": {

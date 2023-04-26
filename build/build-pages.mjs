@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
-'use strict'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import picocolors from 'picocolors'
 
-const fs = require('node:fs').promises
-const path = require('node:path')
-const picocolors = require('picocolors')
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const iconsDir = path.join(__dirname, '../icons/')
 const pagesDir = path.join(__dirname, '../docs/content/icons/')

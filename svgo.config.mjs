@@ -1,8 +1,6 @@
-'use strict'
+import path from 'node:path'
 
-const path = require('node:path')
-
-module.exports = {
+export default {
   multipass: true,
   js2svg: {
     pretty: true,
