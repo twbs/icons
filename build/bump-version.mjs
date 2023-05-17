@@ -16,7 +16,7 @@ const DRY_RUN = process.argv.includes('--dry') || process.argv.includes('--dry-r
 const FILES = [
   'build/font/css.hbs',
   'build/font/scss.hbs',
-  'config.yml'
+  'hugo.yml'
 ]
 
 // Blame TC39... https://github.com/benjamingr/RegExp.escape/issues/37
