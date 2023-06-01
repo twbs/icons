@@ -80,7 +80,7 @@
     "lockfile-lint": "^4.10.1",
     "npm-run-all2": "^6.0.5",
     "picocolors": "^1.0.0",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "stylelint": "^15.6.2",
     "stylelint-config-twbs-bootstrap": "^10.0.0",
