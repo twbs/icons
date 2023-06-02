@@ -9,4 +9,5 @@ tags:
   - sedan
   - drive
   - driving
+  - vehicle
 ---

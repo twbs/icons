@@ -9,4 +9,5 @@ tags:
   - transport
   - deliver
   - delivery
+  - vehicle
 ---
