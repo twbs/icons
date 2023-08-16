@@ -24,13 +24,10 @@
   },
   "overrides": [
     {
-      "files": "docs/**",
+      "files": "docs/assets/js/**",
       "env": {
         "browser": true,
         "node": false
-      },
-      "parserOptions": {
-        "sourceType": "module"
       }
     }
   ]
