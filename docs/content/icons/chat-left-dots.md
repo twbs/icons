@@ -7,4 +7,5 @@ tags:
   - text
   - message
   - typing
+  - comment
 ---

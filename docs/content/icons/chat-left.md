@@ -6,4 +6,5 @@ tags:
   - chat bubble
   - text
   - message
+  - comment
 ---
