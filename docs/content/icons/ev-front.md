@@ -10,4 +10,6 @@ tags:
   - sedan
   - drive
   - driving
+  - electric vehicle
+  - charging
 ---
