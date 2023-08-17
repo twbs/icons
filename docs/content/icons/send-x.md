@@ -6,6 +6,5 @@ tags:
   - message
   - sending
   - sent
-  - plane
-  - paper
+  - paper-plane
 ---
