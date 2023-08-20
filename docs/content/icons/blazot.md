@@ -1,0 +1,5 @@
+---
+title: Blazot
+categories:
+tags:
+---

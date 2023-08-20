@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2") format("woff2"),
-url("./fonts/bootstrap-icons.woff?1fa40e8900654d2863d011707b9fb6f2") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?160b7a847b5aa59d19469161308a09a4") format("woff2"),
+url("./fonts/bootstrap-icons.woff?160b7a847b5aa59d19469161308a09a4") format("woff");
 }
 
 .bi::before,
@@ -1979,3 +1979,4 @@ url("./fonts/bootstrap-icons.woff?1fa40e8900654d2863d011707b9fb6f2") format("wof
 .bi-sina-weibo::before { content: "\f8ca"; }
 .bi-tencent-qq::before { content: "\f8cb"; }
 .bi-wikipedia::before { content: "\f8cc"; }
+.bi-blazot::before { content: "\f2a5"; }
