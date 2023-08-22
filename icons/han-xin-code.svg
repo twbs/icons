@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-han-xin-code" viewBox="0 0 16 16">
+  <path d="M0 14h2v2H0v-2Z"/>
+  <path d="M0 12h4v4H3v-3H0v-1Z"/>
+  <path d="M0 10h6v6H5v-5H0v-1Zm10-6h2v2h-2V4Z"/>
+  <path d="M10 2h4v4h-1V3h-3V2Z"/>
+  <path d="M10 0h6v6h-1V1h-5V0ZM4 6V4h2v2H4Z"/>
+  <path d="M2 6V2h4v1H3v3H2Z"/>
+  <path d="M0 6V0h6v1H1v5H0Zm12 4v2h-2v-2h2Z"/>
+  <path d="M14 10v4h-4v-1h3v-3h1Z"/>
+  <path d="M16 10v6h-6v-1h5v-5h1ZM8 0h1v1H8V0ZM7 1h1v1H7V1Zm1 1h1v1H8V2ZM7 3h1v1H7V3Zm1 1h1v1H8V4ZM7 5h1v1H7V5Z"/>
+  <path d="M8 0h1v1H8V0ZM7 1h1v1H7V1Zm1 1h1v1H8V2ZM7 3h1v1H7V3Zm1 1h1v1H8V4ZM7 5h1v1H7V5Zm1 1h1v1H8V6ZM7 7h1v1H7V7Zm1 1h1v1H8V8Zm1-1h1v1H9V7Zm1 1h1v1h-1V8Zm2 0h1v1h-1V8Zm3-1h1v1h-1V7Zm-4 0h1v1h-1V7Zm2 0h1v1h-1V7ZM0 8h1v1H0V8Zm6 0h1v1H6V8ZM2 8h1v1H2V8Zm2 0h1v1H4V8Zm10 0h1v1h-1V8ZM1 7h1v1H1V7Zm2 0h1v1H3V7Zm2 0h1v1H5V7Zm2 2h1v1H7V9Zm1 1h1v1H8v-1Zm-1 1h1v1H7v-1Zm1 1h1v1H8v-1Zm-1 1h1v1H7v-1Zm1 1h1v1H8v-1Zm-1 1h1v1H7v-1Z"/>
+</svg>
