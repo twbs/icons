@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2") format("woff2"),
-url("./fonts/bootstrap-icons.woff?1fa40e8900654d2863d011707b9fb6f2") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?81d445bba057376cd3b1e6ccd9714526") format("woff2"),
+url("./fonts/bootstrap-icons.woff?81d445bba057376cd3b1e6ccd9714526") format("woff");
 }
 
 .bi::before,
@@ -1979,3 +1979,64 @@ url("./fonts/bootstrap-icons.woff?1fa40e8900654d2863d011707b9fb6f2") format("wof
 .bi-sina-weibo::before { content: "\f8ca"; }
 .bi-tencent-qq::before { content: "\f8cb"; }
 .bi-wikipedia::before { content: "\f8cc"; }
+.bi-alphabet-uppercase::before { content: "\f2a5"; }
+.bi-alphabet::before { content: "\f68a"; }
+.bi-amazon::before { content: "\f68d"; }
+.bi-arrows-collapse-vertical::before { content: "\f690"; }
+.bi-arrows-expand-vertical::before { content: "\f695"; }
+.bi-arrows-vertical::before { content: "\f698"; }
+.bi-arrows::before { content: "\f6a2"; }
+.bi-ban-fill::before { content: "\f6a3"; }
+.bi-ban::before { content: "\f6b6"; }
+.bi-bing::before { content: "\f6c2"; }
+.bi-cake::before { content: "\f6e0"; }
+.bi-cake2::before { content: "\f6ed"; }
+.bi-cookie::before { content: "\f6ee"; }
+.bi-copy::before { content: "\f759"; }
+.bi-crosshair::before { content: "\f769"; }
+.bi-crosshair2::before { content: "\f794"; }
+.bi-emoji-astonished-fill::before { content: "\f795"; }
+.bi-emoji-astonished::before { content: "\f79a"; }
+.bi-emoji-grimace-fill::before { content: "\f79b"; }
+.bi-emoji-grimace::before { content: "\f7a0"; }
+.bi-emoji-grin-fill::before { content: "\f7a1"; }
+.bi-emoji-grin::before { content: "\f7a6"; }
+.bi-emoji-surprise-fill::before { content: "\f7a7"; }
+.bi-emoji-surprise::before { content: "\f7ac"; }
+.bi-emoji-tear-fill::before { content: "\f7ad"; }
+.bi-emoji-tear::before { content: "\f7b2"; }
+.bi-envelope-arrow-down-fill::before { content: "\f7b3"; }
+.bi-envelope-arrow-down::before { content: "\f7b8"; }
+.bi-envelope-arrow-up-fill::before { content: "\f7b9"; }
+.bi-envelope-arrow-up::before { content: "\f7be"; }
+.bi-feather::before { content: "\f7bf"; }
+.bi-feather2::before { content: "\f7c4"; }
+.bi-floppy-fill::before { content: "\f7c5"; }
+.bi-floppy::before { content: "\f7d8"; }
+.bi-floppy2-fill::before { content: "\f7d9"; }
+.bi-floppy2::before { content: "\f7e4"; }
+.bi-gitlab::before { content: "\f7e5"; }
+.bi-highlighter::before { content: "\f7f8"; }
+.bi-marker-tip-circle::before { content: "\f7f9"; }
+.bi-marker-tip::before { content: "\f802"; }
+.bi-nvme-fill::before { content: "\f803"; }
+.bi-nvme::before { content: "\f80c"; }
+.bi-opencollective::before { content: "\f80d"; }
+.bi-pci-card-network::before { content: "\f8cd"; }
+.bi-pci-card-sound::before { content: "\f8ce"; }
+.bi-radar::before { content: "\f8cf"; }
+.bi-send-arrow-down-fill::before { content: "\f8d0"; }
+.bi-send-arrow-down::before { content: "\f8d1"; }
+.bi-send-arrow-up-fill::before { content: "\f8d2"; }
+.bi-send-arrow-up::before { content: "\f8d3"; }
+.bi-sim-slash-fill::before { content: "\f8d4"; }
+.bi-sim-slash::before { content: "\f8d5"; }
+.bi-sourceforge::before { content: "\f8d6"; }
+.bi-substack::before { content: "\f8d7"; }
+.bi-threads-fill::before { content: "\f8d8"; }
+.bi-threads::before { content: "\f8d9"; }
+.bi-transparency::before { content: "\f8da"; }
+.bi-twitter-x::before { content: "\f8db"; }
+.bi-type-h4::before { content: "\f8dc"; }
+.bi-type-h5::before { content: "\f8dd"; }
+.bi-type-h6::before { content: "\f8de"; }
