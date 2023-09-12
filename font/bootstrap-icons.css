@@ -2017,7 +2017,6 @@ url("./fonts/bootstrap-icons.woff?1bb88866b4085542c8ed5fb61b9393dd") format("wof
 .bi-floppy2::before { content: "\f7e4"; }
 .bi-gitlab::before { content: "\f7e5"; }
 .bi-highlighter::before { content: "\f7f8"; }
-.bi-marker-tip-circle::before { content: "\f7f9"; }
 .bi-marker-tip::before { content: "\f802"; }
 .bi-nvme-fill::before { content: "\f803"; }
 .bi-nvme::before { content: "\f80c"; }
