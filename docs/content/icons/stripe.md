@@ -5,4 +5,5 @@ categories:
 tags:
   - payments
   - commerce
+added: 1.10.0
 ---

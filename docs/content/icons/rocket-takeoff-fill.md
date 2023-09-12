@@ -7,4 +7,5 @@ tags:
   - rocketship
   - spaceship
   - launch
+added: 1.10.0
 ---

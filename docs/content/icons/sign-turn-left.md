@@ -8,4 +8,5 @@ tags:
   - navigate
   - navigation
   - route
+added: 1.10.0
 ---
