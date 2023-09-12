@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?81d445bba057376cd3b1e6ccd9714526") format("woff2"),
-url("./fonts/bootstrap-icons.woff?81d445bba057376cd3b1e6ccd9714526") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?a1a17c84f97821aad35b5b8feff161fb") format("woff2"),
+url("./fonts/bootstrap-icons.woff?a1a17c84f97821aad35b5b8feff161fb") format("woff");
 }
 
 .bi::before,
@@ -2040,3 +2040,40 @@ url("./fonts/bootstrap-icons.woff?81d445bba057376cd3b1e6ccd9714526") format("wof
 .bi-type-h4::before { content: "\f8dc"; }
 .bi-type-h5::before { content: "\f8dd"; }
 .bi-type-h6::before { content: "\f8de"; }
+.bi-backpack-fill::before { content: "\f8df"; }
+.bi-backpack::before { content: "\f8e0"; }
+.bi-backpack2-fill::before { content: "\f8e1"; }
+.bi-backpack2::before { content: "\f8e2"; }
+.bi-backpack3-fill::before { content: "\f8e3"; }
+.bi-backpack3::before { content: "\f8e4"; }
+.bi-backpack4-fill::before { content: "\f8e5"; }
+.bi-backpack4::before { content: "\f8e6"; }
+.bi-brilliance::before { content: "\f8e7"; }
+.bi-cake-fill::before { content: "\f8e8"; }
+.bi-cake2-fill::before { content: "\f8e9"; }
+.bi-duffle-fill::before { content: "\f8ea"; }
+.bi-duffle::before { content: "\f8eb"; }
+.bi-exposure::before { content: "\f8ec"; }
+.bi-gender-neuter::before { content: "\f8ed"; }
+.bi-highlights::before { content: "\f8ee"; }
+.bi-luggage-fill::before { content: "\f8ef"; }
+.bi-luggage::before { content: "\f8f0"; }
+.bi-mailbox-flag::before { content: "\f8f1"; }
+.bi-mailbox2-flag::before { content: "\f8f2"; }
+.bi-noise-reduction::before { content: "\f8f3"; }
+.bi-passport-fill::before { content: "\f8f4"; }
+.bi-passport::before { content: "\f8f5"; }
+.bi-person-arms-up::before { content: "\f8f6"; }
+.bi-person-raised-hand::before { content: "\f8f7"; }
+.bi-person-standing-dress::before { content: "\f8f8"; }
+.bi-person-standing::before { content: "\f8f9"; }
+.bi-person-walking::before { content: "\f8fa"; }
+.bi-person-wheelchair::before { content: "\f8fb"; }
+.bi-shadows::before { content: "\f8fc"; }
+.bi-suitcase-fill::before { content: "\f8fd"; }
+.bi-suitcase-lg-fill::before { content: "\f8fe"; }
+.bi-suitcase-lg::before { content: "\f8ff"; }
+.bi-suitcase::before { content: "\f900"; }
+.bi-suitcase2-fill::before { content: "\f901"; }
+.bi-suitcase2::before { content: "\f902"; }
+.bi-vignette::before { content: "\f903"; }
