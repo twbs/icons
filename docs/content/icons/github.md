@@ -5,4 +5,7 @@ categories:
 tags:
   - social
   - microsoft
+  - vcs
+  - git
+added: 1.11.0
 ---
