@@ -1,10 +1,9 @@
 ---
-title: GitHub
+title: Sourceforge
 categories:
   - Brand
 tags:
   - social
-  - microsoft
   - vcs
   - git
 added: 1.11.0

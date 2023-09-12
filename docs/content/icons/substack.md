@@ -1,11 +1,9 @@
 ---
-title: GitHub
+title: Substack
 categories:
   - Brand
 tags:
   - social
-  - microsoft
-  - vcs
-  - git
+  - blog
 added: 1.11.0
 ---

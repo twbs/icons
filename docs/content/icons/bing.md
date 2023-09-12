@@ -1,11 +1,9 @@
 ---
-title: GitHub
+title: Bing
 categories:
   - Brand
 tags:
-  - social
+  - search
   - microsoft
-  - vcs
-  - git
 added: 1.11.0
 ---
