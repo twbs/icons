@@ -5,4 +5,5 @@ categories:
 tags:
   - kanban
   - board
+added: 1.10.0
 ---
