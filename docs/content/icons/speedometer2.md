@@ -6,4 +6,5 @@ tags:
   - speed
   - tachometer
   - dashboard
+  - gauge
 ---
