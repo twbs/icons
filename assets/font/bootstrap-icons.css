@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Icons v1.10.5 (https://icons.getbootstrap.com/)
+ * Bootstrap Icons v1.11.1 (https://icons.getbootstrap.com/)
  * Copyright 2019-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?1bb88866b4085542c8ed5fb61b9393dd") format("woff2"),
-url("./fonts/bootstrap-icons.woff?1bb88866b4085542c8ed5fb61b9393dd") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?2820a3852bdb9a5832199cc61cec4e65") format("woff2"),
+url("./fonts/bootstrap-icons.woff?2820a3852bdb9a5832199cc61cec4e65") format("woff");
 }
 
 .bi::before,
