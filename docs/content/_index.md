@@ -106,6 +106,18 @@ Copy the Bootstrap Icons SVGs to your directory of choice and reference them lik
 <div class="row my-4">
   <div class="col-md-4">
 {{< md >}}
+### Styling external image
+The implementation of `filter` properties on the `<img>` element enables dynamic color changes. Users can adjust the image's color using specified filter styles, enhancing visual customization and versatility.
+{{< /md >}}
+  </div>
+  <div class="col-md-8">
+    {{< example >}}<img src="/assets/icons/bootstrap.svg" alt="Bootstrap" width="32" height="32" style="filter: invert(24%) sepia(73%) saturate(7469%) hue-rotate(257deg) brightness(94%) contrast(94%);">{{< /example >}}
+  </div>
+</div>
+    
+<div class="row my-4">
+  <div class="col-md-4">
+{{< md >}}
 ### Icon font
 Icon fonts with classes for every icon are also included for Bootstrap Icons. Include the icon web fonts in your page via CSS, then reference the class names as needed in your HTML (e.g., `<i class="bi-alarm-clock"></i>`).
 
