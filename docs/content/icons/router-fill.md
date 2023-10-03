@@ -6,4 +6,5 @@ tags:
   - wifi
   - internet
   - wireless
+  - network
 ---
