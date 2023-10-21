@@ -32,7 +32,20 @@ composer require twbs/bootstrap-icons
   <div class="col-md-4">
 {{< md >}}
 ### CDN
-Include the icon fonts stylesheet—in your website `<head>` or via `@import` in CSS—from jsDelivr and get started in seconds. [See icon font docs](#icon-font) for examples.
+Include a specific version of the icon fonts stylesheet—in your website `<head>` or via `@import` in CSS—from jsDelivr and get started in seconds. [See icon font docs](#icon-font) for examples.
+**Important**: It's recommended to always use the latest version of icons to ensure you have access to the latest features, bug fixes, and improvements. You can easily do this by referencing the `@latest` tag in the URL like this:
+
+{{< highlight html >}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.min.css">
+{{< /highlight >}}
+
+{{< highlight css >}}
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.min.css");
+{{< /highlight >}}
+
+Using the latest version is crucial for keeping your website up-to-date and taking advantage of any enhancements or patches made to Bootstrap Icons.
+
+But, if you want to include a specific version (Currently {{< param version >}})of the icon fonts stylesheet—in your website `<head>` or via `@import` in CSS—from jsDelivr and get started in seconds. [See icon font docs](#icon-font) for examples.
 
 {{< highlight html >}}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@{{< param version >}}/font/bootstrap-icons.min.css">
