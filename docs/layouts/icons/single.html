@@ -114,7 +114,7 @@
           <p>Using the web font? Copy, paste, and go.</p>
 
           <div class="mb-4">
-            {{ $iconFontSnippet := printf `<i class="bi bi-%s"></i>` .File.TranslationBaseName -}}
+            {{ $iconFontSnippet := printf `<i class="bi-%s"></i>` .File.TranslationBaseName -}}
             {{- highlight $iconFontSnippet "html" "" }}
           </div>
 
