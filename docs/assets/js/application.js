@@ -4,7 +4,7 @@ import ClipboardJS from 'clipboard'
   const btnHtml = [
   '<div class="bd-clipboard">',
     '<button type="button" class="btn-clipboard" title="Copy to clipboard">',
-      '<i class="bi bi-clipboard" aria-hidden="true"></i>',
+      '<i class="bi-clipboard" aria-hidden="true"></i>',
     '</button>',
   '</div>'].join('')
 

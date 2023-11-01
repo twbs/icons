@@ -73,9 +73,9 @@ Use the SVG sprite to insert any icon through the `<use>` element. Use the icon'
   <div class="col-md-8">
 
 <div class="bd-example" style="font-size: 32px;">
-  <i class="bi bi-heart-fill"></i>
-  <i class="bi bi-toggles"></i>
-  <i class="bi bi-shop"></i>
+  <i class="bi-heart-fill"></i>
+  <i class="bi-toggles"></i>
+  <i class="bi-shop"></i>
 </div>
 {{< highlight html >}}
 <svg class="bi" width="32" height="32" fill="currentColor">
