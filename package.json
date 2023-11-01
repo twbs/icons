@@ -75,7 +75,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.52.0",
     "find-unused-sass-variables": "^5.0.0",
-    "fuse.js": "^6.6.2",
+    "fuse.js": "^7.0.0",
     "hugo-bin": "^0.116.2",
     "lockfile-lint": "^4.12.1",
     "npm-run-all2": "^6.1.1",
