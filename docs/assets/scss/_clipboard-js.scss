@@ -33,3 +33,37 @@
     color: var(--bs-link-hover-color);
   }
 }
+
+.bd-clipboard-wrapper {
+  position: absolute;
+  top: 7.15rem;
+  right: .75rem;
+  display: none;
+  font-size: .8125rem;
+
+  .btn-clipboard {
+    top: 0;
+    right: 0;
+    padding: 0;
+    background-color: var(--bs-body-bg);
+  }
+
+  .highlight {
+    position: absolute;
+    z-index: -999;
+    width: 1px;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+
+li:hover {
+  .bd-clipboard-wrapper {
+    display: block;
+  }
+
+  .btn-clipboard {
+    box-shadow: -7px 0 4px var(--bs-body-bg);
+  }
+}
