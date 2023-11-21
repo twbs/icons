@@ -93,7 +93,7 @@ Documentation is published automatically when a new Git tag is published. See ou
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 ## Author
 
