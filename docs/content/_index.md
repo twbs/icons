@@ -217,7 +217,7 @@ Known issues include:
 
 - **SVGs receive focus by default in Internet Explorer and Edge Legacy.** When embedding your SVGs, add `focusable="false"` to the `<svg>` element. [Learn more on Stack Overflow.](https://stackoverflow.com/questions/18646111/disable-onfocus-event-for-svg-element)
 
-- **When using SVGs with `<img>` elements, screen readers may not announce them as images, or skip the image completely.** Include an additional `role="img"` on the `<img>` element to avoid any issues. [See this article for details.](https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-2)
+- **When using SVGs with `<img>` elements, screen readers may not announce them as images, or skip the image completely.** Include an additional `role="img"` on the `<img>` element to avoid any issues. [See this article for details.](https://web.archive.org/web/20201112013541/https://simplyaccessible.com/article/7-solutions-svgs/#acc-heading-2)
 
 - **External SVG sprites may not function correctly in Internet Explorer.** Use the [svg4everybody](https://github.com/jonathantneal/svg4everybody) polyfill as needed.
 
