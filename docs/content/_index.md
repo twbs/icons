@@ -113,8 +113,8 @@ Use `font-size` and `color` to change the icon appearance.
 {{< /md >}}
   </div>
   <div class="col-md-8">
-    {{< example >}}<i class="bi-alarm"></i>{{< /example >}}
-    {{< example >}}<i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>{{< /example >}}
+    {{< example >}}<i class="bi bi-alarm"></i>{{< /example >}}
+    {{< example >}}<i class="bi bi-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>{{< /example >}}
   </div>
 </div>
 
