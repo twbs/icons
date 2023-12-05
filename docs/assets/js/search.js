@@ -53,7 +53,13 @@ import Fuse from 'fuse.js'
   let timeout
   searchInput.addEventListener('input', () => {
     clearTimeout(timeout)
-    timeout = setTimeout(() => search(searchInput.value), 250)
+    timeout = setTimeout(() => {
+      if (searchInput.value) && searchInput.value.length > 0 {
+        const trimmedValue = searchInput.value.trim()
+        searchInput.value = trimmedValue
+        search(trimmedValue)
+      }
+    }, 250)
   })
 
   const query = new URLSearchParams(window.location.search).get('q')
