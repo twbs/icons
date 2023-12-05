@@ -13,7 +13,8 @@ export default {
       params: {
         overrides: {
           removeUnknownsAndDefaults: {
-            keepRoleAttr: true
+            keepDataAttrs: false, // remove all `data` attributes
+            keepRoleAttr: true // keep `role` attribute
           },
           removeViewBox: false
         }
@@ -27,7 +28,6 @@ export default {
       params: {
         attrs: [
           'clip-rule',
-          'data-name',
           'fill'
         ]
       }
