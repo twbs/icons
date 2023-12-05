@@ -24,12 +24,7 @@ import Fuse from 'fuse.js'
   })
 
   function search(searchTerm) {
-    if (searchTerm.length === 0) return
-
     const trimmedSearchTerm = searchTerm ? searchTerm.trim() : ''
-
-    if (trimmedSearchTerm.length === 0) return
-
     const searchResult = fuse.search(trimmedSearchTerm)
 
     iconListContainer.innerHTML = ''
@@ -59,9 +54,10 @@ import Fuse from 'fuse.js'
   })
 
   const query = new URLSearchParams(window.location.search).get('q')
-  if (query) {
-    search(query)
-    searchInput.value = query
-    document.querySelector('#content').scrollIntoView()
-  }
+  if (!query || query.length === 0) return
+
+  const trimmedQuery = query.trim()
+  search(trimmedQuery)
+  searchInput.value = trimmedQuery
+  document.querySelector('#content').scrollIntoView()
 })()
