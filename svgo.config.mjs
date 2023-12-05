@@ -16,12 +16,12 @@ export default {
             keepDataAttrs: false, // remove all `data` attributes
             keepRoleAttr: true // keep `role` attribute
           },
-          removeViewBox: false
+          removeViewBox: false // keep `viewBox`
         }
       }
     },
     // The next plugins are included in svgo but are not part of preset-default,
-    // so we need to enable them separately
+    // so we need to enable them explicitly
     'cleanupListOfValues',
     {
       name: 'removeAttrs',
@@ -47,22 +47,20 @@ export default {
         }
       },
       fn(_root, params, info) {
-        if (!params.attributes) {
-          return null
-        }
+        if (!params.attributes) return null
 
         const basename = path.basename(info.path, '.svg')
 
         return {
           element: {
             enter(node, parentNode) {
-              if (node.name === 'svg' && parentNode.type === 'root') {
-                // We set the `svgAttributes` in the order we want to,
-                // hence why we remove the attributes and add them back
-                node.attributes = {}
-                for (const [key, value] of Object.entries(params.attributes)) {
-                  node.attributes[key] = key === 'class' ? `bi bi-${basename}` : value
-                }
+              if (!(node.name === 'svg' && parentNode.type === 'root')) return
+
+              // We set the `svgAttributes` in the order we want to,
+              // hence why we remove the attributes and add them back
+              node.attributes = {}
+              for (const [key, value] of Object.entries(params.attributes)) {
+                node.attributes[key] = key === 'class' ? `bi bi-${basename}` : value
               }
             }
           }
