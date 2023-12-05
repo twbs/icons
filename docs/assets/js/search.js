@@ -57,10 +57,10 @@ import Fuse from 'fuse.js'
   })
 
   const query = new URLSearchParams(window.location.search).get('q')
-  if (query.length > 0) {
-    const trimmedQuery = query.trim()
-    search(trimmedQuery)
-    searchInput.value = trimmedQuery
-    document.querySelector('#content').scrollIntoView()
-  }
+  if (!query || query.length === 0) return
+
+  const trimmedQuery = query.trim()
+  search(trimmedQuery)
+  searchInput.value = trimmedQuery
+  document.querySelector('#content').scrollIntoView()
 })()
