@@ -54,11 +54,7 @@ import Fuse from 'fuse.js'
   searchInput.addEventListener('input', () => {
     clearTimeout(timeout)
     timeout = setTimeout(() => {
-      if (searchInput.value && searchInput.value.length > 0) {
-        const trimmedValue = searchInput.value.trim()
-        searchInput.value = trimmedValue
-        search(trimmedValue)
-      }
+      search(searchInput.value)
     }, 250)
   })
 
