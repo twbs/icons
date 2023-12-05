@@ -14,9 +14,9 @@ export default {
         overrides: {
           removeUnknownsAndDefaults: {
             keepDataAttrs: false, // remove all `data` attributes
-            keepRoleAttr: true // keep `role` attribute
+            keepRoleAttr: true // keep the `role` attribute
           },
-          removeViewBox: false // keep `viewBox`
+          removeViewBox: false // keep the `viewBox` attribute
         }
       }
     },
