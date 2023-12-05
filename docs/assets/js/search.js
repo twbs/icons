@@ -24,7 +24,7 @@ import Fuse from 'fuse.js'
   })
 
   function search(searchTerm) {
-    if (trimmedSearchTerm.length === 0) return
+    if (searchTerm.length === 0) return
 
     const trimmedSearchTerm = searchTerm ? searchTerm.trim() : ''
 
