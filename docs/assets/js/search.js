@@ -24,10 +24,16 @@ import Fuse from 'fuse.js'
   })
 
   function search(searchTerm) {
-    const searchResult = fuse.search(searchTerm)
+    if (trimmedSearchTerm.length === 0) return
+
+    const trimmedSearchTerm = searchTerm ? searchTerm.trim() : ''
+
+    if (trimmedSearchTerm.length === 0) return
+
+    const searchResult = fuse.search(trimmedSearchTerm)
 
     iconListContainer.innerHTML = ''
-    if (searchTerm.length > 0) {
+    if (trimmedSearchTerm.length > 0) {
       const resultElements = searchResult.map(result => iconElementList[result.refIndex])
       iconListContainer.append(...resultElements)
     } else {
@@ -35,8 +41,8 @@ import Fuse from 'fuse.js'
     }
 
     const newUrl = new URL(window.location)
-    if (searchTerm.length > 0) {
-      newUrl.searchParams.set('q', searchTerm)
+    if (trimmedSearchTerm.length > 0) {
+      newUrl.searchParams.set('q', trimmedSearchTerm)
     } else {
       newUrl.searchParams.delete('q')
     }
