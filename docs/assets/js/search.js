@@ -57,7 +57,7 @@ import Fuse from 'fuse.js'
   })
 
   const query = new URLSearchParams(window.location.search).get('q')
-  if (query) {
+  if (query.length > 0) {
     const trimmedQuery = query.trim()
     search(trimmedQuery)
     searchInput.value = trimmedQuery
