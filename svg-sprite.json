@@ -20,6 +20,7 @@
               "params": {
                 "overrides": {
                   "removeUnknownsAndDefaults": {
+                    "keepDataAttrs": false,
                     "keepRoleAttr": true
                   },
                   "removeViewBox": false
@@ -33,7 +34,6 @@
               "params": {
                 "attrs": [
                   "clip-rule",
-                  "data-name",
                   "fill"
                 ]
               }
