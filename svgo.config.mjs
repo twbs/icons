@@ -56,8 +56,6 @@ export default {
         return {
           element: {
             enter(node, parentNode) {
-              if (!(node.name === 'svg' && parentNode.type === 'root')) return
-
               if (node.name === 'svg' && parentNode.type === 'root') {
                 // We set the `svgAttributes` in the order we want to,
                 // hence why we remove the attributes and add them back
