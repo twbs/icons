@@ -7,7 +7,7 @@
 <meta name="description" content="Use Bootstrap Icons as an SVG sprite, built from our SVGs and easily customized with CSS.">
 <meta name="generator" content="Hugo 0.120.4">
 
-<link rel="canonical" href="https://icons.getbootstrap.com/sprite/"><script src="/assets/js/color-modes.js"></script>
+<link rel="canonical" href="https://icons.getbootstrap.com/sprite/"><script defer src="/assets/js/color-modes.js"></script>
 
 <link rel="stylesheet" href="/assets/font/bootstrap-icons.min.css"><link rel="stylesheet" href="/assets/css/docs.css">
 
@@ -49,7 +49,7 @@
 
 
   </head>
-  <body id="icons-body" class="text-center">
+  <body id="icons-body">
     <a class="skippy visually-hidden-focusable" href="#content">
   <span class="skippy-text">Skip to main content</span>
 </a>
@@ -119,7 +119,55 @@
             <hr class="d-lg-none my-2 text-white-50">
           </li>
 
-          <li class="nav-item dropdown">
+          <li class="nav-item col-6 col-lg-auto dropdown">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="size-2rem" viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+              </symbol>
+              <symbol id="size-3rem" viewBox="0 0 16 16">
+                <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306Z"/>
+              </symbol>
+              <symbol id="size-6rem" viewBox="0 0 16 16">
+                <path d="M7.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318Z"/>
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+              </symbol>
+            </svg>
+            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                    id="size-icon"
+                    type="button"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    data-bs-display="static"
+                    aria-label="Size icon size (auto)">
+              <svg class="bi my-1 size-icon-active"><use href="#size-2rem"></use></svg>
+              <span class="d-lg-none ms-2" id="size-icon-text">Toggle icon size</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="size-icon-text">
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-icon-width-value="32" aria-pressed="true">
+                  <svg class="bi me-2 opacity-50 size-icon"><use href="#size-2rem"></use></svg>
+                  32 px
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-icon-width-value="48" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 size-icon"><use href="#size-3rem"></use></svg>
+                  48 px
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-icon-width-value="96" aria-pressed="false">
+                  <svg class="bi me-2 opacity-50 size-icon"><use href="#size-6rem"></use></svg>
+                  96 px
+                  <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item col-6 col-lg-auto dropdown">
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
               <symbol id="circle-half" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
@@ -20697,7 +20745,7 @@
 
 
       
-    </main><footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+    </main><footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary text-center">
   <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
     <div class="row">
       <div class="col-lg-3 mb-3">

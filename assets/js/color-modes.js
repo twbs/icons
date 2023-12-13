@@ -5,8 +5,19 @@
  */
 
 (() => {
-  const getStoredTheme = () => localStorage.getItem('theme')
-  const setStoredTheme = theme => localStorage.setItem('theme', theme)
+  const getStoredIcons = () => localStorage.getItem('width'),
+    setStoredIcons = size => localStorage.setItem('width', size)
+  const getStoredTheme = () => localStorage.getItem('theme'),
+    setStoredTheme = theme => localStorage.setItem('theme', theme)
+
+  const getPreferredIcons = () => {
+    const StoredIcons = getStoredIcons()
+    if (StoredIcons) {
+      return Number(StoredIcons)
+    }
+
+    return 32
+  }
 
   const getPreferredTheme = () => {
     const storedTheme = getStoredTheme()
@@ -17,6 +28,14 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
+  const setIcons = size => {
+    if (size < 32 || size > 96) {
+      document.documentElement.setAttribute('data-icon-width', 48)
+    } else {
+      document.documentElement.setAttribute('data-icon-width', size)
+    }
+  }
+
   const setTheme = theme => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
@@ -25,7 +44,41 @@
     }
   }
 
+  setIcons(getPreferredIcons())
   setTheme(getPreferredTheme())
+
+  const showActiveIcons = (size, focus = false) => {
+    const sizeSwitcher = document.querySelector('#size-icon')
+
+    if (!sizeSwitcher) {
+      return
+    }
+
+    const sizeSwitcherText = document.querySelector('#size-icon-text')
+    const activeThemeIcon = document.querySelector('.size-icon-active use')
+    const btnToActive = document.querySelector(`[data-icon-width-value="${size}"]`)
+    const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+
+    document.querySelectorAll('[data-icon-width-value]').forEach(element => {
+      element.classList.remove('active')
+      element.setAttribute('aria-pressed', 'false')
+    })
+
+    btnToActive.classList.add('active')
+    btnToActive.setAttribute('aria-pressed', 'true')
+    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+    const sizeSwitcherLabel = `${sizeSwitcherText.textContent} (${btnToActive.dataset.iconWidthValue})`
+    sizeSwitcher.setAttribute('aria-label', sizeSwitcherLabel)
+
+    document.querySelectorAll('.bg-body-secondary .bi').forEach(element => {
+      element.setAttribute('width', `${size}`)
+      element.setAttribute('height', `${size}`)
+    })
+
+    if (focus) {
+      sizeSwitcher.focus()
+    }
+  }
 
   const showActiveTheme = (theme, focus = false) => {
     const themeSwitcher = document.querySelector('#bd-theme')
@@ -63,8 +116,20 @@
   })
 
   window.addEventListener('DOMContentLoaded', () => {
+    showActiveIcons(getPreferredIcons())
     showActiveTheme(getPreferredTheme())
 
+    document.querySelectorAll('[data-icon-width-value]')
+      .forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const size = toggle.getAttribute('data-icon-width-value')
+          localStorage.setItem('width', size)
+          setStoredIcons(size)
+          setIcons(size)
+          showActiveIcons(size, true)
+        })
+      })
+    
     document.querySelectorAll('[data-bs-theme-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
