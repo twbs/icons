@@ -13,21 +13,21 @@ export default {
       params: {
         overrides: {
           removeUnknownsAndDefaults: {
-            keepRoleAttr: true
+            keepDataAttrs: false, // remove all `data` attributes
+            keepRoleAttr: true // keep the `role` attribute
           },
-          removeViewBox: false
+          removeViewBox: false // keep the `viewBox` attribute
         }
       }
     },
     // The next plugins are included in svgo but are not part of preset-default,
-    // so we need to enable them separately
+    // so we need to explicitly enable them
     'cleanupListOfValues',
     {
       name: 'removeAttrs',
       params: {
         attrs: [
           'clip-rule',
-          'data-name',
           'fill'
         ]
       }
