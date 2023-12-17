@@ -25,10 +25,10 @@ import Fuse from 'fuse.js'
 
   function search(searchTerm) {
     const trimmedSearchTerm = searchTerm ? searchTerm.trim() : ''
-    const searchResult = fuse.search(trimmedSearchTerm)
 
     iconListContainer.innerHTML = ''
     if (trimmedSearchTerm.length > 0) {
+      const searchResult = fuse.search(trimmedSearchTerm)
       const resultElements = searchResult.map(result => iconElementList[result.refIndex])
       iconListContainer.append(...resultElements)
     } else {
