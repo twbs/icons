@@ -67,7 +67,7 @@
     "test": "npm-run-all --parallel --aggregate-output --continue-on-error test:*"
   },
   "devDependencies": {
-    "@twbs/fantasticon": "^2.7.1",
+    "@twbs/fantasticon": "^2.7.2",
     "autoprefixer": "^10.4.16",
     "bootstrap": "^5.3.2",
     "clean-css-cli": "^5.6.3",
