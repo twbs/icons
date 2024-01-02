@@ -2,7 +2,7 @@
 
 /*!
  * Script to update version number references in the project.
- * Copyright 2023 The Bootstrap Authors
+ * Copyright 2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
 
