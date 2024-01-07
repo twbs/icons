@@ -1,5 +1,5 @@
 ---
-title: Mortorboard fill
+title: Mortarboard fill
 categories:
   - Real World
 tags:
