@@ -1,5 +1,5 @@
 ---
-title: Mortorboard
+title: Mortarboard
 categories:
   - Real World
 tags:
