@@ -5,4 +5,6 @@ categories:
 tags:
   - graduation
   - cap
+aliases:
+  - /icons/mortorboard/
 ---
