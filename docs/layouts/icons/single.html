@@ -110,14 +110,6 @@
           <p>Download the SVG to use or edit.</p>
           <a href="{{ $svgPath }}" class="btn btn-bd-primary mb-4" download>Download SVG</a>
 
-          <h2 class="fs-3">Icon font</h2>
-          <p>Using the web font? Copy, paste, and go.</p>
-
-          <div class="mb-4">
-            {{ $iconFontSnippet := printf `<i class="bi bi-%s"></i>` .File.TranslationBaseName -}}
-            {{- highlight $iconFontSnippet "html" "" }}
-          </div>
-
           <h2 class="fs-3">Code point</h2>
           <div class="mb-4">
             {{ $codepoints := getJSON "font/bootstrap-icons.json" -}}
@@ -137,6 +129,43 @@
               </li>
             </ul>
           </div>
+
+          <h2 class="fs-3">Icon font</h2>
+          <p>Using the web font? Copy, paste, and go.</p>
+
+          <div class="mb-4">
+            {{ $iconFontSnippet := printf `<i class="bi bi-%s"></i>` .File.TranslationBaseName -}}
+            {{- highlight $iconFontSnippet "html" "" }}
+          </div>
+
+          <p>Don’t want or can’t modify HTML? No problem, you can also use CSS variables! Define via:</p>
+
+          {{ $iconCSSDefSnippet := printf `--bi-%s: "\%s";` .File.TranslationBaseName $hexCodepoint -}}
+          {{- highlight $iconCSSDefSnippet "css" "" }}
+
+          <p><small class="text-body-secondary">
+            <i class="bi bi-lightbulb"></i>
+            <strong>Tip:</strong> Use on <code>:root</code> to make available on the whole page.
+          </small></p>
+
+          <p>Then apply like:</p>
+
+          {{ $iconCSSUseSnippet := printf `content: var(--bi-%s);` .File.TranslationBaseName -}}
+          {{- highlight $iconCSSUseSnippet "css" "" }}
+
+          <details class="mb-4">
+            <summary>See Example</summary>
+            {{ $iconCSSExampleSnippet := printf `:root {
+  %s
+}
+
+.card > footer > a::after {
+  %s
+  font-family: bootstrap-icons;
+}` $iconCSSDefSnippet $iconCSSUseSnippet -}}
+            {{- highlight $iconCSSExampleSnippet "css" "" }}
+          </details>
+
 
           <h2 class="fs-3">Copy HTML</h2>
           <p>Paste the SVG right into your project's code.</p>
