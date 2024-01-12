@@ -143,10 +143,12 @@
           {{ $iconCSSDefSnippet := printf `--bi-%s: "\%s";` .File.TranslationBaseName $hexCodepoint -}}
           {{- highlight $iconCSSDefSnippet "css" "" }}
 
-          <p><small class="text-body-secondary">
-            <i class="bi bi-lightbulb"></i>
-            <strong>Tip:</strong> Use on <code>:root</code> to make available on the whole page.
-          </small></p>
+          <p>
+            <small class="text-body-secondary">
+              <i class="bi bi-lightbulb"></i>
+              <strong>Tip:</strong> Use on <code>:root</code> to make available on the whole page.
+            </small>
+          </p>
 
           <p>Then apply like:</p>
 
@@ -165,7 +167,6 @@
 }` $iconCSSDefSnippet $iconCSSUseSnippet -}}
             {{- highlight $iconCSSExampleSnippet "css" "" }}
           </details>
-
 
           <h2 class="fs-3">Copy HTML</h2>
           <p>Paste the SVG right into your project's code.</p>
