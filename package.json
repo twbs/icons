@@ -76,7 +76,7 @@
     "eslint": "^8.56.0",
     "find-unused-sass-variables": "^5.0.0",
     "fuse.js": "^7.0.0",
-    "hugo-bin": "^0.118.1",
+    "hugo-bin": "^0.119.0",
     "lockfile-lint": "^4.12.1",
     "npm-run-all2": "^6.1.2",
     "picocolors": "^1.0.0",
