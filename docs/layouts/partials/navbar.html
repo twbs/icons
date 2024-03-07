@@ -10,7 +10,7 @@
       <i class="bi bi-three-dots" aria-hidden="true"></i>
     </button>
 
-    <div class="offcanvas-lg offcanvas-end flex-grow-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
       <div class="offcanvas-header px-4 pb-0">
         <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
@@ -64,6 +64,7 @@
           </li>
 
           <li class="nav-item dropdown">
+            <!-- TODO use the icons -->
             <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
               <symbol id="circle-half" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
@@ -90,28 +91,27 @@
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
                   Light
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
                   Dark
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
                   Auto
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
             </ul>
           </li>
-
         </ul>
       </div>
     </div>
