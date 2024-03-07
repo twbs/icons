@@ -39,10 +39,10 @@
     const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"] i`)
     const initialIconOfActiveBtn = [...btnToActive.classList].find(cl => cl.startsWith('bi-'))
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+    for (const element of document.querySelectorAll('[data-bs-theme-value]')) {
       element.classList.remove('active')
       element.setAttribute('aria-pressed', 'false')
-    })
+    }
 
     btnToActive.classList.add('active')
     btnToActive.setAttribute('aria-pressed', 'true')
@@ -66,15 +66,14 @@
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
 
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          localStorage.setItem('theme', theme)
-          setStoredTheme(theme)
-          setTheme(theme)
-          showActiveTheme(theme, true)
-        })
+    for (const toggle of document.querySelectorAll('[data-bs-theme-value]')) {
+      toggle.addEventListener('click', () => {
+        const theme = toggle.getAttribute('data-bs-theme-value')
+        localStorage.setItem('theme', theme)
+        setStoredTheme(theme)
+        setTheme(theme)
+        showActiveTheme(theme, true)
       })
+    }
   })
 })()
