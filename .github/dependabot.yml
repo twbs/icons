@@ -9,6 +9,10 @@ updates:
       - github_actions
     reviewers:
       - XhmikosR
+    groups:
+      github-actions:
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
