@@ -5,6 +5,8 @@ categories:
 tags:
   - hand
   - pointer
+  - like
+  - okay
   - thumbs-up
   - "+1"
 ---
