@@ -7,4 +7,5 @@ tags:
   - paint
   - fill
   - palette
+  - colour
 ---
