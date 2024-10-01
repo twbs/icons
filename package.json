@@ -67,7 +67,7 @@
     "test": "npm-run-all --parallel --aggregate-output --continue-on-error test:*"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.1",
+    "@eslint/js": "^9.11.1",
     "@twbs/fantasticon": "^3.0.0",
     "autoprefixer": "^10.4.20",
     "bootstrap": "^5.3.3",
@@ -78,14 +78,14 @@
     "find-unused-sass-variables": "^6.0.0",
     "fuse.js": "^7.0.0",
     "globals": "^14.0.0",
-    "hugo-bin": "^0.130.1",
+    "hugo-bin": "^0.131.3",
     "lockfile-lint": "^4.14.0",
-    "npm-run-all2": "^6.2.2",
-    "picocolors": "^1.0.1",
-    "postcss": "^8.4.44",
+    "npm-run-all2": "^6.2.3",
+    "picocolors": "^1.1.0",
+    "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
     "stylelint": "^16.9.0",
-    "stylelint-config-twbs-bootstrap": "^15.0.0",
+    "stylelint-config-twbs-bootstrap": "^15.1.0",
     "svg-sprite": "^3.0.0-rc2",
     "svgo": "^3.3.2",
     "vnu-jar": "23.4.11"
