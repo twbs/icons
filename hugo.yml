@@ -63,6 +63,7 @@ params:
   twitter:              "getbootstrap"
   opencollective:       "https://opencollective.com/bootstrap"
   blog:                 "https://blog.getbootstrap.com/"
+  versions:             "https://getbootstrap.com/docs/versions/"
   themes:               "https://themes.getbootstrap.com/"
   icons:                "https://icons.getbootstrap.com/"
   swag:                 "https://cottonbureau.com/people/bootstrap"
