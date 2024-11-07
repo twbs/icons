@@ -12,6 +12,8 @@ env:
 
 permissions:
   contents: read
+  id-token: write      # Required for provenance
+  packages: write      # Required for publishing
 
 jobs:
   build:
@@ -61,6 +63,6 @@ jobs:
           registry-url: "https://registry.npmjs.org"
 
       - name: Publish on npm
-        run: npm publish
+        run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
