@@ -5,4 +5,5 @@ categories:
 tags:
   - add
   - new
+  - math
 ---
