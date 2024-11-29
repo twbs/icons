@@ -6,4 +6,5 @@ tags:
   - difference
   - add
   - subtract
+  - math
 ---

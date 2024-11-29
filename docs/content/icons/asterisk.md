@@ -5,4 +5,5 @@ categories:
 tags:
   - asterisks
   - star
+  - math
 ---
