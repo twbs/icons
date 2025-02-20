@@ -7,4 +7,5 @@ tags:
   - stop
   - ban
   - no
+  - math
 ---

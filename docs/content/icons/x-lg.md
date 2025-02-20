@@ -11,4 +11,5 @@ tags:
   - cancel
   - close
   - exit
+  - math
 ---
