@@ -107,7 +107,7 @@ Copy the Bootstrap Icons SVGs to your directory of choice and reference them lik
   <div class="col-md-4">
 {{< md >}}
 ### Icon font
-Icon fonts with classes for every icon are also included for Bootstrap Icons. Include the icon web fonts in your page via CSS, then reference the class names as needed in your HTML (e.g., `<i class="bi-alarm-clock"></i>`).
+Icon fonts with classes for every icon are also included for Bootstrap Icons. Include the icon web fonts in your page via CSS, then reference the class names as needed in your HTML (e.g., `<i class="bi bi-alarm"></i>`).
 
 Use `font-size` and `color` to change the icon appearance.
 {{< /md >}}
