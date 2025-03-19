@@ -12,6 +12,8 @@
   <a href="https://icons.getbootstrap.com/"><strong>Explore Bootstrap Icons »</strong></a>
   <br>
   <br>
+  <a href="https://getbootstrap.com/docs/5.3/examples/">Examples</a>
+  .
   <a href="https://getbootstrap.com/">Bootstrap</a>
   ·
   <a href="https://themes.getbootstrap.com/">Themes</a>
