@@ -45,8 +45,8 @@
   },
   "scripts": {
     "start": "npm run docs-serve",
-    "docs-serve": "hugo server --port 4000 --disableFastRender",
-    "docs-build": "hugo --cleanDestinationDir --printUnusedTemplates",
+    "docs-serve": "hugo server --port 4000 --disableFastRender --noHTTPCache --renderToMemory --printPathWarnings --printUnusedTemplates",
+    "docs-build": "hugo --cleanDestinationDir --printPathWarnings --printUnusedTemplates",
     "docs-test": "npm-run-all docs-build docs-test:vnu",
     "docs-test:vnu": "node build/vnu-jar.mjs",
     "pages": "node build/build-pages.mjs",
