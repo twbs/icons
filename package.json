@@ -79,7 +79,7 @@
     "find-unused-sass-variables": "^6.1.0",
     "fuse.js": "^7.1.0",
     "globals": "^14.0.0",
-    "hugo-bin": "^0.142.0",
+    "hugo-bin": "^0.143.6",
     "lockfile-lint": "^4.14.0",
     "npm-run-all2": "^7.0.2",
     "picocolors": "^1.1.1",
