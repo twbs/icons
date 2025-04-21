@@ -33,6 +33,7 @@
   ],
   "style": "font/bootstrap-icons.css",
   "sass": "font/bootstrap-icons.scss",
+  "types": "font/bootstrap-icons.ts",
   "files": [
     "icons/*.svg",
     "bootstrap-icons.svg",
