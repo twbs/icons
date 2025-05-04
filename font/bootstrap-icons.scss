@@ -2098,6 +2098,11 @@ $bootstrap-icons-map: (
   "unlock2-fill": "\f90f",
   "unlock2": "\f910",
   "battery-low": "\f911",
+  "anthropic": "\f912",
+  "apple-music": "\f913",
+  "claude": "\f914",
+  "openai": "\f915",
+  "perplexity": "\f916",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {

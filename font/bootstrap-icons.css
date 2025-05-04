@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?3fd613ee53368a8aa703ea84c09a907f") format("woff2"),
-url("./fonts/bootstrap-icons.woff?3fd613ee53368a8aa703ea84c09a907f") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?c9e4d3e4f193366cb59275547e1d934e") format("woff2"),
+url("./fonts/bootstrap-icons.woff?c9e4d3e4f193366cb59275547e1d934e") format("woff");
 }
 
 .bi::before,
@@ -2091,3 +2091,8 @@ url("./fonts/bootstrap-icons.woff?3fd613ee53368a8aa703ea84c09a907f") format("wof
 .bi-unlock2-fill::before { content: "\f90f"; }
 .bi-unlock2::before { content: "\f910"; }
 .bi-battery-low::before { content: "\f911"; }
+.bi-anthropic::before { content: "\f912"; }
+.bi-apple-music::before { content: "\f913"; }
+.bi-claude::before { content: "\f914"; }
+.bi-openai::before { content: "\f915"; }
+.bi-perplexity::before { content: "\f916"; }

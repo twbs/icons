@@ -2063,5 +2063,10 @@
   "measuring-cup": 63758,
   "unlock2-fill": 63759,
   "unlock2": 63760,
-  "battery-low": 63761
+  "battery-low": 63761,
+  "anthropic": 63762,
+  "apple-music": 63763,
+  "claude": 63764,
+  "openai": 63765,
+  "perplexity": 63766
 }
