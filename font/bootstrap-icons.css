@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?e3b813b092176c58bad34ed558ee0c56") format("woff2"),
-url("./fonts/bootstrap-icons.woff?e3b813b092176c58bad34ed558ee0c56") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?dd97f3fa4cd9f58f7fee8a071ddab99e") format("woff2"),
+url("./fonts/bootstrap-icons.woff?dd97f3fa4cd9f58f7fee8a071ddab99e") format("woff");
 }
 
 .bi::before,
@@ -2078,3 +2078,13 @@ url("./fonts/bootstrap-icons.woff?e3b813b092176c58bad34ed558ee0c56") format("wof
 .bi-vignette::before { content: "\f903"; }
 .bi-bluesky::before { content: "\f7f9"; }
 .bi-tux::before { content: "\f904"; }
+.bi-beaker-fill::before { content: "\f905"; }
+.bi-beaker::before { content: "\f906"; }
+.bi-flask-fill::before { content: "\f907"; }
+.bi-flask-florence-fill::before { content: "\f908"; }
+.bi-flask-florence::before { content: "\f909"; }
+.bi-flask::before { content: "\f90a"; }
+.bi-leaf-fill::before { content: "\f90b"; }
+.bi-leaf::before { content: "\f90c"; }
+.bi-measuring-cup-fill::before { content: "\f90d"; }
+.bi-measuring-cup::before { content: "\f90e"; }

@@ -2085,6 +2085,16 @@ $bootstrap-icons-map: (
   "vignette": "\f903",
   "bluesky": "\f7f9",
   "tux": "\f904",
+  "beaker-fill": "\f905",
+  "beaker": "\f906",
+  "flask-fill": "\f907",
+  "flask-florence-fill": "\f908",
+  "flask-florence": "\f909",
+  "flask": "\f90a",
+  "leaf-fill": "\f90b",
+  "leaf": "\f90c",
+  "measuring-cup-fill": "\f90d",
+  "measuring-cup": "\f90e",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {
