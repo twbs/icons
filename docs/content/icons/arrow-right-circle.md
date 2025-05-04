@@ -1,7 +1,7 @@
 ---
 title: Arrow right circle
 categories:
-  - Shape Arrows
+  - Shape arrows
 tags:
   - arrow
   - circle

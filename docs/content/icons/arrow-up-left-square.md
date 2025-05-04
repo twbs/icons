@@ -1,7 +1,7 @@
 ---
 title: Arrow up left square
 categories:
-  - Shape Arrows
+  - Shape arrows
 tags:
   - arrow
   - square

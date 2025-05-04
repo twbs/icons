@@ -1,7 +1,7 @@
 ---
 title: Boxes
 categories:
-  - Real World
+  - Real world
 tags:
   - cardboard
   - package

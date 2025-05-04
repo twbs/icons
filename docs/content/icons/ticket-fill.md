@@ -1,7 +1,7 @@
 ---
 title: Ticket fill
 categories:
-  - Real World
+  - Real world
 tags:
   - tickets
   - admission

@@ -1,7 +1,7 @@
 ---
 title: Ticket perforated fill
 categories:
-  - Real World
+  - Real world
 tags:
   - tickets
   - admission
