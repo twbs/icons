@@ -2097,6 +2097,7 @@ $bootstrap-icons-map: (
   "measuring-cup": "\f90e",
   "unlock2-fill": "\f90f",
   "unlock2": "\f910",
+  "battery-low": "\f911",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {
