@@ -2095,6 +2095,8 @@ $bootstrap-icons-map: (
   "leaf": "\f90c",
   "measuring-cup-fill": "\f90d",
   "measuring-cup": "\f90e",
+  "unlock2-fill": "\f90f",
+  "unlock2": "\f910",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {

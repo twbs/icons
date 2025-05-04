@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?dd97f3fa4cd9f58f7fee8a071ddab99e") format("woff2"),
-url("./fonts/bootstrap-icons.woff?dd97f3fa4cd9f58f7fee8a071ddab99e") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?c4b525ea21952ccad8f20997d7787144") format("woff2"),
+url("./fonts/bootstrap-icons.woff?c4b525ea21952ccad8f20997d7787144") format("woff");
 }
 
 .bi::before,
@@ -2088,3 +2088,5 @@ url("./fonts/bootstrap-icons.woff?dd97f3fa4cd9f58f7fee8a071ddab99e") format("wof
 .bi-leaf::before { content: "\f90c"; }
 .bi-measuring-cup-fill::before { content: "\f90d"; }
 .bi-measuring-cup::before { content: "\f90e"; }
+.bi-unlock2-fill::before { content: "\f90f"; }
+.bi-unlock2::before { content: "\f910"; }
