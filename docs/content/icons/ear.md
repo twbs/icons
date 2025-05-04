@@ -1,7 +1,7 @@
 ---
 title: Ear
 categories:
-  - Real World
+  - Real world
 tags:
   - hearing
   - sound

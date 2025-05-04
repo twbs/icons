@@ -1,7 +1,7 @@
 ---
 title: Postage
 categories:
-  - Real World
+  - Real world
 tags:
   - stamp
   - shipping

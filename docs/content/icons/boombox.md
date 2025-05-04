@@ -1,7 +1,7 @@
 ---
 title: Boombox
 categories:
-  - Real World
+  - Real world
 tags:
   - music
 ---

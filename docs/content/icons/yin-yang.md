@@ -1,7 +1,7 @@
 ---
 title: Yin yang
 categories:
-  - Real World
+  - Real world
 tags:
   - peace
 ---
