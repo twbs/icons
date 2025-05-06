@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?359f490d043246b027b75b9b63358dfc") format("woff2"),
-url("./fonts/bootstrap-icons.woff?359f490d043246b027b75b9b63358dfc") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?3d467865f7fa83ea8fa0d9e559a3fd81") format("woff2"),
+url("./fonts/bootstrap-icons.woff?3d467865f7fa83ea8fa0d9e559a3fd81") format("woff");
 }
 
 .bi::before,
@@ -2096,3 +2096,6 @@ url("./fonts/bootstrap-icons.woff?359f490d043246b027b75b9b63358dfc") format("wof
 .bi-claude::before { content: "\f914"; }
 .bi-openai::before { content: "\f915"; }
 .bi-perplexity::before { content: "\f916"; }
+.bi-css::before { content: "\f917"; }
+.bi-javascript::before { content: "\f918"; }
+.bi-typescript::before { content: "\f919"; }

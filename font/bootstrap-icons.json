@@ -2068,5 +2068,8 @@
   "apple-music": 63763,
   "claude": 63764,
   "openai": 63765,
-  "perplexity": 63766
+  "perplexity": 63766,
+  "css": 63767,
+  "javascript": 63768,
+  "typescript": 63769
 }

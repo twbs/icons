@@ -2103,6 +2103,9 @@ $bootstrap-icons-map: (
   "claude": "\f914",
   "openai": "\f915",
   "perplexity": "\f916",
+  "css": "\f917",
+  "javascript": "\f918",
+  "typescript": "\f919",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {
