@@ -10,9 +10,9 @@ import Fuse from 'fuse.js'
   const iconElementList = Array.from(iconListContainer.children)
 
   const iconDataList = iconElementList.map(element => ({
-    name: element.dataset.name,
-    categories: element.dataset.categories.split(' '),
-    tags: element.dataset.tags.split(' ')
+    name: element.dataset.name || '',
+    categories: element.dataset.categories ? element.dataset.categories.split(' ') : [],
+    tags: element.dataset.tags ? element.dataset.tags.split(' ') : []
   }))
 
   const fuse = new Fuse(iconDataList, {
