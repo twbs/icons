@@ -1,5 +1,5 @@
 ---
-title: Globe Asia Australia
+title: Globe Europe Africa fill
 categories:
   - Geo
 tags:

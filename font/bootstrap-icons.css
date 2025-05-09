@@ -7,8 +7,8 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?3d467865f7fa83ea8fa0d9e559a3fd81") format("woff2"),
-url("./fonts/bootstrap-icons.woff?3d467865f7fa83ea8fa0d9e559a3fd81") format("woff");
+  src: url("./fonts/bootstrap-icons.woff2?e34853135f9e39acf64315236852cd5a") format("woff2"),
+url("./fonts/bootstrap-icons.woff?e34853135f9e39acf64315236852cd5a") format("woff");
 }
 
 .bi::before,
@@ -2099,3 +2099,8 @@ url("./fonts/bootstrap-icons.woff?3d467865f7fa83ea8fa0d9e559a3fd81") format("wof
 .bi-css::before { content: "\f917"; }
 .bi-javascript::before { content: "\f918"; }
 .bi-typescript::before { content: "\f919"; }
+.bi-fork-knife::before { content: "\f91a"; }
+.bi-globe-americas-fill::before { content: "\f91b"; }
+.bi-globe-asia-australia-fill::before { content: "\f91c"; }
+.bi-globe-central-south-asia-fill::before { content: "\f91d"; }
+.bi-globe-europe-africa-fill::before { content: "\f91e"; }

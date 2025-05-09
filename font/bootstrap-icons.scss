@@ -2106,6 +2106,11 @@ $bootstrap-icons-map: (
   "css": "\f917",
   "javascript": "\f918",
   "typescript": "\f919",
+  "fork-knife": "\f91a",
+  "globe-americas-fill": "\f91b",
+  "globe-asia-australia-fill": "\f91c",
+  "globe-central-south-asia-fill": "\f91d",
+  "globe-europe-africa-fill": "\f91e",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {

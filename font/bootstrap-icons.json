@@ -2071,5 +2071,10 @@
   "perplexity": 63766,
   "css": 63767,
   "javascript": 63768,
-  "typescript": 63769
+  "typescript": 63769,
+  "fork-knife": 63770,
+  "globe-americas-fill": 63771,
+  "globe-asia-australia-fill": 63772,
+  "globe-central-south-asia-fill": 63773,
+  "globe-europe-africa-fill": 63774
 }
