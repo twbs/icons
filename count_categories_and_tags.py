@@ -37,11 +37,17 @@ def main():
         data = extract_yaml_front_matter(path)
         if not data:
             continue
-        categories = data.get('categories', [])
-        tags = data.get('tags', [])
-        if isinstance(categories, str):
+        categories = data.get('categories')
+        if categories is None:
+            print(f'WARNING: No categories in {filename}')
+            categories = []
+        elif isinstance(categories, str):
             categories = [categories]
-        if isinstance(tags, str):
+        tags = data.get('tags')
+        if tags is None:
+            print(f'WARNING: No tags in {filename}')
+            tags = []
+        elif isinstance(tags, str):
             tags = [tags]
         # Clean up entries
         categories = [str(cat) for cat in categories if cat not in [None, "", []]]
