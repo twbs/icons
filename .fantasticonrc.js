@@ -14,7 +14,7 @@ module.exports = {
   fontsUrl: './fonts',
   formatOptions: {
     json: {
-      indent: 2,
+      indent: 2
     },
     ts: {
       types: ['literalId']
