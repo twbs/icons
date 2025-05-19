@@ -1,7 +1,7 @@
 ---
 title: Postage fill
 categories:
-  - Real World
+  - Real world
 tags:
   - mail
   - stamp

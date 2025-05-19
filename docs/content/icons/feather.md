@@ -1,7 +1,7 @@
 ---
 title: Feather
 categories:
-  - Real World
+  - Real world
 tags:
   - bird
   - flight

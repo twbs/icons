@@ -6,4 +6,5 @@ tags:
   - space
   - align
   - distribute
+  - centre
 ---

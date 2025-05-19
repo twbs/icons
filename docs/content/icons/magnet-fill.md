@@ -1,7 +1,7 @@
 ---
 title: Magnet fill
 categories:
-  - Real World
+  - Real world
 tags:
   - magnetic
 ---

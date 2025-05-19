@@ -1,7 +1,7 @@
 ---
 title: Box2 heart
 categories:
-  - Real World
+  - Real world
   - Love
 tags:
   - cardboard

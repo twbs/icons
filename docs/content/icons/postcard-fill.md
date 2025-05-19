@@ -1,7 +1,7 @@
 ---
 title: Postcard fill
 categories:
-  - Real World
+  - Real world
 tags:
   - mail
   - letter

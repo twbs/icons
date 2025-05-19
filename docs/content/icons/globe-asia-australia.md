@@ -7,5 +7,4 @@ tags:
   - earth
   - world
   - map
-added: 1.10.0
 ---
