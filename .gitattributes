@@ -1,2 +1,18 @@
 # Enforce Unix newlines
 * text=auto eol=lf
+
+# Ignore development-only files
+/.github export-ignore
+/build export-ignore
+/docs export-ignore
+/.browserslistrc export-ignore
+/.editorconfig export-ignore
+/.fantasticonrc.js export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.stylelintrc.json export-ignore
+/eslint.config.mjs export-ignore
+/hugo.yml export-ignore
+/package-lock.json export-ignore
+/svg-sprite.json export-ignore
+/svgo.config.mjs export-ignore
