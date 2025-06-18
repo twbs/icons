@@ -4,4 +4,5 @@ categories:
   - Chevrons
 tags:
   - chevron
+  - math
 ---

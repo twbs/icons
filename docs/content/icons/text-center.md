@@ -7,4 +7,5 @@ tags:
   - type
   - justify
   - alignment
+  - centre
 ---

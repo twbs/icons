@@ -1,7 +1,7 @@
 ---
 title: Magnet
 categories:
-  - Real World
+  - Real world
 tags:
   - magnetic
 ---

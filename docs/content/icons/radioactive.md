@@ -1,7 +1,7 @@
 ---
 title: Radioactive
 categories:
-  - Real World
+  - Real world
 tags:
   - radiation
   - nuclear

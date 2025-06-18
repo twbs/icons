@@ -1,7 +1,7 @@
 ---
 title: Fan
 categories:
-  - Real World
+  - Real world
 tags:
   - fan
   - vent

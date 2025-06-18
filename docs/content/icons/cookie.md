@@ -1,8 +1,9 @@
 ---
 title: Cookie
 categories:
-  - Real World
+  - Real world
 tags:
   - dessert
+  - biscuit
 added: 1.11.0
 ---

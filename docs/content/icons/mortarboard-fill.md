@@ -1,7 +1,7 @@
 ---
 title: Mortarboard fill
 categories:
-  - Real World
+  - Real world
 tags:
   - graduation
   - cap

@@ -1,7 +1,7 @@
 ---
 title: Arrow down right square
 categories:
-  - Shape Arrows
+  - Shape arrows
 tags:
   - arrow
   - square

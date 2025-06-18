@@ -7,8 +7,6 @@ updates:
     labels:
       - dependencies
       - github_actions
-    reviewers:
-      - XhmikosR
     groups:
       github-actions:
         patterns:
@@ -19,8 +17,6 @@ updates:
       interval: monthly
     labels:
       - dependencies
-    reviewers:
-      - XhmikosR
     versioning-strategy: increase
     groups:
       production-dependencies:

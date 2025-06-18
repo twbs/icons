@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Icons v1.11.3 (https://icons.getbootstrap.com/)
+ * Bootstrap Icons v1.13.1 (https://icons.getbootstrap.com/)
  * Copyright 2019-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/icons/blob/main/LICENSE)
  */
@@ -2083,6 +2083,34 @@ $bootstrap-icons-map: (
   "suitcase2-fill": "\f901",
   "suitcase2": "\f902",
   "vignette": "\f903",
+  "bluesky": "\f7f9",
+  "tux": "\f904",
+  "beaker-fill": "\f905",
+  "beaker": "\f906",
+  "flask-fill": "\f907",
+  "flask-florence-fill": "\f908",
+  "flask-florence": "\f909",
+  "flask": "\f90a",
+  "leaf-fill": "\f90b",
+  "leaf": "\f90c",
+  "measuring-cup-fill": "\f90d",
+  "measuring-cup": "\f90e",
+  "unlock2-fill": "\f90f",
+  "unlock2": "\f910",
+  "battery-low": "\f911",
+  "anthropic": "\f912",
+  "apple-music": "\f913",
+  "claude": "\f914",
+  "openai": "\f915",
+  "perplexity": "\f916",
+  "css": "\f917",
+  "javascript": "\f918",
+  "typescript": "\f919",
+  "fork-knife": "\f91a",
+  "globe-americas-fill": "\f91b",
+  "globe-asia-australia-fill": "\f91c",
+  "globe-central-south-asia-fill": "\f91d",
+  "globe-europe-africa-fill": "\f91e",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {

@@ -107,7 +107,7 @@ Copy the Bootstrap Icons SVGs to your directory of choice and reference them lik
   <div class="col-md-4">
 {{< md >}}
 ### Icon font
-Icon fonts with classes for every icon are also included for Bootstrap Icons. Include the icon web fonts in your page via CSS, then reference the class names as needed in your HTML (e.g., `<i class="bi-alarm-clock"></i>`).
+Icon fonts with classes for every icon are also included for Bootstrap Icons. Include the icon web fonts in your page via CSS, then reference the class names as needed in your HTML (e.g., `<i class="bi bi-alarm"></i>`).
 
 Use `font-size` and `color` to change the icon appearance.
 {{< /md >}}
@@ -118,7 +118,28 @@ Use `font-size` and `color` to change the icon appearance.
   </div>
 </div>
 
-<div class="row">
+<div class="row my-4">
+  <div class="col-md-4">
+{{< md >}}
+### Sass
+When using Bootstrap in a Sass project, you may need to adjust the `$bootstrap-icons-font-dir` variable to point to where your files are installed (most commonly `node_modules`, assuming you're using npm).
+
+**Heads up!** This is currently required [for Vite](https://github.com/vitejs/vite/issues/11012) and [Parcel](https://github.com/parcel-bundler/parcel/issues/6285) as their Sass compilers aren‘t happy with relative URLs.
+{{< /md >}}
+  </div>
+  <div class="col-md-8">
+{{< highlight scss >}}
+// Update the import directory to point to it‘s location within node_modules
+$bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
+
+// Import the Sass files as usual
+@import "bootstrap-icons/font/bootstrap-icons";
+
+{{< /highlight >}}
+  </div>
+</div>
+
+<div class="row my-4">
   <div class="col-md-4">
 {{< md >}}
 ### CSS

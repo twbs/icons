@@ -6,7 +6,7 @@ module.exports = {
   inputDir: './icons',
   outputDir: './font',
   fontTypes: ['woff2', 'woff'],
-  assetTypes: ['css', 'scss', 'json'],
+  assetTypes: ['css', 'scss', 'json', 'ts'],
   name: 'bootstrap-icons',
   codepoints,
   prefix: 'bi',
@@ -15,6 +15,9 @@ module.exports = {
   formatOptions: {
     json: {
       indent: 2
+    },
+    ts: {
+      types: ['literalId']
     }
   },
   // Use our custom Handlebars templates
@@ -27,6 +30,7 @@ module.exports = {
     css: './font/bootstrap-icons.css',
     scss: './font/bootstrap-icons.scss',
     woff: './font/fonts/bootstrap-icons.woff',
-    woff2: './font/fonts/bootstrap-icons.woff2'
+    woff2: './font/fonts/bootstrap-icons.woff2',
+    ts: './font/bootstrap-icons.ts'
   }
 }

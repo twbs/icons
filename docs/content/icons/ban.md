@@ -1,7 +1,7 @@
 ---
 title: Ban
 categories:
-  - Real World
+  - Real world
 tags:
   - no
   - "not allowed"

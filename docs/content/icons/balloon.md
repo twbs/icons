@@ -1,7 +1,7 @@
 ---
 title: Balloon
 categories:
-  - Real World
+  - Real world
 tags:
   - birthday
 ---

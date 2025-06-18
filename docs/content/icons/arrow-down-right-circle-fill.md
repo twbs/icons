@@ -1,7 +1,7 @@
 ---
 title: Arrow down right circle fill
 categories:
-  - Shape Arrows
+  - Shape arrows
 tags:
   - arrow
   - circle
