@@ -1,7 +1,7 @@
 ---
 title: Arrow up circle fill
 categories:
-  - Shape Arrows
+  - Shape arrows
 tags:
   - arrow
   - circle

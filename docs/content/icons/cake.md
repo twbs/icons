@@ -1,7 +1,7 @@
 ---
 title: Cake
 categories:
-  - Real World
+  - Real world
 tags:
   - birthday
   - celebrate

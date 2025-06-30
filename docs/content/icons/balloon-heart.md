@@ -1,7 +1,7 @@
 ---
 title: Balloon heart
 categories:
-  - Real World
+  - Real world
   - Love
 tags:
   - birthday

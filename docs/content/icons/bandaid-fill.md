@@ -1,7 +1,7 @@
 ---
 title: Bandaid fill
 categories:
-  - Real World
+  - Real world
 tags:
   - bandage
   - health

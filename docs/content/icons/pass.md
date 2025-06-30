@@ -1,7 +1,7 @@
 ---
 title: Pass
 categories:
-- Real World
+- Real world
 tags:
 - pass
 ---

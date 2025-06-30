@@ -1,7 +1,7 @@
 ---
 title: Magic
 categories:
-  - Real World
+  - Real world
 tags:
   - "magic stick"
 ---

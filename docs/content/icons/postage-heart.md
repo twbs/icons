@@ -1,7 +1,7 @@
 ---
 title: Postage heart
 categories:
-  - Real World
+  - Real world
   - Love
 tags:
   - mail
