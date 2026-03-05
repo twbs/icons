@@ -69,27 +69,27 @@
     "test": "npm-run-all --parallel --aggregate-output --continue-on-error test:*"
   },
   "devDependencies": {
-    "@eslint/js": "^9.34.0",
+    "@eslint/js": "^10.0.1",
     "@twbs/fantasticon": "^3.1.0",
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.27",
     "bootstrap": "^5.3.8",
     "clean-css-cli": "^5.6.3",
     "clipboard": "^2.0.11",
-    "cross-env": "^10.0.0",
-    "eslint": "^9.34.0",
-    "find-unused-sass-variables": "^6.1.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^10.0.2",
+    "find-unused-sass-variables": "^6.1.1",
     "fuse.js": "^7.1.0",
-    "globals": "^14.0.0",
-    "hugo-bin": "^0.146.0",
-    "lockfile-lint": "^4.14.1",
+    "globals": "^17.4.0",
+    "hugo-bin": "^0.149.2",
+    "lockfile-lint": "^5.0.0",
     "npm-run-all2": "^8.0.4",
     "picocolors": "^1.1.1",
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.8",
     "postcss-cli": "^11.0.1",
-    "stylelint": "^16.23.1",
+    "stylelint": "^16.26.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
     "svg-sprite": "^3.0.0-rc3",
     "svgo": "^3.3.3",
-    "vnu-jar": "24.10.17"
+    "vnu-jar": "25.11.3"
   }
 }
