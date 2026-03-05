@@ -120,7 +120,8 @@
 
           <h2 class="fs-3">Code point</h2>
           <div class="mb-4">
-            {{ $codepoints := getJSON "font/bootstrap-icons.json" -}}
+            {{ $codepointsResource := resources.Get "font/bootstrap-icons.json" -}}
+            {{ $codepoints := $codepointsResource | transform.Unmarshal -}}
             {{ $hexCodepoint :=  printf "%X" (int (index $codepoints .File.TranslationBaseName)) }}
             <ul class="list-unstyled">
               <li>

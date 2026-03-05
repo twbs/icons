@@ -44,6 +44,8 @@ module:
       target:           static/assets/icons
     - source:           font
       target:           static/assets/font
+    - source:           font
+      target:           assets/font
     - source:           node_modules/bootstrap/scss
       target:           assets/scss/bootstrap
     - source:           node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
