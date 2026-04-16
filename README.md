@@ -14,8 +14,6 @@
   <br>
   <a href="https://getbootstrap.com/">Bootstrap</a>
   ·
-  <a href="https://themes.getbootstrap.com/">Themes</a>
-  ·
   <a href="https://blog.getbootstrap.com/">Blog</a>
   <br>
 </p>
