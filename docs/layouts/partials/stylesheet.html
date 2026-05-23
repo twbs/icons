@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/assets/font/bootstrap-icons.min.css">
+<link href="/assets/font/bootstrap-icons.min.css" rel="stylesheet">
 
 {{- $sassOptions := dict "targetPath" "assets/css/docs.css" "precision" 6 -}}
 {{- $postcssOptions := dict "use" "autoprefixer" "noMap" true -}}
@@ -9,4 +9,4 @@
 
 {{- $style := resources.Get "scss/docs.scss" | toCSS $sassOptions | postCSS $postcssOptions -}}
 
-<link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
+<link href="{{ $style.Permalink | relURL }}" rel="stylesheet">
