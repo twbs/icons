@@ -68,6 +68,11 @@
     "test:check-icons": "node build/check-icons.mjs",
     "test": "npm-run-all --parallel --aggregate-output --continue-on-error test:*"
   },
+  "overrides": {
+    "hugo-bin": {
+      "@xhmikosr/bin-wrapper": "^14.3.0"
+    }
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@twbs/fantasticon": "^3.1.0",
