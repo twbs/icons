@@ -11,6 +11,8 @@ updates:
       github-actions:
         patterns:
           - "*"
+    cooldown:
+      default-days: 7
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -23,3 +25,5 @@ updates:
         dependency-type: "production"
       development-dependencies:
         dependency-type: "development"
+    cooldown:
+      default-days: 7
