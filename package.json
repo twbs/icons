@@ -76,25 +76,29 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@twbs/fantasticon": "^3.1.0",
-    "autoprefixer": "^10.5.2",
+    "autoprefixer": "^10.5.3",
     "bootstrap": "^5.3.8",
     "clean-css-cli": "^5.6.3",
     "clipboard": "^2.0.11",
     "cross-env": "^10.1.0",
-    "eslint": "^10.6.0",
+    "eslint": "^10.7.0",
     "find-unused-sass-variables": "^6.2.1",
-    "fuse.js": "^7.4.2",
+    "fuse.js": "^7.5.0",
     "globals": "^17.7.0",
     "hugo-bin": "^0.149.2",
     "lockfile-lint": "^5.0.0",
     "npm-run-all2": "^9.0.2",
     "picocolors": "^1.1.1",
-    "postcss": "^8.5.16",
+    "postcss": "^8.5.19",
     "postcss-cli": "^11.0.1",
     "stylelint": "^16.26.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
     "svg-sprite": "^3.0.0-rc3",
-    "svgo": "^3.3.3",
+    "svgo": "^3.3.4",
     "vnu-jar": "25.11.3"
+  },
+  "allowScripts": {
+    "hugo-bin@0.149.2": true,
+    "ttf2woff2@5.0.0": true
   }
 }
