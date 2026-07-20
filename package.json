@@ -68,15 +68,10 @@
     "test:check-icons": "node build/check-icons.mjs",
     "test": "npm-run-all --parallel --aggregate-output --continue-on-error test:*"
   },
-  "overrides": {
-    "hugo-bin": {
-      "@xhmikosr/bin-wrapper": "^14.3.0"
-    }
-  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@twbs/fantasticon": "^3.1.0",
-    "autoprefixer": "^10.5.3",
+    "autoprefixer": "^10.5.4",
     "bootstrap": "^5.3.8",
     "clean-css-cli": "^5.6.3",
     "clipboard": "^2.0.11",
@@ -85,11 +80,11 @@
     "find-unused-sass-variables": "^6.2.1",
     "fuse.js": "^7.5.0",
     "globals": "^17.7.0",
-    "hugo-bin": "^0.149.2",
+    "hugo-bin": "^0.161.0",
     "lockfile-lint": "^5.0.0",
     "npm-run-all2": "^9.0.2",
     "picocolors": "^1.1.1",
-    "postcss": "^8.5.19",
+    "postcss": "^8.5.20",
     "postcss-cli": "^11.0.1",
     "stylelint": "^16.26.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
@@ -98,7 +93,7 @@
     "vnu-jar": "25.11.3"
   },
   "allowScripts": {
-    "hugo-bin@0.149.2": true,
+    "hugo-bin@0.161.0": true,
     "ttf2woff2@5.0.0": true
   }
 }
