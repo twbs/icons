@@ -51,6 +51,17 @@ export default [
   },
   {
     files: [
+      '**/*.cjs'
+    ],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node
+      }
+    }
+  },
+  {
+    files: [
       'docs/assets/js/**'
     ],
     languageOptions: {

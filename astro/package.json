@@ -7,11 +7,12 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/build.mjs",
     "check": "astro check",
     "preview": "astro preview",
     "validate": "node scripts/validate-build.mjs",
-    "test": "npm run check && npm run build && npm run validate"
+    "validate:html": "node ../build/vnu-jar.mjs ../_site-astro/",
+    "test": "npm run check && npm run build && npm run validate && npm run validate:html"
   },
   "dependencies": {
     "@twbs/docs-ui": "^0.1.0",

@@ -39,8 +39,23 @@ npm run docs-astro-test
 
 The static production output is `_site-astro/`. `docs-astro-test` runs Astro
 type checking, generates every catalog/detail/asset route, and validates local
-links and expected outputs. The published npm package `files` list is
-unchanged.
+links, fragment targets, redirects, sitemap/robots metadata, byte-identical
+icon assets, and HTML. Builds report elapsed time and enforce a 60-second
+budget; override it with `ASTRO_BUILD_BUDGET_MS` when diagnosing slower
+machines.
+
+For the complete local Stage 5 audit, run:
+
+```sh
+npm run docs-astro-audit
+```
+
+That command builds and validates Hugo and Astro, verifies every Hugo HTML
+route exists in the Astro output, compares deploy-critical assets byte for
+byte, and checks both the npm package file list and release ZIP contents. It
+requires the local dependency links above and a working Hugo installation.
+The individual comparison commands are `docs-astro-compare` and
+`docs-astro-release-check`.
 
 Set `PUBLIC_FATHOM_SITE_ID` at build time to enable analytics. No analytics
 request is emitted when it is unset.
@@ -52,7 +67,8 @@ At cutover:
 
 1. Add and lock those immutable dependencies in this package.
 2. Run `npm run docs-astro-test` beside the existing Hugo test in CI.
-3. Compare `_site-astro/` with the production route contract.
+3. Run `npm run docs-astro-compare` and the existing external link check
+   against `_site-astro/`.
 4. Change the deploy job's `publish_dir` from `./_site/` to `./_site-astro/`.
 
 Do not remove Hugo until the Astro deploy has been verified in production.

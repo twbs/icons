@@ -1,20 +1,30 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CopyBlock from "../../components/CopyBlock.astro";
+import Redirect from "../../components/Redirect.astro";
 import { getIcons, type IconMeta } from "../../lib/icons";
 
 export function getStaticPaths() {
-  return getIcons().map((icon) => ({
-    params: { name: icon.name },
-    props: { icon },
-  }));
+  return getIcons().flatMap((icon) => [
+    {
+      params: { name: icon.name },
+      props: { icon },
+    },
+    ...icon.aliases
+      .filter((alias) => /^\/icons\/[^/]+\/$/.test(alias))
+      .map((alias) => ({
+        params: { name: alias.split("/")[2] },
+        props: { icon, redirectTo: `/icons/${icon.name}/` },
+      })),
+  ]);
 }
 
 interface Props {
   icon: IconMeta;
+  redirectTo?: string;
 }
 
-const { icon } = Astro.props;
+const { icon, redirectTo } = Astro.props;
 const hex = icon.codepoint?.toString(16).toUpperCase();
 const fontHtml = `<i class="bi bi-${icon.name}" aria-hidden="true"></i>`;
 const css = `.icon-${icon.name} {
@@ -26,10 +36,14 @@ const css = `.icon-${icon.name} {
 }`;
 ---
 
-<BaseLayout
-  title={icon.title}
-  description={`${icon.title} icon from Bootstrap Icons.`}
->
+{
+  redirectTo ? (
+    <Redirect destination={redirectTo} />
+  ) : (
+    <BaseLayout
+      title={icon.title}
+      description={`${icon.title} icon from Bootstrap Icons.`}
+    >
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb detail-breadcrumb">
       <li class="breadcrumb-item"><a href="/">Icons</a></li>
@@ -174,4 +188,6 @@ const css = `.icon-${icon.name} {
       </section>
     </aside>
   </div>
-</BaseLayout>
+    </BaseLayout>
+  )
+}

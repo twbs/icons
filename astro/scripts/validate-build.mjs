@@ -4,9 +4,31 @@ import { fileURLToPath } from 'node:url'
 
 const root = fileURLToPath(new URL('../../', import.meta.url))
 const output = path.join(root, '_site-astro')
-const icons = fs
+const iconNames = fs
   .readdirSync(path.join(root, 'icons'))
   .filter((file) => file.endsWith('.svg'))
+  .map((file) => path.basename(file, '.svg'))
+  .sort()
+
+const readAliases = (name) => {
+  const markdown = fs.readFileSync(
+    path.join(root, 'docs/content/icons', `${name}.md`),
+    'utf8'
+  )
+  const block = markdown.match(
+    /^aliases:\s*\n((?:\s+-\s+\/icons\/[^/]+\/\s*\n?)+)/m
+  )?.[1]
+  return block
+    ? [...block.matchAll(/^\s+-\s+(.+)$/gm)].map((match) => match[1].trim())
+    : []
+}
+
+const aliases = iconNames.flatMap((name) =>
+  readAliases(name).map((route) => ({
+    route,
+    destination: `/icons/${name}/`
+  }))
+)
 
 const required = [
   'index.html',
@@ -17,6 +39,9 @@ const required = [
   'bootstrap-icons.svg',
   'robots.txt',
   'sitemap.xml',
+  'CNAME',
+  'apple-touch-icon.png',
+  'favicon.ico',
   'assets/font/bootstrap-icons.css',
   'assets/font/fonts/bootstrap-icons.woff2'
 ]
@@ -27,8 +52,7 @@ for (const file of required) {
   }
 }
 
-for (const icon of icons) {
-  const name = path.basename(icon, '.svg')
+for (const name of iconNames) {
   for (const file of [`icons/${name}/index.html`, `assets/icons/${name}.svg`]) {
     if (!fs.existsSync(path.join(output, file))) {
       throw new Error(`Missing generated icon output: ${file}`)
@@ -46,6 +70,23 @@ const visit = (directory) => {
 }
 visit(output)
 
+const expectedHtmlCount = iconNames.length + aliases.length + 5
+if (htmlFiles.length !== expectedHtmlCount) {
+  throw new Error(
+    `Expected ${expectedHtmlCount} HTML pages, found ${htmlFiles.length}.`
+  )
+}
+
+const htmlCache = new Map(
+  htmlFiles.map((file) => [file, fs.readFileSync(file, 'utf8')])
+)
+const idCache = new Map(
+  [...htmlCache].map(([file, html]) => [
+    file,
+    new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]))
+  ])
+)
+
 const resolveOutputPath = (url) => {
   const pathname = new URL(url, 'https://icons.getbootstrap.com').pathname
   if (pathname === '/') return path.join(output, 'index.html')
@@ -53,14 +94,25 @@ const resolveOutputPath = (url) => {
   return path.join(output, pathname)
 }
 
-const broken = []
+const broken = new Set()
 for (const file of htmlFiles) {
-  const html = fs.readFileSync(file, 'utf8')
+  const html = htmlCache.get(file)
+  const relativeFile = path.relative(output, file)
+  const pagePath =
+    relativeFile === 'index.html'
+      ? '/'
+      : `/${relativeFile.replace(/index\.html$/, '')}`
+  const pageUrl = new URL(pagePath, 'https://icons.getbootstrap.com')
+  if (html.includes('/Users/') || html.includes('file:')) {
+    throw new Error(
+      `Generated HTML contains a machine-local path: ${relativeFile}`
+    )
+  }
+
   for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
-    const url = match[1]
+    const url = match[1].replaceAll('&amp;', '&')
     if (
       !url ||
-      url.startsWith('#') ||
       url.startsWith('data:') ||
       url.startsWith('mailto:') ||
       url.startsWith('tel:')
@@ -68,19 +120,102 @@ for (const file of htmlFiles) {
       continue
     }
 
-    const parsed = new URL(url, 'https://icons.getbootstrap.com')
+    const parsed = new URL(url, pageUrl)
     if (parsed.origin !== 'https://icons.getbootstrap.com') continue
     const target = resolveOutputPath(parsed)
     if (!fs.existsSync(target)) {
-      broken.push(`${path.relative(output, file)} -> ${parsed.pathname}`)
+      broken.add(`${relativeFile} -> ${parsed.pathname}`)
+      continue
+    }
+
+    if (parsed.hash && target.endsWith('.html')) {
+      const id = decodeURIComponent(parsed.hash.slice(1))
+      const ids = idCache.get(target)
+      if (!ids?.has(id)) {
+        broken.add(
+          `${relativeFile} -> ${parsed.pathname}${parsed.hash}`
+        )
+      }
     }
   }
 }
 
-if (broken.length > 0) {
-  throw new Error(`Broken local links:\n${broken.slice(0, 25).join('\n')}`)
+if (broken.size > 0) {
+  throw new Error(
+    `Broken local links:\n${[...broken].slice(0, 25).join('\n')}`
+  )
+}
+
+for (const { route, destination } of aliases) {
+  const file = resolveOutputPath(route)
+  const html = fs.readFileSync(file, 'utf8')
+  const canonical = new URL(destination, 'https://icons.getbootstrap.com')
+  if (
+    !html.includes(`rel="canonical" href="${canonical}"`) ||
+    !html.includes('name="robots" content="noindex"') ||
+    !html.includes(`http-equiv="refresh" content="0; url=${destination}"`)
+  ) {
+    throw new Error(`Invalid compatibility redirect: ${route}`)
+  }
+}
+
+const sitemapUrls = [
+  ...fs
+    .readFileSync(path.join(output, 'sitemap.xml'), 'utf8')
+    .matchAll(/<loc>(.*?)<\/loc>/g)
+].map((match) => new URL(match[1]).pathname)
+const expectedSitemapUrls = [
+  '/',
+  '/usage/',
+  '/font/',
+  '/sprite/',
+  ...iconNames.map((name) => `/icons/${name}/`)
+]
+if (
+  sitemapUrls.length !== expectedSitemapUrls.length ||
+  expectedSitemapUrls.some((url, index) => sitemapUrls[index] !== url)
+) {
+  throw new Error('Sitemap routes do not match the canonical route contract.')
+}
+
+const robots = fs.readFileSync(path.join(output, 'robots.txt'), 'utf8')
+if (
+  !robots.includes('User-agent: *') ||
+  !robots.includes('Allow: /') ||
+  !robots.includes(
+    'Sitemap: https://icons.getbootstrap.com/sitemap.xml'
+  )
+) {
+  throw new Error('robots.txt is missing required production directives.')
+}
+
+const assertSameFile = (source, generated) => {
+  if (!fs.readFileSync(source).equals(fs.readFileSync(generated))) {
+    throw new Error(
+      `Generated asset differs from source: ${path.relative(output, generated)}`
+    )
+  }
+}
+
+assertSameFile(
+  path.join(root, 'bootstrap-icons.svg'),
+  path.join(output, 'bootstrap-icons.svg')
+)
+assertSameFile(
+  path.join(root, 'docs/static/assets/img/favicons/apple-touch-icon.png'),
+  path.join(output, 'apple-touch-icon.png')
+)
+assertSameFile(
+  path.join(root, 'docs/static/assets/img/favicons/favicon.ico'),
+  path.join(output, 'favicon.ico')
+)
+for (const name of iconNames) {
+  assertSameFile(
+    path.join(root, 'icons', `${name}.svg`),
+    path.join(output, 'assets/icons', `${name}.svg`)
+  )
 }
 
 console.log(
-  `Validated ${htmlFiles.length.toLocaleString()} HTML pages and ${icons.length.toLocaleString()} icon routes.`
+  `Validated ${htmlFiles.length.toLocaleString()} HTML pages, ${iconNames.length.toLocaleString()} icon routes, ${aliases.length} redirects, local links, metadata, and deploy assets.`
 )

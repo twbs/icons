@@ -9,6 +9,8 @@
 import { execFile, spawn } from 'node:child_process'
 import vnu from 'vnu-jar'
 
+const target = process.argv[2] ?? '_site/'
+
 execFile('java', ['-version'], (error, _stdout, stderr) => {
   if (error) {
     console.error('Skipping vnu-jar test; Java is probably missing.')
@@ -29,11 +31,12 @@ execFile('java', ['-version'], (error, _stdout, stderr) => {
     '-jar',
     String(vnu),
     '--asciiquotes',
+    '--no-langdetect',
     '--skip-non-html',
     '--Werror',
     '--filterpattern',
     ignores,
-    '_site/'
+    target
   ]
 
   // For the 32-bit Java we need to pass `-Xss512k`

@@ -12,6 +12,7 @@ export interface IconMeta {
   title: string
   tags: string[]
   categories: string[]
+  aliases: string[]
   codepoint?: number
   svg: string
   decorativeSvg: string
@@ -67,6 +68,7 @@ export function getIcons(): IconMeta[] {
         title,
         tags: readList(markdown, 'tags'),
         categories: readList(markdown, 'categories'),
+        aliases: readList(markdown, 'aliases'),
         codepoint: codepoints[name],
         svg,
         decorativeSvg: svg.replace(
