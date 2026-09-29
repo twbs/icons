@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import CopyBlock from '../../components/CopyBlock.astro'
 import { getIcons, type IconMeta } from '../../lib/icons'
 
 export function getStaticPaths() {
-  return getIcons().map((icon) => ({ params: { name: icon.name }, props: { icon } }))
+  return getIcons().map((icon) => ({
+    params: { name: icon.name },
+    props: { icon }
+  }))
 }
 
 interface Props {
@@ -12,39 +16,158 @@ interface Props {
 
 const { icon } = Astro.props
 const hex = icon.codepoint?.toString(16).toUpperCase()
+const fontHtml = `<i class="bi bi-${icon.name}" aria-hidden="true"></i>`
+const css = `.icon-${icon.name} {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  mask: url("/assets/icons/${icon.name}.svg") center / contain no-repeat;
+}`
 ---
 
-<BaseLayout title={icon.title}>
+<BaseLayout
+  title={icon.title}
+  description={`${icon.title} icon from Bootstrap Icons.`}
+>
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb my-4">
+    <ol class="breadcrumb detail-breadcrumb">
       <li class="breadcrumb-item"><a href="/">Icons</a></li>
       <li class="breadcrumb-item active" aria-current="page">{icon.title}</li>
     </ol>
   </nav>
-  <div class="row g-5">
-    <div class="col-lg-8">
+  <header class="detail-header">
+    <div>
+      <p class="eyebrow">Bootstrap icon</p>
       <h1>{icon.title}</h1>
-      {(icon.tags.length > 0 || icon.categories.length > 0) && (
-        <p class="text-body-secondary">{[...icon.tags, ...icon.categories].join(' · ')}</p>
-      )}
-      <div class="icon-preview my-4" role="img" aria-label={`${icon.title} large preview`} set:html={icon.svg} />
+      <p class="detail-filename">{icon.name}.svg</p>
     </div>
-    <aside class="col-lg-4">
-      <h2 class="h4">Download</h2>
-      <p><a class="btn btn-primary" href={`/assets/icons/${icon.name}.svg`} download>Download SVG</a></p>
-      <h2 class="h4">Copy HTML</h2>
-      <pre class="p-3 bg-body-tertiary rounded"><code>{icon.svg}</code></pre>
+    <a class="btn btn-solid" href={`/assets/icons/${icon.name}.svg`} download>
+      Download SVG
+    </a>
+  </header>
+
+  <div class="detail-layout">
+    <div class="detail-main">
+      <div
+        class="icon-preview"
+        role="img"
+        aria-label={`${icon.title} large preview`}
+        set:html={icon.svg}
+      />
+
+      <section class="detail-section" aria-labelledby="examples-heading">
+        <h2 id="examples-heading">Examples</h2>
+        <div class="icon-examples">
+          <p class="example-heading">
+            <span set:html={icon.decorativeSvg} /> Heading
+          </p>
+          <p>Inline text <span set:html={icon.decorativeSvg} /></p>
+          <a href="/usage/"
+            >Example link <span set:html={icon.decorativeSvg} /></a
+          >
+          <div>
+            <button class="btn btn-solid" type="button">
+              <span set:html={icon.decorativeSvg} /> Button
+            </button>
+            <button
+              class="btn btn-outline"
+              type="button"
+              aria-label={`${icon.title} example`}
+            >
+              <span set:html={icon.decorativeSvg} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-section copy-stack" aria-labelledby="code-heading">
+        <h2 id="code-heading">Use this icon</h2>
+        <CopyBlock label="SVG" code={icon.svg} />
+        <CopyBlock label="Icon font HTML" code={fontHtml} />
+        <CopyBlock label="CSS mask" code={css} language="css" />
+      </section>
+    </div>
+
+    <aside class="detail-aside" aria-label="Icon metadata">
       {
-        hex && (
-          <>
-            <h2 class="h4">Code point</h2>
-            <ul>
-              <li>Unicode: <code>U+{hex}</code></li>
-              <li>HTML: <code>&amp;#x{hex};</code></li>
-            </ul>
-          </>
+        (icon.tags.length > 0 || icon.categories.length > 0) && (
+          <section>
+            <h2>Metadata</h2>
+            {icon.categories.length > 0 && (
+              <>
+                <h3>Categories</h3>
+                <div class="tag-list">
+                  {icon.categories.map((category) => (
+                    <a href={`/?q=${encodeURIComponent(category)}`}>
+                      {category}
+                    </a>
+                  ))}
+                </div>
+              </>
+            )}
+            {icon.tags.length > 0 && (
+              <>
+                <h3>Tags</h3>
+                <div class="tag-list">
+                  {icon.tags.map((tag) => (
+                    <a href={`/?q=${encodeURIComponent(tag)}`}>{tag}</a>
+                  ))}
+                </div>
+              </>
+            )}
+          </section>
         )
       }
+      {
+        hex && (
+          <section>
+            <h2>Code point</h2>
+            <dl class="codepoints">
+              <div>
+                <>
+                  <dt>Unicode</dt>
+                  <dd>
+                    <code>U+{hex}</code>
+                  </dd>
+                </>
+              </div>
+              <div>
+                <>
+                  <dt>CSS</dt>
+                  <dd>
+                    <code>\{hex}</code>
+                  </dd>
+                </>
+              </div>
+              <div>
+                <>
+                  <dt>JavaScript</dt>
+                  <dd>
+                    <code>\u{hex}</code>
+                  </dd>
+                </>
+              </div>
+              <div>
+                <>
+                  <dt>HTML</dt>
+                  <dd>
+                    <code>&amp;#x{hex};</code>
+                  </dd>
+                </>
+              </div>
+            </dl>
+          </section>
+        )
+      }
+      <section>
+        <h2>Related guides</h2>
+        <ul>
+          <li><a href="/usage/">Install and usage</a></li>
+          <li><a href="/sprite/">SVG sprite</a></li>
+          <li><a href="/">Back to all icons</a></li>
+        </ul>
+      </section>
     </aside>
   </div>
 </BaseLayout>

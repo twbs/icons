@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import CopyBlock from '../components/CopyBlock.astro'
+
+const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor" aria-hidden="true">
+  <use href="/bootstrap-icons.svg#heart-fill"></use>
+</svg>`
+---
+
+<BaseLayout
+  title="Bootstrap Icons SVG sprite"
+  description="Use every Bootstrap Icon from a single SVG sprite."
+>
+  <article class="docs-page">
+    <header class="docs-hero">
+      <p class="eyebrow">SVG sprite</p>
+      <h1>One asset, every icon</h1>
+      <p class="lead">
+        Reference an icon by filename from the bundled sprite and style it with
+        <code>currentColor</code>.
+      </p>
+      <a class="btn btn-solid" href="/bootstrap-icons.svg" download
+        >Download sprite</a
+      >
+    </header>
+
+    <section>
+      <h2>Use the sprite</h2>
+      <p>
+        Copy <code>bootstrap-icons.svg</code> into your site, then use the icon filename
+        as the fragment identifier.
+      </p>
+      <div class="docs-example sprite-example" aria-label="Sprite examples">
+        <svg class="bi" aria-hidden="true"
+          ><use href="/bootstrap-icons.svg#heart-fill"></use></svg
+        >
+        <svg class="bi" aria-hidden="true"
+          ><use href="/bootstrap-icons.svg#toggles"></use></svg
+        >
+        <svg class="bi" aria-hidden="true"
+          ><use href="/bootstrap-icons.svg#shop"></use></svg
+        >
+      </div>
+      <CopyBlock label="Sprite HTML" code={spriteExample} />
+    </section>
+
+    <section>
+      <h2>Cross-origin use</h2>
+      <p>
+        Serve the sprite from the same origin as the page. Browser security
+        restrictions can prevent external <code>&lt;use&gt;</code> references across
+        domains.
+      </p>
+      <p>
+        For a standalone image with alt text, use an individual SVG from
+        <code>/assets/icons/</code> instead.
+      </p>
+      <a href="/usage/">See all usage options</a>
+    </section>
+  </article>
+</BaseLayout>

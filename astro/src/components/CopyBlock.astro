@@ -1,0 +1,27 @@
+---
+interface Props {
+  label: string
+  code: string
+  language?: string
+}
+
+const { label, code, language = 'html' } = Astro.props
+---
+
+<div class="copy-block">
+  <div class="copy-block-header">
+    <span>{label}</span>
+    <button
+      class="copy-button"
+      type="button"
+      data-copy-button
+      aria-label={`Copy ${label}`}
+    >
+      <svg class="bi" aria-hidden="true"><use href="#copy"></use></svg>
+      <span data-copy-label>Copy</span>
+    </button>
+  </div>
+  <pre
+    tabindex="0"><code class={`language-${language}`} data-copy-source>{code}</code></pre>
+  <p class="visually-hidden" aria-live="polite" data-copy-status></p>
+</div>

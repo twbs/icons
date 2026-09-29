@@ -4,20 +4,55 @@ This site is an additive migration alongside the production Hugo site. Hugo
 remains the release and deployment fallback; the root package and published
 icon files are unchanged.
 
-The shared UI repository has no remote yet. For local verification, install
-packed tarballs without saving machine-specific paths:
+## Local dependencies
+
+The shared UI branch and Bootstrap 6 branch do not have immutable remote
+revisions yet, so they are intentionally not recorded as dependencies. Install
+the regular Astro dependencies, then link both local checkouts without saving
+machine-specific paths:
 
 ```sh
-cd /path/to/docs-ui
-npm pack
 cd /path/to/bootstrap-icons/astro
-npm install --no-save --package-lock=false /path/to/twbs-docs-ui-0.1.0.tgz
+npm install
+npm link --no-save /path/to/docs-ui /path/to/bootstrap
 ```
 
-The Bootstrap 6 package can be installed from a local pack in the same way.
-After both repositories have remotes, add immutable dependencies such as
-`github:twbs/docs-ui#<full-commit>` and
-`github:twbs/bootstrap#<full-commit>` (or immutable release tags). Do not commit
-local absolute paths.
+Packed tarballs installed with `npm install --no-save --package-lock=false`
+work as well. Never commit the generated links or an absolute `file:` path.
 
-Run `npm test` to type-check and build the catalog and every icon detail route.
+After both repositories have remotes, replace the temporary links with
+immutable dependencies such as
+`github:twbs/docs-ui#<full-commit>` and
+`github:twbs/bootstrap#<full-commit>` (or immutable release tags), then commit
+the updated lockfile.
+
+## Commands
+
+From the Icons repository root:
+
+```sh
+npm run docs-astro-serve -- --host 127.0.0.1 --port 4200
+npm run docs-astro-check
+npm run docs-astro-build
+npm run docs-astro-test
+```
+
+The static production output is `_site-astro/`. `docs-astro-test` runs Astro
+type checking, generates every catalog/detail/asset route, and validates local
+links and expected outputs. The published npm package `files` list is
+unchanged.
+
+Set `PUBLIC_FATHOM_SITE_ID` at build time to enable analytics. No analytics
+request is emitted when it is unset.
+
+## Production cutover
+
+CI and deployment remain on Hugo until immutable shared dependencies exist.
+At cutover:
+
+1. Add and lock those immutable dependencies in this package.
+2. Run `npm run docs-astro-test` beside the existing Hugo test in CI.
+3. Compare `_site-astro/` with the production route contract.
+4. Change the deploy job's `publish_dir` from `./_site/` to `./_site-astro/`.
+
+Do not remove Hugo until the Astro deploy has been verified in production.

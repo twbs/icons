@@ -6,9 +6,12 @@
     "node": ">=24"
   },
   "scripts": {
+    "dev": "astro dev",
     "build": "astro build",
     "check": "astro check",
-    "test": "npm run check && npm run build"
+    "preview": "astro preview",
+    "validate": "node scripts/validate-build.mjs",
+    "test": "npm run check && npm run build && npm run validate"
   },
   "dependencies": {
     "astro": "^7.3.2",

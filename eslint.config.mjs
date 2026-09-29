@@ -10,6 +10,8 @@ export default [
       '**/dist/**',
       '**/vendor/**',
       '_site/**',
+      '_site-astro/**',
+      'astro/.astro/**',
       'node_modules/**',
       'resources/**',
       '**/.fantasticonrc.js'

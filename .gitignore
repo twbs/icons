@@ -2,6 +2,7 @@
 /.hugo_build.lock
 /.cache/
 /_site/
+/_site-astro/
 /node_modules/
 /resources/
 

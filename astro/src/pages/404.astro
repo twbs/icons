@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="Page not found"
+  description="The requested Bootstrap Icons page could not be found."
+  canonical={false}
+  robots="noindex"
+>
+  <section class="not-found">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p class="lead">
+      That route does not exist, or the icon may have been renamed.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="/">Browse all icons</a>
+      <a class="btn btn-outline" href="/usage/">Read the usage guide</a>
+    </div>
+  </section>
+</BaseLayout>
