@@ -1,188 +1,178 @@
 ---
-import Head from '@twbs/docs-ui/components/Head'
-import Header from '@twbs/docs-ui/components/Header'
-import Footer from '@twbs/docs-ui/components/Footer'
-import Shell from '@twbs/docs-ui/components/Shell'
-import type { FooterColumn, Link } from '@twbs/docs-ui'
-import '../styles.scss'
+import SharedBaseLayout from "@twbs/docs-ui/components/BaseLayout";
+import Head from "@twbs/docs-ui/components/Head";
+import Header from "@twbs/docs-ui/components/Header";
+import Footer from "@twbs/docs-ui/components/Footer";
+import type { FooterColumn, NavigationConfig } from "@twbs/docs-ui";
+import "../styles.scss";
 
 interface Props {
-  title: string
-  description?: string
-  canonical?: URL | string | false
-  robots?: string
+  title: string;
+  description?: string;
+  canonical?: URL | string | false;
+  robots?: string;
 }
 
 const {
   title,
-  description = 'Free, high quality, open source icon library.',
+  description = "Free, high quality, open source icon library.",
   canonical = Astro.url,
-  robots
-} = Astro.props
+  robots,
+} = Astro.props;
 const pageTitle =
-  title === 'Bootstrap Icons' ? title : `${title} · Bootstrap Icons`
-const pathname = Astro.url.pathname
-const nav: Link[] = [
-  {
-    label: 'Icons',
-    href: '/',
-    active: pathname === '/' || pathname.startsWith('/icons/')
-  },
-  {
-    label: 'Usage',
-    href: '/usage/',
-    active: pathname === '/usage/' || pathname === '/font/'
-  },
-  { label: 'Sprite', href: '/sprite/', active: pathname === '/sprite/' },
-  { label: 'Bootstrap', href: 'https://getbootstrap.com/', external: true }
-]
+  title === "Bootstrap Icons" ? title : `${title} · Bootstrap Icons`;
+const pathname = Astro.url.pathname;
+const activeSection =
+  pathname === "/" || pathname.startsWith("/icons/") ? "icons" : "icons";
+const navigation: NavigationConfig = {
+  activeSection,
+  brandHref: "https://getbootstrap.com/",
+  homeHref: "https://getbootstrap.com/",
+  docsHref: "https://getbootstrap.com/docs/6.0/getting-started/introduction/",
+  examplesHref: "https://getbootstrap.com/docs/6.0/examples/",
+  iconsHref: "/",
+  blogHref: "https://blog.getbootstrap.com/",
+  githubHref: "https://github.com/twbs",
+  openCollectiveHref: "https://opencollective.com/bootstrap",
+  xHref: "https://x.com/getbootstrap",
+  currentVersion: "6.0",
+  currentVersionHref: "https://getbootstrap.com/docs/6.0/",
+  previousVersions: [
+    {
+      label: "v5.3.x",
+      href: "https://getbootstrap.com/docs/5.3/",
+      note: "Latest",
+    },
+    { label: "v4.6.x", href: "https://getbootstrap.com/docs/4.6/" },
+    { label: "v3.4.1", href: "https://getbootstrap.com/docs/3.4/" },
+    { label: "v2.3.2", href: "https://getbootstrap.com/2.3.2/" },
+  ],
+  allVersionsHref: "https://getbootstrap.com/docs/versions/",
+  searchPlaceholder: "Search icons…",
+};
 const columns: FooterColumn[] = [
   {
-    title: 'Project',
+    title: "Project",
     links: [
-      { label: 'All icons', href: '/' },
-      { label: 'Usage', href: '/usage/' },
-      { label: 'Icon sprite', href: '/sprite/' },
+      { label: "All icons", href: "/" },
+      { label: "Usage", href: "/usage/" },
+      { label: "Icon sprite", href: "/sprite/" },
       {
-        label: 'GitHub',
-        href: 'https://github.com/twbs/icons',
-        external: true
-      }
-    ]
+        label: "GitHub",
+        href: "https://github.com/twbs/icons",
+        external: true,
+      },
+    ],
   },
   {
-    title: 'Bootstrap',
+    title: "Bootstrap",
     links: [
-      { label: 'Bootstrap', href: 'https://getbootstrap.com/', external: true },
-      { label: 'Blog', href: 'https://blog.getbootstrap.com/', external: true }
-    ]
-  }
-]
+      { label: "Bootstrap", href: "https://getbootstrap.com/", external: true },
+      { label: "Blog", href: "https://blog.getbootstrap.com/", external: true },
+    ],
+  },
+];
 const socialImage = new URL(
-  '/assets/img/bootstrap-icons-social.png',
-  Astro.site
-)
-const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID
+  "/assets/img/bootstrap-icons-social.png",
+  Astro.site,
+);
+const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 ---
 
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-  <head>
-    <Head
-      title={pageTitle}
-      description={description}
-      canonical={canonical || undefined}
-      robots={robots}
-    >
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={description} />
-      {canonical && <meta property="og:url" content={canonical} />}
-      <meta property="og:image" content={socialImage} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <link
-        rel="apple-touch-icon"
-        href="/assets/img/favicons/apple-touch-icon.png"
-        sizes="180x180"
-      />
-      <link
-        rel="icon"
-        href="/assets/img/favicons/favicon-32x32.png"
-        sizes="32x32"
-        type="image/png"
-      />
-      <link
-        rel="icon"
-        href="/assets/img/favicons/favicon-16x16.png"
-        sizes="16x16"
-        type="image/png"
-      />
-      <link rel="manifest" href="/assets/img/favicons/manifest.json" />
-      <link
-        rel="mask-icon"
-        href="/assets/img/favicons/safari-pinned-tab.svg"
-        color="#712cf9"
-      />
-      <link rel="icon" href="/assets/img/favicons/favicon.ico" />
-      <meta name="theme-color" content="#712cf9" />
-      <script is:inline>
-        ;(() => {
-          const stored = localStorage.getItem('bi-theme')
-          const theme =
-            stored === 'light' || stored === 'dark'
-              ? stored
-              : matchMedia('(prefers-color-scheme: dark)').matches
-                ? 'dark'
-                : 'light'
-          document.documentElement.dataset.bsTheme = theme
-        })()
-      </script>
-      {
-        analyticsSiteId && (
-          <script
-            is:inline
-            defer
-            src="https://cdn.usefathom.com/script.js"
-            data-site={analyticsSiteId}
-          />
-        )
-      }
-    </Head>
-  </head>
-  <Shell
-    variant="wide"
-    layoutClass="container-xl xl:container bd-gutter py-4"
-    bodyAttrs={{ id: 'icons-body' }}
+<SharedBaseLayout bodyAttrs={{ id: "icons-body" }}>
+  <Head
+    slot="head"
+    title={pageTitle}
+    description={description}
+    canonical={canonical || undefined}
+    robots={robots}
   >
-    <Header slot="header" label="Bootstrap Icons" nav={nav} search={false}>
-      <span slot="brand" class="icons-brand" aria-hidden="true">B</span>
-      <li slot="actions" class="nav-item">
-        <a class="nav-link px-2" href="https://github.com/twbs/icons">GitHub</a>
-      </li>
-    </Header>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#712cf9"
+    />
+    <link rel="icon" href="/assets/img/favicons/favicon.ico" />
+    <meta name="theme-color" content="#712cf9" />
+    {
+      analyticsSiteId && (
+        <script
+          is:inline
+          defer
+          src="https://cdn.usefathom.com/script.js"
+          data-site={analyticsSiteId}
+        />
+      )
+    }
+  </Head>
+
+  <Header slot="header" config={navigation} />
+
+  <main slot="main" id="content" class="2xl:container bd-gutter py-4">
     <slot />
-    <Footer slot="footer" brand="Bootstrap Icons" columns={columns}>
-      <span slot="brand" class="icons-brand me-2" aria-hidden="true">B</span>
-      <p>Official open source SVG icon library for Bootstrap.</p>
-    </Footer>
-    <Fragment slot="scripts">
-      <script>
-        import 'bootstrap/dist/js/bootstrap.bundle.js'
-        import { initTheme } from '@twbs/docs-ui/browser/theme'
-        initTheme('bi-theme')
+  </main>
 
-        document.addEventListener('click', async (event) => {
-          const button = (
-            event.target as Element | null
-          )?.closest<HTMLButtonElement>('[data-copy-button]')
-          if (!button) return
+  <Footer slot="footer" brand="Bootstrap Icons" columns={columns}>
+    <p>Official open source SVG icon library for Bootstrap.</p>
+  </Footer>
 
-          const block = button.closest<HTMLElement>('.copy-block')
-          const source = block?.querySelector<HTMLElement>('[data-copy-source]')
-          const label = button.querySelector<HTMLElement>('[data-copy-label]')
-          const status = block?.querySelector<HTMLElement>('[data-copy-status]')
-          if (!source || !label || !status) return
+  <Fragment slot="scripts">
+    <script>
+      document.addEventListener("click", async (event) => {
+        const button = (
+          event.target as Element | null
+        )?.closest<HTMLButtonElement>("[data-copy-button]");
+        if (!button) return;
 
-          try {
-            await navigator.clipboard.writeText(source.textContent ?? '')
-            label.textContent = 'Copied!'
-            status.textContent = 'Copied to clipboard.'
-          } catch {
-            const selection = window.getSelection()
-            const range = document.createRange()
-            range.selectNodeContents(source)
-            selection?.removeAllRanges()
-            selection?.addRange(range)
-            label.textContent = 'Select text'
-            status.textContent = 'Copy was blocked. The code has been selected.'
-          }
+        const block = button.closest<HTMLElement>(".copy-block");
+        const source = block?.querySelector<HTMLElement>("[data-copy-source]");
+        const label = button.querySelector<HTMLElement>("[data-copy-label]");
+        const status = block?.querySelector<HTMLElement>("[data-copy-status]");
+        if (!source || !label || !status) return;
 
-          window.setTimeout(() => {
-            label.textContent = 'Copy'
-            status.textContent = ''
-          }, 2000)
-        })
-      </script>
-    </Fragment>
-  </Shell>
-</html>
+        try {
+          await navigator.clipboard.writeText(source.textContent ?? "");
+          label.textContent = "Copied!";
+          status.textContent = "Copied to clipboard.";
+        } catch {
+          const selection = window.getSelection();
+          const range = document.createRange();
+          range.selectNodeContents(source);
+          selection?.removeAllRanges();
+          selection?.addRange(range);
+          label.textContent = "Select text";
+          status.textContent = "Copy was blocked. The code has been selected.";
+        }
+
+        window.setTimeout(() => {
+          label.textContent = "Copy";
+          status.textContent = "";
+        }, 2000);
+      });
+    </script>
+  </Fragment>
+</SharedBaseLayout>

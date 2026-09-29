@@ -91,6 +91,7 @@
     "picocolors": "^1.1.1",
     "postcss": "^8.5.23",
     "postcss-cli": "^11.0.1",
+    "postcss-prefix-custom-properties": "^0.1.0",
     "stylelint": "^16.26.1",
     "stylelint-config-twbs-bootstrap": "^16.1.0",
     "svg-sprite": "^3.0.0-rc3",

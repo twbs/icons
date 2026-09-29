@@ -1,29 +1,29 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-import CopyBlock from '../../components/CopyBlock.astro'
-import { getIcons, type IconMeta } from '../../lib/icons'
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CopyBlock from "../../components/CopyBlock.astro";
+import { getIcons, type IconMeta } from "../../lib/icons";
 
 export function getStaticPaths() {
   return getIcons().map((icon) => ({
     params: { name: icon.name },
-    props: { icon }
-  }))
+    props: { icon },
+  }));
 }
 
 interface Props {
-  icon: IconMeta
+  icon: IconMeta;
 }
 
-const { icon } = Astro.props
-const hex = icon.codepoint?.toString(16).toUpperCase()
-const fontHtml = `<i class="bi bi-${icon.name}" aria-hidden="true"></i>`
+const { icon } = Astro.props;
+const hex = icon.codepoint?.toString(16).toUpperCase();
+const fontHtml = `<i class="bi bi-${icon.name}" aria-hidden="true"></i>`;
 const css = `.icon-${icon.name} {
   display: inline-block;
   width: 1em;
   height: 1em;
   background-color: currentColor;
   mask: url("/assets/icons/${icon.name}.svg") center / contain no-repeat;
-}`
+}`;
 ---
 
 <BaseLayout
@@ -42,7 +42,11 @@ const css = `.icon-${icon.name} {
       <h1>{icon.title}</h1>
       <p class="detail-filename">{icon.name}.svg</p>
     </div>
-    <a class="btn btn-solid" href={`/assets/icons/${icon.name}.svg`} download>
+    <a
+      class="btn-solid theme-accent"
+      href={`/assets/icons/${icon.name}.svg`}
+      download
+    >
       Download SVG
     </a>
   </header>
@@ -67,11 +71,11 @@ const css = `.icon-${icon.name} {
             >Example link <span set:html={icon.decorativeSvg} /></a
           >
           <div>
-            <button class="btn btn-solid" type="button">
+            <button class="btn-solid theme-accent" type="button">
               <span set:html={icon.decorativeSvg} /> Button
             </button>
             <button
-              class="btn btn-outline"
+              class="btn-outline theme-secondary"
               type="button"
               aria-label={`${icon.title} example`}
             >

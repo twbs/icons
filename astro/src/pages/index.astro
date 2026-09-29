@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import { getIcons, getPackageMeta } from '../lib/icons'
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getIcons, getPackageMeta } from "../lib/icons";
 
-const icons = getIcons()
-const { version } = getPackageMeta()
+const icons = getIcons();
+const { version } = getPackageMeta();
 ---
 
 <BaseLayout title="Bootstrap Icons">
@@ -18,9 +18,10 @@ const { version } = getPackageMeta()
       </p>
       <div class="hero-actions">
         <code>npm i bootstrap-icons</code>
-        <a class="btn btn-solid" href="/usage/">Read the usage guide</a>
+        <a class="btn-solid theme-accent" href="/usage/">Read the usage guide</a
+        >
         <a
-          class="btn btn-outline"
+          class="btn-outline theme-secondary"
           href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
           >Open in Figma</a
         >
@@ -75,7 +76,7 @@ const { version } = getPackageMeta()
       {
         icons.map((icon) => (
           <li
-            data-icon-name={`${icon.name} ${icon.title} ${icon.tags.join(' ')} ${icon.categories.join(' ')}`.toLowerCase()}
+            data-icon-name={`${icon.name} ${icon.title} ${icon.tags.join(" ")} ${icon.categories.join(" ")}`.toLowerCase()}
           >
             <a class="icon-card" href={`/icons/${icon.name}/`}>
               <span class="icon-card-preview" set:html={icon.decorativeSvg} />
@@ -89,8 +90,10 @@ const { version } = getPackageMeta()
       <svg class="bi" aria-hidden="true"><use href="#search"></use></svg>
       <h3>No icons found</h3>
       <p>Try a different name, tag, or category.</p>
-      <button class="btn btn-outline" type="button" data-clear-filter
-        >Clear search</button
+      <button
+        class="btn-outline theme-secondary"
+        type="button"
+        data-clear-filter>Clear search</button
       >
     </div>
   </section>
@@ -115,53 +118,54 @@ const { version } = getPackageMeta()
   </section>
 
   <script>
-    const form = document.querySelector<HTMLFormElement>('[data-icon-search]')
-    const input = document.querySelector<HTMLInputElement>('[data-icon-filter]')
+    const form = document.querySelector<HTMLFormElement>("[data-icon-search]");
+    const input =
+      document.querySelector<HTMLInputElement>("[data-icon-filter]");
     const cards = [
-      ...document.querySelectorAll<HTMLElement>('[data-icon-name]')
-    ]
-    const count = document.querySelector<HTMLElement>('[data-result-count]')
-    const empty = document.querySelector<HTMLElement>('[data-empty-state]')
+      ...document.querySelectorAll<HTMLElement>("[data-icon-name]"),
+    ];
+    const count = document.querySelector<HTMLElement>("[data-result-count]");
+    const empty = document.querySelector<HTMLElement>("[data-empty-state]");
     const clear = document.querySelector<HTMLButtonElement>(
-      '[data-clear-filter]'
-    )
+      "[data-clear-filter]",
+    );
 
     const filter = (value: string, updateUrl = true) => {
-      const query = value.trim().toLowerCase()
-      const terms = query.split(/\s+/).filter(Boolean)
-      let visible = 0
+      const query = value.trim().toLowerCase();
+      const terms = query.split(/\s+/).filter(Boolean);
+      let visible = 0;
 
       for (const card of cards) {
-        const haystack = card.dataset.iconName ?? ''
-        const matches = terms.every((term) => haystack.includes(term))
-        card.hidden = !matches
-        if (matches) visible += 1
+        const haystack = card.dataset.iconName ?? "";
+        const matches = terms.every((term) => haystack.includes(term));
+        card.hidden = !matches;
+        if (matches) visible += 1;
       }
 
-      if (count) count.textContent = visible.toLocaleString()
-      if (empty) empty.hidden = visible !== 0
+      if (count) count.textContent = visible.toLocaleString();
+      if (empty) empty.hidden = visible !== 0;
 
       if (updateUrl) {
-        const url = new URL(window.location.href)
-        query ? url.searchParams.set('q', query) : url.searchParams.delete('q')
-        history.replaceState(null, '', url)
+        const url = new URL(window.location.href);
+        query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
+        history.replaceState(null, "", url);
       }
-    }
+    };
 
-    form?.addEventListener('submit', (event) => event.preventDefault())
-    input?.addEventListener('input', () => filter(input.value))
-    clear?.addEventListener('click', () => {
-      if (!input) return
-      input.value = ''
-      filter('')
-      input.focus()
-    })
+    form?.addEventListener("submit", (event) => event.preventDefault());
+    input?.addEventListener("input", () => filter(input.value));
+    clear?.addEventListener("click", () => {
+      if (!input) return;
+      input.value = "";
+      filter("");
+      input.focus();
+    });
 
-    const initialQuery = new URLSearchParams(window.location.search).get('q')
+    const initialQuery = new URLSearchParams(window.location.search).get("q");
     if (input && initialQuery) {
-      input.value = initialQuery
-      filter(initialQuery, false)
-      document.querySelector('#icons')?.scrollIntoView()
+      input.value = initialQuery;
+      filter(initialQuery, false);
+      document.querySelector("#icons")?.scrollIntoView();
     }
   </script>
 </BaseLayout>

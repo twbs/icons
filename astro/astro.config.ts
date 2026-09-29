@@ -9,6 +9,12 @@ export default defineConfig({
     format: 'directory'
   },
   vite: {
+    optimizeDeps: {
+      exclude: ['@twbs/docs-ui']
+    },
+    resolve: {
+      dedupe: ['bootstrap']
+    },
     css: {
       preprocessorOptions: {
         scss: {

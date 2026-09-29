@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import CopyBlock from '../components/CopyBlock.astro'
-import { getPackageMeta } from '../lib/icons'
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CopyBlock from "../components/CopyBlock.astro";
+import { getPackageMeta } from "../lib/icons";
 
-const { version } = getPackageMeta()
+const { version } = getPackageMeta();
 const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16" aria-hidden="true">
   <path d="M4 1c2 0 3 1.5 4 3 1-1.5 2-3 4-3 2.5 0 4 2 4 4.5 0 3-2.5 5.5-8 9.5C2.5 11 0 8.5 0 5.5 0 3 1.5 1 4 1"/>
-</svg>`
+</svg>`;
 ---
 
 <BaseLayout
@@ -57,7 +57,7 @@ const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
             README.
           </p>
           <a
-            class="btn btn-outline"
+            class="btn-outline theme-secondary"
             href="https://github.com/twbs/icons/releases/latest/"
             >Download latest ZIP</a
           >

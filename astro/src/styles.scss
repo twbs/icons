@@ -1,13 +1,12 @@
-@use 'bootstrap/scss/bootstrap';
-@use '@twbs/docs-ui/scss';
+@use "@twbs/docs-ui/scss/bootstrap";
 
 :root {
   --icons-violet: #712cf9;
   --icons-violet-rgb: 113, 44, 249;
-  --icons-surface: var(--bg-1, var(--bs-tertiary-bg, #f8f9fa));
-  --icons-surface-strong: var(--bg-2, var(--bs-secondary-bg, #e9ecef));
-  --icons-border: var(--border-color, var(--bs-border-color, #dee2e6));
-  --icons-muted: var(--fg-2, var(--bs-secondary-color, #5c636a));
+  --icons-surface: var(--bs-bg-1);
+  --icons-surface-strong: var(--bs-bg-2);
+  --icons-border: var(--bs-border-color);
+  --icons-muted: var(--bs-fg-2);
 }
 
 html {
@@ -16,16 +15,14 @@ html {
 
 body {
   min-height: 100vh;
-  color: var(--fg-body, var(--bs-body-color, #212529));
-  font-family:
-    Geist, var(--body-font-family, var(--bs-body-font-family, sans-serif));
-  background: var(--bg-body, var(--bs-body-bg, #fff));
+  color: var(--bs-fg-body);
+  font-family: Geist, var(--bs-body-font-family);
+  background: var(--bs-bg-body);
 }
 
 code,
 pre {
-  font-family:
-    'Geist Mono', var(--font-monospace, var(--bs-font-monospace, monospace));
+  font-family: "Geist Mono", var(--bs-font-monospace);
 }
 
 a {
@@ -34,34 +31,6 @@ a {
 
 [hidden] {
   display: none !important;
-}
-
-.bd-sticky-navbar {
-  background: color-mix(
-    in srgb,
-    var(--bg-body, var(--bs-body-bg, #fff)) 88%,
-    transparent
-  );
-  border-bottom: 1px solid var(--icons-border);
-  backdrop-filter: blur(1rem);
-}
-
-.bd-navbar .bi,
-.bd-footer .bi {
-  width: 1em;
-  height: 1em;
-}
-
-.icons-brand {
-  display: inline-grid;
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 700;
-  background: var(--icons-violet);
-  border-radius: 0.55rem;
-  place-items: center;
 }
 
 .eyebrow {
@@ -123,31 +92,6 @@ a {
   background: var(--icons-surface);
   border: 1px solid var(--icons-border);
   border-radius: 0.6rem;
-}
-
-.btn.btn-solid {
-  color: #fff;
-  background: var(--icons-violet);
-  border-color: var(--icons-violet);
-}
-
-.btn.btn-solid:hover,
-.btn.btn-solid:focus-visible {
-  color: #fff;
-  background: #5d24ce;
-  border-color: #5d24ce;
-}
-
-.btn.btn-outline {
-  color: inherit;
-  background: transparent;
-  border-color: var(--icons-border);
-}
-
-.btn.btn-outline:hover,
-.btn.btn-outline:focus-visible {
-  color: inherit;
-  background: var(--icons-surface);
 }
 
 .hero-meta {
@@ -253,7 +197,7 @@ a {
 .icon-card:hover,
 .icon-card:focus-visible {
   color: var(--icons-violet);
-  background: var(--bg-body, var(--bs-body-bg, #fff));
+  background: var(--bs-bg-body);
   border-color: color-mix(
     in srgb,
     var(--icons-violet) 55%,
@@ -365,7 +309,7 @@ a {
 .detail-filename {
   margin: 0;
   color: var(--icons-muted);
-  font-family: 'Geist Mono', monospace;
+  font-family: "Geist Mono", monospace;
 }
 
 .detail-layout {
@@ -378,7 +322,7 @@ a {
   display: grid;
   min-height: clamp(18rem, 52vw, 36rem);
   font-size: clamp(9rem, 25vw, 18rem);
-  color: var(--fg-body, var(--bs-body-color));
+  color: var(--bs-fg-body);
   background-color: var(--icons-surface);
   background-image: radial-gradient(
     circle,
@@ -518,7 +462,7 @@ a {
 
 .copy-button:hover,
 .copy-button:focus-visible {
-  color: var(--fg-body, var(--bs-body-color));
+  color: var(--bs-fg-body);
   background: var(--icons-surface-strong);
 }
 
@@ -590,7 +534,7 @@ a {
 
 .docs-card .copy-block {
   margin-top: 1rem;
-  background: var(--bg-body, var(--bs-body-bg));
+  background: var(--bs-bg-body);
 }
 
 .docs-example {
