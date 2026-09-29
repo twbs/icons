@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { getIcons, type IconMeta } from '../../lib/icons'
+
+export function getStaticPaths() {
+  return getIcons().map((icon) => ({ params: { name: icon.name }, props: { icon } }))
+}
+
+interface Props {
+  icon: IconMeta
+}
+
+const { icon } = Astro.props
+const hex = icon.codepoint?.toString(16).toUpperCase()
+---
+
+<BaseLayout title={icon.title}>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb my-4">
+      <li class="breadcrumb-item"><a href="/">Icons</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{icon.title}</li>
+    </ol>
+  </nav>
+  <div class="row g-5">
+    <div class="col-lg-8">
+      <h1>{icon.title}</h1>
+      {(icon.tags.length > 0 || icon.categories.length > 0) && (
+        <p class="text-body-secondary">{[...icon.tags, ...icon.categories].join(' · ')}</p>
+      )}
+      <div class="icon-preview my-4" role="img" aria-label={`${icon.title} large preview`} set:html={icon.svg} />
+    </div>
+    <aside class="col-lg-4">
+      <h2 class="h4">Download</h2>
+      <p><a class="btn btn-primary" href={`/assets/icons/${icon.name}.svg`} download>Download SVG</a></p>
+      <h2 class="h4">Copy HTML</h2>
+      <pre class="p-3 bg-body-tertiary rounded"><code>{icon.svg}</code></pre>
+      {
+        hex && (
+          <>
+            <h2 class="h4">Code point</h2>
+            <ul>
+              <li>Unicode: <code>U+{hex}</code></li>
+              <li>HTML: <code>&amp;#x{hex};</code></li>
+            </ul>
+          </>
+        )
+      }
+    </aside>
+  </div>
+</BaseLayout>

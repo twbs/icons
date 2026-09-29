@@ -1,0 +1,46 @@
+---
+import Head from '@twbs/docs-ui/components/Head'
+import Header from '@twbs/docs-ui/components/Header'
+import Footer from '@twbs/docs-ui/components/Footer'
+import Shell from '@twbs/docs-ui/components/Shell'
+import type { FooterColumn, Link } from '@twbs/docs-ui'
+import '../styles.scss'
+
+interface Props {
+  title: string
+  description?: string
+}
+
+const { title, description = 'Free, high quality, open source icon library.' } = Astro.props
+const nav: Link[] = [
+  { label: 'Icons', href: '/', active: true },
+  { label: 'Bootstrap', href: 'https://getbootstrap.com/', external: true },
+  { label: 'Blog', href: 'https://blog.getbootstrap.com/', external: true }
+]
+const columns: FooterColumn[] = [
+  { title: 'Project', links: [{ label: 'All icons', href: '/' }, { label: 'GitHub', href: 'https://github.com/twbs/icons', external: true }] },
+  { title: 'Bootstrap', links: nav.slice(1) }
+]
+---
+
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><Head title={`${title} · Bootstrap Icons`} description={description} canonical={Astro.url} /></head>
+  <Shell variant="wide" layoutClass="container py-4">
+    <Header slot="header" label="Icons" nav={nav} search={false}>
+      <span slot="brand" class="icons-brand">B</span>
+    </Header>
+    <slot />
+    <Footer slot="footer" brand="Bootstrap Icons" columns={columns}>
+      <span slot="brand" class="icons-brand me-2">B</span>
+      <p>Official open source SVG icon library for Bootstrap.</p>
+    </Footer>
+    <Fragment slot="scripts">
+      <script>
+        import 'bootstrap/dist/js/bootstrap.bundle.js'
+        import { initTheme } from '@twbs/docs-ui/browser/theme'
+        initTheme('bi-theme')
+      </script>
+    </Fragment>
+  </Shell>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-icons-astro-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "astro build",
+    "check": "astro check",
+    "test": "npm run check && npm run build"
+  },
+  "dependencies": {
+    "astro": "^7.3.2",
+    "sass": "^1.103.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^24.0.0",
+    "typescript": "^6.0.3"
+  }
+}

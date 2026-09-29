@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getIcons } from '../lib/icons'
+
+const icons = getIcons()
+---
+
+<BaseLayout title="Bootstrap Icons">
+  <section class="py-5">
+    <h1 class="display-3 fw-semibold">Bootstrap Icons</h1>
+    <p class="lead">Free, high quality, open source icon library with {icons.length.toLocaleString()} icons.</p>
+    <code class="d-inline-block p-3 bg-body-tertiary rounded">npm i bootstrap-icons</code>
+  </section>
+
+  <section id="icons">
+    <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between mb-4">
+      <h2 class="mb-0">Icon catalog</h2>
+      <label>
+        <span class="visually-hidden">Filter icons</span>
+        <input class="form-control" type="search" placeholder="Filter icons…" data-icon-filter />
+      </label>
+    </div>
+    <div class="icon-grid" data-icon-grid>
+      {
+        icons.map((icon) => (
+          <a class="icon-card" href={`/icons/${icon.name}/`} data-icon-name={`${icon.name} ${icon.tags.join(' ')}`}>
+            <span set:html={icon.svg} />
+            <span>{icon.name}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+  <script>
+    const input = document.querySelector<HTMLInputElement>('[data-icon-filter]')
+    input?.addEventListener('input', () => {
+      const query = input.value.trim().toLowerCase()
+      document.querySelectorAll<HTMLElement>('[data-icon-name]').forEach((card) => {
+        card.hidden = !card.dataset.iconName?.includes(query)
+      })
+    })
+  </script>
+</BaseLayout>

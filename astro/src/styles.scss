@@ -1,0 +1,56 @@
+@use "bootstrap/scss/bootstrap";
+@use "@twbs/docs-ui/scss";
+
+body {
+  font-family: Geist, var(--bs-body-font-family);
+}
+
+.icons-brand {
+  display: inline-grid;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  background: var(--bd-violet);
+  border-radius: .5rem;
+  place-items: center;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 1rem;
+}
+
+.icon-card {
+  display: grid;
+  gap: .75rem;
+  min-height: 8rem;
+  padding: 1rem;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  place-items: center;
+}
+
+.icon-card svg {
+  width: 2rem;
+  height: 2rem;
+  fill: currentcolor;
+}
+
+.icon-preview {
+  display: grid;
+  min-height: 18rem;
+  font-size: 10rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  place-items: center;
+}
+
+.icon-preview svg {
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+}
