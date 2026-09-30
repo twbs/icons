@@ -23,8 +23,10 @@ const { icon } = Astro.props;
       class="d-flex flex-column h-100 fg-body text-decoration-none"
       href={`/icons/${icon.name}/`}
     >
-      <span class="ratio ratio-1x1 bg-1 rounded-5 overflow-hidden">
-        <span class="d-flex align-items-center justify-content-center p-5">
+      <span class="ratio ratio-16x9 bg-1 rounded-5 overflow-hidden">
+        <span
+          class="d-flex align-items-center justify-content-center h-100 p-4"
+        >
           <img
             src={`/assets/icons/${icon.name}.svg`}
             width="32"
@@ -34,7 +36,7 @@ const { icon } = Astro.props;
           />
         </span>
       </span>
-      <span class="d-block fs-sm text-break mt-3 px-1">
+      <span class="d-block fs-sm text-break mt-3 px-1" data-icon-label>
         {icon.name}
       </span>
     </a>

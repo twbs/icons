@@ -42,28 +42,30 @@ const pagePath = (target: number) =>
   data-category-slug={categorySlug}
 >
   <div class="row align-items-end g-4 mb-5">
-    <div class="col-12 xl:col-5">
-      <h2 id="catalog-heading" class="text-nowrap mb-1">{heading}</h2>
-      <p class="mb-0 fg-2" aria-live="polite">
-        <span data-result-count>{totalCount.toLocaleString()}</span> icons
-      </p>
+    <div class="col-12 md:col-auto me-auto">
+      <h2 id="catalog-heading" class="text-nowrap mb-0">{heading}</h2>
     </div>
     <div
-      class="col-12 xl:col-7 d-flex flex-column sm:flex-row sm:align-items-end gap-3"
+      class="col-12 md:col-8 lg:col-6 d-flex flex-column sm:flex-row sm:align-items-end sm:justify-content-end gap-3"
     >
       <div class="d-flex flex-column gap-2 flex-shrink-0">
-        <span id="icon-size-label" class="fs-sm fw-semibold">Icon size</span>
         <div
-          class="btn-group btn-group-sm"
+          class="btn-group btn-group-divider"
           role="group"
-          aria-labelledby="icon-size-label"
+          aria-label="Icon size"
         >
           {
             [16, 24, 32].map((size) => (
               <button
                 class:list={[
-                  "btn-outline theme-secondary",
-                  { active: size === 32 },
+                  "btn-subtle theme-secondary fs-sm",
+                  {
+                    active: size === 32,
+                    "fg-body": size === 32,
+                    "bg-body": size === 32,
+                    "border-subtle": size === 32,
+                    "z-5": size === 32,
+                  },
                 ]}
                 type="button"
                 aria-pressed={size === 32 ? "true" : "false"}
@@ -75,7 +77,11 @@ const pagePath = (target: number) =>
           }
         </div>
       </div>
-      <form class="flex-grow-1" role="search" data-icon-search>
+      <form
+        class="icon-catalog-filter w-100 md:flex-grow-1"
+        role="search"
+        data-icon-search
+      >
         <label class="visually-hidden" for="icon-filter">Search icons</label>
         <label class="form-control form-adorn">
           <span class="form-adorn-icon" aria-hidden="true">
@@ -84,7 +90,7 @@ const pagePath = (target: number) =>
             </svg>
           </span>
           <input
-            class="form-ghost"
+            class="form-ghost fs-sm"
             id="icon-filter"
             name="q"
             type="search"
@@ -93,14 +99,13 @@ const pagePath = (target: number) =>
             spellcheck="false"
             data-icon-filter
           />
-          <kbd class="form-adorn-text" aria-hidden="true">/</kbd>
         </label>
       </form>
     </div>
   </div>
 
   <ul
-    class="row row-cols-2 sm:row-cols-3 md:row-cols-4 xl:row-cols-5 g-6 list-unstyled"
+    class="row row-cols-2 sm:row-cols-3 md:row-cols-4 lg:row-cols-5 xl:row-cols-6 g-4 list-unstyled"
     data-icon-grid
     data-icon-size="32"
   >
@@ -164,8 +169,10 @@ const pagePath = (target: number) =>
           <svg class="bi" aria-hidden="true"><use href="#copy"></use></svg>
         </button>
         <a class="d-flex flex-column h-100 fg-body text-decoration-none">
-          <span class="ratio ratio-1x1 bg-1 rounded-5 overflow-hidden">
-            <span class="d-flex align-items-center justify-content-center p-5">
+          <span class="ratio ratio-16x9 bg-1 rounded-5 overflow-hidden">
+            <span
+              class="d-flex align-items-center justify-content-center h-100 p-4"
+            >
               <img width="32" height="32" alt="" loading="lazy" />
             </span>
           </span>
@@ -202,7 +209,6 @@ const pagePath = (target: number) =>
       "button[data-icon-size]",
     ) ?? []),
   ];
-  const count = catalog?.querySelector<HTMLElement>("[data-result-count]");
   const empty = catalog?.querySelector<HTMLElement>("[data-empty-state]");
   const clear = catalog?.querySelector<HTMLButtonElement>(
     "[data-clear-filter]",
@@ -226,6 +232,13 @@ const pagePath = (target: number) =>
   const firstPagePath = catalog?.dataset.firstPagePath ?? "/";
   const categorySlug = catalog?.dataset.categorySlug;
   const indexUrl = catalog?.dataset.indexUrl ?? "/icons/index.json";
+  const activeSizeClasses = [
+    "active",
+    "fg-body",
+    "bg-body",
+    "border-subtle",
+    "z-5",
+  ];
   let currentPage = basePage;
   let scopedItems: CatalogItem[] | undefined;
   let results: CatalogItem[] | undefined;
@@ -237,7 +250,9 @@ const pagePath = (target: number) =>
     grid.dataset.iconSize = size;
     for (const button of sizeButtons) {
       const active = button.dataset.iconSize === size;
-      button.classList.toggle("active", active);
+      for (const className of activeSizeClasses) {
+        button.classList.toggle(className, active);
+      }
       button.setAttribute("aria-pressed", String(active));
     }
     if (persist) {
@@ -339,7 +354,6 @@ const pagePath = (target: number) =>
     }
     grid.replaceChildren(fragment);
 
-    if (count) count.textContent = results.length.toLocaleString();
     if (empty) empty.hidden = results.length !== 0;
     if (pagination) pagination.hidden = results.length === 0;
     if (loadMore) {

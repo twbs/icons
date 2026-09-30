@@ -47,13 +47,13 @@ const description = `Browse ${category.count.toLocaleString()} ${category.name} 
       <p class="fs-lg fw-light fg-2">{description}</p>
     </header>
 
-    <div class="row lg:gx-7">
+    <div class="row lg:gx-10 xl:gx-12">
       <CategoryNav
         categories={categories}
         totalCount={totalCount}
         activeSlug={category.slug}
       />
-      <div class="lg:col-9 xl:col-10">
+      <div class="lg:col-9">
         <IconCatalog
           icons={initialIcons}
           heading={`${category.name} icons`}
