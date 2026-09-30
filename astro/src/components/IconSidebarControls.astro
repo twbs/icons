@@ -10,26 +10,30 @@ const { version } = getPackageMeta();
   class="icon-sidebar-controls d-flex flex-column align-items-stretch gap-3"
   data-pagefind-ignore
 >
-  <CodeCopy class="fs-sm py-2" code="npm i bootstrap-icons" />
-  <a
-    class="icon-link align-self-start"
-    href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
-    target="_blank"
-    rel="noopener"
-  >
-    <FigmaLogo width="0.667em" height="1em" />
-    Open in Figma
-  </a>
+  <CodeCopy
+    class="justify-content-between text-start fs-sm py-2"
+    code="npm i bootstrap-icons"
+    iconSize={12}
+  />
   <nav
     class="nav flex-row flex-wrap align-items-center gap-2"
     aria-label="Bootstrap Icons resources"
   >
+    <a
+      class="icon-link"
+      href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
+      target="_blank"
+      rel="noopener"
+    >
+      <FigmaLogo width="0.667em" height="1em" />
+      Figma
+    </a>
     <a
       class="nav-link px-2"
       href={`https://github.com/twbs/icons/releases/tag/v${version}`}
     >
       v{version}
     </a>
-    <a class="nav-link px-2" href="/docs/">Documentation</a>
+    <a class="nav-link px-2" href="/docs/">Docs</a>
   </nav>
 </div>

@@ -4,11 +4,16 @@ import { highlightCode } from "@twbs/docs-ui/shiki";
 interface Props {
   class?: string;
   code: string;
+  iconSize?: number;
   lang?: string;
 }
 
-const { class: className, code, lang = "bash" } = Astro.props;
+const { class: className, code, iconSize, lang = "bash" } = Astro.props;
 const highlightedCode = await highlightCode(code, lang);
+const iconStyle =
+  iconSize === undefined
+    ? undefined
+    : `width: ${iconSize}px; height: ${iconSize}px;`;
 ---
 
 <script>
@@ -32,7 +37,13 @@ const highlightedCode = await highlightCode(code, lang);
     title="Copy"
     data-bd-clipboard
   >
-    <svg class="bi fs-md" aria-hidden="true">
+    <svg
+      class="bi fs-md"
+      width={iconSize}
+      height={iconSize}
+      style={iconStyle}
+      aria-hidden="true"
+    >
       <use href="#copy"></use>
     </svg>
   </button>
