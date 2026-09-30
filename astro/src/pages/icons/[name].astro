@@ -44,17 +44,20 @@ const css = `.icon-${icon.name} {
       title={icon.title}
       description={`${icon.title} icon from Bootstrap Icons.`}
     >
+  <div class="2xl:container bd-gutter py-4">
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb detail-breadcrumb">
+      <ol class="breadcrumb gap-2 my-4 p-0">
       <li class="breadcrumb-item"><a href="/">Icons</a></li>
       <li class="breadcrumb-item active" aria-current="page">{icon.title}</li>
     </ol>
   </nav>
-  <header class="detail-header">
+  <header
+    class="d-flex flex-column md:flex-row gap-4 align-items-start md:align-items-end justify-content-between pb-5"
+  >
     <div>
-      <p class="eyebrow">Bootstrap icon</p>
-      <h1>{icon.title}</h1>
-      <p class="detail-filename">{icon.name}.svg</p>
+      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">Bootstrap icon</p>
+      <h1 class="fs-4xl fw-bold lh-1 mb-2">{icon.title}</h1>
+      <p class="mb-0 fg-2 font-monospace">{icon.name}.svg</p>
     </div>
     <a
       class="btn-solid theme-accent"
@@ -65,26 +68,26 @@ const css = `.icon-${icon.name} {
     </a>
   </header>
 
-  <div class="detail-layout">
-    <div class="detail-main">
+  <div class="row lg:gx-5">
+    <div class="lg:col-8 mb-5">
       <div
-        class="icon-preview"
+        class="icon-demo d-flex align-items-center justify-content-center p-4 mb-5 bg-1 border rounded-5"
         role="img"
         aria-label={`${icon.title} large preview`}
         set:html={icon.svg}
       />
 
-      <section class="detail-section" aria-labelledby="examples-heading">
+      <section class="pt-5" aria-labelledby="examples-heading">
         <h2 id="examples-heading">Examples</h2>
-        <div class="icon-examples">
-          <p class="example-heading">
+        <div class="p-4 border rounded-5">
+          <p class="fs-2 fw-semibold">
             <span set:html={icon.decorativeSvg} /> Heading
           </p>
           <p>Inline text <span set:html={icon.decorativeSvg} /></p>
           <a href="/usage/"
             >Example link <span set:html={icon.decorativeSvg} /></a
           >
-          <div>
+          <div class="d-flex flex-wrap gap-3 mt-4">
             <button class="btn-solid theme-accent" type="button">
               <span set:html={icon.decorativeSvg} /> Button
             </button>
@@ -99,7 +102,10 @@ const css = `.icon-${icon.name} {
         </div>
       </section>
 
-      <section class="detail-section copy-stack" aria-labelledby="code-heading">
+      <section
+        class="d-grid gap-4 pt-7"
+        aria-labelledby="code-heading"
+      >
         <h2 id="code-heading">Use this icon</h2>
         <CopyBlock label="SVG" code={icon.svg} />
         <CopyBlock label="Icon font HTML" code={fontHtml} />
@@ -107,17 +113,20 @@ const css = `.icon-${icon.name} {
       </section>
     </div>
 
-    <aside class="detail-aside" aria-label="Icon metadata">
+    <aside class="lg:col-4" aria-label="Icon metadata">
       {
         (icon.tags.length > 0 || icon.categories.length > 0) && (
-          <section>
-            <h2>Metadata</h2>
+          <section class="pb-5 mb-5 border-bottom">
+            <h2 class="fs-xl">Metadata</h2>
             {icon.categories.length > 0 && (
               <>
-                <h3>Categories</h3>
-                <div class="tag-list">
+                <h3 class="mt-4 fs-sm text-uppercase fg-2">Categories</h3>
+                <div class="d-flex flex-wrap gap-2">
                   {icon.categories.map((category) => (
-                    <a href={`/?q=${encodeURIComponent(category)}`}>
+                    <a
+                      class="chip theme-secondary text-decoration-none"
+                      href={`/?q=${encodeURIComponent(category)}`}
+                    >
                       {category}
                     </a>
                   ))}
@@ -126,10 +135,15 @@ const css = `.icon-${icon.name} {
             )}
             {icon.tags.length > 0 && (
               <>
-                <h3>Tags</h3>
-                <div class="tag-list">
+                <h3 class="mt-4 fs-sm text-uppercase fg-2">Tags</h3>
+                <div class="d-flex flex-wrap gap-2">
                   {icon.tags.map((tag) => (
-                    <a href={`/?q=${encodeURIComponent(tag)}`}>{tag}</a>
+                    <a
+                      class="chip theme-secondary text-decoration-none"
+                      href={`/?q=${encodeURIComponent(tag)}`}
+                    >
+                      {tag}
+                    </a>
                   ))}
                 </div>
               </>
@@ -139,37 +153,37 @@ const css = `.icon-${icon.name} {
       }
       {
         hex && (
-          <section>
-            <h2>Code point</h2>
-            <dl class="codepoints">
-              <div>
+          <section class="pb-5 mb-5 border-bottom">
+            <h2 class="fs-xl">Code point</h2>
+            <dl class="d-grid gap-2 mb-0">
+              <div class="d-flex justify-content-between">
                 <>
                   <dt>Unicode</dt>
-                  <dd>
+                  <dd class="mb-0">
                     <code>U+{hex}</code>
                   </dd>
                 </>
               </div>
-              <div>
+              <div class="d-flex justify-content-between">
                 <>
                   <dt>CSS</dt>
-                  <dd>
+                  <dd class="mb-0">
                     <code>\{hex}</code>
                   </dd>
                 </>
               </div>
-              <div>
+              <div class="d-flex justify-content-between">
                 <>
                   <dt>JavaScript</dt>
-                  <dd>
+                  <dd class="mb-0">
                     <code>\u{hex}</code>
                   </dd>
                 </>
               </div>
-              <div>
+              <div class="d-flex justify-content-between">
                 <>
                   <dt>HTML</dt>
-                  <dd>
+                  <dd class="mb-0">
                     <code>&amp;#x{hex};</code>
                   </dd>
                 </>
@@ -179,7 +193,7 @@ const css = `.icon-${icon.name} {
         )
       }
       <section>
-        <h2>Related guides</h2>
+        <h2 class="fs-xl">Related guides</h2>
         <ul>
           <li><a href="/usage/">Install and usage</a></li>
           <li><a href="/sprite/">SVG sprite</a></li>
@@ -187,6 +201,7 @@ const css = `.icon-${icon.name} {
         </ul>
       </section>
     </aside>
+  </div>
   </div>
     </BaseLayout>
   )

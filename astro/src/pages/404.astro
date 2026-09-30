@@ -8,13 +8,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   canonical={false}
   robots="noindex"
 >
-  <section class="not-found">
-    <p class="eyebrow">404</p>
-    <h1>Page not found</h1>
-    <p class="lead">
+  <section
+    class="2xl:container bd-gutter d-flex flex-column align-items-start justify-content-center min-vh-100 py-5"
+  >
+    <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">404</p>
+    <h1 class="fs-4xl fw-bold lh-1 mb-3">Page not found</h1>
+    <p class="fs-lg fw-light fg-2">
       That route does not exist, or the icon may have been renamed.
     </p>
-    <div class="hero-actions">
+    <div class="d-flex flex-wrap gap-3 mt-4">
       <a class="btn-solid theme-accent" href="/">Browse all icons</a>
       <a class="btn-outline theme-secondary" href="/usage/"
         >Read the usage guide</a

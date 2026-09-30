@@ -132,7 +132,7 @@ const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 
   <Header slot="header" config={navigation} />
 
-  <main slot="main" id="content" class="2xl:container bd-gutter py-4">
+  <main slot="main" id="content">
     <slot />
   </main>
 
@@ -148,7 +148,7 @@ const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
         )?.closest<HTMLButtonElement>("[data-copy-button]");
         if (!button) return;
 
-        const block = button.closest<HTMLElement>(".copy-block");
+        const block = button.closest<HTMLElement>("[data-copy-block]");
         const source = block?.querySelector<HTMLElement>("[data-copy-source]");
         const label = button.querySelector<HTMLElement>("[data-copy-label]");
         const status = block?.querySelector<HTMLElement>("[data-copy-status]");

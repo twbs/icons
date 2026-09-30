@@ -8,11 +8,13 @@ interface Props {
 const { label, code, language = 'html' } = Astro.props
 ---
 
-<div class="copy-block">
-  <div class="copy-block-header">
+<div class="bg-1 border rounded-5 overflow-hidden" data-copy-block>
+  <div
+    class="d-flex align-items-center justify-content-between px-4 py-2 fs-sm fg-2 border-bottom"
+  >
     <span>{label}</span>
     <button
-      class="copy-button"
+      class="btn-text theme-secondary btn-sm"
       type="button"
       data-copy-button
       aria-label={`Copy ${label}`}
@@ -22,6 +24,7 @@ const { label, code, language = 'html' } = Astro.props
     </button>
   </div>
   <pre
+    class="copy-code p-4 mb-0 overflow-auto fs-sm"
     tabindex="0"><code class={`language-${language}`} data-copy-source>{code}</code></pre>
   <p class="visually-hidden" aria-live="polite" data-copy-status></p>
 </div>

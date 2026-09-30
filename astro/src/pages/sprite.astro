@@ -11,11 +11,11 @@ const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor
   title="Bootstrap Icons SVG sprite"
   description="Use every Bootstrap Icon from a single SVG sprite."
 >
-  <article class="docs-page">
-    <header class="docs-hero">
-      <p class="eyebrow">SVG sprite</p>
-      <h1>One asset, every icon</h1>
-      <p class="lead">
+  <article class="2xl:container bd-gutter py-5">
+    <header class="xl:col-9 py-5 mb-7 border-bottom">
+      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">SVG sprite</p>
+      <h1 class="fs-4xl fw-bold lh-1 mb-3">One asset, every icon</h1>
+      <p class="fs-lg fw-light fg-2">
         Reference an icon by filename from the bundled sprite and style it with
         <code>currentColor</code>.
       </p>
@@ -24,14 +24,14 @@ const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor
       >
     </header>
 
-    <section>
+    <section class="xl:col-10 mb-9">
       <h2>Use the sprite</h2>
       <p>
         Copy <code>bootstrap-icons.svg</code> into your site, then use the icon filename
         as the fragment identifier.
       </p>
       <div
-        class="docs-example sprite-example"
+        class="icon-demo-examples d-flex align-items-center gap-4 p-5 my-4 fs-2 bg-1 border rounded-5"
         role="img"
         aria-label="Sprite examples"
       >
@@ -48,7 +48,7 @@ const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor
       <CopyBlock label="Sprite HTML" code={spriteExample} />
     </section>
 
-    <section>
+    <section class="xl:col-10 mb-9">
       <h2>Cross-origin use</h2>
       <p>
         Serve the sprite from the same origin as the page. Browser security

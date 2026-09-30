@@ -7,64 +7,100 @@ const { version } = getPackageMeta();
 ---
 
 <BaseLayout title="Bootstrap Icons">
-  <section class="hero py-5">
-    <div class="hero-copy">
-      <p class="eyebrow">Official Bootstrap icon library</p>
-      <h1>Bootstrap Icons</h1>
-      <p class="lead">
-        Free, high quality, open source icons. Use all {
-          icons.length.toLocaleString()
-        } as SVGs, an SVG sprite, or icon fonts—with or without Bootstrap.
-      </p>
-      <div class="hero-actions">
-        <code>npm i bootstrap-icons</code>
-        <a class="btn-solid theme-accent" href="/usage/">Read the usage guide</a
-        >
-        <a
-          class="btn-outline theme-secondary"
-          href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
-          >Open in Figma</a
-        >
+  <section class="py-5 border-bottom">
+    <div class="2xl:container bd-gutter">
+      <div class="row lg:flex-row-reverse align-items-center g-5">
+        <div class="col-10 sm:col-8 lg:col-5 mx-auto">
+          <img
+            class="d-block img-fluid my-3 mx-auto"
+            src="/assets/img/icons-hero.png"
+            srcset="/assets/img/icons-hero.png 1x, /assets/img/icons-hero@2x.png 2x"
+            width="450"
+            height="340"
+            alt="Bootstrap Icons"
+          />
+        </div>
+        <div class="lg:col-7 text-center lg:text-start">
+          <h1 class="fs-4xl fw-bold lh-1 mb-3">Bootstrap Icons</h1>
+          <p class="fs-lg fw-light fg-2 mb-4">
+            Free, high quality, open source icon library with over {
+              icons.length.toLocaleString()
+            } icons. Include them anyway you like—SVGs, SVG sprite, or web fonts.
+            Use them with or without <a href="https://getbootstrap.com/"
+              >Bootstrap</a
+            > in any project.
+          </p>
+          <div
+            class="d-flex flex-column md:flex-row align-items-stretch justify-content-center lg:justify-content-start gap-3 mb-5"
+          >
+            <code
+              class="d-flex align-items-center justify-content-center px-4 py-3 fs-md fg-body bg-1 border rounded-5"
+              >npm i bootstrap-icons</code
+            >
+            <a
+              class="btn-outline theme-secondary btn-lg d-flex align-items-center justify-content-center"
+              href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
+              target="_blank"
+              rel="noopener"
+            >
+              Open in Figma
+            </a>
+          </div>
+          <hr class="w-25 mx-auto lg:mx-0 my-5" />
+          <p
+            class="d-flex flex-wrap justify-content-center lg:justify-content-start column-gap-2 row-gap-1 mb-0 fg-2"
+          >
+            <span
+              >Currently <a
+                href={`https://github.com/twbs/icons/releases/tag/v${version}`}
+                >v{version}</a
+              ></span
+            >
+            <span aria-hidden="true">·</span>
+            <a href="#icons">Icons</a>
+            <span aria-hidden="true">·</span>
+            <a href="/sprite/">Icon Sprite</a>
+            <span aria-hidden="true">·</span>
+            <a href="/usage/#install">Install</a>
+            <span aria-hidden="true">·</span>
+            <a href="/usage/#usage">Usage</a>
+            <span aria-hidden="true">·</span>
+            <a href="/usage/#styling">Styling</a>
+            <span aria-hidden="true">·</span>
+            <a href="/usage/#accessibility">Accessibility</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/twbs/icons">GitHub repo</a>
+          </p>
+        </div>
       </div>
-      <p class="hero-meta">
-        Current release <a
-          href={`https://github.com/twbs/icons/releases/tag/v${version}`}
-          >v{version}</a
-        >
-        <span aria-hidden="true">·</span>
-        <a href="/sprite/">SVG sprite</a>
-        <span aria-hidden="true">·</span>
-        <a href="https://github.com/twbs/icons">GitHub</a>
-      </p>
     </div>
-    <img
-      class="hero-art"
-      src="/assets/img/icons-hero.png"
-      srcset="/assets/img/icons-hero.png 1x, /assets/img/icons-hero@2x.png 2x"
-      width="450"
-      height="340"
-      alt=""
-    />
   </section>
 
-  <section id="icons" class="catalog-section" aria-labelledby="catalog-heading">
-    <div class="catalog-heading">
-      <div>
-        <h2 id="catalog-heading">Icon catalog</h2>
-        <p class="catalog-count" aria-live="polite">
+  <section
+    id="icons"
+    class="2xl:container bd-gutter py-5"
+    aria-labelledby="catalog-heading"
+  >
+    <div class="d-flex flex-column md:flex-row md:align-items-end gap-4 mb-4">
+      <div class="me-auto">
+        <h2 id="catalog-heading" class="mb-1">Icons</h2>
+        <p class="mb-0 fg-2" aria-live="polite">
           <span data-result-count>{icons.length.toLocaleString()}</span> icons
         </p>
       </div>
-      <form class="catalog-search" role="search" data-icon-search>
-        <label for="icon-filter">Search icons</label>
-        <div class="search-control">
-          <svg class="bi" aria-hidden="true"><use href="#search"></use></svg>
+      <form class="md:col-5 xl:col-4" role="search" data-icon-search>
+        <label class="visually-hidden" for="icon-filter">Search icons</label>
+        <div class="position-relative icon-search">
+          <svg
+            class="bi position-absolute top-50 start-0 translate-middle-y ms-3 fg-3"
+            aria-hidden="true"><use href="#search"></use></svg
+          >
           <input
-            class="form-control"
+            class="form-control ps-7"
             id="icon-filter"
             name="q"
             type="search"
-            placeholder="Try “arrow” or “brand”…"
+            placeholder="Start typing to filter…"
             autocomplete="off"
             spellcheck="false"
             data-icon-filter
@@ -72,49 +108,41 @@ const { version } = getPackageMeta();
         </div>
       </form>
     </div>
-    <ul class="icon-grid" data-icon-grid>
+    <ul
+      class="row row-cols-3 sm:row-cols-4 lg:row-cols-6 xl:row-cols-8 list-unstyled"
+      data-icon-grid
+    >
       {
         icons.map((icon) => (
           <li
+            class="col mb-4"
             data-icon-name={`${icon.name} ${icon.title} ${icon.tags.join(" ")} ${icon.categories.join(" ")}`.toLowerCase()}
           >
-            <a class="icon-card" href={`/icons/${icon.name}/`}>
-              <span class="icon-card-preview" set:html={icon.decorativeSvg} />
-              <span class="icon-card-name">{icon.name}</span>
+            <a
+              class="d-block fg-body text-decoration-none"
+              href={`/icons/${icon.name}/`}
+            >
+              <span class="icon-card-preview d-block px-3 py-4 mb-2 fs-2 bg-1 text-center rounded-3">
+                <span set:html={icon.decorativeSvg} />
+              </span>
+              <span class="d-block fs-sm fg-2 text-center text-truncate">
+                {icon.name}
+              </span>
             </a>
           </li>
         ))
       }
     </ul>
-    <div class="catalog-empty" hidden data-empty-state>
-      <svg class="bi" aria-hidden="true"><use href="#search"></use></svg>
+    <div class="p-9 text-center bg-1 rounded-5" hidden data-empty-state>
+      <svg class="bi mb-3" aria-hidden="true"><use href="#search"></use></svg>
       <h3>No icons found</h3>
-      <p>Try a different name, tag, or category.</p>
+      <p class="fg-2">Try a different name, tag, or category.</p>
       <button
         class="btn-outline theme-secondary"
         type="button"
         data-clear-filter>Clear search</button
       >
     </div>
-  </section>
-
-  <section class="home-guides" aria-labelledby="guides-heading">
-    <div>
-      <p class="eyebrow">Flexible by design</p>
-      <h2 id="guides-heading">Use icons your way</h2>
-      <p>
-        Install from npm or Composer, download a release, or load the icon font
-        from a CDN.
-      </p>
-    </div>
-    <a class="guide-card" href="/usage/">
-      <span>Install and usage</span>
-      <strong>SVG, font, Sass, CSS, and accessibility guidance</strong>
-    </a>
-    <a class="guide-card" href="/sprite/">
-      <span>SVG sprite</span>
-      <strong>Reference every icon from one cacheable asset</strong>
-    </a>
   </section>
 
   <script>
