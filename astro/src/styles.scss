@@ -2,20 +2,46 @@
 
 // Icons-only rendering mechanics that Bootstrap utilities cannot express.
 @layer custom {
-  [data-icon-name] {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 9rem;
-  }
-
-  .icon-search .bi {
+  .icon-search .bi,
+  .icon-search kbd {
     pointer-events: none;
   }
 
-  .icon-card-preview .bi,
   .icon-demo .bi,
   .icon-demo-examples .bi {
     width: 1em;
     height: 1em;
+  }
+
+  [data-bs-theme="dark"] [data-icon-card] img {
+    filter: invert(1) grayscale(1);
+  }
+
+  [data-copy-icon] {
+    z-index: 2;
+  }
+
+  .docs-article h2,
+  .docs-article h3 {
+    scroll-margin-top: 6rem;
+  }
+
+  .anchor-link {
+    padding-inline: .25rem;
+    color: color-mix(in srgb, var(--bs-link-color), transparent 50%);
+    text-decoration: none;
+    opacity: 0;
+
+    &::after {
+      content: "#";
+    }
+
+    &:focus,
+    &:hover,
+    :hover > &,
+    :target > & {
+      opacity: 1;
+    }
   }
 
   .icon-demo {

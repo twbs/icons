@@ -1,25 +1,50 @@
 ---
-import type { IconMeta } from "../lib/icons";
+import IconCard from "./IconCard.astro";
+import { CATALOG_PAGE_SIZE, getPageCount, type IconMeta } from "../lib/icons";
 
 interface Props {
   icons: IconMeta[];
   heading: string;
+  totalCount: number;
+  page?: number;
+  basePath?: string;
+  firstPagePath?: string;
+  categorySlug?: string;
   emptyMessage?: string;
 }
 
 const {
   icons,
   heading,
+  totalCount,
+  page = 1,
+  basePath = "/icons/",
+  firstPagePath = "/",
+  categorySlug,
   emptyMessage = "Try a different name, tag, or category.",
 } = Astro.props;
+const pageCount = getPageCount(totalCount);
+const pagePath = (target: number) =>
+  target === 1 ? firstPagePath : `${basePath}page/${target}/`;
 ---
 
-<section id="icons" aria-labelledby="catalog-heading">
+<section
+  id="icons"
+  aria-labelledby="catalog-heading"
+  data-icon-catalog
+  data-index-url="/icons/index.json"
+  data-page-size={CATALOG_PAGE_SIZE}
+  data-page={page}
+  data-page-count={pageCount}
+  data-base-path={basePath}
+  data-first-page-path={firstPagePath}
+  data-category-slug={categorySlug}
+>
   <div class="d-flex flex-column md:flex-row md:align-items-end gap-4 mb-4">
     <div class="me-auto">
       <h2 id="catalog-heading" class="mb-1">{heading}</h2>
       <p class="mb-0 fg-2" aria-live="polite">
-        <span data-result-count>{icons.length.toLocaleString()}</span> icons
+        <span data-result-count>{totalCount.toLocaleString()}</span> icons
       </p>
     </div>
     <form class="md:col-6 xl:col-5" role="search" data-icon-search>
@@ -39,34 +64,22 @@ const {
           spellcheck="false"
           data-icon-filter
         />
+        <kbd
+          class="position-absolute top-50 end-0 translate-middle-y me-3 fg-3"
+          aria-hidden="true">/</kbd
+        >
       </div>
+      <p class="fs-sm fg-3 mt-2 mb-0" data-search-hint>
+        Search all {totalCount.toLocaleString()} icons by name, tag, or category.
+      </p>
     </form>
   </div>
 
   <ul
-    class="row row-cols-3 sm:row-cols-4 lg:row-cols-4 xl:row-cols-6 list-unstyled"
+    class="row row-cols-2 sm:row-cols-3 md:row-cols-4 xl:row-cols-5 g-4 list-unstyled"
     data-icon-grid
   >
-    {
-      icons.map((icon) => (
-        <li
-          class="col mb-4"
-          data-icon-name={`${icon.name} ${icon.title} ${icon.tags.join(" ")} ${icon.categories.join(" ")}`.toLowerCase()}
-        >
-          <a
-            class="d-block fg-body text-decoration-none"
-            href={`/icons/${icon.name}/`}
-          >
-            <span class="icon-card-preview d-block px-3 py-4 mb-2 fs-2 bg-1 text-center rounded-3">
-              <span set:html={icon.decorativeSvg} />
-            </span>
-            <span class="d-block fs-sm fg-2 text-center text-truncate">
-              {icon.name}
-            </span>
-          </a>
-        </li>
-      ))
-    }
+    {icons.map((icon) => <IconCard icon={icon} />)}
   </ul>
 
   <div class="p-9 text-center bg-1 rounded-5" hidden data-empty-state>
@@ -79,23 +92,114 @@ const {
       data-clear-filter>Clear search</button
     >
   </div>
+
+  <nav
+    class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-6"
+    aria-label="Icon catalog pages"
+    data-catalog-pagination
+  >
+    <p class="fs-sm fg-3 mb-0" data-page-status>
+      Page {page.toLocaleString()} of {pageCount.toLocaleString()}
+    </p>
+    <div class="d-flex gap-2">
+      {
+        page > 1 && (
+          <a
+            class="btn-outline theme-secondary"
+            href={pagePath(page - 1)}
+            rel="prev"
+          >
+            Previous
+          </a>
+        )
+      }
+      {
+        page < pageCount && (
+          <a
+            class="btn-solid theme-primary"
+            href={pagePath(page + 1)}
+            rel="next"
+            data-load-more
+          >
+            Load more
+          </a>
+        )
+      }
+    </div>
+  </nav>
+
+  <p class="visually-hidden" aria-live="polite" data-catalog-status></p>
+
+  <template data-icon-card-template>
+    <li class="col" data-icon-card>
+      <div class="card h-100 overflow-hidden position-relative">
+        <button
+          class="btn-text theme-secondary btn-sm position-absolute top-0 end-0 m-2 z-2 bg-body"
+          type="button"
+          data-copy-icon
+        >
+          <svg class="bi" aria-hidden="true"><use href="#copy"></use></svg>
+        </button>
+        <a class="d-flex flex-column h-100 fg-body text-decoration-none">
+          <span class="ratio ratio-1x1 bg-1">
+            <span
+              class="d-flex align-items-center justify-content-center p-5"
+            >
+              <img width="56" height="56" alt="" loading="lazy" />
+            </span>
+          </span>
+          <span
+            class="card-body d-flex align-items-center justify-content-between gap-2 p-3"
+          >
+            <span class="fs-sm text-break" data-icon-label></span>
+            <span class="fg-3" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </div>
+    </li>
+  </template>
 </section>
 
 <script>
-  const form = document.querySelector<HTMLFormElement>("[data-icon-search]");
-  const input =
-    document.querySelector<HTMLInputElement>("[data-icon-filter]");
-  const cards = [
-    ...document.querySelectorAll<HTMLElement>("[data-icon-name]"),
-  ];
-  const count = document.querySelector<HTMLElement>("[data-result-count]");
-  const empty = document.querySelector<HTMLElement>("[data-empty-state]");
-  const clear = document.querySelector<HTMLButtonElement>(
+  interface CatalogItem {
+    n: string;
+    s: string;
+    c: string[];
+  }
+
+  const catalog = document.querySelector<HTMLElement>("[data-icon-catalog]");
+  const form = catalog?.querySelector<HTMLFormElement>("[data-icon-search]");
+  const input = catalog?.querySelector<HTMLInputElement>("[data-icon-filter]");
+  const grid = catalog?.querySelector<HTMLUListElement>("[data-icon-grid]");
+  const count = catalog?.querySelector<HTMLElement>("[data-result-count]");
+  const empty = catalog?.querySelector<HTMLElement>("[data-empty-state]");
+  const clear = catalog?.querySelector<HTMLButtonElement>(
     "[data-clear-filter]",
   );
+  const loadMore =
+    catalog?.querySelector<HTMLAnchorElement>("[data-load-more]");
+  const pagination = catalog?.querySelector<HTMLElement>(
+    "[data-catalog-pagination]",
+  );
+  const pageStatus =
+    catalog?.querySelector<HTMLElement>("[data-page-status]");
+  const status = catalog?.querySelector<HTMLElement>("[data-catalog-status]");
+  const template =
+    catalog?.querySelector<HTMLTemplateElement>("[data-icon-card-template]");
   const categoryLinks = [
     ...document.querySelectorAll<HTMLAnchorElement>("[data-category-link]"),
   ];
+  const pageSize = Number(catalog?.dataset.pageSize ?? 48);
+  const basePage = Number(catalog?.dataset.page ?? 1);
+  const basePath = catalog?.dataset.basePath ?? "/";
+  const firstPagePath = catalog?.dataset.firstPagePath ?? "/";
+  const categorySlug = catalog?.dataset.categorySlug;
+  const indexUrl = catalog?.dataset.indexUrl ?? "/icons/index.json";
+  let currentPage = basePage;
+  let scopedItems: CatalogItem[] | undefined;
+  let results: CatalogItem[] | undefined;
+  let query = "";
+  let indexPromise: Promise<CatalogItem[]> | undefined;
 
   const syncCategoryLinks = (query: string) => {
     for (const link of categoryLinks) {
@@ -105,45 +209,187 @@ const {
     }
   };
 
-  const filter = (value: string, updateUrl = true) => {
-    const valueTrimmed = value.trim();
-    const query = valueTrimmed.toLowerCase();
-    const terms = query.split(/\s+/).filter(Boolean);
-    let visible = 0;
+  const loadIndex = () => {
+    if (!indexPromise) {
+      if (status) status.textContent = "Loading the icon search index.";
+      indexPromise = fetch(indexUrl)
+        .then((response) => {
+          if (!response.ok) throw new Error("Search index request failed.");
+          return response.json() as Promise<CatalogItem[]>;
+        })
+        .then((items) => {
+          scopedItems = categorySlug
+            ? items.filter((item) => item.c.includes(categorySlug))
+            : items;
+          if (status) status.textContent = "";
+          return scopedItems;
+        })
+        .catch((error) => {
+          if (status) {
+            status.textContent =
+              "Search is temporarily unavailable. Use the page links instead.";
+          }
+          throw error;
+        });
+    }
+    return indexPromise;
+  };
 
-    for (const card of cards) {
-      const haystack = card.dataset.iconName ?? "";
-      const matches = terms.every((term) => haystack.includes(term));
-      card.hidden = !matches;
-      if (matches) visible += 1;
+  const makeCard = (item: CatalogItem) => {
+    const fragment = template?.content.cloneNode(true) as
+      | DocumentFragment
+      | undefined;
+    const card = fragment?.querySelector<HTMLElement>("[data-icon-card]");
+    const link = fragment?.querySelector<HTMLAnchorElement>("a");
+    const image = fragment?.querySelector<HTMLImageElement>("img");
+    const label = fragment?.querySelector<HTMLElement>("[data-icon-label]");
+    const button =
+      fragment?.querySelector<HTMLButtonElement>("[data-copy-icon]");
+    if (!fragment || !card || !link || !image || !label || !button) {
+      return fragment;
     }
 
-    if (count) count.textContent = visible.toLocaleString();
-    if (empty) empty.hidden = visible !== 0;
-    syncCategoryLinks(valueTrimmed);
+    card.dataset.iconName = item.n;
+    link.href = `/icons/${item.n}/`;
+    image.src = `/assets/icons/${item.n}.svg`;
+    label.textContent = item.n;
+    button.dataset.copyIcon = item.n;
+    button.title = `Copy ${item.n} SVG`;
+    button.ariaLabel = `Copy ${item.n} SVG`;
+    return fragment;
+  };
 
-    if (updateUrl) {
-      const url = new URL(window.location.href);
-      valueTrimmed
-        ? url.searchParams.set("q", valueTrimmed)
-        : url.searchParams.delete("q");
-      history.replaceState(null, "", url);
+  const updateUrl = (mode: "push" | "replace") => {
+    const url = new URL(window.location.href);
+    query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
+    currentPage > (query ? 1 : basePage)
+      ? url.searchParams.set("page", String(currentPage))
+      : url.searchParams.delete("page");
+    history[`${mode}State`](null, "", url);
+  };
+
+  const render = () => {
+    if (!grid || !results) return;
+    const start = query ? 0 : (basePage - 1) * pageSize;
+    const end = Math.min(results.length, currentPage * pageSize);
+    const fragment = document.createDocumentFragment();
+    for (let index = start; index < end; index += 1) {
+      const card = makeCard(results[index]);
+      if (card) fragment.append(card);
+    }
+    grid.replaceChildren(fragment);
+
+    if (count) count.textContent = results.length.toLocaleString();
+    if (empty) empty.hidden = results.length !== 0;
+    if (pagination) pagination.hidden = results.length === 0;
+    if (loadMore) {
+      loadMore.hidden = end >= results.length;
+      loadMore.href =
+        currentPage + 1 === 1
+          ? firstPagePath
+          : `${basePath}page/${currentPage + 1}/`;
+    }
+    if (pageStatus) {
+      const shown = Math.max(0, end - start);
+      pageStatus.textContent = `Showing ${shown.toLocaleString()} of ${results.length.toLocaleString()} icons`;
     }
   };
 
-  form?.addEventListener("submit", (event) => event.preventDefault());
-  input?.addEventListener("input", () => filter(input.value));
+  const search = async (value: string, updateHistory = true) => {
+    query = value.trim();
+    currentPage = 1;
+    const items = await loadIndex();
+    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    results =
+      terms.length === 0
+        ? items
+        : items.filter((item) =>
+            terms.every((term) => item.s.includes(term)),
+          );
+    render();
+    syncCategoryLinks(query);
+    if (updateHistory) updateUrl("replace");
+  };
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (input) void search(input.value);
+  });
+  input?.addEventListener("input", () => void search(input.value));
   clear?.addEventListener("click", () => {
     if (!input) return;
     input.value = "";
-    filter("");
+    void search("");
     input.focus();
   });
+  loadMore?.addEventListener("click", async (event) => {
+    event.preventDefault();
+    results ??= await loadIndex();
+    currentPage += 1;
+    render();
+    updateUrl("push");
+    if (status) status.textContent = `More icons loaded. ${pageStatus?.textContent ?? ""}`;
+  });
 
-  const initialQuery = new URLSearchParams(window.location.search).get("q");
-  if (input && initialQuery) {
+  catalog?.addEventListener("click", async (event) => {
+    const button = (event.target as Element | null)?.closest<HTMLButtonElement>(
+      "[data-copy-icon]",
+    );
+    const name = button?.dataset.copyIcon;
+    if (!button || !name) return;
+
+    try {
+      const response = await fetch(`/assets/icons/${name}.svg`);
+      if (!response.ok) throw new Error("Icon request failed.");
+      await navigator.clipboard.writeText(await response.text());
+      button.title = "Copied!";
+      button.ariaLabel = `${name} SVG copied`;
+      if (status) status.textContent = `${name} SVG copied to clipboard.`;
+      window.setTimeout(() => {
+        button.title = `Copy ${name} SVG`;
+        button.ariaLabel = `Copy ${name} SVG`;
+      }, 2000);
+    } catch {
+      if (status) status.textContent = `Could not copy ${name} SVG.`;
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    const target = event.target as HTMLElement | null;
+    if (
+      event.key !== "/" ||
+      event.metaKey ||
+      event.ctrlKey ||
+      target?.matches("input, textarea, select, [contenteditable]")
+    ) {
+      return;
+    }
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    input?.focus();
+  }, true);
+
+  window.addEventListener("popstate", () => {
+    const params = new URLSearchParams(window.location.search);
+    const value = params.get("q") ?? "";
+    currentPage = Number(params.get("page")) || (value ? 1 : basePage);
+    if (input) input.value = value;
+    void search(value, false).then(() => {
+      currentPage = Number(params.get("page")) || (value ? 1 : basePage);
+      render();
+    });
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const initialQuery = params.get("q") ?? "";
+  const requestedPage = Number(params.get("page"));
+  if (input && (initialQuery || requestedPage > basePage)) {
     input.value = initialQuery;
-    filter(initialQuery, false);
-    document.querySelector("#icons")?.scrollIntoView();
+    currentPage = requestedPage || (initialQuery ? 1 : basePage);
+    void search(initialQuery, false).then(() => {
+      currentPage = requestedPage || (initialQuery ? 1 : basePage);
+      render();
+      document.querySelector("#icons")?.scrollIntoView();
+    });
   }
 </script>

@@ -5,6 +5,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
   getCategories,
   getIcons,
+  getPageItems,
   type IconCategory,
 } from "../../../lib/icons";
 
@@ -25,6 +26,7 @@ interface Props {
 }
 
 const { category, categories, totalCount } = Astro.props;
+const initialIcons = getPageItems(category.icons, 1);
 const description = `Browse ${category.count.toLocaleString()} ${category.name} icons from Bootstrap Icons. Search, preview, and download SVGs or use the icon font.`;
 ---
 
@@ -53,8 +55,12 @@ const description = `Browse ${category.count.toLocaleString()} ${category.name} 
       />
       <div class="lg:col-9">
         <IconCatalog
-          icons={category.icons}
+          icons={initialIcons}
           heading={`${category.name} icons`}
+          totalCount={category.count}
+          basePath={`/icons/category/${category.slug}/`}
+          firstPagePath={`/icons/category/${category.slug}/`}
+          categorySlug={category.slug}
           emptyMessage={`No ${category.name} icons match that search.`}
         />
       </div>

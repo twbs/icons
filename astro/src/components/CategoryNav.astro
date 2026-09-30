@@ -11,9 +11,11 @@ const { categories, totalCount, activeSlug } = Astro.props;
 const allActive = !activeSlug;
 
 const linkClass = (active: boolean) =>
-  `list-group-item list-group-item-action d-flex align-items-center justify-content-between gap-3${
+  `nav-link d-flex align-items-center justify-content-between gap-3${
     active ? " active" : ""
   }`;
+const badgeClass = (active: boolean) =>
+  `badge rounded-pill ${active ? "bg-body fg-body" : "bg-2 fg-2"}`;
 ---
 
 <details class="col-12 lg:d-none mb-5">
@@ -21,9 +23,12 @@ const linkClass = (active: boolean) =>
     class="btn-outline theme-secondary d-flex align-items-center justify-content-between"
   >
     Browse categories
-    <span class="badge bg-body fg-body border">{categories.length}</span>
+    <span class="badge bg-2 fg-2 rounded-pill">{categories.length}</span>
   </summary>
-  <nav class="list-group mt-3" aria-label="Icon categories">
+  <nav
+    class="nav flex-column nav-pills gap-1 mt-3"
+    aria-label="Icon categories"
+  >
     <a
       class={linkClass(allActive)}
       href="/#icons"
@@ -31,7 +36,7 @@ const linkClass = (active: boolean) =>
       data-category-link
     >
       <span>All icons</span>
-      <span class="badge bg-body fg-body border rounded-pill">
+      <span class={badgeClass(allActive)}>
         {totalCount.toLocaleString()}
       </span>
     </a>
@@ -46,7 +51,7 @@ const linkClass = (active: boolean) =>
             data-category-link
           >
             <span>{category.name}</span>
-            <span class="badge bg-body fg-body border rounded-pill">
+            <span class={badgeClass(active)}>
               {category.count.toLocaleString()}
             </span>
           </a>
@@ -57,7 +62,7 @@ const linkClass = (active: boolean) =>
 </details>
 
 <aside class="d-none lg:d-block lg:col-3" aria-label="Icon categories">
-  <nav class="list-group position-sticky top-0">
+  <nav class="nav flex-column nav-pills gap-1 position-sticky top-0">
     <a
       class={linkClass(allActive)}
       href="/#icons"
@@ -65,7 +70,7 @@ const linkClass = (active: boolean) =>
       data-category-link
     >
       <span>All icons</span>
-      <span class="badge bg-body fg-body border rounded-pill">
+      <span class={badgeClass(allActive)}>
         {totalCount.toLocaleString()}
       </span>
     </a>
@@ -80,7 +85,7 @@ const linkClass = (active: boolean) =>
             data-category-link
           >
             <span>{category.name}</span>
-            <span class="badge bg-body fg-body border rounded-pill">
+            <span class={badgeClass(active)}>
               {category.count.toLocaleString()}
             </span>
           </a>

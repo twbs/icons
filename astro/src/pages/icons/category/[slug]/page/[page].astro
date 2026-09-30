@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../../../../../layouts/BaseLayout.astro";
+import CategoryNav from "../../../../../components/CategoryNav.astro";
+import IconCatalog from "../../../../../components/IconCatalog.astro";
+import {
+  getCategories,
+  getIcons,
+  getPageCount,
+  getPageItems,
+  type IconCategory,
+} from "../../../../../lib/icons";
+
+export function getStaticPaths() {
+  const icons = getIcons();
+  const categories = getCategories(icons);
+
+  return categories.flatMap((category) => {
+    const pageCount = getPageCount(category.count);
+    return Array.from({ length: pageCount - 1 }, (_, index) => {
+      const page = index + 2;
+      return {
+        params: { slug: category.slug, page: String(page) },
+        props: {
+          category,
+          categories,
+          icons: getPageItems(category.icons, page),
+          page,
+          pageCount,
+          totalCount: icons.length,
+        },
+      };
+    });
+  });
+}
+
+interface Props {
+  category: IconCategory;
+  categories: IconCategory[];
+  icons: ReturnType<typeof getIcons>;
+  page: number;
+  pageCount: number;
+  totalCount: number;
+}
+
+const { category, categories, icons, page, pageCount, totalCount } = Astro.props;
+const description = `Browse ${category.name} icons, page ${page.toLocaleString()} of ${pageCount.toLocaleString()}. Search all ${category.count.toLocaleString()} icons in this category.`;
+---
+
+<BaseLayout
+  title={`${category.name} icons · Page ${page}`}
+  description={description}
+>
+  <div class="2xl:container bd-gutter py-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb gap-2 my-4 p-0">
+        <li class="breadcrumb-item"><a href="/">Icons</a></li>
+        <li class="breadcrumb-item">
+          <a href={`/icons/category/${category.slug}/`}>{category.name}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Page {page}
+        </li>
+      </ol>
+    </nav>
+
+    <header class="xl:col-9 py-5 mb-7 border-bottom">
+      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">Icon category</p>
+      <h1 class="fs-4xl fw-bold lh-1 mb-3">
+        {category.name}, page {page}
+      </h1>
+      <p class="fs-lg fw-light fg-2">{description}</p>
+    </header>
+
+    <div class="row lg:gx-6">
+      <CategoryNav
+        {categories}
+        {totalCount}
+        activeSlug={category.slug}
+      />
+      <div class="lg:col-9">
+        <IconCatalog
+          {icons}
+          heading={`${category.name} icons`}
+          totalCount={category.count}
+          {page}
+          basePath={`/icons/category/${category.slug}/`}
+          firstPagePath={`/icons/category/${category.slug}/`}
+          categorySlug={category.slug}
+          emptyMessage={`No ${category.name} icons match that search.`}
+        />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

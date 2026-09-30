@@ -4,10 +4,16 @@ import CategoryNav from "../components/CategoryNav.astro";
 import FigmaLogo from "../components/FigmaLogo.astro";
 import HeroSubnav from "../components/HeroSubnav.astro";
 import IconCatalog from "../components/IconCatalog.astro";
-import { getCategories, getIcons, getPackageMeta } from "../lib/icons";
+import {
+  getCategories,
+  getIcons,
+  getPackageMeta,
+  getPageItems,
+} from "../lib/icons";
 
 const icons = getIcons();
 const categories = getCategories(icons);
+const initialIcons = getPageItems(icons, 1);
 const { version } = getPackageMeta();
 ---
 
@@ -66,7 +72,11 @@ const { version } = getPackageMeta();
         totalCount={icons.length}
       />
       <div class="lg:col-9">
-        <IconCatalog icons={icons} heading="Icons" />
+        <IconCatalog
+          icons={initialIcons}
+          heading="Icons"
+          totalCount={icons.length}
+        />
       </div>
     </div>
   </div>
