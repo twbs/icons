@@ -9,9 +9,9 @@ const { icon } = Astro.props;
 ---
 
 <li class="col" data-icon-card data-icon-name={icon.name}>
-  <div class="card h-100 overflow-hidden position-relative">
+  <div class="h-100 position-relative">
     <button
-      class="btn-text theme-secondary btn-sm position-absolute top-0 end-0 m-2 z-2 bg-body"
+      class="icon-card-copy btn-text theme-secondary btn-sm position-absolute top-0 end-0 m-2 z-2 bg-body"
       type="button"
       title={`Copy ${icon.name} SVG`}
       aria-label={`Copy ${icon.name} SVG`}
@@ -23,20 +23,19 @@ const { icon } = Astro.props;
       class="d-flex flex-column h-100 fg-body text-decoration-none"
       href={`/icons/${icon.name}/`}
     >
-      <span class="ratio ratio-1x1 bg-1">
+      <span class="ratio ratio-1x1 bg-1 rounded-5 overflow-hidden">
         <span class="d-flex align-items-center justify-content-center p-5">
           <img
             src={`/assets/icons/${icon.name}.svg`}
-            width="56"
-            height="56"
+            width="32"
+            height="32"
             alt=""
             loading="lazy"
           />
         </span>
       </span>
-      <span class="card-body d-flex align-items-center justify-content-between gap-2 p-3">
-        <span class="fs-sm text-break">{icon.name}</span>
-        <span class="fg-3" aria-hidden="true">→</span>
+      <span class="d-block fs-sm text-break mt-3 px-1">
+        {icon.name}
       </span>
     </a>
   </div>

@@ -3,6 +3,7 @@
 /.cache/
 /_site/
 /_site-astro/
+/docs/static/pagefind/
 /node_modules/
 /resources/
 

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CategoryNav from "../components/CategoryNav.astro";
+import CodeCopy from "../components/CodeCopy.astro";
 import FigmaLogo from "../components/FigmaLogo.astro";
 import HeroSubnav from "../components/HeroSubnav.astro";
 import IconCatalog from "../components/IconCatalog.astro";
@@ -18,7 +19,7 @@ const { version } = getPackageMeta();
 ---
 
 <BaseLayout title="Bootstrap Icons">
-  <section class="py-5 border-bottom">
+  <section class="py-8 lg:py-9 border-bottom">
     <div class="2xl:container bd-gutter">
       <div class="row lg:flex-row-reverse align-items-center g-5">
         <div class="col-10 sm:col-8 lg:col-5 mx-auto">
@@ -42,14 +43,11 @@ const { version } = getPackageMeta();
             > in any project.
           </p>
           <div
-            class="d-flex flex-column md:flex-row align-items-stretch justify-content-center lg:justify-content-start gap-3 mb-5"
+            class="d-flex flex-column md:flex-row align-items-stretch justify-content-center lg:justify-content-start gap-4 mb-5"
           >
-            <code
-              class="d-flex align-items-center justify-content-center px-4 py-3 fs-md fg-body bg-1 border rounded-5"
-              >npm i bootstrap-icons</code
-            >
+            <CodeCopy code="npm i bootstrap-icons" />
             <a
-              class="btn-outline theme-secondary btn-lg d-flex align-items-center justify-content-center"
+              class="btn-solid theme-inverse d-flex align-items-center justify-content-center"
               href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
               target="_blank"
               rel="noopener"
@@ -65,16 +63,13 @@ const { version } = getPackageMeta();
     </div>
   </section>
 
-  <div class="2xl:container bd-gutter py-5">
-    <div class="row lg:gx-6">
-      <CategoryNav
-        categories={categories}
-        totalCount={icons.length}
-      />
-      <div class="lg:col-9">
+  <div class="2xl:container bd-gutter py-8 lg:py-9">
+    <div class="row lg:gx-7">
+      <CategoryNav categories={categories} totalCount={icons.length} />
+      <div class="lg:col-9 xl:col-10">
         <IconCatalog
           icons={initialIcons}
-          heading="Icons"
+          heading="All Icons"
           totalCount={icons.length}
         />
       </div>

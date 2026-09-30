@@ -31,6 +31,7 @@ const pagePath = (target: number) =>
 <section
   id="icons"
   aria-labelledby="catalog-heading"
+  data-pagefind-ignore
   data-icon-catalog
   data-index-url="/icons/index.json"
   data-page-size={CATALOG_PAGE_SIZE}
@@ -40,44 +41,68 @@ const pagePath = (target: number) =>
   data-first-page-path={firstPagePath}
   data-category-slug={categorySlug}
 >
-  <div class="d-flex flex-column md:flex-row md:align-items-end gap-4 mb-4">
-    <div class="me-auto">
-      <h2 id="catalog-heading" class="mb-1">{heading}</h2>
+  <div class="row align-items-end g-4 mb-5">
+    <div class="col-12 xl:col-5">
+      <h2 id="catalog-heading" class="text-nowrap mb-1">{heading}</h2>
       <p class="mb-0 fg-2" aria-live="polite">
         <span data-result-count>{totalCount.toLocaleString()}</span> icons
       </p>
     </div>
-    <form class="md:col-6 xl:col-5" role="search" data-icon-search>
-      <label class="visually-hidden" for="icon-filter">Search icons</label>
-      <div class="position-relative icon-search">
-        <svg
-          class="bi position-absolute top-50 start-0 translate-middle-y ms-3 fg-3"
-          aria-hidden="true"><use href="#search"></use></svg
+    <div
+      class="col-12 xl:col-7 d-flex flex-column sm:flex-row sm:align-items-end gap-3"
+    >
+      <div class="d-flex flex-column gap-2 flex-shrink-0">
+        <span id="icon-size-label" class="fs-sm fw-semibold">Icon size</span>
+        <div
+          class="btn-group btn-group-sm"
+          role="group"
+          aria-labelledby="icon-size-label"
         >
-        <input
-          class="form-control ps-7"
-          id="icon-filter"
-          name="q"
-          type="search"
-          placeholder="Start typing to filter…"
-          autocomplete="off"
-          spellcheck="false"
-          data-icon-filter
-        />
-        <kbd
-          class="position-absolute top-50 end-0 translate-middle-y me-3 fg-3"
-          aria-hidden="true">/</kbd
-        >
+          {
+            [16, 24, 32].map((size) => (
+              <button
+                class:list={[
+                  "btn-outline theme-secondary",
+                  { active: size === 32 },
+                ]}
+                type="button"
+                aria-pressed={size === 32 ? "true" : "false"}
+                data-icon-size={size}
+              >
+                {size}
+              </button>
+            ))
+          }
+        </div>
       </div>
-      <p class="fs-sm fg-3 mt-2 mb-0" data-search-hint>
-        Search all {totalCount.toLocaleString()} icons by name, tag, or category.
-      </p>
-    </form>
+      <form class="flex-grow-1" role="search" data-icon-search>
+        <label class="visually-hidden" for="icon-filter">Search icons</label>
+        <label class="form-control form-adorn">
+          <span class="form-adorn-icon" aria-hidden="true">
+            <svg class="bi" width="16" height="16">
+              <use href="#search"></use>
+            </svg>
+          </span>
+          <input
+            class="form-ghost"
+            id="icon-filter"
+            name="q"
+            type="search"
+            placeholder="Search by name, tag, or category…"
+            autocomplete="off"
+            spellcheck="false"
+            data-icon-filter
+          />
+          <kbd class="form-adorn-text" aria-hidden="true">/</kbd>
+        </label>
+      </form>
+    </div>
   </div>
 
   <ul
-    class="row row-cols-2 sm:row-cols-3 md:row-cols-4 xl:row-cols-5 g-4 list-unstyled"
+    class="row row-cols-2 sm:row-cols-3 md:row-cols-4 xl:row-cols-5 g-6 list-unstyled"
     data-icon-grid
+    data-icon-size="32"
   >
     {icons.map((icon) => <IconCard icon={icon} />)}
   </ul>
@@ -86,10 +111,8 @@ const pagePath = (target: number) =>
     <svg class="bi mb-3" aria-hidden="true"><use href="#search"></use></svg>
     <h3>No icons found</h3>
     <p class="fg-2">{emptyMessage}</p>
-    <button
-      class="btn-outline theme-secondary"
-      type="button"
-      data-clear-filter>Clear search</button
+    <button class="btn-outline theme-secondary" type="button" data-clear-filter
+      >Clear search</button
     >
   </div>
 
@@ -132,28 +155,22 @@ const pagePath = (target: number) =>
 
   <template data-icon-card-template>
     <li class="col" data-icon-card>
-      <div class="card h-100 overflow-hidden position-relative">
+      <div class="h-100 position-relative">
         <button
-          class="btn-text theme-secondary btn-sm position-absolute top-0 end-0 m-2 z-2 bg-body"
+          class="icon-card-copy btn-text theme-secondary btn-sm position-absolute top-0 end-0 m-2 z-2 bg-body"
           type="button"
           data-copy-icon
         >
           <svg class="bi" aria-hidden="true"><use href="#copy"></use></svg>
         </button>
         <a class="d-flex flex-column h-100 fg-body text-decoration-none">
-          <span class="ratio ratio-1x1 bg-1">
-            <span
-              class="d-flex align-items-center justify-content-center p-5"
-            >
-              <img width="56" height="56" alt="" loading="lazy" />
+          <span class="ratio ratio-1x1 bg-1 rounded-5 overflow-hidden">
+            <span class="d-flex align-items-center justify-content-center p-5">
+              <img width="32" height="32" alt="" loading="lazy" />
             </span>
           </span>
-          <span
-            class="card-body d-flex align-items-center justify-content-between gap-2 p-3"
-          >
-            <span class="fs-sm text-break" data-icon-label></span>
-            <span class="fg-3" aria-hidden="true">→</span>
-          </span>
+          <span class="d-block fs-sm text-break mt-3 px-1" data-icon-label
+          ></span>
         </a>
       </div>
     </li>
@@ -168,9 +185,23 @@ const pagePath = (target: number) =>
   }
 
   const catalog = document.querySelector<HTMLElement>("[data-icon-catalog]");
+  type CatalogWindow = Window & {
+    bootstrapIconsCatalogAbort?: AbortController;
+  };
+  const catalogWindow = window as CatalogWindow;
+  catalogWindow.bootstrapIconsCatalogAbort?.abort();
+  const controller = new AbortController();
+  const { signal } = controller;
+  catalogWindow.bootstrapIconsCatalogAbort = controller;
+
   const form = catalog?.querySelector<HTMLFormElement>("[data-icon-search]");
   const input = catalog?.querySelector<HTMLInputElement>("[data-icon-filter]");
   const grid = catalog?.querySelector<HTMLUListElement>("[data-icon-grid]");
+  const sizeButtons = [
+    ...(catalog?.querySelectorAll<HTMLButtonElement>(
+      "button[data-icon-size]",
+    ) ?? []),
+  ];
   const count = catalog?.querySelector<HTMLElement>("[data-result-count]");
   const empty = catalog?.querySelector<HTMLElement>("[data-empty-state]");
   const clear = catalog?.querySelector<HTMLButtonElement>(
@@ -181,11 +212,11 @@ const pagePath = (target: number) =>
   const pagination = catalog?.querySelector<HTMLElement>(
     "[data-catalog-pagination]",
   );
-  const pageStatus =
-    catalog?.querySelector<HTMLElement>("[data-page-status]");
+  const pageStatus = catalog?.querySelector<HTMLElement>("[data-page-status]");
   const status = catalog?.querySelector<HTMLElement>("[data-catalog-status]");
-  const template =
-    catalog?.querySelector<HTMLTemplateElement>("[data-icon-card-template]");
+  const template = catalog?.querySelector<HTMLTemplateElement>(
+    "[data-icon-card-template]",
+  );
   const categoryLinks = [
     ...document.querySelectorAll<HTMLAnchorElement>("[data-category-link]"),
   ];
@@ -200,6 +231,36 @@ const pagePath = (target: number) =>
   let results: CatalogItem[] | undefined;
   let query = "";
   let indexPromise: Promise<CatalogItem[]> | undefined;
+
+  const setIconSize = (size: string, persist = true) => {
+    if (!grid || !["16", "24", "32"].includes(size)) return;
+    grid.dataset.iconSize = size;
+    for (const button of sizeButtons) {
+      const active = button.dataset.iconSize === size;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    }
+    if (persist) {
+      try {
+        localStorage.setItem("bi:catalog-icon-size", size);
+      } catch {
+        // The size preference is best-effort.
+      }
+    }
+  };
+
+  try {
+    setIconSize(localStorage.getItem("bi:catalog-icon-size") ?? "32", false);
+  } catch {
+    setIconSize("32", false);
+  }
+  for (const button of sizeButtons) {
+    button.addEventListener(
+      "click",
+      () => setIconSize(button.dataset.iconSize ?? "32"),
+      { signal },
+    );
+  }
 
   const syncCategoryLinks = (query: string) => {
     for (const link of categoryLinks) {
@@ -237,8 +298,7 @@ const pagePath = (target: number) =>
 
   const makeCard = (item: CatalogItem) => {
     const fragment = template?.content.cloneNode(true) as
-      | DocumentFragment
-      | undefined;
+      DocumentFragment | undefined;
     const card = fragment?.querySelector<HTMLElement>("[data-icon-card]");
     const link = fragment?.querySelector<HTMLAnchorElement>("a");
     const image = fragment?.querySelector<HTMLImageElement>("img");
@@ -303,82 +363,106 @@ const pagePath = (target: number) =>
     results =
       terms.length === 0
         ? items
-        : items.filter((item) =>
-            terms.every((term) => item.s.includes(term)),
-          );
+        : items.filter((item) => terms.every((term) => item.s.includes(term)));
     render();
     syncCategoryLinks(query);
     if (updateHistory) updateUrl("replace");
   };
 
-  form?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (input) void search(input.value);
-  });
-  input?.addEventListener("input", () => void search(input.value));
-  clear?.addEventListener("click", () => {
-    if (!input) return;
-    input.value = "";
-    void search("");
-    input.focus();
-  });
-  loadMore?.addEventListener("click", async (event) => {
-    event.preventDefault();
-    results ??= await loadIndex();
-    currentPage += 1;
-    render();
-    updateUrl("push");
-    if (status) status.textContent = `More icons loaded. ${pageStatus?.textContent ?? ""}`;
-  });
-
-  catalog?.addEventListener("click", async (event) => {
-    const button = (event.target as Element | null)?.closest<HTMLButtonElement>(
-      "[data-copy-icon]",
-    );
-    const name = button?.dataset.copyIcon;
-    if (!button || !name) return;
-
-    try {
-      const response = await fetch(`/assets/icons/${name}.svg`);
-      if (!response.ok) throw new Error("Icon request failed.");
-      await navigator.clipboard.writeText(await response.text());
-      button.title = "Copied!";
-      button.ariaLabel = `${name} SVG copied`;
-      if (status) status.textContent = `${name} SVG copied to clipboard.`;
-      window.setTimeout(() => {
-        button.title = `Copy ${name} SVG`;
-        button.ariaLabel = `Copy ${name} SVG`;
-      }, 2000);
-    } catch {
-      if (status) status.textContent = `Could not copy ${name} SVG.`;
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    const target = event.target as HTMLElement | null;
-    if (
-      event.key !== "/" ||
-      event.metaKey ||
-      event.ctrlKey ||
-      target?.matches("input, textarea, select, [contenteditable]")
-    ) {
-      return;
-    }
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    input?.focus();
-  }, true);
-
-  window.addEventListener("popstate", () => {
-    const params = new URLSearchParams(window.location.search);
-    const value = params.get("q") ?? "";
-    currentPage = Number(params.get("page")) || (value ? 1 : basePage);
-    if (input) input.value = value;
-    void search(value, false).then(() => {
-      currentPage = Number(params.get("page")) || (value ? 1 : basePage);
+  form?.addEventListener(
+    "submit",
+    (event) => {
+      event.preventDefault();
+      if (input) void search(input.value);
+    },
+    { signal },
+  );
+  input?.addEventListener("input", () => void search(input.value), { signal });
+  clear?.addEventListener(
+    "click",
+    () => {
+      if (!input) return;
+      input.value = "";
+      void search("");
+      input.focus();
+    },
+    { signal },
+  );
+  loadMore?.addEventListener(
+    "click",
+    async (event) => {
+      event.preventDefault();
+      results ??= await loadIndex();
+      currentPage += 1;
       render();
-    });
-  });
+      updateUrl("push");
+      if (status) {
+        status.textContent = `More icons loaded. ${pageStatus?.textContent ?? ""}`;
+      }
+    },
+    { signal },
+  );
+
+  catalog?.addEventListener(
+    "click",
+    async (event) => {
+      const button = (
+        event.target as Element | null
+      )?.closest<HTMLButtonElement>("[data-copy-icon]");
+      const name = button?.dataset.copyIcon;
+      if (!button || !name) return;
+
+      try {
+        const response = await fetch(`/assets/icons/${name}.svg`);
+        if (!response.ok) throw new Error("Icon request failed.");
+        await navigator.clipboard.writeText(await response.text());
+        button.title = "Copied!";
+        button.ariaLabel = `${name} SVG copied`;
+        if (status) status.textContent = `${name} SVG copied to clipboard.`;
+        window.setTimeout(() => {
+          button.title = `Copy ${name} SVG`;
+          button.ariaLabel = `Copy ${name} SVG`;
+        }, 2000);
+      } catch {
+        if (status) status.textContent = `Could not copy ${name} SVG.`;
+      }
+    },
+    { signal },
+  );
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      const target = event.target as HTMLElement | null;
+      if (
+        event.key !== "/" ||
+        event.metaKey ||
+        event.ctrlKey ||
+        target?.matches("input, textarea, select, [contenteditable]")
+      ) {
+        return;
+      }
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      input?.focus();
+    },
+    { capture: true, signal },
+  );
+
+  window.addEventListener(
+    "popstate",
+    () => {
+      const params = new URLSearchParams(window.location.search);
+      const value = params.get("q") ?? "";
+      currentPage = Number(params.get("page")) || (value ? 1 : basePage);
+      if (input) input.value = value;
+      void search(value, false).then(() => {
+        currentPage = Number(params.get("page")) || (value ? 1 : basePage);
+        render();
+      });
+    },
+    { signal },
+  );
 
   const params = new URLSearchParams(window.location.search);
   const initialQuery = params.get("q") ?? "";

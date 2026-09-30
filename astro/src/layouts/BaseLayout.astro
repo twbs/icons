@@ -134,12 +134,11 @@ const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
 
   <Header slot="header" config={navigation} />
 
-  <main slot="main" id="content">
+  <main slot="main" id="content" data-pagefind-body>
     <slot />
   </main>
 
   <Footer slot="footer" brand="Bootstrap Icons" columns={columns}>
     <p>Official open source SVG icon library for Bootstrap.</p>
   </Footer>
-
 </SharedBaseLayout>

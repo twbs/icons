@@ -41,7 +41,7 @@ const description = `Browse Bootstrap Icons page ${page.toLocaleString()} of ${p
 ---
 
 <BaseLayout title={`Icons · Page ${page}`} description={description}>
-  <div class="2xl:container bd-gutter py-4">
+  <div class="2xl:container bd-gutter py-4" data-pagefind-ignore>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb gap-2 my-4 p-0">
         <li class="breadcrumb-item"><a href="/">Icons</a></li>
@@ -57,15 +57,10 @@ const description = `Browse Bootstrap Icons page ${page.toLocaleString()} of ${p
       <p class="fs-lg fw-light fg-2">{description}</p>
     </header>
 
-    <div class="row lg:gx-6">
+    <div class="row lg:gx-7">
       <CategoryNav categories={categories} totalCount={totalCount} />
-      <div class="lg:col-9">
-        <IconCatalog
-          {icons}
-          heading="Icons"
-          {totalCount}
-          {page}
-        />
+      <div class="lg:col-9 xl:col-10">
+        <IconCatalog {icons} heading="All Icons" {totalCount} {page} />
       </div>
     </div>
   </div>

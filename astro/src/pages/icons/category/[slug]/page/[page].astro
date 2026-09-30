@@ -42,7 +42,8 @@ interface Props {
   totalCount: number;
 }
 
-const { category, categories, icons, page, pageCount, totalCount } = Astro.props;
+const { category, categories, icons, page, pageCount, totalCount } =
+  Astro.props;
 const description = `Browse ${category.name} icons, page ${page.toLocaleString()} of ${pageCount.toLocaleString()}. Search all ${category.count.toLocaleString()} icons in this category.`;
 ---
 
@@ -50,7 +51,7 @@ const description = `Browse ${category.name} icons, page ${page.toLocaleString()
   title={`${category.name} icons · Page ${page}`}
   description={description}
 >
-  <div class="2xl:container bd-gutter py-4">
+  <div class="2xl:container bd-gutter py-4" data-pagefind-ignore>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb gap-2 my-4 p-0">
         <li class="breadcrumb-item"><a href="/">Icons</a></li>
@@ -71,13 +72,9 @@ const description = `Browse ${category.name} icons, page ${page.toLocaleString()
       <p class="fs-lg fw-light fg-2">{description}</p>
     </header>
 
-    <div class="row lg:gx-6">
-      <CategoryNav
-        {categories}
-        {totalCount}
-        activeSlug={category.slug}
-      />
-      <div class="lg:col-9">
+    <div class="row lg:gx-7">
+      <CategoryNav {categories} {totalCount} activeSlug={category.slug} />
+      <div class="lg:col-9 xl:col-10">
         <IconCatalog
           {icons}
           heading={`${category.name} icons`}
