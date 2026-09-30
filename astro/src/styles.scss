@@ -1,7 +1,26 @@
 @use "@twbs/docs-ui/scss/bootstrap";
+@use "bootstrap/scss/layout/breakpoints" as *;
 
 // Icons-only rendering mechanics that Bootstrap utilities cannot express.
 @layer custom {
+  // Keep this behavior in sync with Bootstrap v6's site/src/scss/_sidebar.scss.
+  .bd-sidebar {
+    font-size: var(--font-size-sm);
+
+    @include media-breakpoint-up(lg) {
+      position: sticky;
+      top: var(--bd-navbar-offset);
+      // Override the responsive display utility.
+      // stylelint-disable-next-line declaration-no-important
+      display: block !important;
+      height: calc(100vh - 8.5rem);
+      // Prevent focus styles from being cut off.
+      padding-inline-start: .25rem;
+      margin-inline-start: -.25rem;
+      overflow-y: auto;
+    }
+  }
+
   [data-icon-grid] {
     --bi-catalog-icon-size: 2rem;
   }

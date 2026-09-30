@@ -1,4 +1,5 @@
 ---
+import IconSidebarControls from "./IconSidebarControls.astro";
 import type { IconCategory } from "../lib/icons";
 
 interface Props {
@@ -25,6 +26,9 @@ const badgeClass = (active: boolean) =>
     Browse categories
     <span class="badge bg-2 fg-2 rounded-pill">{categories.length}</span>
   </summary>
+  <div class="mt-4 pb-4 border-bottom">
+    <IconSidebarControls />
+  </div>
   <nav
     class="nav flex-column nav-pills gap-1 mt-3"
     aria-label="Icon categories"
@@ -61,8 +65,15 @@ const badgeClass = (active: boolean) =>
   </nav>
 </details>
 
-<aside class="d-none lg:d-block lg:col-3" aria-label="Icon categories">
-  <nav class="nav flex-column gap-1 position-sticky top-0 fs-sm">
+<aside
+  class="bd-sidebar d-none lg:d-block lg:col-3"
+  aria-label="Icon catalog"
+  data-icon-sidebar
+>
+  <div class="pb-4 mb-4 border-bottom">
+    <IconSidebarControls />
+  </div>
+  <nav class="nav flex-column gap-1" aria-label="Icon categories">
     <a
       class={linkClass(allActive)}
       href="/#icons"
@@ -94,3 +105,24 @@ const badgeClass = (active: boolean) =>
     }
   </nav>
 </aside>
+
+<script>
+  const sidebar = document.querySelector<HTMLElement>("[data-icon-sidebar]");
+  const activeLink = sidebar?.querySelector<HTMLElement>(".active");
+
+  if (sidebar && activeLink) {
+    const sidebarHeight = sidebar.clientHeight;
+    const activeLinkTop = activeLink.offsetTop;
+    const activeLinkHeight = activeLink.clientHeight;
+    const viewportTop = activeLinkTop;
+    const viewportBottom = viewportTop - sidebarHeight + activeLinkHeight;
+
+    if (
+      sidebar.scrollTop > viewportTop ||
+      sidebar.scrollTop < viewportBottom
+    ) {
+      sidebar.scrollTop =
+        viewportTop - sidebarHeight / 2 + activeLinkHeight / 2;
+    }
+  }
+</script>
