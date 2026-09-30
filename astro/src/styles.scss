@@ -19,13 +19,37 @@
       margin-inline-start: -.25rem;
       overflow-y: auto;
     }
+
+    @include media-breakpoint-down(lg) {
+      // stylelint-disable-next-line selector-class-pattern
+      .lg\:drawer {
+        height: auto;
+        max-height: 90dvh;
+        border-inline-end-color: var(--bs-border-color);
+        box-shadow: var(--bs-box-shadow-lg);
+      }
+    }
   }
 
   [data-icon-grid] {
     --bi-catalog-icon-size: 2rem;
   }
 
+  .icon-catalog-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .icon-size-group {
+    flex: 0 0 auto;
+  }
+
   .icon-catalog-filter {
+    flex: 1 1 12rem;
+    min-width: 0;
     max-width: 26rem;
   }
 

@@ -30,7 +30,11 @@ const initialIcons = getPageItems(category.icons, 1);
 const description = `Browse ${category.count.toLocaleString()} ${category.name} icons from Bootstrap Icons. Search, preview, and download SVGs or use the icon font.`;
 ---
 
-<BaseLayout title={`${category.name} icons`} description={description}>
+<BaseLayout
+  title={`${category.name} icons`}
+  description={description}
+  catalogDrawer
+>
   <div class="2xl:container bd-gutter py-4">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb gap-2 my-4 p-0">

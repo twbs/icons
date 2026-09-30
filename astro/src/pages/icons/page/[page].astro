@@ -40,7 +40,11 @@ const { page, pageCount, icons, categories, totalCount } = Astro.props;
 const description = `Browse Bootstrap Icons page ${page.toLocaleString()} of ${pageCount.toLocaleString()}. Search all ${totalCount.toLocaleString()} icons by name, tag, or category.`;
 ---
 
-<BaseLayout title={`Icons · Page ${page}`} description={description}>
+<BaseLayout
+  title={`Icons · Page ${page}`}
+  description={description}
+  catalogDrawer
+>
   <div class="2xl:container bd-gutter py-4" data-pagefind-ignore>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb gap-2 my-4 p-0">

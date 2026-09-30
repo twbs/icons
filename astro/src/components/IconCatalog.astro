@@ -45,43 +45,35 @@ const pagePath = (target: number) =>
     <div class="col-12 md:col-auto me-auto">
       <h2 id="catalog-heading" class="text-nowrap mb-0">{heading}</h2>
     </div>
-    <div
-      class="col-12 md:col-8 lg:col-6 d-flex flex-column sm:flex-row sm:align-items-end sm:justify-content-end gap-3"
-    >
-      <div class="d-flex flex-column gap-2 flex-shrink-0">
-        <div
-          class="btn-group btn-group-divider"
-          role="group"
-          aria-label="Icon size"
-        >
-          {
-            [16, 24, 32].map((size) => (
-              <button
-                class:list={[
-                  "btn-subtle theme-secondary fs-sm",
-                  {
-                    active: size === 32,
-                    "fg-body": size === 32,
-                    "bg-body": size === 32,
-                    "border-subtle": size === 32,
-                    "z-5": size === 32,
-                  },
-                ]}
-                type="button"
-                aria-pressed={size === 32 ? "true" : "false"}
-                data-icon-size={size}
-              >
-                {size}
-              </button>
-            ))
-          }
-        </div>
-      </div>
-      <form
-        class="icon-catalog-filter w-100 md:flex-grow-1"
-        role="search"
-        data-icon-search
+    <div class="icon-catalog-toolbar col-12 md:col-8 lg:col-6">
+      <div
+        class="icon-size-group btn-group btn-group-divider"
+        role="group"
+        aria-label="Icon size"
       >
+        {
+          [16, 24, 32].map((size) => (
+            <button
+              class:list={[
+                "btn-subtle theme-secondary fs-sm",
+                {
+                  active: size === 32,
+                  "fg-body": size === 32,
+                  "bg-body": size === 32,
+                  "border-subtle": size === 32,
+                  "z-5": size === 32,
+                },
+              ]}
+              type="button"
+              aria-pressed={size === 32 ? "true" : "false"}
+              data-icon-size={size}
+            >
+              {size}
+            </button>
+          ))
+        }
+      </div>
+      <form class="icon-catalog-filter" role="search" data-icon-search>
         <label class="visually-hidden" for="icon-filter">Search icons</label>
         <label class="form-control form-adorn">
           <span class="form-adorn-icon" aria-hidden="true">
