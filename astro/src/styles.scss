@@ -27,7 +27,7 @@
   }
 
   .anchor-link {
-    padding-inline: .25rem;
+    padding-inline: 0.25rem;
     color: color-mix(in srgb, var(--bs-link-color), transparent 50%);
     text-decoration: none;
     opacity: 0;
@@ -47,17 +47,15 @@
   .icon-demo {
     min-height: clamp(18rem, 52vw, 36rem);
     font-size: clamp(9rem, 25vw, 18rem);
-    background-image:
-      radial-gradient(
-        circle,
-        var(--bs-border-color) 1px,
-        transparent 1px
-      );
+    background-image: radial-gradient(
+      circle,
+      var(--bs-border-color) 1px,
+      transparent 1px
+    );
     background-size: 1rem 1rem;
   }
 
-  .copy-code {
-    max-height: 22rem;
-    white-space: pre-wrap;
+  .icon-code-snippet {
+    margin-block: 1rem;
   }
 }

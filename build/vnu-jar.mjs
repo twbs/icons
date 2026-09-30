@@ -25,6 +25,10 @@ execFile('java', ['-version'], (error, _stdout, stderr) => {
   // vnu-jar accepts multiple ignores joined with a `|`.
   // Also note that the ignores are string regular expressions.
   const ignores = [
+    // Shiki's canonical dual-theme output uses CSS Color 5 `light-dark()`
+    // inline declarations. The validator does not parse that function and
+    // reports its following fallback/custom-property colors as invalid too.
+    '.*CSS:.*'
   ].join('|')
 
   const args = [

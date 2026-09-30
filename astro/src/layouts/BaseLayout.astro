@@ -142,39 +142,4 @@ const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
     <p>Official open source SVG icon library for Bootstrap.</p>
   </Footer>
 
-  <Fragment slot="scripts">
-    <script>
-      document.addEventListener("click", async (event) => {
-        const button = (
-          event.target as Element | null
-        )?.closest<HTMLButtonElement>("[data-copy-button]");
-        if (!button) return;
-
-        const block = button.closest<HTMLElement>("[data-copy-block]");
-        const source = block?.querySelector<HTMLElement>("[data-copy-source]");
-        const label = button.querySelector<HTMLElement>("[data-copy-label]");
-        const status = block?.querySelector<HTMLElement>("[data-copy-status]");
-        if (!source || !label || !status) return;
-
-        try {
-          await navigator.clipboard.writeText(source.textContent ?? "");
-          label.textContent = "Copied!";
-          status.textContent = "Copied to clipboard.";
-        } catch {
-          const selection = window.getSelection();
-          const range = document.createRange();
-          range.selectNodeContents(source);
-          selection?.removeAllRanges();
-          selection?.addRange(range);
-          label.textContent = "Select text";
-          status.textContent = "Copy was blocked. The code has been selected.";
-        }
-
-        window.setTimeout(() => {
-          label.textContent = "Copy";
-          status.textContent = "";
-        }, 2000);
-      });
-    </script>
-  </Fragment>
 </SharedBaseLayout>
