@@ -1,0 +1,149 @@
+---
+import type { IconMeta } from "../lib/icons";
+
+interface Props {
+  icons: IconMeta[];
+  heading: string;
+  emptyMessage?: string;
+}
+
+const {
+  icons,
+  heading,
+  emptyMessage = "Try a different name, tag, or category.",
+} = Astro.props;
+---
+
+<section id="icons" aria-labelledby="catalog-heading">
+  <div class="d-flex flex-column md:flex-row md:align-items-end gap-4 mb-4">
+    <div class="me-auto">
+      <h2 id="catalog-heading" class="mb-1">{heading}</h2>
+      <p class="mb-0 fg-2" aria-live="polite">
+        <span data-result-count>{icons.length.toLocaleString()}</span> icons
+      </p>
+    </div>
+    <form class="md:col-6 xl:col-5" role="search" data-icon-search>
+      <label class="visually-hidden" for="icon-filter">Search icons</label>
+      <div class="position-relative icon-search">
+        <svg
+          class="bi position-absolute top-50 start-0 translate-middle-y ms-3 fg-3"
+          aria-hidden="true"><use href="#search"></use></svg
+        >
+        <input
+          class="form-control ps-7"
+          id="icon-filter"
+          name="q"
+          type="search"
+          placeholder="Start typing to filter…"
+          autocomplete="off"
+          spellcheck="false"
+          data-icon-filter
+        />
+      </div>
+    </form>
+  </div>
+
+  <ul
+    class="row row-cols-3 sm:row-cols-4 lg:row-cols-4 xl:row-cols-6 list-unstyled"
+    data-icon-grid
+  >
+    {
+      icons.map((icon) => (
+        <li
+          class="col mb-4"
+          data-icon-name={`${icon.name} ${icon.title} ${icon.tags.join(" ")} ${icon.categories.join(" ")}`.toLowerCase()}
+        >
+          <a
+            class="d-block fg-body text-decoration-none"
+            href={`/icons/${icon.name}/`}
+          >
+            <span class="icon-card-preview d-block px-3 py-4 mb-2 fs-2 bg-1 text-center rounded-3">
+              <span set:html={icon.decorativeSvg} />
+            </span>
+            <span class="d-block fs-sm fg-2 text-center text-truncate">
+              {icon.name}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="p-9 text-center bg-1 rounded-5" hidden data-empty-state>
+    <svg class="bi mb-3" aria-hidden="true"><use href="#search"></use></svg>
+    <h3>No icons found</h3>
+    <p class="fg-2">{emptyMessage}</p>
+    <button
+      class="btn-outline theme-secondary"
+      type="button"
+      data-clear-filter>Clear search</button
+    >
+  </div>
+</section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("[data-icon-search]");
+  const input =
+    document.querySelector<HTMLInputElement>("[data-icon-filter]");
+  const cards = [
+    ...document.querySelectorAll<HTMLElement>("[data-icon-name]"),
+  ];
+  const count = document.querySelector<HTMLElement>("[data-result-count]");
+  const empty = document.querySelector<HTMLElement>("[data-empty-state]");
+  const clear = document.querySelector<HTMLButtonElement>(
+    "[data-clear-filter]",
+  );
+  const categoryLinks = [
+    ...document.querySelectorAll<HTMLAnchorElement>("[data-category-link]"),
+  ];
+
+  const syncCategoryLinks = (query: string) => {
+    for (const link of categoryLinks) {
+      const url = new URL(link.href);
+      query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
+      link.href = `${url.pathname}${url.search}${url.hash}`;
+    }
+  };
+
+  const filter = (value: string, updateUrl = true) => {
+    const valueTrimmed = value.trim();
+    const query = valueTrimmed.toLowerCase();
+    const terms = query.split(/\s+/).filter(Boolean);
+    let visible = 0;
+
+    for (const card of cards) {
+      const haystack = card.dataset.iconName ?? "";
+      const matches = terms.every((term) => haystack.includes(term));
+      card.hidden = !matches;
+      if (matches) visible += 1;
+    }
+
+    if (count) count.textContent = visible.toLocaleString();
+    if (empty) empty.hidden = visible !== 0;
+    syncCategoryLinks(valueTrimmed);
+
+    if (updateUrl) {
+      const url = new URL(window.location.href);
+      valueTrimmed
+        ? url.searchParams.set("q", valueTrimmed)
+        : url.searchParams.delete("q");
+      history.replaceState(null, "", url);
+    }
+  };
+
+  form?.addEventListener("submit", (event) => event.preventDefault());
+  input?.addEventListener("input", () => filter(input.value));
+  clear?.addEventListener("click", () => {
+    if (!input) return;
+    input.value = "";
+    filter("");
+    input.focus();
+  });
+
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (input && initialQuery) {
+    input.value = initialQuery;
+    filter(initialQuery, false);
+    document.querySelector("#icons")?.scrollIntoView();
+  }
+</script>

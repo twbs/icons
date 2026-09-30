@@ -1,14 +1,19 @@
 import type { APIRoute } from 'astro'
-import { getIcons } from '../lib/icons'
+import { getCategories, getIcons } from '../lib/icons'
 
 export const GET: APIRoute = ({ site }) => {
   const origin = site ?? new URL('https://icons.getbootstrap.com')
+  const icons = getIcons()
   const paths = [
     '/',
+    '/docs/',
     '/usage/',
     '/font/',
     '/sprite/',
-    ...getIcons().map((icon) => `/icons/${icon.name}/`)
+    ...getCategories(icons).map(
+      (category) => `/icons/category/${category.slug}/`
+    ),
+    ...icons.map((icon) => `/icons/${icon.name}/`)
   ]
   const urls = paths
     .map((pathname) => `  <url><loc>${new URL(pathname, origin)}</loc></url>`)

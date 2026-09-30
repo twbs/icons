@@ -1,0 +1,30 @@
+---
+interface Props {
+  version: string;
+}
+
+const { version } = Astro.props;
+---
+
+<nav aria-label="Bootstrap Icons">
+  <ul
+    class="nav nav-underline justify-content-center lg:justify-content-start gap-1 mb-0"
+  >
+    <li class="nav-item">
+      <a
+        class="nav-link px-2"
+        href={`https://github.com/twbs/icons/releases/tag/v${version}`}
+        >v{version}</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-2" href="#icons">Browse icons</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-2" href="/docs/">Documentation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-2" href="https://github.com/twbs/icons">GitHub</a>
+    </li>
+  </ul>
+</nav>

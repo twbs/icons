@@ -2,7 +2,11 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CopyBlock from "../../components/CopyBlock.astro";
 import Redirect from "../../components/Redirect.astro";
-import { getIcons, type IconMeta } from "../../lib/icons";
+import {
+  getIcons,
+  slugifyCategory,
+  type IconMeta,
+} from "../../lib/icons";
 
 export function getStaticPaths() {
   return getIcons().flatMap((icon) => [
@@ -125,7 +129,7 @@ const css = `.icon-${icon.name} {
                   {icon.categories.map((category) => (
                     <a
                       class="chip theme-secondary text-decoration-none"
-                      href={`/?q=${encodeURIComponent(category)}`}
+                      href={`/icons/category/${slugifyCategory(category)}/`}
                     >
                       {category}
                     </a>
@@ -195,6 +199,7 @@ const css = `.icon-${icon.name} {
       <section>
         <h2 class="fs-xl">Related guides</h2>
         <ul>
+          <li><a href="/docs/">Documentation</a></li>
           <li><a href="/usage/">Install and usage</a></li>
           <li><a href="/sprite/">SVG sprite</a></li>
           <li><a href="/">Back to all icons</a></li>

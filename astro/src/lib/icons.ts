@@ -22,6 +22,13 @@ export interface PackageMeta {
   version: string
 }
 
+export interface IconCategory {
+  name: string
+  slug: string
+  count: number
+  icons: IconMeta[]
+}
+
 const titleize = (name: string) =>
   name
     .split('-')
@@ -82,4 +89,59 @@ export function getIcons(): IconMeta[] {
 
 export function getPackageMeta(): PackageMeta {
   return JSON.parse(fs.readFileSync(packagePath, 'utf8')) as PackageMeta
+}
+
+export const slugifyCategory = (category: string) =>
+  category
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+
+export function getCategories(icons = getIcons()): IconCategory[] {
+  const categories = new Map<
+    string,
+    { labels: Map<string, number>; icons: IconMeta[] }
+  >()
+
+  for (const icon of icons) {
+    const iconCategories = new Set<string>()
+
+    for (const name of icon.categories) {
+      const slug = slugifyCategory(name)
+      if (!slug || iconCategories.has(slug)) continue
+      iconCategories.add(slug)
+
+      const category = categories.get(slug) ?? {
+        labels: new Map<string, number>(),
+        icons: []
+      }
+      category.labels.set(name, (category.labels.get(name) ?? 0) + 1)
+      category.icons.push(icon)
+      categories.set(slug, category)
+    }
+  }
+
+  return [...categories]
+    .map(([slug, category]) => {
+      const name = [...category.labels].sort(
+        ([labelA, countA], [labelB, countB]) =>
+          countB - countA || labelA.localeCompare(labelB)
+      )[0][0]
+
+      return {
+        name,
+        slug,
+        count: category.icons.length,
+        icons: category.icons
+      }
+    })
+    .sort(
+      (categoryA, categoryB) =>
+        categoryA.name.localeCompare(categoryB.name, 'en', {
+          sensitivity: 'base'
+        }) || categoryA.slug.localeCompare(categoryB.slug)
+    )
 }

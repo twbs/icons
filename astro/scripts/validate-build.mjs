@@ -1,14 +1,13 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { getCategories, getIcons } from '../src/lib/icons.ts'
 
 const root = fileURLToPath(new URL('../../', import.meta.url))
 const output = path.join(root, '_site-astro')
-const iconNames = fs
-  .readdirSync(path.join(root, 'icons'))
-  .filter((file) => file.endsWith('.svg'))
-  .map((file) => path.basename(file, '.svg'))
-  .sort()
+const icons = getIcons()
+const iconNames = icons.map((icon) => icon.name)
+const categories = getCategories(icons)
 
 const readAliases = (name) => {
   const markdown = fs.readFileSync(
@@ -33,6 +32,7 @@ const aliases = iconNames.flatMap((name) =>
 const required = [
   'index.html',
   '404.html',
+  'docs/index.html',
   'usage/index.html',
   'font/index.html',
   'sprite/index.html',
@@ -60,6 +60,46 @@ for (const name of iconNames) {
   }
 }
 
+for (const category of categories) {
+  const file = path.join(
+    output,
+    'icons',
+    'category',
+    category.slug,
+    'index.html'
+  )
+  if (!fs.existsSync(file)) {
+    throw new Error(`Missing generated category output: ${category.slug}`)
+  }
+
+  const html = fs.readFileSync(file, 'utf8')
+  const renderedIcons = [...html.matchAll(/\bhref="\/icons\/([^/]+)\/"/g)].map(
+    (match) => match[1]
+  )
+  const expectedIcons = category.icons.map((icon) => icon.name)
+  if (
+    renderedIcons.length !== expectedIcons.length ||
+    renderedIcons.some((name, index) => name !== expectedIcons[index])
+  ) {
+    throw new Error(
+      `Category ${category.slug} rendered icons outside its metadata set.`
+    )
+  }
+
+  const canonical = `https://icons.getbootstrap.com/icons/category/${category.slug}/`
+  if (
+    !html.includes(`<title>${category.name} icons · Bootstrap Icons</title>`) ||
+    !html.includes(`rel="canonical" href="${canonical}"`) ||
+    !html.includes(
+      `href="/icons/category/${category.slug}/#icons" aria-current="page"`
+    )
+  ) {
+    throw new Error(
+      `Invalid category metadata or active state: ${category.slug}`
+    )
+  }
+}
+
 const htmlFiles = []
 const visit = (directory) => {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -70,7 +110,8 @@ const visit = (directory) => {
 }
 visit(output)
 
-const expectedHtmlCount = iconNames.length + aliases.length + 5
+const expectedHtmlCount =
+  iconNames.length + aliases.length + categories.length + 6
 if (htmlFiles.length !== expectedHtmlCount) {
   throw new Error(
     `Expected ${expectedHtmlCount} HTML pages, found ${htmlFiles.length}.`
@@ -166,9 +207,11 @@ const sitemapUrls = [
 ].map((match) => new URL(match[1]).pathname)
 const expectedSitemapUrls = [
   '/',
+  '/docs/',
   '/usage/',
   '/font/',
   '/sprite/',
+  ...categories.map((category) => `/icons/category/${category.slug}/`),
   ...iconNames.map((name) => `/icons/${name}/`)
 ]
 if (
@@ -217,5 +260,5 @@ for (const name of iconNames) {
 }
 
 console.log(
-  `Validated ${htmlFiles.length.toLocaleString()} HTML pages, ${iconNames.length.toLocaleString()} icon routes, ${aliases.length} redirects, local links, metadata, and deploy assets.`
+  `Validated ${htmlFiles.length.toLocaleString()} HTML pages, ${iconNames.length.toLocaleString()} icon routes, ${categories.length} category routes, ${aliases.length} redirects, local links, metadata, and deploy assets.`
 )

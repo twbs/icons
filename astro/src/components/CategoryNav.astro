@@ -1,0 +1,91 @@
+---
+import type { IconCategory } from "../lib/icons";
+
+interface Props {
+  categories: IconCategory[];
+  totalCount: number;
+  activeSlug?: string;
+}
+
+const { categories, totalCount, activeSlug } = Astro.props;
+const allActive = !activeSlug;
+
+const linkClass = (active: boolean) =>
+  `list-group-item list-group-item-action d-flex align-items-center justify-content-between gap-3${
+    active ? " active" : ""
+  }`;
+---
+
+<details class="col-12 lg:d-none mb-5">
+  <summary
+    class="btn-outline theme-secondary d-flex align-items-center justify-content-between"
+  >
+    Browse categories
+    <span class="badge bg-body fg-body border">{categories.length}</span>
+  </summary>
+  <nav class="list-group mt-3" aria-label="Icon categories">
+    <a
+      class={linkClass(allActive)}
+      href="/#icons"
+      aria-current={allActive ? "page" : undefined}
+      data-category-link
+    >
+      <span>All icons</span>
+      <span class="badge bg-body fg-body border rounded-pill">
+        {totalCount.toLocaleString()}
+      </span>
+    </a>
+    {
+      categories.map((category) => {
+        const active = category.slug === activeSlug;
+        return (
+          <a
+            class={linkClass(active)}
+            href={`/icons/category/${category.slug}/#icons`}
+            aria-current={active ? "page" : undefined}
+            data-category-link
+          >
+            <span>{category.name}</span>
+            <span class="badge bg-body fg-body border rounded-pill">
+              {category.count.toLocaleString()}
+            </span>
+          </a>
+        );
+      })
+    }
+  </nav>
+</details>
+
+<aside class="d-none lg:d-block lg:col-3" aria-label="Icon categories">
+  <nav class="list-group position-sticky top-0">
+    <a
+      class={linkClass(allActive)}
+      href="/#icons"
+      aria-current={allActive ? "page" : undefined}
+      data-category-link
+    >
+      <span>All icons</span>
+      <span class="badge bg-body fg-body border rounded-pill">
+        {totalCount.toLocaleString()}
+      </span>
+    </a>
+    {
+      categories.map((category) => {
+        const active = category.slug === activeSlug;
+        return (
+          <a
+            class={linkClass(active)}
+            href={`/icons/category/${category.slug}/#icons`}
+            aria-current={active ? "page" : undefined}
+            data-category-link
+          >
+            <span>{category.name}</span>
+            <span class="badge bg-body fg-body border rounded-pill">
+              {category.count.toLocaleString()}
+            </span>
+          </a>
+        );
+      })
+    }
+  </nav>
+</aside>

@@ -1,0 +1,143 @@
+---
+import FigmaLogo from "../components/FigmaLogo.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Documentation"
+  description="Install Bootstrap Icons and learn how to use SVGs, the SVG sprite, icon font, and Figma library."
+>
+  <article class="2xl:container bd-gutter py-5">
+    <header class="xl:col-9 py-5 mb-7 border-bottom">
+      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">
+        Bootstrap Icons
+      </p>
+      <h1 class="fs-4xl fw-bold lh-1 mb-3">Documentation</h1>
+      <p class="fs-lg fw-light fg-2">
+        Choose the format that fits your project, then use the focused guides
+        for detailed examples.
+      </p>
+      <nav aria-label="Documentation sections">
+        <ul class="nav nav-underline gap-1 mt-5">
+          <li class="nav-item">
+            <a class="nav-link px-2" href="#get-started">Get started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="#formats">Formats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="#resources">Resources</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="get-started" class="mb-9" aria-labelledby="start-heading">
+      <h2 id="start-heading">Get started</h2>
+      <p class="fg-2">
+        Install the package once, then choose an SVG or font workflow.
+      </p>
+      <div class="row row-cols-1 md:row-cols-2 g-4 mt-3">
+        <div class="col">
+          <div class="h-100 p-5 bg-1 border rounded-5">
+            <h3>Installation</h3>
+            <p>
+              Install from npm or Composer, download a release, or use the
+              versioned CDN stylesheet.
+            </p>
+            <a class="stretched-link" href="/usage/#install"
+              >Installation options</a
+            >
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 p-5 bg-1 border rounded-5">
+            <h3>Usage and accessibility</h3>
+            <p>
+              Add icons to HTML, size and color them, and give meaningful icons
+              accessible names.
+            </p>
+            <a class="stretched-link" href="/usage/#usage">Read the usage guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formats" class="mb-9" aria-labelledby="formats-heading">
+      <h2 id="formats-heading">Choose a format</h2>
+      <p class="fg-2">
+        Every format ships in the same Bootstrap Icons package.
+      </p>
+      <div class="row row-cols-1 md:row-cols-2 xl:row-cols-3 g-4 mt-3">
+        <div class="col">
+          <div class="h-100 p-5 bg-1 border rounded-5">
+            <h3>SVG</h3>
+            <p>
+              Embed SVG markup for full control, or reference an individual
+              file as an image.
+            </p>
+            <a class="stretched-link" href="/usage/#usage">Use individual SVGs</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 p-5 bg-1 border rounded-5">
+            <h3>SVG sprite</h3>
+            <p>
+              Serve one local asset and reference any icon by its filename.
+            </p>
+            <a class="stretched-link" href="/sprite/">Use the SVG sprite</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 p-5 bg-1 border rounded-5">
+            <h3>Icon font</h3>
+            <p>
+              Include the bundled CSS and use familiar <code>bi-*</code> classes
+              in your markup.
+            </p>
+            <a class="stretched-link" href="/font/">Use the icon font</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="mb-9" aria-labelledby="resources-heading">
+      <h2 id="resources-heading">Design and resources</h2>
+      <div class="row row-cols-1 md:row-cols-2 g-4 mt-3">
+        <div class="col">
+          <div class="h-100 p-5 bg-1 border rounded-5">
+            <h3>Figma library</h3>
+            <p>
+              Use the official Bootstrap Icons community file in your designs.
+            </p>
+            <a
+              class="btn-outline theme-secondary d-inline-flex align-items-center stretched-link"
+              href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
+              target="_blank"
+              rel="noopener"
+            >
+              <FigmaLogo class="me-2" />
+              Open in Figma
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="h-100 p-5 bg-1 border rounded-5">
+            <h3>Project resources</h3>
+            <ul class="mb-0">
+              <li><a href="/">Browse all icons</a></li>
+              <li>
+                <a href="https://github.com/twbs/icons/releases"
+                  >Release notes and downloads</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/twbs/icons">Source on GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

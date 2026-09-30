@@ -38,11 +38,17 @@ npm run docs-astro-test
 ```
 
 The static production output is `_site-astro/`. `docs-astro-test` runs Astro
-type checking, generates every catalog/detail/asset route, and validates local
-links, fragment targets, redirects, sitemap/robots metadata, byte-identical
-icon assets, and HTML. Builds report elapsed time and enforce a 60-second
-budget; override it with `ASTRO_BUILD_BUDGET_MS` when diagnosing slower
-machines.
+type checking, generates every catalog/detail/category/asset route, and
+validates local links, fragment targets, redirects, sitemap/robots metadata,
+byte-identical icon assets, and HTML. Category routes use
+`/icons/category/<slug>/`; their labels, deterministic slugs, counts, and icon
+sets all come from the icon front matter through `src/lib/icons.ts`. Builds
+report elapsed time and enforce a 60-second budget; override it with
+`ASTRO_BUILD_BUDGET_MS` when diagnosing slower machines.
+
+The documentation entry point is `/docs/`. It directs readers to the detailed
+installation and SVG guidance at `/usage/`, sprite guidance at `/sprite/`, and
+icon font guidance at `/font/` without duplicating those pages.
 
 For the complete local Stage 5 audit, run:
 
