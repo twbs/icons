@@ -2,11 +2,12 @@
 import { highlightCode } from "@twbs/docs-ui/shiki";
 
 interface Props {
+  class?: string;
   code: string;
   lang?: string;
 }
 
-const { code, lang = "bash" } = Astro.props;
+const { class: className, code, lang = "bash" } = Astro.props;
 const highlightedCode = await highlightCode(code, lang);
 ---
 
@@ -23,7 +24,7 @@ const highlightedCode = await highlightCode(code, lang);
   });
 </script>
 
-<div class="code-copy">
+<div class:list={["code-copy", className]}>
   <Fragment set:html={highlightedCode} />
   <button
     type="button"
