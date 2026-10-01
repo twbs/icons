@@ -43,7 +43,7 @@ const pagePath = (target: number) =>
 >
   <div class="row align-items-end g-4 mb-5">
     <div class="col-12 md:col-auto me-auto">
-      <h2 id="catalog-heading" class="mb-0">{heading}</h2>
+      <h2 id="catalog-heading" class="mb-0 fs-3">{heading}</h2>
     </div>
     <div class="icon-catalog-toolbar col-12 md:col-8 lg:col-6">
       <div
@@ -74,7 +74,7 @@ const pagePath = (target: number) =>
         }
       </div>
       <form class="icon-catalog-filter" role="search" data-icon-search>
-        <label class="visually-hidden" for="icon-filter">Search icons</label>
+        <label class="visually-hidden" for="icon-filter">Filter icons</label>
         <label class="form-control form-adorn">
           <span class="form-adorn-icon" aria-hidden="true">
             <svg class="bi" width="16" height="16">
@@ -86,7 +86,7 @@ const pagePath = (target: number) =>
             id="icon-filter"
             name="q"
             type="search"
-            placeholder="Search by name, tag, or category…"
+            placeholder="Filter by name, tag, or category…"
             autocomplete="off"
             spellcheck="false"
             data-icon-filter
@@ -168,8 +168,8 @@ const pagePath = (target: number) =>
               <img width="32" height="32" alt="" loading="lazy" />
             </span>
           </span>
-          <span class="d-block fs-sm text-break mt-3 px-1" data-icon-label
-          ></span>
+          <div class="fs-xs text-break text-center mt-3 px-1" data-icon-label
+          ></div>
         </a>
       </div>
     </li>
