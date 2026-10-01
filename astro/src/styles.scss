@@ -15,8 +15,8 @@
       display: block !important;
       height: calc(100vh - 8.5rem);
       // Prevent focus styles from being cut off.
-      padding-inline-start: .25rem;
-      margin-inline-start: -.25rem;
+      padding-inline-start: 0.25rem;
+      margin-inline-start: -0.25rem;
       overflow-y: auto;
     }
 
@@ -34,13 +34,49 @@
   .icon-catalog-layout {
     @include media-breakpoint-up(lg) {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+      // Keep the 48px gutter while returning 50px from the quarter-width
+      // sidebar track to the catalog.
+      grid-template-columns:
+        minmax(11.375rem, calc(25% - 3.875rem))
+        minmax(0, 1fr);
       gap: var(--bs-gutter-x);
     }
   }
 
   .icon-catalog-main {
     min-width: 0;
+  }
+
+  .icon-catalog-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    h1 {
+      overflow-wrap: anywhere;
+    }
+  }
+
+  .icon-catalog-breadcrumb {
+    .breadcrumb-link {
+      min-height: 0;
+      padding: 0;
+    }
+  }
+
+  [data-category-link] {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  [data-category-link] > :first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  [data-category-link] > .badge {
+    flex-shrink: 0;
   }
 
   [data-icon-grid] {
@@ -50,7 +86,7 @@
   .icon-catalog-toolbar {
     display: flex;
     flex-wrap: wrap;
-    gap: .75rem;
+    gap: 0.75rem;
     align-items: center;
     justify-content: flex-start;
   }
@@ -81,7 +117,7 @@
   .icon-card-copy {
     pointer-events: none;
     opacity: 0;
-    transition: opacity .15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
   }
 
   [data-icon-card]:hover .icon-card-copy,
@@ -118,7 +154,7 @@
   }
 
   .anchor-link {
-    padding-inline: .25rem;
+    padding-inline: 0.25rem;
     color: color-mix(in srgb, var(--bs-link-color), transparent 50%);
     text-decoration: none;
     opacity: 0;
@@ -138,12 +174,11 @@
   .icon-demo {
     min-height: clamp(18rem, 52vw, 36rem);
     font-size: clamp(9rem, 25vw, 18rem);
-    background-image:
-      radial-gradient(
-        circle,
-        var(--bs-border-color) 1px,
-        transparent 1px
-      );
+    background-image: radial-gradient(
+      circle,
+      var(--bs-border-color) 1px,
+      transparent 1px
+    );
     background-size: 1rem 1rem;
   }
 

@@ -5,6 +5,8 @@ import { CATALOG_PAGE_SIZE, getPageCount, type IconMeta } from "../lib/icons";
 interface Props {
   icons: IconMeta[];
   heading: string;
+  headingHref?: string;
+  headingLinkText?: string;
   totalCount: number;
   page?: number;
   basePath?: string;
@@ -16,6 +18,8 @@ interface Props {
 const {
   icons,
   heading,
+  headingHref,
+  headingLinkText = "All Icons",
   totalCount,
   page = 1,
   basePath = "/icons/",
@@ -24,12 +28,14 @@ const {
   emptyMessage = "Try a different name, tag, or category.",
 } = Astro.props;
 const pageCount = getPageCount(totalCount);
+const CatalogRoot = headingHref ? "div" : "section";
 const pagePath = (target: number) =>
   target === 1 ? firstPagePath : `${basePath}page/${target}/`;
 ---
 
-<section
+<CatalogRoot
   id="icons"
+  role={headingHref ? "region" : undefined}
   aria-labelledby="catalog-heading"
   data-pagefind-ignore
   data-icon-catalog
@@ -43,7 +49,34 @@ const pagePath = (target: number) =>
 >
   <div class="row align-items-end g-4 mb-5">
     <div class="col-12 md:col-auto me-auto">
-      <h2 id="catalog-heading" class="mb-0 fs-3">{heading}</h2>
+      {
+        headingHref ? (
+          <div class="icon-catalog-heading">
+            <nav aria-label="Breadcrumb">
+              <ol class="icon-catalog-breadcrumb breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item">
+                  <a class="breadcrumb-link" href={headingHref}>
+                    {headingLinkText}
+                  </a>
+                </li>
+                <li class="breadcrumb-divider" aria-hidden="true">
+                  &gt;
+                </li>
+                <li class="breadcrumb-item visually-hidden" aria-current="page">
+                  {heading}
+                </li>
+              </ol>
+            </nav>
+            <h1 id="catalog-heading" class="mb-0 fs-3">
+              {heading}
+            </h1>
+          </div>
+        ) : (
+          <h2 id="catalog-heading" class="mb-0 fs-3">
+            {heading}
+          </h2>
+        )
+      }
     </div>
     <div class="icon-catalog-toolbar col-12 md:col-8 lg:col-6">
       <div
@@ -168,13 +201,13 @@ const pagePath = (target: number) =>
               <img width="32" height="32" alt="" loading="lazy" />
             </span>
           </span>
-          <div class="fs-xs text-break text-center mt-3 px-1" data-icon-label
-          ></div>
+          <div class="fs-xs text-break text-center mt-3 px-1" data-icon-label>
+          </div>
         </a>
       </div>
     </li>
   </template>
-</section>
+</CatalogRoot>
 
 <script>
   interface CatalogItem {

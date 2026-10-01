@@ -53,32 +53,13 @@ const description = `Browse ${category.name} icons, page ${page.toLocaleString()
   catalogDrawer
 >
   <div class="2xl:container bd-gutter py-4" data-pagefind-ignore>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb gap-2 my-4 p-0">
-        <li class="breadcrumb-item"><a href="/">Icons</a></li>
-        <li class="breadcrumb-item">
-          <a href={`/icons/category/${category.slug}/`}>{category.name}</a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">
-          Page {page}
-        </li>
-      </ol>
-    </nav>
-
-    <header class="xl:col-9 py-5 mb-7 border-bottom">
-      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">Icon category</p>
-      <h1 class="fs-4xl fw-bold lh-1 mb-3">
-        {category.name}, page {page}
-      </h1>
-      <p class="fs-lg fw-light fg-2">{description}</p>
-    </header>
-
     <div class="icon-catalog-layout">
       <CategoryNav {categories} {totalCount} activeSlug={category.slug} />
       <div class="icon-catalog-main">
         <IconCatalog
           {icons}
-          heading={`${category.name} icons`}
+          heading={category.name}
+          headingHref="/#icons"
           totalCount={category.count}
           {page}
           basePath={`/icons/category/${category.slug}/`}
