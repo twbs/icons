@@ -31,6 +31,18 @@
     }
   }
 
+  .icon-catalog-layout {
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+      gap: var(--bs-gutter-x);
+    }
+  }
+
+  .icon-catalog-main {
+    min-width: 0;
+  }
+
   [data-icon-grid] {
     --bi-catalog-icon-size: 2rem;
   }

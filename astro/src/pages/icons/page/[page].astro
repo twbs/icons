@@ -61,9 +61,9 @@ const description = `Browse Bootstrap Icons page ${page.toLocaleString()} of ${p
       <p class="fs-lg fw-light fg-2">{description}</p>
     </header>
 
-    <div class="row lg:gx-10 xl:gx-12">
+    <div class="icon-catalog-layout">
       <CategoryNav categories={categories} totalCount={totalCount} />
-      <div class="lg:col-9">
+      <div class="icon-catalog-main">
         <IconCatalog {icons} heading="All Icons" {totalCount} {page} />
       </div>
     </div>
