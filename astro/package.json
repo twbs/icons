@@ -9,10 +9,10 @@
     "dev": "astro dev",
     "build": "node scripts/build.mjs",
     "check": "astro check",
-    "pagefind": "pagefind --site ../_site-astro",
+    "pagefind": "pagefind --site ../_site",
     "preview": "astro preview",
     "validate": "node scripts/validate-build.mjs",
-    "validate:html": "node ../build/vnu-jar.mjs ../_site-astro/",
+    "validate:html": "node ../build/vnu-jar.mjs ../_site/",
     "test": "npm run check && npm run build && npm run validate && npm run validate:html"
   },
   "dependencies": {

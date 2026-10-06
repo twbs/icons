@@ -1,11 +1,8 @@
 .DS_Store
-/.hugo_build.lock
 /.cache/
 /_site/
-/_site-astro/
 /docs/static/pagefind/
 /node_modules/
-/resources/
 
 # Editor folders
 /.vscode/

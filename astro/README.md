@@ -1,8 +1,6 @@
-# Bootstrap Icons Astro migration
+# Bootstrap Icons documentation
 
-This site is an additive migration alongside the production Hugo site. Hugo
-remains the release and deployment fallback; the root package and published
-icon files are unchanged.
+The production Bootstrap Icons documentation site is built with Astro.
 
 ## Dependencies
 
@@ -23,13 +21,13 @@ an absolute `file:` path.
 From the Icons repository root:
 
 ```sh
-npm run docs-astro-serve -- --host 127.0.0.1 --port 4200
-npm run docs-astro-check
-npm run docs-astro-build
-npm run docs-astro-test
+npm run docs-serve -- --host 127.0.0.1 --port 4200
+npm run docs-check
+npm run docs-build
+npm run docs-test
 ```
 
-The static production output is `_site-astro/`. `docs-astro-test` runs Astro
+The static production output is `_site/`. `docs-test` runs Astro
 type checking, generates every catalog/detail/category/asset route, and
 validates local links, fragment targets, redirects, sitemap/robots metadata,
 byte-identical icon assets, and HTML. Category routes use
@@ -52,27 +50,22 @@ redirects there for compatibility. Detailed installation and SVG guidance
 remains at `/usage/`, sprite guidance at `/sprite/`, and icon font guidance at
 `/font/`.
 
-For the complete local Stage 5 audit, run:
+For the complete local audit, run:
 
 ```sh
-npm run docs-astro-audit
+npm test
+npm run docs-test
+npm run release-check
 ```
 
-That command builds and validates Hugo and Astro, verifies every Hugo HTML
-route exists in the Astro output, compares deploy-critical assets byte for
-byte, and checks both the npm package file list and release ZIP contents. It
-requires the local dependency links above and a working Hugo installation.
-The individual comparison commands are `docs-astro-compare` and
-`docs-astro-release-check`.
+These commands lint and validate the project, build every documentation route,
+check local links and HTML, and verify both the npm package file list and
+release ZIP contents.
 
 Set `PUBLIC_FATHOM_SITE_ID` at build time to enable analytics. No analytics
 request is emitted when it is unset.
 
-## Production cutover
+## Production deployment
 
-CI builds and validates both Hugo and Astro, compares their deploy-critical
-routes and assets, and checks the release archive. Release deployment publishes
-`_site-astro/`.
-
-Hugo remains the fallback until the Astro deployment has been verified in
-production. Do not remove it as part of this migration.
+CI builds and validates the Astro site and checks the release archive. Release
+deployment publishes `_site/`.

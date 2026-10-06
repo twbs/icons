@@ -10,11 +10,9 @@ export default [
       '**/dist/**',
       '**/vendor/**',
       '_site/**',
-      '_site-astro/**',
       'astro/.astro/**',
       'docs/static/pagefind/**',
       'node_modules/**',
-      'resources/**',
       '**/.fantasticonrc.js'
     ],
   },
@@ -58,16 +56,6 @@ export default [
       sourceType: 'commonjs',
       globals: {
         ...globals.node
-      }
-    }
-  },
-  {
-    files: [
-      'docs/assets/js/**'
-    ],
-    languageOptions: {
-      globals: {
-        ...globals.browser
       }
     }
   }

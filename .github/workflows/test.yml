@@ -45,16 +45,13 @@ jobs:
       - name: Build and test docs
         run: npm run docs-test
 
-      - name: Build and test Astro docs
-        run: npm run docs-astro-test
-
-      - name: Compare docs and release artifacts
-        run: npm run docs-astro-compare && npm run docs-astro-release-check
+      - name: Validate release artifacts
+        run: npm run release-check
 
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@36a0bfbfecd5e237e8f8531537a693616c505faf # v2.4
         with:
-          paths: _site-astro
+          paths: _site
           recurse: true
           verbosity: error
           skip: "^(?!http://localhost)"

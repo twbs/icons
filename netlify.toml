@@ -1,6 +1,6 @@
 [build]
   command = "npm run netlify"
-  publish = "_site-astro"
+  publish = "_site"
 
 [build.environment]
   NODE_VERSION = "24"

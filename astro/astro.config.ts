@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 import type { AstroIntegration } from "astro";
 
 const astroRoot = fileURLToPath(new URL(".", import.meta.url));
-const pagefindOutput = path.resolve(astroRoot, "../_site-astro/pagefind");
+const pagefindOutput = path.resolve(astroRoot, "../_site/pagefind");
 const pagefindPublic = path.resolve(astroRoot, "../docs/static/pagefind");
 
 // Match the Bootstrap docs and blog development setup: serve the index from
@@ -30,7 +30,7 @@ function pagefindDev(): AstroIntegration {
 export default defineConfig({
   output: "static",
   site: "https://icons.getbootstrap.com",
-  outDir: "../_site-astro",
+  outDir: "../_site",
   publicDir: "../docs/static",
   integrations: [pagefindDev()],
   build: {

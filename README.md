@@ -156,16 +156,18 @@ The official Bootstrap Icons community file makes the icon set [available in Fig
 [![Build Status](https://img.shields.io/github/actions/workflow/status/twbs/icons/test.yml?branch=main&label=Tests&logo=github)](https://github.com/twbs/icons/actions/workflows/test.yml?query=workflow%3ATests+branch%3Amain)
 [![npm version](https://img.shields.io/npm/v/bootstrap-icons?logo=npm&logoColor=fff)](https://www.npmjs.com/package/bootstrap-icons)
 
-Clone the repo, install dependencies, and start the Hugo server locally.
+Clone the repo, install the root and Astro dependencies, and start the docs
+server locally.
 
 ```shell
 git clone https://github.com/twbs/icons/
 cd icons
-npm i
+npm ci
+npm ci --prefix astro
 npm start
 ```
 
-Then open `http://localhost:4000` in your browser.
+Then open `http://localhost:4321` in your browser.
 
 ### npm scripts
 
@@ -174,7 +176,9 @@ Here are some key scripts you'll use during development. Be sure to look to our 
 | Script       | Description                                                                   |
 |--------------|-------------------------------------------------------------------------------|
 | `start`      | Alias for running `docs-serve`                                                |
-| `docs-serve` | Starts a local Hugo server                                                    |
+| `docs-serve` | Starts the local Astro development server                                     |
+| `docs-build` | Builds the production documentation site                                      |
+| `docs-test`  | Checks, builds, and validates the documentation site                          |
 | `pages`      | Generates permalink pages for each icon with template Markdown                |
 | `icons`      | Processes and optimizes SVGs in `icons` directory, generates fonts and sprite |
 

@@ -12,7 +12,7 @@ import {
 } from "../src/lib/icons.ts"
 
 const root = fileURLToPath(new URL("../../", import.meta.url))
-const output = path.join(root, "_site-astro")
+const output = path.join(root, "_site")
 const icons = getIcons()
 const iconNames = icons.map((icon) => icon.name)
 const categories = getCategories(icons)
@@ -138,8 +138,9 @@ if (!homeHtml.includes('data-index-url="/icons/index.json"')) {
 }
 
 const indexFile = path.join(output, "icons/index.json")
-const indexBytes = fs.statSync(indexFile).size
-const catalogIndex = JSON.parse(fs.readFileSync(indexFile, "utf8"))
+const indexSource = fs.readFileSync(indexFile)
+const indexBytes = indexSource.byteLength
+const catalogIndex = JSON.parse(indexSource.toString("utf8"))
 if (
   indexBytes > 500000 ||
   catalogIndex.length !== icons.length ||

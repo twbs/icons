@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url"
 const budgetMs = Number(process.env.ASTRO_BUILD_BUDGET_MS ?? 60000)
 const startedAt = performance.now()
 const astroRoot = fileURLToPath(new URL("..", import.meta.url))
-const output = path.resolve(astroRoot, "../_site-astro")
+const output = path.resolve(astroRoot, "../_site")
 const devIndex = path.resolve(astroRoot, "../docs/static/pagefind")
 
 const run = (command, args) =>
