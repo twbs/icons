@@ -1,7 +1,7 @@
 ---
 title: Cloud minus fill
 categories:
-  - Clouds
+  - Weather
 tags:
   - subtract
 ---

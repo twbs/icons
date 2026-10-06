@@ -1,7 +1,7 @@
 ---
 title: Puzzle
 categories:
-  - Miscellaneous
+  - Entertainment
 tags:
   - puzzle
   - piece

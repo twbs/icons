@@ -1,7 +1,7 @@
 ---
 title: Calendar week fill
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - dates
   - timeline

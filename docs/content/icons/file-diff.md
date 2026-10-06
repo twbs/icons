@@ -1,7 +1,7 @@
 ---
 title: File diff
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

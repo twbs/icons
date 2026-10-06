@@ -1,7 +1,7 @@
 ---
 title: Caret up fill
 categories:
-  - Carets
+  - Arrows
 tags:
   - caret
   - arrow

@@ -1,7 +1,7 @@
 ---
 title: Copy
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - paste
   - clone

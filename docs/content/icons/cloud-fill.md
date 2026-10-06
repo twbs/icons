@@ -1,7 +1,7 @@
 ---
 title: Cloud fill
 categories:
-  - Clouds
+  - Weather
 tags:
   - weather
 ---

@@ -1,7 +1,7 @@
 ---
 title: Grip vertical
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - drag
   - grab

@@ -1,7 +1,7 @@
 ---
 title: Sort numeric down alt
 categories:
-  - Sort and filter
+  - UI & Keyboard
 tags:
   - sort
   - filter

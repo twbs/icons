@@ -1,7 +1,7 @@
 ---
 title: Filetype xml
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - "file type"

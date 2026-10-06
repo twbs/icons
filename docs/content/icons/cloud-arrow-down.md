@@ -1,7 +1,7 @@
 ---
 title: Cloud arrow down
 categories:
-  - Clouds
+  - Weather
 tags:
   - download
 ---

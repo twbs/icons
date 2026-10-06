@@ -1,7 +1,7 @@
 ---
 title: File earmark lock2 fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - lock
   - private

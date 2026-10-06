@@ -1,6 +1,81 @@
-<nav class="nav flex-column nav-pills gap-1" aria-label="Documentation">
-  <a class="nav-link active" href="/docs/" aria-current="page">Overview</a>
-  <a class="nav-link" href="/usage/">Install and usage</a>
-  <a class="nav-link" href="/sprite/">SVG sprite</a>
-  <a class="nav-link" href="/font/">Icon font</a>
-</nav>
+---
+import SidebarShell from "./SidebarShell.astro";
+
+interface SectionLink {
+  href: string;
+  label: string;
+}
+
+interface DocsLink {
+  href: string;
+  label: string;
+  sections?: SectionLink[];
+}
+
+const pathname = Astro.url.pathname;
+const links: DocsLink[] = [
+  {
+    href: "/docs/",
+    label: "Overview",
+    sections: [
+      { href: "#install", label: "Install" },
+      { href: "#svg", label: "Use SVGs" },
+      { href: "#icon-font", label: "Icon font" },
+      { href: "#accessibility", label: "Accessibility" },
+    ],
+  },
+  {
+    href: "/usage/",
+    label: "Install and usage",
+    sections: [
+      { href: "#install", label: "Install" },
+      { href: "#usage", label: "SVG usage" },
+      { href: "#icon-font", label: "Icon font" },
+      { href: "#accessibility", label: "Accessibility" },
+    ],
+  },
+  {
+    href: "/sprite/",
+    label: "SVG sprite",
+    sections: [
+      { href: "#use-the-sprite", label: "Use the sprite" },
+      { href: "#cross-origin", label: "Cross-origin use" },
+    ],
+  },
+  { href: "/font/", label: "Icon font" },
+];
+---
+
+<SidebarShell ariaLabel="Documentation" drawerLabel="Browse documentation">
+  <nav class="nav vstack bd-links docs-sidebar-nav" aria-label="Documentation">
+    <ul class="nav flex-column bd-links-nav">
+      {
+        links.map((link) => {
+          const active = pathname === link.href;
+          return (
+            <li>
+              <a
+                class:list={["nav-link border-0", { active }]}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+              >
+                {link.label}
+              </a>
+              {active && link.sections && (
+                <ul class="nav flex-column docs-sidebar-sections">
+                  {link.sections.map((section) => (
+                    <li>
+                      <a class="nav-link border-0" href={section.href}>
+                        {section.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</SidebarShell>

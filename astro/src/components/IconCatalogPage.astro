@@ -1,0 +1,65 @@
+---
+import CategoryNav from "./CategoryNav.astro";
+import IconCatalog from "./IconCatalog.astro";
+import type { IconCategory, IconMeta } from "../lib/icons";
+
+interface Props {
+  categories: IconCategory[];
+  totalCount: number;
+  icons: IconMeta[];
+  heading: string;
+  catalogTotalCount?: number;
+  activeSlug?: string;
+  headingHref?: string;
+  headingLinkText?: string;
+  page?: number;
+  basePath?: string;
+  firstPagePath?: string;
+  categorySlug?: string;
+  emptyMessage?: string;
+  pagefindIgnore?: boolean;
+  paginate?: boolean;
+}
+
+const {
+  categories,
+  totalCount,
+  icons,
+  heading,
+  catalogTotalCount = totalCount,
+  activeSlug,
+  headingHref,
+  headingLinkText,
+  page,
+  basePath,
+  firstPagePath,
+  categorySlug,
+  emptyMessage,
+  pagefindIgnore = false,
+  paginate,
+} = Astro.props;
+---
+
+<div
+  class="2xl:container bd-gutter py-6"
+  data-pagefind-ignore={pagefindIgnore || undefined}
+>
+  <div class="icon-catalog-layout">
+    <CategoryNav {categories} {totalCount} {activeSlug} />
+    <div class="icon-catalog-main">
+      <IconCatalog
+        {icons}
+        {heading}
+        totalCount={catalogTotalCount}
+        {headingHref}
+        {headingLinkText}
+        {page}
+        {basePath}
+        {firstPagePath}
+        {categorySlug}
+        {emptyMessage}
+        {paginate}
+      />
+    </div>
+  </div>
+</div>

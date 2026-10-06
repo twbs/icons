@@ -1,7 +1,7 @@
 ---
 title: Chevron expand
 categories:
-  - Chevrons
+  - Arrows
 tags:
   - chevron
 ---

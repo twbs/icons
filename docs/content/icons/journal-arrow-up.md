@@ -1,7 +1,7 @@
 ---
 title: Journal arrow up
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - folder

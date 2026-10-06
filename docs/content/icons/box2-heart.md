@@ -2,7 +2,6 @@
 title: Box2 heart
 categories:
   - Real world
-  - Love
 tags:
   - cardboard
   - package
@@ -10,4 +9,5 @@ tags:
   - gift
   - valentine
   - love
+  - romance
 ---

@@ -1,8 +1,9 @@
 ---
 title: Hearts
 categories:
-  - Love
+  - Emoji
 tags:
   - romance
   - valentine
+  - love
 ---

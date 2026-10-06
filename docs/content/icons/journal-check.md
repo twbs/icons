@@ -1,7 +1,7 @@
 ---
 title: Journal check
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - folder

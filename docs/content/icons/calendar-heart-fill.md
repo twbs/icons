@@ -1,12 +1,12 @@
 ---
 title: Calendar heart fill
 categories:
-  - Date and time
-  - Love
+  - Date & Time
 tags:
   - date
   - time
   - month
   - valentine
-  - date
+  - love
+  - romance
 ---

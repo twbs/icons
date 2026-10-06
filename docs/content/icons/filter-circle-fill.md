@@ -1,7 +1,7 @@
 ---
 title: Filter circle fill
 categories:
-  - Sort and filter
+  - UI & Keyboard
 tags:
   - sort
   - filter

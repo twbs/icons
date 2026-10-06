@@ -1,7 +1,7 @@
 ---
 title: Brightness high
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - brightness
   - sun

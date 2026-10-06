@@ -2,7 +2,6 @@
 title: Chat right heart fill
 categories:
   - Communications
-  - Love
 tags:
   - chat bubble
   - text
@@ -10,4 +9,5 @@ tags:
   - valentine
   - romance
   - comment
+  - love
 ---

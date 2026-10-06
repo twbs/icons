@@ -16,9 +16,9 @@
     "test": "npm run check && npm run build && npm run validate && npm run validate:html"
   },
   "dependencies": {
-    "@twbs/docs-ui": "file:../../docs",
+    "@twbs/bui": "^0.1.1",
     "astro": "^7.3.2",
-    "bootstrap": "file:../../b6-dev",
+    "bootstrap": "github:twbs/bootstrap#v6-dev",
     "sass": "^1.103.1"
   },
   "devDependencies": {

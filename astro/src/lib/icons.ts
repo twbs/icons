@@ -33,13 +33,62 @@ export interface CatalogItem {
   n: string;
   s: string;
   c: string[];
+  t: string[];
 }
 
-export const CATALOG_PAGE_SIZE = 48;
+export const ICON_CATEGORY_NAMES = [
+  "Alerts & Status",
+  "Apps",
+  "Arrows",
+  "Badges",
+  "Brand",
+  "Buildings",
+  "Commerce",
+  "Communications",
+  "Data",
+  "Date & Time",
+  "Devices",
+  "Emoji",
+  "Entertainment",
+  "Files & Folders",
+  "Geo",
+  "Graphics",
+  "Layout",
+  "Media",
+  "Medical",
+  "People",
+  "Real world",
+  "Security",
+  "Shapes",
+  "Tools",
+  "Transportation",
+  "Travel",
+  "Typography",
+  "UI & Keyboard",
+  "Weather",
+] as const;
+
+export const CATEGORY_REDIRECTS = {
+  "alerts-warnings-and-signs": "/icons/category/alerts-and-status/",
+  bootstrap: "/icons/category/brand/",
+  "box-arrows": "/icons/category/arrows/",
+  carets: "/icons/category/arrows/",
+  chevrons: "/icons/category/arrows/",
+  clouds: "/icons/category/weather/",
+  controls: "/icons/category/ui-and-keyboard/",
+  hands: "/icons/category/people/",
+  love: "/?tag=love",
+  miscellaneous: "/",
+  "shape-arrows": "/icons/category/arrows/",
+  "sort-and-filter": "/icons/category/ui-and-keyboard/",
+} as const;
+
+export const CATALOG_PAGE_SIZE = 96;
 
 let iconsCache: IconMeta[] | undefined;
 let categoriesCache:
   { icons: IconMeta[]; categories: IconCategory[] } | undefined;
+const categoryNames = new Set<string>(ICON_CATEGORY_NAMES);
 
 const titleize = (name: string) =>
   name
@@ -47,19 +96,46 @@ const titleize = (name: string) =>
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 
+const cleanListItem = (item: string) =>
+  item.trim().replace(/^['"]|['"]$/g, "");
+
 const readList = (source: string, key: string): string[] => {
   const inline = source.match(new RegExp(`^${key}:\\s*\\[(.*)\\]`, "m"))?.[1];
   if (inline)
     return inline
       .split(",")
-      .map((item) => item.trim().replace(/^['"]|['"]$/g, ""))
+      .map(cleanListItem)
       .filter(Boolean);
   const block = source.match(
     new RegExp(`^${key}:\\s*\\n((?:\\s+- .+\\n?)+)`, "m"),
   )?.[1];
   return block
-    ? [...block.matchAll(/^\s+-\s+(.+)$/gm)].map((match) => match[1].trim())
+    ? [...block.matchAll(/^\s+-\s+(.+)$/gm)].map((match) =>
+        cleanListItem(match[1]),
+      )
     : [];
+};
+
+const validateIconMetadata = (icon: IconMeta) => {
+  if (icon.categories.length !== 1) {
+    throw new Error(
+      `${icon.name}: expected exactly one category, found ${icon.categories.length}.`,
+    );
+  }
+
+  const [category] = icon.categories;
+  if (!categoryNames.has(category)) {
+    throw new Error(`${icon.name}: unknown category "${category}".`);
+  }
+
+  if (icon.tags.length === 0) {
+    throw new Error(`${icon.name}: expected at least one tag.`);
+  }
+
+  const normalizedTags = icon.tags.map((tag) => tag.toLowerCase());
+  if (new Set(normalizedTags).size !== normalizedTags.length) {
+    throw new Error(`${icon.name}: duplicate tag.`);
+  }
 };
 
 export function getIcons(): IconMeta[] {
@@ -84,7 +160,7 @@ export function getIcons(): IconMeta[] {
       const title =
         markdown.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1] ?? titleize(name);
       const svg = fs.readFileSync(path.join(iconsDir, file), "utf8").trim();
-      return {
+      const icon = {
         name,
         title,
         tags: readList(markdown, "tags"),
@@ -97,6 +173,8 @@ export function getIcons(): IconMeta[] {
           '<svg aria-hidden="true" focusable="false" ',
         ),
       };
+      validateIconMetadata(icon);
+      return icon;
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -180,6 +258,7 @@ export function getCatalogIndex(icons = getIcons()): CatalogItem[] {
       .join(" ")
       .toLowerCase(),
     c: [...new Set(icon.categories.map(slugifyCategory).filter(Boolean))],
+    t: [...new Set(icon.tags.map((tag) => tag.toLowerCase()))],
   }));
 }
 

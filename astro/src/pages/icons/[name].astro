@@ -1,18 +1,39 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import CopyBlock from "../../components/CopyBlock.astro";
+import IconCard from "../../components/IconCard.astro";
 import Redirect from "../../components/Redirect.astro";
-import {
-  getIcons,
-  slugifyCategory,
-  type IconMeta,
-} from "../../lib/icons";
+import { getIcons, slugifyCategory, type IconMeta } from "../../lib/icons";
 
 export function getStaticPaths() {
-  return getIcons().flatMap((icon) => [
+  const icons = getIcons();
+  const getRelatedIcons = (icon: IconMeta) => {
+    const [category] = icon.categories;
+    const tags = new Set(icon.tags.map((tag) => tag.toLowerCase()));
+
+    return icons
+      .filter(
+        (candidate) =>
+          candidate.name !== icon.name && candidate.categories[0] === category,
+      )
+      .map((candidate) => ({
+        icon: candidate,
+        score: candidate.tags.reduce(
+          (total, tag) => total + Number(tags.has(tag.toLowerCase())),
+          0,
+        ),
+      }))
+      .sort(
+        (a, b) =>
+          b.score - a.score || a.icon.name.localeCompare(b.icon.name, "en"),
+      )
+      .slice(0, 10)
+      .map(({ icon }) => icon);
+  };
+
+  return icons.flatMap((icon) => [
     {
       params: { name: icon.name },
-      props: { icon },
+      props: { icon, relatedIcons: getRelatedIcons(icon) },
     },
     ...icon.aliases
       .filter((alias) => /^\/icons\/[^/]+\/$/.test(alias))
@@ -25,19 +46,43 @@ export function getStaticPaths() {
 
 interface Props {
   icon: IconMeta;
+  relatedIcons?: IconMeta[];
   redirectTo?: string;
 }
 
-const { icon, redirectTo } = Astro.props;
+const { icon, relatedIcons = [], redirectTo } = Astro.props;
+const [categoryName] = icon.categories;
+const categorySlug = slugifyCategory(categoryName);
+const categoryHref = `/icons/category/${categorySlug}/`;
 const hex = icon.codepoint?.toString(16).toUpperCase();
-const fontHtml = `<i class="bi bi-${icon.name}" aria-hidden="true"></i>`;
-const css = `.icon-${icon.name} {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-color: currentColor;
-  mask: url("/assets/icons/${icon.name}.svg") center / contain no-repeat;
-}`;
+const fontHtml = `<i class="bi bi-${icon.name}"></i>`;
+const iconFormats = [
+  {
+    label: "SVG",
+    copyLabel: "Copy SVG",
+    value: icon.svg,
+    download: `/assets/icons/${icon.name}.svg`,
+  },
+  {
+    label: "Font HTML",
+    copyLabel: "Copy icon font HTML",
+    value: fontHtml,
+  },
+];
+const exampleButtonClasses = [
+  "btn-solid theme-primary",
+  "btn-outline theme-accent",
+  "btn-subtle theme-success",
+  "btn-text theme-danger",
+];
+const codepoints = hex
+  ? [
+      ["Unicode", `U+${hex}`],
+      ["CSS", `\\${hex}`],
+      ["JavaScript", `\\u${hex}`],
+      ["HTML", `&#x${hex};`],
+    ]
+  : [];
 ---
 
 {
@@ -48,166 +93,247 @@ const css = `.icon-${icon.name} {
       title={icon.title}
       description={`${icon.title} icon from Bootstrap Icons.`}
     >
-  <div class="2xl:container bd-gutter py-4">
-  <nav aria-label="breadcrumb">
-      <ol class="breadcrumb gap-2 my-4 p-0">
-      <li class="breadcrumb-item"><a href="/">Icons</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{icon.title}</li>
+  <div class="2xl:container bd-gutter py-6">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb icon-catalog-breadcrumb mb-5">
+      <li class="breadcrumb-item">
+        <a class="breadcrumb-link" href="/">All Icons</a>
+      </li>
+      <li class="breadcrumb-divider lh-1" aria-hidden="true">
+        <svg class="bi mx-3" width="16" height="16">
+          <use href="/bootstrap-icons.svg#chevron-compact-right" />
+        </svg>
+      </li>
+      <li class="breadcrumb-item">
+        <a class="breadcrumb-link" href={categoryHref}>{categoryName}</a>
+      </li>
+      <li class="breadcrumb-divider lh-1" aria-hidden="true">
+        <svg class="bi mx-3" width="16" height="16">
+          <use href="/bootstrap-icons.svg#chevron-compact-right" />
+        </svg>
+      </li>
+      <li class="breadcrumb-item" aria-current="page">
+        <span class="breadcrumb-link pe-none">{icon.title}</span>
+      </li>
     </ol>
   </nav>
-  <header
-    class="d-flex flex-column md:flex-row gap-4 align-items-start md:align-items-end justify-content-between pb-5"
-  >
-    <div>
-      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">Bootstrap icon</p>
-      <h1 class="fs-4xl fw-bold lh-1 mb-2">{icon.title}</h1>
-      <p class="mb-0 fg-2 font-monospace">{icon.name}.svg</p>
-    </div>
-    <a
-      class="btn-solid theme-accent"
-      href={`/assets/icons/${icon.name}.svg`}
-      download
-    >
-      Download SVG
-    </a>
+  <header>
+    <h1 class="fs-4xl fw-semibold lh-1 mb-2">{icon.title}</h1>
+    <p class="mb-0 fg-2 font-monospace">{icon.name}.svg</p>
   </header>
 
-  <div class="row lg:gx-5">
+  <hr class="my-7 border-subtle" />
+
+  <div class="row lg:gx-12 mb-12">
     <div class="lg:col-8 mb-5">
       <div
-        class="icon-demo d-flex align-items-center justify-content-center p-4 mb-5 bg-1 border rounded-5"
+        class="icon-demo d-flex align-items-center justify-content-center p-4 mb-9 bg-1 bg-50 border border-subtle rounded-7"
         role="img"
         aria-label={`${icon.title} large preview`}
         set:html={icon.svg}
       />
 
-      <section class="pt-5" aria-labelledby="examples-heading">
-        <h2 id="examples-heading">Examples</h2>
-        <div class="p-4 border rounded-5">
-          <p class="fs-2 fw-semibold">
-            <span set:html={icon.decorativeSvg} /> Heading
-          </p>
-          <p>Inline text <span set:html={icon.decorativeSvg} /></p>
-          <a href="/usage/"
-            >Example link <span set:html={icon.decorativeSvg} /></a
-          >
-          <div class="d-flex flex-wrap gap-3 mt-4">
-            <button class="btn-solid theme-accent" type="button">
-              <span set:html={icon.decorativeSvg} /> Button
-            </button>
-            <button
-              class="btn-outline theme-secondary"
-              type="button"
-              aria-label={`${icon.title} example`}
-            >
-              <span set:html={icon.decorativeSvg} />
-            </button>
+      <section class="mb-9">
+        <h3 class="mb-5">Examples</h3>
+        <div class="icon-demo-examples p-7 md:p-9 border border-subtle rounded-7">
+          <div class="d-grid gap-5">
+            <div class="fs-xl">
+              <Fragment set:html={icon.decorativeSvg} /> Heading
+            </div>
+            <div class="fs-4">
+              <Fragment set:html={icon.decorativeSvg} /> Smaller heading
+            </div>
+            <div class="fg-3">
+              Inline text <Fragment set:html={icon.decorativeSvg} />
+            </div>
+              <a class="icon-link" href="#">
+                Example link text <Fragment set:html={icon.decorativeSvg} />
+              </a>
+            <div class="d-flex flex-wrap gap-4">
+              {
+                exampleButtonClasses.map((className) => (
+                  <button class={className} type="button">
+                    <Fragment set:html={icon.decorativeSvg} /> Button
+                  </button>
+                ))
+              }
+            </div>
+            <div class="d-flex flex-wrap gap-4">
+              <button class="btn-solid theme-secondary" type="button">
+                <Fragment set:html={icon.decorativeSvg} />
+              </button>
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Icon button examples"
+              >
+                {
+                  [1, 2, 3].map((position) => (
+                    <button
+                      class="btn-outline theme-secondary"
+                      type="button"
+                      aria-label={`${icon.title} example ${position}`}
+                    >
+                      <Fragment set:html={icon.decorativeSvg} />
+                    </button>
+                  ))
+                }
+              </div>
+            </div>
+            <div class="md:col-6">
+              <div class="input-group">
+                <span class="input-group-text" id="icon-input-addon">
+                  <Fragment set:html={icon.decorativeSvg} />
+                </span>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Input group example"
+                  aria-label="Input group example"
+                  aria-describedby="icon-input-addon"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section
-        class="d-grid gap-4 pt-7"
-        aria-labelledby="code-heading"
+      <div class="d-flex justify-content-between align-items-center mb-5">
+        <h3>Related icons</h3>
+        <a class="icon-link" href={categoryHref}>
+          View all {categoryName}
+          <svg class="bi" aria-hidden="true">
+            <use href="#arrow-right-short" />
+          </svg>
+        </a>
+      </div>
+      <ul
+        class="icon-grid list-unstyled mb-0"
+        data-icon-grid
+        data-icon-size="32"
       >
-        <h2 id="code-heading">Use this icon</h2>
-        <CopyBlock label="SVG" code={icon.svg} />
-        <CopyBlock label="Icon font HTML" code={fontHtml} />
-        <CopyBlock label="CSS mask" code={css} language="css" />
-      </section>
+        {relatedIcons.map((relatedIcon) => (
+          <IconCard icon={relatedIcon} actions={false} />
+        ))}
+      </ul>
     </div>
 
-    <aside class="lg:col-4" aria-label="Icon metadata">
-      {
-        (icon.tags.length > 0 || icon.categories.length > 0) && (
-          <section class="pb-5 mb-5 border-bottom">
-            <h2 class="fs-xl">Metadata</h2>
-            {icon.categories.length > 0 && (
-              <>
-                <h3 class="mt-4 fs-sm text-uppercase fg-2">Categories</h3>
-                <div class="d-flex flex-wrap gap-2">
-                  {icon.categories.map((category) => (
+    <aside class="lg:col-4" aria-label="Icon downloads and code">
+      <div class="bg-1 p-7 md:p-9 rounded-7">
+        <section class="space-y-5">
+          <h5 class="fg-3">Use this icon</h5>
+          <div class="mb-9 border-top fs-sm">
+            {
+              iconFormats.map((format) => (
+                <div class="icon-detail-row d-grid align-items-center gap-2 py-1 border-bottom border-subtle">
+                  <span class="fw-semibold">{format.label}</span>
+                  {format.download ? (
                     <a
-                      class="chip theme-secondary text-decoration-none"
-                      href={`/icons/category/${slugifyCategory(category)}/`}
+                      class="btn-text btn-sm theme-secondary"
+                      href={format.download}
+                      download
                     >
-                      {category}
+                      Download
                     </a>
-                  ))}
+                  ) : (
+                    <span aria-hidden="true" />
+                  )}
+                  <button
+                    class="btn-text btn-sm theme-secondary"
+                    type="button"
+                    aria-label={format.copyLabel}
+                    data-icon-code-copy
+                    data-copy-value={format.value}
+                  >
+                    Copy
+                    <svg class="bi bi-sm" width="12" height="12" aria-hidden="true">
+                      <use href="#copy" />
+                    </svg>
+                  </button>
                 </div>
-              </>
-            )}
-            {icon.tags.length > 0 && (
-              <>
-                <h3 class="mt-4 fs-sm text-uppercase fg-2">Tags</h3>
-                <div class="d-flex flex-wrap gap-2">
-                  {icon.tags.map((tag) => (
-                    <a
-                      class="chip theme-secondary text-decoration-none"
-                      href={`/?q=${encodeURIComponent(tag)}`}
-                    >
-                      {tag}
-                    </a>
-                  ))}
-                </div>
-              </>
-            )}
-          </section>
-        )
-      }
-      {
-        hex && (
-          <section class="pb-5 mb-5 border-bottom">
-            <h2 class="fs-xl">Code point</h2>
-            <dl class="d-grid gap-2 mb-0">
-              <div class="d-flex justify-content-between">
-                <>
-                  <dt>Unicode</dt>
-                  <dd class="mb-0">
-                    <code>U+{hex}</code>
-                  </dd>
-                </>
+              ))
+            }
+          </div>
+        </section>
+
+        {
+          hex && (
+            <section class="space-y-5">
+              <h5 class="fg-3">Code points</h5>
+              <dl class="mb-0 border-top fs-sm">
+                {
+                  codepoints.map(([label, value]) => (
+                    <div class="icon-detail-value-row d-grid align-items-center gap-5 py-3 border-bottom border-subtle">
+                      <dt class="fw-medium">{label}</dt>
+                      <dd class="mb-0">
+                        <code class="font-monospace">{value}</code>
+                      </dd>
+                    </div>
+                  ))
+                }
+              </dl>
+            </section>
+          )
+        }
+
+        {
+          icon.tags.length > 0 && (
+            <section class="mt-9 space-y-5" aria-labelledby="tags-heading">
+              <h5 id="tags-heading" class="fg-3">Tags</h5>
+              <div class="d-flex flex-wrap gap-2">
+                {icon.tags.map((tag) => (
+                  <a
+                    class="chip theme-secondary text-decoration-none"
+                    href={`/?tag=${encodeURIComponent(tag)}`}
+                  >
+                    {tag}
+                  </a>
+                ))}
               </div>
-              <div class="d-flex justify-content-between">
-                <>
-                  <dt>CSS</dt>
-                  <dd class="mb-0">
-                    <code>\{hex}</code>
-                  </dd>
-                </>
-              </div>
-              <div class="d-flex justify-content-between">
-                <>
-                  <dt>JavaScript</dt>
-                  <dd class="mb-0">
-                    <code>\u{hex}</code>
-                  </dd>
-                </>
-              </div>
-              <div class="d-flex justify-content-between">
-                <>
-                  <dt>HTML</dt>
-                  <dd class="mb-0">
-                    <code>&amp;#x{hex};</code>
-                  </dd>
-                </>
-              </div>
-            </dl>
-          </section>
-        )
-      }
-      <section>
-        <h2 class="fs-xl">Related guides</h2>
-        <ul>
-          <li><a href="/docs/">Documentation</a></li>
-          <li><a href="/usage/">Install and usage</a></li>
-          <li><a href="/sprite/">SVG sprite</a></li>
-          <li><a href="/">Back to all icons</a></li>
-        </ul>
-      </section>
+            </section>
+          )
+        }
+      </div>
     </aside>
   </div>
   </div>
+      <script>
+        for (const button of document.querySelectorAll<HTMLButtonElement>(
+          "[data-icon-code-copy]",
+        )) {
+          button.addEventListener("click", async () => {
+            const use = button.querySelector("use");
+            const originalLabel = button.ariaLabel;
+
+            try {
+              await navigator.clipboard.writeText(
+                button.dataset.copyValue ?? "",
+              );
+              button.classList.add("fg-success");
+              button.ariaLabel = "Copied";
+              use?.setAttribute("href", "#check2");
+
+              window.setTimeout(() => {
+                button.classList.remove("fg-success");
+                button.ariaLabel = originalLabel;
+                use?.setAttribute("href", "#copy");
+              }, 2000);
+            } catch {
+              button.ariaLabel = "Could not copy";
+            }
+          });
+        }
+      </script>
     </BaseLayout>
   )
 }
+
+<style>
+  .icon-detail-row {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+
+  .icon-detail-value-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+</style>

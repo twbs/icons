@@ -1,7 +1,7 @@
 ---
 title: Plugin
 categories:
-  - UI and Keyboard
+  - UI & Keyboard
 tags:
   - addon
   - software

@@ -1,7 +1,7 @@
 ---
 title: Sort alpha up alt
 categories:
-  - Sort and filter
+  - UI & Keyboard
 tags:
   - sort
   - filter

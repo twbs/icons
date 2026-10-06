@@ -1,7 +1,7 @@
 ---
 title: Card heading
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - note
   - card

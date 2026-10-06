@@ -1,7 +1,7 @@
 ---
 title: Bootstrap
 categories:
-  - Bootstrap
+  - Brand
 tags:
   - bootstrap
 ---

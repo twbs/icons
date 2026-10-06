@@ -33,8 +33,14 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
+      - name: Install Astro dependencies
+        run: npm ci --prefix astro
+
       - name: Prepare release
         run: npm run release
+
+      - name: Build Astro docs
+        run: npm run docs-astro-build
 
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
@@ -42,7 +48,7 @@ jobs:
           allow_empty_commit: false
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./_site/
+          publish_dir: ./_site-astro/
 
   publish:
     needs: build

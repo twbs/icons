@@ -4,27 +4,19 @@ This site is an additive migration alongside the production Hugo site. Hugo
 remains the release and deployment fallback; the root package and published
 icon files are unchanged.
 
-## Local dependencies
+## Dependencies
 
-The shared UI branch and Bootstrap 6 branch do not have immutable remote
-revisions yet, so they are intentionally not recorded as dependencies. Install
-the regular Astro dependencies, then link both local checkouts without saving
-machine-specific paths:
+The Astro site installs `@twbs/bui@^0.1.1` from npm and Bootstrap 6 from the
+`v6-dev` branch on GitHub:
 
 ```sh
 cd /path/to/bootstrap-icons/astro
-npm install
-npm link --no-save /path/to/docs-ui /path/to/bootstrap
+npm ci
 ```
 
-Packed tarballs installed with `npm install --no-save --package-lock=false`
-work as well. Never commit the generated links or an absolute `file:` path.
-
-After both repositories have remotes, replace the temporary links with
-immutable dependencies such as
-`github:twbs/docs-ui#<full-commit>` and
-`github:twbs/bootstrap#<full-commit>` (or immutable release tags), then commit
-the updated lockfile.
+For local iteration across repositories, use `npm link --no-save` or install a
+packed tarball without updating the lockfile. Never commit generated links or
+an absolute `file:` path.
 
 ## Commands
 
@@ -46,9 +38,19 @@ sets all come from the icon front matter through `src/lib/icons.ts`. Builds
 report elapsed time and enforce a 60-second budget; override it with
 `ASTRO_BUILD_BUDGET_MS` when diagnosing slower machines.
 
-The documentation entry point is `/docs/`. It directs readers to the detailed
-installation and SVG guidance at `/usage/`, sprite guidance at `/sprite/`, and
-icon font guidance at `/font/` without duplicating those pages.
+### Icon taxonomy
+
+Each icon must have exactly one category from the canonical list in
+`src/lib/icons.ts` and at least one tag. Categories are broad browsing
+destinations; tags describe narrower subjects, visual variants, synonyms, and
+cross-cutting concepts such as `love`, `sort`, or `filter`. The Astro build
+rejects missing or unknown categories, missing tags, duplicate tags, and
+category labels that differ only in spelling or capitalization.
+
+The main documentation lives in the repository's root `README.md`; `/docs/`
+redirects there for compatibility. Detailed installation and SVG guidance
+remains at `/usage/`, sprite guidance at `/sprite/`, and icon font guidance at
+`/font/`.
 
 For the complete local Stage 5 audit, run:
 
@@ -68,13 +70,9 @@ request is emitted when it is unset.
 
 ## Production cutover
 
-CI and deployment remain on Hugo until immutable shared dependencies exist.
-At cutover:
+CI builds and validates both Hugo and Astro, compares their deploy-critical
+routes and assets, and checks the release archive. Release deployment publishes
+`_site-astro/`.
 
-1. Add and lock those immutable dependencies in this package.
-2. Run `npm run docs-astro-test` beside the existing Hugo test in CI.
-3. Run `npm run docs-astro-compare` and the existing external link check
-   against `_site-astro/`.
-4. Change the deploy job's `publish_dir` from `./_site/` to `./_site-astro/`.
-
-Do not remove Hugo until the Astro deploy has been verified in production.
+Hugo remains the fallback until the Astro deployment has been verified in
+production. Do not remove it as part of this migration.

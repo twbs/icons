@@ -13,6 +13,7 @@ interface Props {
   firstPagePath?: string;
   categorySlug?: string;
   emptyMessage?: string;
+  paginate?: boolean;
 }
 
 const {
@@ -26,8 +27,10 @@ const {
   firstPagePath = "/",
   categorySlug,
   emptyMessage = "Try a different name, tag, or category.",
+  paginate = true,
 } = Astro.props;
-const pageCount = getPageCount(totalCount);
+const pageSize = paginate ? CATALOG_PAGE_SIZE : totalCount;
+const pageCount = paginate ? getPageCount(totalCount) : 1;
 const CatalogRoot = headingHref ? "div" : "section";
 const pagePath = (target: number) =>
   target === 1 ? firstPagePath : `${basePath}page/${target}/`;
@@ -40,45 +43,51 @@ const pagePath = (target: number) =>
   data-pagefind-ignore
   data-icon-catalog
   data-index-url="/icons/index.json"
-  data-page-size={CATALOG_PAGE_SIZE}
+  data-page-size={pageSize}
   data-page={page}
   data-page-count={pageCount}
   data-base-path={basePath}
   data-first-page-path={firstPagePath}
   data-category-slug={categorySlug}
 >
-  <div class="row align-items-end g-4 mb-5">
-    <div class="col-12 md:col-auto me-auto">
-      {
-        headingHref ? (
-          <div class="icon-catalog-heading">
-            <nav aria-label="Breadcrumb">
-              <ol class="icon-catalog-breadcrumb breadcrumb mb-0 p-0">
-                <li class="breadcrumb-item">
-                  <a class="breadcrumb-link" href={headingHref}>
-                    {headingLinkText}
-                  </a>
-                </li>
-                <li class="breadcrumb-divider" aria-hidden="true">
-                  &gt;
-                </li>
-                <li class="breadcrumb-item visually-hidden" aria-current="page">
+  <div class="d-flex flex-column md:flex-row md:align-items-center gap-4 mb-5">
+    <nav aria-label="Breadcrumb" class="md:me-auto">
+      <ol class="breadcrumb icon-catalog-breadcrumb">
+        <li
+          class="breadcrumb-item"
+          aria-current={headingHref ? undefined : "page"}
+        >
+          {
+            headingHref ? (
+              <a class="breadcrumb-link" href={headingHref}>
+                {headingLinkText}
+              </a>
+            ) : (
+              <span id="catalog-heading" class="breadcrumb-link">
+                {heading}
+              </span>
+            )
+          }
+        </li>
+        {
+          headingHref && (
+            <>
+              <li class="breadcrumb-divider lh-1" aria-hidden="true">
+                <svg class="bi mx-3" width="16" height="16">
+                  <use href="/bootstrap-icons.svg#chevron-compact-right" />
+                </svg>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                <span id="catalog-heading" class="breadcrumb-link">
                   {heading}
-                </li>
-              </ol>
-            </nav>
-            <h1 id="catalog-heading" class="mb-0 fs-3">
-              {heading}
-            </h1>
-          </div>
-        ) : (
-          <h2 id="catalog-heading" class="mb-0 fs-3">
-            {heading}
-          </h2>
-        )
-      }
-    </div>
-    <div class="icon-catalog-toolbar col-12 md:col-8 lg:col-6">
+                </span>
+              </li>
+            </>
+          )
+        }
+      </ol>
+    </nav>
+    <div class="d-flex gap-3 w-fit">
       <div
         class="icon-size-group btn-group btn-group-divider"
         role="group"
@@ -108,7 +117,7 @@ const pagePath = (target: number) =>
       </div>
       <form class="icon-catalog-filter" role="search" data-icon-search>
         <label class="visually-hidden" for="icon-filter">Filter icons</label>
-        <label class="form-control form-adorn">
+        <label class="form-control form-adorn border-subtle pe-3" style="min-width: 264px">
           <span class="form-adorn-icon" aria-hidden="true">
             <svg class="bi" width="16" height="16">
               <use href="#search"></use>
@@ -130,11 +139,15 @@ const pagePath = (target: number) =>
   </div>
 
   <ul
-    class="row row-cols-2 sm:row-cols-3 md:row-cols-4 lg:row-cols-5 xl:row-cols-6 g-4 list-unstyled"
+    class="icon-grid list-unstyled"
     data-icon-grid
     data-icon-size="32"
   >
-    {icons.map((icon) => <IconCard icon={icon} />)}
+    {
+      icons.map((icon) => (
+        <IconCard icon={icon} />
+      ))
+    }
   </ul>
 
   <div class="p-9 text-center bg-1 rounded-5" hidden data-empty-state>
@@ -146,66 +159,38 @@ const pagePath = (target: number) =>
     >
   </div>
 
-  <nav
-    class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-6"
-    aria-label="Icon catalog pages"
-    data-catalog-pagination
-  >
-    <p class="fs-sm fg-3 mb-0" data-page-status>
-      Page {page.toLocaleString()} of {pageCount.toLocaleString()}
-    </p>
-    <div class="d-flex gap-2">
-      {
-        page > 1 && (
-          <a
-            class="btn-outline theme-secondary"
-            href={pagePath(page - 1)}
-            rel="prev"
-          >
-            Previous
-          </a>
-        )
-      }
-      {
-        page < pageCount && (
-          <a
-            class="btn-solid theme-primary"
-            href={pagePath(page + 1)}
-            rel="next"
-            data-load-more
-          >
-            Load more
-          </a>
-        )
-      }
-    </div>
-  </nav>
+  {
+    paginate && (
+      <nav
+        class="d-grid align-items-center gap-3 mt-7 mb-12"
+        style="grid-template-columns: repeat(3, minmax(0, 1fr));"
+        aria-label="Icon catalog pages"
+        data-catalog-pagination
+      >
+        <p class="fs-sm fg-3 mb-0" data-page-status>
+          Page {page.toLocaleString()} of {pageCount.toLocaleString()}
+        </p>
+        <div class="d-flex justify-content-center">
+          {page < pageCount && (
+            <a
+              class="btn-solid btn-styled theme-primary w-100"
+              href={pagePath(page + 1)}
+              rel="next"
+              data-load-more
+            >
+              Load more
+            </a>
+          )}
+        </div>
+        <span aria-hidden="true" />
+      </nav>
+    )
+  }
 
   <p class="visually-hidden" aria-live="polite" data-catalog-status></p>
 
   <template data-icon-card-template>
-    <li class="col" data-icon-card>
-      <div class="h-100 position-relative">
-        <button
-          class="icon-card-copy btn-text theme-secondary btn-sm position-absolute top-0 end-0 m-2 z-2 bg-body"
-          type="button"
-          data-copy-icon
-        >
-          <svg class="bi" aria-hidden="true"><use href="#copy"></use></svg>
-        </button>
-        <a class="d-flex flex-column h-100 fg-body text-decoration-none">
-          <span class="ratio ratio-16x9 bg-1 rounded-5 overflow-hidden">
-            <span
-              class="d-flex align-items-center justify-content-center h-100 p-4"
-            >
-              <img width="32" height="32" alt="" loading="lazy" />
-            </span>
-          </span>
-          <div class="fs-xs text-break text-center mt-3 px-1" data-icon-label>
-          </div>
-        </a>
-      </div>
-    </li>
+    <IconCard template />
   </template>
 </CatalogRoot>
 
@@ -214,7 +199,53 @@ const pagePath = (target: number) =>
     n: string;
     s: string;
     c: string[];
+    t: string[];
   }
+
+  interface CopyFeedback {
+    timeoutId: number;
+  }
+
+  const COPY_FEEDBACK_DURATION = 2000;
+  const COPY_SUCCESS_CLASS = "fg-success";
+  const copyAttempts = new WeakMap<HTMLButtonElement, number>();
+  const copyFeedback = new WeakMap<HTMLButtonElement, CopyFeedback>();
+
+  const getCopyFormat = (button: HTMLButtonElement) =>
+    button.dataset.copyFormat === "font" ? "font" : "svg";
+  const getCopyLabel = (button: HTMLButtonElement) =>
+    getCopyFormat(button) === "font" ? "icon font HTML" : "SVG";
+  const getCopyIcon = (button: HTMLButtonElement) =>
+    getCopyFormat(button) === "font"
+      ? "/bootstrap-icons.svg#type"
+      : "#copy";
+
+  const resetCopyFeedback = (button: HTMLButtonElement, name: string) => {
+    const feedback = copyFeedback.get(button);
+    if (feedback) window.clearTimeout(feedback.timeoutId);
+    button.querySelector("use")?.setAttribute("href", getCopyIcon(button));
+    button.classList.remove(COPY_SUCCESS_CLASS);
+    button.title = `Copy ${name} ${getCopyLabel(button)}`;
+    button.ariaLabel = `Copy ${name} ${getCopyLabel(button)}`;
+    copyFeedback.delete(button);
+  };
+
+  const showCopyFeedback = (button: HTMLButtonElement, name: string) => {
+    resetCopyFeedback(button, name);
+    button.querySelector("use")?.setAttribute("href", "#check2");
+    button.classList.add(COPY_SUCCESS_CLASS);
+    button.title = `${name} ${getCopyLabel(button)} copied`;
+    button.ariaLabel = `${name} ${getCopyLabel(button)} copied`;
+
+    const feedback = {
+      timeoutId: window.setTimeout(() => {
+        if (copyFeedback.get(button) === feedback) {
+          resetCopyFeedback(button, name);
+        }
+      }, COPY_FEEDBACK_DURATION),
+    };
+    copyFeedback.set(button, feedback);
+  };
 
   const catalog = document.querySelector<HTMLElement>("[data-icon-catalog]");
   type CatalogWindow = Window & {
@@ -268,6 +299,7 @@ const pagePath = (target: number) =>
   let scopedItems: CatalogItem[] | undefined;
   let results: CatalogItem[] | undefined;
   let query = "";
+  let tag = "";
   let indexPromise: Promise<CatalogItem[]> | undefined;
 
   const setIconSize = (size: string, persist = true) => {
@@ -302,10 +334,16 @@ const pagePath = (target: number) =>
     );
   }
 
-  const syncCategoryLinks = (query: string) => {
+  const syncCategoryLinks = (query: string, tag: string) => {
     for (const link of categoryLinks) {
       const url = new URL(link.href);
-      query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
+      url.searchParams.delete("q");
+      url.searchParams.delete("tag");
+      if (tag) {
+        url.searchParams.set("tag", tag);
+      } else if (query) {
+        url.searchParams.set("q", query);
+      }
       link.href = `${url.pathname}${url.search}${url.hash}`;
     }
   };
@@ -340,29 +378,60 @@ const pagePath = (target: number) =>
     const fragment = template?.content.cloneNode(true) as
       DocumentFragment | undefined;
     const card = fragment?.querySelector<HTMLElement>("[data-icon-card]");
-    const link = fragment?.querySelector<HTMLAnchorElement>("a");
+    const previewLink = fragment?.querySelector<HTMLAnchorElement>(
+      "[data-icon-preview-link]",
+    );
     const image = fragment?.querySelector<HTMLImageElement>("img");
-    const label = fragment?.querySelector<HTMLElement>("[data-icon-label]");
-    const button =
-      fragment?.querySelector<HTMLButtonElement>("[data-copy-icon]");
-    if (!fragment || !card || !link || !image || !label || !button) {
+    const labelLink =
+      fragment?.querySelector<HTMLAnchorElement>("[data-icon-label]");
+    const actions =
+      fragment?.querySelector<HTMLElement>("[data-icon-actions]");
+    const download =
+      fragment?.querySelector<HTMLAnchorElement>("[data-download-icon]");
+    const copyButtons = [
+      ...(fragment?.querySelectorAll<HTMLButtonElement>("[data-copy-icon]") ??
+        []),
+    ];
+    if (
+      !fragment ||
+      !card ||
+      !previewLink ||
+      !image ||
+      !labelLink ||
+      !actions ||
+      !download ||
+      copyButtons.length !== 2
+    ) {
       return fragment;
     }
 
     card.dataset.iconName = item.n;
-    link.href = `/icons/${item.n}/`;
+    previewLink.href = `/icons/${item.n}/`;
+    previewLink.ariaLabel = `View ${item.n} icon`;
     image.src = `/assets/icons/${item.n}.svg`;
-    label.textContent = item.n;
-    button.dataset.copyIcon = item.n;
-    button.title = `Copy ${item.n} SVG`;
-    button.ariaLabel = `Copy ${item.n} SVG`;
+    labelLink.href = `/icons/${item.n}/`;
+    labelLink.textContent = item.n;
+    actions.ariaLabel = `${item.n} icon actions`;
+    download.href = `/assets/icons/${item.n}.svg`;
+    download.title = `Download ${item.n} SVG`;
+    download.ariaLabel = `Download ${item.n} SVG`;
+    for (const button of copyButtons) {
+      button.dataset.copyIcon = item.n;
+      resetCopyFeedback(button, item.n);
+    }
     return fragment;
   };
 
   const updateUrl = (mode: "push" | "replace") => {
     const url = new URL(window.location.href);
-    query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
-    currentPage > (query ? 1 : basePage)
+    url.searchParams.delete("q");
+    url.searchParams.delete("tag");
+    if (tag) {
+      url.searchParams.set("tag", tag);
+    } else if (query) {
+      url.searchParams.set("q", query);
+    }
+    currentPage > (query || tag ? 1 : basePage)
       ? url.searchParams.set("page", String(currentPage))
       : url.searchParams.delete("page");
     history[`${mode}State`](null, "", url);
@@ -394,17 +463,24 @@ const pagePath = (target: number) =>
     }
   };
 
-  const search = async (value: string, updateHistory = true) => {
+  const search = async (
+    value: string,
+    updateHistory = true,
+    tagValue = "",
+  ) => {
     query = value.trim();
+    tag = tagValue.trim().toLowerCase();
     currentPage = 1;
     const items = await loadIndex();
     const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
     results =
-      terms.length === 0
+      tag
+        ? items.filter((item) => item.t.includes(tag))
+        : terms.length === 0
         ? items
         : items.filter((item) => terms.every((term) => item.s.includes(term)));
     render();
-    syncCategoryLinks(query);
+    syncCategoryLinks(query, tag);
     if (updateHistory) updateUrl("replace");
   };
 
@@ -451,19 +527,30 @@ const pagePath = (target: number) =>
       const name = button?.dataset.copyIcon;
       if (!button || !name) return;
 
+      const attempt = (copyAttempts.get(button) ?? 0) + 1;
+      copyAttempts.set(button, attempt);
+
       try {
-        const response = await fetch(`/assets/icons/${name}.svg`);
-        if (!response.ok) throw new Error("Icon request failed.");
-        await navigator.clipboard.writeText(await response.text());
-        button.title = "Copied!";
-        button.ariaLabel = `${name} SVG copied`;
-        if (status) status.textContent = `${name} SVG copied to clipboard.`;
-        window.setTimeout(() => {
-          button.title = `Copy ${name} SVG`;
-          button.ariaLabel = `Copy ${name} SVG`;
-        }, 2000);
+        let copyText: string;
+        if (getCopyFormat(button) === "font") {
+          copyText = `<i class="bi bi-${name}"></i>`;
+        } else {
+          const response = await fetch(`/assets/icons/${name}.svg`);
+          if (!response.ok) throw new Error("Icon request failed.");
+          copyText = await response.text();
+        }
+        await navigator.clipboard.writeText(copyText);
+        if (copyAttempts.get(button) !== attempt) return;
+        showCopyFeedback(button, name);
+        if (status) {
+          status.textContent = `${name} ${getCopyLabel(button)} copied to clipboard.`;
+        }
       } catch {
-        if (status) status.textContent = `Could not copy ${name} SVG.`;
+        if (copyAttempts.get(button) !== attempt) return;
+        resetCopyFeedback(button, name);
+        if (status) {
+          status.textContent = `Could not copy ${name} ${getCopyLabel(button)}.`;
+        }
       }
     },
     { signal },
@@ -492,10 +579,12 @@ const pagePath = (target: number) =>
     "popstate",
     () => {
       const params = new URLSearchParams(window.location.search);
-      const value = params.get("q") ?? "";
-      currentPage = Number(params.get("page")) || (value ? 1 : basePage);
+      const tagValue = params.get("tag") ?? "";
+      const value = tagValue || params.get("q") || "";
+      currentPage =
+        Number(params.get("page")) || (value ? 1 : basePage);
       if (input) input.value = value;
-      void search(value, false).then(() => {
+      void search(value, false, tagValue).then(() => {
         currentPage = Number(params.get("page")) || (value ? 1 : basePage);
         render();
       });
@@ -504,12 +593,13 @@ const pagePath = (target: number) =>
   );
 
   const params = new URLSearchParams(window.location.search);
-  const initialQuery = params.get("q") ?? "";
+  const initialTag = params.get("tag") ?? "";
+  const initialQuery = initialTag || params.get("q") || "";
   const requestedPage = Number(params.get("page"));
   if (input && (initialQuery || requestedPage > basePage)) {
     input.value = initialQuery;
     currentPage = requestedPage || (initialQuery ? 1 : basePage);
-    void search(initialQuery, false).then(() => {
+    void search(initialQuery, false, initialTag).then(() => {
       currentPage = requestedPage || (initialQuery ? 1 : basePage);
       render();
       document.querySelector("#icons")?.scrollIntoView();

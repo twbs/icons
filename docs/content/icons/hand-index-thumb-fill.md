@@ -1,7 +1,7 @@
 ---
 title: Hand index thumb fill
 categories:
-  - Hands
+  - People
 tags:
   - hand
   - pointer

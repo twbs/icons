@@ -1,7 +1,7 @@
 ---
 title: File ppt fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - slides
   - presentation

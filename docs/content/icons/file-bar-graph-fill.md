@@ -1,7 +1,7 @@
 ---
 title: File bar graph fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

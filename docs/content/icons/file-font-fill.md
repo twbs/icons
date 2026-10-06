@@ -1,7 +1,7 @@
 ---
 title: File font fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - ttf
   - otf

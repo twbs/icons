@@ -1,7 +1,7 @@
 ---
 title: File earmark ruled
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

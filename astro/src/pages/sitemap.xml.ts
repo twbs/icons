@@ -15,13 +15,7 @@ export const GET: APIRoute = ({ site }) => {
       { length: getPageCount(icons.length) - 1 },
       (_, index) => `/icons/page/${index + 2}/`,
     ),
-    ...categories.flatMap((category) => [
-      `/icons/category/${category.slug}/`,
-      ...Array.from(
-        { length: getPageCount(category.count) - 1 },
-        (_, index) => `/icons/category/${category.slug}/page/${index + 2}/`,
-      ),
-    ]),
+    ...categories.map((category) => `/icons/category/${category.slug}/`),
     ...icons.map((icon) => `/icons/${icon.name}/`),
   ];
   const urls = paths

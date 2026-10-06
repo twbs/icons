@@ -1,7 +1,7 @@
 ---
 title: Calendar2 minus fill
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - date
   - time

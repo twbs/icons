@@ -1,7 +1,7 @@
 ---
 title: Bookmark dash
 categories:
-  - Miscellaneous
+  - Files & Folders
 tags:
   - reading
   - book

@@ -1,7 +1,7 @@
 ---
 title: Filter
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - sort
 ---

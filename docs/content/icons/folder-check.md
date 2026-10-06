@@ -1,7 +1,7 @@
 ---
 title: Folder check
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - directory
   - check

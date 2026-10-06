@@ -1,7 +1,7 @@
 ---
 title: Bootstrap Reboot
 categories:
-  - Bootstrap
+  - Brand
 tags:
   - bootstrap
 ---

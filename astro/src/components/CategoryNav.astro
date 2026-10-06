@@ -1,5 +1,6 @@
 ---
 import IconSidebarControls from "./IconSidebarControls.astro";
+import SidebarShell from "./SidebarShell.astro";
 import type { IconCategory } from "../lib/icons";
 
 interface Props {
@@ -19,108 +20,40 @@ const badgeClass = (active: boolean) =>
   `badge rounded-pill ${active ? "bg-body fg-body" : "bg-2 fg-2"}`;
 ---
 
-<aside class="bd-sidebar" aria-label="Icon catalog" data-icon-sidebar>
-  <dialog
-    class="lg:drawer drawer-bottom"
-    tabindex="-1"
-    id="bdSidebar"
-    aria-labelledby="bdSidebarDrawerLabel"
-  >
-    <div class="drawer-header border-bottom">
-      <h5 class="drawer-title" id="bdSidebarDrawerLabel">Browse icons</h5>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="drawer"
-        data-bs-target="#bdSidebar"
-        aria-label="Close"></button>
-    </div>
-
-    <div class="drawer-body">
-      <div class="icon-sidebar-content w-100">
-        <IconSidebarControls />
-        <hr class="mt-4 mb-6">
-        <nav class="nav flex-column gap-1" aria-label="Icon categories">
-          <a
-            class={linkClass(allActive)}
-            href="/#icons"
-            aria-current={allActive ? "page" : undefined}
-            data-category-link
-          >
-            <span>All Icons</span>
-            <span class={badgeClass(allActive)}>
-              {totalCount.toLocaleString()}
-            </span>
-          </a>
-          {
-            categories.map((category) => {
-              const active = category.slug === activeSlug;
-              return (
-                <a
-                  class={linkClass(active)}
-                  href={`/icons/category/${category.slug}/#icons`}
-                  aria-current={active ? "page" : undefined}
-                  data-category-link
-                >
-                  <span>{category.name}</span>
-                  <span class={badgeClass(active)}>
-                    {category.count.toLocaleString()}
-                  </span>
-                </a>
-              );
-            })
-          }
-        </nav>
-      </div>
-    </div>
-  </dialog>
-</aside>
-
-<script>
-  import { Drawer } from "bootstrap";
-
-  const sidebar = document.querySelector<HTMLElement>("[data-icon-sidebar]");
-  const activeLink = sidebar?.querySelector<HTMLElement>(".active");
-
-  if (sidebar && activeLink) {
-    const sidebarHeight = sidebar.clientHeight;
-    const activeLinkTop = activeLink.offsetTop;
-    const activeLinkHeight = activeLink.clientHeight;
-    const viewportTop = activeLinkTop;
-    const viewportBottom = viewportTop - sidebarHeight + activeLinkHeight;
-
-    if (sidebar.scrollTop > viewportTop || sidebar.scrollTop < viewportBottom) {
-      sidebar.scrollTop =
-        viewportTop - sidebarHeight / 2 + activeLinkHeight / 2;
-    }
-  }
-
-  const drawer = document.querySelector<HTMLDialogElement>("#bdSidebar");
-
-  drawer?.addEventListener("show.bs.drawer", () => {
-    requestAnimationFrame(() => {
-      const drawerBody = drawer.querySelector<HTMLElement>(".drawer-body");
-      const drawerActiveLink = drawer.querySelector<HTMLElement>(
-        "[data-category-link].active",
-      );
-
-      if (!drawerBody || !drawerActiveLink) return;
-
-      const activeLinkTop =
-        drawerActiveLink.getBoundingClientRect().top -
-        drawerBody.getBoundingClientRect().top +
-        drawerBody.scrollTop;
-
-      drawerBody.scrollTop =
-        activeLinkTop -
-        drawerBody.clientHeight / 2 +
-        drawerActiveLink.clientHeight / 2;
-    });
-  });
-
-  drawer?.addEventListener("click", (event) => {
-    if ((event.target as Element).closest("[data-category-link]")) {
-      Drawer.getInstance(drawer)?.hide();
-    }
-  });
-</script>
+<SidebarShell ariaLabel="Icon catalog" drawerLabel="Browse icons">
+  <div class="icon-sidebar-content">
+    <IconSidebarControls />
+    <hr class="my-6 border-subtle">
+    <nav class="nav flex-column gap-1" aria-label="Icon categories">
+      <a
+        class={linkClass(allActive)}
+        href="/"
+        aria-current={allActive ? "page" : undefined}
+        data-category-link
+      >
+        <span>All Icons</span>
+        <span class={badgeClass(allActive)}>
+          {totalCount.toLocaleString()}
+        </span>
+      </a>
+      {
+        categories.map((category) => {
+          const active = category.slug === activeSlug;
+          return (
+            <a
+              class={linkClass(active)}
+              href={`/icons/category/${category.slug}/`}
+              aria-current={active ? "page" : undefined}
+              data-category-link
+            >
+              <span>{category.name}</span>
+              <span class={badgeClass(active)}>
+                {category.count.toLocaleString()}
+              </span>
+            </a>
+          );
+        })
+      }
+    </nav>
+  </div>
+</SidebarShell>

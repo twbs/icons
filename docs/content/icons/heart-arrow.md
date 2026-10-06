@@ -1,9 +1,10 @@
 ---
 title: Heart arrow
 categories:
-  - Love
+  - Emoji
 tags:
   - romance
   - cupid
   - valentine
+  - love
 ---

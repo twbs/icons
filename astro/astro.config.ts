@@ -38,7 +38,7 @@ export default defineConfig({
   },
   vite: {
     optimizeDeps: {
-      exclude: ["@twbs/docs-ui"],
+      exclude: ["@twbs/bui"],
     },
     resolve: {
       dedupe: ["bootstrap"],

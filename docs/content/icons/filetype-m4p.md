@@ -1,7 +1,7 @@
 ---
 title: Filetype m4p
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - "file type"

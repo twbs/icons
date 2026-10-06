@@ -1,31 +1,38 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import type { TocEntry } from "@twbs/bui/components/TableOfContents";
 import CopyBlock from "../components/CopyBlock.astro";
+import HeadingAnchor from "../components/HeadingAnchor.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
 
 const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor" aria-hidden="true">
   <use href="/bootstrap-icons.svg#heart-fill"></use>
 </svg>`;
+const toc: TocEntry[] = [
+  { slug: "use-the-sprite", text: "Use the sprite", children: [] },
+  { slug: "cross-origin", text: "Cross-origin use", children: [] },
+];
 ---
 
-<BaseLayout
+<DocsLayout
   title="Bootstrap Icons SVG sprite"
   description="Use every Bootstrap Icon from a single SVG sprite."
+  eyebrow="SVG sprite"
+  {toc}
 >
-  <article class="2xl:container bd-gutter py-5">
-    <header class="xl:col-9 py-5 mb-7 border-bottom">
-      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">SVG sprite</p>
-      <h1 class="fs-4xl fw-bold lh-1 mb-3">One asset, every icon</h1>
-      <p class="fs-lg fw-light fg-2">
-        Reference an icon by filename from the bundled sprite and style it with
-        <code>currentColor</code>.
-      </p>
+    <p>
+      Reference an icon by filename from the bundled sprite and style it with
+      <code>currentColor</code>.
+    </p>
+    <p>
       <a class="btn-solid theme-accent" href="/bootstrap-icons.svg" download
         >Download sprite</a
       >
-    </header>
+    </p>
 
-    <section class="xl:col-10 mb-9">
-      <h2>Use the sprite</h2>
+    <section class="mb-9">
+      <HeadingAnchor id="use-the-sprite" text="Use the sprite">
+        Use the sprite
+      </HeadingAnchor>
       <p>
         Copy <code>bootstrap-icons.svg</code> into your site, then use the icon filename
         as the fragment identifier.
@@ -48,8 +55,10 @@ const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor
       <CopyBlock label="Sprite HTML" code={spriteExample} />
     </section>
 
-    <section class="xl:col-10 mb-9">
-      <h2>Cross-origin use</h2>
+    <section class="mb-9">
+      <HeadingAnchor id="cross-origin" text="Cross-origin use">
+        Cross-origin use
+      </HeadingAnchor>
       <p>
         Serve the sprite from the same origin as the page. Browser security
         restrictions can prevent external <code>&lt;use&gt;</code> references across
@@ -61,5 +70,4 @@ const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor
       </p>
       <a href="/usage/">See all usage options</a>
     </section>
-  </article>
-</BaseLayout>
+</DocsLayout>

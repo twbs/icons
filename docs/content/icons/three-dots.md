@@ -1,7 +1,7 @@
 ---
 title: Three dots
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - meatballs
   - more

@@ -1,10 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CategoryNav from "../components/CategoryNav.astro";
 import CodeCopy from "../components/CodeCopy.astro";
 import FigmaLogo from "../components/FigmaLogo.astro";
 import HeroSubnav from "../components/HeroSubnav.astro";
-import IconCatalog from "../components/IconCatalog.astro";
+import IconCatalogPage from "../components/IconCatalogPage.astro";
 import {
   getCategories,
   getIcons,
@@ -63,16 +62,10 @@ const { version } = getPackageMeta();
     </div>
   </section>
 
-  <div class="2xl:container bd-gutter py-8 lg:py-9">
-    <div class="icon-catalog-layout">
-      <CategoryNav categories={categories} totalCount={icons.length} />
-      <div class="icon-catalog-main">
-        <IconCatalog
-          icons={initialIcons}
-          heading="All Icons"
-          totalCount={icons.length}
-        />
-      </div>
-    </div>
-  </div>
+  <IconCatalogPage
+    {categories}
+    totalCount={icons.length}
+    icons={initialIcons}
+    heading="All Icons"
+  />
 </BaseLayout>

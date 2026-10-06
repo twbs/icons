@@ -1,10 +1,10 @@
 ---
 title: Hand thumbs down
 categories:
-  - Hands
+  - People
 tags:
   - hand
   - pointer
   - thumbs-down
-  - "-1"
+  - -1
 ---

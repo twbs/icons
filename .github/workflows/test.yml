@@ -36,16 +36,25 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
+      - name: Install Astro dependencies
+        run: npm ci --prefix astro
+
       - name: Build the icons
         run: npm run icons
 
       - name: Build and test docs
         run: npm run docs-test
 
+      - name: Build and test Astro docs
+        run: npm run docs-astro-test
+
+      - name: Compare docs and release artifacts
+        run: npm run docs-astro-compare && npm run docs-astro-release-check
+
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@36a0bfbfecd5e237e8f8531537a693616c505faf # v2.4
         with:
-          paths: _site
+          paths: _site-astro
           recurse: true
           verbosity: error
           skip: "^(?!http://localhost)"

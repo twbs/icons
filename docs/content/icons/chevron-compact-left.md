@@ -1,7 +1,7 @@
 ---
 title: Chevron compact left
 categories:
-  - Chevrons
+  - Arrows
 tags:
   - chevron
 ---

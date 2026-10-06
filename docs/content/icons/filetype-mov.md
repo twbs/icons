@@ -1,7 +1,7 @@
 ---
 title: Filetype mov
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - "file type"

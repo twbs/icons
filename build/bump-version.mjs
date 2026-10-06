@@ -56,7 +56,7 @@ function bumpNpmVersion(newVersion) {
     return
   }
 
-  execFile('npm', ['version', newVersion, '--no-git-tag'], { shell: true }, (error) => {
+  execFile('npm', ['version', newVersion, '--no-git-tag-version'], { shell: true }, (error) => {
     if (error) {
       console.error(error)
       process.exit(1)

@@ -1,7 +1,7 @@
 ---
 title: Menu button wide
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - dropdown
   - menu

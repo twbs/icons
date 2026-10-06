@@ -1,7 +1,7 @@
 ---
 title: File bar graph
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

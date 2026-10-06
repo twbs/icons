@@ -1,7 +1,7 @@
 ---
 title: X lg
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - x
   - delete

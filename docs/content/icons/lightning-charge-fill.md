@@ -1,7 +1,7 @@
 ---
 title: Lightning charge fill
 categories:
-  - Miscellaneous
+  - Weather
 tags:
   - weather
   - storm

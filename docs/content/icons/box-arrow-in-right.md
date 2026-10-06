@@ -1,10 +1,11 @@
 ---
 title: Box arrow in right
 categories:
-  - Box arrows
+  - Arrows
 tags:
   - arrow
   - login
   - signin
   - enter
+  - box arrow
 ---

@@ -1,7 +1,7 @@
 ---
 title: File earmark richtext
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - text
   - doc

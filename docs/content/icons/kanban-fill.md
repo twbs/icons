@@ -1,7 +1,7 @@
 ---
 title: Kanban fill
 categories:
-  - Miscellaneous
+  - Layout
 tags:
   - board
   - project-management

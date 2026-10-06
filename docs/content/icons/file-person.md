@@ -1,7 +1,7 @@
 ---
 title: File person
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

@@ -1,7 +1,7 @@
 ---
 title: Folder x
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - directory
   - remove

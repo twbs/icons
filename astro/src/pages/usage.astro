@@ -1,44 +1,36 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import type { TocEntry } from "@twbs/bui/components/TableOfContents";
 import CopyBlock from "../components/CopyBlock.astro";
+import HeadingAnchor from "../components/HeadingAnchor.astro";
 import { getPackageMeta } from "../lib/icons";
+import DocsLayout from "../layouts/DocsLayout.astro";
 
 const { version } = getPackageMeta();
 const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16" aria-hidden="true">
   <path d="M4 1c2 0 3 1.5 4 3 1-1.5 2-3 4-3 2.5 0 4 2 4 4.5 0 3-2.5 5.5-8 9.5C2.5 11 0 8.5 0 5.5 0 3 1.5 1 4 1"/>
 </svg>`;
+const toc: TocEntry[] = [
+  { slug: "install", text: "Install", children: [] },
+  { slug: "usage", text: "SVG usage", children: [] },
+  { slug: "icon-font", text: "Icon font", children: [] },
+  { slug: "styling", text: "Styling", children: [] },
+  { slug: "accessibility", text: "Accessibility", children: [] },
+];
 ---
 
-<BaseLayout
+<DocsLayout
   title="Install and use Bootstrap Icons"
   description="Install Bootstrap Icons and use SVGs, icon fonts, Sass, or CSS in any project."
+  eyebrow="Documentation"
+  {toc}
 >
-  <article class="2xl:container bd-gutter py-5">
-    <header class="xl:col-9 py-5 mb-7 border-bottom">
-      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">Documentation</p>
-      <h1 class="fs-4xl fw-bold lh-1 mb-3">
-        Install and use Bootstrap Icons
-      </h1>
-      <p class="fs-lg fw-light fg-2">
-        Bootstrap Icons are SVGs, so they work in any project—with or without
-        Bootstrap.
-      </p>
-      <nav class="d-flex flex-wrap gap-3 mt-5" aria-label="On this page">
-        <a href="#install">Install</a>
-        <a href="#usage">Usage</a>
-        <a href="#icon-font">Icon font</a>
-        <a href="#styling">Styling</a>
-        <a href="#accessibility">Accessibility</a>
-      </nav>
-    </header>
-
-    <section id="install" class="xl:col-10 mb-9">
-      <h2>Install</h2>
+  <section class="mb-9">
+      <HeadingAnchor id="install" text="Install">Install</HeadingAnchor>
       <p>
         Install the full package—including individual SVGs, the sprite, and icon
         fonts—or download the latest release.
       </p>
-      <div class="d-grid md:grid-cols-3 gap-4 mt-5">
+      <div class="docs-install-grid d-grid gap-4 mt-5">
         <div class="p-5 bg-1 border rounded-5">
           <h3>Package manager</h3>
           <CopyBlock
@@ -74,8 +66,8 @@ const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
       </div>
     </section>
 
-    <section id="usage" class="xl:col-10 mb-9">
-      <h2>SVG usage</h2>
+    <section class="mb-9">
+      <HeadingAnchor id="usage" text="SVG usage">SVG usage</HeadingAnchor>
       <p>
         Use a width and height of <code>1em</code> when you want an icon to scale
         with surrounding text.
@@ -111,8 +103,8 @@ const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
       </p>
     </section>
 
-    <section id="icon-font" class="xl:col-10 mb-9">
-      <h2>Icon font</h2>
+    <section class="mb-9">
+      <HeadingAnchor id="icon-font" text="Icon font">Icon font</HeadingAnchor>
       <p>
         Include the icon font stylesheet, then use the icon filename in a
         <code>bi-*</code> class.
@@ -134,8 +126,8 @@ const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
       />
     </section>
 
-    <section id="styling" class="xl:col-10 mb-9">
-      <h2>Styling</h2>
+    <section class="mb-9">
+      <HeadingAnchor id="styling" text="Styling">Styling</HeadingAnchor>
       <p>
         Embedded SVGs and the icon font inherit <code>currentColor</code>.
         Change
@@ -157,8 +149,10 @@ const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
       />
     </section>
 
-    <section id="accessibility" class="xl:col-10 mb-9">
-      <h2>Accessibility</h2>
+    <section class="mb-9">
+      <HeadingAnchor id="accessibility" text="Accessibility">
+        Accessibility
+      </HeadingAnchor>
       <p>
         Decorative icons should use <code>aria-hidden="true"</code>. Meaningful
         standalone SVGs need an accessible name, and icon-only controls need a
@@ -175,5 +169,4 @@ const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
         <code>alt</code> text, or an empty <code>alt</code> for a decorative image.
       </p>
     </section>
-  </article>
-</BaseLayout>
+</DocsLayout>

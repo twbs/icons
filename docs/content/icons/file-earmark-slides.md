@@ -1,7 +1,7 @@
 ---
 title: File earmark slides
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - presentation
   - keynote

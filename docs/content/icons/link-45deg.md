@@ -1,7 +1,7 @@
 ---
 title: Link 45deg
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - anchor
   - hyperlink

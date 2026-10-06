@@ -1,7 +1,7 @@
 ---
 title: Caret up square
 categories:
-  - Carets
+  - Arrows
 tags:
   - caret
   - arrow

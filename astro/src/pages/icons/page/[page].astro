@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import CategoryNav from "../../../components/CategoryNav.astro";
-import IconCatalog from "../../../components/IconCatalog.astro";
+import IconCatalogPage from "../../../components/IconCatalogPage.astro";
 import {
   getCategories,
   getIcons,
@@ -45,27 +44,12 @@ const description = `Browse Bootstrap Icons page ${page.toLocaleString()} of ${p
   description={description}
   catalogDrawer
 >
-  <div class="2xl:container bd-gutter py-4" data-pagefind-ignore>
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb gap-2 my-4 p-0">
-        <li class="breadcrumb-item"><a href="/">Icons</a></li>
-        <li class="breadcrumb-item active" aria-current="page">
-          Page {page}
-        </li>
-      </ol>
-    </nav>
-
-    <header class="xl:col-9 py-5 mb-7 border-bottom">
-      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">Icon catalog</p>
-      <h1 class="fs-4xl fw-bold lh-1 mb-3">All icons, page {page}</h1>
-      <p class="fs-lg fw-light fg-2">{description}</p>
-    </header>
-
-    <div class="icon-catalog-layout">
-      <CategoryNav categories={categories} totalCount={totalCount} />
-      <div class="icon-catalog-main">
-        <IconCatalog {icons} heading="All Icons" {totalCount} {page} />
-      </div>
-    </div>
-  </div>
+  <IconCatalogPage
+    {categories}
+    {totalCount}
+    {icons}
+    heading="All Icons"
+    {page}
+    pagefindIgnore
+  />
 </BaseLayout>

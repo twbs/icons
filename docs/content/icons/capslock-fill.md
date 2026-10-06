@@ -1,7 +1,7 @@
 ---
 title: Capslock fill
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - key
 ---

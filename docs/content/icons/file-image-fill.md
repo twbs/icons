@@ -1,7 +1,7 @@
 ---
 title: File image fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - photo
   - picture

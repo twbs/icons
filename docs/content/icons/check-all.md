@@ -1,7 +1,7 @@
 ---
 title: Check all
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - checkmark
   - todo

@@ -1,7 +1,7 @@
 ---
 title: Plus square
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - add
   - new

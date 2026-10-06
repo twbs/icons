@@ -1,7 +1,7 @@
 ---
 title: Calendar2 week
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - dates
   - timeline

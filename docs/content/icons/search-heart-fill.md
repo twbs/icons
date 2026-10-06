@@ -2,7 +2,6 @@
 title: Search heart fill
 categories:
   - Communications
-  - Love
 tags:
   - magnifying-glass
   - look

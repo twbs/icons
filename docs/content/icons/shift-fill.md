@@ -1,7 +1,7 @@
 ---
 title: Shift fill
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - key
 ---

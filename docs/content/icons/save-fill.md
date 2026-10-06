@@ -1,7 +1,7 @@
 ---
 title: Save fill
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - save
   - floppy

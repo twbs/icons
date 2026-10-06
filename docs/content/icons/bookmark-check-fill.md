@@ -1,7 +1,7 @@
 ---
 title: Bookmark check fill
 categories:
-  - Miscellaneous
+  - Files & Folders
 tags:
   - reading
   - book

@@ -1,7 +1,7 @@
 ---
 title: Journal x
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - folder

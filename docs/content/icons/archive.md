@@ -1,7 +1,7 @@
 ---
 title: Archive
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - box
   - delete

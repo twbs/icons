@@ -1,7 +1,7 @@
 ---
 title: Command
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - key
   - mac

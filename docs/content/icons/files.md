@@ -1,7 +1,7 @@
 ---
 title: Files
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

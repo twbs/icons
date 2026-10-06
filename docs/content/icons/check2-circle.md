@@ -1,7 +1,7 @@
 ---
 title: Check2 circle
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - checkmark
   - todo

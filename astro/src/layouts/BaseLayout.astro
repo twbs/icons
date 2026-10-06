@@ -1,9 +1,9 @@
 ---
-import SharedBaseLayout from "@twbs/docs-ui/components/BaseLayout";
-import Head from "@twbs/docs-ui/components/Head";
-import Header from "@twbs/docs-ui/components/Header";
-import Footer from "@twbs/docs-ui/components/Footer";
-import type { FooterColumn, NavigationConfig } from "@twbs/docs-ui";
+import SharedBaseLayout from "@twbs/bui/components/BaseLayout";
+import Head from "@twbs/bui/components/Head";
+import Header from "@twbs/bui/components/Header";
+import type { NavigationConfig } from "@twbs/bui";
+import { getPackageMeta } from "../lib/icons";
 import "../styles.scss";
 
 interface Props {
@@ -12,6 +12,8 @@ interface Props {
   canonical?: URL | string | false;
   robots?: string;
   catalogDrawer?: boolean;
+  sidebarDrawer?: boolean;
+  sidebarDrawerLabel?: string;
 }
 
 const {
@@ -20,12 +22,17 @@ const {
   canonical = Astro.url,
   robots,
   catalogDrawer = false,
+  sidebarDrawer = catalogDrawer,
+  sidebarDrawerLabel = catalogDrawer
+    ? "Toggle icon navigation"
+    : "Toggle documentation navigation",
 } = Astro.props;
 const pageTitle =
   title === "Bootstrap Icons" ? title : `${title} · Bootstrap Icons`;
 const pathname = Astro.url.pathname;
 const activeSection =
   pathname === "/" || pathname.startsWith("/icons/") ? "icons" : "icons";
+const { version } = getPackageMeta();
 const navigation: NavigationConfig = {
   activeSection,
   brandHref: "https://getbootstrap.com/",
@@ -37,47 +44,13 @@ const navigation: NavigationConfig = {
   githubHref: "https://github.com/twbs",
   openCollectiveHref: "https://opencollective.com/bootstrap",
   xHref: "https://x.com/getbootstrap",
-  currentVersion: "6.0",
-  currentVersionHref: "https://getbootstrap.com/docs/6.0/",
-  previousVersions: [
-    {
-      label: "v5.3.x",
-      href: "https://getbootstrap.com/docs/5.3/",
-      note: "Latest",
-    },
-    { label: "v4.6.x", href: "https://getbootstrap.com/docs/4.6/" },
-    { label: "v3.4.1", href: "https://getbootstrap.com/docs/3.4/" },
-    { label: "v2.3.2", href: "https://getbootstrap.com/2.3.2/" },
-  ],
-  allVersionsHref: "https://getbootstrap.com/docs/versions/",
+  versionMenu: false,
+  currentVersion: `v${version}`,
+  currentVersionHref: `https://github.com/twbs/icons/releases/tag/v${version}`,
   searchPlaceholder: "Search icons…",
-  docsDrawer: catalogDrawer,
-  docsDrawerLabel: "Toggle icon navigation",
+  docsDrawer: sidebarDrawer,
+  docsDrawerLabel: sidebarDrawerLabel,
 };
-const columns: FooterColumn[] = [
-  {
-    title: "Project",
-    links: [
-      { label: "All icons", href: "/" },
-      { label: "Documentation", href: "/docs/" },
-      { label: "Usage", href: "/usage/" },
-      { label: "Icon sprite", href: "/sprite/" },
-      { label: "Icon font", href: "/font/" },
-      {
-        label: "GitHub",
-        href: "https://github.com/twbs/icons",
-        external: true,
-      },
-    ],
-  },
-  {
-    title: "Bootstrap",
-    links: [
-      { label: "Bootstrap", href: "https://getbootstrap.com/", external: true },
-      { label: "Blog", href: "https://blog.getbootstrap.com/", external: true },
-    ],
-  },
-];
 const socialImage = new URL(
   "/assets/img/bootstrap-icons-social.png",
   Astro.site,
@@ -141,8 +114,4 @@ const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
   <main slot="main" id="content" data-pagefind-body>
     <slot />
   </main>
-
-  <Footer slot="footer" brand="Bootstrap Icons" columns={columns}>
-    <p>Official open source SVG icon library for Bootstrap.</p>
-  </Footer>
 </SharedBaseLayout>

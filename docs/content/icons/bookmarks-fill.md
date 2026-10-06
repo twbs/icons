@@ -1,7 +1,7 @@
 ---
 title: Bookmarks fill
 categories:
-  - Miscellaneous
+  - Files & Folders
 tags:
   - reading
   - book

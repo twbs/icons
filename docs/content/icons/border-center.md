@@ -1,7 +1,7 @@
 ---
 title: Border center
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - borders
   - centre

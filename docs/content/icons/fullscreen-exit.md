@@ -1,7 +1,7 @@
 ---
 title: Fullscreen exit
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - window
   - minimize

@@ -1,7 +1,7 @@
 ---
 title: Folder plus
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - directory
   - delete

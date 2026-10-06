@@ -1,7 +1,7 @@
 ---
 title: Eject
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - disc
   - cd

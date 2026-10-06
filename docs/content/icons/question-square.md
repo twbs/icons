@@ -1,7 +1,7 @@
 ---
 title: Question square
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - help
   - unknown

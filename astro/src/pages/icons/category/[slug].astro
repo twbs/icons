@@ -1,11 +1,11 @@
 ---
-import CategoryNav from "../../../components/CategoryNav.astro";
-import IconCatalog from "../../../components/IconCatalog.astro";
+import IconCatalogPage from "../../../components/IconCatalogPage.astro";
+import Redirect from "../../../components/Redirect.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import {
+  CATEGORY_REDIRECTS,
   getCategories,
   getIcons,
-  getPageItems,
   type IconCategory,
 } from "../../../lib/icons";
 
@@ -13,47 +13,54 @@ export function getStaticPaths() {
   const icons = getIcons();
   const categories = getCategories(icons);
 
-  return categories.map((category) => ({
-    params: { slug: category.slug },
-    props: { category, categories, totalCount: icons.length },
-  }));
+  return [
+    ...categories.map((category) => ({
+      params: { slug: category.slug },
+      props: { category, categories, totalCount: icons.length },
+    })),
+    ...Object.entries(CATEGORY_REDIRECTS).map(([slug, redirectTo]) => ({
+      params: { slug },
+      props: { redirectTo },
+    })),
+  ];
 }
 
 interface Props {
-  category: IconCategory;
-  categories: IconCategory[];
-  totalCount: number;
+  category?: IconCategory;
+  categories?: IconCategory[];
+  totalCount?: number;
+  redirectTo?: string;
 }
 
-const { category, categories, totalCount } = Astro.props;
-const initialIcons = getPageItems(category.icons, 1);
-const description = `Browse ${category.count.toLocaleString()} ${category.name} icons from Bootstrap Icons. Search, preview, and download SVGs or use the icon font.`;
+const { category, categories, totalCount, redirectTo } = Astro.props;
+const description = category
+  ? `Browse ${category.count.toLocaleString()} ${category.name} icons from Bootstrap Icons. Search, preview, and download SVGs or use the icon font.`
+  : "";
 ---
 
-<BaseLayout
-  title={`${category.name} icons`}
-  description={description}
-  catalogDrawer
->
-  <div class="2xl:container bd-gutter py-4">
-    <div class="icon-catalog-layout">
-      <CategoryNav
-        categories={categories}
-        totalCount={totalCount}
+{
+  redirectTo ? (
+    <Redirect destination={redirectTo} />
+  ) : category && categories && totalCount ? (
+    <BaseLayout
+      title={`${category.name} icons`}
+      description={description}
+      catalogDrawer
+    >
+      <IconCatalogPage
+        {categories}
+        {totalCount}
+        icons={category.icons}
+        heading={category.name}
+        catalogTotalCount={category.count}
         activeSlug={category.slug}
+        headingHref="/"
+        basePath={`/icons/category/${category.slug}/`}
+        firstPagePath={`/icons/category/${category.slug}/`}
+        categorySlug={category.slug}
+        emptyMessage={`No ${category.name} icons match that search.`}
+        paginate={false}
       />
-      <div class="icon-catalog-main">
-        <IconCatalog
-          icons={initialIcons}
-          heading={category.name}
-          headingHref="/#icons"
-          totalCount={category.count}
-          basePath={`/icons/category/${category.slug}/`}
-          firstPagePath={`/icons/category/${category.slug}/`}
-          categorySlug={category.slug}
-          emptyMessage={`No ${category.name} icons match that search.`}
-        />
-      </div>
-    </div>
-  </div>
-</BaseLayout>
+    </BaseLayout>
+  ) : null
+}

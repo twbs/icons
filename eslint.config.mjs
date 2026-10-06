@@ -12,6 +12,7 @@ export default [
       '_site/**',
       '_site-astro/**',
       'astro/.astro/**',
+      'docs/static/pagefind/**',
       'node_modules/**',
       'resources/**',
       '**/.fantasticonrc.js'
@@ -19,7 +20,7 @@ export default [
   },
   {
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
         ...globals.nodeBuiltin

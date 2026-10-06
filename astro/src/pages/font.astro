@@ -1,24 +1,19 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
 ---
 
-<BaseLayout
+<DocsLayout
   title="Bootstrap Icons font"
   description="Use Bootstrap Icons through the bundled icon font."
+  eyebrow="Icon font"
 >
-  <article
-    class="2xl:container bd-gutter d-flex align-items-center min-vh-100 py-5"
-  >
-    <header class="xl:col-9 py-5">
-      <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">Icon font</p>
-      <h1 class="fs-4xl fw-bold lh-1 mb-3">Bootstrap Icons font</h1>
-      <p class="fs-lg fw-light fg-2">
-        The font, CSS, Sass, SVGs, and sprite ship together in the Bootstrap
-        Icons package.
-      </p>
-      <a class="btn-solid theme-accent" href="/usage/#icon-font"
-        >Read the icon font guide</a
-      >
-    </header>
-  </article>
-</BaseLayout>
+  <p>
+    The font, CSS, Sass, SVGs, and sprite ship together in the Bootstrap Icons
+    package.
+  </p>
+  <p>
+    <a class="btn-solid theme-accent" href="/usage/#icon-font"
+      >Read the icon font guide</a
+    >
+  </p>
+</DocsLayout>

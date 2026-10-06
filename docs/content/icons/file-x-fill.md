@@ -1,7 +1,7 @@
 ---
 title: File x fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - document
   - remove

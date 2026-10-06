@@ -1,7 +1,7 @@
 ---
 title: Three dots vertical
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - kebab
   - more
