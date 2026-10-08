@@ -1,0 +1,13 @@
+---
+import Code from "@twbs/bui/components/Code";
+
+interface Props {
+  label: string
+  code: string
+  language?: string
+}
+
+const { code, language = 'html' } = Astro.props
+---
+
+<Code code={code} lang={language} containerClass="icon-code-snippet" />

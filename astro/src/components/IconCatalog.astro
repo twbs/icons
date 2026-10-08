@@ -1,0 +1,608 @@
+---
+import IconCard from "./IconCard.astro";
+import { CATALOG_PAGE_SIZE, getPageCount, type IconMeta } from "../lib/icons";
+
+interface Props {
+  icons: IconMeta[];
+  heading: string;
+  headingHref?: string;
+  headingLinkText?: string;
+  totalCount: number;
+  page?: number;
+  basePath?: string;
+  firstPagePath?: string;
+  categorySlug?: string;
+  emptyMessage?: string;
+  paginate?: boolean;
+}
+
+const {
+  icons,
+  heading,
+  headingHref,
+  headingLinkText = "All Icons",
+  totalCount,
+  page = 1,
+  basePath = "/icons/",
+  firstPagePath = "/",
+  categorySlug,
+  emptyMessage = "Try a different name, tag, or category.",
+  paginate = true,
+} = Astro.props;
+const pageSize = paginate ? CATALOG_PAGE_SIZE : totalCount;
+const pageCount = paginate ? getPageCount(totalCount) : 1;
+const CatalogRoot = headingHref ? "div" : "section";
+const pagePath = (target: number) =>
+  target === 1 ? firstPagePath : `${basePath}page/${target}/`;
+---
+
+<CatalogRoot
+  id="icons"
+  role={headingHref ? "region" : undefined}
+  aria-labelledby="catalog-heading"
+  data-pagefind-ignore
+  data-icon-catalog
+  data-index-url="/icons/index.json"
+  data-page-size={pageSize}
+  data-page={page}
+  data-page-count={pageCount}
+  data-base-path={basePath}
+  data-first-page-path={firstPagePath}
+  data-category-slug={categorySlug}
+>
+  <div class="d-flex flex-column md:flex-row md:align-items-center gap-4 mb-5">
+    <nav aria-label="Breadcrumb" class="md:me-auto">
+      <ol class="breadcrumb icon-catalog-breadcrumb">
+        <li
+          class="breadcrumb-item"
+          aria-current={headingHref ? undefined : "page"}
+        >
+          {
+            headingHref ? (
+              <a class="breadcrumb-link" href={headingHref}>
+                {headingLinkText}
+              </a>
+            ) : (
+              <span id="catalog-heading" class="breadcrumb-link">
+                {heading}
+              </span>
+            )
+          }
+        </li>
+        {
+          headingHref && (
+            <>
+              <li class="breadcrumb-divider lh-1" aria-hidden="true">
+                <svg class="bi mx-3" width="16" height="16">
+                  <use href="/bootstrap-icons.svg#chevron-compact-right" />
+                </svg>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                <span id="catalog-heading" class="breadcrumb-link">
+                  {heading}
+                </span>
+              </li>
+            </>
+          )
+        }
+      </ol>
+    </nav>
+    <div class="d-flex gap-3 w-fit">
+      <div
+        class="icon-size-group d-none md:d-flex btn-group btn-group-divider"
+        role="group"
+        aria-label="Icon size"
+      >
+        {
+          [16, 24, 32].map((size) => (
+            <button
+              class:list={[
+                "btn-subtle theme-secondary fs-sm",
+                {
+                  active: size === 32,
+                  "fg-body": size === 32,
+                  "bg-body": size === 32,
+                  "border-subtle": size === 32,
+                  "z-5": size === 32,
+                },
+              ]}
+              type="button"
+              aria-pressed={size === 32 ? "true" : "false"}
+              data-icon-size={size}
+            >
+              {size}
+            </button>
+          ))
+        }
+      </div>
+      <form class="icon-catalog-filter" role="search" data-icon-search>
+        <label class="visually-hidden" for="icon-filter">Filter icons</label>
+        <label class="form-control form-adorn border-subtle pe-3" style="min-width: 264px">
+          <span class="form-adorn-icon" aria-hidden="true">
+            <svg class="bi" width="16" height="16">
+              <use href="#search"></use>
+            </svg>
+          </span>
+          <input
+            class="form-ghost fs-sm"
+            id="icon-filter"
+            name="q"
+            type="search"
+            placeholder="Filter by name, tag, or category…"
+            autocomplete="off"
+            spellcheck="false"
+            data-icon-filter
+          />
+        </label>
+      </form>
+    </div>
+  </div>
+
+  <ul
+    class="icon-grid list-unstyled"
+    data-icon-grid
+    data-icon-size="32"
+  >
+    {
+      icons.map((icon) => (
+        <IconCard icon={icon} />
+      ))
+    }
+  </ul>
+
+  <div class="p-9 text-center bg-1 rounded-5" hidden data-empty-state>
+    <svg class="bi mb-3" aria-hidden="true"><use href="#search"></use></svg>
+    <h3>No icons found</h3>
+    <p class="fg-2">{emptyMessage}</p>
+    <button class="btn-outline theme-secondary" type="button" data-clear-filter
+      >Clear search</button
+    >
+  </div>
+
+  {
+    paginate && (
+      <nav
+        class="d-grid align-items-center gap-3 mt-7 mb-12"
+        style="grid-template-columns: repeat(3, minmax(0, 1fr));"
+        aria-label="Icon catalog pages"
+        data-catalog-pagination
+      >
+        <p class="fs-sm fg-3 mb-0" data-page-status>
+          Page {page.toLocaleString()} of {pageCount.toLocaleString()}
+        </p>
+        <div class="d-flex justify-content-center">
+          {page < pageCount && (
+            <a
+              class="btn-solid btn-styled theme-primary w-100"
+              href={pagePath(page + 1)}
+              rel="next"
+              data-load-more
+            >
+              Load more
+            </a>
+          )}
+        </div>
+        <span aria-hidden="true" />
+      </nav>
+    )
+  }
+
+  <p class="visually-hidden" aria-live="polite" data-catalog-status></p>
+
+  <template data-icon-card-template>
+    <IconCard template />
+  </template>
+</CatalogRoot>
+
+<script>
+  interface CatalogItem {
+    n: string;
+    s: string;
+    c: string[];
+    t: string[];
+  }
+
+  interface CopyFeedback {
+    timeoutId: number;
+  }
+
+  const COPY_FEEDBACK_DURATION = 2000;
+  const COPY_SUCCESS_CLASS = "fg-success";
+  const copyAttempts = new WeakMap<HTMLButtonElement, number>();
+  const copyFeedback = new WeakMap<HTMLButtonElement, CopyFeedback>();
+
+  const getCopyFormat = (button: HTMLButtonElement) =>
+    button.dataset.copyFormat === "font" ? "font" : "svg";
+  const getCopyLabel = (button: HTMLButtonElement) =>
+    getCopyFormat(button) === "font" ? "icon font HTML" : "SVG";
+  const getCopyIcon = (button: HTMLButtonElement) =>
+    getCopyFormat(button) === "font"
+      ? "/bootstrap-icons.svg#type"
+      : "#copy";
+
+  const resetCopyFeedback = (button: HTMLButtonElement, name: string) => {
+    const feedback = copyFeedback.get(button);
+    if (feedback) window.clearTimeout(feedback.timeoutId);
+    button.querySelector("use")?.setAttribute("href", getCopyIcon(button));
+    button.classList.remove(COPY_SUCCESS_CLASS);
+    button.title = `Copy ${name} ${getCopyLabel(button)}`;
+    button.ariaLabel = `Copy ${name} ${getCopyLabel(button)}`;
+    copyFeedback.delete(button);
+  };
+
+  const showCopyFeedback = (button: HTMLButtonElement, name: string) => {
+    resetCopyFeedback(button, name);
+    button.querySelector("use")?.setAttribute("href", "#check2");
+    button.classList.add(COPY_SUCCESS_CLASS);
+    button.title = `${name} ${getCopyLabel(button)} copied`;
+    button.ariaLabel = `${name} ${getCopyLabel(button)} copied`;
+
+    const feedback = {
+      timeoutId: window.setTimeout(() => {
+        if (copyFeedback.get(button) === feedback) {
+          resetCopyFeedback(button, name);
+        }
+      }, COPY_FEEDBACK_DURATION),
+    };
+    copyFeedback.set(button, feedback);
+  };
+
+  const catalog = document.querySelector<HTMLElement>("[data-icon-catalog]");
+  type CatalogWindow = Window & {
+    bootstrapIconsCatalogAbort?: AbortController;
+  };
+  const catalogWindow = window as CatalogWindow;
+  catalogWindow.bootstrapIconsCatalogAbort?.abort();
+  const controller = new AbortController();
+  const { signal } = controller;
+  catalogWindow.bootstrapIconsCatalogAbort = controller;
+
+  const form = catalog?.querySelector<HTMLFormElement>("[data-icon-search]");
+  const input = catalog?.querySelector<HTMLInputElement>("[data-icon-filter]");
+  const grid = catalog?.querySelector<HTMLUListElement>("[data-icon-grid]");
+  const sizeButtons = [
+    ...(catalog?.querySelectorAll<HTMLButtonElement>(
+      "button[data-icon-size]",
+    ) ?? []),
+  ];
+  const empty = catalog?.querySelector<HTMLElement>("[data-empty-state]");
+  const clear = catalog?.querySelector<HTMLButtonElement>(
+    "[data-clear-filter]",
+  );
+  const loadMore =
+    catalog?.querySelector<HTMLAnchorElement>("[data-load-more]");
+  const pagination = catalog?.querySelector<HTMLElement>(
+    "[data-catalog-pagination]",
+  );
+  const pageStatus = catalog?.querySelector<HTMLElement>("[data-page-status]");
+  const status = catalog?.querySelector<HTMLElement>("[data-catalog-status]");
+  const template = catalog?.querySelector<HTMLTemplateElement>(
+    "[data-icon-card-template]",
+  );
+  const categoryLinks = [
+    ...document.querySelectorAll<HTMLAnchorElement>("[data-category-link]"),
+  ];
+  const pageSize = Number(catalog?.dataset.pageSize ?? 48);
+  const basePage = Number(catalog?.dataset.page ?? 1);
+  const basePath = catalog?.dataset.basePath ?? "/";
+  const firstPagePath = catalog?.dataset.firstPagePath ?? "/";
+  const categorySlug = catalog?.dataset.categorySlug;
+  const indexUrl = catalog?.dataset.indexUrl ?? "/icons/index.json";
+  const activeSizeClasses = [
+    "active",
+    "fg-body",
+    "bg-body",
+    "border-subtle",
+    "z-5",
+  ];
+  let currentPage = basePage;
+  let scopedItems: CatalogItem[] | undefined;
+  let results: CatalogItem[] | undefined;
+  let query = "";
+  let tag = "";
+  let indexPromise: Promise<CatalogItem[]> | undefined;
+
+  const setIconSize = (size: string, persist = true) => {
+    if (!grid || !["16", "24", "32"].includes(size)) return;
+    grid.dataset.iconSize = size;
+    for (const button of sizeButtons) {
+      const active = button.dataset.iconSize === size;
+      for (const className of activeSizeClasses) {
+        button.classList.toggle(className, active);
+      }
+      button.setAttribute("aria-pressed", String(active));
+    }
+    if (persist) {
+      try {
+        localStorage.setItem("bi:catalog-icon-size", size);
+      } catch {
+        // The size preference is best-effort.
+      }
+    }
+  };
+
+  try {
+    setIconSize(localStorage.getItem("bi:catalog-icon-size") ?? "32", false);
+  } catch {
+    setIconSize("32", false);
+  }
+  for (const button of sizeButtons) {
+    button.addEventListener(
+      "click",
+      () => setIconSize(button.dataset.iconSize ?? "32"),
+      { signal },
+    );
+  }
+
+  const syncCategoryLinks = (query: string, tag: string) => {
+    for (const link of categoryLinks) {
+      const url = new URL(link.href);
+      url.searchParams.delete("q");
+      url.searchParams.delete("tag");
+      if (tag) {
+        url.searchParams.set("tag", tag);
+      } else if (query) {
+        url.searchParams.set("q", query);
+      }
+      link.href = `${url.pathname}${url.search}${url.hash}`;
+    }
+  };
+
+  const loadIndex = () => {
+    if (!indexPromise) {
+      if (status) status.textContent = "Loading the icon search index.";
+      indexPromise = fetch(indexUrl)
+        .then((response) => {
+          if (!response.ok) throw new Error("Search index request failed.");
+          return response.json() as Promise<CatalogItem[]>;
+        })
+        .then((items) => {
+          scopedItems = categorySlug
+            ? items.filter((item) => item.c.includes(categorySlug))
+            : items;
+          if (status) status.textContent = "";
+          return scopedItems;
+        })
+        .catch((error) => {
+          if (status) {
+            status.textContent =
+              "Search is temporarily unavailable. Use the page links instead.";
+          }
+          throw error;
+        });
+    }
+    return indexPromise;
+  };
+
+  const makeCard = (item: CatalogItem) => {
+    const fragment = template?.content.cloneNode(true) as
+      DocumentFragment | undefined;
+    const card = fragment?.querySelector<HTMLElement>("[data-icon-card]");
+    const previewLink = fragment?.querySelector<HTMLAnchorElement>(
+      "[data-icon-preview-link]",
+    );
+    const image = fragment?.querySelector<HTMLImageElement>("img");
+    const labelLink =
+      fragment?.querySelector<HTMLAnchorElement>("[data-icon-label]");
+    const actions =
+      fragment?.querySelector<HTMLElement>("[data-icon-actions]");
+    const download =
+      fragment?.querySelector<HTMLAnchorElement>("[data-download-icon]");
+    const copyButtons = [
+      ...(fragment?.querySelectorAll<HTMLButtonElement>("[data-copy-icon]") ??
+        []),
+    ];
+    if (
+      !fragment ||
+      !card ||
+      !previewLink ||
+      !image ||
+      !labelLink ||
+      !actions ||
+      !download ||
+      copyButtons.length !== 2
+    ) {
+      return fragment;
+    }
+
+    card.dataset.iconName = item.n;
+    previewLink.href = `/icons/${item.n}/`;
+    previewLink.ariaLabel = `View ${item.n} icon`;
+    image.src = `/assets/icons/${item.n}.svg`;
+    labelLink.href = `/icons/${item.n}/`;
+    labelLink.textContent = item.n;
+    actions.ariaLabel = `${item.n} icon actions`;
+    download.href = `/assets/icons/${item.n}.svg`;
+    download.title = `Download ${item.n} SVG`;
+    download.ariaLabel = `Download ${item.n} SVG`;
+    for (const button of copyButtons) {
+      button.dataset.copyIcon = item.n;
+      resetCopyFeedback(button, item.n);
+    }
+    return fragment;
+  };
+
+  const updateUrl = (mode: "push" | "replace") => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("q");
+    url.searchParams.delete("tag");
+    if (tag) {
+      url.searchParams.set("tag", tag);
+    } else if (query) {
+      url.searchParams.set("q", query);
+    }
+    currentPage > (query || tag ? 1 : basePage)
+      ? url.searchParams.set("page", String(currentPage))
+      : url.searchParams.delete("page");
+    history[`${mode}State`](null, "", url);
+  };
+
+  const render = () => {
+    if (!grid || !results) return;
+    const start = query ? 0 : (basePage - 1) * pageSize;
+    const end = Math.min(results.length, currentPage * pageSize);
+    const fragment = document.createDocumentFragment();
+    for (let index = start; index < end; index += 1) {
+      const card = makeCard(results[index]);
+      if (card) fragment.append(card);
+    }
+    grid.replaceChildren(fragment);
+
+    if (empty) empty.hidden = results.length !== 0;
+    if (pagination) pagination.hidden = results.length === 0;
+    if (loadMore) {
+      loadMore.hidden = end >= results.length;
+      loadMore.href =
+        currentPage + 1 === 1
+          ? firstPagePath
+          : `${basePath}page/${currentPage + 1}/`;
+    }
+    if (pageStatus) {
+      const shown = Math.max(0, end - start);
+      pageStatus.textContent = `Showing ${shown.toLocaleString()} of ${results.length.toLocaleString()} icons`;
+    }
+  };
+
+  const search = async (
+    value: string,
+    updateHistory = true,
+    tagValue = "",
+  ) => {
+    query = value.trim();
+    tag = tagValue.trim().toLowerCase();
+    currentPage = 1;
+    const items = await loadIndex();
+    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    results =
+      tag
+        ? items.filter((item) => item.t.includes(tag))
+        : terms.length === 0
+        ? items
+        : items.filter((item) => terms.every((term) => item.s.includes(term)));
+    render();
+    syncCategoryLinks(query, tag);
+    if (updateHistory) updateUrl("replace");
+  };
+
+  form?.addEventListener(
+    "submit",
+    (event) => {
+      event.preventDefault();
+      if (input) void search(input.value);
+    },
+    { signal },
+  );
+  input?.addEventListener("input", () => void search(input.value), { signal });
+  clear?.addEventListener(
+    "click",
+    () => {
+      if (!input) return;
+      input.value = "";
+      void search("");
+      input.focus();
+    },
+    { signal },
+  );
+  loadMore?.addEventListener(
+    "click",
+    async (event) => {
+      event.preventDefault();
+      results ??= await loadIndex();
+      currentPage += 1;
+      render();
+      updateUrl("push");
+      if (status) {
+        status.textContent = `More icons loaded. ${pageStatus?.textContent ?? ""}`;
+      }
+    },
+    { signal },
+  );
+
+  catalog?.addEventListener(
+    "click",
+    async (event) => {
+      const button = (
+        event.target as Element | null
+      )?.closest<HTMLButtonElement>("[data-copy-icon]");
+      const name = button?.dataset.copyIcon;
+      if (!button || !name) return;
+
+      const attempt = (copyAttempts.get(button) ?? 0) + 1;
+      copyAttempts.set(button, attempt);
+
+      try {
+        let copyText: string;
+        if (getCopyFormat(button) === "font") {
+          copyText = `<i class="bi bi-${name}"></i>`;
+        } else {
+          const response = await fetch(`/assets/icons/${name}.svg`);
+          if (!response.ok) throw new Error("Icon request failed.");
+          copyText = await response.text();
+        }
+        await navigator.clipboard.writeText(copyText);
+        if (copyAttempts.get(button) !== attempt) return;
+        showCopyFeedback(button, name);
+        if (status) {
+          status.textContent = `${name} ${getCopyLabel(button)} copied to clipboard.`;
+        }
+      } catch {
+        if (copyAttempts.get(button) !== attempt) return;
+        resetCopyFeedback(button, name);
+        if (status) {
+          status.textContent = `Could not copy ${name} ${getCopyLabel(button)}.`;
+        }
+      }
+    },
+    { signal },
+  );
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      const target = event.target as HTMLElement | null;
+      if (
+        event.key !== "/" ||
+        event.metaKey ||
+        event.ctrlKey ||
+        target?.matches("input, textarea, select, [contenteditable]")
+      ) {
+        return;
+      }
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      input?.focus();
+    },
+    { capture: true, signal },
+  );
+
+  window.addEventListener(
+    "popstate",
+    () => {
+      const params = new URLSearchParams(window.location.search);
+      const tagValue = params.get("tag") ?? "";
+      const value = tagValue || params.get("q") || "";
+      currentPage =
+        Number(params.get("page")) || (value ? 1 : basePage);
+      if (input) input.value = value;
+      void search(value, false, tagValue).then(() => {
+        currentPage = Number(params.get("page")) || (value ? 1 : basePage);
+        render();
+      });
+    },
+    { signal },
+  );
+
+  const params = new URLSearchParams(window.location.search);
+  const initialTag = params.get("tag") ?? "";
+  const initialQuery = initialTag || params.get("q") || "";
+  const requestedPage = Number(params.get("page"));
+  if (input && (initialQuery || requestedPage > basePage)) {
+    input.value = initialQuery;
+    currentPage = requestedPage || (initialQuery ? 1 : basePage);
+    void search(initialQuery, false, initialTag).then(() => {
+      currentPage = requestedPage || (initialQuery ? 1 : basePage);
+      render();
+      document.querySelector("#icons")?.scrollIntoView();
+    });
+  }
+</script>

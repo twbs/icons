@@ -1,7 +1,7 @@
 ---
 title: Arrow right square fill
 categories:
-  - Shape arrows
+  - Arrows
 tags:
   - arrow
   - square

@@ -1,0 +1,33 @@
+{
+  "name": "bootstrap-icons-astro-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/build.mjs",
+    "check": "astro check",
+    "pagefind": "pagefind --site ../_site",
+    "preview": "astro preview",
+    "validate": "node scripts/validate-build.mjs",
+    "validate:html": "node ../build/vnu-jar.mjs ../_site/",
+    "test": "npm run check && npm run build && npm run validate && npm run validate:html"
+  },
+  "dependencies": {
+    "@twbs/bui": "^0.1.1",
+    "astro": "^7.3.2",
+    "bootstrap": "^6.0.0-alpha.1",
+    "sass": "^1.103.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^24.0.0",
+    "autoprefixer": "^10.6.1",
+    "pagefind": "^1.5.2",
+    "postcss": "^8.5.28",
+    "postcss-prefix-custom-properties": "^0.1.0",
+    "typescript": "^6.0.3"
+  }
+}

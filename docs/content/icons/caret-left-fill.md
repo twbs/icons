@@ -1,7 +1,7 @@
 ---
 title: Caret left fill
 categories:
-  - Carets
+  - Arrows
 tags:
   - caret
   - arrow

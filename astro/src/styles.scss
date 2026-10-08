@@ -1,0 +1,304 @@
+@use "@twbs/bui/scss/bootstrap";
+@use "bootstrap/scss/layout/breakpoints" as *;
+
+// Icons-only rendering mechanics that Bootstrap utilities cannot express.
+@layer custom {
+  // Keep this behavior in sync with Bootstrap v6's site/src/scss/_sidebar.scss.
+  .bd-sidebar {
+    font-size: var(--font-size-sm);
+
+    @include media-breakpoint-up(lg) {
+      position: sticky;
+      top: var(--bd-navbar-offset);
+      // Override the responsive display utility.
+      // stylelint-disable-next-line declaration-no-important
+      display: block !important;
+      height: calc(100vh - 8.5rem);
+      // Prevent focus styles from being cut off.
+      padding-inline-start: 0.25rem;
+      margin-inline-start: -0.25rem;
+      overflow-y: auto;
+    }
+
+    @include media-breakpoint-down(lg) {
+      // stylelint-disable-next-line selector-class-pattern
+      .lg\:drawer {
+        height: auto;
+        max-height: 90dvh;
+        border-inline-end-color: var(--bs-border-color);
+        box-shadow: var(--bs-box-shadow-lg);
+      }
+    }
+  }
+
+  .sidebar-shell-content {
+    min-width: 0;
+  }
+
+  // Canonical Bootstrap v6 docs sidebar navigation.
+  .bd-links {
+    .nav {
+      --bs-nav-gap: 2px;
+      --bs-nav-link-justify: flex-start;
+      --bs-nav-link-font-size: var(--font-size-sm);
+      --bs-nav-link-padding-x: 0.75rem;
+      --bs-nav-link-padding-y: 0.25rem;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .docs-sidebar-sections {
+    .nav-link {
+      padding-inline-start: 1.5rem;
+      color: var(--bs-fg-2);
+    }
+  }
+
+  // Icons-local counterpart of Bootstrap v6's docs layout/content shell.
+  .docs-layout {
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-areas: "sidebar main";
+      grid-template-columns: minmax(11.375rem, 1fr) minmax(0, 5fr);
+      gap: var(--bs-gutter-x);
+    }
+  }
+
+  .docs-main {
+    grid-area: main;
+    min-width: 0;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 47.5rem;
+      margin-inline: auto;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-template-areas:
+        "intro"
+        "toc"
+        "content";
+      grid-template-rows: auto auto 1fr;
+      gap: inherit;
+      padding-top: 0.75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-areas:
+        "intro content-toc"
+        "content content-toc";
+      grid-template-rows: auto 1fr;
+      grid-template-columns: minmax(0, 4fr) minmax(10rem, 1fr);
+      column-gap: 2rem;
+    }
+  }
+
+  .docs-main-without-toc {
+    @include media-breakpoint-up(lg) {
+      grid-template-areas:
+        "intro"
+        "content";
+      grid-template-columns: minmax(0, 50rem);
+    }
+  }
+
+  .bd-intro {
+    grid-area: intro;
+  }
+
+  .bd-content {
+    --content-font-size: 15px;
+    --content-line-height: calc(22 / 15);
+
+    grid-area: content;
+    min-width: 1px;
+    max-width: 100%;
+
+    @media (width >= 1024px) {
+      --content-font-size: var(--font-size-md);
+      --content-line-height: 1.625;
+    }
+
+    > section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--content-gap);
+      margin-bottom: 0;
+
+      &:not(:first-child) {
+        margin-top: calc(var(--content-gap) * 0.75);
+      }
+    }
+
+    pre {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .grid > *,
+    .row > * {
+      min-width: 0;
+    }
+
+    .bd-code-snippet {
+      max-width: 100%;
+      min-width: 0;
+    }
+  }
+
+  .bd-title {
+    color: var(--bs-fg);
+    text-wrap: balance;
+  }
+
+  .bd-subtitle {
+    max-width: 50rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+
+    @media (width >= 1024px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .docs-install-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    > * {
+      min-width: 0;
+    }
+  }
+
+  .bd-toc {
+    grid-area: content-toc;
+
+    @include media-breakpoint-up(lg) {
+      position: sticky;
+      top: var(--bd-navbar-offset);
+      align-self: start;
+      width: 100%;
+      max-height: calc(100vh - var(--bd-navbar-offset) - 2.25rem);
+      padding-inline-end: 0.25rem;
+      margin-inline-end: -0.25rem;
+      overflow-y: auto;
+    }
+  }
+
+  .icon-catalog-layout {
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      // Keep the 48px gutter while returning 50px from the quarter-width
+      // sidebar track to the catalog.
+      grid-template-columns:
+        minmax(11.375rem, calc(25% - 3.875rem))
+        minmax(0, 1fr);
+      gap: var(--bs-gutter-x);
+    }
+  }
+
+  .icon-catalog-main {
+    min-width: 0;
+  }
+
+  .icon-catalog-breadcrumb {
+    --bs-breadcrumb-font-size: var(--font-size-sm);
+    --bs-breadcrumb-link-padding-x: 0;
+    --bs-breadcrumb-link-padding-y: 0;
+    --bs-breadcrumb-link-hover-bg: transparent;
+  }
+
+  [data-category-link] {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  [data-category-link] > :first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  [data-category-link] > .badge {
+    flex-shrink: 0;
+  }
+
+  [data-icon-grid] {
+    --bi-catalog-icon-size: 2rem;
+  }
+
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1rem;
+  }
+
+  .icon-size-group {
+    flex: 0 0 auto;
+  }
+
+  [data-icon-grid][data-icon-size="16"] {
+    --bi-catalog-icon-size: 1rem;
+  }
+
+  [data-icon-grid][data-icon-size="24"] {
+    --bi-catalog-icon-size: 1.5rem;
+  }
+
+  [data-icon-card] img {
+    width: var(--bi-catalog-icon-size);
+    height: var(--bi-catalog-icon-size);
+  }
+
+  .icon-demo .bi,
+  .icon-demo-examples .bi {
+    width: 1em;
+    height: 1em;
+  }
+
+  [data-bs-theme="dark"] [data-icon-card] img {
+    filter: invert(1) grayscale(1);
+  }
+
+  .bd-content h2,
+  .bd-content h3 {
+    scroll-margin-top: 6rem;
+  }
+
+  .anchor-link {
+    padding-inline: 0.25rem;
+    color: color-mix(in srgb, var(--bs-link-color), transparent 50%);
+    text-decoration: none;
+    opacity: 0;
+
+    &::after {
+      content: "#";
+    }
+
+    &:focus,
+    &:hover,
+    :hover > &,
+    :target > & {
+      opacity: 1;
+    }
+  }
+
+  .icon-demo {
+    min-height: clamp(18rem, 52vw, 36rem);
+    font-size: clamp(9rem, 25vw, 18rem);
+    background-image: radial-gradient(
+      circle,
+      var(--bs-border-color) 1px,
+      transparent 1px
+    );
+    background-size: 1rem 1rem;
+  }
+
+  .icon-code-snippet {
+    margin-block: 1rem;
+  }
+}

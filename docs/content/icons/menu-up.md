@@ -1,7 +1,7 @@
 ---
 title: Menu up
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - dropdown
   - menu

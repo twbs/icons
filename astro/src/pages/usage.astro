@@ -1,0 +1,172 @@
+---
+import type { TocEntry } from "@twbs/bui/components/TableOfContents";
+import CopyBlock from "../components/CopyBlock.astro";
+import HeadingAnchor from "../components/HeadingAnchor.astro";
+import { getPackageMeta } from "../lib/icons";
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const { version } = getPackageMeta();
+const embedded = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16" aria-hidden="true">
+  <path d="M4 1c2 0 3 1.5 4 3 1-1.5 2-3 4-3 2.5 0 4 2 4 4.5 0 3-2.5 5.5-8 9.5C2.5 11 0 8.5 0 5.5 0 3 1.5 1 4 1"/>
+</svg>`;
+const toc: TocEntry[] = [
+  { slug: "install", text: "Install", children: [] },
+  { slug: "usage", text: "SVG usage", children: [] },
+  { slug: "icon-font", text: "Icon font", children: [] },
+  { slug: "styling", text: "Styling", children: [] },
+  { slug: "accessibility", text: "Accessibility", children: [] },
+];
+---
+
+<DocsLayout
+  title="Install and use Bootstrap Icons"
+  description="Install Bootstrap Icons and use SVGs, icon fonts, Sass, or CSS in any project."
+  eyebrow="Documentation"
+  {toc}
+>
+  <section class="mb-9">
+      <HeadingAnchor id="install" text="Install">Install</HeadingAnchor>
+      <p>
+        Install the full package—including individual SVGs, the sprite, and icon
+        fonts—or download the latest release.
+      </p>
+      <div class="docs-install-grid d-grid gap-4 mt-5">
+        <div class="p-5 bg-1 border rounded-5">
+          <h3>Package manager</h3>
+          <CopyBlock
+            label="npm"
+            code="npm i bootstrap-icons"
+            language="shell"
+          />
+          <CopyBlock
+            label="Composer"
+            code="composer require twbs/bootstrap-icons"
+            language="shell"
+          />
+        </div>
+        <div class="p-5 bg-1 border rounded-5">
+          <h3>Download</h3>
+          <p>
+            Release archives include SVGs, fonts, the sprite, license, and
+            README.
+          </p>
+          <a
+            class="btn-outline theme-secondary"
+            href="https://github.com/twbs/icons/releases/latest/"
+            >Download latest ZIP</a
+          >
+        </div>
+        <div class="p-5 bg-1 border rounded-5">
+          <h3>CDN</h3>
+          <CopyBlock
+            label="Stylesheet link"
+            code={`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@${version}/font/bootstrap-icons.min.css">`}
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-9">
+      <HeadingAnchor id="usage" text="SVG usage">SVG usage</HeadingAnchor>
+      <p>
+        Use a width and height of <code>1em</code> when you want an icon to scale
+        with surrounding text.
+      </p>
+      <h3>Embedded SVG</h3>
+      <div
+        class="d-flex align-items-center gap-4 p-5 my-4 fs-2 bg-1 border rounded-5"
+        set:html={embedded}
+      />
+      <CopyBlock label="Embedded SVG" code={embedded} />
+
+      <h3>External image</h3>
+      <div
+        class="d-flex align-items-center gap-4 p-5 my-4 fs-2 bg-1 border rounded-5"
+      >
+        <img
+          src="/assets/icons/bootstrap.svg"
+          alt="Bootstrap"
+          width="32"
+          height="32"
+        />
+      </div>
+      <CopyBlock
+        label="Image element"
+        code='<img src="/assets/icons/bootstrap.svg" alt="Bootstrap" width="32" height="32">'
+      />
+
+      <h3>SVG sprite</h3>
+      <p>
+        Reference icons from the bundled sprite with <code>&lt;use&gt;</code>.
+        See the
+        <a href="/sprite/">sprite guide</a> for examples and browser notes.
+      </p>
+    </section>
+
+    <section class="mb-9">
+      <HeadingAnchor id="icon-font" text="Icon font">Icon font</HeadingAnchor>
+      <p>
+        Include the icon font stylesheet, then use the icon filename in a
+        <code>bi-*</code> class.
+      </p>
+      <CopyBlock
+        label="Icon font HTML"
+        code='<i class="bi bi-alarm" aria-hidden="true"></i>'
+      />
+      <h3>Sass</h3>
+      <p>
+        Point the font directory at the installed package before importing the
+        Sass file.
+      </p>
+      <CopyBlock
+        label="Sass import"
+        language="scss"
+        code={`$bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
+@import "bootstrap-icons/font/bootstrap-icons";`}
+      />
+    </section>
+
+    <section class="mb-9">
+      <HeadingAnchor id="styling" text="Styling">Styling</HeadingAnchor>
+      <p>
+        Embedded SVGs and the icon font inherit <code>currentColor</code>.
+        Change
+        <code>font-size</code> to resize a <code>1em</code> icon.
+      </p>
+      <CopyBlock
+        label="CSS"
+        language="css"
+        code={`.bi {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.feature-icon {
+  color: cornflowerblue;
+  font-size: 2rem;
+}`}
+      />
+    </section>
+
+    <section class="mb-9">
+      <HeadingAnchor id="accessibility" text="Accessibility">
+        Accessibility
+      </HeadingAnchor>
+      <p>
+        Decorative icons should use <code>aria-hidden="true"</code>. Meaningful
+        standalone SVGs need an accessible name, and icon-only controls need a
+        label on the control.
+      </p>
+      <CopyBlock
+        label="Accessible icon button"
+        code={`<button type="button" aria-label="Mute">
+  <svg class="bi" aria-hidden="true">…</svg>
+</button>`}
+      />
+      <p>
+        When using an SVG through <code>&lt;img&gt;</code>, provide useful
+        <code>alt</code> text, or an empty <code>alt</code> for a decorative image.
+      </p>
+    </section>
+</DocsLayout>

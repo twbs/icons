@@ -1,7 +1,7 @@
 ---
 title: Calendar2 plus fill
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - date
   - time

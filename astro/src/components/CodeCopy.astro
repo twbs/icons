@@ -1,0 +1,136 @@
+---
+import { highlightCode } from "@twbs/bui/shiki";
+
+interface Props {
+  class?: string;
+  code: string;
+  iconSize?: number;
+  lang?: string;
+  variant?: "adorn" | "default";
+}
+
+const {
+  class: className,
+  code,
+  iconSize,
+  lang = "bash",
+  variant = "default",
+} = Astro.props;
+const highlightedCode =
+  variant === "default" ? await highlightCode(code, lang) : undefined;
+const iconStyle =
+  iconSize === undefined
+    ? undefined
+    : `width: ${iconSize}px; height: ${iconSize}px;`;
+---
+
+<script>
+  import { initCopyButtons } from "@twbs/bui/browser/clipboard";
+
+  const getCopyText = (trigger: Element) => {
+    return (
+      trigger
+        .closest("[data-code-copy]")
+        ?.querySelector(".astro-code, .form-ghost")
+        ?.textContent?.trim() || ""
+    );
+  };
+
+  initCopyButtons(
+    "[data-code-copy]:not([data-code-copy-adorn]) [data-bd-clipboard]",
+    getCopyText,
+  );
+
+  const adornClipboard = initCopyButtons(
+    "[data-code-copy-adorn] [data-bd-clipboard]",
+    getCopyText,
+    {
+      successClass: "fg-success",
+      successLabel: "npm install command copied",
+      tooltips: false,
+    },
+  );
+
+  const announceAdornmentCopy = (trigger: Element, message: string) => {
+    const status = trigger
+      .closest("[data-code-copy]")
+      ?.querySelector<HTMLElement>("[data-copy-status]");
+    if (!status) return;
+    status.textContent = "";
+    requestAnimationFrame(() => {
+      status.textContent = message;
+    });
+  };
+
+  adornClipboard.on("success", ({ trigger }) => {
+    announceAdornmentCopy(trigger, "npm install command copied to clipboard.");
+  });
+  adornClipboard.on("error", ({ trigger }) => {
+    announceAdornmentCopy(trigger, "Could not copy npm install command.");
+  });
+</script>
+
+<div
+  class:list={[
+    variant === "adorn"
+      ? "code-copy-adorn form-control form-control-sm form-adorn form-adorn-end bg-1 bg-75 border-subtle shadow-none"
+      : "code-copy",
+    className,
+  ]}
+  data-code-copy
+  data-code-copy-adorn={variant === "adorn" ? "" : undefined}
+>
+  {
+    variant === "adorn" ? (
+      <span class="form-ghost text-start text-nowrap overflow-x-auto fg-3">
+        {code}
+      </span>
+    ) : (
+      <Fragment set:html={highlightedCode} />
+    )
+  }
+  <button
+    type="button"
+    class:list={[
+      "btn btn-xs btn-icon bg-transparent",
+      variant === "adorn" && "code-copy-adorn-btn",
+    ]}
+    title={variant === "default" ? "Copy" : undefined}
+    aria-label={variant === "adorn" ? "Copy npm install command" : undefined}
+    data-bd-clipboard
+  >
+    <svg
+      class="bi fs-md"
+      width={iconSize}
+      height={iconSize}
+      style={iconStyle}
+      aria-hidden="true"
+    >
+      <use href="#copy"></use>
+    </svg>
+  </button>
+  {
+    variant === "adorn" && (
+      <span class="visually-hidden" aria-live="polite" data-copy-status />
+    )
+  }
+</div>
+
+<style>
+  .code-copy-adorn:focus-within,
+  .code-copy-adorn-btn:focus-visible {
+    outline: 0;
+  }
+
+  .code-copy-adorn-btn {
+    --bs-btn-color: var(--bs-fg-3);
+  }
+
+  .code-copy-adorn-btn.fg-success {
+    color: var(--bs-success-fg);
+  }
+
+  .code-copy-adorn-btn:focus-visible:not(.fg-success) {
+    color: var(--bs-link-color);
+  }
+</style>

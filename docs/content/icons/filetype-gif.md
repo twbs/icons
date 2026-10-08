@@ -1,7 +1,7 @@
 ---
 title: Filetype gif
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - "file type"

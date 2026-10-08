@@ -1,0 +1,114 @@
+---
+import TableOfContents, {
+  type TocEntry,
+} from "@twbs/bui/components/TableOfContents";
+import DocsNav from "../components/DocsNav.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow?: string;
+  toc?: TocEntry[];
+}
+
+const {
+  title,
+  description,
+  eyebrow = "Bootstrap Icons",
+  toc = [],
+} = Astro.props;
+const hasToc = toc.length > 0;
+---
+
+<BaseLayout
+  {title}
+  {description}
+  sidebarDrawer
+  sidebarDrawerLabel="Toggle documentation navigation"
+>
+  <div class="2xl:container bd-gutter mt-3 md:my-4 docs-layout">
+    <DocsNav />
+
+    <div class:list={["docs-main", { "docs-main-without-toc": !hasToc }]}>
+      <header class="bd-intro pt-2 lg:ps-2">
+        <p class="mb-2 fs-sm fw-semibold text-uppercase fg-2">{eyebrow}</p>
+        <h1 class="bd-title mb-2">{title}</h1>
+        <p class="bd-subtitle mb-0 fg-2">{description}</p>
+      </header>
+
+      {
+        hasToc && (
+          <div class="bd-toc mt-4 mb-6 lg:my-0">
+            <details class="lg:d-none">
+              <summary class="btn-outline theme-secondary">
+                On this page
+              </summary>
+              <nav class="mt-3" aria-label="Table of contents">
+                <TableOfContents entries={toc} />
+              </nav>
+            </details>
+            <nav
+              class="d-none lg:d-block"
+              aria-label="Table of contents"
+              data-docs-toc
+            >
+              <p class="fw-semibold mb-2">On this page</p>
+              <TableOfContents entries={toc} />
+            </nav>
+          </div>
+        )
+      }
+
+      <div class="bd-content prose lg:ps-2 lg:pt-5">
+        <slot />
+      </div>
+    </div>
+  </div>
+
+  {
+    hasToc && (
+      <script>
+        const links = [
+          ...document.querySelectorAll<HTMLAnchorElement>("[data-docs-toc] a"),
+        ];
+        const linkById = new Map(
+          links.map((link) => [decodeURIComponent(link.hash.slice(1)), link]),
+        );
+        const headings = [...linkById.keys()]
+          .map((id) => document.getElementById(id))
+          .filter((heading): heading is HTMLElement => Boolean(heading));
+
+        if ("IntersectionObserver" in window) {
+          const visible = new Set<string>();
+          const activate = () => {
+            const id =
+              headings.find((heading) => visible.has(heading.id))?.id ??
+              headings
+                .filter((heading) => heading.getBoundingClientRect().top < 140)
+                .at(-1)?.id;
+
+            for (const [headingId, link] of linkById) {
+              link.classList.toggle("active", headingId === id);
+              headingId === id
+                ? link.setAttribute("aria-current", "location")
+                : link.removeAttribute("aria-current");
+            }
+          };
+          const observer = new IntersectionObserver(
+            (entries) => {
+              for (const entry of entries) {
+                entry.isIntersecting
+                  ? visible.add(entry.target.id)
+                  : visible.delete(entry.target.id);
+              }
+              activate();
+            },
+            { rootMargin: "-120px 0px -65% 0px" },
+          );
+          headings.forEach((heading) => observer.observe(heading));
+        }
+      </script>
+    )
+  }
+</BaseLayout>

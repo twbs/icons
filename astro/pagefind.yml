@@ -1,0 +1,5 @@
+# Pagefind CLI configuration
+# https://pagefind.app/docs/config-options/
+
+site: ../_site
+include_characters: "$&-_<>:."

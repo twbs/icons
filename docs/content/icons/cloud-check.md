@@ -1,7 +1,7 @@
 ---
 title: Cloud check
 categories:
-  - Clouds
+  - Weather
 tags:
   - checkmark
 ---

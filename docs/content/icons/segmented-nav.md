@@ -1,7 +1,7 @@
 ---
 title: Segmented nav
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - nav
   - tabs

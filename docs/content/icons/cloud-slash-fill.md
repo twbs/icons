@@ -1,7 +1,7 @@
 ---
 title: Cloud slash fill
 categories:
-  - Clouds
+  - Weather
 tags:
   - cloud
 ---

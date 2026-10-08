@@ -1,7 +1,7 @@
 ---
 title: Calendar month
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - date
   - time

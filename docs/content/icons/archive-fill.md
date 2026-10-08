@@ -1,7 +1,7 @@
 ---
 title: Archive fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - box
   - delete

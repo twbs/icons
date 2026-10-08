@@ -1,7 +1,7 @@
 ---
 title: Check square
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - checkmark
   - confirm

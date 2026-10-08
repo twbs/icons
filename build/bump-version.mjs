@@ -15,8 +15,7 @@ const DRY_RUN = process.argv.includes('--dry') || process.argv.includes('--dry-r
 // These are the files we only care about replacing the version
 const FILES = [
   'build/font/css.hbs',
-  'build/font/scss.hbs',
-  'hugo.yml'
+  'build/font/scss.hbs'
 ]
 
 // Blame TC39... https://github.com/benjamingr/RegExp.escape/issues/37
@@ -56,7 +55,7 @@ function bumpNpmVersion(newVersion) {
     return
   }
 
-  execFile('npm', ['version', newVersion, '--no-git-tag'], { shell: true }, (error) => {
+  execFile('npm', ['version', newVersion, '--no-git-tag-version'], { shell: true }, (error) => {
     if (error) {
       console.error(error)
       process.exit(1)

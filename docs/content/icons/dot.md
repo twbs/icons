@@ -1,7 +1,7 @@
 ---
 title: Dot
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - middot
   - math

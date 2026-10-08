@@ -1,7 +1,7 @@
 ---
 title: Folder2
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - directory
 ---

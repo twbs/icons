@@ -1,7 +1,7 @@
 ---
 title: Alt
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - key
   - alt

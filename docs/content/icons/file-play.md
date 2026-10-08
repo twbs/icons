@@ -1,7 +1,7 @@
 ---
 title: File play
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - video
   - present

@@ -1,0 +1,73 @@
+---
+import type { TocEntry } from "@twbs/bui/components/TableOfContents";
+import CopyBlock from "../components/CopyBlock.astro";
+import HeadingAnchor from "../components/HeadingAnchor.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
+
+const spriteExample = `<svg class="bi" width="32" height="32" fill="currentColor" aria-hidden="true">
+  <use href="/bootstrap-icons.svg#heart-fill"></use>
+</svg>`;
+const toc: TocEntry[] = [
+  { slug: "use-the-sprite", text: "Use the sprite", children: [] },
+  { slug: "cross-origin", text: "Cross-origin use", children: [] },
+];
+---
+
+<DocsLayout
+  title="Bootstrap Icons SVG sprite"
+  description="Use every Bootstrap Icon from a single SVG sprite."
+  eyebrow="SVG sprite"
+  {toc}
+>
+    <p>
+      Reference an icon by filename from the bundled sprite and style it with
+      <code>currentColor</code>.
+    </p>
+    <p>
+      <a class="btn-solid theme-accent" href="/bootstrap-icons.svg" download
+        >Download sprite</a
+      >
+    </p>
+
+    <section class="mb-9">
+      <HeadingAnchor id="use-the-sprite" text="Use the sprite">
+        Use the sprite
+      </HeadingAnchor>
+      <p>
+        Copy <code>bootstrap-icons.svg</code> into your site, then use the icon filename
+        as the fragment identifier.
+      </p>
+      <div
+        class="icon-demo-examples d-flex align-items-center gap-4 p-5 my-4 fs-2 bg-1 border rounded-5"
+        role="img"
+        aria-label="Sprite examples"
+      >
+        <svg class="bi" aria-hidden="true"
+          ><use href="/bootstrap-icons.svg#heart-fill"></use></svg
+        >
+        <svg class="bi" aria-hidden="true"
+          ><use href="/bootstrap-icons.svg#toggles"></use></svg
+        >
+        <svg class="bi" aria-hidden="true"
+          ><use href="/bootstrap-icons.svg#shop"></use></svg
+        >
+      </div>
+      <CopyBlock label="Sprite HTML" code={spriteExample} />
+    </section>
+
+    <section class="mb-9">
+      <HeadingAnchor id="cross-origin" text="Cross-origin use">
+        Cross-origin use
+      </HeadingAnchor>
+      <p>
+        Serve the sprite from the same origin as the page. Browser security
+        restrictions can prevent external <code>&lt;use&gt;</code> references across
+        domains.
+      </p>
+      <p>
+        For a standalone image with alt text, use an individual SVG from
+        <code>/assets/icons/</code> instead.
+      </p>
+      <a href="/usage/">See all usage options</a>
+    </section>
+</DocsLayout>

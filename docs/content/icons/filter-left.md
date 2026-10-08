@@ -1,7 +1,7 @@
 ---
 title: Filter left
 categories:
-  - Sort and filter
+  - UI & Keyboard
 tags:
   - sort
   - filter

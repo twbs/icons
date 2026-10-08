@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import IconCatalogPage from "../../../components/IconCatalogPage.astro";
+import {
+  getCategories,
+  getIcons,
+  getPageCount,
+  getPageItems,
+} from "../../../lib/icons";
+
+export function getStaticPaths() {
+  const icons = getIcons();
+  const pageCount = getPageCount(icons.length);
+
+  return Array.from({ length: pageCount - 1 }, (_, index) => {
+    const page = index + 2;
+    return {
+      params: { page: String(page) },
+      props: {
+        page,
+        pageCount,
+        icons: getPageItems(icons, page),
+        categories: getCategories(icons),
+        totalCount: icons.length,
+      },
+    };
+  });
+}
+
+interface Props {
+  page: number;
+  pageCount: number;
+  icons: ReturnType<typeof getIcons>;
+  categories: ReturnType<typeof getCategories>;
+  totalCount: number;
+}
+
+const { page, pageCount, icons, categories, totalCount } = Astro.props;
+const description = `Browse Bootstrap Icons page ${page.toLocaleString()} of ${pageCount.toLocaleString()}. Search all ${totalCount.toLocaleString()} icons by name, tag, or category.`;
+---
+
+<BaseLayout
+  title={`Icons · Page ${page}`}
+  description={description}
+  catalogDrawer
+>
+  <IconCatalogPage
+    {categories}
+    {totalCount}
+    {icons}
+    heading="All Icons"
+    {page}
+    pagefindIgnore
+  />
+</BaseLayout>

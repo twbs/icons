@@ -1,9 +1,8 @@
 .DS_Store
-/.hugo_build.lock
 /.cache/
 /_site/
+/docs/static/pagefind/
 /node_modules/
-/resources/
 
 # Editor folders
 /.vscode/

@@ -1,7 +1,7 @@
 ---
 title: Chevron bar up
 categories:
-  - Chevrons
+  - Arrows
 tags:
   - chevron
 ---

@@ -1,7 +1,7 @@
 ---
 title: View stacked
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - view
   - rearrange

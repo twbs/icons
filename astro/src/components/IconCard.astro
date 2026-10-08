@@ -1,0 +1,93 @@
+---
+import type { IconMeta } from "../lib/icons";
+
+interface Props {
+  icon?: IconMeta;
+  template?: boolean;
+  actions?: boolean;
+}
+
+const { icon, template = false, actions = true } = Astro.props;
+if (!icon && !template) {
+  throw new Error("IconCard requires either an icon or template mode.");
+}
+
+const name = icon?.name;
+const detailHref = name ? `/icons/${name}/` : undefined;
+const assetHref = name ? `/assets/icons/${name}.svg` : undefined;
+---
+
+<li data-icon-card data-icon-name={name}>
+  <div class="h-100">
+    <div class="bg-1 border border-subtle rounded-5 overflow-hidden">
+      <a
+        class="d-block p-7 fg-body text-center text-decoration-none"
+        href={detailHref}
+        aria-label={name ? `View ${name} icon` : undefined}
+        data-icon-preview-link
+      >
+        <img
+          src={assetHref}
+          width="32"
+          height="32"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+      {
+        actions && (
+          <div
+            class="d-flex align-items-center justify-content-center gap-2 py-3 border-top border-subtle"
+            role="group"
+            aria-label={name ? `${name} icon actions` : undefined}
+            data-icon-actions
+          >
+            <button
+              class="btn-icon btn-sm fg-3 bg-transparent border-0"
+              type="button"
+              title={name ? `Copy ${name} SVG` : undefined}
+              aria-label={name ? `Copy ${name} SVG` : undefined}
+              data-copy-icon={name ?? ""}
+              data-copy-format="svg"
+            >
+              <svg class="bi fs-md" aria-hidden="true">
+                <use href="#copy" />
+              </svg>
+            </button>
+            <a
+              class="btn-icon btn-sm fg-3 bg-transparent border-0"
+              href={assetHref}
+              download
+              title={name ? `Download ${name} SVG` : undefined}
+              aria-label={name ? `Download ${name} SVG` : undefined}
+              data-download-icon
+            >
+              <svg class="bi fs-md" aria-hidden="true">
+                <use href="/bootstrap-icons.svg#download" />
+              </svg>
+            </a>
+            <button
+              class="btn-icon btn-sm fg-3 bg-transparent border-0"
+              type="button"
+              title={name ? `Copy ${name} icon font HTML` : undefined}
+              aria-label={name ? `Copy ${name} icon font HTML` : undefined}
+              data-copy-icon={name ?? ""}
+              data-copy-format="font"
+            >
+              <svg class="bi fs-md" aria-hidden="true">
+                <use href="/bootstrap-icons.svg#type" />
+              </svg>
+            </button>
+          </div>
+        )
+      }
+    </div>
+    <a
+      class="d-block fs-xs text-break text-center fg-body text-decoration-none mt-3 px-1"
+      href={detailHref}
+      data-icon-label
+    >
+      {name}
+    </a>
+  </div>
+</li>

@@ -1,7 +1,7 @@
 ---
 title: Escape
 categories:
-  - UI and Keyboard
+  - UI & Keyboard
 tags:
   - esc
   - quit

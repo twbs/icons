@@ -33,6 +33,9 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
+      - name: Install Astro dependencies
+        run: npm ci --prefix astro
+
       - name: Prepare release
         run: npm run release
 

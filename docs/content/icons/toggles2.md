@@ -1,7 +1,7 @@
 ---
 title: Toggles2
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - toggle
   - switch

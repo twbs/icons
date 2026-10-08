@@ -1,7 +1,7 @@
 ---
 title: Calendar2 event
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - date
   - time

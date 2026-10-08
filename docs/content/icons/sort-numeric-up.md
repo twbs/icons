@@ -1,7 +1,7 @@
 ---
 title: Sort numeric up
 categories:
-  - Sort and filter
+  - UI & Keyboard
 tags:
   - sort
   - filter

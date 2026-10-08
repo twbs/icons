@@ -1,7 +1,7 @@
 ---
 title: File break
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

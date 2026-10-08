@@ -1,7 +1,7 @@
 ---
 title: Cloud upload
 categories:
-  - Clouds
+  - Weather
 tags:
   - cloud
 ---

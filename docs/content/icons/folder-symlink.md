@@ -1,7 +1,7 @@
 ---
 title: Folder symlink
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - directory
   - symbolic-link

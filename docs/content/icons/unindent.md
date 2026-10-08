@@ -1,7 +1,7 @@
 ---
 title: Unindent
 categories:
-  - UI and Keyboard
+  - UI & Keyboard
 tags:
   - tab
   - indent

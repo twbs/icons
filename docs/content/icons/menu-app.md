@@ -1,7 +1,7 @@
 ---
 title: Menu app
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - dropdown
   - menu

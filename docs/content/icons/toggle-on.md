@@ -1,7 +1,7 @@
 ---
 title: Toggle on
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - toggle
   - switch

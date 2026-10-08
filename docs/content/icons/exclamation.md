@@ -1,7 +1,7 @@
 ---
 title: Exclamation
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - alert
   - warning

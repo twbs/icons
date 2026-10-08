@@ -1,7 +1,7 @@
 ---
 title: Calendar2 range
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - dates
   - timeline

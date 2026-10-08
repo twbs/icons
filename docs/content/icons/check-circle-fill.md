@@ -1,7 +1,7 @@
 ---
 title: Check circle fill
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - checkmark
   - confirm

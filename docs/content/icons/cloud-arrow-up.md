@@ -1,7 +1,7 @@
 ---
 title: Cloud arrow up
 categories:
-  - Clouds
+  - Weather
 tags:
   - upload
 ---

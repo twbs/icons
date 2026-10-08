@@ -1,7 +1,7 @@
 ---
 title: Chevron double left
 categories:
-  - Chevrons
+  - Arrows
 tags:
   - chevron
 ---

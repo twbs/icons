@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CodeCopy from "../components/CodeCopy.astro";
+import FigmaLogo from "../components/FigmaLogo.astro";
+import HeroSubnav from "../components/HeroSubnav.astro";
+import IconCatalogPage from "../components/IconCatalogPage.astro";
+import {
+  getCategories,
+  getIcons,
+  getPackageMeta,
+  getPageItems,
+} from "../lib/icons";
+
+const icons = getIcons();
+const categories = getCategories(icons);
+const initialIcons = getPageItems(icons, 1);
+const { version } = getPackageMeta();
+---
+
+<BaseLayout title="Bootstrap Icons" catalogDrawer>
+  <section class="d-none py-8 lg:py-9 border-bottom">
+    <div class="2xl:container bd-gutter">
+      <div class="row lg:flex-row-reverse align-items-center g-5">
+        <div class="col-10 sm:col-8 lg:col-5 mx-auto">
+          <img
+            class="d-block img-fluid my-3 mx-auto"
+            src="/assets/img/icons-hero.png"
+            srcset="/assets/img/icons-hero.png 1x, /assets/img/icons-hero@2x.png 2x"
+            width="450"
+            height="340"
+            alt="Bootstrap Icons"
+          />
+        </div>
+        <div class="lg:col-7 text-center lg:text-start">
+          <h1 class="fs-4xl fw-bold lh-1 mb-3">Bootstrap Icons</h1>
+          <p class="fs-lg fw-light fg-2 mb-4">
+            Free, high quality, open source icon library with over {
+              icons.length.toLocaleString()
+            } icons. Include them anyway you like—SVGs, SVG sprite, or web fonts.
+            Use them with or without <a href="https://getbootstrap.com/"
+              >Bootstrap</a
+            > in any project.
+          </p>
+          <div
+            class="d-flex flex-column md:flex-row align-items-stretch justify-content-center lg:justify-content-start gap-4 mb-5"
+          >
+            <CodeCopy code="npm i bootstrap-icons" />
+            <a
+              class="btn-solid theme-inverse btn-lg"
+              href="https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons"
+              target="_blank"
+              rel="noopener"
+            >
+              <FigmaLogo class="me-2" />
+              Open in Figma
+            </a>
+          </div>
+          <hr class="w-25 mx-auto lg:mx-0 my-5" />
+          <HeroSubnav version={version} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <IconCatalogPage
+    {categories}
+    totalCount={icons.length}
+    icons={initialIcons}
+    heading="All Icons"
+  />
+</BaseLayout>

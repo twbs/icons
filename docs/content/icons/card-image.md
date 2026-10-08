@@ -1,7 +1,7 @@
 ---
 title: Card image
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - note
   - card

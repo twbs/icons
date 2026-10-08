@@ -1,7 +1,7 @@
 ---
 title: File easel
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - slides
   - presentation

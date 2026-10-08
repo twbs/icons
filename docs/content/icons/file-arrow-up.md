@@ -1,7 +1,7 @@
 ---
 title: File arrow up
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - doc
   - document

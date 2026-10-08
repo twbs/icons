@@ -1,7 +1,7 @@
 ---
 title: Info lg
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - information
   - help

@@ -10,14 +10,15 @@ export default [
       '**/dist/**',
       '**/vendor/**',
       '_site/**',
+      'astro/.astro/**',
+      'docs/static/pagefind/**',
       'node_modules/**',
-      'resources/**',
       '**/.fantasticonrc.js'
     ],
   },
   {
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
         ...globals.nodeBuiltin
@@ -49,11 +50,12 @@ export default [
   },
   {
     files: [
-      'docs/assets/js/**'
+      '**/*.cjs'
     ],
     languageOptions: {
+      sourceType: 'commonjs',
       globals: {
-        ...globals.browser
+        ...globals.node
       }
     }
   }

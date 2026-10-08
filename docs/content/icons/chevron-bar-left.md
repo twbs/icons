@@ -1,7 +1,7 @@
 ---
 title: Chevron bar left
 categories:
-  - Chevrons
+  - Arrows
 tags:
   - chevron
 ---

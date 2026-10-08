@@ -1,7 +1,7 @@
 ---
 title: Peace
 categories:
-  - Miscellaneous
+  - Emoji
 tags:
   - peace
   - love

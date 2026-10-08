@@ -1,7 +1,7 @@
 ---
 title: Toggle off
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - toggle
   - switch

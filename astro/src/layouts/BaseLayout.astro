@@ -1,0 +1,117 @@
+---
+import SharedBaseLayout from "@twbs/bui/components/BaseLayout";
+import Head from "@twbs/bui/components/Head";
+import Header from "@twbs/bui/components/Header";
+import type { NavigationConfig } from "@twbs/bui";
+import { getPackageMeta } from "../lib/icons";
+import "../styles.scss";
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: URL | string | false;
+  robots?: string;
+  catalogDrawer?: boolean;
+  sidebarDrawer?: boolean;
+  sidebarDrawerLabel?: string;
+}
+
+const {
+  title,
+  description = "Free, high quality, open source icon library.",
+  canonical = Astro.url,
+  robots,
+  catalogDrawer = false,
+  sidebarDrawer = catalogDrawer,
+  sidebarDrawerLabel = catalogDrawer
+    ? "Toggle icon navigation"
+    : "Toggle documentation navigation",
+} = Astro.props;
+const pageTitle =
+  title === "Bootstrap Icons" ? title : `${title} · Bootstrap Icons`;
+const pathname = Astro.url.pathname;
+const activeSection =
+  pathname === "/" || pathname.startsWith("/icons/") ? "icons" : "icons";
+const { version } = getPackageMeta();
+const navigation: NavigationConfig = {
+  activeSection,
+  brandHref: "https://getbootstrap.com/",
+  homeHref: "https://getbootstrap.com/",
+  docsHref: "https://getbootstrap.com/docs/6.0/getting-started/introduction/",
+  examplesHref: "https://getbootstrap.com/docs/6.0/examples/",
+  iconsHref: "/",
+  blogHref: "https://blog.getbootstrap.com/",
+  githubHref: "https://github.com/twbs",
+  openCollectiveHref: "https://opencollective.com/bootstrap",
+  xHref: "https://x.com/getbootstrap",
+  versionMenu: false,
+  currentVersion: `v${version}`,
+  currentVersionHref: `https://github.com/twbs/icons/releases/tag/v${version}`,
+  searchPlaceholder: "Search icons…",
+  docsDrawer: sidebarDrawer,
+  docsDrawerLabel: sidebarDrawerLabel,
+};
+const socialImage = new URL(
+  "/assets/img/bootstrap-icons-social.png",
+  Astro.site,
+);
+const analyticsSiteId = import.meta.env.PUBLIC_FATHOM_SITE_ID;
+---
+
+<SharedBaseLayout bodyAttrs={{ id: "icons-body" }}>
+  <Head
+    slot="head"
+    title={pageTitle}
+    description={description}
+    canonical={canonical || undefined}
+    robots={robots}
+  >
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/img/favicons/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/img/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/assets/img/favicons/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="/assets/img/favicons/safari-pinned-tab.svg"
+      color="#712cf9"
+    />
+    <link rel="icon" href="/assets/img/favicons/favicon.ico" />
+    <meta name="theme-color" content="#712cf9" />
+    {
+      analyticsSiteId && (
+        <script
+          is:inline
+          defer
+          src="https://cdn.usefathom.com/script.js"
+          data-site={analyticsSiteId}
+        />
+      )
+    }
+  </Head>
+
+  <Header slot="header" config={navigation} />
+
+  <main slot="main" id="content" data-pagefind-body>
+    <slot />
+  </main>
+</SharedBaseLayout>

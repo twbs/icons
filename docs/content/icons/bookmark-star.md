@@ -1,7 +1,7 @@
 ---
 title: Bookmark star
 categories:
-  - Miscellaneous
+  - Files & Folders
 tags:
   - reading
   - book

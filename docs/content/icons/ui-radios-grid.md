@@ -1,7 +1,7 @@
 ---
 title: UI radios grid
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - radio
   - form

@@ -1,7 +1,7 @@
 ---
 title: View list
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - view
   - rearrange

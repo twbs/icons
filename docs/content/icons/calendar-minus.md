@@ -1,7 +1,7 @@
 ---
 title: Calendar minus
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - date
   - time

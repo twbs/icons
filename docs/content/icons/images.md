@@ -1,7 +1,7 @@
 ---
 title: Images
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - picture
   - photo

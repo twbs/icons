@@ -1,0 +1,59 @@
+---
+import IconSidebarControls from "./IconSidebarControls.astro";
+import SidebarShell from "./SidebarShell.astro";
+import type { IconCategory } from "../lib/icons";
+
+interface Props {
+  categories: IconCategory[];
+  totalCount: number;
+  activeSlug?: string;
+}
+
+const { categories, totalCount, activeSlug } = Astro.props;
+const allActive = !activeSlug;
+
+const linkClass = (active: boolean) =>
+  `nav-link d-flex align-items-center justify-content-between gap-3${
+    active ? " active" : ""
+  }`;
+const badgeClass = (active: boolean) =>
+  `badge rounded-pill ${active ? "bg-body fg-body" : "bg-2 fg-2"}`;
+---
+
+<SidebarShell ariaLabel="Icon catalog" drawerLabel="Browse icons">
+  <div class="icon-sidebar-content">
+    <IconSidebarControls />
+    <hr class="my-6 border-subtle">
+    <nav class="nav flex-column gap-1" aria-label="Icon categories">
+      <a
+        class={linkClass(allActive)}
+        href="/"
+        aria-current={allActive ? "page" : undefined}
+        data-category-link
+      >
+        <span>All Icons</span>
+        <span class={badgeClass(allActive)}>
+          {totalCount.toLocaleString()}
+        </span>
+      </a>
+      {
+        categories.map((category) => {
+          const active = category.slug === activeSlug;
+          return (
+            <a
+              class={linkClass(active)}
+              href={`/icons/category/${category.slug}/`}
+              aria-current={active ? "page" : undefined}
+              data-category-link
+            >
+              <span>{category.name}</span>
+              <span class={badgeClass(active)}>
+                {category.count.toLocaleString()}
+              </span>
+            </a>
+          );
+        })
+      }
+    </nav>
+  </div>
+</SidebarShell>

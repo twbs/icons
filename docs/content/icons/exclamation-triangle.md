@@ -1,7 +1,7 @@
 ---
 title: Exclamation triangle
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - alert
   - warning

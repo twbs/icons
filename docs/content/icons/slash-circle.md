@@ -1,7 +1,7 @@
 ---
 title: Circle slash
 categories:
-  - Alerts, warnings, and signs
+  - Alerts & Status
 tags:
   - shape
   - stop

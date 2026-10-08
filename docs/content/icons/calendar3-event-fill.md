@@ -1,7 +1,7 @@
 ---
 title: Calendar3 event fill
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - date
   - time

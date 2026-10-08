@@ -1,7 +1,7 @@
 ---
 title: Incognito
 categories:
-  - Miscellaneous
+  - Security
 tags:
   - private
   - investigator

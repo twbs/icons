@@ -1,12 +1,12 @@
 ---
 title: Hand thumbs up
 categories:
-  - Hands
+  - People
 tags:
   - hand
   - pointer
   - like
   - okay
   - thumbs-up
-  - "+1"
+  - +1
 ---

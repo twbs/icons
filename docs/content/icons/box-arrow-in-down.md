@@ -1,8 +1,9 @@
 ---
 title: Box arrow in down
 categories:
-  - Box arrows
+  - Arrows
 tags:
   - arrow
   - upload
+  - box arrow
 ---

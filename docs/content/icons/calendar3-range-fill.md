@@ -1,7 +1,7 @@
 ---
 title: Calendar3 range fill
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - dates
   - timeline

@@ -1,7 +1,7 @@
 ---
 title: Calendar date fill
 categories:
-  - Date and time
+  - Date & Time
 tags:
   - date
   - time

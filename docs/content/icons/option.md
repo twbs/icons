@@ -1,7 +1,7 @@
 ---
 title: Option
 categories:
-  - UI and keyboard
+  - UI & Keyboard
 tags:
   - key
   - mac

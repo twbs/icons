@@ -1,7 +1,7 @@
 ---
 title: Chevron contract
 categories:
-  - Chevrons
+  - Arrows
 tags:
   - chevron
 ---

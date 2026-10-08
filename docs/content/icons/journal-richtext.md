@@ -1,7 +1,7 @@
 ---
 title: Journal richtext
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - folder

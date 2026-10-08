@@ -1,7 +1,7 @@
 ---
 title: Hand index
 categories:
-  - Hands
+  - People
 tags:
   - hand
   - pointer

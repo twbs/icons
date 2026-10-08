@@ -1,7 +1,7 @@
 ---
 title: Journal bookmark fill
 categories:
-  - Files and folders
+  - Files & Folders
 tags:
   - file
   - folder

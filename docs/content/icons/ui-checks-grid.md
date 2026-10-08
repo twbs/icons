@@ -1,7 +1,7 @@
 ---
 title: UI checks grid
 categories:
-  - Controls
+  - UI & Keyboard
 tags:
   - checkbox
   - form

@@ -1,7 +1,7 @@
 ---
 title: Valentine
 categories:
-  - Love
+  - Emoji
 tags:
   - love
   - romance

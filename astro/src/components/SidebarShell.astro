@@ -1,0 +1,127 @@
+---
+interface Props {
+  ariaLabel: string;
+  drawerLabel: string;
+}
+
+const { ariaLabel, drawerLabel } = Astro.props;
+---
+
+<aside class="bd-sidebar" aria-label={ariaLabel} data-sidebar-shell>
+  <dialog
+    class="lg:drawer drawer-bottom border-subtle"
+    tabindex="-1"
+    id="bdSidebar"
+    aria-labelledby="bdSidebarDrawerLabel"
+  >
+    <div class="drawer-header border-bottom border-subtle">
+      <h5 class="drawer-title" id="bdSidebarDrawerLabel">{drawerLabel}</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="drawer"
+        data-bs-target="#bdSidebar"
+        aria-label="Close"></button>
+    </div>
+
+    <div class="drawer-body">
+      <div class="sidebar-shell-content w-100">
+        <slot />
+      </div>
+    </div>
+  </dialog>
+</aside>
+
+<script>
+  import { Drawer } from "bootstrap";
+
+  for (const sidebar of document.querySelectorAll<HTMLElement>(
+    "[data-sidebar-shell]",
+  )) {
+    const activeLink = sidebar.querySelector<HTMLElement>(
+      '[aria-current="page"], .active',
+    );
+
+    if (activeLink) {
+      const sidebarHeight = sidebar.clientHeight;
+      const activeLinkTop = activeLink.offsetTop;
+      const activeLinkHeight = activeLink.clientHeight;
+      const viewportTop = activeLinkTop;
+      const viewportBottom = viewportTop - sidebarHeight + activeLinkHeight;
+
+      if (
+        sidebar.scrollTop > viewportTop ||
+        sidebar.scrollTop < viewportBottom
+      ) {
+        sidebar.scrollTop =
+          viewportTop - sidebarHeight / 2 + activeLinkHeight / 2;
+      }
+    }
+
+    const drawer = sidebar.querySelector<HTMLDialogElement>("#bdSidebar");
+    const drawerToggle = document.querySelector<HTMLElement>(
+      '[aria-controls="bdSidebar"]',
+    );
+    let drawerTrigger: HTMLElement | null = null;
+
+    drawerToggle?.addEventListener("click", () => {
+      drawerTrigger = drawerToggle;
+      requestAnimationFrame(() => {
+        drawer?.querySelector<HTMLElement>(".btn-close")?.focus();
+      });
+    });
+
+    drawer?.addEventListener("show.bs.drawer", () => {
+      const activeElement = document.activeElement;
+      drawerTrigger =
+        activeElement instanceof HTMLElement &&
+        activeElement.getAttribute("aria-controls") === drawer.id
+          ? activeElement
+          : document.querySelector<HTMLElement>(
+              `[aria-controls="${drawer.id}"]`,
+            );
+
+      requestAnimationFrame(() => {
+        const drawerBody = drawer.querySelector<HTMLElement>(".drawer-body");
+        const drawerActiveLink = drawer.querySelector<HTMLElement>(
+          '[aria-current="page"], .active',
+        );
+
+        if (drawerBody && drawerActiveLink) {
+          const activeLinkTop =
+            drawerActiveLink.getBoundingClientRect().top -
+            drawerBody.getBoundingClientRect().top +
+            drawerBody.scrollTop;
+
+          drawerBody.scrollTop =
+            activeLinkTop -
+            drawerBody.clientHeight / 2 +
+            drawerActiveLink.clientHeight / 2;
+        }
+
+        drawer.querySelector<HTMLElement>(".btn-close")?.focus();
+      });
+    });
+
+    drawer?.addEventListener("shown.bs.drawer", () => {
+      drawer.querySelector<HTMLElement>(".btn-close")?.focus();
+    });
+
+    drawer?.addEventListener("hidden.bs.drawer", () => {
+      drawerTrigger?.focus();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && drawer?.open) {
+        event.preventDefault();
+        Drawer.getInstance(drawer)?.hide();
+      }
+    });
+
+    drawer?.addEventListener("click", (event) => {
+      if ((event.target as Element).closest("a[href]")) {
+        Drawer.getInstance(drawer)?.hide();
+      }
+    });
+  }
+</script>

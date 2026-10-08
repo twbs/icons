@@ -1,7 +1,7 @@
 ---
 title: Upload
 categories:
-  - Miscellaneous
+  - Files & Folders
 tags:
   - arrow
   - network

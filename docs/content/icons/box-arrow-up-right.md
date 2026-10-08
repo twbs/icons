@@ -1,8 +1,9 @@
 ---
 title: Box arrow up-right
 categories:
-  - Box arrows
+  - Arrows
 tags:
   - arrow
   - external link
+  - box arrow
 ---
