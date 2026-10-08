@@ -11,12 +11,12 @@ env:
   NODE: 24
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'twbs/icons' && startsWith(github.ref, 'refs/tags/v')
+    if: github.repository == 'twbs/icons' && (startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch')
 
     steps:
       - name: Clone repository
@@ -43,14 +43,14 @@ jobs:
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           allow_empty_commit: false
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./_site/
 
   publish:
     needs: build
     runs-on: ubuntu-latest
-    if: github.repository == 'twbs/icons' && startsWith(github.ref, 'refs/tags/v')
+    if: github.repository == 'twbs/icons' && (startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch')
 
     steps:
       - name: Clone repository
