@@ -18,7 +18,7 @@
   "dependencies": {
     "@twbs/bui": "^0.1.1",
     "astro": "^7.3.2",
-    "bootstrap": "github:twbs/bootstrap#v6-dev",
+    "bootstrap": "^6.0.0-alpha.1",
     "sass": "^1.103.1"
   },
   "devDependencies": {

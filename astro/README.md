@@ -4,8 +4,7 @@ The production Bootstrap Icons documentation site is built with Astro.
 
 ## Dependencies
 
-The Astro site installs `@twbs/bui@^0.1.1` from npm and Bootstrap 6 from the
-`v6-dev` branch on GitHub:
+The Astro site installs `@twbs/bui@^0.1.1` and Bootstrap 6 from npm:
 
 ```sh
 cd /path/to/bootstrap-icons/astro
