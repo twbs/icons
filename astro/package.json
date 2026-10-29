@@ -16,7 +16,7 @@
     "test": "npm run check && npm run build && npm run validate && npm run validate:html"
   },
   "dependencies": {
-    "@twbs/bui": "^0.1.8",
+    "@twbs/bui": "^0.1.9",
     "astro": "^7.3.2",
     "bootstrap": "^6.0.0-alpha.1",
     "sass": "^1.103.1"
