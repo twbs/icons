@@ -56,6 +56,7 @@
     "icons-font": "npm-run-all icons-font-*",
     "icons-font-main": "fantasticon",
     "icons-font-min": "cleancss -O1 --format breakWith=lf --with-rebase --output font/bootstrap-icons.min.css font/bootstrap-icons.css",
+    "icons-font-hash": "node build/sync-font-hash.mjs",
     "release": "npm-run-all icons docs-build icons-zip",
     "release-version": "node build/bump-version.mjs",
     "netlify": "npm --prefix astro ci && npm-run-all icons docs-build",
