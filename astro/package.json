@@ -16,9 +16,9 @@
     "test": "npm run check && npm run build && npm run validate && npm run validate:html"
   },
   "dependencies": {
-    "@twbs/bui": "^0.1.9",
+    "@twbs/bui": "^0.1.14",
     "astro": "^7.3.2",
-    "bootstrap": "^6.0.0-alpha.1",
+    "bootstrap": "git+https://github.com/twbs/bootstrap.git#228646ef6b42b6541827b414bdc7076ca1c51bef",
     "sass": "^1.103.1"
   },
   "devDependencies": {
