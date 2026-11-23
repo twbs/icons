@@ -2111,6 +2111,8 @@ $bootstrap-icons-map: (
   "globe-asia-australia-fill": "\f91c",
   "globe-central-south-asia-fill": "\f91d",
   "globe-europe-africa-fill": "\f91e",
+  "card-cert": "\f91f",
+  "file-cert": "\f920",
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {
