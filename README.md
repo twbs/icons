@@ -174,7 +174,7 @@ Then open `http://localhost:4321` in your browser.
 Here are some key scripts you'll use during development. Be sure to look to our `package.json` or `npm run` output for a complete list of scripts.
 
 | Script       | Description                                                                   |
-|--------------|-------------------------------------------------------------------------------|
+| ------------ | ----------------------------------------------------------------------------- |
 | `start`      | Alias for running `docs-serve`                                                |
 | `docs-serve` | Starts the local Astro development server                                     |
 | `docs-build` | Builds the production documentation site                                      |
@@ -192,6 +192,99 @@ Icons are typically only added by @mdo, but exceptions can be made. New glyphs a
 Use `npm run icons` to run the script, run `npm run pages` to build permalink pages, complete those pages, and, finally, commit the results in a new branch for updating.
 
 **Warning**: Please exclude any auto-generated files, like `font/**` and `bootstrap-icons.svg` from your branch because they cause conflicts, and we generally update the dist files before a release.
+
+## Unity Stylesheets Support (USS)
+Unity Stylesheet support requires utilizing True-Type Fonts (.TTF) and hacky variable overwrites with custom extension logic to replace identifiers dynamically with corresponding font glyphs. Through manual binding, the process can be controlled and managed intelligently and minimizing memory consumption through intelligent utilization. A sample extender has been included below for convenience. Utilizing explicitly managed UXML elements, also included below, the functionality can be extended to automatic construction, replacement, and lifecycle management. 
+
+```C#
+	public static class IconGlyphExtensions
+	{
+		private const string IconClass = "bi";
+
+		// Matches --bi-glyph in the generated USS (decimal codepoint, e.g. --bi-glyph: 61697;)
+		private static readonly CustomStyleProperty<int> s_BiGlyphProperty = new("--bi-glyph");
+
+		/// <summary>
+		/// One-shot read of --bi-glyph. Only has a value once the element is attached and its styles have resolved.
+		/// </summary>
+		public static bool SyncGlyphFromStyle(this TextElement element)
+			=> TryApply(element, element.customStyle);
+
+		/// <summary>
+		/// Keeps the text in sync whenever the element's custom style re-resolves (class swaps, re-attach, etc.).
+		/// </summary>
+		public static void BindGlyph(this TextElement element)
+		{
+			// Unregister first so calling this twice never double-binds
+			element.UnregisterCallback<CustomStyleResolvedEvent>(OnCustomStyleResolved);
+			element.RegisterCallback<CustomStyleResolvedEvent>(OnCustomStyleResolved);
+			element.SyncGlyphFromStyle(); // covers elements that are already styled
+		}
+
+		/// <summary>
+		/// Binds every icon label (class "bi") under root, root included. Call after cloning a UXML tree.
+		/// </summary>
+		public static void BindGlyphs(this VisualElement root)
+		{
+			if (root is TextElement self && self.ClassListContains(IconClass))
+				self.BindGlyph();
+
+			root.Query<TextElement>(className: IconClass).ForEach(e => e.BindGlyph());
+		}
+
+		private static void OnCustomStyleResolved(CustomStyleResolvedEvent evt)
+		{
+			if (evt.target is TextElement element)
+				TryApply(element, evt.customStyle);
+		}
+
+		private static bool TryApply(TextElement element, ICustomStyle style)
+		{
+			if (!style.TryGetValue(s_BiGlyphProperty, out var codePoint)) return false;
+
+			// ConvertFromUtf32 throws on out-of-range values and lone surrogates
+			if (codePoint < 0 || codePoint > 0x10FFFF || (codePoint >= 0xD800 && codePoint <= 0xDFFF)) return false;
+
+			element.text = char.ConvertFromUtf32(codePoint);
+			return true;
+		}
+	}
+#if UNITY_2023_2_OR_NEWER
+	[UxmlElement(nameof(Glyph)), ExecuteAlways]
+#endif
+  //  It is important to note that the class name Glyph conflicts with an existing VisualElement dependent class of the same name and namespace structuring does not resolve it in code. Using Glyph as the class name (but not the element name under 2023.2+) produces duplication, casting, and serialization errors without obvious trace indicators inside of Unity.
+	public partial class IconGlyph : Label
+	{
+#if !UNITY_2023_2_OR_NEWER
+        public new class UxmlFactory : UxmlFactory<IconGlyph> { }
+#endif
+
+		public const string BaseClass = "bi";
+
+		private string _icon;
+
+		public IconGlyph() : base()
+		{
+			AddToClassList(BaseClass);
+			this.BindGlyph(); // from THC.Icons.Extensions; add the using if it's in another namespace
+		}
+
+		public IconGlyph(string name) : this() => SetIcon(name);
+
+		/// <summary>Swaps the bi-* class; the style re-resolves and the bound callback updates the text.</summary>
+		public void SetIcon(string name)
+		{
+			if (_icon != null) RemoveFromClassList($"bi-{_icon}");
+
+			_icon = name;
+
+			if (string.IsNullOrEmpty(name))
+				text = string.Empty;
+			else
+				AddToClassList($"bi-{name}");
+		}
+	}
+```
 
 ## Publishing
 
