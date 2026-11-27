@@ -2033,6 +2033,7 @@ export type BootstrapIconsId =
   | "wallet-fill"
   | "wallet"
   | "wallet2"
+  | "wand"
   | "watch"
   | "water"
   | "webcam-fill"
