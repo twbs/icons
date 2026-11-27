@@ -97,6 +97,16 @@ $bootstrap-icons-font-dir: "bootstrap-icons/font/fonts";
 @import "bootstrap-icons/font/bootstrap-icons";
 ```
 
+`$bootstrap-icons-map` is a `!default` variable. Set it before the import to only output the icons you need:
+
+```scss
+$bootstrap-icons-map: (
+  "alarm": "\f102",
+  "bag": "\f179"
+);
+@import "bootstrap-icons/font/bootstrap-icons";
+```
+
 See the [icon font guide](https://icons.getbootstrap.com/font/) for class examples and the generated font stylesheet.
 
 ### Sizing and color

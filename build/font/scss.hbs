@@ -36,7 +36,7 @@ ${{ name }}-map: (
 {{# each codepoints }}
   "{{ @key }}": "\\{{ codepoint this }}",
 {{/ each }}
-);
+) !default;
 
 @each $icon, $codepoint in ${{ name }}-map {
   .{{ prefix }}-#{$icon}::before { content: $codepoint; }
