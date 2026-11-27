@@ -51,7 +51,7 @@
     "pages": "node build/build-pages.mjs",
     "icons": "npm-run-all icons-main --aggregate-output --parallel icons-sprite icons-font",
     "icons-main": "node build/build-svgs.mjs",
-    "icons-zip": "cross-env-shell \"rm -rf bootstrap-icons-$npm_package_version bootstrap-icons-$npm_package_version.zip && mkdir bootstrap-icons-$npm_package_version && cp -r icons/. bootstrap-icons-$npm_package_version && cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && cp -r font/. bootstrap-icons-$npm_package_version && zip -qr9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && rm -rf bootstrap-icons-$npm_package_version\"",
+    "icons-zip": "cross-env-shell \"rm -rf bootstrap-icons-$npm_package_version bootstrap-icons-$npm_package_version.zip && mkdir bootstrap-icons-$npm_package_version && cp -r icons/. bootstrap-icons-$npm_package_version && cp bootstrap-icons.svg bootstrap-icons-$npm_package_version && cp -r font bootstrap-icons-$npm_package_version/font && zip -qr9 bootstrap-icons-$npm_package_version.zip bootstrap-icons-$npm_package_version && rm -rf bootstrap-icons-$npm_package_version\"",
     "icons-sprite": "svg-sprite --config svg-sprite.json --log=info \"icons/*.svg\"",
     "icons-font": "npm-run-all icons-font-*",
     "icons-font-main": "fantasticon",

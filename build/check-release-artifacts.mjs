@@ -72,7 +72,7 @@ try {
   )
   const expectedArchiveFiles = [
     'bootstrap-icons.svg',
-    ...listFiles(path.join(root, 'font')),
+    ...listFiles(path.join(root, 'font'), 'font'),
     ...listFiles(path.join(root, 'icons'))
   ].sort()
   const archiveFiles = listFiles(archiveRoot).sort()
@@ -85,10 +85,8 @@ try {
   }
 
   for (const file of expectedArchiveFiles) {
-    const fontSource = path.join(root, 'font', file)
-    const source = fs.existsSync(fontSource)
-      ? fontSource
-      : file === 'bootstrap-icons.svg'
+    const source =
+      file === 'bootstrap-icons.svg' || file.startsWith('font/')
         ? path.join(root, file)
         : path.join(root, 'icons', file)
     if (
